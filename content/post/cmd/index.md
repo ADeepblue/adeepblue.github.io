@@ -13,3 +13,6 @@ image = "luca-bravo-alS7ewQ41M8-unsplash.jpg"
 `mkdir .\a\b\c\d`
 
 基于当前目录下创建 ~.\a\b\c\d的目录
+
+同样的文件分割方式，创建文件可以用touch函数
+`touch .\a\b\c\d\e.txt`
