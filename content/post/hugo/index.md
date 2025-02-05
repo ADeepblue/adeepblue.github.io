@@ -87,3 +87,26 @@ menu:
 疑似可能是因为hugo server正在启动无法使用new命令吧
 
 写的文markdown文件如果不是index.md的话会出现头字段(front matter)image字段图片加载失败的问题
+
+也奇怪，一开始没搞定背景图片，这次一遍过了，下面这条命令是创建文件夹的命令，在网站根目录打开cmd运行
+
+`md .\assets\background`
+
+然后在这个文件夹内放背景图片后，运行以下命令创建
+
+```
+md .\layouts\partials\footer
+touch .\layouts\partials\footer\custom.html
+```
+并将以下代码直接放入上面新建的custom.html内部
+```
+<style>
+  body {
+    background: url({{ (resources.Get "background/背景图片名").Permalink }}) no-repeat center top;
+    background-size: cover;
+    background-attachment: fixed;
+  }
+</style>
+```
+
+此处感谢`莱特雷-letere`大佬的博客指引https://letere-gzj.github.io/hugo-stack/p/hugo/custom-background/
