@@ -2,18 +2,18 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
     <channel>
         <title>Posts on 深蓝之亘的博客</title>
-        <link>https://Adeepblue.github.io/post/</link>
+        <link>https://adeepblue.github.io/post/</link>
         <description>Recent content in Posts on 深蓝之亘的博客</description>
         <generator>Hugo -- gohugo.io</generator>
         <language>zh-cn</language>
         <copyright>深蓝之亘</copyright>
-        <lastBuildDate>Tue, 04 Feb 2025 22:34:00 +0800</lastBuildDate><atom:link href="https://Adeepblue.github.io/post/index.xml" rel="self" type="application/rss+xml" /><item>
+        <lastBuildDate>Tue, 04 Feb 2025 22:34:00 +0800</lastBuildDate><atom:link href="https://adeepblue.github.io/post/index.xml" rel="self" type="application/rss+xml" /><item>
         <title>Cmd命令笔记（会时不时更新）</title>
-        <link>https://Adeepblue.github.io/p/cmd%E5%91%BD%E4%BB%A4%E7%AC%94%E8%AE%B0%E4%BC%9A%E6%97%B6%E4%B8%8D%E6%97%B6%E6%9B%B4%E6%96%B0/</link>
+        <link>https://adeepblue.github.io/p/cmd%E5%91%BD%E4%BB%A4%E7%AC%94%E8%AE%B0%E4%BC%9A%E6%97%B6%E4%B8%8D%E6%97%B6%E6%9B%B4%E6%96%B0/</link>
         <pubDate>Tue, 04 Feb 2025 22:34:00 +0800</pubDate>
         
-        <guid>https://Adeepblue.github.io/p/cmd%E5%91%BD%E4%BB%A4%E7%AC%94%E8%AE%B0%E4%BC%9A%E6%97%B6%E4%B8%8D%E6%97%B6%E6%9B%B4%E6%96%B0/</guid>
-        <description>&lt;img src="https://Adeepblue.github.io/p/cmd%E5%91%BD%E4%BB%A4%E7%AC%94%E8%AE%B0%E4%BC%9A%E6%97%B6%E4%B8%8D%E6%97%B6%E6%9B%B4%E6%96%B0/luca-bravo-alS7ewQ41M8-unsplash.jpg" alt="Featured image of post Cmd命令笔记（会时不时更新）" /&gt;&lt;h1 id=&#34;mkdir&#34;&gt;mkdir
+        <guid>https://adeepblue.github.io/p/cmd%E5%91%BD%E4%BB%A4%E7%AC%94%E8%AE%B0%E4%BC%9A%E6%97%B6%E4%B8%8D%E6%97%B6%E6%9B%B4%E6%96%B0/</guid>
+        <description>&lt;img src="https://adeepblue.github.io/p/cmd%E5%91%BD%E4%BB%A4%E7%AC%94%E8%AE%B0%E4%BC%9A%E6%97%B6%E4%B8%8D%E6%97%B6%E6%9B%B4%E6%96%B0/luca-bravo-alS7ewQ41M8-unsplash.jpg" alt="Featured image of post Cmd命令笔记（会时不时更新）" /&gt;&lt;h1 id=&#34;mkdir&#34;&gt;mkdir
 &lt;/h1&gt;&lt;p&gt;起初我以为是用斜杠/来实现分割目录，结果后面发现是反斜杠，
 很多地方搞来搞去的很容易搞混搞不清&lt;/p&gt;
 &lt;p&gt;&lt;code&gt;mkdir .\a\b\c\d&lt;/code&gt;&lt;/p&gt;
@@ -24,11 +24,11 @@
         </item>
         <item>
         <title>Hugo初始化网站笔记</title>
-        <link>https://Adeepblue.github.io/p/hugo%E5%88%9D%E5%A7%8B%E5%8C%96%E7%BD%91%E7%AB%99%E7%AC%94%E8%AE%B0/</link>
+        <link>https://adeepblue.github.io/p/hugo%E5%88%9D%E5%A7%8B%E5%8C%96%E7%BD%91%E7%AB%99%E7%AC%94%E8%AE%B0/</link>
         <pubDate>Tue, 04 Feb 2025 22:34:00 +0800</pubDate>
         
-        <guid>https://Adeepblue.github.io/p/hugo%E5%88%9D%E5%A7%8B%E5%8C%96%E7%BD%91%E7%AB%99%E7%AC%94%E8%AE%B0/</guid>
-        <description>&lt;img src="https://Adeepblue.github.io/p/hugo%E5%88%9D%E5%A7%8B%E5%8C%96%E7%BD%91%E7%AB%99%E7%AC%94%E8%AE%B0/hudai-gayiran-3Od_VKcDEAA-unsplash.jpg" alt="Featured image of post Hugo初始化网站笔记" /&gt;&lt;h1 id=&#34;hugo笔记&#34;&gt;Hugo笔记
+        <guid>https://adeepblue.github.io/p/hugo%E5%88%9D%E5%A7%8B%E5%8C%96%E7%BD%91%E7%AB%99%E7%AC%94%E8%AE%B0/</guid>
+        <description>&lt;img src="https://adeepblue.github.io/p/hugo%E5%88%9D%E5%A7%8B%E5%8C%96%E7%BD%91%E7%AB%99%E7%AC%94%E8%AE%B0/hudai-gayiran-3Od_VKcDEAA-unsplash.jpg" alt="Featured image of post Hugo初始化网站笔记" /&gt;&lt;h1 id=&#34;hugo笔记&#34;&gt;Hugo笔记
 &lt;/h1&gt;&lt;p&gt;首先是先下载hugo,我的话因为后面可能命令行会比较常用，所以手动把它添加进了环境变量 path里面
 也是有这个步骤才可以下面直接hugo命令直接用了&lt;/p&gt;
 &lt;p&gt;前前后后也搞了不少时间，万一以后文件丢失了可以来这边参考我自己写的hugo笔记
@@ -190,11 +190,11 @@
         </item>
         <item>
         <title>Git连接踩坑记录</title>
-        <link>https://Adeepblue.github.io/p/git%E8%BF%9E%E6%8E%A5%E8%B8%A9%E5%9D%91%E8%AE%B0%E5%BD%95/</link>
+        <link>https://adeepblue.github.io/p/git%E8%BF%9E%E6%8E%A5%E8%B8%A9%E5%9D%91%E8%AE%B0%E5%BD%95/</link>
         <pubDate>Tue, 04 Feb 2025 21:39:19 +0800</pubDate>
         
-        <guid>https://Adeepblue.github.io/p/git%E8%BF%9E%E6%8E%A5%E8%B8%A9%E5%9D%91%E8%AE%B0%E5%BD%95/</guid>
-        <description>&lt;img src="https://Adeepblue.github.io/p/git%E8%BF%9E%E6%8E%A5%E8%B8%A9%E5%9D%91%E8%AE%B0%E5%BD%95/helena-hertz-wWZzXlDpMog-unsplash.jpg" alt="Featured image of post Git连接踩坑记录" /&gt;&lt;h1 id=&#34;git连接踩坑记录&#34;&gt;Git连接踩坑记录
+        <guid>https://adeepblue.github.io/p/git%E8%BF%9E%E6%8E%A5%E8%B8%A9%E5%9D%91%E8%AE%B0%E5%BD%95/</guid>
+        <description>&lt;img src="https://adeepblue.github.io/p/git%E8%BF%9E%E6%8E%A5%E8%B8%A9%E5%9D%91%E8%AE%B0%E5%BD%95/helena-hertz-wWZzXlDpMog-unsplash.jpg" alt="Featured image of post Git连接踩坑记录" /&gt;&lt;h1 id=&#34;git连接踩坑记录&#34;&gt;Git连接踩坑记录
 &lt;/h1&gt;&lt;p&gt;重装电脑之后（并不重装D盘），git又连不上GitHub了，也不知道是出了什么毛病，
 昨晚连接SSH都连不上，我只依稀记得以前踩了许多坑，再回过头来
 捣鼓又是估计好一番功夫了，所以在这写下这篇文章为以后的我参考，方便以后快速配置
@@ -305,10 +305,10 @@
         </item>
         <item>
         <title>Test</title>
-        <link>https://Adeepblue.github.io/p/test/</link>
+        <link>https://adeepblue.github.io/p/test/</link>
         <pubDate>Tue, 04 Feb 2025 21:10:15 +0800</pubDate>
         
-        <guid>https://Adeepblue.github.io/p/test/</guid>
+        <guid>https://adeepblue.github.io/p/test/</guid>
         <description>&lt;h1 id=&#34;文章标题&#34;&gt;文章标题
 &lt;/h1&gt;&lt;p&gt;这是你的主要内容部分。你可以在这里添加文本、列表、引用、图像等。&lt;/p&gt;
 &lt;h2 id=&#34;子标题&#34;&gt;子标题
@@ -322,7 +322,7 @@
 &lt;/h3&gt;&lt;blockquote&gt;
 &lt;p&gt;这是一个引用的例子。&lt;/p&gt;&lt;/blockquote&gt;
 &lt;h3 id=&#34;图片示例&#34;&gt;图片示例
-&lt;/h3&gt;&lt;p&gt;&lt;img src=&#34;https://Adeepblue.github.io/%e5%9b%be%e7%89%87%e9%93%be%e6%8e%a5&#34;
+&lt;/h3&gt;&lt;p&gt;&lt;img src=&#34;https://adeepblue.github.io/%e5%9b%be%e7%89%87%e9%93%be%e6%8e%a5&#34;
 	
 	
 	
