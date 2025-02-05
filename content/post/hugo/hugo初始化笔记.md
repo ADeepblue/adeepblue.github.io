@@ -1,7 +1,7 @@
 +++
 date = '2025-02-04T22:34:00+08:00'
 draft = false
-title = 'Hugo Init'
+title = 'Hugo初始化网站笔记'
 +++
 
 # Hugo笔记
@@ -78,3 +78,4 @@ menu:
             icon: home
 ---
 ```
+目前git处文章不显示，未知原因，起初发现`draft=true`没修改，但目前不清楚因为什么导致不显示
