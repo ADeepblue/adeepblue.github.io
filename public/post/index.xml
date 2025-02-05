@@ -8,12 +8,25 @@
         <language>zh-cn</language>
         <copyright>深蓝之亘</copyright>
         <lastBuildDate>Tue, 04 Feb 2025 22:34:00 +0800</lastBuildDate><atom:link href="http://localhost:1313/post/index.xml" rel="self" type="application/rss+xml" /><item>
+        <title>Cmd命令笔记（会时不时更新）</title>
+        <link>http://localhost:1313/p/cmd%E5%91%BD%E4%BB%A4%E7%AC%94%E8%AE%B0%E4%BC%9A%E6%97%B6%E4%B8%8D%E6%97%B6%E6%9B%B4%E6%96%B0/</link>
+        <pubDate>Tue, 04 Feb 2025 22:34:00 +0800</pubDate>
+        
+        <guid>http://localhost:1313/p/cmd%E5%91%BD%E4%BB%A4%E7%AC%94%E8%AE%B0%E4%BC%9A%E6%97%B6%E4%B8%8D%E6%97%B6%E6%9B%B4%E6%96%B0/</guid>
+        <description>&lt;img src="http://localhost:1313/p/cmd%E5%91%BD%E4%BB%A4%E7%AC%94%E8%AE%B0%E4%BC%9A%E6%97%B6%E4%B8%8D%E6%97%B6%E6%9B%B4%E6%96%B0/luca-bravo-alS7ewQ41M8-unsplash.jpg" alt="Featured image of post Cmd命令笔记（会时不时更新）" /&gt;&lt;h1 id=&#34;mkdir&#34;&gt;mkdir
+&lt;/h1&gt;&lt;p&gt;起初我以为是用斜杠/来实现分割目录，结果后面发现是反斜杠，
+很多地方搞来搞去的很容易搞混搞不清&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;mkdir .\a\b\c\d&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;基于当前目录下创建 ~.\a\b\c\d的目录&lt;/p&gt;
+</description>
+        </item>
+        <item>
         <title>Hugo初始化网站笔记</title>
         <link>http://localhost:1313/p/hugo%E5%88%9D%E5%A7%8B%E5%8C%96%E7%BD%91%E7%AB%99%E7%AC%94%E8%AE%B0/</link>
         <pubDate>Tue, 04 Feb 2025 22:34:00 +0800</pubDate>
         
         <guid>http://localhost:1313/p/hugo%E5%88%9D%E5%A7%8B%E5%8C%96%E7%BD%91%E7%AB%99%E7%AC%94%E8%AE%B0/</guid>
-        <description>&lt;h1 id=&#34;hugo笔记&#34;&gt;Hugo笔记
+        <description>&lt;img src="http://localhost:1313/p/hugo%E5%88%9D%E5%A7%8B%E5%8C%96%E7%BD%91%E7%AB%99%E7%AC%94%E8%AE%B0/hudai-gayiran-3Od_VKcDEAA-unsplash.jpg" alt="Featured image of post Hugo初始化网站笔记" /&gt;&lt;h1 id=&#34;hugo笔记&#34;&gt;Hugo笔记
 &lt;/h1&gt;&lt;p&gt;首先是先下载hugo,我的话因为后面可能命令行会比较常用，所以手动把它添加进了环境变量 path里面
 也是有这个步骤才可以下面直接hugo命令直接用了&lt;/p&gt;
 &lt;p&gt;前前后后也搞了不少时间，万一以后文件丢失了可以来这边参考我自己写的hugo笔记
@@ -132,6 +145,10 @@
 &lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
 &lt;/div&gt;
 &lt;/div&gt;&lt;p&gt;目前git处文章不显示，未知原因，起初发现&lt;code&gt;draft=true&lt;/code&gt;没修改，但目前不清楚因为什么导致不显示&lt;/p&gt;
+&lt;p&gt;总觉得hugo挺多bug的，之前有404过不少时间，调试了很久重新开始hugo new site personal-blog
+然后重建git仓库，弄了许久没弄好，现在又出现&lt;code&gt;hugo new post/cmd/index.md&lt;/code&gt;没法创建
+疑似可能是因为hugo server正在启动无法使用new命令吧&lt;/p&gt;
+&lt;p&gt;写的文markdown文件如果不是index.md的话会出现头字段(front matter)image字段图片加载失败的问题&lt;/p&gt;
 </description>
         </item>
         <item>
@@ -140,7 +157,7 @@
         <pubDate>Tue, 04 Feb 2025 21:39:19 +0800</pubDate>
         
         <guid>http://localhost:1313/p/git%E8%BF%9E%E6%8E%A5%E8%B8%A9%E5%9D%91%E8%AE%B0%E5%BD%95/</guid>
-        <description>&lt;h1 id=&#34;git连接踩坑记录&#34;&gt;Git连接踩坑记录
+        <description>&lt;img src="http://localhost:1313/p/git%E8%BF%9E%E6%8E%A5%E8%B8%A9%E5%9D%91%E8%AE%B0%E5%BD%95/helena-hertz-wWZzXlDpMog-unsplash.jpg" alt="Featured image of post Git连接踩坑记录" /&gt;&lt;h1 id=&#34;git连接踩坑记录&#34;&gt;Git连接踩坑记录
 &lt;/h1&gt;&lt;p&gt;重装电脑之后（并不重装D盘），git又连不上GitHub了，也不知道是出了什么毛病，
 昨晚连接SSH都连不上，我只依稀记得以前踩了许多坑，再回过头来
 捣鼓又是估计好一番功夫了，所以在这写下这篇文章为以后的我参考，方便以后快速配置

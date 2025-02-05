@@ -2,6 +2,8 @@
 date = '2025-02-04T22:34:00+08:00'
 draft = false
 title = 'Hugo初始化网站笔记'
+description = "hugo初始化记录"
+image = "hudai-gayiran-3Od_VKcDEAA-unsplash.jpg"
 +++
 
 # Hugo笔记
@@ -79,3 +81,9 @@ menu:
 ---
 ```
 目前git处文章不显示，未知原因，起初发现`draft=true`没修改，但目前不清楚因为什么导致不显示
+
+总觉得hugo挺多bug的，之前有404过不少时间，调试了很久重新开始hugo new site personal-blog 
+然后重建git仓库，弄了许久没弄好，现在又出现`hugo new post/cmd/index.md`没法创建
+疑似可能是因为hugo server正在启动无法使用new命令吧
+
+写的文markdown文件如果不是index.md的话会出现头字段(front matter)image字段图片加载失败的问题

@@ -2,6 +2,8 @@
 date = '2025-02-04T21:39:19+08:00'
 draft = false
 title = 'Git连接踩坑记录'
+description = "方便下次初始化仓库"
+image = "helena-hertz-wWZzXlDpMog-unsplash.jpg"
 +++
 
 # Git连接踩坑记录
