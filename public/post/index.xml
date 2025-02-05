@@ -301,6 +301,33 @@
 &lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
 &lt;/div&gt;
 &lt;/div&gt;&lt;p&gt;以上，调试完毕&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;2
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;3
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;git add -f public
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;git commit -m &amp;#34;Publish site&amp;#34;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;git subtree push --prefix public origin gh-pages
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;以及，现在的hugo推送，这样就可以推送到gh-pages分区进行展示了，需要GitHub修改一下仓库设置
+&lt;img src=&#34;https://adeepblue.github.io/p/git%E8%BF%9E%E6%8E%A5%E8%B8%A9%E5%9D%91%E8%AE%B0%E5%BD%95/1.png&#34;
+	width=&#34;1723&#34;
+	height=&#34;907&#34;
+	srcset=&#34;https://adeepblue.github.io/p/git%E8%BF%9E%E6%8E%A5%E8%B8%A9%E5%9D%91%E8%AE%B0%E5%BD%95/1_hu_fc76ac9a4f991b12.png 480w, https://adeepblue.github.io/p/git%E8%BF%9E%E6%8E%A5%E8%B8%A9%E5%9D%91%E8%AE%B0%E5%BD%95/1_hu_ea5b54ac5615fbb1.png 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;github页面图修改配置&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;189&#34;
+		data-flex-basis=&#34;455px&#34;
+	
+&gt;&lt;/p&gt;
 </description>
         </item>
         <item>
@@ -322,7 +349,8 @@
 &lt;/h3&gt;&lt;blockquote&gt;
 &lt;p&gt;这是一个引用的例子。&lt;/p&gt;&lt;/blockquote&gt;
 &lt;h3 id=&#34;图片示例&#34;&gt;图片示例
-&lt;/h3&gt;&lt;p&gt;&lt;img src=&#34;https://adeepblue.github.io/%e5%9b%be%e7%89%87%e9%93%be%e6%8e%a5&#34;
+&lt;/h3&gt;&lt;p&gt;&lt;code&gt;![图片描述](图片链接)&lt;/code&gt;
+&lt;img src=&#34;https://adeepblue.github.io/%e5%9b%be%e7%89%87%e9%93%be%e6%8e%a5&#34;
 	
 	
 	

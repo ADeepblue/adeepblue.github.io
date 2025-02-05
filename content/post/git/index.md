@@ -67,3 +67,10 @@ REM 推送，如果本地分支跟远程分支不同可使用-f参数强制推�
 git push -f origin main / git push origin main --force
 ```
 以上，调试完毕
+```
+git add -f public
+git commit -m "Publish site"
+git subtree push --prefix public origin gh-pages
+```
+以及，现在的hugo推送，这样就可以推送到gh-pages分区进行展示了，需要GitHub修改一下仓库设置
+![github页面图修改配置](1.png)
