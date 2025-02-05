@@ -1,0 +1,57 @@
+/* 移除默认的 transition */
+body {
+    transition: none !important;
+    background-image: url('/images/background.jpg') !important;
+    background-repeat: no-repeat !important;
+    background-position: center center !important;
+    background-size: cover !important;
+    background-attachment: fixed !important;
+    background-color: transparent !important;  /* 确保背景色透明 */
+}
+
+/* 遮罩层 */
+body::before {
+    content: "";
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.3);
+    z-index: -1;
+    transition: none !important;
+}
+
+/* 内容区域样式 */
+.main-container,
+.main {
+    transition: none !important;
+}
+
+[data-scheme="dark"] .main-container,
+[data-scheme="dark"] .main {
+    background-color: rgba(0, 0, 0, 0.8) !important;
+    backdrop-filter: blur(10px);
+    border-radius: 8px;
+    padding: 20px;
+    margin: 20px auto;
+}
+
+[data-scheme="light"] .main-container,
+[data-scheme="light"] .main {
+    background-color: rgba(255, 255, 255, 0.9) !important;
+    backdrop-filter: blur(10px);
+    border-radius: 8px;
+    padding: 20px;
+    margin: 20px auto;
+}
+
+/* 移除其他可能的过渡效果 */
+.container {
+    transition: none !important;
+}
+
+article {
+    background-color: transparent !important;
+    transition: none !important;
+}
