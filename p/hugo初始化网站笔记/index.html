@@ -1,19 +1,19 @@
 <!DOCTYPE html>
 <html lang="zh-cn" dir="ltr">
-    <head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script><meta charset='utf-8'>
+    <head><meta charset='utf-8'>
 <meta name='viewport' content='width=device-width, initial-scale=1'><meta name='description' content="hugo初始化记录">
 <title>Hugo初始化网站笔记</title>
 
-<link rel='canonical' href='http://localhost:1313/p/hugo%E5%88%9D%E5%A7%8B%E5%8C%96%E7%BD%91%E7%AB%99%E7%AC%94%E8%AE%B0/'>
+<link rel='canonical' href='https://Adeepblue.github.io/p/hugo%E5%88%9D%E5%A7%8B%E5%8C%96%E7%BD%91%E7%AB%99%E7%AC%94%E8%AE%B0/'>
 
 <link rel="stylesheet" href="/scss/style.min.663803bebe609202d5b39d848f2d7c2dc8b598a2d879efa079fa88893d29c49c.css"><meta property='og:title' content="Hugo初始化网站笔记">
 <meta property='og:description' content="hugo初始化记录">
-<meta property='og:url' content='http://localhost:1313/p/hugo%E5%88%9D%E5%A7%8B%E5%8C%96%E7%BD%91%E7%AB%99%E7%AC%94%E8%AE%B0/'>
+<meta property='og:url' content='https://Adeepblue.github.io/p/hugo%E5%88%9D%E5%A7%8B%E5%8C%96%E7%BD%91%E7%AB%99%E7%AC%94%E8%AE%B0/'>
 <meta property='og:site_name' content='深蓝之亘的博客'>
-<meta property='og:type' content='article'><meta property='article:section' content='Post' /><meta property='article:published_time' content='2025-02-04T22:34:00&#43;08:00'/><meta property='article:modified_time' content='2025-02-04T22:34:00&#43;08:00'/><meta property='og:image' content='http://localhost:1313/p/hugo%E5%88%9D%E5%A7%8B%E5%8C%96%E7%BD%91%E7%AB%99%E7%AC%94%E8%AE%B0/hudai-gayiran-3Od_VKcDEAA-unsplash.jpg' />
+<meta property='og:type' content='article'><meta property='article:section' content='Post' /><meta property='article:published_time' content='2025-02-04T22:34:00&#43;08:00'/><meta property='article:modified_time' content='2025-02-04T22:34:00&#43;08:00'/><meta property='og:image' content='https://Adeepblue.github.io/p/hugo%E5%88%9D%E5%A7%8B%E5%8C%96%E7%BD%91%E7%AB%99%E7%AC%94%E8%AE%B0/hudai-gayiran-3Od_VKcDEAA-unsplash.jpg' />
 <meta name="twitter:title" content="Hugo初始化网站笔记">
 <meta name="twitter:description" content="hugo初始化记录"><meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:image" content='http://localhost:1313/p/hugo%E5%88%9D%E5%A7%8B%E5%8C%96%E7%BD%91%E7%AB%99%E7%AC%94%E8%AE%B0/hudai-gayiran-3Od_VKcDEAA-unsplash.jpg' />
+    <meta name="twitter:image" content='https://Adeepblue.github.io/p/hugo%E5%88%9D%E5%A7%8B%E5%8C%96%E7%BD%91%E7%AB%99%E7%AC%94%E8%AE%B0/hudai-gayiran-3Od_VKcDEAA-unsplash.jpg' />
     <link rel="shortcut icon" href="/favicon.ico" />
 
     </head>
@@ -426,6 +426,41 @@
 然后重建git仓库，弄了许久没弄好，现在又出现<code>hugo new post/cmd/index.md</code>没法创建
 疑似可能是因为hugo server正在启动无法使用new命令吧</p>
 <p>写的文markdown文件如果不是index.md的话会出现头字段(front matter)image字段图片加载失败的问题</p>
+<p>也奇怪，一开始没搞定背景图片，这次一遍过了，下面这条命令是创建文件夹的命令，在网站根目录打开cmd运行</p>
+<p><code>md .\assets\background</code></p>
+<p>然后在这个文件夹内放背景图片后，运行以下命令创建</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">md .\layouts\partials\footer
+</span></span><span class="line"><span class="cl">touch .\layouts\partials\footer\custom.html
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>并将以下代码直接放入上面新建的custom.html内部</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span><span class="lnt">6
+</span><span class="lnt">7
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">&lt;style&gt;
+</span></span><span class="line"><span class="cl">  body {
+</span></span><span class="line"><span class="cl">    background: url({{ (resources.Get &#34;background/背景图片名&#34;).Permalink }}) no-repeat center top;
+</span></span><span class="line"><span class="cl">    background-size: cover;
+</span></span><span class="line"><span class="cl">    background-attachment: fixed;
+</span></span><span class="line"><span class="cl">  }
+</span></span><span class="line"><span class="cl">&lt;/style&gt;
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>此处感谢<code>莱特雷-letere</code>大佬的博客指引https://letere-gzj.github.io/hugo-stack/p/hugo/custom-background/</p>
 
 </section>
 
@@ -548,7 +583,7 @@
                 src="https://cdn.jsdelivr.net/npm/node-vibrant@3.1.6/dist/vibrant.min.js"integrity="sha256-awcR2jno4kI5X0zL8ex0vi2z&#43;KMkF24hUW8WePSA9HM="crossorigin="anonymous"
                 
                 >
-            </script><script type="text/javascript" src="/ts/main.f2ff1307d1829a9cc96f4d4bde5cba3b3f6ae30c254f0208a45c6ad276fdcf47.js" defer></script>
+            </script><script type="text/javascript" src="/ts/main.1e9a3bafd846ced4c345d084b355fb8c7bae75701c338f8a1f8a82c780137826.js" defer></script>
 <script>
     (function () {
         const customFont = document.createElement('link');
@@ -562,7 +597,7 @@
 </script>
 <style>
   body {
-    background: url(http://localhost:1313/background/background.png) no-repeat center top;
+    background: url(https://Adeepblue.github.io/background/background.png) no-repeat center top;
     background-size: cover;
     background-attachment: fixed;
   }
