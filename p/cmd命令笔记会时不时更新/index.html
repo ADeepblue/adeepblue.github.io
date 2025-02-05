@@ -1,19 +1,19 @@
 <!DOCTYPE html>
 <html lang="zh-cn" dir="ltr">
     <head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script><meta charset='utf-8'>
-<meta name='viewport' content='width=device-width, initial-scale=1'><meta name='description' content="hugo初始化记录">
-<title>Hugo初始化网站笔记</title>
+<meta name='viewport' content='width=device-width, initial-scale=1'><meta name='description' content="介绍一些基于cmd的脚本基础用法，也当作自己的笔记">
+<title>Cmd命令笔记（会时不时更新）</title>
 
-<link rel='canonical' href='http://localhost:1313/p/hugo%E5%88%9D%E5%A7%8B%E5%8C%96%E7%BD%91%E7%AB%99%E7%AC%94%E8%AE%B0/'>
+<link rel='canonical' href='http://localhost:1313/p/cmd%E5%91%BD%E4%BB%A4%E7%AC%94%E8%AE%B0%E4%BC%9A%E6%97%B6%E4%B8%8D%E6%97%B6%E6%9B%B4%E6%96%B0/'>
 
-<link rel="stylesheet" href="/scss/style.min.60cb2f7e5dbbaa3fac05cf98280ba9f02011ce91109d3841c4a18627929727cd.css"><meta property='og:title' content="Hugo初始化网站笔记">
-<meta property='og:description' content="hugo初始化记录">
-<meta property='og:url' content='http://localhost:1313/p/hugo%E5%88%9D%E5%A7%8B%E5%8C%96%E7%BD%91%E7%AB%99%E7%AC%94%E8%AE%B0/'>
+<link rel="stylesheet" href="/scss/style.min.60cb2f7e5dbbaa3fac05cf98280ba9f02011ce91109d3841c4a18627929727cd.css"><meta property='og:title' content="Cmd命令笔记（会时不时更新）">
+<meta property='og:description' content="介绍一些基于cmd的脚本基础用法，也当作自己的笔记">
+<meta property='og:url' content='http://localhost:1313/p/cmd%E5%91%BD%E4%BB%A4%E7%AC%94%E8%AE%B0%E4%BC%9A%E6%97%B6%E4%B8%8D%E6%97%B6%E6%9B%B4%E6%96%B0/'>
 <meta property='og:site_name' content='深蓝之亘的博客'>
-<meta property='og:type' content='article'><meta property='article:section' content='Post' /><meta property='article:published_time' content='2025-02-04T22:34:00&#43;08:00'/><meta property='article:modified_time' content='2025-02-04T22:34:00&#43;08:00'/><meta property='og:image' content='http://localhost:1313/p/hugo%E5%88%9D%E5%A7%8B%E5%8C%96%E7%BD%91%E7%AB%99%E7%AC%94%E8%AE%B0/hudai-gayiran-3Od_VKcDEAA-unsplash.jpg' />
-<meta name="twitter:title" content="Hugo初始化网站笔记">
-<meta name="twitter:description" content="hugo初始化记录"><meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:image" content='http://localhost:1313/p/hugo%E5%88%9D%E5%A7%8B%E5%8C%96%E7%BD%91%E7%AB%99%E7%AC%94%E8%AE%B0/hudai-gayiran-3Od_VKcDEAA-unsplash.jpg' />
+<meta property='og:type' content='article'><meta property='article:section' content='Post' /><meta property='article:published_time' content='2025-02-04T22:34:00&#43;08:00'/><meta property='article:modified_time' content='2025-02-04T22:34:00&#43;08:00'/><meta property='og:image' content='http://localhost:1313/p/cmd%E5%91%BD%E4%BB%A4%E7%AC%94%E8%AE%B0%E4%BC%9A%E6%97%B6%E4%B8%8D%E6%97%B6%E6%9B%B4%E6%96%B0/luca-bravo-alS7ewQ41M8-unsplash.jpg' />
+<meta name="twitter:title" content="Cmd命令笔记（会时不时更新）">
+<meta name="twitter:description" content="介绍一些基于cmd的脚本基础用法，也当作自己的笔记"><meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:image" content='http://localhost:1313/p/cmd%E5%91%BD%E4%BB%A4%E7%AC%94%E8%AE%B0%E4%BC%9A%E6%97%B6%E4%B8%8D%E6%97%B6%E6%9B%B4%E6%96%B0/luca-bravo-alS7ewQ41M8-unsplash.jpg' />
     <link rel="shortcut icon" href="/favicon.ico" />
 
     </head>
@@ -244,13 +244,13 @@
     <article class="has-image main-article">
     <header class="article-header">
         <div class="article-image">
-            <a href="/p/hugo%E5%88%9D%E5%A7%8B%E5%8C%96%E7%BD%91%E7%AB%99%E7%AC%94%E8%AE%B0/">
-                <img src="/p/hugo%E5%88%9D%E5%A7%8B%E5%8C%96%E7%BD%91%E7%AB%99%E7%AC%94%E8%AE%B0/hudai-gayiran-3Od_VKcDEAA-unsplash_hu_5f33eb4584747efa.jpg"
-                        srcset="/p/hugo%E5%88%9D%E5%A7%8B%E5%8C%96%E7%BD%91%E7%AB%99%E7%AC%94%E8%AE%B0/hudai-gayiran-3Od_VKcDEAA-unsplash_hu_5f33eb4584747efa.jpg 800w, /p/hugo%E5%88%9D%E5%A7%8B%E5%8C%96%E7%BD%91%E7%AB%99%E7%AC%94%E8%AE%B0/hudai-gayiran-3Od_VKcDEAA-unsplash_hu_918f2e3b95256ee5.jpg 1600w"
+            <a href="/p/cmd%E5%91%BD%E4%BB%A4%E7%AC%94%E8%AE%B0%E4%BC%9A%E6%97%B6%E4%B8%8D%E6%97%B6%E6%9B%B4%E6%96%B0/">
+                <img src="/p/cmd%E5%91%BD%E4%BB%A4%E7%AC%94%E8%AE%B0%E4%BC%9A%E6%97%B6%E4%B8%8D%E6%97%B6%E6%9B%B4%E6%96%B0/luca-bravo-alS7ewQ41M8-unsplash_hu_b0ee0f924b37aa7f.jpg"
+                        srcset="/p/cmd%E5%91%BD%E4%BB%A4%E7%AC%94%E8%AE%B0%E4%BC%9A%E6%97%B6%E4%B8%8D%E6%97%B6%E6%9B%B4%E6%96%B0/luca-bravo-alS7ewQ41M8-unsplash_hu_b0ee0f924b37aa7f.jpg 800w, /p/cmd%E5%91%BD%E4%BB%A4%E7%AC%94%E8%AE%B0%E4%BC%9A%E6%97%B6%E4%B8%8D%E6%97%B6%E6%9B%B4%E6%96%B0/luca-bravo-alS7ewQ41M8-unsplash_hu_f12b0be0d5168452.jpg 1600w"
                         width="800" 
-                        height="1199" 
+                        height="534" 
                         loading="lazy"
-                        alt="Featured image of post Hugo初始化网站笔记" />
+                        alt="Featured image of post Cmd命令笔记（会时不时更新）" />
                 
             </a>
         </div>
@@ -261,12 +261,12 @@
 
     <div class="article-title-wrapper">
         <h2 class="article-title">
-            <a href="/p/hugo%E5%88%9D%E5%A7%8B%E5%8C%96%E7%BD%91%E7%AB%99%E7%AC%94%E8%AE%B0/">Hugo初始化网站笔记</a>
+            <a href="/p/cmd%E5%91%BD%E4%BB%A4%E7%AC%94%E8%AE%B0%E4%BC%9A%E6%97%B6%E4%B8%8D%E6%97%B6%E6%9B%B4%E6%96%B0/">Cmd命令笔记（会时不时更新）</a>
         </h2>
     
         
         <h3 class="article-subtitle">
-            hugo初始化记录
+            介绍一些基于cmd的脚本基础用法，也当作自己的笔记
         </h3>
         
     </div>
@@ -303,129 +303,11 @@
     <section class="article-content">
     
     
-    <h1 id="hugo笔记">Hugo笔记
-</h1><p>首先是先下载hugo,我的话因为后面可能命令行会比较常用，所以手动把它添加进了环境变量 path里面
-也是有这个步骤才可以下面直接hugo命令直接用了</p>
-<p>前前后后也搞了不少时间，万一以后文件丢失了可以来这边参考我自己写的hugo笔记
-建站命令</p>
-<p><code>hugo new site personal-blog</code></p>
-<p>此处personal-blog可替换文件夹名字，会自动新建文件夹然后在该文件夹下放初始化的内容，新建完网站本
-身之后就可以开始写md文件了，比如此处我新建了<code>hugo/hugo-init.md</code>文件，命令如下</p>
-<p><code>hugo new hugo/hugo-init.md</code></p>
-<p>命令行返回为</p>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre tabindex="0" class="chroma"><code><span class="lnt">1
-</span><span class="lnt">2
-</span></code></pre></td>
-<td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">E:\personal-blog\personal-blog&gt;hugo new git/git-init.md
-</span></span><span class="line"><span class="cl">Content &#34;E:\\personal-blog\\personal-blog\\content\\git\\git-init.md&#34; created
-</span></span></code></pre></td></tr></table>
-</div>
-</div><p>再有就是自带的文件头，</p>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre tabindex="0" class="chroma"><code><span class="lnt">1
-</span><span class="lnt">2
-</span><span class="lnt">3
-</span><span class="lnt">4
-</span><span class="lnt">5
-</span></code></pre></td>
-<td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">+++
-</span></span><span class="line"><span class="cl">date = &#39;2025-02-04T21:10:15+08:00&#39;
-</span></span><span class="line"><span class="cl">draft = false
-</span></span><span class="line"><span class="cl">title = &#39;Test&#39;
-</span></span><span class="line"><span class="cl">+++
-</span></span></code></pre></td></tr></table>
-</div>
-</div><p>原本<code>draft</code>中的值是true,需要改成false才能进行页面发布
-，可能是因为类似审核的过程？方便管理确认？亦或者说不想显示
-某篇文章先用这种方式隐藏起来？虽然也只是我的猜测而已罢了</p>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
-</span><span class="lnt"> 2
-</span><span class="lnt"> 3
-</span><span class="lnt"> 4
-</span><span class="lnt"> 5
-</span><span class="lnt"> 6
-</span><span class="lnt"> 7
-</span><span class="lnt"> 8
-</span><span class="lnt"> 9
-</span><span class="lnt">10
-</span><span class="lnt">11
-</span><span class="lnt">12
-</span><span class="lnt">13
-</span><span class="lnt">14
-</span><span class="lnt">15
-</span><span class="lnt">16
-</span><span class="lnt">17
-</span><span class="lnt">18
-</span><span class="lnt">19
-</span><span class="lnt">20
-</span><span class="lnt">21
-</span><span class="lnt">22
-</span><span class="lnt">23
-</span></code></pre></td>
-<td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl"># 文章标题
-</span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl">这是你的主要内容部分。你可以在这里添加文本、列表、引用、图像等。
-</span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl">## 子标题
-</span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl">### 列表示例
-</span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl">- 第一项
-</span></span><span class="line"><span class="cl">- 第二项
-</span></span><span class="line"><span class="cl">- 第三项
-</span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl">### 引用示例
-</span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl">&gt; 这是一个引用的例子。
-</span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl">### 图片示例
-</span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl">![图片描述](图片链接)
-</span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl">### 代码示例
-</span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl">`ssh git@github.com`
-</span></span></code></pre></td></tr></table>
-</div>
-</div><p>以及是，<code>content</code>目录下必须包含_index.md文件，不然会不显
-示主页，这就是主页， 命令可以以下方法实现</p>
-<p><code>hugo new _index.md</code></p>
-<p>然后我目前打算添加的代码，（有变动会更改）</p>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre tabindex="0" class="chroma"><code><span class="lnt">1
-</span><span class="lnt">2
-</span><span class="lnt">3
-</span><span class="lnt">4
-</span><span class="lnt">5
-</span><span class="lnt">6
-</span><span class="lnt">7
-</span><span class="lnt">8
-</span></code></pre></td>
-<td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">---
-</span></span><span class="line"><span class="cl">menu:
-</span></span><span class="line"><span class="cl">    main:
-</span></span><span class="line"><span class="cl">        name: 主页
-</span></span><span class="line"><span class="cl">        weight: -100
-</span></span><span class="line"><span class="cl">        params:
-</span></span><span class="line"><span class="cl">            icon: home
-</span></span><span class="line"><span class="cl">---
-</span></span></code></pre></td></tr></table>
-</div>
-</div><p>目前git处文章不显示，未知原因，起初发现<code>draft=true</code>没修改，但目前不清楚因为什么导致不显示</p>
-<p>总觉得hugo挺多bug的，之前有404过不少时间，调试了很久重新开始hugo new site personal-blog
-然后重建git仓库，弄了许久没弄好，现在又出现<code>hugo new post/cmd/index.md</code>没法创建
-疑似可能是因为hugo server正在启动无法使用new命令吧</p>
-<p>写的文markdown文件如果不是index.md的话会出现头字段(front matter)image字段图片加载失败的问题</p>
+    <h1 id="mkdir">mkdir
+</h1><p>起初我以为是用斜杠/来实现分割目录，结果后面发现是反斜杠，
+很多地方搞来搞去的很容易搞混搞不清</p>
+<p><code>mkdir .\a\b\c\d</code></p>
+<p>基于当前目录下创建 ~.\a\b\c\d的目录</p>
 
 </section>
 
