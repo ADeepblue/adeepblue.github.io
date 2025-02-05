@@ -8,11 +8,11 @@
         <language>zh-cn</language>
         <copyright>深蓝之亘</copyright>
         <lastBuildDate>Tue, 04 Feb 2025 22:34:00 +0800</lastBuildDate><atom:link href="http://localhost:1313/post/index.xml" rel="self" type="application/rss+xml" /><item>
-        <title>Hugo Init</title>
-        <link>http://localhost:1313/p/hugo-init/</link>
+        <title>Hugo初始化网站笔记</title>
+        <link>http://localhost:1313/p/hugo%E5%88%9D%E5%A7%8B%E5%8C%96%E7%BD%91%E7%AB%99%E7%AC%94%E8%AE%B0/</link>
         <pubDate>Tue, 04 Feb 2025 22:34:00 +0800</pubDate>
         
-        <guid>http://localhost:1313/p/hugo-init/</guid>
+        <guid>http://localhost:1313/p/hugo%E5%88%9D%E5%A7%8B%E5%8C%96%E7%BD%91%E7%AB%99%E7%AC%94%E8%AE%B0/</guid>
         <description>&lt;h1 id=&#34;hugo笔记&#34;&gt;Hugo笔记
 &lt;/h1&gt;&lt;p&gt;首先是先下载hugo,我的话因为后面可能命令行会比较常用，所以手动把它添加进了环境变量 path里面
 也是有这个步骤才可以下面直接hugo命令直接用了&lt;/p&gt;
