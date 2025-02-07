@@ -311,34 +311,12 @@
 <code>ssh -vT git@github.com  </code>(加了v之后会输出调试信息)<br>
 也疯狂报错
 报错信息如下</p>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre tabindex="0" class="chroma"><code><span class="lnt">1
-</span><span class="lnt">2
-</span><span class="lnt">3
-</span></code></pre></td>
-<td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">$ ssh -T adeepblue@github.com
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">$ ssh -T adeepblue@github.com
 </span></span><span class="line"><span class="cl">/usr/bin/bash: line 1: exec: nc: not found
 </span></span><span class="line"><span class="cl">Connection closed by UNKNOWN port 65535
-</span></span></code></pre></td></tr></table>
-</div>
-</div><p>但我依稀记得我当时折腾ssh和GitHub的时候没用nc代理工具，这回莫名奇妙有这个报错了
+</span></span></code></pre></div><p>但我依稀记得我当时折腾ssh和GitHub的时候没用nc代理工具，这回莫名奇妙有这个报错了
 曾经的目录长这样</p>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre tabindex="0" class="chroma"><code><span class="lnt">1
-</span><span class="lnt">2
-</span><span class="lnt">3
-</span><span class="lnt">4
-</span><span class="lnt">5
-</span><span class="lnt">6
-</span><span class="lnt">7
-</span><span class="lnt">8
-</span><span class="lnt">9
-</span></code></pre></td>
-<td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">C:\Users\Deepblue\.ssh&gt;dir /b
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">C:\Users\Deepblue\.ssh&gt;dir /b
 </span></span><span class="line"><span class="cl">authorized_keys
 </span></span><span class="line"><span class="cl">id_ed25519
 </span></span><span class="line"><span class="cl">id_ed25519.pub
@@ -347,55 +325,22 @@
 </span></span><span class="line"><span class="cl">known_hosts
 </span></span><span class="line"><span class="cl">testpub
 </span></span><span class="line"><span class="cl">config
-</span></span></code></pre></td></tr></table>
-</div>
-</div><p>最后对比曾经重装电脑留下的备份文件发现多了一个config，然后点进去发现这玩意居然
+</span></span></code></pre></div><p>最后对比曾经重装电脑留下的备份文件发现多了一个config，然后点进去发现这玩意居然
 显示要nc的配置什么的，幡然醒悟，哦，ssh出问题原来就是你这个文件捣的鬼，</p>
 <p>文件内容如下:</p>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre tabindex="0" class="chroma"><code><span class="lnt">1
-</span><span class="lnt">2
-</span><span class="lnt">3
-</span></code></pre></td>
-<td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">Host github.com
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">Host github.com
 </span></span><span class="line"><span class="cl">  User git
 </span></span><span class="line"><span class="cl">  ProxyCommand nc -v -x 127.0.0.1:4780 %h %p
-</span></span></code></pre></td></tr></table>
-</div>
-</div><p>如果我当初没有备份目录我可能都没意识到，一删
-除这个文件之后<code>ssh -T git@github.com</code>立马可以通了，也是给我整无语了
-以及仓库的配置，先需要初始化仓库</p>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
-</span><span class="lnt"> 2
-</span><span class="lnt"> 3
-</span><span class="lnt"> 4
-</span><span class="lnt"> 5
-</span><span class="lnt"> 6
-</span><span class="lnt"> 7
-</span><span class="lnt"> 8
-</span><span class="lnt"> 9
-</span><span class="lnt">10
-</span><span class="lnt">11
-</span><span class="lnt">12
-</span><span class="lnt">13
-</span><span class="lnt">14
-</span><span class="lnt">15
-</span><span class="lnt">16
-</span><span class="lnt">17
-</span><span class="lnt">18
-</span></code></pre></td>
-<td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">git init
+</span></span></code></pre></div><p>如果我当初没有备份目录我可能都没意识到，一删
+除这个文件之后<code>ssh -T git@github.com</code>立马可以通了，也是给我整无语了</p>
+<h1 id="仓库的配置先需要初始化仓库">仓库的配置，先需要初始化仓库
+</h1><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">git init
 </span></span><span class="line"><span class="cl">REM 新建并切到主分支（此处为cmd的备注方式）
 </span></span><span class="line"><span class="cl">git checkout -b main
 </span></span><span class="line"><span class="cl">REM 添加所有文件到git暂存区
 </span></span><span class="line"><span class="cl">git add .
 </span></span><span class="line"><span class="cl">REM 提交到分支
-</span></span><span class="line"><span class="cl">git commit -m &#34;提交信息,比如init&#34;
+</span></span><span class="line"><span class="cl">git commit -m <span class="s2">&#34;提交信息,比如init&#34;</span>
 </span></span><span class="line"><span class="cl">REM 配置代理，以我电脑上目前的科学上网工具为例，本地环路端口号为4780
 </span></span><span class="line"><span class="cl">git config --global http.proxy http://127.0.0.1:4780
 </span></span><span class="line"><span class="cl">git config --global https.proxy https://127.0.0.1:4780
@@ -407,22 +352,11 @@
 </span></span><span class="line"><span class="cl">git remote set-url origin git@github.com:Adeepblue/adeepblue.github.io
 </span></span><span class="line"><span class="cl">REM 推送，如果本地分支跟远程分支不同可使用-f参数强制推送
 </span></span><span class="line"><span class="cl">git push -f origin main / git push origin main --force
-</span></span></code></pre></td></tr></table>
-</div>
-</div><p>以上，调试完毕</p>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre tabindex="0" class="chroma"><code><span class="lnt">1
-</span><span class="lnt">2
-</span><span class="lnt">3
-</span></code></pre></td>
-<td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">git add -f public
+</span></span></code></pre></div><p>以上，调试完毕</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">git add -f public
 </span></span><span class="line"><span class="cl">git commit -m &#34;Publish site&#34;
 </span></span><span class="line"><span class="cl">git subtree push --prefix public origin gh-pages
-</span></span></code></pre></td></tr></table>
-</div>
-</div><p>以及，现在的hugo推送，这样就可以推送到gh-pages分区进行展示了，需要GitHub修改一下仓库设置
+</span></span></code></pre></div><p>以及，现在的hugo推送，这样就可以推送到gh-pages分区进行展示了，需要GitHub修改一下仓库设置
 <img src="/p/git%E8%BF%9E%E6%8E%A5%E8%B8%A9%E5%9D%91%E8%AE%B0%E5%BD%95/1.png"
 	width="1723"
 	height="907"
@@ -571,6 +505,7 @@
         document.head.appendChild(customFont);
     }());
 </script>
+
 <style>
   body {
     background: url(https://adeepblue.github.io/background/background.png) no-repeat center top;

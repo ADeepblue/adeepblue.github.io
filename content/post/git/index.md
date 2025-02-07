@@ -47,7 +47,7 @@ Host github.com
 除这个文件之后`ssh -T git@github.com`立马可以通了，也是给我整无语了
 
 # 仓库的配置，先需要初始化仓库
-```
+```bash
 git init
 REM 新建并切到主分支（此处为cmd的备注方式）
 git checkout -b main
