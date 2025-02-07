@@ -313,64 +313,18 @@
 身之后就可以开始写md文件了，比如此处我新建了<code>hugo/hugo-init.md</code>文件，命令如下</p>
 <p><code>hugo new hugo/hugo-init.md</code></p>
 <p>命令行返回为</p>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre tabindex="0" class="chroma"><code><span class="lnt">1
-</span><span class="lnt">2
-</span></code></pre></td>
-<td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">E:\personal-blog\personal-blog&gt;hugo new git/git-init.md
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">E:\personal-blog\personal-blog&gt;hugo new git/git-init.md
 </span></span><span class="line"><span class="cl">Content &#34;E:\\personal-blog\\personal-blog\\content\\git\\git-init.md&#34; created
-</span></span></code></pre></td></tr></table>
-</div>
-</div><p>再有就是自带的文件头，</p>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre tabindex="0" class="chroma"><code><span class="lnt">1
-</span><span class="lnt">2
-</span><span class="lnt">3
-</span><span class="lnt">4
-</span><span class="lnt">5
-</span></code></pre></td>
-<td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">+++
+</span></span></code></pre></div><p>再有就是自带的文件头，</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">+++
 </span></span><span class="line"><span class="cl">date = &#39;2025-02-04T21:10:15+08:00&#39;
 </span></span><span class="line"><span class="cl">draft = false
 </span></span><span class="line"><span class="cl">title = &#39;Test&#39;
 </span></span><span class="line"><span class="cl">+++
-</span></span></code></pre></td></tr></table>
-</div>
-</div><p>原本<code>draft</code>中的值是true,需要改成false才能进行页面发布
+</span></span></code></pre></div><p>原本<code>draft</code>中的值是true,需要改成false才能进行页面发布
 ，可能是因为类似审核的过程？方便管理确认？亦或者说不想显示
 某篇文章先用这种方式隐藏起来？虽然也只是我的猜测而已罢了</p>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
-</span><span class="lnt"> 2
-</span><span class="lnt"> 3
-</span><span class="lnt"> 4
-</span><span class="lnt"> 5
-</span><span class="lnt"> 6
-</span><span class="lnt"> 7
-</span><span class="lnt"> 8
-</span><span class="lnt"> 9
-</span><span class="lnt">10
-</span><span class="lnt">11
-</span><span class="lnt">12
-</span><span class="lnt">13
-</span><span class="lnt">14
-</span><span class="lnt">15
-</span><span class="lnt">16
-</span><span class="lnt">17
-</span><span class="lnt">18
-</span><span class="lnt">19
-</span><span class="lnt">20
-</span><span class="lnt">21
-</span><span class="lnt">22
-</span><span class="lnt">23
-</span></code></pre></td>
-<td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl"># 文章标题
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl"># 文章标题
 </span></span><span class="line"><span class="cl">
 </span></span><span class="line"><span class="cl">这是你的主要内容部分。你可以在这里添加文本、列表、引用、图像等。
 </span></span><span class="line"><span class="cl">
@@ -393,25 +347,11 @@
 </span></span><span class="line"><span class="cl">### 代码示例
 </span></span><span class="line"><span class="cl">
 </span></span><span class="line"><span class="cl">`ssh git@github.com`
-</span></span></code></pre></td></tr></table>
-</div>
-</div><p>以及是，<code>content</code>目录下必须包含_index.md文件，不然会不显
+</span></span></code></pre></div><p>以及是，<code>content</code>目录下必须包含_index.md文件，不然会不显
 示主页，这就是主页， 命令可以以下方法实现</p>
 <p><code>hugo new _index.md</code></p>
 <p>然后我目前打算添加的代码，（有变动会更改）</p>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre tabindex="0" class="chroma"><code><span class="lnt">1
-</span><span class="lnt">2
-</span><span class="lnt">3
-</span><span class="lnt">4
-</span><span class="lnt">5
-</span><span class="lnt">6
-</span><span class="lnt">7
-</span><span class="lnt">8
-</span></code></pre></td>
-<td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">---
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">---
 </span></span><span class="line"><span class="cl">menu:
 </span></span><span class="line"><span class="cl">    main:
 </span></span><span class="line"><span class="cl">        name: 主页
@@ -419,9 +359,7 @@
 </span></span><span class="line"><span class="cl">        params:
 </span></span><span class="line"><span class="cl">            icon: home
 </span></span><span class="line"><span class="cl">---
-</span></span></code></pre></td></tr></table>
-</div>
-</div><p>目前git处文章不显示，未知原因，起初发现<code>draft=true</code>没修改，但目前不清楚因为什么导致不显示</p>
+</span></span></code></pre></div><p>目前git处文章不显示，未知原因，起初发现<code>draft=true</code>没修改，但目前不清楚因为什么导致不显示</p>
 <p>总觉得hugo挺多bug的，之前有404过不少时间，调试了很久重新开始hugo new site personal-blog
 然后重建git仓库，弄了许久没弄好，现在又出现<code>hugo new post/cmd/index.md</code>没法创建
 疑似可能是因为hugo server正在启动无法使用new命令吧</p>
@@ -429,38 +367,17 @@
 <p>也奇怪，一开始没搞定背景图片，这次一遍过了，下面这条命令是创建文件夹的命令，在网站根目录打开cmd运行</p>
 <p><code>md .\assets\background</code></p>
 <p>然后在这个文件夹内放背景图片后，运行以下命令创建</p>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre tabindex="0" class="chroma"><code><span class="lnt">1
-</span><span class="lnt">2
-</span></code></pre></td>
-<td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">md .\layouts\partials\footer
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">md .\layouts\partials\footer
 </span></span><span class="line"><span class="cl">touch .\layouts\partials\footer\custom.html
-</span></span></code></pre></td></tr></table>
-</div>
-</div><p>并将以下代码直接放入上面新建的custom.html内部</p>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre tabindex="0" class="chroma"><code><span class="lnt">1
-</span><span class="lnt">2
-</span><span class="lnt">3
-</span><span class="lnt">4
-</span><span class="lnt">5
-</span><span class="lnt">6
-</span><span class="lnt">7
-</span></code></pre></td>
-<td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">&lt;style&gt;
+</span></span></code></pre></div><p>并将以下代码直接放入上面新建的custom.html内部</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">&lt;style&gt;
 </span></span><span class="line"><span class="cl">  body {
 </span></span><span class="line"><span class="cl">    background: url({{ (resources.Get &#34;background/背景图片名&#34;).Permalink }}) no-repeat center top;
 </span></span><span class="line"><span class="cl">    background-size: cover;
 </span></span><span class="line"><span class="cl">    background-attachment: fixed;
 </span></span><span class="line"><span class="cl">  }
 </span></span><span class="line"><span class="cl">&lt;/style&gt;
-</span></span></code></pre></td></tr></table>
-</div>
-</div><p>此处感谢<code>莱特雷-letere</code>大佬的博客指引https://letere-gzj.github.io/hugo-stack/p/hugo/custom-background/</p>
+</span></span></code></pre></div><p>此处感谢<code>莱特雷-letere</code>大佬的博客指引https://letere-gzj.github.io/hugo-stack/p/hugo/custom-background/</p>
 
 </section>
 
@@ -595,6 +512,7 @@
         document.head.appendChild(customFont);
     }());
 </script>
+
 <style>
   body {
     background: url(https://adeepblue.github.io/background/background.png) no-repeat center top;
