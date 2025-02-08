@@ -2,6 +2,9 @@
 date = '2025-02-04T21:10:15+08:00'
 draft = false
 title = 'Test'
+categories = [
+    "test"
+]
 +++
 # 文章标题
 

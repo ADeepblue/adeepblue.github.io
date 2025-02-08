@@ -3,7 +3,10 @@ date = '2025-02-04T21:39:19+08:00'
 draft = false
 title = 'Git连接踩坑记录'
 description = "方便下次初始化仓库"
-image = "helena-hertz-wWZzXlDpMog-unsplash.jpg"
+image = "git-bash.svg"
+categories = [
+    "git"
+]
 +++
 
 # Git连接踩坑记录
@@ -22,7 +25,7 @@ Connection closed by UNKNOWN port 65535
 
 但我依稀记得我当时折腾ssh和GitHub的时候没用nc代理工具，这回莫名奇妙有这个报错了
 曾经的目录长这样
-``` 
+```bash
 C:\Users\Deepblue\.ssh>dir /b
 authorized_keys
 id_ed25519
@@ -68,7 +71,8 @@ REM 推送，如果本地分支跟远程分支不同可使用-f参数强制推�
 git push -f origin main / git push origin main --force
 ```
 以上，调试完毕
-```
+
+```bash
 git add -f public
 git commit -m "Publish site"
 git subtree push --prefix public origin gh-pages

@@ -1,11 +1,15 @@
 +++
 date = '2025-02-06T10:07:57+08:00'
 draft = false
-title = 'Turing Complete'
+title = '图灵完备游戏攻略'
+image = 'Logo.png'
+categories = [
+    "图灵完备"
+]
 +++
 
 # 2025 02 06记录
-![如题](password%20lock_introduce.png)
+![如题](password_lock_introduce.png)
 ![二分法](1depart2.png)
 
 看到第一想法是，想组织二分法去快速取值了，但想想简单吧还是遍历简单，所以准备

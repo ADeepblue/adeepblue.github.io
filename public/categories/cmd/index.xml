@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+    <channel>
+        <title>Cmd on 深蓝之亘的博客</title>
+        <link>https://adeepblue.github.io/categories/cmd/</link>
+        <description>Recent content in Cmd on 深蓝之亘的博客</description>
+        <generator>Hugo -- gohugo.io</generator>
+        <language>zh-cn</language>
+        <copyright>深蓝之亘</copyright>
+        <lastBuildDate>Tue, 04 Feb 2025 22:34:00 +0800</lastBuildDate><atom:link href="https://adeepblue.github.io/categories/cmd/index.xml" rel="self" type="application/rss+xml" /><item>
+        <title>Cmd命令笔记（会时不时更新）</title>
+        <link>https://adeepblue.github.io/p/cmd%E5%91%BD%E4%BB%A4%E7%AC%94%E8%AE%B0%E4%BC%9A%E6%97%B6%E4%B8%8D%E6%97%B6%E6%9B%B4%E6%96%B0/</link>
+        <pubDate>Tue, 04 Feb 2025 22:34:00 +0800</pubDate>
+        
+        <guid>https://adeepblue.github.io/p/cmd%E5%91%BD%E4%BB%A4%E7%AC%94%E8%AE%B0%E4%BC%9A%E6%97%B6%E4%B8%8D%E6%97%B6%E6%9B%B4%E6%96%B0/</guid>
+        <description>&lt;img src="https://adeepblue.github.io/p/cmd%E5%91%BD%E4%BB%A4%E7%AC%94%E8%AE%B0%E4%BC%9A%E6%97%B6%E4%B8%8D%E6%97%B6%E6%9B%B4%E6%96%B0/CommandLineIcon.png" alt="Featured image of post Cmd命令笔记（会时不时更新）" /&gt;&lt;h1 id=&#34;mkdir&#34;&gt;mkdir
+&lt;/h1&gt;&lt;p&gt;起初我以为是用斜杠/来实现分割目录，结果后面发现是反斜杠，
+很多地方搞来搞去的很容易搞混搞不清&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;mkdir .\a\b\c\d&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;基于当前目录下创建 ~.\a\b\c\d的目录&lt;/p&gt;
+&lt;h1 id=&#34;touch&#34;&gt;touch
+&lt;/h1&gt;&lt;p&gt;同样的文件分割方式，创建文件可以用touch函数
+&lt;code&gt;touch .\a\b\c\d\e.txt&lt;/code&gt;&lt;/p&gt;
+</description>
+        </item>
+        
+    </channel>
+</rss>

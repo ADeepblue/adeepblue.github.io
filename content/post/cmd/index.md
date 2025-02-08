@@ -3,7 +3,10 @@ date = '2025-02-04T22:34:00+08:00'
 draft = false
 title = 'Cmd命令笔记（会时不时更新）'
 description = "介绍一些基于cmd的脚本基础用法，也当作自己的笔记"
-image = "luca-bravo-alS7ewQ41M8-unsplash.jpg"
+image = "CommandLineIcon.png"
+categories = [
+    "cmd"
+]
 +++
 
 # mkdir
