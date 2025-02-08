@@ -1,19 +1,19 @@
 <!DOCTYPE html>
 <html lang="zh-cn" dir="ltr">
-    <head><meta charset='utf-8'>
-<meta name='viewport' content='width=device-width, initial-scale=1'><meta name='description' content="2025 02 06记录 看到第一想法是，想组织二分法去快速取值了，但想想简单吧还是遍历简单，所以准备 直接写两个程序，一个遍历一个二分法取值,以下是从游戏内汇编代码编辑器中拷贝过来的代码\n">
+    <head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script><meta charset='utf-8'>
+<meta name='viewport' content='width=device-width, initial-scale=1'><meta name='description' content="图灵完备部分游戏攻略 前言 话说在前面，因为先前并没有开博客网站，我先前的内容，除非我再去玩一次，可能会再写记录，目前估计不打算写了 ,目前的进度如下图，已经造出了可以运行的计算机，也实现了简单的几个程序，以及开始了游戏内的汇编，会简单讲一下我造的计算机的布局， 我并不打算多看教程，基本多数是我自己在思考然后自己搞定的，写这个博客的目的是在我写一些程序或者跟程序相关的东西的时候留下一些痕迹， 不写就有可能会像我python这里这边这样，用过3D的绘图但回过头来不知道文件夹放在哪了，甚至还很难搜到，干脆就写博客了就 ">
 <title>图灵完备游戏攻略</title>
 
-<link rel='canonical' href='https://adeepblue.github.io/p/%E5%9B%BE%E7%81%B5%E5%AE%8C%E5%A4%87%E6%B8%B8%E6%88%8F%E6%94%BB%E7%95%A5/'>
+<link rel='canonical' href='http://localhost:1313/p/%E5%9B%BE%E7%81%B5%E5%AE%8C%E5%A4%87%E6%B8%B8%E6%88%8F%E6%94%BB%E7%95%A5/'>
 
 <link rel="stylesheet" href="/scss/style.min.663803bebe609202d5b39d848f2d7c2dc8b598a2d879efa079fa88893d29c49c.css"><meta property='og:title' content="图灵完备游戏攻略">
-<meta property='og:description' content="2025 02 06记录 看到第一想法是，想组织二分法去快速取值了，但想想简单吧还是遍历简单，所以准备 直接写两个程序，一个遍历一个二分法取值,以下是从游戏内汇编代码编辑器中拷贝过来的代码\n">
-<meta property='og:url' content='https://adeepblue.github.io/p/%E5%9B%BE%E7%81%B5%E5%AE%8C%E5%A4%87%E6%B8%B8%E6%88%8F%E6%94%BB%E7%95%A5/'>
+<meta property='og:description' content="图灵完备部分游戏攻略 前言 话说在前面，因为先前并没有开博客网站，我先前的内容，除非我再去玩一次，可能会再写记录，目前估计不打算写了 ,目前的进度如下图，已经造出了可以运行的计算机，也实现了简单的几个程序，以及开始了游戏内的汇编，会简单讲一下我造的计算机的布局， 我并不打算多看教程，基本多数是我自己在思考然后自己搞定的，写这个博客的目的是在我写一些程序或者跟程序相关的东西的时候留下一些痕迹， 不写就有可能会像我python这里这边这样，用过3D的绘图但回过头来不知道文件夹放在哪了，甚至还很难搜到，干脆就写博客了就 ">
+<meta property='og:url' content='http://localhost:1313/p/%E5%9B%BE%E7%81%B5%E5%AE%8C%E5%A4%87%E6%B8%B8%E6%88%8F%E6%94%BB%E7%95%A5/'>
 <meta property='og:site_name' content='深蓝之亘的博客'>
-<meta property='og:type' content='article'><meta property='article:section' content='Post' /><meta property='article:published_time' content='2025-02-06T10:07:57&#43;08:00'/><meta property='article:modified_time' content='2025-02-06T10:07:57&#43;08:00'/><meta property='og:image' content='https://adeepblue.github.io/p/%E5%9B%BE%E7%81%B5%E5%AE%8C%E5%A4%87%E6%B8%B8%E6%88%8F%E6%94%BB%E7%95%A5/Logo.png' />
+<meta property='og:type' content='article'><meta property='article:section' content='Post' /><meta property='article:published_time' content='2025-02-06T10:07:57&#43;08:00'/><meta property='article:modified_time' content='2025-02-06T10:07:57&#43;08:00'/><meta property='og:image' content='http://localhost:1313/p/%E5%9B%BE%E7%81%B5%E5%AE%8C%E5%A4%87%E6%B8%B8%E6%88%8F%E6%94%BB%E7%95%A5/Logo.png' />
 <meta name="twitter:title" content="图灵完备游戏攻略">
-<meta name="twitter:description" content="2025 02 06记录 看到第一想法是，想组织二分法去快速取值了，但想想简单吧还是遍历简单，所以准备 直接写两个程序，一个遍历一个二分法取值,以下是从游戏内汇编代码编辑器中拷贝过来的代码\n"><meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:image" content='https://adeepblue.github.io/p/%E5%9B%BE%E7%81%B5%E5%AE%8C%E5%A4%87%E6%B8%B8%E6%88%8F%E6%94%BB%E7%95%A5/Logo.png' />
+<meta name="twitter:description" content="图灵完备部分游戏攻略 前言 话说在前面，因为先前并没有开博客网站，我先前的内容，除非我再去玩一次，可能会再写记录，目前估计不打算写了 ,目前的进度如下图，已经造出了可以运行的计算机，也实现了简单的几个程序，以及开始了游戏内的汇编，会简单讲一下我造的计算机的布局， 我并不打算多看教程，基本多数是我自己在思考然后自己搞定的，写这个博客的目的是在我写一些程序或者跟程序相关的东西的时候留下一些痕迹， 不写就有可能会像我python这里这边这样，用过3D的绘图但回过头来不知道文件夹放在哪了，甚至还很难搜到，干脆就写博客了就 "><meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:image" content='http://localhost:1313/p/%E5%9B%BE%E7%81%B5%E5%AE%8C%E5%A4%87%E6%B8%B8%E6%88%8F%E6%94%BB%E7%95%A5/Logo.png' />
     <link rel="shortcut icon" href="/favicon.ico" />
 
     </head>
@@ -238,7 +238,55 @@
     </ol>
 </aside>
 
-    
+    <aside class="sidebar right-sidebar sticky">
+        
+            
+                
+    <section class="widget archives">
+        <div class="widget-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-hash" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <line x1="5" y1="9" x2="19" y2="9" />
+  <line x1="5" y1="15" x2="19" y2="15" />
+  <line x1="11" y1="4" x2="7" y2="20" />
+  <line x1="17" y1="4" x2="13" y2="20" />
+</svg>
+
+
+
+        </div>
+        <h2 class="widget-title section-title">目录</h2>
+        
+        <div class="widget--toc">
+            <nav id="TableOfContents">
+  <ol>
+    <li><a href="#前言">前言</a></li>
+    <li><a href="#目前计算机的布局">目前计算机的布局</a>
+      <ol>
+        <li><a href="#寄存器">寄存器</a></li>
+        <li><a href="#dec状态选择器">DEC状态选择器</a></li>
+      </ol>
+    </li>
+    <li><a href="#四种模式">四种模式</a>
+      <ol>
+        <li><a href="#立即数模式">立即数模式</a></li>
+        <li><a href="#计算模式">计算模式</a></li>
+        <li><a href="#复制模式">复制模式</a></li>
+        <li><a href="#条件判断模式">条件判断模式</a></li>
+      </ol>
+    </li>
+    <li><a href="#汇编">汇编</a></li>
+    <li><a href="#基础已经能实现的一些功能">基础已经能实现的一些功能</a></li>
+    <li><a href="#关卡密码锁">关卡密码锁</a></li>
+  </ol>
+</nav>
+        </div>
+    </section>
+
+            
+        
+    </aside>
+
 
             <main class="main full-width">
     <article class="has-image main-article">
@@ -307,8 +355,247 @@
     <section class="article-content">
     
     
-    <h1 id="2025-02-06记录">2025 02 06记录
-</h1><p><img src="/p/%E5%9B%BE%E7%81%B5%E5%AE%8C%E5%A4%87%E6%B8%B8%E6%88%8F%E6%94%BB%E7%95%A5/password_lock_introduce.png"
+    <h1 id="图灵完备部分游戏攻略">图灵完备部分游戏攻略
+</h1><h2 id="前言">前言
+</h2><p>话说在前面，因为先前并没有开博客网站，我先前的内容，除非我再去玩一次，可能会再写记录，目前估计不打算写了
+,目前的进度如下图，已经造出了可以运行的计算机，也实现了简单的几个程序，以及开始了游戏内的汇编，会简单讲一下我造的计算机的布局，
+我并不打算多看教程，基本多数是我自己在思考然后自己搞定的，写这个博客的目的是在我写一些程序或者跟程序相关的东西的时候留下一些痕迹，
+不写就有可能会像我python这里这边这样，用过3D的绘图但回过头来不知道文件夹放在哪了，甚至还很难搜到，干脆就写博客了就
+<img src="/p/%E5%9B%BE%E7%81%B5%E5%AE%8C%E5%A4%87%E6%B8%B8%E6%88%8F%E6%94%BB%E7%95%A5/2025-02-08-progress.png"
+	width="1920"
+	height="1080"
+	srcset="/p/%E5%9B%BE%E7%81%B5%E5%AE%8C%E5%A4%87%E6%B8%B8%E6%88%8F%E6%94%BB%E7%95%A5/2025-02-08-progress_hu_f2ad59014f640033.png 480w, /p/%E5%9B%BE%E7%81%B5%E5%AE%8C%E5%A4%87%E6%B8%B8%E6%88%8F%E6%94%BB%E7%95%A5/2025-02-08-progress_hu_6941cd167dc29966.png 1024w"
+	loading="lazy"
+	
+		alt="进度"
+	
+	
+		class="gallery-image" 
+		data-flex-grow="177"
+		data-flex-basis="426px"
+	
+></p>
+<h2 id="目前计算机的布局">目前计算机的布局
+</h2><p>这是我目前造好的计算机，如下图</p>
+<h3 id="寄存器">寄存器
+</h3><p>下面的是6个寄存器和一个输入，可以用来存储读取数据
+<img src="/p/%E5%9B%BE%E7%81%B5%E5%AE%8C%E5%A4%87%E6%B8%B8%E6%88%8F%E6%94%BB%E7%95%A5/reg_in_my_computer.png"
+	width="1453"
+	height="912"
+	srcset="/p/%E5%9B%BE%E7%81%B5%E5%AE%8C%E5%A4%87%E6%B8%B8%E6%88%8F%E6%94%BB%E7%95%A5/reg_in_my_computer_hu_a33932f982e856eb.png 480w, /p/%E5%9B%BE%E7%81%B5%E5%AE%8C%E5%A4%87%E6%B8%B8%E6%88%8F%E6%94%BB%E7%95%A5/reg_in_my_computer_hu_414e3ab19dc4b79d.png 1024w"
+	loading="lazy"
+	
+	
+		class="gallery-image" 
+		data-flex-grow="159"
+		data-flex-basis="382px"
+	
+></p>
+<h3 id="dec状态选择器">DEC状态选择器
+</h3><p>以及是DEC，模式选择器，选择当前计算机处于什么状态，主要是取决于从程序码中读取的8位状态数中的前两位，这两位组成一个
+二进制数表示0到4，分别代表DEC的四个模式从上到下分别对应0-3，对应着四种读写模式，接下来会介绍四种模式</p>
+<h2 id="四种模式">四种模式
+</h2><h3 id="立即数模式">立即数模式
+</h3><p><span style="color:red">模式0</span>是IMMEDIATE(立即数模式)
+，它会读取后面的六位直接存储在reg0中，</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl"># 直接写数据会把程序码变成这个数,小于64时前两位数字都是0，立即数模式直接把1写入reg0
+</span></span><span class="line"><span class="cl">1
+</span></span></code></pre></div><p><img src="/p/%E5%9B%BE%E7%81%B5%E5%AE%8C%E5%A4%87%E6%B8%B8%E6%88%8F%E6%94%BB%E7%95%A5/DEC_mode.png"
+	width="1920"
+	height="1080"
+	srcset="/p/%E5%9B%BE%E7%81%B5%E5%AE%8C%E5%A4%87%E6%B8%B8%E6%88%8F%E6%94%BB%E7%95%A5/DEC_mode_hu_646067bc0deb64a5.png 480w, /p/%E5%9B%BE%E7%81%B5%E5%AE%8C%E5%A4%87%E6%B8%B8%E6%88%8F%E6%94%BB%E7%95%A5/DEC_mode_hu_1e533864bc37f34.png 1024w"
+	loading="lazy"
+	
+		alt="DEC-mode"
+	
+	
+		class="gallery-image" 
+		data-flex-grow="177"
+		data-flex-basis="426px"
+	
+>
+<img src="/p/%E5%9B%BE%E7%81%B5%E5%AE%8C%E5%A4%87%E6%B8%B8%E6%88%8F%E6%94%BB%E7%95%A5/DEC-caculation.png"
+	width="1293"
+	height="990"
+	srcset="/p/%E5%9B%BE%E7%81%B5%E5%AE%8C%E5%A4%87%E6%B8%B8%E6%88%8F%E6%94%BB%E7%95%A5/DEC-caculation_hu_e923643cd775523e.png 480w, /p/%E5%9B%BE%E7%81%B5%E5%AE%8C%E5%A4%87%E6%B8%B8%E6%88%8F%E6%94%BB%E7%95%A5/DEC-caculation_hu_5f827abf56ae9f56.png 1024w"
+	loading="lazy"
+	
+		alt="CACULATION"
+	
+	
+		class="gallery-image" 
+		data-flex-grow="130"
+		data-flex-basis="313px"
+	
+></p>
+<h3 id="计算模式">计算模式
+</h3><p>接下来是<span style="color:red">模式1</span>，计算模式，如箭头所示，reg1的输出会到ALU元件的输入1部分，reg2的输出会到ALU元件的输入2部分
+其中ALU的输出通过一个二选一线连到了reg3的输入端，在模式是计算模式下，reg3的读写开关时打开的,至于ALU是什么在下一步处讲
+现在可以理解为，输入1跟输入2经过ALU的一翻操作之后输出变成了reg3的值，这些都是基于先前给的指令集添加的功能，以下是之前的游戏要求，也就是
+现在已经实现了的东西，指令码是最后三位</p>
+<p><img src="/p/%E5%9B%BE%E7%81%B5%E5%AE%8C%E5%A4%87%E6%B8%B8%E6%88%8F%E6%94%BB%E7%95%A5/ALU-game-function.png"
+	width="756"
+	height="506"
+	srcset="/p/%E5%9B%BE%E7%81%B5%E5%AE%8C%E5%A4%87%E6%B8%B8%E6%88%8F%E6%94%BB%E7%95%A5/ALU-game-function_hu_67d5cb9e2e5bba0c.png 480w, /p/%E5%9B%BE%E7%81%B5%E5%AE%8C%E5%A4%87%E6%B8%B8%E6%88%8F%E6%94%BB%E7%95%A5/ALU-game-function_hu_9a5c38a1c42b6f83.png 1024w"
+	loading="lazy"
+	
+		alt="function"
+	
+	
+		class="gallery-image" 
+		data-flex-grow="149"
+		data-flex-basis="358px"
+	
+></p>
+<p>在这个基础上,我新增了两数相乘的功能，也就是现在写着的unused的地方，现在已经这个按键位置可以实现乘法的功能了</p>
+<p><img src="/p/%E5%9B%BE%E7%81%B5%E5%AE%8C%E5%A4%87%E6%B8%B8%E6%88%8F%E6%94%BB%E7%95%A5/ALU-extra-function-times.png"
+	width="835"
+	height="971"
+	srcset="/p/%E5%9B%BE%E7%81%B5%E5%AE%8C%E5%A4%87%E6%B8%B8%E6%88%8F%E6%94%BB%E7%95%A5/ALU-extra-function-times_hu_1c346d33f4993dc6.png 480w, /p/%E5%9B%BE%E7%81%B5%E5%AE%8C%E5%A4%87%E6%B8%B8%E6%88%8F%E6%94%BB%E7%95%A5/ALU-extra-function-times_hu_90c941bc18ea998a.png 1024w"
+	loading="lazy"
+	
+		alt="times"
+	
+	
+		class="gallery-image" 
+		data-flex-grow="85"
+		data-flex-basis="206px"
+	
+>
+<img src="/p/%E5%9B%BE%E7%81%B5%E5%AE%8C%E5%A4%87%E6%B8%B8%E6%88%8F%E6%94%BB%E7%95%A5/times-in-introduction-set.png"
+	width="935"
+	height="417"
+	srcset="/p/%E5%9B%BE%E7%81%B5%E5%AE%8C%E5%A4%87%E6%B8%B8%E6%88%8F%E6%94%BB%E7%95%A5/times-in-introduction-set_hu_aec8024a67cf03ed.png 480w, /p/%E5%9B%BE%E7%81%B5%E5%AE%8C%E5%A4%87%E6%B8%B8%E6%88%8F%E6%94%BB%E7%95%A5/times-in-introduction-set_hu_bd4ca54fd38a8639.png 1024w"
+	loading="lazy"
+	
+		alt="乘法在指令集中对应的指令"
+	
+	
+		class="gallery-image" 
+		data-flex-grow="224"
+		data-flex-basis="538px"
+	
+>
+以及，这个指令的操作意味着，我先设定好reg2和reg1的值之后，我只要输入这个指令就可以把以上能得到的结果输入到reg3，至于怎么设定reg1和reg2的值后面会说</p>
+<h3 id="复制模式">复制模式
+</h3><p>再然后是<span style="color:red">模式2</span>,copy模式，数字复制模式，这个指令会执行的操作是从前三位指代的寄存器的位置复制数值到后三位指代的寄存器上
+<img src="/p/%E5%9B%BE%E7%81%B5%E5%AE%8C%E5%A4%87%E6%B8%B8%E6%88%8F%E6%94%BB%E7%95%A5/copy-mode.png"
+	width="970"
+	height="426"
+	srcset="/p/%E5%9B%BE%E7%81%B5%E5%AE%8C%E5%A4%87%E6%B8%B8%E6%88%8F%E6%94%BB%E7%95%A5/copy-mode_hu_49235b015449fdb0.png 480w, /p/%E5%9B%BE%E7%81%B5%E5%AE%8C%E5%A4%87%E6%B8%B8%E6%88%8F%E6%94%BB%E7%95%A5/copy-mode_hu_1adc55dc803cdc0c.png 1024w"
+	loading="lazy"
+	
+	
+		class="gallery-image" 
+		data-flex-grow="227"
+		data-flex-basis="546px"
+	
+>
+也有特殊的，三位值如果指代的是6，也就是110的状态下，左侧三位指代的输入，右侧三位指代的输出</p>
+<h3 id="条件判断模式">条件判断模式
+</h3><p><img src="/p/%E5%9B%BE%E7%81%B5%E5%AE%8C%E5%A4%87%E6%B8%B8%E6%88%8F%E6%94%BB%E7%95%A5/condition.png"
+	width="584"
+	height="479"
+	srcset="/p/%E5%9B%BE%E7%81%B5%E5%AE%8C%E5%A4%87%E6%B8%B8%E6%88%8F%E6%94%BB%E7%95%A5/condition_hu_74afcc7b9ea9ae5e.png 480w, /p/%E5%9B%BE%E7%81%B5%E5%AE%8C%E5%A4%87%E6%B8%B8%E6%88%8F%E6%94%BB%E7%95%A5/condition_hu_17f1329e18dc0a18.png 1024w"
+	loading="lazy"
+	
+		alt="所有条件"
+	
+	
+		class="gallery-image" 
+		data-flex-grow="121"
+		data-flex-basis="292px"
+	
+>
+<span style="color:red">模式3</span>，条件判断模式，条件是否满足如上，检测到reg3是否满足条件，满足后把reg0的值输入到程序的计数器内，也就是
+可以实现跳转功能</p>
+<h2 id="汇编">汇编
+</h2><p><img src="/p/%E5%9B%BE%E7%81%B5%E5%AE%8C%E5%A4%87%E6%B8%B8%E6%88%8F%E6%94%BB%E7%95%A5/compiler.png"
+	width="1502"
+	height="927"
+	srcset="/p/%E5%9B%BE%E7%81%B5%E5%AE%8C%E5%A4%87%E6%B8%B8%E6%88%8F%E6%94%BB%E7%95%A5/compiler_hu_c1ae04e25c80b603.png 480w, /p/%E5%9B%BE%E7%81%B5%E5%AE%8C%E5%A4%87%E6%B8%B8%E6%88%8F%E6%94%BB%E7%95%A5/compiler_hu_34d913da72a7842b.png 1024w"
+	loading="lazy"
+	
+		alt="img.png"
+	
+	
+		class="gallery-image" 
+		data-flex-grow="162"
+		data-flex-basis="388px"
+	
+>
+可以为你已经有的指令创建一个别名，然后在程序中执行时，这个别名会被对应的指令数字替换，这样做可以增加
+代码的可读性，让你知道当前代码什么意思，也就构成了现在的汇编代码编辑器的页面现在已有的东西，其中立即数模式不需要汇编，因为当前两位是0的时候后面的作为数字直接进入reg0.
+计算模式直接写对应的模式的英文，比如add，当然，在执行汇编命令add，也就是68之前，需要将reg1和reg2赋值完毕再计算
+如果没赋值就进行计算在多数情况下没有意义，至于复制模式，已经将相当多的指令直接指定好汇编别名了，现在能看到的基本都是以
+哪to哪的格式进行命名的，至于第四个条件模式，一般用于代码的循环吧，等于是重新跳转到哪里执行，会在下面一个模块中描述，目前定义了
+if_reg3_not0,也就是reg3不等于0，以及一个always命令，见条件判断模式中的100</p>
+<h2 id="基础已经能实现的一些功能">基础已经能实现的一些功能
+</h2><p>综上，已经明白reg0到reg3都是已经有功能附加在身了，能自由控制的也就是reg4和reg5的值了，先说一个可类似for循环的操作，
+先定义一个数，到reg4比如说，初始化可以通过立即数模式加复制模式完成，下面是举例</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">4
+</span></span><span class="line"><span class="cl">reg0_to_reg4
+</span></span></code></pre></div><p>现在以及执行的命令有，我先将10赋值给reg0，然后再把reg0(10)的值赋值给reg4，从而完成了循环数的初始化
+再有就是条件变动了，因为几乎所有的条件几乎都围绕着0附近展开的，所以一般情况下的循环就是从你定义了一个数，慢慢
+下降，到0为止，停止跳转操作：</p>
+<p>跳转操作，修改的计数器的位置，等同于修改了下一个要执行的程序命令，比如说条件成立之后，我计数器变为3，原来是10再次碰上跳转时依旧会跳转到3
+那么如果我加入一个条件数进行限制呢？一定条件下不运作了，最简单的实现就是，一个数，每次操作完都减一，然后等到0的时候停止执行，这是可能的最简便的方法吧？
+事实上也是如此，当初我没写乘法运算器之前，也就是通过循环一个数直到它为0的操作来实现乘法的操作的，前面有关卡
+实际也就是类似等同于python中以下的代码运算，但这里毕竟程序执行一次的时间肉眼可见，至少当时执行乘法的操作的时候
+当时计算的很慢，也就是进行了一次时间换空间的操作，用循环数的方法，消耗了<code>first_num</code>倍率的时间，进行了一次乘法操作，我写的乘法器只需要一次的
+计数器累加次数，相比下面部分完全写好的循环部分，多的是不少的计数器累加次数，实际上这就是计算机内部的时钟频率，基于时钟频率进行的执行各种程序操作</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="n">sum_num</span> <span class="o">=</span> <span class="mi">0</span>
+</span></span><span class="line"><span class="cl"><span class="n">first_num</span> <span class="o">=</span> <span class="mi">6</span>
+</span></span><span class="line"><span class="cl"><span class="n">second_num</span> <span class="o">=</span> <span class="mi">4</span>
+</span></span><span class="line"><span class="cl"><span class="k">for</span> <span class="n">index</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">first_num</span><span class="p">):</span>
+</span></span><span class="line"><span class="cl">    <span class="n">sum_num</span> <span class="o">=</span> <span class="n">sum_num</span> <span class="o">+</span> <span class="n">second_num</span>
+</span></span></code></pre></div><p>啰嗦了不少东西，现在完善一下以上曾经实现的类似上面python代码的操作，已经提到初始化好loop_num了</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">label loop
+</span></span><span class="line"><span class="cl"># 初始化减数(操作数1对操作数2进行操作，顺序是如此定的，比如4-1，第二位就是1)
+</span></span><span class="line"><span class="cl">1
+</span></span><span class="line"><span class="cl">reg0_to_reg2
+</span></span></code></pre></div><p>label会标记当前行的行号,比如说这里是第四个代码执行行（注释操作并不会占用代码执行行，会被忽略）
+label的定义的关键字是<code>loop</code>，也就是，后面如果读到是<code>loop</code>的话，就输出4，一般我的习惯性操作就是，把reg0的值复制到reg3来，然后
+直接让reg3判断是否已经满足条件，如果条件满足，那就是进行跳转，但执行<code>if_reg_not0</code>的时候reg3已经有数值了，所以
+<code>loop</code>得放到<code>if_reg_not0</code>前面,继续上述代码</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">reg5_tor_reg1
+</span></span><span class="line"><span class="cl">in_to_reg2
+</span></span><span class="line"><span class="cl"># 执行加法操作，被加数是输入数
+</span></span><span class="line"><span class="cl">add
+</span></span><span class="line"><span class="cl"># 执行完后把输出数复制回reg5
+</span></span><span class="line"><span class="cl">reg3_to_reg5
+</span></span><span class="line"><span class="cl"># 输出循环数行到reg0
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"># 复制reg4到reg1
+</span></span><span class="line"><span class="cl">reg4_to_reg1
+</span></span><span class="line"><span class="cl"># 执行减法操作，并将输出值赋值给reg3
+</span></span><span class="line"><span class="cl">sub
+</span></span><span class="line"><span class="cl"># 输出完刚好直接检验减完1之后的值是否是0
+</span></span><span class="line"><span class="cl"># 先初始化好reg0的值，如果reg3条件成立就跳转到label loop那行执行
+</span></span><span class="line"><span class="cl">loop
+</span></span><span class="line"><span class="cl"># 判断！
+</span></span><span class="line"><span class="cl">if_reg3_not0
+</span></span><span class="line"><span class="cl"># 如果执行完毕，输出reg5累加数
+</span></span><span class="line"><span class="cl">reg5_to_out
+</span></span></code></pre></div><p><img src="/p/%E5%9B%BE%E7%81%B5%E5%AE%8C%E5%A4%87%E6%B8%B8%E6%88%8F%E6%94%BB%E7%95%A5/DEC_mode.png"
+	width="1920"
+	height="1080"
+	srcset="/p/%E5%9B%BE%E7%81%B5%E5%AE%8C%E5%A4%87%E6%B8%B8%E6%88%8F%E6%94%BB%E7%95%A5/DEC_mode_hu_646067bc0deb64a5.png 480w, /p/%E5%9B%BE%E7%81%B5%E5%AE%8C%E5%A4%87%E6%B8%B8%E6%88%8F%E6%94%BB%E7%95%A5/DEC_mode_hu_1e533864bc37f34.png 1024w"
+	loading="lazy"
+	
+		alt="DEC元器件"
+	
+	
+		class="gallery-image" 
+		data-flex-grow="177"
+		data-flex-basis="426px"
+	
+></p>
+<h2 id="关卡密码锁">关卡密码锁
+</h2><p>&mdash;2025 02 06记录
+<img src="/p/%E5%9B%BE%E7%81%B5%E5%AE%8C%E5%A4%87%E6%B8%B8%E6%88%8F%E6%94%BB%E7%95%A5/password_lock_introduce.png"
 	width="1920"
 	height="1080"
 	srcset="/p/%E5%9B%BE%E7%81%B5%E5%AE%8C%E5%A4%87%E6%B8%B8%E6%88%8F%E6%94%BB%E7%95%A5/password_lock_introduce_hu_9b54e3d87ebb1b4c.png 480w, /p/%E5%9B%BE%E7%81%B5%E5%AE%8C%E5%A4%87%E6%B8%B8%E6%88%8F%E6%94%BB%E7%95%A5/password_lock_introduce_hu_1b984f1a187751ef.png 1024w"
@@ -337,7 +624,8 @@
 	
 ></p>
 <p>看到第一想法是，想组织二分法去快速取值了，但想想简单吧还是遍历简单，所以准备
-直接写两个程序，一个遍历一个二分法取值,以下是从游戏内汇编代码编辑器中拷贝过来的代码</p>
+直接写两个程序，一个遍历一个二分法取值,以下是从游戏内汇编代码编辑器中拷贝过来的代码，但现在转念一想，我好像，
+如果使用二分法得写一个除法程序，先放一放，得思考一下除法程序的思路，以及是除数为0的报错处理方法，以下是目前的遍历代码</p>
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl"># put in every num to the output
 </span></span><span class="line"><span class="cl">1
 </span></span><span class="line"><span class="cl">reg0_to_reg2
@@ -475,7 +763,7 @@
                 src="https://cdn.jsdelivr.net/npm/node-vibrant@3.1.6/dist/vibrant.min.js"integrity="sha256-awcR2jno4kI5X0zL8ex0vi2z&#43;KMkF24hUW8WePSA9HM="crossorigin="anonymous"
                 
                 >
-            </script><script type="text/javascript" src="/ts/main.1e9a3bafd846ced4c345d084b355fb8c7bae75701c338f8a1f8a82c780137826.js" defer></script>
+            </script><script type="text/javascript" src="/ts/main.f2ff1307d1829a9cc96f4d4bde5cba3b3f6ae30c254f0208a45c6ad276fdcf47.js" defer></script>
 <script>
     (function () {
         const customFont = document.createElement('link');
@@ -490,7 +778,7 @@
 
 <style>
   body {
-    background: url(https://adeepblue.github.io/background/background.png) no-repeat center top;
+    background: url(http://localhost:1313/background/background.png) no-repeat center top;
     background-size: cover;
     background-attachment: fixed;
   }

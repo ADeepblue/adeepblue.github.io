@@ -2,18 +2,18 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
     <channel>
         <title>Hugo on 深蓝之亘的博客</title>
-        <link>https://adeepblue.github.io/categories/hugo/</link>
+        <link>http://localhost:1313/categories/hugo/</link>
         <description>Recent content in Hugo on 深蓝之亘的博客</description>
         <generator>Hugo -- gohugo.io</generator>
         <language>zh-cn</language>
         <copyright>深蓝之亘</copyright>
-        <lastBuildDate>Tue, 04 Feb 2025 22:34:00 +0800</lastBuildDate><atom:link href="https://adeepblue.github.io/categories/hugo/index.xml" rel="self" type="application/rss+xml" /><item>
+        <lastBuildDate>Tue, 04 Feb 2025 22:34:00 +0800</lastBuildDate><atom:link href="http://localhost:1313/categories/hugo/index.xml" rel="self" type="application/rss+xml" /><item>
         <title>Hugo初始化网站笔记</title>
-        <link>https://adeepblue.github.io/p/hugo%E5%88%9D%E5%A7%8B%E5%8C%96%E7%BD%91%E7%AB%99%E7%AC%94%E8%AE%B0/</link>
+        <link>http://localhost:1313/p/hugo%E5%88%9D%E5%A7%8B%E5%8C%96%E7%BD%91%E7%AB%99%E7%AC%94%E8%AE%B0/</link>
         <pubDate>Tue, 04 Feb 2025 22:34:00 +0800</pubDate>
         
-        <guid>https://adeepblue.github.io/p/hugo%E5%88%9D%E5%A7%8B%E5%8C%96%E7%BD%91%E7%AB%99%E7%AC%94%E8%AE%B0/</guid>
-        <description>&lt;img src="https://adeepblue.github.io/p/hugo%E5%88%9D%E5%A7%8B%E5%8C%96%E7%BD%91%E7%AB%99%E7%AC%94%E8%AE%B0/Logo_of_Hugo_the_static_website_generator.svg.png" alt="Featured image of post Hugo初始化网站笔记" /&gt;&lt;h1 id=&#34;hugo笔记&#34;&gt;Hugo笔记
+        <guid>http://localhost:1313/p/hugo%E5%88%9D%E5%A7%8B%E5%8C%96%E7%BD%91%E7%AB%99%E7%AC%94%E8%AE%B0/</guid>
+        <description>&lt;img src="http://localhost:1313/p/hugo%E5%88%9D%E5%A7%8B%E5%8C%96%E7%BD%91%E7%AB%99%E7%AC%94%E8%AE%B0/Logo_of_Hugo_the_static_website_generator.svg.png" alt="Featured image of post Hugo初始化网站笔记" /&gt;&lt;h1 id=&#34;hugo笔记&#34;&gt;Hugo笔记
 &lt;/h1&gt;&lt;p&gt;首先是先下载hugo,我的话因为后面可能命令行会比较常用，所以手动把它添加进了环境变量 path里面
 也是有这个步骤才可以下面直接hugo命令直接用了&lt;/p&gt;
 &lt;p&gt;前前后后也搞了不少时间，万一以后文件丢失了可以来这边参考我自己写的hugo笔记&lt;/p&gt;
@@ -117,10 +117,10 @@
 &lt;/h2&gt;&lt;p&gt;呃啊，折腾了一两天的代码高亮，我以为被原始的样式覆盖了，折腾了很久都没搞好，结果一删AI生成的代码立马好了，我无法接受啊啊啊啊&lt;/p&gt;
 &lt;p&gt;不推荐用
 &lt;code&gt;npm install highlight.js&lt;/code&gt;的方式安装，我安装完少了&lt;code&gt;highlight.min.js&lt;/code&gt;文件&lt;/p&gt;
-&lt;p&gt;&lt;code&gt;highlight.min.js&lt;/code&gt;放在./assets/js/目录下，&lt;img src=&#34;https://adeepblue.github.io/p/hugo%E5%88%9D%E5%A7%8B%E5%8C%96%E7%BD%91%E7%AB%99%E7%AC%94%E8%AE%B0/highlight1.png&#34;
+&lt;p&gt;&lt;code&gt;highlight.min.js&lt;/code&gt;放在./assets/js/目录下，&lt;img src=&#34;http://localhost:1313/p/hugo%E5%88%9D%E5%A7%8B%E5%8C%96%E7%BD%91%E7%AB%99%E7%AC%94%E8%AE%B0/highlight1.png&#34;
 	width=&#34;972&#34;
 	height=&#34;326&#34;
-	srcset=&#34;https://adeepblue.github.io/p/hugo%E5%88%9D%E5%A7%8B%E5%8C%96%E7%BD%91%E7%AB%99%E7%AC%94%E8%AE%B0/highlight1_hu_8f8b7365f78964db.png 480w, https://adeepblue.github.io/p/hugo%E5%88%9D%E5%A7%8B%E5%8C%96%E7%BD%91%E7%AB%99%E7%AC%94%E8%AE%B0/highlight1_hu_aee1d9e3faa97d24.png 1024w&#34;
+	srcset=&#34;http://localhost:1313/p/hugo%E5%88%9D%E5%A7%8B%E5%8C%96%E7%BD%91%E7%AB%99%E7%AC%94%E8%AE%B0/highlight1_hu_8f8b7365f78964db.png 480w, http://localhost:1313/p/hugo%E5%88%9D%E5%A7%8B%E5%8C%96%E7%BD%91%E7%AB%99%E7%AC%94%E8%AE%B0/highlight1_hu_aee1d9e3faa97d24.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 		alt=&#34;highlight.min.js&#34;
@@ -131,10 +131,10 @@
 		data-flex-basis=&#34;715px&#34;
 	
 &gt;
-styles文件夹复制出来改文件名成highlight-styles后放在/assets/css/目录下，如下 &lt;img src=&#34;https://adeepblue.github.io/p/hugo%E5%88%9D%E5%A7%8B%E5%8C%96%E7%BD%91%E7%AB%99%E7%AC%94%E8%AE%B0/highlight3.png&#34;
+styles文件夹复制出来改文件名成highlight-styles后放在/assets/css/目录下，如下 &lt;img src=&#34;http://localhost:1313/p/hugo%E5%88%9D%E5%A7%8B%E5%8C%96%E7%BD%91%E7%AB%99%E7%AC%94%E8%AE%B0/highlight3.png&#34;
 	width=&#34;1424&#34;
 	height=&#34;739&#34;
-	srcset=&#34;https://adeepblue.github.io/p/hugo%E5%88%9D%E5%A7%8B%E5%8C%96%E7%BD%91%E7%AB%99%E7%AC%94%E8%AE%B0/highlight3_hu_9dd9b449a24f586c.png 480w, https://adeepblue.github.io/p/hugo%E5%88%9D%E5%A7%8B%E5%8C%96%E7%BD%91%E7%AB%99%E7%AC%94%E8%AE%B0/highlight3_hu_7da3f648c360d08b.png 1024w&#34;
+	srcset=&#34;http://localhost:1313/p/hugo%E5%88%9D%E5%A7%8B%E5%8C%96%E7%BD%91%E7%AB%99%E7%AC%94%E8%AE%B0/highlight3_hu_9dd9b449a24f586c.png 480w, http://localhost:1313/p/hugo%E5%88%9D%E5%A7%8B%E5%8C%96%E7%BD%91%E7%AB%99%E7%AC%94%E8%AE%B0/highlight3_hu_7da3f648c360d08b.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 		alt=&#34;styles 文件夹&#34;
@@ -144,10 +144,10 @@ styles文件夹复制出来改文件名成highlight-styles后放在/assets/css/�
 		data-flex-grow=&#34;192&#34;
 		data-flex-basis=&#34;462px&#34;
 	
-&gt; &lt;img src=&#34;https://adeepblue.github.io/p/hugo%E5%88%9D%E5%A7%8B%E5%8C%96%E7%BD%91%E7%AB%99%E7%AC%94%E8%AE%B0/highlight2.png&#34;
+&gt; &lt;img src=&#34;http://localhost:1313/p/hugo%E5%88%9D%E5%A7%8B%E5%8C%96%E7%BD%91%E7%AB%99%E7%AC%94%E8%AE%B0/highlight2.png&#34;
 	width=&#34;901&#34;
 	height=&#34;379&#34;
-	srcset=&#34;https://adeepblue.github.io/p/hugo%E5%88%9D%E5%A7%8B%E5%8C%96%E7%BD%91%E7%AB%99%E7%AC%94%E8%AE%B0/highlight2_hu_c3d3f68df5e26b46.png 480w, https://adeepblue.github.io/p/hugo%E5%88%9D%E5%A7%8B%E5%8C%96%E7%BD%91%E7%AB%99%E7%AC%94%E8%AE%B0/highlight2_hu_d81c363c10dc2a2e.png 1024w&#34;
+	srcset=&#34;http://localhost:1313/p/hugo%E5%88%9D%E5%A7%8B%E5%8C%96%E7%BD%91%E7%AB%99%E7%AC%94%E8%AE%B0/highlight2_hu_c3d3f68df5e26b46.png 480w, http://localhost:1313/p/hugo%E5%88%9D%E5%A7%8B%E5%8C%96%E7%BD%91%E7%AB%99%E7%AC%94%E8%AE%B0/highlight2_hu_d81c363c10dc2a2e.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 		alt=&#34;highlight-styles文件夹&#34;
