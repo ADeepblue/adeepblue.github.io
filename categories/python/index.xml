@@ -2,18 +2,18 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
     <channel>
         <title>Python on 深蓝之亘的博客</title>
-        <link>http://localhost:1313/categories/python/</link>
+        <link>https://adeepblue.github.io/categories/python/</link>
         <description>Recent content in Python on 深蓝之亘的博客</description>
         <generator>Hugo -- gohugo.io</generator>
         <language>zh-cn</language>
         <copyright>深蓝之亘</copyright>
-        <lastBuildDate>Fri, 07 Feb 2025 19:00:05 +0800</lastBuildDate><atom:link href="http://localhost:1313/categories/python/index.xml" rel="self" type="application/rss+xml" /><item>
+        <lastBuildDate>Fri, 07 Feb 2025 19:00:05 +0800</lastBuildDate><atom:link href="https://adeepblue.github.io/categories/python/index.xml" rel="self" type="application/rss+xml" /><item>
         <title>Python Matplotlib绘图库</title>
-        <link>http://localhost:1313/p/python-matplotlib%E7%BB%98%E5%9B%BE%E5%BA%93/</link>
+        <link>https://adeepblue.github.io/p/python-matplotlib%E7%BB%98%E5%9B%BE%E5%BA%93/</link>
         <pubDate>Fri, 07 Feb 2025 19:00:05 +0800</pubDate>
         
-        <guid>http://localhost:1313/p/python-matplotlib%E7%BB%98%E5%9B%BE%E5%BA%93/</guid>
-        <description>&lt;img src="http://localhost:1313/p/python-matplotlib%E7%BB%98%E5%9B%BE%E5%BA%93/matplotlib.png" alt="Featured image of post Python Matplotlib绘图库" /&gt;&lt;h1 id=&#34;python-matplotlib绘图库介绍&#34;&gt;Python Matplotlib绘图库介绍
+        <guid>https://adeepblue.github.io/p/python-matplotlib%E7%BB%98%E5%9B%BE%E5%BA%93/</guid>
+        <description>&lt;img src="https://adeepblue.github.io/p/python-matplotlib%E7%BB%98%E5%9B%BE%E5%BA%93/matplotlib.png" alt="Featured image of post Python Matplotlib绘图库" /&gt;&lt;h1 id=&#34;python-matplotlib绘图库介绍&#34;&gt;Python Matplotlib绘图库介绍
 &lt;/h1&gt;&lt;h2 id=&#34;安装库&#34;&gt;安装库
 &lt;/h2&gt;&lt;p&gt;没啥好说的，pip install 一下就行&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-python&#34; data-lang=&#34;python&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;n&#34;&gt;pip&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;install&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;matplotlib&lt;/span&gt;
@@ -28,7 +28,7 @@
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt; &lt;span class=&#34;n&#34;&gt;plt&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;plot&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;x&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;y&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt; &lt;span class=&#34;n&#34;&gt;plt&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;show&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;()&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;赋值完毕之后直接进行plot操作读入类似缓存区的位置，然后再由&lt;code&gt;plt.show()&lt;/code&gt;输出包含着图表 (figure) 的窗口&lt;/p&gt;
-&lt;figure&gt;&lt;img src=&#34;http://localhost:1313/p/python-matplotlib%E7%BB%98%E5%9B%BE%E5%BA%93/plot-single-line.png&#34; width=&#34;400px&#34; height=&#34;340px&#34;&gt;
+&lt;figure&gt;&lt;img src=&#34;https://adeepblue.github.io/p/python-matplotlib%E7%BB%98%E5%9B%BE%E5%BA%93/plot-single-line.png&#34; width=&#34;400px&#34; height=&#34;340px&#34;&gt;
 &lt;/figure&gt;
 
 &lt;h2 id=&#34;同时绘制多条直线&#34;&gt;同时绘制多条直线？
@@ -40,7 +40,7 @@
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-python&#34; data-lang=&#34;python&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;n&#34;&gt;plt&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;plot&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;x&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;y&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;n&#34;&gt;plt&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;show&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;()&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;但输出完就傻眼了，什么情况?
-&lt;figure&gt;&lt;img src=&#34;http://localhost:1313/p/python-matplotlib%E7%BB%98%E5%9B%BE%E5%BA%93/plot-2line-error.png&#34; width=&#34;400px&#34; height=&#34;340px&#34;&gt;
+&lt;figure&gt;&lt;img src=&#34;https://adeepblue.github.io/p/python-matplotlib%E7%BB%98%E5%9B%BE%E5%BA%93/plot-2line-error.png&#34; width=&#34;400px&#34; height=&#34;340px&#34;&gt;
 &lt;/figure&gt;
 
 别急，仔细观察图表里，总共有6条线，刚好对应了列表x的长度-1,另一个1去哪里了？(1,1)和(1,1)重合了，变成点了
@@ -186,19 +186,19 @@
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt; &lt;span class=&#34;p&#34;&gt;[&lt;/span&gt;&lt;span class=&#34;mi&#34;&gt;7&lt;/span&gt; &lt;span class=&#34;mi&#34;&gt;7&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;]]&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;顺带一提，矩阵和包含数的列表都可以被matplotlib接收
 此时&lt;code&gt;plot(x,y)&lt;/code&gt;即可得到结果
-&lt;figure&gt;&lt;img src=&#34;http://localhost:1313/p/python-matplotlib%E7%BB%98%E5%9B%BE%E5%BA%93/plot-2line-right.png&#34; width=&#34;400px&#34; height=&#34;340px&#34;&gt;
+&lt;figure&gt;&lt;img src=&#34;https://adeepblue.github.io/p/python-matplotlib%E7%BB%98%E5%9B%BE%E5%BA%93/plot-2line-right.png&#34; width=&#34;400px&#34; height=&#34;340px&#34;&gt;
 &lt;/figure&gt;
 &lt;/p&gt;
 &lt;h2 id=&#34;不同区域显示&#34;&gt;不同区域显示？
 &lt;/h2&gt;&lt;p&gt;plt库包含subplot功能，可以进行一张figure的多个区域的分割，用法则是,&lt;code&gt;plt.subplot()&lt;/code&gt;结束表示在你表示的区域绘图
 其中可以用简单的数字来表示，第一个数字表示把宽分隔成多少行,第二个数字表示把长分割成多少列，比如说&lt;code&gt;plt.subplot(4,4,1)&lt;/code&gt;最后一个数表示
 位置，其中三个数都小于9可以直接写在一起,&lt;code&gt;plt.subplot(441)&lt;/code&gt;&lt;/p&gt;
-&lt;p&gt;&lt;figure&gt;&lt;img src=&#34;http://localhost:1313/p/python-matplotlib%E7%BB%98%E5%9B%BE%E5%BA%93/subplot-figure1.png&#34; width=&#34;200px&#34; height=&#34;170px&#34;&gt;&lt;figcaption&gt;
+&lt;p&gt;&lt;figure&gt;&lt;img src=&#34;https://adeepblue.github.io/p/python-matplotlib%E7%BB%98%E5%9B%BE%E5%BA%93/subplot-figure1.png&#34; width=&#34;200px&#34; height=&#34;170px&#34;&gt;&lt;figcaption&gt;
       &lt;h4&gt;subplot(441)&lt;/h4&gt;
     &lt;/figcaption&gt;
 &lt;/figure&gt;
 
-&lt;figure&gt;&lt;img src=&#34;http://localhost:1313/p/python-matplotlib%E7%BB%98%E5%9B%BE%E5%BA%93/subplot-figure2.png&#34; width=&#34;200px&#34; height=&#34;170px&#34;&gt;&lt;figcaption&gt;
+&lt;figure&gt;&lt;img src=&#34;https://adeepblue.github.io/p/python-matplotlib%E7%BB%98%E5%9B%BE%E5%BA%93/subplot-figure2.png&#34; width=&#34;200px&#34; height=&#34;170px&#34;&gt;&lt;figcaption&gt;
       &lt;h4&gt;subplot(445)&lt;/h4&gt;
     &lt;/figcaption&gt;
 &lt;/figure&gt;
@@ -221,7 +221,7 @@
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;plt.subplot(3,3,4)
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;plt.plot(x, y)
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;plt.show()
-&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;figure&gt;&lt;img src=&#34;http://localhost:1313/p/python-matplotlib%E7%BB%98%E5%9B%BE%E5%BA%93/subplot-figure3.png&#34; width=&#34;200px&#34; height=&#34;170px&#34;&gt;&lt;figcaption&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;figure&gt;&lt;img src=&#34;https://adeepblue.github.io/p/python-matplotlib%E7%BB%98%E5%9B%BE%E5%BA%93/subplot-figure3.png&#34; width=&#34;200px&#34; height=&#34;170px&#34;&gt;&lt;figcaption&gt;
       &lt;h4&gt;效果&lt;/h4&gt;
     &lt;/figcaption&gt;
 &lt;/figure&gt;
@@ -240,7 +240,7 @@
 &lt;/h2&gt;&lt;p&gt;散点图&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-python&#34; data-lang=&#34;python&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;n&#34;&gt;plt&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;scatter&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;x&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;y&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;n&#34;&gt;plt&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;show&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;()&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;figure&gt;&lt;img src=&#34;http://localhost:1313/p/python-matplotlib%E7%BB%98%E5%9B%BE%E5%BA%93/scatter-plot.png&#34; width=&#34;200px&#34; height=&#34;170px&#34;&gt;&lt;figcaption&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;figure&gt;&lt;img src=&#34;https://adeepblue.github.io/p/python-matplotlib%E7%BB%98%E5%9B%BE%E5%BA%93/scatter-plot.png&#34; width=&#34;200px&#34; height=&#34;170px&#34;&gt;&lt;figcaption&gt;
       &lt;h4&gt;效果&lt;/h4&gt;
     &lt;/figcaption&gt;
 &lt;/figure&gt;
@@ -248,7 +248,7 @@
 &lt;p&gt;柱状图&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-python&#34; data-lang=&#34;python&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;n&#34;&gt;plt&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;bar&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;x&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;y&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;n&#34;&gt;plt&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;show&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;()&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;figure&gt;&lt;img src=&#34;http://localhost:1313/p/python-matplotlib%E7%BB%98%E5%9B%BE%E5%BA%93/bar-plot.png&#34; width=&#34;200px&#34; height=&#34;170px&#34;&gt;&lt;figcaption&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;figure&gt;&lt;img src=&#34;https://adeepblue.github.io/p/python-matplotlib%E7%BB%98%E5%9B%BE%E5%BA%93/bar-plot.png&#34; width=&#34;200px&#34; height=&#34;170px&#34;&gt;&lt;figcaption&gt;
       &lt;h4&gt;效果&lt;/h4&gt;
     &lt;/figcaption&gt;
 &lt;/figure&gt;

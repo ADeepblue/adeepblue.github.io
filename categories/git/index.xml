@@ -2,18 +2,18 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
     <channel>
         <title>Git on 深蓝之亘的博客</title>
-        <link>http://localhost:1313/categories/git/</link>
+        <link>https://adeepblue.github.io/categories/git/</link>
         <description>Recent content in Git on 深蓝之亘的博客</description>
         <generator>Hugo -- gohugo.io</generator>
         <language>zh-cn</language>
         <copyright>深蓝之亘</copyright>
-        <lastBuildDate>Tue, 04 Feb 2025 21:39:19 +0800</lastBuildDate><atom:link href="http://localhost:1313/categories/git/index.xml" rel="self" type="application/rss+xml" /><item>
+        <lastBuildDate>Tue, 04 Feb 2025 21:39:19 +0800</lastBuildDate><atom:link href="https://adeepblue.github.io/categories/git/index.xml" rel="self" type="application/rss+xml" /><item>
         <title>Git连接踩坑记录</title>
-        <link>http://localhost:1313/p/git%E8%BF%9E%E6%8E%A5%E8%B8%A9%E5%9D%91%E8%AE%B0%E5%BD%95/</link>
+        <link>https://adeepblue.github.io/p/git%E8%BF%9E%E6%8E%A5%E8%B8%A9%E5%9D%91%E8%AE%B0%E5%BD%95/</link>
         <pubDate>Tue, 04 Feb 2025 21:39:19 +0800</pubDate>
         
-        <guid>http://localhost:1313/p/git%E8%BF%9E%E6%8E%A5%E8%B8%A9%E5%9D%91%E8%AE%B0%E5%BD%95/</guid>
-        <description>&lt;img src="http://localhost:1313/p/git%E8%BF%9E%E6%8E%A5%E8%B8%A9%E5%9D%91%E8%AE%B0%E5%BD%95/git-bash.svg" alt="Featured image of post Git连接踩坑记录" /&gt;&lt;h1 id=&#34;git连接踩坑记录&#34;&gt;Git连接踩坑记录
+        <guid>https://adeepblue.github.io/p/git%E8%BF%9E%E6%8E%A5%E8%B8%A9%E5%9D%91%E8%AE%B0%E5%BD%95/</guid>
+        <description>&lt;img src="https://adeepblue.github.io/p/git%E8%BF%9E%E6%8E%A5%E8%B8%A9%E5%9D%91%E8%AE%B0%E5%BD%95/git-bash.svg" alt="Featured image of post Git连接踩坑记录" /&gt;&lt;h1 id=&#34;git连接踩坑记录&#34;&gt;Git连接踩坑记录
 &lt;/h1&gt;&lt;p&gt;重装电脑之后（并不重装D盘），git又连不上GitHub了，也不知道是出了什么毛病，
 昨晚连接SSH都连不上，我只依稀记得以前踩了许多坑，再回过头来
 捣鼓又是估计好一番功夫了，所以在这写下这篇文章为以后的我参考，方便以后快速配置
@@ -67,10 +67,10 @@
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;git commit -m &lt;span class=&#34;s2&#34;&gt;&amp;#34;Publish site&amp;#34;&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;git subtree push --prefix public origin gh-pages
 &lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;以及，现在的hugo推送，这样就可以推送到gh-pages分区进行展示了，需要GitHub修改一下仓库设置
-&lt;img src=&#34;http://localhost:1313/p/git%E8%BF%9E%E6%8E%A5%E8%B8%A9%E5%9D%91%E8%AE%B0%E5%BD%95/1.png&#34;
+&lt;img src=&#34;https://adeepblue.github.io/p/git%E8%BF%9E%E6%8E%A5%E8%B8%A9%E5%9D%91%E8%AE%B0%E5%BD%95/1.png&#34;
 	width=&#34;1723&#34;
 	height=&#34;907&#34;
-	srcset=&#34;http://localhost:1313/p/git%E8%BF%9E%E6%8E%A5%E8%B8%A9%E5%9D%91%E8%AE%B0%E5%BD%95/1_hu_fc76ac9a4f991b12.png 480w, http://localhost:1313/p/git%E8%BF%9E%E6%8E%A5%E8%B8%A9%E5%9D%91%E8%AE%B0%E5%BD%95/1_hu_ea5b54ac5615fbb1.png 1024w&#34;
+	srcset=&#34;https://adeepblue.github.io/p/git%E8%BF%9E%E6%8E%A5%E8%B8%A9%E5%9D%91%E8%AE%B0%E5%BD%95/1_hu_fc76ac9a4f991b12.png 480w, https://adeepblue.github.io/p/git%E8%BF%9E%E6%8E%A5%E8%B8%A9%E5%9D%91%E8%AE%B0%E5%BD%95/1_hu_ea5b54ac5615fbb1.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 		alt=&#34;github页面图修改配置&#34;

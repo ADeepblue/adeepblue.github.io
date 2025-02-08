@@ -2,58 +2,58 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
     <channel>
         <title>Categories on 深蓝之亘的博客</title>
-        <link>http://localhost:1313/categories/</link>
+        <link>https://adeepblue.github.io/categories/</link>
         <description>Recent content in Categories on 深蓝之亘的博客</description>
         <generator>Hugo -- gohugo.io</generator>
         <language>zh-cn</language>
         <copyright>深蓝之亘</copyright>
-        <lastBuildDate>Fri, 07 Feb 2025 19:00:05 +0800</lastBuildDate><atom:link href="http://localhost:1313/categories/index.xml" rel="self" type="application/rss+xml" /><item>
+        <lastBuildDate>Fri, 07 Feb 2025 19:00:05 +0800</lastBuildDate><atom:link href="https://adeepblue.github.io/categories/index.xml" rel="self" type="application/rss+xml" /><item>
         <title>Python</title>
-        <link>http://localhost:1313/categories/python/</link>
+        <link>https://adeepblue.github.io/categories/python/</link>
         <pubDate>Fri, 07 Feb 2025 19:00:05 +0800</pubDate>
         
-        <guid>http://localhost:1313/categories/python/</guid>
+        <guid>https://adeepblue.github.io/categories/python/</guid>
         <description></description>
         </item>
         <item>
         <title>图灵完备</title>
-        <link>http://localhost:1313/categories/%E5%9B%BE%E7%81%B5%E5%AE%8C%E5%A4%87/</link>
+        <link>https://adeepblue.github.io/categories/%E5%9B%BE%E7%81%B5%E5%AE%8C%E5%A4%87/</link>
         <pubDate>Thu, 06 Feb 2025 10:07:57 +0800</pubDate>
         
-        <guid>http://localhost:1313/categories/%E5%9B%BE%E7%81%B5%E5%AE%8C%E5%A4%87/</guid>
+        <guid>https://adeepblue.github.io/categories/%E5%9B%BE%E7%81%B5%E5%AE%8C%E5%A4%87/</guid>
         <description></description>
         </item>
         <item>
         <title>Cmd</title>
-        <link>http://localhost:1313/categories/cmd/</link>
+        <link>https://adeepblue.github.io/categories/cmd/</link>
         <pubDate>Tue, 04 Feb 2025 22:34:00 +0800</pubDate>
         
-        <guid>http://localhost:1313/categories/cmd/</guid>
+        <guid>https://adeepblue.github.io/categories/cmd/</guid>
         <description></description>
         </item>
         <item>
         <title>Hugo</title>
-        <link>http://localhost:1313/categories/hugo/</link>
+        <link>https://adeepblue.github.io/categories/hugo/</link>
         <pubDate>Tue, 04 Feb 2025 22:34:00 +0800</pubDate>
         
-        <guid>http://localhost:1313/categories/hugo/</guid>
+        <guid>https://adeepblue.github.io/categories/hugo/</guid>
         <description></description>
         </item>
         <item>
         <title>Git</title>
-        <link>http://localhost:1313/categories/git/</link>
+        <link>https://adeepblue.github.io/categories/git/</link>
         <pubDate>Tue, 04 Feb 2025 21:39:19 +0800</pubDate>
         
-        <guid>http://localhost:1313/categories/git/</guid>
+        <guid>https://adeepblue.github.io/categories/git/</guid>
         <description></description>
         </item>
         <item>
         <title>Test</title>
-        <link>http://localhost:1313/categories/test/</link>
+        <link>https://adeepblue.github.io/categories/test/</link>
         <pubDate>Tue, 04 Feb 2025 21:10:15 +0800</pubDate>
         
-        <guid>http://localhost:1313/categories/test/</guid>
-        <description>&lt;img src="http://localhost:1313/categories/test/hutomo-abrianto-l2jk-uxb1BY-unsplash.jpg" alt="Featured image of post Test" /&gt;</description>
+        <guid>https://adeepblue.github.io/categories/test/</guid>
+        <description>&lt;img src="https://adeepblue.github.io/categories/test/hutomo-abrianto-l2jk-uxb1BY-unsplash.jpg" alt="Featured image of post Test" /&gt;</description>
         </item>
         
     </channel>
