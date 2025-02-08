@@ -2,18 +2,18 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
     <channel>
         <title>Posts on 深蓝之亘的博客</title>
-        <link>https://adeepblue.github.io/post/</link>
+        <link>http://localhost:1313/post/</link>
         <description>Recent content in Posts on 深蓝之亘的博客</description>
         <generator>Hugo -- gohugo.io</generator>
         <language>zh-cn</language>
         <copyright>深蓝之亘</copyright>
-        <lastBuildDate>Fri, 07 Feb 2025 19:00:05 +0800</lastBuildDate><atom:link href="https://adeepblue.github.io/post/index.xml" rel="self" type="application/rss+xml" /><item>
+        <lastBuildDate>Fri, 07 Feb 2025 19:00:05 +0800</lastBuildDate><atom:link href="http://localhost:1313/post/index.xml" rel="self" type="application/rss+xml" /><item>
         <title>Python Matplotlib绘图库</title>
-        <link>https://adeepblue.github.io/p/python-matplotlib%E7%BB%98%E5%9B%BE%E5%BA%93/</link>
+        <link>http://localhost:1313/p/python-matplotlib%E7%BB%98%E5%9B%BE%E5%BA%93/</link>
         <pubDate>Fri, 07 Feb 2025 19:00:05 +0800</pubDate>
         
-        <guid>https://adeepblue.github.io/p/python-matplotlib%E7%BB%98%E5%9B%BE%E5%BA%93/</guid>
-        <description>&lt;img src="https://adeepblue.github.io/p/python-matplotlib%E7%BB%98%E5%9B%BE%E5%BA%93/matplotlib.png" alt="Featured image of post Python Matplotlib绘图库" /&gt;&lt;h1 id=&#34;python-matplotlib绘图库介绍&#34;&gt;Python Matplotlib绘图库介绍
+        <guid>http://localhost:1313/p/python-matplotlib%E7%BB%98%E5%9B%BE%E5%BA%93/</guid>
+        <description>&lt;img src="http://localhost:1313/p/python-matplotlib%E7%BB%98%E5%9B%BE%E5%BA%93/matplotlib.png" alt="Featured image of post Python Matplotlib绘图库" /&gt;&lt;h1 id=&#34;python-matplotlib绘图库介绍&#34;&gt;Python Matplotlib绘图库介绍
 &lt;/h1&gt;&lt;h2 id=&#34;安装库&#34;&gt;安装库
 &lt;/h2&gt;&lt;p&gt;没啥好说的，pip install 一下就行&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-python&#34; data-lang=&#34;python&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;n&#34;&gt;pip&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;install&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;matplotlib&lt;/span&gt;
@@ -28,7 +28,7 @@
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt; &lt;span class=&#34;n&#34;&gt;plt&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;plot&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;x&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;y&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt; &lt;span class=&#34;n&#34;&gt;plt&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;show&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;()&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;赋值完毕之后直接进行plot操作读入类似缓存区的位置，然后再由&lt;code&gt;plt.show()&lt;/code&gt;输出包含着图表 (figure) 的窗口&lt;/p&gt;
-&lt;figure&gt;&lt;img src=&#34;https://adeepblue.github.io/p/python-matplotlib%E7%BB%98%E5%9B%BE%E5%BA%93/plot-single-line.png&#34; width=&#34;400px&#34; height=&#34;340px&#34;&gt;
+&lt;figure&gt;&lt;img src=&#34;http://localhost:1313/p/python-matplotlib%E7%BB%98%E5%9B%BE%E5%BA%93/plot-single-line.png&#34; width=&#34;400px&#34; height=&#34;340px&#34;&gt;
 &lt;/figure&gt;
 
 &lt;h2 id=&#34;同时绘制多条直线&#34;&gt;同时绘制多条直线？
@@ -40,7 +40,7 @@
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-python&#34; data-lang=&#34;python&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;n&#34;&gt;plt&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;plot&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;x&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;y&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;n&#34;&gt;plt&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;show&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;()&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;但输出完就傻眼了，什么情况?
-&lt;figure&gt;&lt;img src=&#34;https://adeepblue.github.io/p/python-matplotlib%E7%BB%98%E5%9B%BE%E5%BA%93/plot-2line-error.png&#34; width=&#34;400px&#34; height=&#34;340px&#34;&gt;
+&lt;figure&gt;&lt;img src=&#34;http://localhost:1313/p/python-matplotlib%E7%BB%98%E5%9B%BE%E5%BA%93/plot-2line-error.png&#34; width=&#34;400px&#34; height=&#34;340px&#34;&gt;
 &lt;/figure&gt;
 
 别急，仔细观察图表里，总共有6条线，刚好对应了列表x的长度-1,另一个1去哪里了？(1,1)和(1,1)重合了，变成点了
@@ -186,19 +186,19 @@
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt; &lt;span class=&#34;p&#34;&gt;[&lt;/span&gt;&lt;span class=&#34;mi&#34;&gt;7&lt;/span&gt; &lt;span class=&#34;mi&#34;&gt;7&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;]]&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;顺带一提，矩阵和包含数的列表都可以被matplotlib接收
 此时&lt;code&gt;plot(x,y)&lt;/code&gt;即可得到结果
-&lt;figure&gt;&lt;img src=&#34;https://adeepblue.github.io/p/python-matplotlib%E7%BB%98%E5%9B%BE%E5%BA%93/plot-2line-right.png&#34; width=&#34;400px&#34; height=&#34;340px&#34;&gt;
+&lt;figure&gt;&lt;img src=&#34;http://localhost:1313/p/python-matplotlib%E7%BB%98%E5%9B%BE%E5%BA%93/plot-2line-right.png&#34; width=&#34;400px&#34; height=&#34;340px&#34;&gt;
 &lt;/figure&gt;
 &lt;/p&gt;
 &lt;h2 id=&#34;不同区域显示&#34;&gt;不同区域显示？
 &lt;/h2&gt;&lt;p&gt;plt库包含subplot功能，可以进行一张figure的多个区域的分割，用法则是,&lt;code&gt;plt.subplot()&lt;/code&gt;结束表示在你表示的区域绘图
 其中可以用简单的数字来表示，第一个数字表示把宽分隔成多少行,第二个数字表示把长分割成多少列，比如说&lt;code&gt;plt.subplot(4,4,1)&lt;/code&gt;最后一个数表示
 位置，其中三个数都小于9可以直接写在一起,&lt;code&gt;plt.subplot(441)&lt;/code&gt;&lt;/p&gt;
-&lt;p&gt;&lt;figure&gt;&lt;img src=&#34;https://adeepblue.github.io/p/python-matplotlib%E7%BB%98%E5%9B%BE%E5%BA%93/subplot-figure1.png&#34; width=&#34;200px&#34; height=&#34;170px&#34;&gt;&lt;figcaption&gt;
+&lt;p&gt;&lt;figure&gt;&lt;img src=&#34;http://localhost:1313/p/python-matplotlib%E7%BB%98%E5%9B%BE%E5%BA%93/subplot-figure1.png&#34; width=&#34;200px&#34; height=&#34;170px&#34;&gt;&lt;figcaption&gt;
       &lt;h4&gt;subplot(441)&lt;/h4&gt;
     &lt;/figcaption&gt;
 &lt;/figure&gt;
 
-&lt;figure&gt;&lt;img src=&#34;https://adeepblue.github.io/p/python-matplotlib%E7%BB%98%E5%9B%BE%E5%BA%93/subplot-figure2.png&#34; width=&#34;200px&#34; height=&#34;170px&#34;&gt;&lt;figcaption&gt;
+&lt;figure&gt;&lt;img src=&#34;http://localhost:1313/p/python-matplotlib%E7%BB%98%E5%9B%BE%E5%BA%93/subplot-figure2.png&#34; width=&#34;200px&#34; height=&#34;170px&#34;&gt;&lt;figcaption&gt;
       &lt;h4&gt;subplot(445)&lt;/h4&gt;
     &lt;/figcaption&gt;
 &lt;/figure&gt;
@@ -221,7 +221,7 @@
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;plt.subplot(3,3,4)
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;plt.plot(x, y)
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;plt.show()
-&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;figure&gt;&lt;img src=&#34;https://adeepblue.github.io/p/python-matplotlib%E7%BB%98%E5%9B%BE%E5%BA%93/subplot-figure3.png&#34; width=&#34;200px&#34; height=&#34;170px&#34;&gt;&lt;figcaption&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;figure&gt;&lt;img src=&#34;http://localhost:1313/p/python-matplotlib%E7%BB%98%E5%9B%BE%E5%BA%93/subplot-figure3.png&#34; width=&#34;200px&#34; height=&#34;170px&#34;&gt;&lt;figcaption&gt;
       &lt;h4&gt;效果&lt;/h4&gt;
     &lt;/figcaption&gt;
 &lt;/figure&gt;
@@ -240,7 +240,7 @@
 &lt;/h2&gt;&lt;p&gt;散点图&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-python&#34; data-lang=&#34;python&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;n&#34;&gt;plt&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;scatter&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;x&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;y&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;n&#34;&gt;plt&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;show&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;()&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;figure&gt;&lt;img src=&#34;https://adeepblue.github.io/p/python-matplotlib%E7%BB%98%E5%9B%BE%E5%BA%93/scatter-plot.png&#34; width=&#34;200px&#34; height=&#34;170px&#34;&gt;&lt;figcaption&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;figure&gt;&lt;img src=&#34;http://localhost:1313/p/python-matplotlib%E7%BB%98%E5%9B%BE%E5%BA%93/scatter-plot.png&#34; width=&#34;200px&#34; height=&#34;170px&#34;&gt;&lt;figcaption&gt;
       &lt;h4&gt;效果&lt;/h4&gt;
     &lt;/figcaption&gt;
 &lt;/figure&gt;
@@ -248,7 +248,7 @@
 &lt;p&gt;柱状图&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-python&#34; data-lang=&#34;python&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;n&#34;&gt;plt&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;bar&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;x&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;y&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;n&#34;&gt;plt&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;show&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;()&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;figure&gt;&lt;img src=&#34;https://adeepblue.github.io/p/python-matplotlib%E7%BB%98%E5%9B%BE%E5%BA%93/bar-plot.png&#34; width=&#34;200px&#34; height=&#34;170px&#34;&gt;&lt;figcaption&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;figure&gt;&lt;img src=&#34;http://localhost:1313/p/python-matplotlib%E7%BB%98%E5%9B%BE%E5%BA%93/bar-plot.png&#34; width=&#34;200px&#34; height=&#34;170px&#34;&gt;&lt;figcaption&gt;
       &lt;h4&gt;效果&lt;/h4&gt;
     &lt;/figcaption&gt;
 &lt;/figure&gt;
@@ -266,15 +266,15 @@
         </item>
         <item>
         <title>图灵完备游戏攻略</title>
-        <link>https://adeepblue.github.io/p/%E5%9B%BE%E7%81%B5%E5%AE%8C%E5%A4%87%E6%B8%B8%E6%88%8F%E6%94%BB%E7%95%A5/</link>
+        <link>http://localhost:1313/p/%E5%9B%BE%E7%81%B5%E5%AE%8C%E5%A4%87%E6%B8%B8%E6%88%8F%E6%94%BB%E7%95%A5/</link>
         <pubDate>Thu, 06 Feb 2025 10:07:57 +0800</pubDate>
         
-        <guid>https://adeepblue.github.io/p/%E5%9B%BE%E7%81%B5%E5%AE%8C%E5%A4%87%E6%B8%B8%E6%88%8F%E6%94%BB%E7%95%A5/</guid>
-        <description>&lt;img src="https://adeepblue.github.io/p/%E5%9B%BE%E7%81%B5%E5%AE%8C%E5%A4%87%E6%B8%B8%E6%88%8F%E6%94%BB%E7%95%A5/Logo.png" alt="Featured image of post 图灵完备游戏攻略" /&gt;&lt;h1 id=&#34;2025-02-06记录&#34;&gt;2025 02 06记录
-&lt;/h1&gt;&lt;p&gt;&lt;img src=&#34;https://adeepblue.github.io/p/%E5%9B%BE%E7%81%B5%E5%AE%8C%E5%A4%87%E6%B8%B8%E6%88%8F%E6%94%BB%E7%95%A5/password_lock_introduce.png&#34;
+        <guid>http://localhost:1313/p/%E5%9B%BE%E7%81%B5%E5%AE%8C%E5%A4%87%E6%B8%B8%E6%88%8F%E6%94%BB%E7%95%A5/</guid>
+        <description>&lt;img src="http://localhost:1313/p/%E5%9B%BE%E7%81%B5%E5%AE%8C%E5%A4%87%E6%B8%B8%E6%88%8F%E6%94%BB%E7%95%A5/Logo.png" alt="Featured image of post 图灵完备游戏攻略" /&gt;&lt;h1 id=&#34;2025-02-06记录&#34;&gt;2025 02 06记录
+&lt;/h1&gt;&lt;p&gt;&lt;img src=&#34;http://localhost:1313/p/%E5%9B%BE%E7%81%B5%E5%AE%8C%E5%A4%87%E6%B8%B8%E6%88%8F%E6%94%BB%E7%95%A5/password_lock_introduce.png&#34;
 	width=&#34;1920&#34;
 	height=&#34;1080&#34;
-	srcset=&#34;https://adeepblue.github.io/p/%E5%9B%BE%E7%81%B5%E5%AE%8C%E5%A4%87%E6%B8%B8%E6%88%8F%E6%94%BB%E7%95%A5/password_lock_introduce_hu_9b54e3d87ebb1b4c.png 480w, https://adeepblue.github.io/p/%E5%9B%BE%E7%81%B5%E5%AE%8C%E5%A4%87%E6%B8%B8%E6%88%8F%E6%94%BB%E7%95%A5/password_lock_introduce_hu_1b984f1a187751ef.png 1024w&#34;
+	srcset=&#34;http://localhost:1313/p/%E5%9B%BE%E7%81%B5%E5%AE%8C%E5%A4%87%E6%B8%B8%E6%88%8F%E6%94%BB%E7%95%A5/password_lock_introduce_hu_9b54e3d87ebb1b4c.png 480w, http://localhost:1313/p/%E5%9B%BE%E7%81%B5%E5%AE%8C%E5%A4%87%E6%B8%B8%E6%88%8F%E6%94%BB%E7%95%A5/password_lock_introduce_hu_1b984f1a187751ef.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 		alt=&#34;如题&#34;
@@ -285,10 +285,10 @@
 		data-flex-basis=&#34;426px&#34;
 	
 &gt;
-&lt;img src=&#34;https://adeepblue.github.io/p/%E5%9B%BE%E7%81%B5%E5%AE%8C%E5%A4%87%E6%B8%B8%E6%88%8F%E6%94%BB%E7%95%A5/1depart2.png&#34;
+&lt;img src=&#34;http://localhost:1313/p/%E5%9B%BE%E7%81%B5%E5%AE%8C%E5%A4%87%E6%B8%B8%E6%88%8F%E6%94%BB%E7%95%A5/1depart2.png&#34;
 	width=&#34;756&#34;
 	height=&#34;505&#34;
-	srcset=&#34;https://adeepblue.github.io/p/%E5%9B%BE%E7%81%B5%E5%AE%8C%E5%A4%87%E6%B8%B8%E6%88%8F%E6%94%BB%E7%95%A5/1depart2_hu_1b5c6f0965961f4b.png 480w, https://adeepblue.github.io/p/%E5%9B%BE%E7%81%B5%E5%AE%8C%E5%A4%87%E6%B8%B8%E6%88%8F%E6%94%BB%E7%95%A5/1depart2_hu_7352b35f29333e0b.png 1024w&#34;
+	srcset=&#34;http://localhost:1313/p/%E5%9B%BE%E7%81%B5%E5%AE%8C%E5%A4%87%E6%B8%B8%E6%88%8F%E6%94%BB%E7%95%A5/1depart2_hu_1b5c6f0965961f4b.png 480w, http://localhost:1313/p/%E5%9B%BE%E7%81%B5%E5%AE%8C%E5%A4%87%E6%B8%B8%E6%88%8F%E6%94%BB%E7%95%A5/1depart2_hu_7352b35f29333e0b.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 		alt=&#34;二分法&#34;
@@ -316,15 +316,29 @@
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;output_loop
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;always
-&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</description>
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;忘记补充现在的情况了
+下面的是6个寄存器和一个输入
+&lt;img src=&#34;http://localhost:1313/p/%E5%9B%BE%E7%81%B5%E5%AE%8C%E5%A4%87%E6%B8%B8%E6%88%8F%E6%94%BB%E7%95%A5/reg_in_my_computer.png&#34;
+	width=&#34;1453&#34;
+	height=&#34;912&#34;
+	srcset=&#34;http://localhost:1313/p/%E5%9B%BE%E7%81%B5%E5%AE%8C%E5%A4%87%E6%B8%B8%E6%88%8F%E6%94%BB%E7%95%A5/reg_in_my_computer_hu_a33932f982e856eb.png 480w, http://localhost:1313/p/%E5%9B%BE%E7%81%B5%E5%AE%8C%E5%A4%87%E6%B8%B8%E6%88%8F%E6%94%BB%E7%95%A5/reg_in_my_computer_hu_414e3ab19dc4b79d.png 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;159&#34;
+		data-flex-basis=&#34;382px&#34;
+	
+&gt;&lt;/p&gt;
+</description>
         </item>
         <item>
         <title>Cmd命令笔记（会时不时更新）</title>
-        <link>https://adeepblue.github.io/p/cmd%E5%91%BD%E4%BB%A4%E7%AC%94%E8%AE%B0%E4%BC%9A%E6%97%B6%E4%B8%8D%E6%97%B6%E6%9B%B4%E6%96%B0/</link>
+        <link>http://localhost:1313/p/cmd%E5%91%BD%E4%BB%A4%E7%AC%94%E8%AE%B0%E4%BC%9A%E6%97%B6%E4%B8%8D%E6%97%B6%E6%9B%B4%E6%96%B0/</link>
         <pubDate>Tue, 04 Feb 2025 22:34:00 +0800</pubDate>
         
-        <guid>https://adeepblue.github.io/p/cmd%E5%91%BD%E4%BB%A4%E7%AC%94%E8%AE%B0%E4%BC%9A%E6%97%B6%E4%B8%8D%E6%97%B6%E6%9B%B4%E6%96%B0/</guid>
-        <description>&lt;img src="https://adeepblue.github.io/p/cmd%E5%91%BD%E4%BB%A4%E7%AC%94%E8%AE%B0%E4%BC%9A%E6%97%B6%E4%B8%8D%E6%97%B6%E6%9B%B4%E6%96%B0/CommandLineIcon.png" alt="Featured image of post Cmd命令笔记（会时不时更新）" /&gt;&lt;h1 id=&#34;mkdir&#34;&gt;mkdir
+        <guid>http://localhost:1313/p/cmd%E5%91%BD%E4%BB%A4%E7%AC%94%E8%AE%B0%E4%BC%9A%E6%97%B6%E4%B8%8D%E6%97%B6%E6%9B%B4%E6%96%B0/</guid>
+        <description>&lt;img src="http://localhost:1313/p/cmd%E5%91%BD%E4%BB%A4%E7%AC%94%E8%AE%B0%E4%BC%9A%E6%97%B6%E4%B8%8D%E6%97%B6%E6%9B%B4%E6%96%B0/CommandLineIcon.png" alt="Featured image of post Cmd命令笔记（会时不时更新）" /&gt;&lt;h1 id=&#34;mkdir&#34;&gt;mkdir
 &lt;/h1&gt;&lt;p&gt;起初我以为是用斜杠/来实现分割目录，结果后面发现是反斜杠，
 很多地方搞来搞去的很容易搞混搞不清&lt;/p&gt;
 &lt;p&gt;&lt;code&gt;mkdir .\a\b\c\d&lt;/code&gt;&lt;/p&gt;
@@ -336,11 +350,11 @@
         </item>
         <item>
         <title>Hugo初始化网站笔记</title>
-        <link>https://adeepblue.github.io/p/hugo%E5%88%9D%E5%A7%8B%E5%8C%96%E7%BD%91%E7%AB%99%E7%AC%94%E8%AE%B0/</link>
+        <link>http://localhost:1313/p/hugo%E5%88%9D%E5%A7%8B%E5%8C%96%E7%BD%91%E7%AB%99%E7%AC%94%E8%AE%B0/</link>
         <pubDate>Tue, 04 Feb 2025 22:34:00 +0800</pubDate>
         
-        <guid>https://adeepblue.github.io/p/hugo%E5%88%9D%E5%A7%8B%E5%8C%96%E7%BD%91%E7%AB%99%E7%AC%94%E8%AE%B0/</guid>
-        <description>&lt;img src="https://adeepblue.github.io/p/hugo%E5%88%9D%E5%A7%8B%E5%8C%96%E7%BD%91%E7%AB%99%E7%AC%94%E8%AE%B0/Logo_of_Hugo_the_static_website_generator.svg.png" alt="Featured image of post Hugo初始化网站笔记" /&gt;&lt;h1 id=&#34;hugo笔记&#34;&gt;Hugo笔记
+        <guid>http://localhost:1313/p/hugo%E5%88%9D%E5%A7%8B%E5%8C%96%E7%BD%91%E7%AB%99%E7%AC%94%E8%AE%B0/</guid>
+        <description>&lt;img src="http://localhost:1313/p/hugo%E5%88%9D%E5%A7%8B%E5%8C%96%E7%BD%91%E7%AB%99%E7%AC%94%E8%AE%B0/Logo_of_Hugo_the_static_website_generator.svg.png" alt="Featured image of post Hugo初始化网站笔记" /&gt;&lt;h1 id=&#34;hugo笔记&#34;&gt;Hugo笔记
 &lt;/h1&gt;&lt;p&gt;首先是先下载hugo,我的话因为后面可能命令行会比较常用，所以手动把它添加进了环境变量 path里面
 也是有这个步骤才可以下面直接hugo命令直接用了&lt;/p&gt;
 &lt;p&gt;前前后后也搞了不少时间，万一以后文件丢失了可以来这边参考我自己写的hugo笔记&lt;/p&gt;
@@ -444,10 +458,10 @@
 &lt;/h2&gt;&lt;p&gt;呃啊，折腾了一两天的代码高亮，我以为被原始的样式覆盖了，折腾了很久都没搞好，结果一删AI生成的代码立马好了，我无法接受啊啊啊啊&lt;/p&gt;
 &lt;p&gt;不推荐用
 &lt;code&gt;npm install highlight.js&lt;/code&gt;的方式安装，我安装完少了&lt;code&gt;highlight.min.js&lt;/code&gt;文件&lt;/p&gt;
-&lt;p&gt;&lt;code&gt;highlight.min.js&lt;/code&gt;放在./assets/js/目录下，&lt;img src=&#34;https://adeepblue.github.io/p/hugo%E5%88%9D%E5%A7%8B%E5%8C%96%E7%BD%91%E7%AB%99%E7%AC%94%E8%AE%B0/highlight1.png&#34;
+&lt;p&gt;&lt;code&gt;highlight.min.js&lt;/code&gt;放在./assets/js/目录下，&lt;img src=&#34;http://localhost:1313/p/hugo%E5%88%9D%E5%A7%8B%E5%8C%96%E7%BD%91%E7%AB%99%E7%AC%94%E8%AE%B0/highlight1.png&#34;
 	width=&#34;972&#34;
 	height=&#34;326&#34;
-	srcset=&#34;https://adeepblue.github.io/p/hugo%E5%88%9D%E5%A7%8B%E5%8C%96%E7%BD%91%E7%AB%99%E7%AC%94%E8%AE%B0/highlight1_hu_8f8b7365f78964db.png 480w, https://adeepblue.github.io/p/hugo%E5%88%9D%E5%A7%8B%E5%8C%96%E7%BD%91%E7%AB%99%E7%AC%94%E8%AE%B0/highlight1_hu_aee1d9e3faa97d24.png 1024w&#34;
+	srcset=&#34;http://localhost:1313/p/hugo%E5%88%9D%E5%A7%8B%E5%8C%96%E7%BD%91%E7%AB%99%E7%AC%94%E8%AE%B0/highlight1_hu_8f8b7365f78964db.png 480w, http://localhost:1313/p/hugo%E5%88%9D%E5%A7%8B%E5%8C%96%E7%BD%91%E7%AB%99%E7%AC%94%E8%AE%B0/highlight1_hu_aee1d9e3faa97d24.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 		alt=&#34;highlight.min.js&#34;
@@ -458,10 +472,10 @@
 		data-flex-basis=&#34;715px&#34;
 	
 &gt;
-styles文件夹复制出来改文件名成highlight-styles后放在/assets/css/目录下，如下 &lt;img src=&#34;https://adeepblue.github.io/p/hugo%E5%88%9D%E5%A7%8B%E5%8C%96%E7%BD%91%E7%AB%99%E7%AC%94%E8%AE%B0/highlight3.png&#34;
+styles文件夹复制出来改文件名成highlight-styles后放在/assets/css/目录下，如下 &lt;img src=&#34;http://localhost:1313/p/hugo%E5%88%9D%E5%A7%8B%E5%8C%96%E7%BD%91%E7%AB%99%E7%AC%94%E8%AE%B0/highlight3.png&#34;
 	width=&#34;1424&#34;
 	height=&#34;739&#34;
-	srcset=&#34;https://adeepblue.github.io/p/hugo%E5%88%9D%E5%A7%8B%E5%8C%96%E7%BD%91%E7%AB%99%E7%AC%94%E8%AE%B0/highlight3_hu_9dd9b449a24f586c.png 480w, https://adeepblue.github.io/p/hugo%E5%88%9D%E5%A7%8B%E5%8C%96%E7%BD%91%E7%AB%99%E7%AC%94%E8%AE%B0/highlight3_hu_7da3f648c360d08b.png 1024w&#34;
+	srcset=&#34;http://localhost:1313/p/hugo%E5%88%9D%E5%A7%8B%E5%8C%96%E7%BD%91%E7%AB%99%E7%AC%94%E8%AE%B0/highlight3_hu_9dd9b449a24f586c.png 480w, http://localhost:1313/p/hugo%E5%88%9D%E5%A7%8B%E5%8C%96%E7%BD%91%E7%AB%99%E7%AC%94%E8%AE%B0/highlight3_hu_7da3f648c360d08b.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 		alt=&#34;styles 文件夹&#34;
@@ -471,10 +485,10 @@ styles文件夹复制出来改文件名成highlight-styles后放在/assets/css/�
 		data-flex-grow=&#34;192&#34;
 		data-flex-basis=&#34;462px&#34;
 	
-&gt; &lt;img src=&#34;https://adeepblue.github.io/p/hugo%E5%88%9D%E5%A7%8B%E5%8C%96%E7%BD%91%E7%AB%99%E7%AC%94%E8%AE%B0/highlight2.png&#34;
+&gt; &lt;img src=&#34;http://localhost:1313/p/hugo%E5%88%9D%E5%A7%8B%E5%8C%96%E7%BD%91%E7%AB%99%E7%AC%94%E8%AE%B0/highlight2.png&#34;
 	width=&#34;901&#34;
 	height=&#34;379&#34;
-	srcset=&#34;https://adeepblue.github.io/p/hugo%E5%88%9D%E5%A7%8B%E5%8C%96%E7%BD%91%E7%AB%99%E7%AC%94%E8%AE%B0/highlight2_hu_c3d3f68df5e26b46.png 480w, https://adeepblue.github.io/p/hugo%E5%88%9D%E5%A7%8B%E5%8C%96%E7%BD%91%E7%AB%99%E7%AC%94%E8%AE%B0/highlight2_hu_d81c363c10dc2a2e.png 1024w&#34;
+	srcset=&#34;http://localhost:1313/p/hugo%E5%88%9D%E5%A7%8B%E5%8C%96%E7%BD%91%E7%AB%99%E7%AC%94%E8%AE%B0/highlight2_hu_c3d3f68df5e26b46.png 480w, http://localhost:1313/p/hugo%E5%88%9D%E5%A7%8B%E5%8C%96%E7%BD%91%E7%AB%99%E7%AC%94%E8%AE%B0/highlight2_hu_d81c363c10dc2a2e.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 		alt=&#34;highlight-styles文件夹&#34;
@@ -690,11 +704,11 @@ styles文件夹复制出来改文件名成highlight-styles后放在/assets/css/�
         </item>
         <item>
         <title>Git连接踩坑记录</title>
-        <link>https://adeepblue.github.io/p/git%E8%BF%9E%E6%8E%A5%E8%B8%A9%E5%9D%91%E8%AE%B0%E5%BD%95/</link>
+        <link>http://localhost:1313/p/git%E8%BF%9E%E6%8E%A5%E8%B8%A9%E5%9D%91%E8%AE%B0%E5%BD%95/</link>
         <pubDate>Tue, 04 Feb 2025 21:39:19 +0800</pubDate>
         
-        <guid>https://adeepblue.github.io/p/git%E8%BF%9E%E6%8E%A5%E8%B8%A9%E5%9D%91%E8%AE%B0%E5%BD%95/</guid>
-        <description>&lt;img src="https://adeepblue.github.io/p/git%E8%BF%9E%E6%8E%A5%E8%B8%A9%E5%9D%91%E8%AE%B0%E5%BD%95/git-bash.svg" alt="Featured image of post Git连接踩坑记录" /&gt;&lt;h1 id=&#34;git连接踩坑记录&#34;&gt;Git连接踩坑记录
+        <guid>http://localhost:1313/p/git%E8%BF%9E%E6%8E%A5%E8%B8%A9%E5%9D%91%E8%AE%B0%E5%BD%95/</guid>
+        <description>&lt;img src="http://localhost:1313/p/git%E8%BF%9E%E6%8E%A5%E8%B8%A9%E5%9D%91%E8%AE%B0%E5%BD%95/git-bash.svg" alt="Featured image of post Git连接踩坑记录" /&gt;&lt;h1 id=&#34;git连接踩坑记录&#34;&gt;Git连接踩坑记录
 &lt;/h1&gt;&lt;p&gt;重装电脑之后（并不重装D盘），git又连不上GitHub了，也不知道是出了什么毛病，
 昨晚连接SSH都连不上，我只依稀记得以前踩了许多坑，再回过头来
 捣鼓又是估计好一番功夫了，所以在这写下这篇文章为以后的我参考，方便以后快速配置
@@ -748,10 +762,10 @@ styles文件夹复制出来改文件名成highlight-styles后放在/assets/css/�
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;git commit -m &lt;span class=&#34;s2&#34;&gt;&amp;#34;Publish site&amp;#34;&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;git subtree push --prefix public origin gh-pages
 &lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;以及，现在的hugo推送，这样就可以推送到gh-pages分区进行展示了，需要GitHub修改一下仓库设置
-&lt;img src=&#34;https://adeepblue.github.io/p/git%E8%BF%9E%E6%8E%A5%E8%B8%A9%E5%9D%91%E8%AE%B0%E5%BD%95/1.png&#34;
+&lt;img src=&#34;http://localhost:1313/p/git%E8%BF%9E%E6%8E%A5%E8%B8%A9%E5%9D%91%E8%AE%B0%E5%BD%95/1.png&#34;
 	width=&#34;1723&#34;
 	height=&#34;907&#34;
-	srcset=&#34;https://adeepblue.github.io/p/git%E8%BF%9E%E6%8E%A5%E8%B8%A9%E5%9D%91%E8%AE%B0%E5%BD%95/1_hu_fc76ac9a4f991b12.png 480w, https://adeepblue.github.io/p/git%E8%BF%9E%E6%8E%A5%E8%B8%A9%E5%9D%91%E8%AE%B0%E5%BD%95/1_hu_ea5b54ac5615fbb1.png 1024w&#34;
+	srcset=&#34;http://localhost:1313/p/git%E8%BF%9E%E6%8E%A5%E8%B8%A9%E5%9D%91%E8%AE%B0%E5%BD%95/1_hu_fc76ac9a4f991b12.png 480w, http://localhost:1313/p/git%E8%BF%9E%E6%8E%A5%E8%B8%A9%E5%9D%91%E8%AE%B0%E5%BD%95/1_hu_ea5b54ac5615fbb1.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 		alt=&#34;github页面图修改配置&#34;
@@ -766,10 +780,10 @@ styles文件夹复制出来改文件名成highlight-styles后放在/assets/css/�
         </item>
         <item>
         <title>Test</title>
-        <link>https://adeepblue.github.io/p/test/</link>
+        <link>http://localhost:1313/p/test/</link>
         <pubDate>Tue, 04 Feb 2025 21:10:15 +0800</pubDate>
         
-        <guid>https://adeepblue.github.io/p/test/</guid>
+        <guid>http://localhost:1313/p/test/</guid>
         <description>&lt;h1 id=&#34;文章标题&#34;&gt;文章标题
 &lt;/h1&gt;&lt;p&gt;这是你的主要内容部分。你可以在这里添加文本、列表、引用、图像等。&lt;/p&gt;
 &lt;h2 id=&#34;子标题&#34;&gt;子标题
@@ -784,7 +798,7 @@ styles文件夹复制出来改文件名成highlight-styles后放在/assets/css/�
 &lt;p&gt;这是一个引用的例子。&lt;/p&gt;&lt;/blockquote&gt;
 &lt;h3 id=&#34;图片示例&#34;&gt;图片示例
 &lt;/h3&gt;&lt;p&gt;&lt;code&gt;![图片描述](图片链接)&lt;/code&gt;
-&lt;img src=&#34;https://adeepblue.github.io/%e5%9b%be%e7%89%87%e9%93%be%e6%8e%a5&#34;
+&lt;img src=&#34;http://localhost:1313/%e5%9b%be%e7%89%87%e9%93%be%e6%8e%a5&#34;
 	
 	
 	
