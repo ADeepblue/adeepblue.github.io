@@ -8,19 +8,169 @@
         <language>zh-cn</language>
         <copyright>深蓝之亘</copyright>
         <lastBuildDate>Tue, 04 Feb 2025 22:34:00 +0800</lastBuildDate><atom:link href="https://adeepblue.github.io/categories/cmd/index.xml" rel="self" type="application/rss+xml" /><item>
-        <title>Cmd命令笔记（会时不时更新）</title>
-        <link>https://adeepblue.github.io/p/cmd%E5%91%BD%E4%BB%A4%E7%AC%94%E8%AE%B0%E4%BC%9A%E6%97%B6%E4%B8%8D%E6%97%B6%E6%9B%B4%E6%96%B0/</link>
+        <title>Cmd命令介绍</title>
+        <link>https://adeepblue.github.io/p/cmd%E5%91%BD%E4%BB%A4%E4%BB%8B%E7%BB%8D/</link>
         <pubDate>Tue, 04 Feb 2025 22:34:00 +0800</pubDate>
         
-        <guid>https://adeepblue.github.io/p/cmd%E5%91%BD%E4%BB%A4%E7%AC%94%E8%AE%B0%E4%BC%9A%E6%97%B6%E4%B8%8D%E6%97%B6%E6%9B%B4%E6%96%B0/</guid>
-        <description>&lt;img src="https://adeepblue.github.io/p/cmd%E5%91%BD%E4%BB%A4%E7%AC%94%E8%AE%B0%E4%BC%9A%E6%97%B6%E4%B8%8D%E6%97%B6%E6%9B%B4%E6%96%B0/CommandLineIcon.png" alt="Featured image of post Cmd命令笔记（会时不时更新）" /&gt;&lt;h1 id=&#34;mkdir&#34;&gt;mkdir
-&lt;/h1&gt;&lt;p&gt;起初我以为是用斜杠/来实现分割目录，结果后面发现是反斜杠，
-很多地方搞来搞去的很容易搞混搞不清&lt;/p&gt;
-&lt;p&gt;&lt;code&gt;mkdir .\a\b\c\d&lt;/code&gt;&lt;/p&gt;
+        <guid>https://adeepblue.github.io/p/cmd%E5%91%BD%E4%BB%A4%E4%BB%8B%E7%BB%8D/</guid>
+        <description>&lt;img src="https://adeepblue.github.io/p/cmd%E5%91%BD%E4%BB%A4%E4%BB%8B%E7%BB%8D/CommandLineIcon.png" alt="Featured image of post Cmd命令介绍" /&gt;&lt;h1 id=&#34;cmd一些命令介绍&#34;&gt;CMD一些命令介绍
+&lt;/h1&gt;&lt;p&gt;&lt;img src=&#34;https://adeepblue.github.io/p/cmd%E5%91%BD%E4%BB%A4%E4%BB%8B%E7%BB%8D/winRopencmd.png&#34;
+	width=&#34;513&#34;
+	height=&#34;272&#34;
+	srcset=&#34;https://adeepblue.github.io/p/cmd%E5%91%BD%E4%BB%A4%E4%BB%8B%E7%BB%8D/winRopencmd_hu_1e13ac354f794f6.png 480w, https://adeepblue.github.io/p/cmd%E5%91%BD%E4%BB%A4%E4%BB%8B%E7%BB%8D/winRopencmd_hu_22b380be5e699e40.png 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;运行窗口&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;188&#34;
+		data-flex-basis=&#34;452px&#34;
+	
+&gt;
+&lt;img src=&#34;https://adeepblue.github.io/p/cmd%E5%91%BD%E4%BB%A4%E4%BB%8B%E7%BB%8D/exploreropencmd.png&#34;
+	width=&#34;1576&#34;
+	height=&#34;899&#34;
+	srcset=&#34;https://adeepblue.github.io/p/cmd%E5%91%BD%E4%BB%A4%E4%BB%8B%E7%BB%8D/exploreropencmd_hu_f8a90abd74421795.png 480w, https://adeepblue.github.io/p/cmd%E5%91%BD%E4%BB%A4%E4%BB%8B%E7%BB%8D/exploreropencmd_hu_b9b3401b4077ceaf.png 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;从文件资源管理器的地址栏打开&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;175&#34;
+		data-flex-basis=&#34;420px&#34;
+	
+&gt;
+先新建一个cmd窗口，可以使用&lt;code&gt;Win + R&lt;/code&gt;打开运行窗口中输入cmd打开，也可以在地址栏输入cmd打开cmd窗口，如下,不过还是第二种方法常用，因为第一种需要重新切换目录，
+除非你只是需要开一个cmd窗口，第二种可以基于当前环境下开cmd窗口，运行窗口打开的cmd，通常是基于你的用户名的
+&lt;code&gt;C:\Users\Deepblue&amp;gt;&lt;/code&gt;你当前登录的用户是什么，一般就会显示在这，至于地址栏开启的，比如上面从文件资源管理器的地址栏打开的，打开显示的页面就是
+&lt;code&gt;E:\personal-blog\personal-blog&amp;gt;&lt;/code&gt;基于当前页面的窗口，也叫工作目录&lt;/p&gt;
+&lt;h2 id=&#34;切换目录创建目录创建文件查看当前目录下的文件&#34;&gt;切换目录，创建目录，创建文件，查看当前目录下的文件
+&lt;/h2&gt;&lt;h3 id=&#34;dir&#34;&gt;&lt;strong&gt;dir&lt;/strong&gt;
+&lt;/h3&gt;&lt;p&gt;用于显示你当前目录下的文件和文件名以及其他一些详细信息的
+一些我用的多的参数：&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;/s&lt;/strong&gt;:你可以通过跟上/s的方式递归查看它的所有子目录里的文件
+&lt;strong&gt;/b&lt;/strong&gt;:忽略其他的输出信息
+如果后面跟一些类正则的表达式则可以搜索目录下的一些文件或者目录，一般我平常习惯用的就是文件资源管理器下打开这个，然后用&lt;code&gt;dir [给定的搜索条件] /s/b&lt;/code&gt;来搜索自己想要的文件
+举个例子:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;dir *.apk /s/b
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;表示搜索当前目录下的以apk结尾的文件，其中*表示通配一切字符，跟正则库不太一样的是，这里直接就是&lt;code&gt;*&lt;/code&gt;，而要调用正则的话则是&lt;code&gt;.*&lt;/code&gt;,后者.表示统配一切字符，然后&lt;code&gt;*&lt;/code&gt;表示若干前面前面的字符
+不限制数量，有多少匹配多少，前者也表示这个意思，所以说，如果你需要查找什么带某个字符的文件名，比如说我只记得这个软件的部分文件名，就可以这样做&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;E:\软件&amp;gt;dir *spacesniffer* /s/b
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;E:\软件\spacesniffer_1_3_0_2
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;E:\软件\spacesniffer_1_3_0_2\SpaceSniffer.exe
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;E:\软件\文件索引、扫描工具\spacesniffer_1_3_0_2
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;E:\软件\文件索引、扫描工具\spacesniffer_1_3_0_2.zip
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;E:\软件\文件索引、扫描工具\spacesniffer_1_3_0_2\SpaceSniffer.exe
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;E:\软件\资源类软件\spacesniffer_1_3_0_2.zip
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h3 id=&#34;cd&#34;&gt;&lt;strong&gt;cd&lt;/strong&gt;
+&lt;/h3&gt;&lt;p&gt;假设我当前工作目录如下
+&lt;code&gt;E:\personal-blog\personal-blog&amp;gt;&lt;/code&gt;
+其中打开dir查看了一眼这个目录下的所有文件，如下，然后，我想让工作目录切换到已经标记了assets的文件夹，那么直接在命令行输入
+&lt;code&gt;cd assets&lt;/code&gt;就可以切入assets目录了&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;E:\personal-blog\personal-blog&amp;gt;dir
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt; 驱动器 E 中的卷是 980
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt; 卷的序列号是 B407-DA03
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt; E:\personal-blog\personal-blog 的目录
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;2025/02/09  15:41    &amp;lt;DIR&amp;gt;          .
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;2025/02/09  15:41    &amp;lt;DIR&amp;gt;          ..
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;2025/02/09  12:59    &amp;lt;DIR&amp;gt;          assets
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;REM --此处文件夹已经被删去多处，为了节省显示空间--
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;               4 个文件          7,917 字节
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;              12 个目录 245,086,658,560 可用字节
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;观察到前缀显示多了assets即表示成功切入，补充一点，cmd有补全机制，会识别你当前的参数部分是否是当前文件文件夹下的，比如说这里可能
+敲个ass再按&lt;strong&gt;tab&lt;/strong&gt;就可以补全assets文件夹的全称了,也可以同时串起切入多个文件目录，比如说&lt;code&gt;cd ./assets/scss&lt;/code&gt;，切入多个嵌套并没有任何影响&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;E:\personal-blog\personal-blog&amp;gt;cd assets
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;E:\personal-blog\personal-blog\assets&amp;gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;如果需要回退父目录，比如说上面这段我想切到E:\personal-blog\personal-blog文件目录，则只需要敲入 &lt;code&gt;cd ..&lt;/code&gt;
+即可切出&lt;/p&gt;
+&lt;h3 id=&#34;创建文件和创建目录&#34;&gt;创建文件和创建目录
+&lt;/h3&gt;&lt;p&gt;&lt;strong&gt;mkdir&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;在当前目录下创建一个文件夹，记得复制完文件目录以后把斜杠改成反斜杠，起初我以为是用斜杠/来实现分割目录，结果后面发现是反斜杠，就，挺不方便的，得稍微注意一点，其中
+&lt;code&gt;mkdir .\a\b\c\d&lt;/code&gt;可以递归创建文件，也就是，当前并不存在a以及下面的所有目录，这一行命令就可以一次性创建所有使得&lt;code&gt;cd .\a\b\c\d&lt;/code&gt;可以直接访问了&lt;/p&gt;
 &lt;p&gt;基于当前目录下创建 ~.\a\b\c\d的目录&lt;/p&gt;
-&lt;h1 id=&#34;touch&#34;&gt;touch
-&lt;/h1&gt;&lt;p&gt;同样的文件分割方式，创建文件可以用touch函数
-&lt;code&gt;touch .\a\b\c\d\e.txt&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;touch&lt;/strong&gt;
+同样的文件分割方式，创建文件可以用touch函数
+&lt;code&gt;touch .\a\b\c\d\e.txt&lt;/code&gt;
+但注意，创建的是空文件，一般结合mkdir使用&lt;/p&gt;
+&lt;h3 id=&#34;打印输出定义变量和环境变量&#34;&gt;打印输出，定义变量和环境变量
+&lt;/h3&gt;&lt;p&gt;&lt;strong&gt;echo&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;顾名思义，类似于python中print的功能 语法则是&lt;code&gt;echo [输出内容]&lt;/code&gt;，如果输出内容包含空格，需要英文双引号包裹输出内容两侧
+&lt;strong&gt;set&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;可以临时定义变量，&lt;code&gt;set &amp;quot;a=1&amp;quot;&lt;/code&gt;不过需要被包裹在双引号里面，调用的时候需要&lt;code&gt;%a%&lt;/code&gt;来调用即可，比如说&lt;code&gt;echo %a%&lt;/code&gt;,也可在%a%前后加入内容，比如说&amp;quot;echo 1-%a%&amp;ldquo;输出1-1&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;环境变量&lt;/strong&gt;
+&lt;img src=&#34;https://adeepblue.github.io/p/cmd%E5%91%BD%E4%BB%A4%E4%BB%8B%E7%BB%8D/environment.png&#34;
+	width=&#34;794&#34;
+	height=&#34;777&#34;
+	srcset=&#34;https://adeepblue.github.io/p/cmd%E5%91%BD%E4%BB%A4%E4%BB%8B%E7%BB%8D/environment_hu_3f23337887826f24.png 480w, https://adeepblue.github.io/p/cmd%E5%91%BD%E4%BB%A4%E4%BB%8B%E7%BB%8D/environment_hu_12a8ebe8f3b2992.png 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;系统环境变量&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;102&#34;
+		data-flex-basis=&#34;245px&#34;
+	
+&gt;
+一般情况下，你输入其他目录的文件，通常cmd不会给出回应，但如果你将目标目录的文件夹路径添加到环境变量后，那么你就可以访问了，比如说你添加了hugo的源目录
+&lt;code&gt;D:\hugo_extended_withdeploy_0.143.0_windows-amd64&lt;/code&gt;,其中下面有hugo.exe 那么你直接通过cmd敲入hugo相关的相关的命令即可在当前目录下使用hugo了，
+很多时候这相当有用，其中环境变量可以通过&lt;code&gt;win+S&lt;/code&gt;呼出搜索框然后输入环境变量打开对应的设置选项即可，而我，我更懒，我直接新建了一个快捷方式，填入了&lt;code&gt;C:\Windows\System32\SystemPropertiesAdvanced.exe&lt;/code&gt;
+并把快捷方式命名成了environment，然后把这个快捷方式加入了环境变量，然后，我就可以很方便的通过&lt;code&gt;win R&lt;/code&gt;运行框中输入environment进行直接打开环境变量属性框了
+尤其是配合历史记录的情况下，如果你上一次打开的是cmd，这次你不输入任何值默认就会显示cmd，以及如果发现这个功能没了请去设置内开启下列图片中的开关，即可使用这个功能了
+&lt;img src=&#34;https://adeepblue.github.io/p/cmd%E5%91%BD%E4%BB%A4%E4%BB%8B%E7%BB%8D/setting_for_running.png&#34;
+	width=&#34;1276&#34;
+	height=&#34;649&#34;
+	srcset=&#34;https://adeepblue.github.io/p/cmd%E5%91%BD%E4%BB%A4%E4%BB%8B%E7%BB%8D/setting_for_running_hu_934d1766afa5550e.png 480w, https://adeepblue.github.io/p/cmd%E5%91%BD%E4%BB%A4%E4%BB%8B%E7%BB%8D/setting_for_running_hu_3e5be8e39197457c.png 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;196&#34;
+		data-flex-basis=&#34;471px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;h2 id=&#34;一定的写入方法&#34;&gt;一定的写入方法
+&lt;/h2&gt;&lt;p&gt;一般cmd环境下，如果你想把一部分内容直接输入到某个文件上，可以通过以下命令实现&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;command_output &amp;gt; 1.txt&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;例如下面这个命令&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;dir *spacesniffer* /s/b &amp;gt;1.txt&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;下面是原本的输出的内容，但是一旦加上了&lt;code&gt;&amp;gt;1.txt&lt;/code&gt;后，所有的输出都被截断，命令行不显示输出，取而代之把输出写入了当前工作目录的1.txt文件中，注意，这个文件也可以不存在，这一行命令会自动新建1.txt文件&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;E:\软件&amp;gt;dir *spacesniffer* /s/b
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;E:\软件\spacesniffer_1_3_0_2
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;E:\软件\spacesniffer_1_3_0_2\SpaceSniffer.exe
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;E:\软件\文件索引、扫描工具\spacesniffer_1_3_0_2
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;E:\软件\文件索引、扫描工具\spacesniffer_1_3_0_2.zip
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;E:\软件\文件索引、扫描工具\spacesniffer_1_3_0_2\SpaceSniffer.exe
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;E:\软件\资源类软件\spacesniffer_1_3_0_2.zip
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id=&#34;其他用途&#34;&gt;其他用途
+&lt;/h2&gt;&lt;p&gt;在我的手里，一般cmd是一个默认的启动器吧，比如如果不希望启动pycharm这么个庞然大物去运行某个python脚本的话，一般可以通过&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;@echo off
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;python python-script.py
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;这样的方法去启动某个脚本，也省去了你敲命令的时间，比如隔壁git教程那一侧&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-gdscript3&#34; data-lang=&#34;gdscript3&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;err&#34;&gt;@&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;echo&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;off&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;n&#34;&gt;cd&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;..&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;n&#34;&gt;cd&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;personal&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;-&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;blog&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;n&#34;&gt;hugo&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;n&#34;&gt;git&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;add&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;n&#34;&gt;set&lt;/span&gt; &lt;span class=&#34;s2&#34;&gt;&amp;#34;year=&lt;/span&gt;&lt;span class=&#34;si&#34;&gt;%d&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;ate:~0,4%&amp;#34;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;n&#34;&gt;set&lt;/span&gt; &lt;span class=&#34;s2&#34;&gt;&amp;#34;month=&lt;/span&gt;&lt;span class=&#34;si&#34;&gt;%d&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;ate:~5,2%&amp;#34;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;n&#34;&gt;set&lt;/span&gt; &lt;span class=&#34;s2&#34;&gt;&amp;#34;day=&lt;/span&gt;&lt;span class=&#34;si&#34;&gt;%d&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;ate:~8,2%&amp;#34;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;n&#34;&gt;set&lt;/span&gt; &lt;span class=&#34;s2&#34;&gt;&amp;#34;formatted_date=%year&lt;/span&gt;&lt;span class=&#34;si&#34;&gt;%-%&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;month&lt;/span&gt;&lt;span class=&#34;si&#34;&gt;%-%&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;day%&amp;#34;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;n&#34;&gt;git&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;commit&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;-&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;m&lt;/span&gt; &lt;span class=&#34;s2&#34;&gt;&amp;#34;Upload file in &lt;/span&gt;&lt;span class=&#34;si&#34;&gt;%f&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;ormatted_date%&amp;#34;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;n&#34;&gt;git&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;push&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;-&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;u&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;origin&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;main&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;n&#34;&gt;pause&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;其中&lt;code&gt;@echo off&lt;/code&gt;为关闭回显状态，也就是不显示&lt;code&gt;E:\personal-blog\personal-blog&amp;gt;&lt;/code&gt;这个以及命令本身，但不会关闭这个命令本身的输出，pause会使得命令不会跑完就命令窗口消失&lt;/p&gt;
+&lt;h2 id=&#34;一些杂谈&#34;&gt;一些杂谈
+&lt;/h2&gt;&lt;p&gt;一般bat脚本被用来直接用foru循环的还是少，一般会被用来作一些简单的启动，比如启动python执行某个脚本什么的，这种比较方便，虽然有for循环
+但对比其他语言来说，实在有点眼花缭乱，一般用AI去问问就差不多了，我不喜欢在cmd命令里用for循环，在里面定义读取个变量很多时候也够呛，
+但也不否认，如果用它写一些简单的东西，可以省去很多的重复劳动，做到一定的自动化，这一点我还是比较喜欢的&lt;/p&gt;
 </description>
         </item>
         
