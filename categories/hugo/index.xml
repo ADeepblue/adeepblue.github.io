@@ -359,6 +359,67 @@ styles文件夹复制出来改文件名成highlight-styles后放在/assets/css/�
       &lt;/tr&gt;
   &lt;/tbody&gt;
 &lt;/table&gt;
+&lt;h2 id=&#34;链接css样式表进页面&#34;&gt;链接css样式表进页面
+&lt;/h2&gt;&lt;p&gt;因为我当时要改左侧样式表的页面，因为完全没有颜色会让左侧标签栏变得看不到，如下，我选择了加入伪元素达到类似蒙版的效果
+&lt;img src=&#34;https://adeepblue.github.io/p/hugo%E5%88%9D%E5%A7%8B%E5%8C%96%E7%BD%91%E7%AB%99%E7%AC%94%E8%AE%B0/nochange-aside-page.png&#34;
+	width=&#34;506&#34;
+	height=&#34;899&#34;
+	srcset=&#34;https://adeepblue.github.io/p/hugo%E5%88%9D%E5%A7%8B%E5%8C%96%E7%BD%91%E7%AB%99%E7%AC%94%E8%AE%B0/nochange-aside-page_hu_c9264d45a83e5e89.png 480w, https://adeepblue.github.io/p/hugo%E5%88%9D%E5%A7%8B%E5%8C%96%E7%BD%91%E7%AB%99%E7%AC%94%E8%AE%B0/nochange-aside-page_hu_d7354d2292bff500.png 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;deepseek直接给出的&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;56&#34;
+		data-flex-basis=&#34;135px&#34;
+	
+&gt;
+&lt;img src=&#34;https://adeepblue.github.io/p/hugo%E5%88%9D%E5%A7%8B%E5%8C%96%E7%BD%91%E7%AB%99%E7%AC%94%E8%AE%B0/change-aside-page.png&#34;
+	width=&#34;1905&#34;
+	height=&#34;899&#34;
+	srcset=&#34;https://adeepblue.github.io/p/hugo%E5%88%9D%E5%A7%8B%E5%8C%96%E7%BD%91%E7%AB%99%E7%AC%94%E8%AE%B0/change-aside-page_hu_ddefcd17cb2dbec0.png 480w, https://adeepblue.github.io/p/hugo%E5%88%9D%E5%A7%8B%E5%8C%96%E7%BD%91%E7%AB%99%E7%AC%94%E8%AE%B0/change-aside-page_hu_1453e37e1d5977e9.png 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;最终调好的白色页面的&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;211&#34;
+		data-flex-basis=&#34;508px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;p&gt;因为deepseek给出的文件放置位置错误，当时它提示我放在./assets/css/custom.css中调用，调用的时候只需要调用/css/custom.css就行了，
+结果没生效，到头来是在./static/css/custom目录下调用成了,参考了&lt;a class=&#34;link&#34; href=&#34;https://hugo-mini-course.netlify.app/sections/styling/custom/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;网页链接&lt;/a&gt;这篇文章
+&lt;img src=&#34;https://adeepblue.github.io/p/hugo%E5%88%9D%E5%A7%8B%E5%8C%96%E7%BD%91%E7%AB%99%E7%AC%94%E8%AE%B0/assets-css.png&#34;
+	width=&#34;875&#34;
+	height=&#34;404&#34;
+	srcset=&#34;https://adeepblue.github.io/p/hugo%E5%88%9D%E5%A7%8B%E5%8C%96%E7%BD%91%E7%AB%99%E7%AC%94%E8%AE%B0/assets-css_hu_5cdcdec86106459f.png 480w, https://adeepblue.github.io/p/hugo%E5%88%9D%E5%A7%8B%E5%8C%96%E7%BD%91%E7%AB%99%E7%AC%94%E8%AE%B0/assets-css_hu_b2be30825f8cd2f1.png 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;原本的放置目录&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;216&#34;
+		data-flex-basis=&#34;519px&#34;
+	
+&gt;
+&lt;img src=&#34;https://adeepblue.github.io/p/hugo%E5%88%9D%E5%A7%8B%E5%8C%96%E7%BD%91%E7%AB%99%E7%AC%94%E8%AE%B0/static-css.png&#34;
+	width=&#34;865&#34;
+	height=&#34;343&#34;
+	srcset=&#34;https://adeepblue.github.io/p/hugo%E5%88%9D%E5%A7%8B%E5%8C%96%E7%BD%91%E7%AB%99%E7%AC%94%E8%AE%B0/static-css_hu_ea454566e3905611.png 480w, https://adeepblue.github.io/p/hugo%E5%88%9D%E5%A7%8B%E5%8C%96%E7%BD%91%E7%AB%99%E7%AC%94%E8%AE%B0/static-css_hu_6e12ddc4a4cc4c06.png 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;img.png&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;252&#34;
+		data-flex-basis=&#34;605px&#34;
+	
+&gt;&lt;/p&gt;
 </description>
         </item>
         

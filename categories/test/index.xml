@@ -6,43 +6,6 @@
         <description>Recent content in Test on 深蓝之亘的博客</description>
         <generator>Hugo -- gohugo.io</generator>
         <language>zh-cn</language>
-        <copyright>深蓝之亘</copyright>
-        <lastBuildDate>Tue, 04 Feb 2025 21:10:15 +0800</lastBuildDate><atom:link href="https://adeepblue.github.io/categories/test/index.xml" rel="self" type="application/rss+xml" /><item>
-        <title>Test</title>
-        <link>https://adeepblue.github.io/p/test/</link>
-        <pubDate>Tue, 04 Feb 2025 21:10:15 +0800</pubDate>
-        
-        <guid>https://adeepblue.github.io/p/test/</guid>
-        <description>&lt;h1 id=&#34;文章标题&#34;&gt;文章标题
-&lt;/h1&gt;&lt;p&gt;这是你的主要内容部分。你可以在这里添加文本、列表、引用、图像等。&lt;/p&gt;
-&lt;h2 id=&#34;子标题&#34;&gt;子标题
-&lt;/h2&gt;&lt;h3 id=&#34;列表示例&#34;&gt;列表示例
-&lt;/h3&gt;&lt;ul&gt;
-&lt;li&gt;第一项&lt;/li&gt;
-&lt;li&gt;第二项&lt;/li&gt;
-&lt;li&gt;第三项&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h3 id=&#34;引用示例&#34;&gt;引用示例
-&lt;/h3&gt;&lt;blockquote&gt;
-&lt;p&gt;这是一个引用的例子。&lt;/p&gt;&lt;/blockquote&gt;
-&lt;h3 id=&#34;图片示例&#34;&gt;图片示例
-&lt;/h3&gt;&lt;p&gt;&lt;code&gt;![图片描述](图片链接)&lt;/code&gt;
-&lt;img src=&#34;https://adeepblue.github.io/%e5%9b%be%e7%89%87%e9%93%be%e6%8e%a5&#34;
-	
-	
-	
-	loading=&#34;lazy&#34;
-	
-		alt=&#34;图片描述&#34;
-	
-	
-&gt;&lt;/p&gt;
-&lt;h3 id=&#34;代码示例&#34;&gt;代码示例
-&lt;/h3&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-js&#34; data-lang=&#34;js&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;kd&#34;&gt;function&lt;/span&gt; &lt;span class=&#34;nx&#34;&gt;test&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;()&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;{&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  &lt;span class=&#34;nx&#34;&gt;console&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;nx&#34;&gt;log&lt;/span&gt;   &lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;&amp;#34;Highlight.js 已生效！&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;);&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;p&#34;&gt;}&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</description>
-        </item>
-        
+        <copyright>深蓝之亘</copyright><atom:link href="https://adeepblue.github.io/categories/test/index.xml" rel="self" type="application/rss+xml" />
     </channel>
 </rss>
