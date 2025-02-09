@@ -1,0 +1,27 @@
+/* 精准定位左侧边栏 */
+aside.sidebar.left-sidebar.sticky {
+    position: relative; /* 关键：建立定位上下文 */
+    isolation: isolate; /* 新建层叠上下文，避免影响其他元素 */
+}
+
+/* 通过伪元素添加蒙版 */
+aside.sidebar.left-sidebar.sticky::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.4); /* 蒙版颜色 */
+    z-index: -1; /* 置于底层 */
+    backdrop-filter: blur(2px); /* 可选毛玻璃效果 */
+    border-radius: 8px; /* 圆角与边栏匹配 */
+}
+
+/* 增强文字可读性 */
+.sidebar .site-info,
+.sidebar nav {
+    position: relative; /* 确保文字层在蒙版之上 */
+    color: rgba(255, 255, 255, 0.9) !important;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+}
