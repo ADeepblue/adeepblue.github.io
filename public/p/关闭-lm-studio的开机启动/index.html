@@ -1,0 +1,598 @@
+<!DOCTYPE html>
+<html lang="zh-cn" dir="ltr">
+    <head><meta charset='utf-8'>
+<meta name='viewport' content='width=device-width, initial-scale=1'><meta name='description' content="分享关闭LM studio开机启动的方法">
+<title>关闭 LM studio的开机启动</title>
+
+<link rel='canonical' href='https://adeepblue.github.io/p/%E5%85%B3%E9%97%AD-lm-studio%E7%9A%84%E5%BC%80%E6%9C%BA%E5%90%AF%E5%8A%A8/'>
+
+<link rel="stylesheet" href="/scss/style.min.663803bebe609202d5b39d848f2d7c2dc8b598a2d879efa079fa88893d29c49c.css"><meta property='og:title' content="关闭 LM studio的开机启动">
+<meta property='og:description' content="分享关闭LM studio开机启动的方法">
+<meta property='og:url' content='https://adeepblue.github.io/p/%E5%85%B3%E9%97%AD-lm-studio%E7%9A%84%E5%BC%80%E6%9C%BA%E5%90%AF%E5%8A%A8/'>
+<meta property='og:site_name' content='深蓝之亘的博客'>
+<meta property='og:type' content='article'><meta property='article:section' content='Post' /><meta property='article:published_time' content='2025-02-08T13:52:52&#43;08:00'/><meta property='article:modified_time' content='2025-02-08T13:52:52&#43;08:00'/><meta property='og:image' content='https://adeepblue.github.io/p/%E5%85%B3%E9%97%AD-lm-studio%E7%9A%84%E5%BC%80%E6%9C%BA%E5%90%AF%E5%8A%A8/LM-studio.jpg' />
+<meta name="twitter:title" content="关闭 LM studio的开机启动">
+<meta name="twitter:description" content="分享关闭LM studio开机启动的方法"><meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:image" content='https://adeepblue.github.io/p/%E5%85%B3%E9%97%AD-lm-studio%E7%9A%84%E5%BC%80%E6%9C%BA%E5%90%AF%E5%8A%A8/LM-studio.jpg' />
+    <link rel="shortcut icon" href="/favicon.ico" />
+
+         <link rel="stylesheet" href="/css/custom.css">
+    </head>
+    <body class="
+    article-page
+    ">
+    <script>
+        (function() {
+            const colorSchemeKey = 'StackColorScheme';
+            if(!localStorage.getItem(colorSchemeKey)){
+                localStorage.setItem(colorSchemeKey, "auto");
+            }
+        })();
+    </script><script>
+    (function() {
+        const colorSchemeKey = 'StackColorScheme';
+        const colorSchemeItem = localStorage.getItem(colorSchemeKey);
+        const supportDarkMode = window.matchMedia('(prefers-color-scheme: dark)').matches === true;
+
+        if (colorSchemeItem == 'dark' || colorSchemeItem === 'auto' && supportDarkMode) {
+            
+
+            document.documentElement.dataset.scheme = 'dark';
+        } else {
+            document.documentElement.dataset.scheme = 'light';
+        }
+    })();
+</script>
+<div class="container main-container flex on-phone--column extended"><aside class="sidebar left-sidebar sticky ">
+    <button class="hamburger hamburger--spin" type="button" id="toggle-menu" aria-label="切换菜单">
+        <span class="hamburger-box">
+            <span class="hamburger-inner"></span>
+        </span>
+    </button>
+
+    <header>
+        
+            
+            <figure class="site-avatar">
+                <a href="/">
+                
+                    
+                    
+                    
+                        
+                        <img src="/img/avatar_hu_996f7fae539f5332.png" width="300"
+                            height="300" class="site-logo" loading="lazy" alt="Avatar">
+                    
+                
+                </a>
+                
+            </figure>
+            
+        
+        
+        <div class="site-meta">
+            <h1 class="site-name"><a href="/">深蓝之亘的博客</a></h1>
+            <h2 class="site-description">欢迎来到我的博客网站</h2>
+        </div>
+    </header><ol class="menu-social">
+            
+                <li>
+                    <a 
+                        href='https://github.com/Adeepblue'
+                        target="_blank"
+                        title="GitHub"
+                        rel="me"
+                    >
+                        
+                        
+                            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-brand-github" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+  <path d="M9 19c-4.3 1.4 -4.3 -2.5 -6 -3m12 5v-3.5c0 -1 .1 -1.4 -.5 -2c2.8 -.3 5.5 -1.4 5.5 -6a4.6 4.6 0 0 0 -1.3 -3.2a4.2 4.2 0 0 0 -.1 -3.2s-1.1 -.3 -3.5 1.3a12.3 12.3 0 0 0 -6.2 0c-2.4 -1.6 -3.5 -1.3 -3.5 -1.3a4.2 4.2 0 0 0 -.1 3.2a4.6 4.6 0 0 0 -1.3 3.2c0 4.6 2.7 5.7 5.5 6c-.6 .6 -.6 1.2 -.5 2v3.5" />
+</svg>
+
+
+
+                        
+                    </a>
+                </li>
+            
+                <li>
+                    <a 
+                        href='https://space.bilibili.com/435022639'
+                        target="_blank"
+                        title="Twitter"
+                        rel="me"
+                    >
+                        
+                        
+                            <svg  xmlns="http://www.w3.org/2000/svg"  width="24"  height="24"  viewBox="0 0 24 24"  fill="none"  stroke="currentColor"  stroke-width="2"  stroke-linecap="round"  stroke-linejoin="round"  class="icon icon-tabler icons-tabler-outline icon-tabler-brand-bilibili"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M3 10a4 4 0 0 1 4 -4h10a4 4 0 0 1 4 4v6a4 4 0 0 1 -4 4h-10a4 4 0 0 1 -4 -4v-6z" /><path d="M8 3l2 3" /><path d="M16 3l-2 3" /><path d="M9 13v-2" /><path d="M15 11v2" /></svg>
+                        
+                    </a>
+                </li>
+            
+        </ol><ol class="menu" id="main-menu">
+        
+        
+        
+        <li >
+            <a href='/' >
+                
+                
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-home" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <polyline points="5 12 3 12 12 3 21 12 19 12" />
+  <path d="M5 12v7a2 2 0 0 0 2 2h10a2 2 0 0 0 2 -2v-7" />
+  <path d="M9 21v-6a2 2 0 0 1 2 -2h2a2 2 0 0 1 2 2v6" />
+</svg>
+
+
+
+                
+                <span>主页</span>
+            </a>
+        </li>
+        
+        
+        <li >
+            <a href='/%E5%85%B3%E4%BA%8E/' >
+                
+                
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-user" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="12" cy="7" r="4" />
+  <path d="M6 21v-2a4 4 0 0 1 4 -4h4a4 4 0 0 1 4 4v2" />
+</svg>
+
+
+
+                
+                <span>关于</span>
+            </a>
+        </li>
+        
+        
+        <li >
+            <a href='/archives/' >
+                
+                
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-archive" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <rect x="3" y="4" width="18" height="4" rx="2" />
+  <path d="M5 8v10a2 2 0 0 0 2 2h10a2 2 0 0 0 2 -2v-10" />
+  <line x1="10" y1="12" x2="14" y2="12" />
+</svg>
+
+
+
+                
+                <span>Archives</span>
+            </a>
+        </li>
+        
+        
+        <li >
+            <a href='/search/' >
+                
+                
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-search" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="10" cy="10" r="7" />
+  <line x1="21" y1="21" x2="15" y2="15" />
+</svg>
+
+
+
+                
+                <span>Search</span>
+            </a>
+        </li>
+        
+        
+        <li >
+            <a href='/links/' >
+                
+                
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-link" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <path d="M10 14a3.5 3.5 0 0 0 5 0l4 -4a3.5 3.5 0 0 0 -5 -5l-.5 .5" />
+  <path d="M14 10a3.5 3.5 0 0 0 -5 0l-4 4a3.5 3.5 0 0 0 5 5l.5 -.5" />
+</svg>
+
+
+
+                
+                <span>Links</span>
+            </a>
+        </li>
+        
+        <li class="menu-bottom-section">
+            <ol class="menu">
+
+                
+                    <li id="dark-mode-toggle">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-toggle-left" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="8" cy="12" r="2" />
+  <rect x="2" y="6" width="20" height="12" rx="6" />
+</svg>
+
+
+
+                        <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-toggle-right" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="16" cy="12" r="2" />
+  <rect x="2" y="6" width="20" height="12" rx="6" />
+</svg>
+
+
+
+                        <span>暗色模式</span>
+                    </li>
+                
+            </ol>
+        </li>
+    </ol>
+</aside>
+
+    <aside class="sidebar right-sidebar sticky">
+        
+            
+                
+    <section class="widget archives">
+        <div class="widget-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-hash" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <line x1="5" y1="9" x2="19" y2="9" />
+  <line x1="5" y1="15" x2="19" y2="15" />
+  <line x1="11" y1="4" x2="7" y2="20" />
+  <line x1="17" y1="4" x2="13" y2="20" />
+</svg>
+
+
+
+        </div>
+        <h2 class="widget-title section-title">目录</h2>
+        
+        <div class="widget--toc">
+            <nav id="TableOfContents">
+  <ol>
+    <li><a href="#关闭方法">关闭方法</a></li>
+    <li><a href="#我是如何找到的">我是如何找到的</a></li>
+  </ol>
+</nav>
+        </div>
+    </section>
+
+            
+        
+    </aside>
+
+
+            <main class="main full-width">
+    <article class="has-image main-article">
+    <header class="article-header">
+        <div class="article-image">
+            <a href="/p/%E5%85%B3%E9%97%AD-lm-studio%E7%9A%84%E5%BC%80%E6%9C%BA%E5%90%AF%E5%8A%A8/">
+                <img src="/p/%E5%85%B3%E9%97%AD-lm-studio%E7%9A%84%E5%BC%80%E6%9C%BA%E5%90%AF%E5%8A%A8/LM-studio_hu_a3a9dae26a5cbfb3.jpg"
+                        srcset="/p/%E5%85%B3%E9%97%AD-lm-studio%E7%9A%84%E5%BC%80%E6%9C%BA%E5%90%AF%E5%8A%A8/LM-studio_hu_a3a9dae26a5cbfb3.jpg 800w, /p/%E5%85%B3%E9%97%AD-lm-studio%E7%9A%84%E5%BC%80%E6%9C%BA%E5%90%AF%E5%8A%A8/LM-studio_hu_c8e48e3916041bdb.jpg 1600w"
+                        width="800" 
+                        height="800" 
+                        loading="lazy"
+                        alt="Featured image of post 关闭 LM studio的开机启动" />
+                
+            </a>
+        </div>
+    
+
+    <div class="article-details">
+    
+
+    <div class="article-title-wrapper">
+        <h2 class="article-title">
+            <a href="/p/%E5%85%B3%E9%97%AD-lm-studio%E7%9A%84%E5%BC%80%E6%9C%BA%E5%90%AF%E5%8A%A8/">关闭 LM studio的开机启动</a>
+        </h2>
+    
+        
+        <h3 class="article-subtitle">
+            分享关闭LM studio开机启动的方法
+        </h3>
+        
+    </div>
+
+    
+    
+    
+    
+    <footer class="article-time">
+        
+            <div>
+                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-calendar-time" width="56" height="56" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <path d="M11.795 21h-6.795a2 2 0 0 1 -2 -2v-12a2 2 0 0 1 2 -2h12a2 2 0 0 1 2 2v4" />
+  <circle cx="18" cy="18" r="4" />
+  <path d="M15 3v4" />
+  <path d="M7 3v4" />
+  <path d="M3 11h16" />
+  <path d="M18 16.496v1.504l1 1" />
+</svg>
+                <time class="article-time--published">2025-02-08</time>
+            </div>
+        
+
+        
+    </footer>
+    
+
+    
+</div>
+
+</header>
+
+    <section class="article-content">
+    
+    
+    <h1 id="分享关闭lm-studio开机启动的方法">分享关闭LM studio开机启动的方法
+</h1><h2 id="关闭方法">关闭方法
+</h2><p>关闭无头开关(headless)就可以不让LMstudio开机启动
+<img src="/p/%E5%85%B3%E9%97%AD-lm-studio%E7%9A%84%E5%BC%80%E6%9C%BA%E5%90%AF%E5%8A%A8/setting-for-headless.png"
+	width="1920"
+	height="1024"
+	srcset="/p/%E5%85%B3%E9%97%AD-lm-studio%E7%9A%84%E5%BC%80%E6%9C%BA%E5%90%AF%E5%8A%A8/setting-for-headless_hu_15ec6c234864fb35.png 480w, /p/%E5%85%B3%E9%97%AD-lm-studio%E7%9A%84%E5%BC%80%E6%9C%BA%E5%90%AF%E5%8A%A8/setting-for-headless_hu_123ddbe42509ff77.png 1024w"
+	loading="lazy"
+	
+		alt="关闭方法"
+	
+	
+		class="gallery-image" 
+		data-flex-grow="187"
+		data-flex-basis="450px"
+	
+></p>
+<h2 id="我是如何找到的">我是如何找到的
+</h2><p>之前搜了一圈发现没找到来着，虽然B站发了，但是这里还是再发一篇吧，这是B站这边的链接<a class="link" href="https://www.bilibili.com/read/cv40562346"  target="_blank" rel="noopener"
+    >网页链接</a>,区别在于我会在这里讲一下我是怎么找到这个的</p>
+<p>没找到显式开关的情况下，当时搜谷歌时候的内容如上，其他内容几乎没有，当时觉得挺绝望的，一个半开源软件把开机自启开关都藏得这么深的么？甚至还没多少人关注这个，只是说了它支持开机启动，其中的更新日志里，
+那，换个说法，之前的状态就是不支持开机启动咯，那你总有开关做着让人选的吧？</p>
+<p><img src="/p/%E5%85%B3%E9%97%AD-lm-studio%E7%9A%84%E5%BC%80%E6%9C%BA%E5%90%AF%E5%8A%A8/google-search-LM-studio-update-log.png"
+	width="1099"
+	height="329"
+	srcset="/p/%E5%85%B3%E9%97%AD-lm-studio%E7%9A%84%E5%BC%80%E6%9C%BA%E5%90%AF%E5%8A%A8/google-search-LM-studio-update-log_hu_cfbe8b472f9db527.png 480w, /p/%E5%85%B3%E9%97%AD-lm-studio%E7%9A%84%E5%BC%80%E6%9C%BA%E5%90%AF%E5%8A%A8/google-search-LM-studio-update-log_hu_e14138d72a17499b.png 1024w"
+	loading="lazy"
+	
+		alt="谷歌搜到的内容"
+	
+	
+		class="gallery-image" 
+		data-flex-grow="334"
+		data-flex-basis="801px"
+	
+></p>
+<p><img src="/p/%E5%85%B3%E9%97%AD-lm-studio%E7%9A%84%E5%BC%80%E6%9C%BA%E5%90%AF%E5%8A%A8/LM-studio-update-log.png"
+	width="1916"
+	height="1028"
+	srcset="/p/%E5%85%B3%E9%97%AD-lm-studio%E7%9A%84%E5%BC%80%E6%9C%BA%E5%90%AF%E5%8A%A8/LM-studio-update-log_hu_f76476af7e81313f.png 480w, /p/%E5%85%B3%E9%97%AD-lm-studio%E7%9A%84%E5%BC%80%E6%9C%BA%E5%90%AF%E5%8A%A8/LM-studio-update-log_hu_de80dd25e9c30c00.png 1024w"
+	loading="lazy"
+	
+		alt="LM studio更新日志"
+	
+	
+		class="gallery-image" 
+		data-flex-grow="186"
+		data-flex-basis="447px"
+	
+></p>
+<p>开机启动，我第一个想到的就是任务管理器里的启动，去看了一眼</p>
+<p><img src="/p/%E5%85%B3%E9%97%AD-lm-studio%E7%9A%84%E5%BC%80%E6%9C%BA%E5%90%AF%E5%8A%A8/task-with-LM-studio.png"
+	width="1007"
+	height="741"
+	srcset="/p/%E5%85%B3%E9%97%AD-lm-studio%E7%9A%84%E5%BC%80%E6%9C%BA%E5%90%AF%E5%8A%A8/task-with-LM-studio_hu_faf694d78da67d7f.png 480w, /p/%E5%85%B3%E9%97%AD-lm-studio%E7%9A%84%E5%BC%80%E6%9C%BA%E5%90%AF%E5%8A%A8/task-with-LM-studio_hu_f3769c4f3e36e7d4.png 1024w"
+	loading="lazy"
+	
+		alt="任务管理器内的开机启动显示"
+	
+	
+		class="gallery-image" 
+		data-flex-grow="135"
+		data-flex-basis="326px"
+	
+></p>
+<p>这个选项明晃晃的躺在里面，那基本就是了，假定，如果这个软件只是安装的的时候通过某种手段去修改了一次设置，也有可能是每次启动修改设置吧？按照这个逻辑，我去设置那边关闭了一次这个选项企图看看什么情况，至于说要怎么观察，
+关闭软件然后重新启动就可以，毕竟如果是后者的话，一旦修改成功就会观察到吧？</p>
+<p>然后，就真的，观察到启动一次软件就把这个开关给打开了，说明，<span style="color:red">这是每次启动一旦检测到软件内一个设置选项是啥样的就会去改任务管理器里的那个开关</span>,</p>
+<p>再之后，我考虑到有可能是注册表注册了某个键值，导致的反复修改设置里的选项，不过没找到开关就是了，按照LM studio的名字搜了之后加上AI帮助倒是搜到了开机启动项的位置，以及我其他设定的几个开机启动项</p>
+<p><img src="/p/%E5%85%B3%E9%97%AD-lm-studio%E7%9A%84%E5%BC%80%E6%9C%BA%E5%90%AF%E5%8A%A8/regedit-with-LM-studio.png"
+	width="1913"
+	height="634"
+	srcset="/p/%E5%85%B3%E9%97%AD-lm-studio%E7%9A%84%E5%BC%80%E6%9C%BA%E5%90%AF%E5%8A%A8/regedit-with-LM-studio_hu_8af9d099fc9a90c0.png 480w, /p/%E5%85%B3%E9%97%AD-lm-studio%E7%9A%84%E5%BC%80%E6%9C%BA%E5%90%AF%E5%8A%A8/regedit-with-LM-studio_hu_52f548d54553f1b6.png 1024w"
+	loading="lazy"
+	
+		alt="相关注册表"
+	
+	
+		class="gallery-image" 
+		data-flex-grow="301"
+		data-flex-basis="724px"
+	
+></p>
+<p>以及又按照上述方法测试了一下，只是这次直接就是删除相关键值，依旧也是上面的结果，也就是坐实了就是有个设置项，再结合上述日志提到的无头开关，它只提到了最小化托盘选项开关的事，开机启动只是带过了一嘴，
+那我有理由怀疑，这个开关同时也控制着开机启动？</p>
+<p>结果，一测试，还真是，任务管理器内的启动那边，和注册表这边的，同时变了</p>
+<p><img src="/p/%E5%85%B3%E9%97%AD-lm-studio%E7%9A%84%E5%BC%80%E6%9C%BA%E5%90%AF%E5%8A%A8/reg-without-LM-studio.png"
+	width="1920"
+	height="726"
+	srcset="/p/%E5%85%B3%E9%97%AD-lm-studio%E7%9A%84%E5%BC%80%E6%9C%BA%E5%90%AF%E5%8A%A8/reg-without-LM-studio_hu_5e1f7306cc6c704e.png 480w, /p/%E5%85%B3%E9%97%AD-lm-studio%E7%9A%84%E5%BC%80%E6%9C%BA%E5%90%AF%E5%8A%A8/reg-without-LM-studio_hu_3b27fea65cb8dc9d.png 1024w"
+	loading="lazy"
+	
+		alt="变动后的注册表"
+	
+	
+		class="gallery-image" 
+		data-flex-grow="264"
+		data-flex-basis="634px"
+	
+></p>
+<p><img src="/p/%E5%85%B3%E9%97%AD-lm-studio%E7%9A%84%E5%BC%80%E6%9C%BA%E5%90%AF%E5%8A%A8/task-control-without-LM-studio.png"
+	width="1007"
+	height="741"
+	srcset="/p/%E5%85%B3%E9%97%AD-lm-studio%E7%9A%84%E5%BC%80%E6%9C%BA%E5%90%AF%E5%8A%A8/task-control-without-LM-studio_hu_b9eb6fb7fb3d3585.png 480w, /p/%E5%85%B3%E9%97%AD-lm-studio%E7%9A%84%E5%BC%80%E6%9C%BA%E5%90%AF%E5%8A%A8/task-control-without-LM-studio_hu_7a22c71461a036cf.png 1024w"
+	loading="lazy"
+	
+		alt="变动后的任务管理器"
+	
+	
+		class="gallery-image" 
+		data-flex-grow="135"
+		data-flex-basis="326px"
+	
+></p>
+<p>那也就彻彻底底确定了，就是那个开关的问题，但这个开关同时写了允许最小化托盘的选项，以及是开机启动选项，我估计多少会引起一些不希望开机启动但是可以有最小化托盘的用户的不满了，但既然软件现在也就做了一个开关，
+这些用户可能也只能无可奈何接受了。</p>
+
+</section>
+
+
+    <footer class="article-footer">
+    
+
+    </footer>
+
+
+    
+</article>
+
+    
+
+    
+
+     
+    
+        
+    
+
+    <footer class="site-footer">
+    <section class="copyright">
+        &copy; 
+        
+        2025 深蓝之亘
+    </section>
+    
+    <section class="powerby">
+        
+            深蓝之亘的博客网站 https://adeepblue.github.io <br/>
+        使用 <a href="https://gohugo.io/" target="_blank" rel="noopener">Hugo</a> 构建 <br />
+        主题 <b><a href="https://github.com/CaiJimmy/hugo-theme-stack" target="_blank" rel="noopener" data-version="3.30.0">Stack</a></b> 由 <a href="https://jimmycai.com" target="_blank" rel="noopener">Jimmy</a> 设计
+    </section>
+</footer>
+
+
+    
+<div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
+
+    
+    <div class="pswp__bg"></div>
+
+    
+    <div class="pswp__scroll-wrap">
+
+        
+        <div class="pswp__container">
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+        </div>
+
+        
+        <div class="pswp__ui pswp__ui--hidden">
+
+            <div class="pswp__top-bar">
+
+                
+
+                <div class="pswp__counter"></div>
+
+                <button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+
+                <button class="pswp__button pswp__button--share" title="Share"></button>
+
+                <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
+
+                <button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
+
+                
+                
+                <div class="pswp__preloader">
+                    <div class="pswp__preloader__icn">
+                        <div class="pswp__preloader__cut">
+                            <div class="pswp__preloader__donut"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+                <div class="pswp__share-tooltip"></div>
+            </div>
+
+            <button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)">
+            </button>
+
+            <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)">
+            </button>
+
+            <div class="pswp__caption">
+                <div class="pswp__caption__center"></div>
+            </div>
+
+        </div>
+
+    </div>
+
+</div><script 
+                src="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe.min.js"integrity="sha256-ePwmChbbvXbsO02lbM3HoHbSHTHFAeChekF1xKJdleo="crossorigin="anonymous"
+                defer
+                >
+            </script><script 
+                src="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe-ui-default.min.js"integrity="sha256-UKkzOn/w1mBxRmLLGrSeyB4e1xbrp4xylgAWb3M42pU="crossorigin="anonymous"
+                defer
+                >
+            </script><link 
+                rel="stylesheet" 
+                href="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/default-skin/default-skin.min.css"crossorigin="anonymous"
+            ><link 
+                rel="stylesheet" 
+                href="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe.min.css"crossorigin="anonymous"
+            >
+
+            </main>
+        </div>
+        <script 
+                src="https://cdn.jsdelivr.net/npm/node-vibrant@3.1.6/dist/vibrant.min.js"integrity="sha256-awcR2jno4kI5X0zL8ex0vi2z&#43;KMkF24hUW8WePSA9HM="crossorigin="anonymous"
+                
+                >
+            </script><script type="text/javascript" src="/ts/main.1e9a3bafd846ced4c345d084b355fb8c7bae75701c338f8a1f8a82c780137826.js" defer></script>
+<script>
+    (function () {
+        const customFont = document.createElement('link');
+        customFont.href = "https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap";
+
+        customFont.type = "text/css";
+        customFont.rel = "stylesheet";
+
+        document.head.appendChild(customFont);
+    }());
+</script>
+
+<style>
+  body {
+    background: url(https://adeepblue.github.io/background/background.png) no-repeat center top;
+    background-size: cover;
+    background-attachment: fixed;
+  }
+</style>
+    </body>
+</html>

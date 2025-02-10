@@ -81,6 +81,7 @@ git commit -m "Publish site"
 git subtree push --prefix public origin gh-pages
 ```
 以及，现在的hugo推送，这样就可以推送到gh-pages分区进行展示了，需要GitHub修改一下仓库设置
+
 ![github页面图修改配置](1.png)
 
 ## 仓库迁移
