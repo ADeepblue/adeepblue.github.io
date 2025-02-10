@@ -243,3 +243,38 @@ styles文件夹复制出来改文件名成highlight-styles后放在/assets/css/�
 ![原本的放置目录](assets-css.png)
 ![img.png](static-css.png)
 
+## 企图修改边栏文字
+修改内容如下
+```
+./content/pages/archives/index.md
+# title 字段和slug字段，分别改成中文
+./content/pages/search/index.md
+# 同上
+```
+以及hugo.yaml文件中
+```yaml
+        homepage:
+            - type: search
+            - type: archives
+```
+以及文件夹部分
+```
+./content/pages/search/改为./content/pages/搜索/
+./content/pages/archives/改为./content/pages/归档/
+```
+结果：改完可以生效左侧文字，但是右侧工具栏失效
+
+## 删除多语言选项框
+配置一下hugo.yaml文件就行
+以下
+```yaml
+languages:
+    zh-cn:
+        languageName: 中文
+        title: 深蓝之亘的博客
+        weight: 2
+        params:
+            sidebar:
+                subtitle: 欢迎来到我的博客网站
+```
+上述位置删掉en键值就行，只保留一个zh-cn，或者保留en但需要去调模板的值

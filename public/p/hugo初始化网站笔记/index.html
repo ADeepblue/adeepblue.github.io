@@ -154,7 +154,7 @@
         
         
         <li >
-            <a href='/%E5%BD%92%E6%A1%A3/' >
+            <a href='/archives/' >
                 
                 
                 
@@ -168,13 +168,13 @@
 
 
                 
-                <span>归档</span>
+                <span>archives</span>
             </a>
         </li>
         
         
         <li >
-            <a href='/%E6%90%9C%E7%B4%A2/' >
+            <a href='/search/' >
                 
                 
                 
@@ -280,6 +280,8 @@
     </li>
     <li><a href="#图表绘制">图表绘制</a></li>
     <li><a href="#链接css样式表进页面">链接css样式表进页面</a></li>
+    <li><a href="#企图修改边栏文字">企图修改边栏文字</a></li>
+    <li><a href="#删除多语言选项框">删除多语言选项框</a></li>
   </ol>
 </nav>
         </div>
@@ -768,6 +770,32 @@ styles文件夹复制出来改文件名成highlight-styles后放在/assets/css/�
 		data-flex-basis="605px"
 	
 ></p>
+<h2 id="企图修改边栏文字">企图修改边栏文字
+</h2><p>修改内容如下</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">./content/pages/archives/index.md
+</span></span><span class="line"><span class="cl"># title 字段和slug字段，分别改成中文
+</span></span><span class="line"><span class="cl">./content/pages/search/index.md
+</span></span><span class="line"><span class="cl"># 同上
+</span></span></code></pre></div><p>以及hugo.yaml文件中</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-yaml" data-lang="yaml"><span class="line"><span class="cl"><span class="w">        </span><span class="nt">homepage</span><span class="p">:</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">            </span>- <span class="nt">type</span><span class="p">:</span><span class="w"> </span><span class="l">search</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">            </span>- <span class="nt">type</span><span class="p">:</span><span class="w"> </span><span class="l">archives</span><span class="w">
+</span></span></span></code></pre></div><p>以及文件夹部分</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">./content/pages/search/改为./content/pages/搜索/
+</span></span><span class="line"><span class="cl">./content/pages/archives/改为./content/pages/归档/
+</span></span></code></pre></div><p>结果：改完可以生效左侧文字，但是右侧工具栏失效</p>
+<h2 id="删除多语言选项框">删除多语言选项框
+</h2><p>配置一下hugo.yaml文件就行
+以下</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-yaml" data-lang="yaml"><span class="line"><span class="cl"><span class="nt">languages</span><span class="p">:</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="nt">zh-cn</span><span class="p">:</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">        </span><span class="nt">languageName</span><span class="p">:</span><span class="w"> </span><span class="l">中文</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">        </span><span class="nt">title</span><span class="p">:</span><span class="w"> </span><span class="l">深蓝之亘的博客</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">        </span><span class="nt">weight</span><span class="p">:</span><span class="w"> </span><span class="m">2</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">        </span><span class="nt">params</span><span class="p">:</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">            </span><span class="nt">sidebar</span><span class="p">:</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">                </span><span class="nt">subtitle</span><span class="p">:</span><span class="w"> </span><span class="l">欢迎来到我的博客网站</span><span class="w">
+</span></span></span></code></pre></div><p>上述位置删掉en键值就行，只保留一个zh-cn，或者保留en但需要去调模板的值</p>
 
 </section>
 
