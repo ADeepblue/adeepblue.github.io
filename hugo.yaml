@@ -155,8 +155,8 @@ params:
             id:
     widgets:
         homepage:
-            - type: search
-            - type: archives
+            - type: 搜索
+            - type: 归档
               params:
                   limit: 5
             - type: categories

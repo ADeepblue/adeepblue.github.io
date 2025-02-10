@@ -4,7 +4,7 @@ draft = false
 title = '图灵完备游戏攻略'
 image = 'Logo.png'
 categories = [
-    "图灵完备"
+    "steamgame"
 ]
 +++
 
