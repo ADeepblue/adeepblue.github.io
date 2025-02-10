@@ -1407,11 +1407,11 @@ styles文件夹复制出来改文件名成highlight-styles后放在/assets/css/�
 </description>
         </item>
         <item>
-        <title>归档</title>
-        <link>https://adeepblue.github.io/%E5%BD%92%E6%A1%A3/</link>
+        <title>archives</title>
+        <link>https://adeepblue.github.io/archives/</link>
         <pubDate>Tue, 28 May 2019 00:00:00 +0000</pubDate>
         
-        <guid>https://adeepblue.github.io/%E5%BD%92%E6%A1%A3/</guid>
+        <guid>https://adeepblue.github.io/archives/</guid>
         <description></description>
         </item>
         <item>
@@ -1435,29 +1435,29 @@ styles文件夹复制出来改文件名成highlight-styles后放在/assets/css/�
 </description>
         </item>
         <item>
+        <title>search</title>
+        <link>https://adeepblue.github.io/search/</link>
+        <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+        
+        <guid>https://adeepblue.github.io/search/</guid>
+        <description></description>
+        </item>
+        <item>
         <title>更新日志</title>
         <link>https://adeepblue.github.io/%E6%9B%B4%E6%96%B0%E6%97%A5%E5%BF%97/</link>
         <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
         
         <guid>https://adeepblue.github.io/%E6%9B%B4%E6%96%B0%E6%97%A5%E5%BF%97/</guid>
-        <description>&lt;p&gt;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;2025-02-08-14-00更新&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&lt;/p&gt;
-&lt;p&gt;增加了python matplotlib的常用函数介绍，待补充的有3D绘图模块，其他模块requests.get的SSLError部分
-以及LM studio自动更新说明部分&lt;/p&gt;
-&lt;p&gt;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;2025-02-09-10-24更新&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&lt;/p&gt;
-&lt;p&gt;更新了图灵完备的游戏攻略内容&lt;/p&gt;
+        <description>&lt;p&gt;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;2025-11-20更新&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&lt;/p&gt;
+&lt;p&gt;更新了LM studio 关闭开机启动 部分的内容&lt;/p&gt;
 &lt;p&gt;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;2025-02-09-10-24更新&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&lt;/p&gt;
 &lt;p&gt;左侧标签栏更新了白色蒙版，以及是cmd的一些命令，以及对git处后面的补充，hugo处也有更改，删除了test，新建了关闭LM studio自动更新说明部分的文件夹&lt;/p&gt;
-&lt;p&gt;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;2025-11-20更新&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&lt;/p&gt;
-&lt;p&gt;更新了LM studio 关闭开机启动 部分的内容&lt;/p&gt;
+&lt;p&gt;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;2025-02-09-10-24更新&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&lt;/p&gt;
+&lt;p&gt;更新了图灵完备的游戏攻略内容&lt;/p&gt;
+&lt;p&gt;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;2025-02-08-14-00更新&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&lt;/p&gt;
+&lt;p&gt;增加了python matplotlib的常用函数介绍，待补充的有3D绘图模块，其他模块requests.get的SSLError部分
+以及LM studio自动更新说明部分&lt;/p&gt;
 </description>
-        </item>
-        <item>
-        <title>搜索</title>
-        <link>https://adeepblue.github.io/%E6%90%9C%E7%B4%A2/</link>
-        <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-        
-        <guid>https://adeepblue.github.io/%E6%90%9C%E7%B4%A2/</guid>
-        <description></description>
         </item>
         
     </channel>
