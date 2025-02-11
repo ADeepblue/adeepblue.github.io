@@ -129,6 +129,9 @@ E:\软件\资源类软件\spacesniffer_1_3_0_2.zip
 python python-script.py
 ```
 这样的方法去启动某个脚本，也省去了你敲命令的时间，比如隔壁git教程那一侧[git教程](https://adeepblue.github.io/p/git%E5%88%9D%E5%A7%8B%E5%8C%96%E8%AE%B0%E5%BD%95/)
+但记住一点，尽量用ANSI格式去保存代码文件,全英文状态下可能只能是默认的utf-8，[编解码参考视频](https://www.bilibili.com/video/BV1cB4y177QR)
+![](bat-utf-8.png)
+![](bat-ANSI.png)
 ```DOS
 @echo off
 cd ..
