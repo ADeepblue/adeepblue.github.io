@@ -1,0 +1,597 @@
+<!DOCTYPE html>
+<html lang="zh-cn" dir="ltr">
+    <head><meta charset='utf-8'>
+<meta name='viewport' content='width=device-width, initial-scale=1'><meta name='description' content="曾经python遭遇SSLError的解决办法">
+<title>Python 开了代理使用requests库报错SSL Error解决办法</title>
+
+<link rel='canonical' href='https://adeepblue.github.io/p/python-%E5%BC%80%E4%BA%86%E4%BB%A3%E7%90%86%E4%BD%BF%E7%94%A8requests%E5%BA%93%E6%8A%A5%E9%94%99ssl-error%E8%A7%A3%E5%86%B3%E5%8A%9E%E6%B3%95/'>
+
+<link rel="stylesheet" href="/scss/style.min.663803bebe609202d5b39d848f2d7c2dc8b598a2d879efa079fa88893d29c49c.css"><meta property='og:title' content="Python 开了代理使用requests库报错SSL Error解决办法">
+<meta property='og:description' content="曾经python遭遇SSLError的解决办法">
+<meta property='og:url' content='https://adeepblue.github.io/p/python-%E5%BC%80%E4%BA%86%E4%BB%A3%E7%90%86%E4%BD%BF%E7%94%A8requests%E5%BA%93%E6%8A%A5%E9%94%99ssl-error%E8%A7%A3%E5%86%B3%E5%8A%9E%E6%B3%95/'>
+<meta property='og:site_name' content='深蓝之亘的博客'>
+<meta property='og:type' content='article'><meta property='article:section' content='Post' /><meta property='article:published_time' content='2025-02-11T16:35:53&#43;08:00'/><meta property='article:modified_time' content='2025-02-11T16:35:53&#43;08:00'/>
+<meta name="twitter:title" content="Python 开了代理使用requests库报错SSL Error解决办法">
+<meta name="twitter:description" content="曾经python遭遇SSLError的解决办法">
+    <link rel="shortcut icon" href="/favicon.ico" />
+
+         <link rel="stylesheet" href="/css/custom.css">
+    </head>
+    <body class="
+    article-page
+    ">
+    <script>
+        (function() {
+            const colorSchemeKey = 'StackColorScheme';
+            if(!localStorage.getItem(colorSchemeKey)){
+                localStorage.setItem(colorSchemeKey, "auto");
+            }
+        })();
+    </script><script>
+    (function() {
+        const colorSchemeKey = 'StackColorScheme';
+        const colorSchemeItem = localStorage.getItem(colorSchemeKey);
+        const supportDarkMode = window.matchMedia('(prefers-color-scheme: dark)').matches === true;
+
+        if (colorSchemeItem == 'dark' || colorSchemeItem === 'auto' && supportDarkMode) {
+            
+
+            document.documentElement.dataset.scheme = 'dark';
+        } else {
+            document.documentElement.dataset.scheme = 'light';
+        }
+    })();
+</script>
+<div class="container main-container flex on-phone--column extended"><aside class="sidebar left-sidebar sticky ">
+    <button class="hamburger hamburger--spin" type="button" id="toggle-menu" aria-label="切换菜单">
+        <span class="hamburger-box">
+            <span class="hamburger-inner"></span>
+        </span>
+    </button>
+
+    <header>
+        
+            
+            <figure class="site-avatar">
+                <a href="/">
+                
+                    
+                    
+                    
+                        
+                        <img src="/img/avatar_hu_996f7fae539f5332.png" width="300"
+                            height="300" class="site-logo" loading="lazy" alt="Avatar">
+                    
+                
+                </a>
+                
+            </figure>
+            
+        
+        
+        <div class="site-meta">
+            <h1 class="site-name"><a href="/">深蓝之亘的博客</a></h1>
+            <h2 class="site-description">欢迎来到我的博客网站</h2>
+        </div>
+    </header><ol class="menu-social">
+            
+                <li>
+                    <a 
+                        href='https://github.com/Adeepblue'
+                        target="_blank"
+                        title="GitHub"
+                        rel="me"
+                    >
+                        
+                        
+                            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-brand-github" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+  <path d="M9 19c-4.3 1.4 -4.3 -2.5 -6 -3m12 5v-3.5c0 -1 .1 -1.4 -.5 -2c2.8 -.3 5.5 -1.4 5.5 -6a4.6 4.6 0 0 0 -1.3 -3.2a4.2 4.2 0 0 0 -.1 -3.2s-1.1 -.3 -3.5 1.3a12.3 12.3 0 0 0 -6.2 0c-2.4 -1.6 -3.5 -1.3 -3.5 -1.3a4.2 4.2 0 0 0 -.1 3.2a4.6 4.6 0 0 0 -1.3 3.2c0 4.6 2.7 5.7 5.5 6c-.6 .6 -.6 1.2 -.5 2v3.5" />
+</svg>
+
+
+
+                        
+                    </a>
+                </li>
+            
+                <li>
+                    <a 
+                        href='https://space.bilibili.com/435022639'
+                        target="_blank"
+                        title="Twitter"
+                        rel="me"
+                    >
+                        
+                        
+                            <svg  xmlns="http://www.w3.org/2000/svg"  width="24"  height="24"  viewBox="0 0 24 24"  fill="none"  stroke="currentColor"  stroke-width="2"  stroke-linecap="round"  stroke-linejoin="round"  class="icon icon-tabler icons-tabler-outline icon-tabler-brand-bilibili"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M3 10a4 4 0 0 1 4 -4h10a4 4 0 0 1 4 4v6a4 4 0 0 1 -4 4h-10a4 4 0 0 1 -4 -4v-6z" /><path d="M8 3l2 3" /><path d="M16 3l-2 3" /><path d="M9 13v-2" /><path d="M15 11v2" /></svg>
+                        
+                    </a>
+                </li>
+            
+        </ol><ol class="menu" id="main-menu">
+        
+        
+        
+        <li >
+            <a href='/' >
+                
+                
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-home" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <polyline points="5 12 3 12 12 3 21 12 19 12" />
+  <path d="M5 12v7a2 2 0 0 0 2 2h10a2 2 0 0 0 2 -2v-7" />
+  <path d="M9 21v-6a2 2 0 0 1 2 -2h2a2 2 0 0 1 2 2v6" />
+</svg>
+
+
+
+                
+                <span>主页</span>
+            </a>
+        </li>
+        
+        
+        <li >
+            <a href='/%E6%9B%B4%E6%96%B0%E6%97%A5%E5%BF%97/' >
+                
+                
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-user" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="12" cy="7" r="4" />
+  <path d="M6 21v-2a4 4 0 0 1 4 -4h4a4 4 0 0 1 4 4v2" />
+</svg>
+
+
+
+                
+                <span>更新日志</span>
+            </a>
+        </li>
+        
+        
+        <li >
+            <a href='/archives/' >
+                
+                
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-archive" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <rect x="3" y="4" width="18" height="4" rx="2" />
+  <path d="M5 8v10a2 2 0 0 0 2 2h10a2 2 0 0 0 2 -2v-10" />
+  <line x1="10" y1="12" x2="14" y2="12" />
+</svg>
+
+
+
+                
+                <span>archives</span>
+            </a>
+        </li>
+        
+        
+        <li >
+            <a href='/search/' >
+                
+                
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-search" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="10" cy="10" r="7" />
+  <line x1="21" y1="21" x2="15" y2="15" />
+</svg>
+
+
+
+                
+                <span>搜索</span>
+            </a>
+        </li>
+        
+        
+        <li >
+            <a href='/links/' >
+                
+                
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-link" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <path d="M10 14a3.5 3.5 0 0 0 5 0l4 -4a3.5 3.5 0 0 0 -5 -5l-.5 .5" />
+  <path d="M14 10a3.5 3.5 0 0 0 -5 0l-4 4a3.5 3.5 0 0 0 5 5l.5 -.5" />
+</svg>
+
+
+
+                
+                <span>Links</span>
+            </a>
+        </li>
+        
+        <li class="menu-bottom-section">
+            <ol class="menu">
+
+                
+                    <li id="dark-mode-toggle">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-toggle-left" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="8" cy="12" r="2" />
+  <rect x="2" y="6" width="20" height="12" rx="6" />
+</svg>
+
+
+
+                        <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-toggle-right" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="16" cy="12" r="2" />
+  <rect x="2" y="6" width="20" height="12" rx="6" />
+</svg>
+
+
+
+                        <span>暗色模式</span>
+                    </li>
+                
+            </ol>
+        </li>
+    </ol>
+</aside>
+
+    <aside class="sidebar right-sidebar sticky">
+        
+            
+                
+    <section class="widget archives">
+        <div class="widget-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-hash" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <line x1="5" y1="9" x2="19" y2="9" />
+  <line x1="5" y1="15" x2="19" y2="15" />
+  <line x1="11" y1="4" x2="7" y2="20" />
+  <line x1="17" y1="4" x2="13" y2="20" />
+</svg>
+
+
+
+        </div>
+        <h2 class="widget-title section-title">目录</h2>
+        
+        <div class="widget--toc">
+            <nav id="TableOfContents">
+  <ol>
+    <li><a href="#解决办法">解决办法</a></li>
+    <li><a href="#报错">报错</a></li>
+    <li><a href="#如何修正">如何修正</a></li>
+  </ol>
+</nav>
+        </div>
+    </section>
+
+            
+        
+    </aside>
+
+
+            <main class="main full-width">
+    <article class="main-article">
+    <header class="article-header">
+
+    <div class="article-details">
+    
+    <header class="article-category">
+        
+            <a href="/categories/python/" style="background-color: #2a9d8f; color: #fff;">
+                Python
+            </a>
+        
+    </header>
+    
+
+    <div class="article-title-wrapper">
+        <h2 class="article-title">
+            <a href="/p/python-%E5%BC%80%E4%BA%86%E4%BB%A3%E7%90%86%E4%BD%BF%E7%94%A8requests%E5%BA%93%E6%8A%A5%E9%94%99ssl-error%E8%A7%A3%E5%86%B3%E5%8A%9E%E6%B3%95/">Python 开了代理使用requests库报错SSL Error解决办法</a>
+        </h2>
+    
+        
+        <h3 class="article-subtitle">
+            曾经python遭遇SSLError的解决办法
+        </h3>
+        
+    </div>
+
+    
+    
+    
+    
+    <footer class="article-time">
+        
+            <div>
+                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-calendar-time" width="56" height="56" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <path d="M11.795 21h-6.795a2 2 0 0 1 -2 -2v-12a2 2 0 0 1 2 -2h12a2 2 0 0 1 2 2v4" />
+  <circle cx="18" cy="18" r="4" />
+  <path d="M15 3v4" />
+  <path d="M7 3v4" />
+  <path d="M3 11h16" />
+  <path d="M18 16.496v1.504l1 1" />
+</svg>
+                <time class="article-time--published">2025-02-11</time>
+            </div>
+        
+
+        
+    </footer>
+    
+
+    
+</div>
+
+</header>
+
+    <section class="article-content">
+    
+    
+    <h1 id="sslerror">SSLError
+</h1><p>这是我曾经新开的一个仓库下的提交的ISSUE，虽然没多少人看过了，</p>
+<h2 id="解决办法">解决办法
+</h2><p><a class="link" href="https://github.com/ADeepblue/SSLError_involve/issues/2"  target="_blank" rel="noopener"
+    >GitHub仓库链接</a></p>
+<p>windows环境下当你遇到了这个问题,可以尝试打开 设置-&gt;网络与Internet-&gt;代理 ,
+手动设置代理处找到地址和端口,并将它们拼接起来,例如</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">https&#34;:&#34;127.0.0.1:4780&#34;
+</span></span></code></pre></div><p>, 在用request.get的时候当作参数传入, 例如</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">proxies = {&#34;https&#34;:&#34;127.0.0.1:4780&#34;}
+</span></span></code></pre></div><p>然后传入时,需要把proxies字段作为参数传入</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">requests.get(url=url,headers=headers,proxies=proxies)
+</span></span></code></pre></div><p>以及注意代理的使用情况,如果没有设置代理状态有可能会返回报错,注释掉proxies并删除参数即可.
+pip同理,复制下列代码至txt文本后,根据你设置内的代理状态进行修改,然后在cmd运行
+例如我的是<code>pip config set global.proxy 127.0.0.1:4780</code>(地址和端口记得改成自己的)但如若你需要关闭VPN使用pip命令记得用下面一行代码,
+<code>pip config unset global.proxy</code>即可.</p>
+<p>最近逛了一圈倒是找到了对应的文章，当时碰到的时候没有任何的提示</p>
+<p>当时还在大学，时间紧，试通之后并没有去查到底是什么原因导致的，好像是urllib库的问题，当时问GPT也没有任何结果，最近去问了问deepseek也依旧不明白报错原因</p>
+<p>其他人说了原理的话我也不多说了<a class="link" href="https://www.cnblogs.com/davyyy/p/14388623.html"  target="_blank" rel="noopener"
+    >网页链接</a>，我也没有仔细去钻研过这个玩意，当时只是发现了解决办法，
+但实际具体看了一下他们的东西也不一定能照搬过来，具体见</p>
+<h2 id="报错">报错
+</h2><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">HTTPSConnectionPool(host=&#39;api.live.bilibili.com&#39;, port=443): 
+</span></span><span class="line"><span class="cl">Max retries exceeded with url: /xlive/web-room/v1/dM/gethistory?roomid=10112&amp;csrf_token=
+</span></span><span class="line"><span class="cl"> (Caused by SSLError(SSLEOFError(8, &#39;EOF occurred in violation of protocol (_ssl.c:1123)&#39;)))
+</span></span></code></pre></div><p>出错形式会有很多种，proxyError,以及是最常见的是SSLError</p>
+<p>高版本python目前已经修复了这个问题，python3.11已经不用担心这个问题了，python3.9还存在这个问题。
+我现在也只是给一下低版本的一些解决方案，虽然可能比较麻烦，如果说在开发的过程中你已经全配置好了其他的比较难改了，那推荐你强制你的用户用高版本的python，我目前并没有测试过python3.10附近的，也没查出啥时候修复的
+3.11以其版本以后的都不用如此手动配置代理了</p>
+<h2 id="如何修正">如何修正
+</h2><p>以下是两段的参考代码,我目前的版本是Python 3.9.2rc1</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="k">def</span> <span class="nf">get_proxy_settings</span><span class="p">():</span>
+</span></span><span class="line"><span class="cl">    <span class="s2">&#34;&#34;&#34;代理配置函数，如果有代理直接返回代理环路地址:端口号，代理地址一般是127.0.0.1，端口号:4780，则拿到的返回可能是127.0.0.1:4780&#34;&#34;&#34;</span>
+</span></span><span class="line"><span class="cl">    <span class="k">try</span><span class="p">:</span>
+</span></span><span class="line"><span class="cl">        <span class="k">with</span> <span class="n">winreg</span><span class="o">.</span><span class="n">OpenKey</span><span class="p">(</span><span class="n">winreg</span><span class="o">.</span><span class="n">HKEY_CURRENT_USER</span><span class="p">,</span> <span class="sa">r</span><span class="s1">&#39;Software\Microsoft\Windows\CurrentVersion\Internet Settings&#39;</span><span class="p">)</span> <span class="k">as</span> <span class="n">key</span><span class="p">:</span>
+</span></span><span class="line"><span class="cl">            <span class="n">proxy_server</span><span class="p">,</span> <span class="n">_</span> <span class="o">=</span> <span class="n">winreg</span><span class="o">.</span><span class="n">QueryValueEx</span><span class="p">(</span><span class="n">key</span><span class="p">,</span> <span class="s1">&#39;ProxyServer&#39;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">            <span class="k">return</span> <span class="n">proxy_server</span>
+</span></span><span class="line"><span class="cl">    <span class="k">except</span> <span class="ne">FileNotFoundError</span><span class="p">:</span>
+</span></span><span class="line"><span class="cl">        <span class="k">return</span> <span class="kc">None</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># 其他内容</span>
+</span></span><span class="line"><span class="cl"><span class="k">if</span> <span class="n">get_proxy_settings</span><span class="p">()</span> <span class="o">!=</span> <span class="kc">None</span><span class="p">:</span>
+</span></span><span class="line"><span class="cl">     <span class="n">proxies</span> <span class="o">=</span> <span class="p">{</span><span class="s2">&#34;https&#34;</span><span class="p">:</span> <span class="n">get_proxy_settings</span><span class="p">()}</span> <span class="c1">#设置proxies,此处http不一定是必要的，以及127.0.0.1:4780前面的https也不一定是必要的，如果有错误可以试试</span>
+</span></span><span class="line"><span class="cl">     <span class="n">res</span> <span class="o">=</span> <span class="n">requests</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">url</span><span class="p">,</span><span class="n">headers</span><span class="o">=</span> <span class="n">headers</span><span class="p">,</span><span class="n">proxies</span><span class="o">=</span><span class="n">proxies</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="k">else</span><span class="p">:</span>
+</span></span><span class="line"><span class="cl">    <span class="n">res</span> <span class="o">=</span> <span class="n">requests</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">url</span><span class="p">,</span><span class="n">headers</span><span class="o">=</span> <span class="n">headers</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="c1"># 其余操作</span>
+</span></span><span class="line"><span class="cl"><span class="k">pass</span>
+</span></span></code></pre></div><p>这一段逻辑代码我用在过我的另一个翻译脚本上,端口一般不会变化，其实设定好了就一般不必多更改了，可以当作固定接口用的，除非你反复用不同的VPN，具体如何我也没测试过，这一段代码被我当作了
+扩低版本python兼容性的解决方案，因为很有可能会出现</p>
+<p><img src="/p/python-%E5%BC%80%E4%BA%86%E4%BB%A3%E7%90%86%E4%BD%BF%E7%94%A8requests%E5%BA%93%E6%8A%A5%E9%94%99ssl-error%E8%A7%A3%E5%86%B3%E5%8A%9E%E6%B3%95/proxy-error1.png"
+	width="971"
+	height="726"
+	srcset="/p/python-%E5%BC%80%E4%BA%86%E4%BB%A3%E7%90%86%E4%BD%BF%E7%94%A8requests%E5%BA%93%E6%8A%A5%E9%94%99ssl-error%E8%A7%A3%E5%86%B3%E5%8A%9E%E6%B3%95/proxy-error1_hu_eb241909cb31cfba.png 480w, /p/python-%E5%BC%80%E4%BA%86%E4%BB%A3%E7%90%86%E4%BD%BF%E7%94%A8requests%E5%BA%93%E6%8A%A5%E9%94%99ssl-error%E8%A7%A3%E5%86%B3%E5%8A%9E%E6%B3%95/proxy-error1_hu_d1966feed3914b5f.png 1024w"
+	loading="lazy"
+	
+		alt="https键值处加https报错"
+	
+	
+		class="gallery-image" 
+		data-flex-grow="133"
+		data-flex-basis="320px"
+	
+>
+<img src="/p/python-%E5%BC%80%E4%BA%86%E4%BB%A3%E7%90%86%E4%BD%BF%E7%94%A8requests%E5%BA%93%E6%8A%A5%E9%94%99ssl-error%E8%A7%A3%E5%86%B3%E5%8A%9E%E6%B3%95/img.png"
+	width="1034"
+	height="688"
+	srcset="/p/python-%E5%BC%80%E4%BA%86%E4%BB%A3%E7%90%86%E4%BD%BF%E7%94%A8requests%E5%BA%93%E6%8A%A5%E9%94%99ssl-error%E8%A7%A3%E5%86%B3%E5%8A%9E%E6%B3%95/img_hu_19f139455b8d8d94.png 480w, /p/python-%E5%BC%80%E4%BA%86%E4%BB%A3%E7%90%86%E4%BD%BF%E7%94%A8requests%E5%BA%93%E6%8A%A5%E9%94%99ssl-error%E8%A7%A3%E5%86%B3%E5%8A%9E%E6%B3%95/img_hu_8b59f17276883098.png 1024w"
+	loading="lazy"
+	
+		alt="https键值处不加东西其他改了也没事"
+	
+	
+		class="gallery-image" 
+		data-flex-grow="150"
+		data-flex-basis="360px"
+	
+></p>
+<p>由上两图可见，在python版本号是 <code>Python 3.9.2rc1</code> 时https处并不能加任何东西，如果加了东西，可能就会导致内容报SSLError错误</p>
+<p>另一种获取代理配置的方法比上述可能简单一点，但我没怎么用过，也就是urllib.request.getproxies函数,要筛除一下无关元素太麻烦了，以下是输出示例，如果你觉得
+会比上述内容方便的话可以试着改一改，但我已经不想动了，要做的也就是去掉https键对应的值的https字符串，至于其他是否保留也取决于自己，仅供参考</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">urllib.request.getproxies()
+</span></span><span class="line"><span class="cl">Out[10]: 
+</span></span><span class="line"><span class="cl">{&#39;http&#39;: &#39;http://127.0.0.1:4780&#39;,
+</span></span><span class="line"><span class="cl"> &#39;https&#39;: &#39;https://127.0.0.1:4780&#39;,
+</span></span><span class="line"><span class="cl"> &#39;ftp&#39;: &#39;ftp://127.0.0.1:4780&#39;}
+</span></span></code></pre></div>
+</section>
+
+
+    <footer class="article-footer">
+    
+
+    </footer>
+
+
+    
+</article>
+
+    
+
+    
+
+<aside class="related-content--wrapper">
+    <h2 class="section-title">相关文章</h2>
+    <div class="related-content">
+        <div class="flex article-list--tile">
+            
+                
+<article class="has-image">
+    <a href="/p/python-matplotlib%E7%BB%98%E5%9B%BE%E5%BA%93/">
+        
+        
+            <div class="article-image">
+                <img src="/p/python-matplotlib%E7%BB%98%E5%9B%BE%E5%BA%93/matplotlib.ec18ea9f106970da41f5d895a5124cb8_hu_8d45ec0fe1f0babf.png" 
+                        width="250" 
+                        height="150" 
+                        loading="lazy"
+                        alt="Featured image of post Python Matplotlib绘图库"
+                        
+                        data-hash="md5-7BjqnxBpcNpB9diVpRJMuA==">
+                
+            </div>
+        
+
+        <div class="article-details">
+            <h2 class="article-title">Python Matplotlib绘图库</h2>
+        </div>
+    </a>
+</article>
+
+            
+        </div>
+    </div>
+</aside>
+
+     
+    
+        
+    
+
+    <footer class="site-footer">
+    <section class="copyright">
+        &copy; 
+        
+        2025 深蓝之亘
+    </section>
+    
+    <section class="powerby">
+        
+            深蓝之亘的博客网站 https://adeepblue.github.io <br/>
+        使用 <a href="https://gohugo.io/" target="_blank" rel="noopener">Hugo</a> 构建 <br />
+        主题 <b><a href="https://github.com/CaiJimmy/hugo-theme-stack" target="_blank" rel="noopener" data-version="3.30.0">Stack</a></b> 由 <a href="https://jimmycai.com" target="_blank" rel="noopener">Jimmy</a> 设计
+    </section>
+</footer>
+
+
+    
+<div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
+
+    
+    <div class="pswp__bg"></div>
+
+    
+    <div class="pswp__scroll-wrap">
+
+        
+        <div class="pswp__container">
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+        </div>
+
+        
+        <div class="pswp__ui pswp__ui--hidden">
+
+            <div class="pswp__top-bar">
+
+                
+
+                <div class="pswp__counter"></div>
+
+                <button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+
+                <button class="pswp__button pswp__button--share" title="Share"></button>
+
+                <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
+
+                <button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
+
+                
+                
+                <div class="pswp__preloader">
+                    <div class="pswp__preloader__icn">
+                        <div class="pswp__preloader__cut">
+                            <div class="pswp__preloader__donut"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+                <div class="pswp__share-tooltip"></div>
+            </div>
+
+            <button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)">
+            </button>
+
+            <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)">
+            </button>
+
+            <div class="pswp__caption">
+                <div class="pswp__caption__center"></div>
+            </div>
+
+        </div>
+
+    </div>
+
+</div><script 
+                src="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe.min.js"integrity="sha256-ePwmChbbvXbsO02lbM3HoHbSHTHFAeChekF1xKJdleo="crossorigin="anonymous"
+                defer
+                >
+            </script><script 
+                src="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe-ui-default.min.js"integrity="sha256-UKkzOn/w1mBxRmLLGrSeyB4e1xbrp4xylgAWb3M42pU="crossorigin="anonymous"
+                defer
+                >
+            </script><link 
+                rel="stylesheet" 
+                href="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/default-skin/default-skin.min.css"crossorigin="anonymous"
+            ><link 
+                rel="stylesheet" 
+                href="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe.min.css"crossorigin="anonymous"
+            >
+
+            </main>
+        </div>
+        <script 
+                src="https://cdn.jsdelivr.net/npm/node-vibrant@3.1.6/dist/vibrant.min.js"integrity="sha256-awcR2jno4kI5X0zL8ex0vi2z&#43;KMkF24hUW8WePSA9HM="crossorigin="anonymous"
+                
+                >
+            </script><script type="text/javascript" src="/ts/main.1e9a3bafd846ced4c345d084b355fb8c7bae75701c338f8a1f8a82c780137826.js" defer></script>
+<script>
+    (function () {
+        const customFont = document.createElement('link');
+        customFont.href = "https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap";
+
+        customFont.type = "text/css";
+        customFont.rel = "stylesheet";
+
+        document.head.appendChild(customFont);
+    }());
+</script>
+
+<style>
+  body {
+    background: url(https://adeepblue.github.io/background/background.png) no-repeat center top;
+    background-size: cover;
+    background-attachment: fixed;
+  }
+</style>
+    </body>
+</html>

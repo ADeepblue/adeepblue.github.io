@@ -7,7 +7,101 @@
         <generator>Hugo -- gohugo.io</generator>
         <language>zh-cn</language>
         <copyright>深蓝之亘</copyright>
-        <lastBuildDate>Fri, 07 Feb 2025 19:00:05 +0800</lastBuildDate><atom:link href="https://adeepblue.github.io/categories/python/index.xml" rel="self" type="application/rss+xml" /><item>
+        <lastBuildDate>Tue, 11 Feb 2025 16:35:53 +0800</lastBuildDate><atom:link href="https://adeepblue.github.io/categories/python/index.xml" rel="self" type="application/rss+xml" /><item>
+        <title>Python 开了代理使用requests库报错SSL Error解决办法</title>
+        <link>https://adeepblue.github.io/p/python-%E5%BC%80%E4%BA%86%E4%BB%A3%E7%90%86%E4%BD%BF%E7%94%A8requests%E5%BA%93%E6%8A%A5%E9%94%99ssl-error%E8%A7%A3%E5%86%B3%E5%8A%9E%E6%B3%95/</link>
+        <pubDate>Tue, 11 Feb 2025 16:35:53 +0800</pubDate>
+        
+        <guid>https://adeepblue.github.io/p/python-%E5%BC%80%E4%BA%86%E4%BB%A3%E7%90%86%E4%BD%BF%E7%94%A8requests%E5%BA%93%E6%8A%A5%E9%94%99ssl-error%E8%A7%A3%E5%86%B3%E5%8A%9E%E6%B3%95/</guid>
+        <description>&lt;h1 id=&#34;sslerror&#34;&gt;SSLError
+&lt;/h1&gt;&lt;p&gt;这是我曾经新开的一个仓库下的提交的ISSUE，虽然没多少人看过了，&lt;/p&gt;
+&lt;h2 id=&#34;解决办法&#34;&gt;解决办法
+&lt;/h2&gt;&lt;p&gt;&lt;a class=&#34;link&#34; href=&#34;https://github.com/ADeepblue/SSLError_involve/issues/2&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;GitHub仓库链接&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;windows环境下当你遇到了这个问题,可以尝试打开 设置-&amp;gt;网络与Internet-&amp;gt;代理 ,
+手动设置代理处找到地址和端口,并将它们拼接起来,例如&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;https&amp;#34;:&amp;#34;127.0.0.1:4780&amp;#34;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;, 在用request.get的时候当作参数传入, 例如&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;proxies = {&amp;#34;https&amp;#34;:&amp;#34;127.0.0.1:4780&amp;#34;}
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;然后传入时,需要把proxies字段作为参数传入&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;requests.get(url=url,headers=headers,proxies=proxies)
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;以及注意代理的使用情况,如果没有设置代理状态有可能会返回报错,注释掉proxies并删除参数即可.
+pip同理,复制下列代码至txt文本后,根据你设置内的代理状态进行修改,然后在cmd运行
+例如我的是&lt;code&gt;pip config set global.proxy 127.0.0.1:4780&lt;/code&gt;(地址和端口记得改成自己的)但如若你需要关闭VPN使用pip命令记得用下面一行代码,
+&lt;code&gt;pip config unset global.proxy&lt;/code&gt;即可.&lt;/p&gt;
+&lt;p&gt;最近逛了一圈倒是找到了对应的文章，当时碰到的时候没有任何的提示&lt;/p&gt;
+&lt;p&gt;当时还在大学，时间紧，试通之后并没有去查到底是什么原因导致的，好像是urllib库的问题，当时问GPT也没有任何结果，最近去问了问deepseek也依旧不明白报错原因&lt;/p&gt;
+&lt;p&gt;其他人说了原理的话我也不多说了&lt;a class=&#34;link&#34; href=&#34;https://www.cnblogs.com/davyyy/p/14388623.html&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;网页链接&lt;/a&gt;，我也没有仔细去钻研过这个玩意，当时只是发现了解决办法，
+但实际具体看了一下他们的东西也不一定能照搬过来，具体见&lt;/p&gt;
+&lt;h2 id=&#34;报错&#34;&gt;报错
+&lt;/h2&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;HTTPSConnectionPool(host=&amp;#39;api.live.bilibili.com&amp;#39;, port=443): 
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;Max retries exceeded with url: /xlive/web-room/v1/dM/gethistory?roomid=10112&amp;amp;csrf_token=
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt; (Caused by SSLError(SSLEOFError(8, &amp;#39;EOF occurred in violation of protocol (_ssl.c:1123)&amp;#39;)))
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;出错形式会有很多种，proxyError,以及是最常见的是SSLError&lt;/p&gt;
+&lt;p&gt;高版本python目前已经修复了这个问题，python3.11已经不用担心这个问题了，python3.9还存在这个问题。
+我现在也只是给一下低版本的一些解决方案，虽然可能比较麻烦，如果说在开发的过程中你已经全配置好了其他的比较难改了，那推荐你强制你的用户用高版本的python，我目前并没有测试过python3.10附近的，也没查出啥时候修复的
+3.11以其版本以后的都不用如此手动配置代理了&lt;/p&gt;
+&lt;h2 id=&#34;如何修正&#34;&gt;如何修正
+&lt;/h2&gt;&lt;p&gt;以下是两段的参考代码,我目前的版本是Python 3.9.2rc1&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-python&#34; data-lang=&#34;python&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;k&#34;&gt;def&lt;/span&gt; &lt;span class=&#34;nf&#34;&gt;get_proxy_settings&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;():&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &lt;span class=&#34;s2&#34;&gt;&amp;#34;&amp;#34;&amp;#34;代理配置函数，如果有代理直接返回代理环路地址:端口号，代理地址一般是127.0.0.1，端口号:4780，则拿到的返回可能是127.0.0.1:4780&amp;#34;&amp;#34;&amp;#34;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &lt;span class=&#34;k&#34;&gt;try&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;        &lt;span class=&#34;k&#34;&gt;with&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;winreg&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;OpenKey&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;winreg&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;HKEY_CURRENT_USER&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;sa&#34;&gt;r&lt;/span&gt;&lt;span class=&#34;s1&#34;&gt;&amp;#39;Software\Microsoft\Windows\CurrentVersion\Internet Settings&amp;#39;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt; &lt;span class=&#34;k&#34;&gt;as&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;key&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;            &lt;span class=&#34;n&#34;&gt;proxy_server&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;_&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;winreg&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;QueryValueEx&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;key&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;s1&#34;&gt;&amp;#39;ProxyServer&amp;#39;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;            &lt;span class=&#34;k&#34;&gt;return&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;proxy_server&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &lt;span class=&#34;k&#34;&gt;except&lt;/span&gt; &lt;span class=&#34;ne&#34;&gt;FileNotFoundError&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;        &lt;span class=&#34;k&#34;&gt;return&lt;/span&gt; &lt;span class=&#34;kc&#34;&gt;None&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;# 其他内容&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;k&#34;&gt;if&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;get_proxy_settings&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;()&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;!=&lt;/span&gt; &lt;span class=&#34;kc&#34;&gt;None&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;     &lt;span class=&#34;n&#34;&gt;proxies&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;{&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;&amp;#34;https&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;get_proxy_settings&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;()}&lt;/span&gt; &lt;span class=&#34;c1&#34;&gt;#设置proxies,此处http不一定是必要的，以及127.0.0.1:4780前面的https也不一定是必要的，如果有错误可以试试&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;     &lt;span class=&#34;n&#34;&gt;res&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;requests&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;get&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;url&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;headers&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;headers&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;proxies&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;proxies&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;k&#34;&gt;else&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &lt;span class=&#34;n&#34;&gt;res&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;requests&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;get&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;url&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;headers&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;headers&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;# 其余操作&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;k&#34;&gt;pass&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;这一段逻辑代码我用在过我的另一个翻译脚本上,端口一般不会变化，其实设定好了就一般不必多更改了，可以当作固定接口用的，除非你反复用不同的VPN，具体如何我也没测试过，这一段代码被我当作了
+扩低版本python兼容性的解决方案，因为很有可能会出现&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://adeepblue.github.io/p/python-%E5%BC%80%E4%BA%86%E4%BB%A3%E7%90%86%E4%BD%BF%E7%94%A8requests%E5%BA%93%E6%8A%A5%E9%94%99ssl-error%E8%A7%A3%E5%86%B3%E5%8A%9E%E6%B3%95/proxy-error1.png&#34;
+	width=&#34;971&#34;
+	height=&#34;726&#34;
+	srcset=&#34;https://adeepblue.github.io/p/python-%E5%BC%80%E4%BA%86%E4%BB%A3%E7%90%86%E4%BD%BF%E7%94%A8requests%E5%BA%93%E6%8A%A5%E9%94%99ssl-error%E8%A7%A3%E5%86%B3%E5%8A%9E%E6%B3%95/proxy-error1_hu_eb241909cb31cfba.png 480w, https://adeepblue.github.io/p/python-%E5%BC%80%E4%BA%86%E4%BB%A3%E7%90%86%E4%BD%BF%E7%94%A8requests%E5%BA%93%E6%8A%A5%E9%94%99ssl-error%E8%A7%A3%E5%86%B3%E5%8A%9E%E6%B3%95/proxy-error1_hu_d1966feed3914b5f.png 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;https键值处加https报错&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;133&#34;
+		data-flex-basis=&#34;320px&#34;
+	
+&gt;
+&lt;img src=&#34;https://adeepblue.github.io/p/python-%E5%BC%80%E4%BA%86%E4%BB%A3%E7%90%86%E4%BD%BF%E7%94%A8requests%E5%BA%93%E6%8A%A5%E9%94%99ssl-error%E8%A7%A3%E5%86%B3%E5%8A%9E%E6%B3%95/img.png&#34;
+	width=&#34;1034&#34;
+	height=&#34;688&#34;
+	srcset=&#34;https://adeepblue.github.io/p/python-%E5%BC%80%E4%BA%86%E4%BB%A3%E7%90%86%E4%BD%BF%E7%94%A8requests%E5%BA%93%E6%8A%A5%E9%94%99ssl-error%E8%A7%A3%E5%86%B3%E5%8A%9E%E6%B3%95/img_hu_19f139455b8d8d94.png 480w, https://adeepblue.github.io/p/python-%E5%BC%80%E4%BA%86%E4%BB%A3%E7%90%86%E4%BD%BF%E7%94%A8requests%E5%BA%93%E6%8A%A5%E9%94%99ssl-error%E8%A7%A3%E5%86%B3%E5%8A%9E%E6%B3%95/img_hu_8b59f17276883098.png 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;https键值处不加东西其他改了也没事&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;150&#34;
+		data-flex-basis=&#34;360px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;p&gt;由上两图可见，在python版本号是 &lt;code&gt;Python 3.9.2rc1&lt;/code&gt; 时https处并不能加任何东西，如果加了东西，可能就会导致内容报SSLError错误&lt;/p&gt;
+&lt;p&gt;另一种获取代理配置的方法比上述可能简单一点，但我没怎么用过，也就是urllib.request.getproxies函数,要筛除一下无关元素太麻烦了，以下是输出示例，如果你觉得
+会比上述内容方便的话可以试着改一改，但我已经不想动了，要做的也就是去掉https键对应的值的https字符串，至于其他是否保留也取决于自己，仅供参考&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;urllib.request.getproxies()
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;Out[10]: 
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;{&amp;#39;http&amp;#39;: &amp;#39;http://127.0.0.1:4780&amp;#39;,
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt; &amp;#39;https&amp;#39;: &amp;#39;https://127.0.0.1:4780&amp;#39;,
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt; &amp;#39;ftp&amp;#39;: &amp;#39;ftp://127.0.0.1:4780&amp;#39;}
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</description>
+        </item>
+        <item>
         <title>Python Matplotlib绘图库</title>
         <link>https://adeepblue.github.io/p/python-matplotlib%E7%BB%98%E5%9B%BE%E5%BA%93/</link>
         <pubDate>Fri, 07 Feb 2025 19:00:05 +0800</pubDate>
