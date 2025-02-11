@@ -13,7 +13,7 @@
         <pubDate>Tue, 11 Feb 2025 16:35:53 +0800</pubDate>
         
         <guid>https://adeepblue.github.io/p/python-%E5%BC%80%E4%BA%86%E4%BB%A3%E7%90%86%E4%BD%BF%E7%94%A8requests%E5%BA%93%E6%8A%A5%E9%94%99ssl-error%E8%A7%A3%E5%86%B3%E5%8A%9E%E6%B3%95/</guid>
-        <description>&lt;h1 id=&#34;sslerror&#34;&gt;SSLError
+        <description>&lt;img src="https://adeepblue.github.io/p/python-%E5%BC%80%E4%BA%86%E4%BB%A3%E7%90%86%E4%BD%BF%E7%94%A8requests%E5%BA%93%E6%8A%A5%E9%94%99ssl-error%E8%A7%A3%E5%86%B3%E5%8A%9E%E6%B3%95/Logo.png" alt="Featured image of post Python 开了代理使用requests库报错SSL Error解决办法" /&gt;&lt;h1 id=&#34;sslerror&#34;&gt;SSLError
 &lt;/h1&gt;&lt;p&gt;这是我曾经新开的一个仓库下的提交的ISSUE，虽然没多少人看过了，&lt;/p&gt;
 &lt;h2 id=&#34;解决办法&#34;&gt;解决办法
 &lt;/h2&gt;&lt;p&gt;&lt;a class=&#34;link&#34; href=&#34;https://github.com/ADeepblue/SSLError_involve/issues/2&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
@@ -77,10 +77,10 @@ pip同理,复制下列代码至txt文本后,根据你设置内的代理状态进
 		data-flex-basis=&#34;320px&#34;
 	
 &gt;
-&lt;img src=&#34;https://adeepblue.github.io/p/python-%E5%BC%80%E4%BA%86%E4%BB%A3%E7%90%86%E4%BD%BF%E7%94%A8requests%E5%BA%93%E6%8A%A5%E9%94%99ssl-error%E8%A7%A3%E5%86%B3%E5%8A%9E%E6%B3%95/img.png&#34;
+&lt;img src=&#34;https://adeepblue.github.io/p/python-%E5%BC%80%E4%BA%86%E4%BB%A3%E7%90%86%E4%BD%BF%E7%94%A8requests%E5%BA%93%E6%8A%A5%E9%94%99ssl-error%E8%A7%A3%E5%86%B3%E5%8A%9E%E6%B3%95/proxy-error2.png&#34;
 	width=&#34;1034&#34;
 	height=&#34;688&#34;
-	srcset=&#34;https://adeepblue.github.io/p/python-%E5%BC%80%E4%BA%86%E4%BB%A3%E7%90%86%E4%BD%BF%E7%94%A8requests%E5%BA%93%E6%8A%A5%E9%94%99ssl-error%E8%A7%A3%E5%86%B3%E5%8A%9E%E6%B3%95/img_hu_19f139455b8d8d94.png 480w, https://adeepblue.github.io/p/python-%E5%BC%80%E4%BA%86%E4%BB%A3%E7%90%86%E4%BD%BF%E7%94%A8requests%E5%BA%93%E6%8A%A5%E9%94%99ssl-error%E8%A7%A3%E5%86%B3%E5%8A%9E%E6%B3%95/img_hu_8b59f17276883098.png 1024w&#34;
+	srcset=&#34;https://adeepblue.github.io/p/python-%E5%BC%80%E4%BA%86%E4%BB%A3%E7%90%86%E4%BD%BF%E7%94%A8requests%E5%BA%93%E6%8A%A5%E9%94%99ssl-error%E8%A7%A3%E5%86%B3%E5%8A%9E%E6%B3%95/proxy-error2_hu_19f139455b8d8d94.png 480w, https://adeepblue.github.io/p/python-%E5%BC%80%E4%BA%86%E4%BB%A3%E7%90%86%E4%BD%BF%E7%94%A8requests%E5%BA%93%E6%8A%A5%E9%94%99ssl-error%E8%A7%A3%E5%86%B3%E5%8A%9E%E6%B3%95/proxy-error2_hu_8b59f17276883098.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 		alt=&#34;https键值处不加东西其他改了也没事&#34;
@@ -1587,7 +1587,9 @@ styles文件夹复制出来改文件名成highlight-styles后放在/assets/css/�
         
         <guid>https://adeepblue.github.io/%E6%9B%B4%E6%96%B0%E6%97%A5%E5%BF%97/</guid>
         <description>&lt;h1 id=&#34;更新记录&#34;&gt;更新记录
-&lt;/h1&gt;&lt;p&gt;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;2025-11-20更新&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&lt;/p&gt;
+&lt;/h1&gt;&lt;p&gt;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;2025-02-11更新&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&lt;/p&gt;
+&lt;p&gt;更新了整篇python requests SSLError的报错解决办法相关内容&lt;/p&gt;
+&lt;p&gt;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;2025-02-10更新&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&lt;/p&gt;
 &lt;p&gt;更新了LM studio 关闭开机启动 部分的内容
 更新了左侧边栏部分文字&lt;/p&gt;
 &lt;p&gt;但更新后发现主页少了元素，于是决定回滚版本&lt;/p&gt;

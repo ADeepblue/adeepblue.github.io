@@ -3,6 +3,7 @@ date = '2025-02-11T16:35:53+08:00'
 draft = false
 title = 'Python 开了代理使用requests库报错SSL Error解决办法'
 description = "曾经python遭遇SSLError的解决办法"
+image = "Logo.png"
 categories = [
     "python"
 ]
@@ -78,7 +79,7 @@ pass
 扩低版本python兼容性的解决方案，因为很有可能会出现
 
 ![https键值处加https报错](proxy-error1.png)
-![https键值处不加东西其他改了也没事](img.png)
+![https键值处不加东西其他改了也没事](proxy-error2.png)
 
 由上两图可见，在python版本号是 `Python 3.9.2rc1` 时https处并不能加任何东西，如果加了东西，可能就会导致内容报SSLError错误
 
