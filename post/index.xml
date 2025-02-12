@@ -7,7 +7,550 @@
         <generator>Hugo -- gohugo.io</generator>
         <language>zh-cn</language>
         <copyright>深蓝之亘</copyright>
-        <lastBuildDate>Tue, 11 Feb 2025 16:35:53 +0800</lastBuildDate><atom:link href="https://adeepblue.github.io/post/index.xml" rel="self" type="application/rss+xml" /><item>
+        <lastBuildDate>Wed, 12 Feb 2025 15:23:34 +0800</lastBuildDate><atom:link href="https://adeepblue.github.io/post/index.xml" rel="self" type="application/rss+xml" /><item>
+        <title>图灵完备游戏攻略2</title>
+        <link>https://adeepblue.github.io/p/%E5%9B%BE%E7%81%B5%E5%AE%8C%E5%A4%87%E6%B8%B8%E6%88%8F%E6%94%BB%E7%95%A52/</link>
+        <pubDate>Wed, 12 Feb 2025 15:23:34 +0800</pubDate>
+        
+        <guid>https://adeepblue.github.io/p/%E5%9B%BE%E7%81%B5%E5%AE%8C%E5%A4%87%E6%B8%B8%E6%88%8F%E6%94%BB%E7%95%A52/</guid>
+        <description>&lt;img src="https://adeepblue.github.io/image/Turing-Complete-Logo.png" alt="Featured image of post 图灵完备游戏攻略2" /&gt;&lt;h1 id=&#34;图灵完备部分游戏攻略2&#34;&gt;图灵完备部分游戏攻略2
+&lt;/h1&gt;&lt;h2 id=&#34;异或&#34;&gt;异或
+&lt;/h2&gt;&lt;p&gt;目标
+&lt;img src=&#34;https://adeepblue.github.io/p/%E5%9B%BE%E7%81%B5%E5%AE%8C%E5%A4%87%E6%B8%B8%E6%88%8F%E6%94%BB%E7%95%A52/computer-command-XOR.png&#34;
+	width=&#34;1357&#34;
+	height=&#34;1075&#34;
+	srcset=&#34;https://adeepblue.github.io/p/%E5%9B%BE%E7%81%B5%E5%AE%8C%E5%A4%87%E6%B8%B8%E6%88%8F%E6%94%BB%E7%95%A52/computer-command-XOR_hu_e373d288f26ca399.png 480w, https://adeepblue.github.io/p/%E5%9B%BE%E7%81%B5%E5%AE%8C%E5%A4%87%E6%B8%B8%E6%88%8F%E6%94%BB%E7%95%A52/computer-command-XOR_hu_17d205c069920c5c.png 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;实现异或&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;126&#34;
+		data-flex-basis=&#34;302px&#34;
+	
+&gt;
+虽然它说的是八位数按位进行执行操作的异或，因为已经实现了多个以八位通道进行的计算，所以，某种程度上它可以通过翻看以前的一位异或来参考解法，当时我为了完成成就也搞定了另一种解法，虽然是我蒙出来的&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://adeepblue.github.io/p/%E5%9B%BE%E7%81%B5%E5%AE%8C%E5%A4%87%E6%B8%B8%E6%88%8F%E6%94%BB%E7%95%A52/4-Nand-solve-XOR.png&#34;
+	width=&#34;1057&#34;
+	height=&#34;864&#34;
+	srcset=&#34;https://adeepblue.github.io/p/%E5%9B%BE%E7%81%B5%E5%AE%8C%E5%A4%87%E6%B8%B8%E6%88%8F%E6%94%BB%E7%95%A52/4-Nand-solve-XOR_hu_172c1ff756788a1d.png 480w, https://adeepblue.github.io/p/%E5%9B%BE%E7%81%B5%E5%AE%8C%E5%A4%87%E6%B8%B8%E6%88%8F%E6%94%BB%E7%95%A52/4-Nand-solve-XOR_hu_66aa32fa46e98f9d.png 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;4个NAND实现&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;122&#34;
+		data-flex-basis=&#34;293px&#34;
+	
+&gt;
+&lt;img src=&#34;https://adeepblue.github.io/p/%E5%9B%BE%E7%81%B5%E5%AE%8C%E5%A4%87%E6%B8%B8%E6%88%8F%E6%94%BB%E7%95%A52/XOR-default-solve.png&#34;
+	width=&#34;1357&#34;
+	height=&#34;1069&#34;
+	srcset=&#34;https://adeepblue.github.io/p/%E5%9B%BE%E7%81%B5%E5%AE%8C%E5%A4%87%E6%B8%B8%E6%88%8F%E6%94%BB%E7%95%A52/XOR-default-solve_hu_c581a6aced25b66d.png 480w, https://adeepblue.github.io/p/%E5%9B%BE%E7%81%B5%E5%AE%8C%E5%A4%87%E6%B8%B8%E6%88%8F%E6%94%BB%E7%95%A52/XOR-default-solve_hu_39ec4ec0e84d473d.png 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;正常手段实现&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;126&#34;
+		data-flex-basis=&#34;304px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;h3 id=&#34;第一种解法&#34;&gt;第一种解法
+&lt;/h3&gt;&lt;p&gt;因为四个NAND实现的元器件实在是太难存储变量了，通过上一篇图灵完备攻略即可得知，额外的只有两个存储位，因为现在不需要立即数模式，所以reg0也可以当作紧急备用，也就是说，满打满算三个存储位，
+先读取两个数分别到reg4和reg5，然后计算两数的按位nand的值到reg0（以前从没用过），然后根据后面计算结果覆盖reg4和reg5，因为，毕竟输入的两个数终究也只是两个中间变量，不必要永久存储，实现如下&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;# copy two num to reg4 and reg5
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;in_to_reg4
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;in_to_reg5
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;# have a nand operation
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;reg4_to_reg1
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;reg5_to_reg2
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;nand
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;# save nand two num to reg0
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;reg3_to_reg0
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;# do another two nand to instead the num in reg4 and reg5, reg4&amp;#39;s num is in the reg1  
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;reg0_to_reg2
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;nand
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;reg3_to_reg4
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;# do another reg5
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;reg5_to_reg1
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;nand
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;reg3_to_reg5
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;# now nand reg4 and reg5
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;reg4_to_reg1
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;reg5_to_reg2
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;nand
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;reg3_to_out
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h3 id=&#34;第二种解法&#34;&gt;第二种解法
+&lt;/h3&gt;&lt;p&gt;因为不满足于一种写法，所以我现在来实现第二种，其中Nor的指令我去加一个，还没加入汇编指令集&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://adeepblue.github.io/p/%E5%9B%BE%E7%81%B5%E5%AE%8C%E5%A4%87%E6%B8%B8%E6%88%8F%E6%94%BB%E7%95%A52/Nor-introduction-set.png&#34;
+	width=&#34;951&#34;
+	height=&#34;424&#34;
+	srcset=&#34;https://adeepblue.github.io/p/%E5%9B%BE%E7%81%B5%E5%AE%8C%E5%A4%87%E6%B8%B8%E6%88%8F%E6%94%BB%E7%95%A52/Nor-introduction-set_hu_1db1e0fb129a5261.png 480w, https://adeepblue.github.io/p/%E5%9B%BE%E7%81%B5%E5%AE%8C%E5%A4%87%E6%B8%B8%E6%88%8F%E6%94%BB%E7%95%A52/Nor-introduction-set_hu_8a0a0e2bb7b8ac2.png 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;加入指令集&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;224&#34;
+		data-flex-basis=&#34;538px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;p&gt;如果说上面那种属于是额外生成一个中间变量然后参与跟起初的两个数的运算的话，现在另一种正常的方法看电路就知道，因为再也不需要调用到前面的变量了，直接可以执行覆盖操作，可以说是
+先把in的读取到reg1和reg2进行预备的运算，然后可以直接复制中间变量到reg4和reg5，至于输入，用完就可以丢了，&lt;/p&gt;
+&lt;p&gt;不过唯一要研究一下的就是，怎么对一个数进行按位的取反就是了，虽然这在单个电路里是个简单的事，但毕竟已经有程序了，肯定还是用现成的东西去实现，以及，立即数模式虽然没办法生成255这个值（到64位以上就已经是控制码了）
+但是要生成可以通过两个运算数都是0的情况下进行nand运算即可得到255&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://adeepblue.github.io/p/%E5%9B%BE%E7%81%B5%E5%AE%8C%E5%A4%87%E6%B8%B8%E6%88%8F%E6%94%BB%E7%95%A52/Arithmetic-engine.png&#34;
+	width=&#34;1401&#34;
+	height=&#34;1022&#34;
+	srcset=&#34;https://adeepblue.github.io/p/%E5%9B%BE%E7%81%B5%E5%AE%8C%E5%A4%87%E6%B8%B8%E6%88%8F%E6%94%BB%E7%95%A52/Arithmetic-engine_hu_ae71638482cd2076.png 480w, https://adeepblue.github.io/p/%E5%9B%BE%E7%81%B5%E5%AE%8C%E5%A4%87%E6%B8%B8%E6%88%8F%E6%94%BB%E7%95%A52/Arithmetic-engine_hu_1e32b064f06a311a.png 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;算数引擎&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;137&#34;
+		data-flex-basis=&#34;329px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;p&gt;多看两眼算数引擎，好像可以直接拿那边的八位的not来用感觉？先有一路经过nand的数进行了一下八路not运算，到or这，也就是只要保持另一路是0就可以保证or直接输出单路了
+那么也就是对应过来另一路输出就是需要是255，怎么得来就可以通过reg0原本就没使用过输出到reg1和reg2进行nand或者nor运算得到，思路确定了，也就只剩下编写代码了&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;# copy two num to reg4 and reg5
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;in_to_reg1
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;in_to_reg2
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;# do first operation
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;nor
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;reg3_to_reg4
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;# do second operation
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;nand
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;reg3_to_reg5
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;# set 0 to reg1 and reg2 to get 255
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;reg0_to_reg1
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;reg0_to_reg2
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;nand
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;# set 255 num to reg0
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;reg3_to_reg0
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;# Set two numbers that will be operated on
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;reg3_to_reg1
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;reg5_to_reg2
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;nand
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;reg3_to_reg5
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;# do OR operation to the num in reg4 and reg5
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;reg4_to_reg1
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;reg5_to_reg2
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;or
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;# final operation
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;reg3_to_reg1
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;reg0_to_reg2
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;nand
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;reg3_to_out
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;最终因为not麻烦一点依旧是用了4个nand计算方法吧，最后依旧也是跟上面一样，调用了立即数的出口reg0存储了255来直接使用nand运算打成not的效果，怪麻烦的。&lt;/p&gt;
+&lt;h2 id=&#34;八位常数&#34;&gt;八位常数
+&lt;/h2&gt;&lt;p&gt;&lt;img src=&#34;https://adeepblue.github.io/p/%E5%9B%BE%E7%81%B5%E5%AE%8C%E5%A4%87%E6%B8%B8%E6%88%8F%E6%94%BB%E7%95%A52/8-bit-constant.png&#34;
+	width=&#34;1056&#34;
+	height=&#34;1003&#34;
+	srcset=&#34;https://adeepblue.github.io/p/%E5%9B%BE%E7%81%B5%E5%AE%8C%E5%A4%87%E6%B8%B8%E6%88%8F%E6%94%BB%E7%95%A52/8-bit-constant_hu_f64d6de000528a56.png 480w, https://adeepblue.github.io/p/%E5%9B%BE%E7%81%B5%E5%AE%8C%E5%A4%87%E6%B8%B8%E6%88%8F%E6%94%BB%E7%95%A52/8-bit-constant_hu_dc990bdf3320778b.png 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;要求&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;105&#34;
+		data-flex-basis=&#34;252px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;p&gt;这，好像只要指定八位集线器然后用高电平直接控制对应位置就好了，低电平都可以不放了
+&lt;img src=&#34;https://adeepblue.github.io/p/%E5%9B%BE%E7%81%B5%E5%AE%8C%E5%A4%87%E6%B8%B8%E6%88%8F%E6%94%BB%E7%95%A52/8-bit-constant-solve.png&#34;
+	width=&#34;697&#34;
+	height=&#34;575&#34;
+	srcset=&#34;https://adeepblue.github.io/p/%E5%9B%BE%E7%81%B5%E5%AE%8C%E5%A4%87%E6%B8%B8%E6%88%8F%E6%94%BB%E7%95%A52/8-bit-constant-solve_hu_6dd4165aee52be90.png 480w, https://adeepblue.github.io/p/%E5%9B%BE%E7%81%B5%E5%AE%8C%E5%A4%87%E6%B8%B8%E6%88%8F%E6%94%BB%E7%95%A52/8-bit-constant-solve_hu_236e51f1c36cf856.png 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;解法&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;121&#34;
+		data-flex-basis=&#34;290px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;h2 id=&#34;相等&#34;&gt;相等
+&lt;/h2&gt;&lt;p&gt;&lt;img src=&#34;https://adeepblue.github.io/p/%E5%9B%BE%E7%81%B5%E5%AE%8C%E5%A4%87%E6%B8%B8%E6%88%8F%E6%94%BB%E7%95%A52/equal-for-8-bit.png&#34;
+	width=&#34;1254&#34;
+	height=&#34;1055&#34;
+	srcset=&#34;https://adeepblue.github.io/p/%E5%9B%BE%E7%81%B5%E5%AE%8C%E5%A4%87%E6%B8%B8%E6%88%8F%E6%94%BB%E7%95%A52/equal-for-8-bit_hu_1cb9da160ee32d4f.png 480w, https://adeepblue.github.io/p/%E5%9B%BE%E7%81%B5%E5%AE%8C%E5%A4%87%E6%B8%B8%E6%88%8F%E6%94%BB%E7%95%A52/equal-for-8-bit_hu_fa3724ccfd19f670.png 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;要求&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;118&#34;
+		data-flex-basis=&#34;285px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;p&gt;说起相等，前面这一圈下来，好像确实没有涉及跟相等有关的布尔值输出来着，前面也有想要这样判断的并没有
+也有两种思路，一种是先用sub减法一样的电路把两个8位数相减，然后确认出来的值是不是0就行了，也就是or8路线路，检查是否是0就行了，第二种是直接八位分线器出来然后一个一个同或比较，最后and8位输出&lt;/p&gt;
+&lt;h3 id=&#34;思路1&#34;&gt;思路1
+&lt;/h3&gt;&lt;p&gt;&lt;img src=&#34;https://adeepblue.github.io/p/%E5%9B%BE%E7%81%B5%E5%AE%8C%E5%A4%87%E6%B8%B8%E6%88%8F%E6%94%BB%E7%95%A52/equal-for-8-bit-1-solution.png&#34;
+	width=&#34;1153&#34;
+	height=&#34;399&#34;
+	srcset=&#34;https://adeepblue.github.io/p/%E5%9B%BE%E7%81%B5%E5%AE%8C%E5%A4%87%E6%B8%B8%E6%88%8F%E6%94%BB%E7%95%A52/equal-for-8-bit-1-solution_hu_bde579c7e12662de.png 480w, https://adeepblue.github.io/p/%E5%9B%BE%E7%81%B5%E5%AE%8C%E5%A4%87%E6%B8%B8%E6%88%8F%E6%94%BB%E7%95%A52/equal-for-8-bit-1-solution_hu_bfc6a7907896e78f.png 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;8位两路相减后判断&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;288&#34;
+		data-flex-basis=&#34;693px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;h3 id=&#34;思路2&#34;&gt;思路2
+&lt;/h3&gt;&lt;p&gt;&lt;img src=&#34;https://adeepblue.github.io/p/%E5%9B%BE%E7%81%B5%E5%AE%8C%E5%A4%87%E6%B8%B8%E6%88%8F%E6%94%BB%E7%95%A52/equal-for-8-bit-2-solution.png&#34;
+	width=&#34;1063&#34;
+	height=&#34;783&#34;
+	srcset=&#34;https://adeepblue.github.io/p/%E5%9B%BE%E7%81%B5%E5%AE%8C%E5%A4%87%E6%B8%B8%E6%88%8F%E6%94%BB%E7%95%A52/equal-for-8-bit-2-solution_hu_81ba64494f38fc0d.png 480w, https://adeepblue.github.io/p/%E5%9B%BE%E7%81%B5%E5%AE%8C%E5%A4%87%E6%B8%B8%E6%88%8F%E6%94%BB%E7%95%A52/equal-for-8-bit-2-solution_hu_75346ba6c8a407fb.png 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;分别判断每一位是否相等&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;135&#34;
+		data-flex-basis=&#34;325px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;h2 id=&#34;8位异或&#34;&gt;8位异或
+&lt;/h2&gt;&lt;p&gt;&lt;img src=&#34;https://adeepblue.github.io/p/%E5%9B%BE%E7%81%B5%E5%AE%8C%E5%A4%87%E6%B8%B8%E6%88%8F%E6%94%BB%E7%95%A52/8-bit-XOR.png&#34;
+	width=&#34;1307&#34;
+	height=&#34;1016&#34;
+	srcset=&#34;https://adeepblue.github.io/p/%E5%9B%BE%E7%81%B5%E5%AE%8C%E5%A4%87%E6%B8%B8%E6%88%8F%E6%94%BB%E7%95%A52/8-bit-XOR_hu_d058f58866258ca0.png 480w, https://adeepblue.github.io/p/%E5%9B%BE%E7%81%B5%E5%AE%8C%E5%A4%87%E6%B8%B8%E6%88%8F%E6%94%BB%E7%95%A52/8-bit-XOR_hu_e5ed8209959e5de3.png 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;要求&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;128&#34;
+		data-flex-basis=&#34;308px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;p&gt;因为8bit已经有了对应的上面对应只有一位情况的所有运算器件，
+所以只要根据上面一位异或换成8bit的版本即可&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://adeepblue.github.io/p/%E5%9B%BE%E7%81%B5%E5%AE%8C%E5%A4%87%E6%B8%B8%E6%88%8F%E6%94%BB%E7%95%A52/8-bit-components.png&#34;
+	width=&#34;535&#34;
+	height=&#34;200&#34;
+	srcset=&#34;https://adeepblue.github.io/p/%E5%9B%BE%E7%81%B5%E5%AE%8C%E5%A4%87%E6%B8%B8%E6%88%8F%E6%94%BB%E7%95%A52/8-bit-components_hu_50a90f7e2627f7ce.png 480w, https://adeepblue.github.io/p/%E5%9B%BE%E7%81%B5%E5%AE%8C%E5%A4%87%E6%B8%B8%E6%88%8F%E6%94%BB%E7%95%A52/8-bit-components_hu_6f3cad6924f6314c.png 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;所有8位运算元器件&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;267&#34;
+		data-flex-basis=&#34;642px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://adeepblue.github.io/p/%E5%9B%BE%E7%81%B5%E5%AE%8C%E5%A4%87%E6%B8%B8%E6%88%8F%E6%94%BB%E7%95%A52/8-bit-XOR-1-solution.png&#34;
+	width=&#34;1122&#34;
+	height=&#34;785&#34;
+	srcset=&#34;https://adeepblue.github.io/p/%E5%9B%BE%E7%81%B5%E5%AE%8C%E5%A4%87%E6%B8%B8%E6%88%8F%E6%94%BB%E7%95%A52/8-bit-XOR-1-solution_hu_af8ced24f6ac7a61.png 480w, https://adeepblue.github.io/p/%E5%9B%BE%E7%81%B5%E5%AE%8C%E5%A4%87%E6%B8%B8%E6%88%8F%E6%94%BB%E7%95%A52/8-bit-XOR-1-solution_hu_982333bd7412b307.png 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;解法1&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;142&#34;
+		data-flex-basis=&#34;343px&#34;
+	
+&gt;
+&lt;img src=&#34;https://adeepblue.github.io/p/%E5%9B%BE%E7%81%B5%E5%AE%8C%E5%A4%87%E6%B8%B8%E6%88%8F%E6%94%BB%E7%95%A52/8-bit-XOR-2-solution.png&#34;
+	width=&#34;1054&#34;
+	height=&#34;742&#34;
+	srcset=&#34;https://adeepblue.github.io/p/%E5%9B%BE%E7%81%B5%E5%AE%8C%E5%A4%87%E6%B8%B8%E6%88%8F%E6%94%BB%E7%95%A52/8-bit-XOR-2-solution_hu_84e3d6961839ba80.png 480w, https://adeepblue.github.io/p/%E5%9B%BE%E7%81%B5%E5%AE%8C%E5%A4%87%E6%B8%B8%E6%88%8F%E6%94%BB%E7%95%A52/8-bit-XOR-2-solution_hu_2a762b55b24b69ee.png 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;解法2&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;142&#34;
+		data-flex-basis=&#34;340px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;h2 id=&#34;无符号小于&#34;&gt;无符号小于
+&lt;/h2&gt;&lt;p&gt;&lt;img src=&#34;https://adeepblue.github.io/p/%E5%9B%BE%E7%81%B5%E5%AE%8C%E5%A4%87%E6%B8%B8%E6%88%8F%E6%94%BB%E7%95%A52/not-sign-smaller-than.png&#34;
+	width=&#34;1003&#34;
+	height=&#34;718&#34;
+	srcset=&#34;https://adeepblue.github.io/p/%E5%9B%BE%E7%81%B5%E5%AE%8C%E5%A4%87%E6%B8%B8%E6%88%8F%E6%94%BB%E7%95%A52/not-sign-smaller-than_hu_b4847c79b0eca019.png 480w, https://adeepblue.github.io/p/%E5%9B%BE%E7%81%B5%E5%AE%8C%E5%A4%87%E6%B8%B8%E6%88%8F%E6%94%BB%E7%95%A52/not-sign-smaller-than_hu_af20c8a5902ee02c.png 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;条件&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;139&#34;
+		data-flex-basis=&#34;335px&#34;
+	
+&gt;
+第一反应是直接相减后判断大小，a&amp;lt;b,也就是证明b-a&amp;gt;0，那也就是说，使用两个相减判断符号就行了，吗？一旦a作为第一位输入是8，作为被减数，然后先取一个反，
+但按位取反一旦变成无符号整数，那就已经不一定奏效了，一位一位比较也比较麻烦，其中无符号状态下的取反，b-a实际上成了b+(255-a),也就是255+b-a，如果b-a
+大于0，那么255加上b-a必定大于0，也就是说，如果进位信号有显示，那么b就是大于a的，也就是输出高电平，刚好跟进位信号对上了，也不用取反了&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://adeepblue.github.io/p/%E5%9B%BE%E7%81%B5%E5%AE%8C%E5%A4%87%E6%B8%B8%E6%88%8F%E6%94%BB%E7%95%A52/no-sign-smaller-than-solve.png&#34;
+	width=&#34;942&#34;
+	height=&#34;796&#34;
+	srcset=&#34;https://adeepblue.github.io/p/%E5%9B%BE%E7%81%B5%E5%AE%8C%E5%A4%87%E6%B8%B8%E6%88%8F%E6%94%BB%E7%95%A52/no-sign-smaller-than-solve_hu_13616683f9b44e7f.png 480w, https://adeepblue.github.io/p/%E5%9B%BE%E7%81%B5%E5%AE%8C%E5%A4%87%E6%B8%B8%E6%88%8F%E6%94%BB%E7%95%A52/no-sign-smaller-than-solve_hu_3f45ad355d5c63a6.png 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;解法&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;118&#34;
+		data-flex-basis=&#34;284px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;h2 id=&#34;有符号小于&#34;&gt;有符号小于
+&lt;/h2&gt;&lt;p&gt;&lt;img src=&#34;https://adeepblue.github.io/p/%E5%9B%BE%E7%81%B5%E5%AE%8C%E5%A4%87%E6%B8%B8%E6%88%8F%E6%94%BB%E7%95%A52/sign-smaller-than.png&#34;
+	width=&#34;1158&#34;
+	height=&#34;978&#34;
+	srcset=&#34;https://adeepblue.github.io/p/%E5%9B%BE%E7%81%B5%E5%AE%8C%E5%A4%87%E6%B8%B8%E6%88%8F%E6%94%BB%E7%95%A52/sign-smaller-than_hu_7db72352403ebdcf.png 480w, https://adeepblue.github.io/p/%E5%9B%BE%E7%81%B5%E5%AE%8C%E5%A4%87%E6%B8%B8%E6%88%8F%E6%94%BB%E7%95%A52/sign-smaller-than_hu_3630d139ca1feaca.png 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;条件&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;118&#34;
+		data-flex-basis=&#34;284px&#34;
+	
+&gt;
+&lt;img src=&#34;https://adeepblue.github.io/p/%E5%9B%BE%E7%81%B5%E5%AE%8C%E5%A4%87%E6%B8%B8%E6%88%8F%E6%94%BB%E7%95%A52/opposite-number.png&#34;
+	width=&#34;1147&#34;
+	height=&#34;1003&#34;
+	srcset=&#34;https://adeepblue.github.io/p/%E5%9B%BE%E7%81%B5%E5%AE%8C%E5%A4%87%E6%B8%B8%E6%88%8F%E6%94%BB%E7%95%A52/opposite-number_hu_a6d374b28f69e0db.png 480w, https://adeepblue.github.io/p/%E5%9B%BE%E7%81%B5%E5%AE%8C%E5%A4%87%E6%B8%B8%E6%88%8F%E6%94%BB%E7%95%A52/opposite-number_hu_b7a583b33f0c3dcc.png 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;相反数&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;114&#34;
+		data-flex-basis=&#34;274px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;p&gt;看到这个条件，也就是说，128的地方变成-128了，就要去稍微翻一下相反数的那个元器件了，因为，如果是带符号的，那也就意味着，b-a=b+(-a),而又有相反数等于它本身按位取反之后，
+再在加法器上加一得到的，那也就是说，这个加1，我可以当作进位运算，但依旧遇到了点问题，因为，一旦像是如下图这般的，存储溢出了就会失效，进位信号不可用不说，输出直接变成负数，
+但最重要的问题在于，这个溢出不好控制，最后一位一旦填上负数之后就不好说了，因为有其他情况也会出现负数&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://adeepblue.github.io/p/%E5%9B%BE%E7%81%B5%E5%AE%8C%E5%A4%87%E6%B8%B8%E6%88%8F%E6%94%BB%E7%95%A52/trouble-in-sign-smaller-than.png&#34;
+	width=&#34;1199&#34;
+	height=&#34;815&#34;
+	srcset=&#34;https://adeepblue.github.io/p/%E5%9B%BE%E7%81%B5%E5%AE%8C%E5%A4%87%E6%B8%B8%E6%88%8F%E6%94%BB%E7%95%A52/trouble-in-sign-smaller-than_hu_6896799cd883ae82.png 480w, https://adeepblue.github.io/p/%E5%9B%BE%E7%81%B5%E5%AE%8C%E5%A4%87%E6%B8%B8%E6%88%8F%E6%94%BB%E7%95%A52/trouble-in-sign-smaller-than_hu_612cddcc16bec768.png 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;问题图一&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;147&#34;
+		data-flex-basis=&#34;353px&#34;
+	
+&gt;
+&lt;img src=&#34;https://adeepblue.github.io/p/%E5%9B%BE%E7%81%B5%E5%AE%8C%E5%A4%87%E6%B8%B8%E6%88%8F%E6%94%BB%E7%95%A52/trouble-in-sign-small-than-1.png&#34;
+	width=&#34;1421&#34;
+	height=&#34;826&#34;
+	srcset=&#34;https://adeepblue.github.io/p/%E5%9B%BE%E7%81%B5%E5%AE%8C%E5%A4%87%E6%B8%B8%E6%88%8F%E6%94%BB%E7%95%A52/trouble-in-sign-small-than-1_hu_97b2f9b7cd5a84be.png 480w, https://adeepblue.github.io/p/%E5%9B%BE%E7%81%B5%E5%AE%8C%E5%A4%87%E6%B8%B8%E6%88%8F%E6%94%BB%E7%95%A52/trouble-in-sign-small-than-1_hu_175825145dbe2c02.png 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;问题图二&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;172&#34;
+		data-flex-basis=&#34;412px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;p&gt;进行一下完整的分析，设定x,y&amp;gt;0,执行操作每次为第二个数减第一个数，其中-(-128+1)为not的输出，上面但实际最后一位第八位是作为负号位的，进到这位属于溢出，但并没有让加法器溢出，&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&lt;strong&gt;1.&lt;/strong&gt; 第一个数为-x,第二个数为-y: -(-x+1)-y+1 = x-y，这个数可大于0可小于0，需要判断符号，可能会有进位&lt;/p&gt;&lt;/blockquote&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&lt;strong&gt;2.&lt;/strong&gt; 第一个数为x,第二个数为-y: -(x+1)-y+1 = -x-y, 必定小于0，但溢出可能大于0，有进位信号&lt;/p&gt;&lt;/blockquote&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&lt;strong&gt;3.&lt;/strong&gt; 第一个数为-x,第二个数为y : -(-x+1)+y+1 = y+x, 必定大于0，但溢出有可能小于0，无进位信号&lt;/p&gt;&lt;/blockquote&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&lt;strong&gt;4.&lt;/strong&gt; 第一个数为x,第二个数为y : -(x+1)+y+1 = y-x, 这个数可大于0可小于0，需要判断符号&lt;/p&gt;&lt;/blockquote&gt;
+&lt;p&gt;在那之前，最好先给两者判断一下-128位的信号，至于等于0的情况再考虑,其他小于0的情况可以直接默认不输出，比如case2
+其他情况剩下case1和case4&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://adeepblue.github.io/p/%E5%9B%BE%E7%81%B5%E5%AE%8C%E5%A4%87%E6%B8%B8%E6%88%8F%E6%94%BB%E7%95%A52/case3.png&#34;
+	width=&#34;1568&#34;
+	height=&#34;760&#34;
+	srcset=&#34;https://adeepblue.github.io/p/%E5%9B%BE%E7%81%B5%E5%AE%8C%E5%A4%87%E6%B8%B8%E6%88%8F%E6%94%BB%E7%95%A52/case3_hu_250adf8e9e6e1ec5.png 480w, https://adeepblue.github.io/p/%E5%9B%BE%E7%81%B5%E5%AE%8C%E5%A4%87%E6%B8%B8%E6%88%8F%E6%94%BB%E7%95%A52/case3_hu_503beecd8488d79a.png 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;case3&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;206&#34;
+		data-flex-basis=&#34;495px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;p&gt;case1&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://adeepblue.github.io/p/%E5%9B%BE%E7%81%B5%E5%AE%8C%E5%A4%87%E6%B8%B8%E6%88%8F%E6%94%BB%E7%95%A52/case1-1.png&#34;
+	width=&#34;1423&#34;
+	height=&#34;802&#34;
+	srcset=&#34;https://adeepblue.github.io/p/%E5%9B%BE%E7%81%B5%E5%AE%8C%E5%A4%87%E6%B8%B8%E6%88%8F%E6%94%BB%E7%95%A52/case1-1_hu_f7d81a84d2cf90c3.png 480w, https://adeepblue.github.io/p/%E5%9B%BE%E7%81%B5%E5%AE%8C%E5%A4%87%E6%B8%B8%E6%88%8F%E6%94%BB%E7%95%A52/case1-1_hu_a75ebe56c5702fe8.png 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;case1-1&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;177&#34;
+		data-flex-basis=&#34;425px&#34;
+	
+&gt;
+&lt;img src=&#34;https://adeepblue.github.io/p/%E5%9B%BE%E7%81%B5%E5%AE%8C%E5%A4%87%E6%B8%B8%E6%88%8F%E6%94%BB%E7%95%A52/case1-2.png&#34;
+	width=&#34;1353&#34;
+	height=&#34;963&#34;
+	srcset=&#34;https://adeepblue.github.io/p/%E5%9B%BE%E7%81%B5%E5%AE%8C%E5%A4%87%E6%B8%B8%E6%88%8F%E6%94%BB%E7%95%A52/case1-2_hu_fcdadd0b252d3a78.png 480w, https://adeepblue.github.io/p/%E5%9B%BE%E7%81%B5%E5%AE%8C%E5%A4%87%E6%B8%B8%E6%88%8F%E6%94%BB%E7%95%A52/case1-2_hu_d70de838d763cce3.png 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;case1-2&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;140&#34;
+		data-flex-basis=&#34;337px&#34;
+	
+&gt;
+&lt;img src=&#34;https://adeepblue.github.io/p/%E5%9B%BE%E7%81%B5%E5%AE%8C%E5%A4%87%E6%B8%B8%E6%88%8F%E6%94%BB%E7%95%A52/case1-3.png&#34;
+	width=&#34;1361&#34;
+	height=&#34;799&#34;
+	srcset=&#34;https://adeepblue.github.io/p/%E5%9B%BE%E7%81%B5%E5%AE%8C%E5%A4%87%E6%B8%B8%E6%88%8F%E6%94%BB%E7%95%A52/case1-3_hu_95587056b5825b28.png 480w, https://adeepblue.github.io/p/%E5%9B%BE%E7%81%B5%E5%AE%8C%E5%A4%87%E6%B8%B8%E6%88%8F%E6%94%BB%E7%95%A52/case1-3_hu_eddd640a74d64e2.png 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;case1-3&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;170&#34;
+		data-flex-basis=&#34;408px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;p&gt;第一张图，x=128&amp;gt;y = 96,取反之后也更靠近128，而y比x距离128稍远些，边界情况如图三所示，刚好所有值都对应上，也就是说如果x=y,两个加起来刚好进位
+但add处等于0
+也就是说&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&lt;strong&gt;1.1&lt;/strong&gt; 进位信号有，输出信号的&lt;strong&gt;总和&lt;/strong&gt;端口等于0 =&amp;gt; 两数相等 (总和是个输出端口名)&lt;/p&gt;&lt;/blockquote&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&lt;strong&gt;1.2&lt;/strong&gt; 进位信号有，输出信号的&lt;strong&gt;总和&lt;/strong&gt;端口大于0 =&amp;gt; -y&amp;gt;-x，第二个数大于第一个数，需要输出1&lt;/p&gt;&lt;/blockquote&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&lt;strong&gt;1.3&lt;/strong&gt; 进位信号无 =&amp;gt; -y&amp;lt;-x,不需要输出&lt;/p&gt;&lt;/blockquote&gt;
+&lt;p&gt;&lt;img src=&#34;https://adeepblue.github.io/p/%E5%9B%BE%E7%81%B5%E5%AE%8C%E5%A4%87%E6%B8%B8%E6%88%8F%E6%94%BB%E7%95%A52/case1-final.png&#34;
+	width=&#34;1846&#34;
+	height=&#34;840&#34;
+	srcset=&#34;https://adeepblue.github.io/p/%E5%9B%BE%E7%81%B5%E5%AE%8C%E5%A4%87%E6%B8%B8%E6%88%8F%E6%94%BB%E7%95%A52/case1-final_hu_90baf03b14d4e7a4.png 480w, https://adeepblue.github.io/p/%E5%9B%BE%E7%81%B5%E5%AE%8C%E5%A4%87%E6%B8%B8%E6%88%8F%E6%94%BB%E7%95%A52/case1-final_hu_8f3e3d893b4677eb.png 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;case1的最终处理&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;219&#34;
+		data-flex-basis=&#34;527px&#34;
+	
+&gt;
+其中直接连入输出了，需要一个开关控制，其中两头直接由两个输入的-128位控制，如果两个数都是高电平才触发上面的，其中中间一位可以开关直接连到case3的输出上，
+毕竟开关触发条件也是跟case3一样的，下面-128低电平，上面-128高电平&lt;/p&gt;
+&lt;p&gt;同理&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://adeepblue.github.io/p/%E5%9B%BE%E7%81%B5%E5%AE%8C%E5%A4%87%E6%B8%B8%E6%88%8F%E6%94%BB%E7%95%A52/case3-1.png&#34;
+	width=&#34;1689&#34;
+	height=&#34;967&#34;
+	srcset=&#34;https://adeepblue.github.io/p/%E5%9B%BE%E7%81%B5%E5%AE%8C%E5%A4%87%E6%B8%B8%E6%88%8F%E6%94%BB%E7%95%A52/case3-1_hu_b561b632b225865d.png 480w, https://adeepblue.github.io/p/%E5%9B%BE%E7%81%B5%E5%AE%8C%E5%A4%87%E6%B8%B8%E6%88%8F%E6%94%BB%E7%95%A52/case3-1_hu_403891c6e7e91b2e.png 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;case3-1&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;174&#34;
+		data-flex-basis=&#34;419px&#34;
+	
+&gt;
+&lt;img src=&#34;https://adeepblue.github.io/p/%E5%9B%BE%E7%81%B5%E5%AE%8C%E5%A4%87%E6%B8%B8%E6%88%8F%E6%94%BB%E7%95%A52/case3-2.png&#34;
+	width=&#34;1482&#34;
+	height=&#34;853&#34;
+	srcset=&#34;https://adeepblue.github.io/p/%E5%9B%BE%E7%81%B5%E5%AE%8C%E5%A4%87%E6%B8%B8%E6%88%8F%E6%94%BB%E7%95%A52/case3-2_hu_135155380d86017d.png 480w, https://adeepblue.github.io/p/%E5%9B%BE%E7%81%B5%E5%AE%8C%E5%A4%87%E6%B8%B8%E6%88%8F%E6%94%BB%E7%95%A52/case3-2_hu_f82862bb1aa7f1cd.png 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;case3-2&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;173&#34;
+		data-flex-basis=&#34;416px&#34;
+	
+&gt;
+&lt;img src=&#34;https://adeepblue.github.io/p/%E5%9B%BE%E7%81%B5%E5%AE%8C%E5%A4%87%E6%B8%B8%E6%88%8F%E6%94%BB%E7%95%A52/case3-3.png&#34;
+	width=&#34;1564&#34;
+	height=&#34;837&#34;
+	srcset=&#34;https://adeepblue.github.io/p/%E5%9B%BE%E7%81%B5%E5%AE%8C%E5%A4%87%E6%B8%B8%E6%88%8F%E6%94%BB%E7%95%A52/case3-3_hu_ae32aa0a09ee9edd.png 480w, https://adeepblue.github.io/p/%E5%9B%BE%E7%81%B5%E5%AE%8C%E5%A4%87%E6%B8%B8%E6%88%8F%E6%94%BB%E7%95%A52/case3-3_hu_6fd57d9ae6c44507.png 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;case3-3&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;186&#34;
+		data-flex-basis=&#34;448px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&lt;strong&gt;3.2&lt;/strong&gt; 进位信号有，&lt;strong&gt;总和&lt;/strong&gt;端口等于0 =&amp;gt; 两数相等&lt;/p&gt;&lt;/blockquote&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&lt;strong&gt;3.1&lt;/strong&gt; 进位信号有，输出信号的&lt;strong&gt;总和&lt;/strong&gt;端口大于0，y&amp;gt;x 需要输出1&lt;/p&gt;&lt;/blockquote&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&lt;strong&gt;1.3&lt;/strong&gt; 进位信号无 =&amp;gt; -y&amp;lt;-x,不需要输出&lt;/p&gt;&lt;/blockquote&gt;
+&lt;p&gt;仔细一观察，80 48时，除开两处-128信号不同以外，其余部分全部相同，也就是说，现在属于两者同时是1或者0的时候即可成立，那么不用多画了，直接把控制开关的与门替换成同或门即可&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://adeepblue.github.io/p/%E5%9B%BE%E7%81%B5%E5%AE%8C%E5%A4%87%E6%B8%B8%E6%88%8F%E6%94%BB%E7%95%A52/sign-samller-than-final.png&#34;
+	width=&#34;1920&#34;
+	height=&#34;1080&#34;
+	srcset=&#34;https://adeepblue.github.io/p/%E5%9B%BE%E7%81%B5%E5%AE%8C%E5%A4%87%E6%B8%B8%E6%88%8F%E6%94%BB%E7%95%A52/sign-samller-than-final_hu_72adaf9bacfc59be.png 480w, https://adeepblue.github.io/p/%E5%9B%BE%E7%81%B5%E5%AE%8C%E5%A4%87%E6%B8%B8%E6%88%8F%E6%94%BB%E7%95%A52/sign-samller-than-final_hu_51c7b20201ead8d5.png 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;img.png&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;177&#34;
+		data-flex-basis=&#34;426px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;p&gt;下一篇博文见,下一篇链接(还没更新，更新完链接放这里)&lt;/p&gt;
+</description>
+        </item>
+        <item>
         <title>Python 开了代理使用requests库报错SSL Error解决办法</title>
         <link>https://adeepblue.github.io/p/python-%E5%BC%80%E4%BA%86%E4%BB%A3%E7%90%86%E4%BD%BF%E7%94%A8requests%E5%BA%93%E6%8A%A5%E9%94%99ssl-error%E8%A7%A3%E5%86%B3%E5%8A%9E%E6%B3%95/</link>
         <pubDate>Tue, 11 Feb 2025 16:35:53 +0800</pubDate>
@@ -488,7 +1031,7 @@ pip同理,复制下列代码至txt文本后,根据你设置内的代理状态进
         <pubDate>Thu, 06 Feb 2025 10:07:57 +0800</pubDate>
         
         <guid>https://adeepblue.github.io/p/%E5%9B%BE%E7%81%B5%E5%AE%8C%E5%A4%87%E6%B8%B8%E6%88%8F%E6%94%BB%E7%95%A5/</guid>
-        <description>&lt;img src="https://adeepblue.github.io/p/%E5%9B%BE%E7%81%B5%E5%AE%8C%E5%A4%87%E6%B8%B8%E6%88%8F%E6%94%BB%E7%95%A5/Logo.png" alt="Featured image of post 图灵完备游戏攻略" /&gt;&lt;h1 id=&#34;图灵完备部分游戏攻略&#34;&gt;图灵完备部分游戏攻略
+        <description>&lt;img src="https://adeepblue.github.io/image/Turing-Complete-Logo.png" alt="Featured image of post 图灵完备游戏攻略" /&gt;&lt;h1 id=&#34;图灵完备部分游戏攻略&#34;&gt;图灵完备部分游戏攻略
 &lt;/h1&gt;&lt;h2 id=&#34;前言&#34;&gt;前言
 &lt;/h2&gt;&lt;p&gt;话说在前面，因为先前并没有开博客网站，我先前的内容，除非我再去玩一次，可能会再写记录，目前估计不打算写了
 ,目前的进度如下图，已经造出了可以运行的计算机，也实现了简单的几个程序，以及开始了游戏内的汇编，会简单讲一下我造的计算机的布局，
