@@ -2,6 +2,7 @@
 date = '2025-02-06T10:07:57+08:00'
 draft = false
 title = '图灵完备游戏攻略'
+description = "目前计算机的布局以及密码锁、太空入侵者、时间掩码的解法思路"
 image = 'Logo.png'
 categories = [
     "steamgame"
@@ -166,5 +167,166 @@ output_loop
 always
 ```
 ---2025 02 09记录
+## 对4取模
+
 需要对一个数模4的结果等效于 4 % 3
 ![](mod4.png)
+因为模的数是4，是2的倍数，也就是说，我只需要拿到这个数的最后两位就好了，看到这个我第一反应是，直接移位，我写乘法器的过程中有使用过移位的一个计算工具，
+
+但现在去细看ALU元件输入输出我才意识到，取最后两位我可以让<span style="color:red">一个数的最后两位同时亮起然后进行and操作</span>，也就是说，其他部分全是0的地方，会被直接不并入计算，
+
+![and](how-to-use-and.png)
+
+想明白这个之后我瞬间意识到，前面的移位的器件可能能优化，但转念一想也不对，因为这个移位操作，要独立的1，2，4，8，16这样的2的倍数，依旧是需要生成8位通道的，也不一定能做成这个优化
+
+```
+3
+reg0_to_reg2
+in_to_reg1
+and
+reg3_to_out
+```
+
+这关就走通了
+
+## 迷宫
+![迷宫](labyrinth.png)
+
+这玩意就让我想到了以前有说的，摸着墙走通关什么的，但该说不说确实可行，以左转为例，逻辑也就是左转，碰墙就转弯
+
+![一直左转路线](the-way-for-turn-lift-all-the-time.png)
+
+这样逻辑可行但总感觉少吃了点金币（贪），但好像也有办法实现，先看看正常的实现吧，实现完了再去看看
+
+![汇编指南](introduction-set-help.png)
+![机器人控制指令](robot-control-code.png)
+根据以上最先写好的肯定是直接const好机器人的指令，总是用0，1的来看终究还是不方便
+![指令对照](const-for-robot-do.png)
+```
+const left_num 0
+const advance_num 1
+const right_num 2
+const get_object 4
+const stay 3
+```
+
+细致来考虑一下，先检测当前前方物体，是墙右转，如果一直是墙就一直右转（总不能被四处围着吧），如果不是墙，是跳转到直行处执行直行操作，但是一开始我对这样的if操作有点犹豫，因为考虑到可能比如左转
+
+不管了，先来画个思维导图吧，如果全部要在脑子里面实现感觉又会卡不少时间了，画好了，如下
+
+![思维导图](mindmap-forlabyrinth.png)
+
+```
+# init the sub_num for judging if the object is wall or not
+1
+reg0_to_reg2
+
+label left_loop
+# turn left
+left_num
+reg0_to_out
+# judge object
+get_object
+in_to_reg1
+sub
+# if it's wall, it'll change the count num
+turn_left_but_not_wall
+if_reg3_not0
+
+# if this code to end will be executed, that means the left is wall
+
+
+...
+# end
+
+turn_left_but_not_wall
+advance_num
+reg0_to_out
+left_loop
+always
+```
+
+要做的事已经在上面有所备注，其中我也算是明白了，有些函数为什么要放在末尾，在matlab里，可能类似就是这样的实现吧，因为对于这个语言来说放在开头可能会覆盖其他执行顺序，
+虽然也只是我猜的, 放在最末尾然后重新跳转回前面的一个位置，如同上述代码，这样就完成了左转，不是墙分支的代码实现
+
+开始实现下一个分支，也就第一个选项是墙的情况
+```
+right_num
+reg0_to_out
+get_object
+in_to_reg1
+sub
+
+second_judge_not_wall
+if_reg3_not0
+
+# if it's wall,turn right and stay 
+# in the same place
+
+#end
+
+label second_judge_not_wall
+advance_num
+reg0_to_out
+left_loop
+always
+```
+但在这里发现，第二次判断好像跟第一次判断有重合的地方，我可以直接合并成advance分支，执行完直接回loop就行了
+
+这里解释一下，右转原地待命由于右转本来就占用了一个机器人的执行时间单位了，以及迷宫没有对时间的要求，所以stay原地待命操作可以直接不执行，只要执行转向即可跳转
+
+不好意思上面get_object忘记给输出了，需要都补上reg0_to_out才能把物品ID返回输入
+
+```
+const left_num 0
+const advance_num 1
+const right_num 2
+const get_object 4
+const stay 3
+# gold_id 8
+# wall_id 1
+# nothing 0
+# door 3
+# init the sub_num for judging if the object is wall or not
+1
+reg0_to_reg2
+
+label left_loop
+# turn left
+left_num
+reg0_to_out
+# judge object
+get_object
+reg0_to_out
+in_to_reg1
+sub
+# if it's wall, it'll change the count num
+advance
+if_reg3_not0
+
+# if this code to end will be executed, that means the left is wall
+
+right_num
+reg0_to_out
+get_object
+reg0_to_out
+in_to_reg1
+sub
+# if it's not wall, advance
+advance
+if_reg3_not0
+# if it's wall,turn right and stay in the same place
+
+right_num
+reg0_to_out
+left_loop
+always
+# end
+
+label advance
+advance_num
+reg0_to_out
+left_loop
+always
+```
+因为东西太满了，我打算新开一篇，下一篇链接(还没更新，更新完链接放这里)

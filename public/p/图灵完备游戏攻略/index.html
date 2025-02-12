@@ -1,18 +1,18 @@
 <!DOCTYPE html>
 <html lang="zh-cn" dir="ltr">
     <head><meta charset='utf-8'>
-<meta name='viewport' content='width=device-width, initial-scale=1'><meta name='description' content="图灵完备部分游戏攻略 前言 话说在前面，因为先前并没有开博客网站，我先前的内容，除非我再去玩一次，可能会再写记录，目前估计不打算写了 ,目前的进度如下图，已经造出了可以运行的计算机，也实现了简单的几个程序，以及开始了游戏内的汇编，会简单讲一下我造的计算机的布局， 我并不打算多看教程，基本多数是我自己在思考然后自己搞定的，写这个博客的目的是在我写一些程序或者跟程序相关的东西的时候留下一些痕迹， 不写就有可能会像我python这里这边这样，用过3D的绘图但回过头来不知道文件夹放在哪了，甚至还很难搜到，干脆就写博客了就\n">
+<meta name='viewport' content='width=device-width, initial-scale=1'><meta name='description' content="目前计算机的布局以及密码锁、太空入侵者、时间掩码的解法思路">
 <title>图灵完备游戏攻略</title>
 
 <link rel='canonical' href='https://adeepblue.github.io/p/%E5%9B%BE%E7%81%B5%E5%AE%8C%E5%A4%87%E6%B8%B8%E6%88%8F%E6%94%BB%E7%95%A5/'>
 
 <link rel="stylesheet" href="/scss/style.min.663803bebe609202d5b39d848f2d7c2dc8b598a2d879efa079fa88893d29c49c.css"><meta property='og:title' content="图灵完备游戏攻略">
-<meta property='og:description' content="图灵完备部分游戏攻略 前言 话说在前面，因为先前并没有开博客网站，我先前的内容，除非我再去玩一次，可能会再写记录，目前估计不打算写了 ,目前的进度如下图，已经造出了可以运行的计算机，也实现了简单的几个程序，以及开始了游戏内的汇编，会简单讲一下我造的计算机的布局， 我并不打算多看教程，基本多数是我自己在思考然后自己搞定的，写这个博客的目的是在我写一些程序或者跟程序相关的东西的时候留下一些痕迹， 不写就有可能会像我python这里这边这样，用过3D的绘图但回过头来不知道文件夹放在哪了，甚至还很难搜到，干脆就写博客了就\n">
+<meta property='og:description' content="目前计算机的布局以及密码锁、太空入侵者、时间掩码的解法思路">
 <meta property='og:url' content='https://adeepblue.github.io/p/%E5%9B%BE%E7%81%B5%E5%AE%8C%E5%A4%87%E6%B8%B8%E6%88%8F%E6%94%BB%E7%95%A5/'>
 <meta property='og:site_name' content='深蓝之亘的博客'>
 <meta property='og:type' content='article'><meta property='article:section' content='Post' /><meta property='article:published_time' content='2025-02-06T10:07:57&#43;08:00'/><meta property='article:modified_time' content='2025-02-06T10:07:57&#43;08:00'/><meta property='og:image' content='https://adeepblue.github.io/p/%E5%9B%BE%E7%81%B5%E5%AE%8C%E5%A4%87%E6%B8%B8%E6%88%8F%E6%94%BB%E7%95%A5/Logo.png' />
 <meta name="twitter:title" content="图灵完备游戏攻略">
-<meta name="twitter:description" content="图灵完备部分游戏攻略 前言 话说在前面，因为先前并没有开博客网站，我先前的内容，除非我再去玩一次，可能会再写记录，目前估计不打算写了 ,目前的进度如下图，已经造出了可以运行的计算机，也实现了简单的几个程序，以及开始了游戏内的汇编，会简单讲一下我造的计算机的布局， 我并不打算多看教程，基本多数是我自己在思考然后自己搞定的，写这个博客的目的是在我写一些程序或者跟程序相关的东西的时候留下一些痕迹， 不写就有可能会像我python这里这边这样，用过3D的绘图但回过头来不知道文件夹放在哪了，甚至还很难搜到，干脆就写博客了就\n"><meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:description" content="目前计算机的布局以及密码锁、太空入侵者、时间掩码的解法思路"><meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:image" content='https://adeepblue.github.io/p/%E5%9B%BE%E7%81%B5%E5%AE%8C%E5%A4%87%E6%B8%B8%E6%88%8F%E6%94%BB%E7%95%A5/Logo.png' />
     <link rel="shortcut icon" href="/favicon.ico" />
 
@@ -279,6 +279,8 @@
     <li><a href="#汇编">汇编</a></li>
     <li><a href="#基础已经能实现的一些功能">基础已经能实现的一些功能</a></li>
     <li><a href="#关卡密码锁">关卡密码锁</a></li>
+    <li><a href="#对4取模">对4取模</a></li>
+    <li><a href="#迷宫">迷宫</a></li>
   </ol>
 </nav>
         </div>
@@ -321,6 +323,10 @@
             <a href="/p/%E5%9B%BE%E7%81%B5%E5%AE%8C%E5%A4%87%E6%B8%B8%E6%88%8F%E6%94%BB%E7%95%A5/">图灵完备游戏攻略</a>
         </h2>
     
+        
+        <h3 class="article-subtitle">
+            目前计算机的布局以及密码锁、太空入侵者、时间掩码的解法思路
+        </h3>
         
     </div>
 
@@ -643,8 +649,9 @@ label的定义的关键字是<code>loop</code>，也就是，后面如果读到�
 </span></span><span class="line"><span class="cl">
 </span></span><span class="line"><span class="cl">output_loop
 </span></span><span class="line"><span class="cl">always
-</span></span></code></pre></div><p>&mdash;2025 02 09记录
-需要对一个数模4的结果等效于 4 % 3
+</span></span></code></pre></div><p>&mdash;2025 02 09记录</p>
+<h2 id="对4取模">对4取模
+</h2><p>需要对一个数模4的结果等效于 4 % 3
 <img src="/p/%E5%9B%BE%E7%81%B5%E5%AE%8C%E5%A4%87%E6%B8%B8%E6%88%8F%E6%94%BB%E7%95%A5/mod4.png"
 	width="1178"
 	height="1047"
@@ -656,7 +663,228 @@ label的定义的关键字是<code>loop</code>，也就是，后面如果读到�
 		data-flex-grow="112"
 		data-flex-basis="270px"
 	
+>
+因为模的数是4，是2的倍数，也就是说，我只需要拿到这个数的最后两位就好了，看到这个我第一反应是，直接移位，我写乘法器的过程中有使用过移位的一个计算工具，</p>
+<p>但现在去细看ALU元件输入输出我才意识到，取最后两位我可以让<span style="color:red">一个数的最后两位同时亮起然后进行and操作</span>，也就是说，其他部分全是0的地方，会被直接不并入计算，</p>
+<p><img src="/p/%E5%9B%BE%E7%81%B5%E5%AE%8C%E5%A4%87%E6%B8%B8%E6%88%8F%E6%94%BB%E7%95%A5/how-to-use-and.png"
+	width="1513"
+	height="788"
+	srcset="/p/%E5%9B%BE%E7%81%B5%E5%AE%8C%E5%A4%87%E6%B8%B8%E6%88%8F%E6%94%BB%E7%95%A5/how-to-use-and_hu_6a6b04cd0e6fb27d.png 480w, /p/%E5%9B%BE%E7%81%B5%E5%AE%8C%E5%A4%87%E6%B8%B8%E6%88%8F%E6%94%BB%E7%95%A5/how-to-use-and_hu_343b5b96231f4843.png 1024w"
+	loading="lazy"
+	
+		alt="and"
+	
+	
+		class="gallery-image" 
+		data-flex-grow="192"
+		data-flex-basis="460px"
+	
 ></p>
+<p>想明白这个之后我瞬间意识到，前面的移位的器件可能能优化，但转念一想也不对，因为这个移位操作，要独立的1，2，4，8，16这样的2的倍数，依旧是需要生成8位通道的，也不一定能做成这个优化</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">3
+</span></span><span class="line"><span class="cl">reg0_to_reg2
+</span></span><span class="line"><span class="cl">in_to_reg1
+</span></span><span class="line"><span class="cl">and
+</span></span><span class="line"><span class="cl">reg3_to_out
+</span></span></code></pre></div><p>这关就走通了</p>
+<h2 id="迷宫">迷宫
+</h2><p><img src="/p/%E5%9B%BE%E7%81%B5%E5%AE%8C%E5%A4%87%E6%B8%B8%E6%88%8F%E6%94%BB%E7%95%A5/labyrinth.png"
+	width="1697"
+	height="859"
+	srcset="/p/%E5%9B%BE%E7%81%B5%E5%AE%8C%E5%A4%87%E6%B8%B8%E6%88%8F%E6%94%BB%E7%95%A5/labyrinth_hu_56c1e2c2adcb646b.png 480w, /p/%E5%9B%BE%E7%81%B5%E5%AE%8C%E5%A4%87%E6%B8%B8%E6%88%8F%E6%94%BB%E7%95%A5/labyrinth_hu_a0ccfea2a09b2b3d.png 1024w"
+	loading="lazy"
+	
+		alt="迷宫"
+	
+	
+		class="gallery-image" 
+		data-flex-grow="197"
+		data-flex-basis="474px"
+	
+></p>
+<p>这玩意就让我想到了以前有说的，摸着墙走通关什么的，但该说不说确实可行，以左转为例，逻辑也就是左转，碰墙就转弯</p>
+<p><img src="/p/%E5%9B%BE%E7%81%B5%E5%AE%8C%E5%A4%87%E6%B8%B8%E6%88%8F%E6%94%BB%E7%95%A5/the-way-for-turn-lift-all-the-time.png"
+	width="1167"
+	height="665"
+	srcset="/p/%E5%9B%BE%E7%81%B5%E5%AE%8C%E5%A4%87%E6%B8%B8%E6%88%8F%E6%94%BB%E7%95%A5/the-way-for-turn-lift-all-the-time_hu_d0e8f6c732f1564d.png 480w, /p/%E5%9B%BE%E7%81%B5%E5%AE%8C%E5%A4%87%E6%B8%B8%E6%88%8F%E6%94%BB%E7%95%A5/the-way-for-turn-lift-all-the-time_hu_b1d87b8cdb5dfb5b.png 1024w"
+	loading="lazy"
+	
+		alt="一直左转路线"
+	
+	
+		class="gallery-image" 
+		data-flex-grow="175"
+		data-flex-basis="421px"
+	
+></p>
+<p>这样逻辑可行但总感觉少吃了点金币（贪），但好像也有办法实现，先看看正常的实现吧，实现完了再去看看</p>
+<p><img src="/p/%E5%9B%BE%E7%81%B5%E5%AE%8C%E5%A4%87%E6%B8%B8%E6%88%8F%E6%94%BB%E7%95%A5/introduction-set-help.png"
+	width="910"
+	height="747"
+	srcset="/p/%E5%9B%BE%E7%81%B5%E5%AE%8C%E5%A4%87%E6%B8%B8%E6%88%8F%E6%94%BB%E7%95%A5/introduction-set-help_hu_35141ef20ec3f985.png 480w, /p/%E5%9B%BE%E7%81%B5%E5%AE%8C%E5%A4%87%E6%B8%B8%E6%88%8F%E6%94%BB%E7%95%A5/introduction-set-help_hu_8b150c985a4cbc3d.png 1024w"
+	loading="lazy"
+	
+		alt="汇编指南"
+	
+	
+		class="gallery-image" 
+		data-flex-grow="121"
+		data-flex-basis="292px"
+	
+>
+<img src="/p/%E5%9B%BE%E7%81%B5%E5%AE%8C%E5%A4%87%E6%B8%B8%E6%88%8F%E6%94%BB%E7%95%A5/robot-control-code.png"
+	width="1246"
+	height="791"
+	srcset="/p/%E5%9B%BE%E7%81%B5%E5%AE%8C%E5%A4%87%E6%B8%B8%E6%88%8F%E6%94%BB%E7%95%A5/robot-control-code_hu_3588c283ff7a593e.png 480w, /p/%E5%9B%BE%E7%81%B5%E5%AE%8C%E5%A4%87%E6%B8%B8%E6%88%8F%E6%94%BB%E7%95%A5/robot-control-code_hu_669179163fa17c79.png 1024w"
+	loading="lazy"
+	
+		alt="机器人控制指令"
+	
+	
+		class="gallery-image" 
+		data-flex-grow="157"
+		data-flex-basis="378px"
+	
+>
+根据以上最先写好的肯定是直接const好机器人的指令，总是用0，1的来看终究还是不方便
+<img src="/p/%E5%9B%BE%E7%81%B5%E5%AE%8C%E5%A4%87%E6%B8%B8%E6%88%8F%E6%94%BB%E7%95%A5/const-for-robot-do.png"
+	width="1902"
+	height="961"
+	srcset="/p/%E5%9B%BE%E7%81%B5%E5%AE%8C%E5%A4%87%E6%B8%B8%E6%88%8F%E6%94%BB%E7%95%A5/const-for-robot-do_hu_1cb3adea7f9b4e08.png 480w, /p/%E5%9B%BE%E7%81%B5%E5%AE%8C%E5%A4%87%E6%B8%B8%E6%88%8F%E6%94%BB%E7%95%A5/const-for-robot-do_hu_37a38b150368bdcd.png 1024w"
+	loading="lazy"
+	
+		alt="指令对照"
+	
+	
+		class="gallery-image" 
+		data-flex-grow="197"
+		data-flex-basis="475px"
+	
+></p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-gdscript3" data-lang="gdscript3"><span class="line"><span class="cl"><span class="k">const</span> <span class="n">left_num</span> <span class="mi">0</span>
+</span></span><span class="line"><span class="cl"><span class="k">const</span> <span class="n">advance_num</span> <span class="mi">1</span>
+</span></span><span class="line"><span class="cl"><span class="k">const</span> <span class="n">right_num</span> <span class="mi">2</span>
+</span></span><span class="line"><span class="cl"><span class="k">const</span> <span class="n">get_object</span> <span class="mi">4</span>
+</span></span><span class="line"><span class="cl"><span class="k">const</span> <span class="n">stay</span> <span class="mi">3</span>
+</span></span></code></pre></div><p>细致来考虑一下，先检测当前前方物体，是墙右转，如果一直是墙就一直右转（总不能被四处围着吧），如果不是墙，是跳转到直行处执行直行操作，但是一开始我对这样的if操作有点犹豫，因为考虑到可能比如左转</p>
+<p>不管了，先来画个思维导图吧，如果全部要在脑子里面实现感觉又会卡不少时间了，画好了，如下</p>
+<p><img src="/p/%E5%9B%BE%E7%81%B5%E5%AE%8C%E5%A4%87%E6%B8%B8%E6%88%8F%E6%94%BB%E7%95%A5/mindmap-forlabyrinth.png"
+	width="1601"
+	height="798"
+	srcset="/p/%E5%9B%BE%E7%81%B5%E5%AE%8C%E5%A4%87%E6%B8%B8%E6%88%8F%E6%94%BB%E7%95%A5/mindmap-forlabyrinth_hu_164ed0b26448595a.png 480w, /p/%E5%9B%BE%E7%81%B5%E5%AE%8C%E5%A4%87%E6%B8%B8%E6%88%8F%E6%94%BB%E7%95%A5/mindmap-forlabyrinth_hu_bbc15dda942a3590.png 1024w"
+	loading="lazy"
+	
+		alt="思维导图"
+	
+	
+		class="gallery-image" 
+		data-flex-grow="200"
+		data-flex-basis="481px"
+	
+></p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl"># init the sub_num for judging if the object is wall or not
+</span></span><span class="line"><span class="cl">1
+</span></span><span class="line"><span class="cl">reg0_to_reg2
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">label left_loop
+</span></span><span class="line"><span class="cl"># turn left
+</span></span><span class="line"><span class="cl">left_num
+</span></span><span class="line"><span class="cl">reg0_to_out
+</span></span><span class="line"><span class="cl"># judge object
+</span></span><span class="line"><span class="cl">get_object
+</span></span><span class="line"><span class="cl">in_to_reg1
+</span></span><span class="line"><span class="cl">sub
+</span></span><span class="line"><span class="cl"># if it&#39;s wall, it&#39;ll change the count num
+</span></span><span class="line"><span class="cl">turn_left_but_not_wall
+</span></span><span class="line"><span class="cl">if_reg3_not0
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"># if this code to end will be executed, that means the left is wall
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">...
+</span></span><span class="line"><span class="cl"># end
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">turn_left_but_not_wall
+</span></span><span class="line"><span class="cl">advance_num
+</span></span><span class="line"><span class="cl">reg0_to_out
+</span></span><span class="line"><span class="cl">left_loop
+</span></span><span class="line"><span class="cl">always
+</span></span></code></pre></div><p>要做的事已经在上面有所备注，其中我也算是明白了，有些函数为什么要放在末尾，在matlab里，可能类似就是这样的实现吧，因为对于这个语言来说放在开头可能会覆盖其他执行顺序，
+虽然也只是我猜的, 放在最末尾然后重新跳转回前面的一个位置，如同上述代码，这样就完成了左转，不是墙分支的代码实现</p>
+<p>开始实现下一个分支，也就第一个选项是墙的情况</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">right_num
+</span></span><span class="line"><span class="cl">reg0_to_out
+</span></span><span class="line"><span class="cl">get_object
+</span></span><span class="line"><span class="cl">in_to_reg1
+</span></span><span class="line"><span class="cl">sub
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">second_judge_not_wall
+</span></span><span class="line"><span class="cl">if_reg3_not0
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"># if it&#39;s wall,turn right and stay 
+</span></span><span class="line"><span class="cl"># in the same place
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">#end
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">label second_judge_not_wall
+</span></span><span class="line"><span class="cl">advance_num
+</span></span><span class="line"><span class="cl">reg0_to_out
+</span></span><span class="line"><span class="cl">left_loop
+</span></span><span class="line"><span class="cl">always
+</span></span></code></pre></div><p>但在这里发现，第二次判断好像跟第一次判断有重合的地方，我可以直接合并成advance分支，执行完直接回loop就行了</p>
+<p>这里解释一下，右转原地待命由于右转本来就占用了一个机器人的执行时间单位了，以及迷宫没有对时间的要求，所以stay原地待命操作可以直接不执行，只要执行转向即可跳转</p>
+<p>不好意思上面get_object忘记给输出了，需要都补上reg0_to_out才能把物品ID返回输入</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-gdscript3" data-lang="gdscript3"><span class="line"><span class="cl"><span class="k">const</span> <span class="n">left_num</span> <span class="mi">0</span>
+</span></span><span class="line"><span class="cl"><span class="k">const</span> <span class="n">advance_num</span> <span class="mi">1</span>
+</span></span><span class="line"><span class="cl"><span class="k">const</span> <span class="n">right_num</span> <span class="mi">2</span>
+</span></span><span class="line"><span class="cl"><span class="k">const</span> <span class="n">get_object</span> <span class="mi">4</span>
+</span></span><span class="line"><span class="cl"><span class="k">const</span> <span class="n">stay</span> <span class="mi">3</span>
+</span></span><span class="line"><span class="cl"><span class="c1"># gold_id 8</span>
+</span></span><span class="line"><span class="cl"><span class="c1"># wall_id 1</span>
+</span></span><span class="line"><span class="cl"><span class="c1"># nothing 0</span>
+</span></span><span class="line"><span class="cl"><span class="c1"># door 3</span>
+</span></span><span class="line"><span class="cl"><span class="c1"># init the sub_num for judging if the object is wall or not</span>
+</span></span><span class="line"><span class="cl"><span class="mi">1</span>
+</span></span><span class="line"><span class="cl"><span class="n">reg0_to_reg2</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="n">label</span> <span class="n">left_loop</span>
+</span></span><span class="line"><span class="cl"><span class="c1"># turn left</span>
+</span></span><span class="line"><span class="cl"><span class="n">left_num</span>
+</span></span><span class="line"><span class="cl"><span class="n">reg0_to_out</span>
+</span></span><span class="line"><span class="cl"><span class="c1"># judge object</span>
+</span></span><span class="line"><span class="cl"><span class="n">get_object</span>
+</span></span><span class="line"><span class="cl"><span class="n">reg0_to_out</span>
+</span></span><span class="line"><span class="cl"><span class="n">in_to_reg1</span>
+</span></span><span class="line"><span class="cl"><span class="n">sub</span>
+</span></span><span class="line"><span class="cl"><span class="c1"># if it&#39;s wall, it&#39;ll change the count num</span>
+</span></span><span class="line"><span class="cl"><span class="n">advance</span>
+</span></span><span class="line"><span class="cl"><span class="n">if_reg3_not0</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># if this code to end will be executed, that means the left is wall</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="n">right_num</span>
+</span></span><span class="line"><span class="cl"><span class="n">reg0_to_out</span>
+</span></span><span class="line"><span class="cl"><span class="n">get_object</span>
+</span></span><span class="line"><span class="cl"><span class="n">reg0_to_out</span>
+</span></span><span class="line"><span class="cl"><span class="n">in_to_reg1</span>
+</span></span><span class="line"><span class="cl"><span class="n">sub</span>
+</span></span><span class="line"><span class="cl"><span class="c1"># if it&#39;s not wall, advance</span>
+</span></span><span class="line"><span class="cl"><span class="n">advance</span>
+</span></span><span class="line"><span class="cl"><span class="n">if_reg3_not0</span>
+</span></span><span class="line"><span class="cl"><span class="c1"># if it&#39;s wall,turn right and stay in the same place</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="n">right_num</span>
+</span></span><span class="line"><span class="cl"><span class="n">reg0_to_out</span>
+</span></span><span class="line"><span class="cl"><span class="n">left_loop</span>
+</span></span><span class="line"><span class="cl"><span class="n">always</span>
+</span></span><span class="line"><span class="cl"><span class="c1"># end</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="n">label</span> <span class="n">advance</span>
+</span></span><span class="line"><span class="cl"><span class="n">advance_num</span>
+</span></span><span class="line"><span class="cl"><span class="n">reg0_to_out</span>
+</span></span><span class="line"><span class="cl"><span class="n">left_loop</span>
+</span></span><span class="line"><span class="cl"><span class="n">always</span>
+</span></span></code></pre></div><p>因为东西太满了，我打算新开一篇，下一篇链接(还没更新，更新完链接放这里)</p>
 
 </section>
 
