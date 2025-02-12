@@ -42,20 +42,20 @@
         
         <guid>https://adeepblue.github.io/%E6%9B%B4%E6%96%B0%E6%97%A5%E5%BF%97/</guid>
         <description>&lt;h1 id=&#34;更新记录&#34;&gt;更新记录
-&lt;/h1&gt;&lt;h2 id=&#34;heading&#34;&gt;
-&lt;/h2&gt;&lt;h2 id=&#34;heading-1&#34;&gt;
-&lt;/h2&gt;&lt;p&gt;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;2025-02-11更新&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&lt;/p&gt;
-&lt;p&gt;更新了整篇python requests SSLError的报错解决办法相关内容&lt;/p&gt;
-&lt;p&gt;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;2025-02-10更新&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&lt;/p&gt;
-&lt;p&gt;更新了LM studio 关闭开机启动 部分的内容
+&lt;/h1&gt;&lt;h2 id=&#34;---------------2025-02-12更新---------------------&#34;&gt;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;2025-02-12更新&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;
+&lt;/h2&gt;&lt;p&gt;更新了一整篇图灵完备游戏攻略2，解决了异或、八位常数，相等，8位异或、无符号小于、有符号小于这些八位运算符&lt;/p&gt;
+&lt;h2 id=&#34;---------------2025-02-11更新---------------------&#34;&gt;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;2025-02-11更新&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;
+&lt;/h2&gt;&lt;p&gt;更新了整篇python requests SSLError的报错解决办法相关内容&lt;/p&gt;
+&lt;h2 id=&#34;---------------2025-02-10更新---------------------&#34;&gt;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;2025-02-10更新&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;
+&lt;/h2&gt;&lt;p&gt;更新了LM studio 关闭开机启动 部分的内容
 更新了左侧边栏部分文字&lt;/p&gt;
 &lt;p&gt;但更新后发现主页少了元素，于是决定回滚版本&lt;/p&gt;
-&lt;p&gt;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;2025-02-09-10-24更新&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&lt;/p&gt;
-&lt;p&gt;左侧标签栏更新了白色蒙版，以及是cmd的一些命令，以及对git处后面的补充，hugo处也有更改，删除了test，新建了关闭LM studio自动更新说明部分的文件夹&lt;/p&gt;
-&lt;p&gt;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;2025-02-09-10-24更新&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&lt;/p&gt;
-&lt;p&gt;更新了图灵完备的游戏攻略内容&lt;/p&gt;
-&lt;p&gt;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;2025-02-08-14-00更新&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&lt;/p&gt;
-&lt;p&gt;增加了python matplotlib的常用函数介绍，待补充的有3D绘图模块，其他模块requests.get的SSLError部分
+&lt;h2 id=&#34;---------------2025-02-09-10-24更新---------------&#34;&gt;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;2025-02-09-10-24更新&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;
+&lt;/h2&gt;&lt;p&gt;左侧标签栏更新了白色蒙版，以及是cmd的一些命令，以及对git处后面的补充，hugo处也有更改，删除了test，新建了关闭LM studio自动更新说明部分的文件夹&lt;/p&gt;
+&lt;h2 id=&#34;---------------2025-02-09-10-24更新----------------1&#34;&gt;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;2025-02-09-10-24更新&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;
+&lt;/h2&gt;&lt;p&gt;更新了图灵完备的游戏攻略内容&lt;/p&gt;
+&lt;h2 id=&#34;---------------2025-02-08-14-00更新---------------&#34;&gt;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;2025-02-08-14-00更新&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;
+&lt;/h2&gt;&lt;p&gt;增加了python matplotlib的常用函数介绍，待补充的有3D绘图模块，其他模块requests.get的SSLError部分
 以及LM studio自动更新说明部分&lt;/p&gt;
 </description>
         </item>

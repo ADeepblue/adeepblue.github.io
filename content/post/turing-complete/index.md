@@ -3,7 +3,7 @@ date = '2025-02-06T10:07:57+08:00'
 draft = false
 title = '图灵完备游戏攻略'
 description = "目前计算机的布局以及密码锁、太空入侵者、时间掩码的解法思路"
-image = 'Logo.png'
+image = "/image/Turing-Complete-Logo.png"
 categories = [
     "steamgame"
 ]
