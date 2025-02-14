@@ -7,7 +7,345 @@
         <generator>Hugo -- gohugo.io</generator>
         <language>zh-cn</language>
         <copyright>深蓝之亘</copyright>
-        <lastBuildDate>Wed, 12 Feb 2025 15:23:34 +0800</lastBuildDate><atom:link href="https://adeepblue.github.io/index.xml" rel="self" type="application/rss+xml" /><item>
+        <lastBuildDate>Thu, 13 Feb 2025 16:21:04 +0800</lastBuildDate><atom:link href="https://adeepblue.github.io/index.xml" rel="self" type="application/rss+xml" /><item>
+        <title>图灵完备游戏攻略3</title>
+        <link>https://adeepblue.github.io/p/%E5%9B%BE%E7%81%B5%E5%AE%8C%E5%A4%87%E6%B8%B8%E6%88%8F%E6%94%BB%E7%95%A53/</link>
+        <pubDate>Thu, 13 Feb 2025 16:21:04 +0800</pubDate>
+        
+        <guid>https://adeepblue.github.io/p/%E5%9B%BE%E7%81%B5%E5%AE%8C%E5%A4%87%E6%B8%B8%E6%88%8F%E6%94%BB%E7%95%A53/</guid>
+        <description>&lt;img src="https://adeepblue.github.io/image/Turing-Complete-Logo.png" alt="Featured image of post 图灵完备游戏攻略3" /&gt;&lt;h1 id=&#34;图灵完备部分游戏攻略&#34;&gt;图灵完备部分游戏攻略
+&lt;/h1&gt;&lt;h2 id=&#34;宽指令&#34;&gt;宽指令
+&lt;/h2&gt;&lt;p&gt;&lt;img src=&#34;https://adeepblue.github.io/p/%E5%9B%BE%E7%81%B5%E5%AE%8C%E5%A4%87%E6%B8%B8%E6%88%8F%E6%94%BB%E7%95%A53/Wide-instruction.png&#34;
+	width=&#34;1492&#34;
+	height=&#34;988&#34;
+	srcset=&#34;https://adeepblue.github.io/p/%E5%9B%BE%E7%81%B5%E5%AE%8C%E5%A4%87%E6%B8%B8%E6%88%8F%E6%94%BB%E7%95%A53/Wide-instruction_hu_cbfb11152500250b.png 480w, https://adeepblue.github.io/p/%E5%9B%BE%E7%81%B5%E5%AE%8C%E5%A4%87%E6%B8%B8%E6%88%8F%E6%94%BB%E7%95%A53/Wide-instruction_hu_ed7862908053c5ee.png 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;要求&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;151&#34;
+		data-flex-basis=&#34;362px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;p&gt;要求偶数刻存储，奇数刻一次输出存储的一个值和本身程序的值，也就是说，我需要调用一个寄存器，然后用一个分线器，查看一下最低位的1的值就知道现在是奇数偶数了，
+偶数时刻，比如说0，也就是说1位处于低电平的时候写入寄存器，也就是需要套一个非门，因为程序的输出口还有直接输出到输出的功能，所以最好给程序输出口套一个八位开关，没有低电平的时候直接不输出值，
+这样偶数刻的操作就结束了，再有奇数刻要输出两个数的值，也就是说，1位高电平亮起，同时，控制寄存器一位和程序一位分别向输出口输出即可，分别套一个八位开关
+如下：&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://adeepblue.github.io/p/%E5%9B%BE%E7%81%B5%E5%AE%8C%E5%A4%87%E6%B8%B8%E6%88%8F%E6%94%BB%E7%95%A53/Wide-instruction-solve.png&#34;
+	width=&#34;1674&#34;
+	height=&#34;1009&#34;
+	srcset=&#34;https://adeepblue.github.io/p/%E5%9B%BE%E7%81%B5%E5%AE%8C%E5%A4%87%E6%B8%B8%E6%88%8F%E6%94%BB%E7%95%A53/Wide-instruction-solve_hu_48c78e96e2726ba9.png 480w, https://adeepblue.github.io/p/%E5%9B%BE%E7%81%B5%E5%AE%8C%E5%A4%87%E6%B8%B8%E6%88%8F%E6%94%BB%E7%95%A53/Wide-instruction-solve_hu_c0d29fc005e66974.png 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;解法&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;165&#34;
+		data-flex-basis=&#34;398px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;h2 id=&#34;一把线像挂面&#34;&gt;一把线，像挂面
+&lt;/h2&gt;&lt;p&gt;&lt;img src=&#34;https://adeepblue.github.io/p/%E5%9B%BE%E7%81%B5%E5%AE%8C%E5%A4%87%E6%B8%B8%E6%88%8F%E6%94%BB%E7%95%A53/new-architecture-require-1.png&#34;
+	width=&#34;774&#34;
+	height=&#34;508&#34;
+	srcset=&#34;https://adeepblue.github.io/p/%E5%9B%BE%E7%81%B5%E5%AE%8C%E5%A4%87%E6%B8%B8%E6%88%8F%E6%94%BB%E7%95%A53/new-architecture-require-1_hu_48765ed6236ee3be.png 480w, https://adeepblue.github.io/p/%E5%9B%BE%E7%81%B5%E5%AE%8C%E5%A4%87%E6%B8%B8%E6%88%8F%E6%94%BB%E7%95%A53/new-architecture-require-1_hu_ec1899faad8f3c72.png 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;要求说明1&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;152&#34;
+		data-flex-basis=&#34;365px&#34;
+	
+&gt;
+&lt;img src=&#34;https://adeepblue.github.io/p/%E5%9B%BE%E7%81%B5%E5%AE%8C%E5%A4%87%E6%B8%B8%E6%88%8F%E6%94%BB%E7%95%A53/new-architecture-require-2.png&#34;
+	width=&#34;572&#34;
+	height=&#34;394&#34;
+	srcset=&#34;https://adeepblue.github.io/p/%E5%9B%BE%E7%81%B5%E5%AE%8C%E5%A4%87%E6%B8%B8%E6%88%8F%E6%94%BB%E7%95%A53/new-architecture-require-2_hu_a2e96c6061c7a85a.png 480w, https://adeepblue.github.io/p/%E5%9B%BE%E7%81%B5%E5%AE%8C%E5%A4%87%E6%B8%B8%E6%88%8F%E6%94%BB%E7%95%A53/new-architecture-require-2_hu_1d55e3c7cb411bd1.png 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;要求说明2&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;145&#34;
+		data-flex-basis=&#34;348px&#34;
+	
+&gt;
+&lt;img src=&#34;https://adeepblue.github.io/p/%E5%9B%BE%E7%81%B5%E5%AE%8C%E5%A4%87%E6%B8%B8%E6%88%8F%E6%94%BB%E7%95%A53/new-architecture-require-3.png&#34;
+	width=&#34;766&#34;
+	height=&#34;503&#34;
+	srcset=&#34;https://adeepblue.github.io/p/%E5%9B%BE%E7%81%B5%E5%AE%8C%E5%A4%87%E6%B8%B8%E6%88%8F%E6%94%BB%E7%95%A53/new-architecture-require-3_hu_aa4e7450fa6a5783.png 480w, https://adeepblue.github.io/p/%E5%9B%BE%E7%81%B5%E5%AE%8C%E5%A4%87%E6%B8%B8%E6%88%8F%E6%94%BB%E7%95%A53/new-architecture-require-3_hu_e4a3d821d0af346b.png 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;要求说明3&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;152&#34;
+		data-flex-basis=&#34;365px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://adeepblue.github.io/p/%E5%9B%BE%E7%81%B5%E5%AE%8C%E5%A4%87%E6%B8%B8%E6%88%8F%E6%94%BB%E7%95%A53/new-architecture-require-4.png&#34;
+	width=&#34;739&#34;
+	height=&#34;510&#34;
+	srcset=&#34;https://adeepblue.github.io/p/%E5%9B%BE%E7%81%B5%E5%AE%8C%E5%A4%87%E6%B8%B8%E6%88%8F%E6%94%BB%E7%95%A53/new-architecture-require-4_hu_8cdb7fc66c09b589.png 480w, https://adeepblue.github.io/p/%E5%9B%BE%E7%81%B5%E5%AE%8C%E5%A4%87%E6%B8%B8%E6%88%8F%E6%94%BB%E7%95%A53/new-architecture-require-4_hu_5a1dc18ddcbdaf74.png 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;要求说明4&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;144&#34;
+		data-flex-basis=&#34;347px&#34;
+	
+&gt;
+&lt;img src=&#34;https://adeepblue.github.io/p/%E5%9B%BE%E7%81%B5%E5%AE%8C%E5%A4%87%E6%B8%B8%E6%88%8F%E6%94%BB%E7%95%A53/new-architecture-require-5.png&#34;
+	width=&#34;757&#34;
+	height=&#34;505&#34;
+	srcset=&#34;https://adeepblue.github.io/p/%E5%9B%BE%E7%81%B5%E5%AE%8C%E5%A4%87%E6%B8%B8%E6%88%8F%E6%94%BB%E7%95%A53/new-architecture-require-5_hu_4a4fdb7557844a8c.png 480w, https://adeepblue.github.io/p/%E5%9B%BE%E7%81%B5%E5%AE%8C%E5%A4%87%E6%B8%B8%E6%88%8F%E6%94%BB%E7%95%A53/new-architecture-require-5_hu_5a787b7540ff3284.png 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;要求说明5&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;149&#34;
+		data-flex-basis=&#34;359px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;p&gt;按照它上面说的，先将计数器步进设置为4&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://adeepblue.github.io/p/%E5%9B%BE%E7%81%B5%E5%AE%8C%E5%A4%87%E6%B8%B8%E6%88%8F%E6%94%BB%E7%95%A53/set-step.png&#34;
+	width=&#34;1920&#34;
+	height=&#34;1080&#34;
+	srcset=&#34;https://adeepblue.github.io/p/%E5%9B%BE%E7%81%B5%E5%AE%8C%E5%A4%87%E6%B8%B8%E6%88%8F%E6%94%BB%E7%95%A53/set-step_hu_86f46e51106089e9.png 480w, https://adeepblue.github.io/p/%E5%9B%BE%E7%81%B5%E5%AE%8C%E5%A4%87%E6%B8%B8%E6%88%8F%E6%94%BB%E7%95%A53/set-step_hu_ff2e45a4f71c2cce.png 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;说明&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;177&#34;
+		data-flex-basis=&#34;426px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;p&gt;以及是根据要求说明2里的图，后三个都是操作地址，也就是说，后三个全部需要用到分线装置控制到哪一位，这就可能要点布置&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://adeepblue.github.io/p/%E5%9B%BE%E7%81%B5%E5%AE%8C%E5%A4%87%E6%B8%B8%E6%88%8F%E6%94%BB%E7%95%A53/8bit-8-select-1-8bit.png&#34;
+	width=&#34;852&#34;
+	height=&#34;1054&#34;
+	srcset=&#34;https://adeepblue.github.io/p/%E5%9B%BE%E7%81%B5%E5%AE%8C%E5%A4%87%E6%B8%B8%E6%88%8F%E6%94%BB%E7%95%A53/8bit-8-select-1-8bit_hu_f719f8335691d43b.png 480w, https://adeepblue.github.io/p/%E5%9B%BE%E7%81%B5%E5%AE%8C%E5%A4%87%E6%B8%B8%E6%88%8F%E6%94%BB%E7%95%A53/8bit-8-select-1-8bit_hu_a526c825eb72ce00.png 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;改造后的8位数据8选1元件&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;80&#34;
+		data-flex-basis=&#34;194px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;p&gt;首先如上改造了一下以前的八选一的数据元器件，改成8bit好方便输入&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://adeepblue.github.io/p/%E5%9B%BE%E7%81%B5%E5%AE%8C%E5%A4%87%E6%B8%B8%E6%88%8F%E6%94%BB%E7%95%A53/8bit-8-select-1-8bit-in-main-1.png&#34;
+	width=&#34;1223&#34;
+	height=&#34;750&#34;
+	srcset=&#34;https://adeepblue.github.io/p/%E5%9B%BE%E7%81%B5%E5%AE%8C%E5%A4%87%E6%B8%B8%E6%88%8F%E6%94%BB%E7%95%A53/8bit-8-select-1-8bit-in-main-1_hu_b737d43b91d5740e.png 480w, https://adeepblue.github.io/p/%E5%9B%BE%E7%81%B5%E5%AE%8C%E5%A4%87%E6%B8%B8%E6%88%8F%E6%94%BB%E7%95%A53/8bit-8-select-1-8bit-in-main-1_hu_83250d36737d2b27.png 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;布线&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;163&#34;
+		data-flex-basis=&#34;391px&#34;
+	
+&gt;
+&lt;img src=&#34;https://adeepblue.github.io/p/%E5%9B%BE%E7%81%B5%E5%AE%8C%E5%A4%87%E6%B8%B8%E6%88%8F%E6%94%BB%E7%95%A53/describe-ALU.png&#34;
+	width=&#34;1510&#34;
+	height=&#34;984&#34;
+	srcset=&#34;https://adeepblue.github.io/p/%E5%9B%BE%E7%81%B5%E5%AE%8C%E5%A4%87%E6%B8%B8%E6%88%8F%E6%94%BB%E7%95%A53/describe-ALU_hu_7d818dc42d99d882.png 480w, https://adeepblue.github.io/p/%E5%9B%BE%E7%81%B5%E5%AE%8C%E5%A4%87%E6%B8%B8%E6%88%8F%E6%94%BB%E7%95%A53/describe-ALU_hu_73984e4bd68966c8.png 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;补一下ALU的描述&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;153&#34;
+		data-flex-basis=&#34;368px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;p&gt;后悔没补上ALU的描述，因为刚才报错我以为要求说明4里的add确实是0输入ALU里面的0了，结果不是，ADD在ALU里对应的控制码是4，那我就补一下，因为现在反正也是临时的，
+不确定后面的控制码要求是什么样的，毕竟0变成add了，那有可能后面ALU也得改，既然现在它要求只是add那我直接就控制码始终是4输入罢，后面要改了再说&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://adeepblue.github.io/p/%E5%9B%BE%E7%81%B5%E5%AE%8C%E5%A4%87%E6%B8%B8%E6%88%8F%E6%94%BB%E7%95%A53/temp-LEG-main-1.png&#34;
+	width=&#34;1388&#34;
+	height=&#34;892&#34;
+	srcset=&#34;https://adeepblue.github.io/p/%E5%9B%BE%E7%81%B5%E5%AE%8C%E5%A4%87%E6%B8%B8%E6%88%8F%E6%94%BB%E7%95%A53/temp-LEG-main-1_hu_c131cfa00c23a193.png 480w, https://adeepblue.github.io/p/%E5%9B%BE%E7%81%B5%E5%AE%8C%E5%A4%87%E6%B8%B8%E6%88%8F%E6%94%BB%E7%95%A53/temp-LEG-main-1_hu_a5f7bdf03e95146a.png 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;第一版临时的布线方案&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;155&#34;
+		data-flex-basis=&#34;373px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;p&gt;第一版布线方案用了之后，发现一旦输出是0了，就输入不到寄存器里了，意识到了这么个问题，但想想，好像是因为本身的问题，因为上面一版布线我直接就是为了省控制位的线，
+直接用了判断输出是否是0来决定是否要写入寄存器，但明显这是个失误，得补上控制线&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://adeepblue.github.io/p/%E5%9B%BE%E7%81%B5%E5%AE%8C%E5%A4%87%E6%B8%B8%E6%88%8F%E6%94%BB%E7%95%A53/LEG-main-1.png&#34;
+	width=&#34;1319&#34;
+	height=&#34;726&#34;
+	srcset=&#34;https://adeepblue.github.io/p/%E5%9B%BE%E7%81%B5%E5%AE%8C%E5%A4%87%E6%B8%B8%E6%88%8F%E6%94%BB%E7%95%A53/LEG-main-1_hu_495a10c2da4f2fa5.png 480w, https://adeepblue.github.io/p/%E5%9B%BE%E7%81%B5%E5%AE%8C%E5%A4%87%E6%B8%B8%E6%88%8F%E6%94%BB%E7%95%A53/LEG-main-1_hu_8ad6cb543a4b4179.png 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;最终方案&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;181&#34;
+		data-flex-basis=&#34;436px&#34;
+	
+&gt;
+&lt;img src=&#34;https://adeepblue.github.io/p/%E5%9B%BE%E7%81%B5%E5%AE%8C%E5%A4%87%E6%B8%B8%E6%88%8F%E6%94%BB%E7%95%A53/LEG-solve-1.png&#34;
+	width=&#34;1198&#34;
+	height=&#34;700&#34;
+	srcset=&#34;https://adeepblue.github.io/p/%E5%9B%BE%E7%81%B5%E5%AE%8C%E5%A4%87%E6%B8%B8%E6%88%8F%E6%94%BB%E7%95%A53/LEG-solve-1_hu_68ea801a5650f527.png 480w, https://adeepblue.github.io/p/%E5%9B%BE%E7%81%B5%E5%AE%8C%E5%A4%87%E6%B8%B8%E6%88%8F%E6%94%BB%E7%95%A53/LEG-solve-1_hu_f6d65093e9e3ea2d.png 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;改动处&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;171&#34;
+		data-flex-basis=&#34;410px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;p&gt;有改动的地方如上，也就是操作码强制被指定4，断开初始操作码，以及是新增控制码&lt;/p&gt;
+&lt;h2 id=&#34;操作码&#34;&gt;操作码
+&lt;/h2&gt;&lt;p&gt;&lt;img src=&#34;https://adeepblue.github.io/p/%E5%9B%BE%E7%81%B5%E5%AE%8C%E5%A4%87%E6%B8%B8%E6%88%8F%E6%94%BB%E7%95%A53/LEG-control-code.png&#34;
+	width=&#34;794&#34;
+	height=&#34;542&#34;
+	srcset=&#34;https://adeepblue.github.io/p/%E5%9B%BE%E7%81%B5%E5%AE%8C%E5%A4%87%E6%B8%B8%E6%88%8F%E6%94%BB%E7%95%A53/LEG-control-code_hu_800fbb79827928c5.png 480w, https://adeepblue.github.io/p/%E5%9B%BE%E7%81%B5%E5%AE%8C%E5%A4%87%E6%B8%B8%E6%88%8F%E6%94%BB%E7%95%A53/LEG-control-code_hu_7f44b72f0514d870.png 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;要求&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;146&#34;
+		data-flex-basis=&#34;351px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;p&gt;只能说，果然不出所料了，控制码有变更了，那也就是意味着，ALU我有条件的话重构一个会好一些了，然后按照对应的控制码调整自定义ALU的位置即可&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://adeepblue.github.io/p/%E5%9B%BE%E7%81%B5%E5%AE%8C%E5%A4%87%E6%B8%B8%E6%88%8F%E6%94%BB%E7%95%A53/custom-LEG-ALU.png&#34;
+	width=&#34;854&#34;
+	height=&#34;1009&#34;
+	srcset=&#34;https://adeepblue.github.io/p/%E5%9B%BE%E7%81%B5%E5%AE%8C%E5%A4%87%E6%B8%B8%E6%88%8F%E6%94%BB%E7%95%A53/custom-LEG-ALU_hu_8557c4bae33d3647.png 480w, https://adeepblue.github.io/p/%E5%9B%BE%E7%81%B5%E5%AE%8C%E5%A4%87%E6%B8%B8%E6%88%8F%E6%94%BB%E7%95%A53/custom-LEG-ALU_hu_e0c934c3feda7854.png 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;定制的ALU元件&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;84&#34;
+		data-flex-basis=&#34;203px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://adeepblue.github.io/p/%E5%9B%BE%E7%81%B5%E5%AE%8C%E5%A4%87%E6%B8%B8%E6%88%8F%E6%94%BB%E7%95%A53/LEG-main-2.png&#34;
+	width=&#34;1920&#34;
+	height=&#34;1080&#34;
+	srcset=&#34;https://adeepblue.github.io/p/%E5%9B%BE%E7%81%B5%E5%AE%8C%E5%A4%87%E6%B8%B8%E6%88%8F%E6%94%BB%E7%95%A53/LEG-main-2_hu_719a652b5c41a109.png 480w, https://adeepblue.github.io/p/%E5%9B%BE%E7%81%B5%E5%AE%8C%E5%A4%87%E6%B8%B8%E6%88%8F%E6%94%BB%E7%95%A53/LEG-main-2_hu_3a2e578d9bce3352.png 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;完成&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;177&#34;
+		data-flex-basis=&#34;426px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;p&gt;最终只要把上述的线给连回去就行了，删掉原来的8bit常数&lt;/p&gt;
+&lt;h2 id=&#34;立即数&#34;&gt;立即数
+&lt;/h2&gt;&lt;p&gt;&lt;img src=&#34;https://adeepblue.github.io/p/%E5%9B%BE%E7%81%B5%E5%AE%8C%E5%A4%87%E6%B8%B8%E6%88%8F%E6%94%BB%E7%95%A53/new-immediate.png&#34;
+	width=&#34;1920&#34;
+	height=&#34;1080&#34;
+	srcset=&#34;https://adeepblue.github.io/p/%E5%9B%BE%E7%81%B5%E5%AE%8C%E5%A4%87%E6%B8%B8%E6%88%8F%E6%94%BB%E7%95%A53/new-immediate_hu_e04a4554cf9a960b.png 480w, https://adeepblue.github.io/p/%E5%9B%BE%E7%81%B5%E5%AE%8C%E5%A4%87%E6%B8%B8%E6%88%8F%E6%94%BB%E7%95%A53/new-immediate_hu_e6ac2a132ee6a813.png 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;新版立即数&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;177&#34;
+		data-flex-basis=&#34;426px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;p&gt;判断是否是立即数模式，我又想造元件了，毕竟，咋说呢，目前8bit后两位是用来判断立即数的，然后前三位是用来判断运算的，估计后面还有加的，不如设计一个元件，
+输出对应立即数模式和计算模式，然后输出对应的东西，这样会快一点，直接放在整个LEG框架空间内就显得太拥挤了，曾经就是输出一位判断码，这次直接输出的是所有控制位，感觉也不错&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://adeepblue.github.io/p/%E5%9B%BE%E7%81%B5%E5%AE%8C%E5%A4%87%E6%B8%B8%E6%88%8F%E6%94%BB%E7%95%A53/last-DEC.png&#34;
+	width=&#34;1222&#34;
+	height=&#34;782&#34;
+	srcset=&#34;https://adeepblue.github.io/p/%E5%9B%BE%E7%81%B5%E5%AE%8C%E5%A4%87%E6%B8%B8%E6%88%8F%E6%94%BB%E7%95%A53/last-DEC_hu_3e98e36e77516d9a.png 480w, https://adeepblue.github.io/p/%E5%9B%BE%E7%81%B5%E5%AE%8C%E5%A4%87%E6%B8%B8%E6%88%8F%E6%94%BB%E7%95%A53/last-DEC_hu_eb4030101603c72e.png 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;过去的解码&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;156&#34;
+		data-flex-basis=&#34;375px&#34;
+	
+&gt;
+&lt;img src=&#34;https://adeepblue.github.io/p/%E5%9B%BE%E7%81%B5%E5%AE%8C%E5%A4%87%E6%B8%B8%E6%88%8F%E6%94%BB%E7%95%A53/LEG-DEC.png&#34;
+	width=&#34;860&#34;
+	height=&#34;811&#34;
+	srcset=&#34;https://adeepblue.github.io/p/%E5%9B%BE%E7%81%B5%E5%AE%8C%E5%A4%87%E6%B8%B8%E6%88%8F%E6%94%BB%E7%95%A53/LEG-DEC_hu_e0c7e0c33246d57e.png 480w, https://adeepblue.github.io/p/%E5%9B%BE%E7%81%B5%E5%AE%8C%E5%A4%87%E6%B8%B8%E6%88%8F%E6%94%BB%E7%95%A53/LEG-DEC_hu_fd223b73fe0521ca.png 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;现在的分流&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;106&#34;
+		data-flex-basis=&#34;254px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;p&gt;以下是目前的布局方案，其中左边处通过解码，上面的三位直接通过新的分流方案通过三位数的传递接替了上面的原布线，而下面的两位控制立即数模式，也就是右边做出的改动，
+输出的两位是两位控制码，也就是输出的数采用原数还是从寄存器里选出来的数，二选一，所以用了八位数据选择器，这样就能运行的通了&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://adeepblue.github.io/p/%E5%9B%BE%E7%81%B5%E5%AE%8C%E5%A4%87%E6%B8%B8%E6%88%8F%E6%94%BB%E7%95%A53/LEG-main-3.png&#34;
+	width=&#34;1920&#34;
+	height=&#34;1080&#34;
+	srcset=&#34;https://adeepblue.github.io/p/%E5%9B%BE%E7%81%B5%E5%AE%8C%E5%A4%87%E6%B8%B8%E6%88%8F%E6%94%BB%E7%95%A53/LEG-main-3_hu_beb8750c20a06a85.png 480w, https://adeepblue.github.io/p/%E5%9B%BE%E7%81%B5%E5%AE%8C%E5%A4%87%E6%B8%B8%E6%88%8F%E6%94%BB%E7%95%A53/LEG-main-3_hu_9dc5f60043b741c.png 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;现在的布局&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;177&#34;
+		data-flex-basis=&#34;426px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;h2 id=&#34;条件判断&#34;&gt;条件判断
+&lt;/h2&gt;&lt;p&gt;现在可以自定义指令集了，顺带改一改吧就，刚差点没找到怎么移动描述的位置，抓住AND右边的引脚拉到最边上再拖动左边的引脚即可&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://adeepblue.github.io/turing-complete-fourth-article/custom-introduction-set.png&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;自定义指令集&#34;
+	
+	
+&gt;&lt;/p&gt;
+&lt;p&gt;下一篇博文见,下一篇链接(还没更新，更新完链接放这里)&lt;/p&gt;
+</description>
+        </item>
+        <item>
         <title>图灵完备游戏攻略2</title>
         <link>https://adeepblue.github.io/p/%E5%9B%BE%E7%81%B5%E5%AE%8C%E5%A4%87%E6%B8%B8%E6%88%8F%E6%94%BB%E7%95%A52/</link>
         <pubDate>Wed, 12 Feb 2025 15:23:34 +0800</pubDate>
@@ -2353,7 +2691,9 @@ styles文件夹复制出来改文件名成highlight-styles后放在/assets/css/�
         
         <guid>https://adeepblue.github.io/%E6%9B%B4%E6%96%B0%E6%97%A5%E5%BF%97/</guid>
         <description>&lt;h1 id=&#34;更新记录&#34;&gt;更新记录
-&lt;/h1&gt;&lt;h2 id=&#34;---------------2025-02-12更新---------------------&#34;&gt;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;2025-02-12更新&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;
+&lt;/h1&gt;&lt;h2 id=&#34;---------------2025-02-14更新---------------------&#34;&gt;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;2025-02-14更新&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;
+&lt;/h2&gt;&lt;p&gt;更新完了图灵完备第三篇攻略，包含宽指令、一把线，像挂面、操作码、立即数、条件判断的破关思路&lt;/p&gt;
+&lt;h2 id=&#34;---------------2025-02-12更新---------------------&#34;&gt;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;2025-02-12更新&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;
 &lt;/h2&gt;&lt;p&gt;更新了一整篇图灵完备游戏攻略2，解决了异或、八位常数，相等，8位异或、无符号小于、有符号小于这些八位运算符&lt;/p&gt;
 &lt;h2 id=&#34;---------------2025-02-11更新---------------------&#34;&gt;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;2025-02-11更新&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;
 &lt;/h2&gt;&lt;p&gt;更新了整篇python requests SSLError的报错解决办法相关内容&lt;/p&gt;
@@ -2361,11 +2701,10 @@ styles文件夹复制出来改文件名成highlight-styles后放在/assets/css/�
 &lt;/h2&gt;&lt;p&gt;更新了LM studio 关闭开机启动 部分的内容
 更新了左侧边栏部分文字&lt;/p&gt;
 &lt;p&gt;但更新后发现主页少了元素，于是决定回滚版本&lt;/p&gt;
-&lt;h2 id=&#34;---------------2025-02-09-10-24更新---------------&#34;&gt;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;2025-02-09-10-24更新&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;
-&lt;/h2&gt;&lt;p&gt;左侧标签栏更新了白色蒙版，以及是cmd的一些命令，以及对git处后面的补充，hugo处也有更改，删除了test，新建了关闭LM studio自动更新说明部分的文件夹&lt;/p&gt;
-&lt;h2 id=&#34;---------------2025-02-09-10-24更新----------------1&#34;&gt;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;2025-02-09-10-24更新&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;
-&lt;/h2&gt;&lt;p&gt;更新了图灵完备的游戏攻略内容&lt;/p&gt;
-&lt;h2 id=&#34;---------------2025-02-08-14-00更新---------------&#34;&gt;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;2025-02-08-14-00更新&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;
+&lt;h2 id=&#34;---------------2025-02-09更新---------------&#34;&gt;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;2025-02-09更新&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;
+&lt;/h2&gt;&lt;p&gt;左侧标签栏更新了白色蒙版，以及是cmd的一些命令，以及对git处后面的补充，hugo处也有更改，删除了test，新建了关闭LM studio自动更新说明部分的文件夹
+更新了图灵完备的游戏攻略内容&lt;/p&gt;
+&lt;h2 id=&#34;---------------2025-02-08更新---------------&#34;&gt;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;2025-02-08更新&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;
 &lt;/h2&gt;&lt;p&gt;增加了python matplotlib的常用函数介绍，待补充的有3D绘图模块，其他模块requests.get的SSLError部分
 以及LM studio自动更新说明部分&lt;/p&gt;
 </description>
