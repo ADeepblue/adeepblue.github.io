@@ -7,7 +7,232 @@
         <generator>Hugo -- gohugo.io</generator>
         <language>zh-cn</language>
         <copyright>深蓝之亘</copyright>
-        <lastBuildDate>Thu, 13 Feb 2025 16:21:04 +0800</lastBuildDate><atom:link href="https://adeepblue.github.io/post/index.xml" rel="self" type="application/rss+xml" /><item>
+        <lastBuildDate>Fri, 14 Feb 2025 15:10:30 +0800</lastBuildDate><atom:link href="https://adeepblue.github.io/post/index.xml" rel="self" type="application/rss+xml" /><item>
+        <title>图灵完备游戏攻略4</title>
+        <link>https://adeepblue.github.io/p/%E5%9B%BE%E7%81%B5%E5%AE%8C%E5%A4%87%E6%B8%B8%E6%88%8F%E6%94%BB%E7%95%A54/</link>
+        <pubDate>Fri, 14 Feb 2025 15:10:30 +0800</pubDate>
+        
+        <guid>https://adeepblue.github.io/p/%E5%9B%BE%E7%81%B5%E5%AE%8C%E5%A4%87%E6%B8%B8%E6%88%8F%E6%94%BB%E7%95%A54/</guid>
+        <description>&lt;img src="https://adeepblue.github.io/image/Turing-Complete-Logo.png" alt="Featured image of post 图灵完备游戏攻略4" /&gt;&lt;h1 id=&#34;图灵完备部分游戏攻略&#34;&gt;图灵完备部分游戏攻略
+&lt;/h1&gt;&lt;h2 id=&#34;条件判断&#34;&gt;条件判断
+&lt;/h2&gt;&lt;p&gt;&lt;img src=&#34;https://adeepblue.github.io/p/%E5%9B%BE%E7%81%B5%E5%AE%8C%E5%A4%87%E6%B8%B8%E6%88%8F%E6%94%BB%E7%95%A54/condition-check-require-1.png&#34;
+	width=&#34;747&#34;
+	height=&#34;510&#34;
+	srcset=&#34;https://adeepblue.github.io/p/%E5%9B%BE%E7%81%B5%E5%AE%8C%E5%A4%87%E6%B8%B8%E6%88%8F%E6%94%BB%E7%95%A54/condition-check-require-1_hu_edfd0783439daea6.png 480w, https://adeepblue.github.io/p/%E5%9B%BE%E7%81%B5%E5%AE%8C%E5%A4%87%E6%B8%B8%E6%88%8F%E6%94%BB%E7%95%A54/condition-check-require-1_hu_92520d88f683917a.png 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;条件判断要求1&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;146&#34;
+		data-flex-basis=&#34;351px&#34;
+	
+&gt;
+&lt;img src=&#34;https://adeepblue.github.io/p/%E5%9B%BE%E7%81%B5%E5%AE%8C%E5%A4%87%E6%B8%B8%E6%88%8F%E6%94%BB%E7%95%A54/condition-check-require-2.png&#34;
+	width=&#34;749&#34;
+	height=&#34;512&#34;
+	srcset=&#34;https://adeepblue.github.io/p/%E5%9B%BE%E7%81%B5%E5%AE%8C%E5%A4%87%E6%B8%B8%E6%88%8F%E6%94%BB%E7%95%A54/condition-check-require-2_hu_1904a003efee3105.png 480w, https://adeepblue.github.io/p/%E5%9B%BE%E7%81%B5%E5%AE%8C%E5%A4%87%E6%B8%B8%E6%88%8F%E6%94%BB%E7%95%A54/condition-check-require-2_hu_90665525ecb78548.png 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;条件判断要求2&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;146&#34;
+		data-flex-basis=&#34;351px&#34;
+	
+&gt;
+&lt;img src=&#34;https://adeepblue.github.io/p/%E5%9B%BE%E7%81%B5%E5%AE%8C%E5%A4%87%E6%B8%B8%E6%88%8F%E6%94%BB%E7%95%A54/condition-check-require-3.png&#34;
+	width=&#34;747&#34;
+	height=&#34;497&#34;
+	srcset=&#34;https://adeepblue.github.io/p/%E5%9B%BE%E7%81%B5%E5%AE%8C%E5%A4%87%E6%B8%B8%E6%88%8F%E6%94%BB%E7%95%A54/condition-check-require-3_hu_ece95d84fc861958.png 480w, https://adeepblue.github.io/p/%E5%9B%BE%E7%81%B5%E5%AE%8C%E5%A4%87%E6%B8%B8%E6%88%8F%E6%94%BB%E7%95%A54/condition-check-require-3_hu_dd772ab552dd8109.png 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;条件判断要求2&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;150&#34;
+		data-flex-basis=&#34;360px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;p&gt;现在可以自定义指令集了，顺带改一改吧就，刚差点没找到怎么移动描述的位置，抓住AND右边的引脚拉到最边上再拖动左边的引脚即可&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://adeepblue.github.io/p/%E5%9B%BE%E7%81%B5%E5%AE%8C%E5%A4%87%E6%B8%B8%E6%88%8F%E6%94%BB%E7%95%A54/custom-introduction-set.png&#34;
+	width=&#34;936&#34;
+	height=&#34;932&#34;
+	srcset=&#34;https://adeepblue.github.io/p/%E5%9B%BE%E7%81%B5%E5%AE%8C%E5%A4%87%E6%B8%B8%E6%88%8F%E6%94%BB%E7%95%A54/custom-introduction-set_hu_10e0796c09561fe8.png 480w, https://adeepblue.github.io/p/%E5%9B%BE%E7%81%B5%E5%AE%8C%E5%A4%87%E6%B8%B8%E6%88%8F%E6%94%BB%E7%95%A54/custom-introduction-set_hu_11b25261a5be4b5f.png 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;自定义指令集&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;100&#34;
+		data-flex-basis=&#34;241px&#34;
+	
+&gt;
+&lt;img src=&#34;https://adeepblue.github.io/p/%E5%9B%BE%E7%81%B5%E5%AE%8C%E5%A4%87%E6%B8%B8%E6%88%8F%E6%94%BB%E7%95%A54/new-introduction-set-1.png&#34;
+	width=&#34;925&#34;
+	height=&#34;941&#34;
+	srcset=&#34;https://adeepblue.github.io/p/%E5%9B%BE%E7%81%B5%E5%AE%8C%E5%A4%87%E6%B8%B8%E6%88%8F%E6%94%BB%E7%95%A54/new-introduction-set-1_hu_2356b79f9851a1d1.png 480w, https://adeepblue.github.io/p/%E5%9B%BE%E7%81%B5%E5%AE%8C%E5%A4%87%E6%B8%B8%E6%88%8F%E6%94%BB%E7%95%A54/new-introduction-set-1_hu_dc6ed7535b36ffbb.png 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;新建的指令集&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;98&#34;
+		data-flex-basis=&#34;235px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;p&gt;通过新建的指令集我们能看到，如果一旦涉及条件判断了，32位是必定亮起的，既然我们之前用过自定义的解码器，这回就得继续在解码器上进行修改了&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://adeepblue.github.io/p/%E5%9B%BE%E7%81%B5%E5%AE%8C%E5%A4%87%E6%B8%B8%E6%88%8F%E6%94%BB%E7%95%A54/new-logic-component-list.png&#34;
+	width=&#34;947&#34;
+	height=&#34;684&#34;
+	srcset=&#34;https://adeepblue.github.io/p/%E5%9B%BE%E7%81%B5%E5%AE%8C%E5%A4%87%E6%B8%B8%E6%88%8F%E6%94%BB%E7%95%A54/new-logic-component-list_hu_614ca44f015a463c.png 480w, https://adeepblue.github.io/p/%E5%9B%BE%E7%81%B5%E5%AE%8C%E5%A4%87%E6%B8%B8%E6%88%8F%E6%94%BB%E7%95%A54/new-logic-component-list_hu_76b9f77ca9ea016b.png 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;新建逻辑输出&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;138&#34;
+		data-flex-basis=&#34;332px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;p&gt;逻辑电路的元器件我就不开图了，在之前我已经发过了，链接放在这&lt;span style=&#34;color:red&#34;&gt;&lt;a class=&#34;link&#34; href=&#34;https://adeepblue.github.io/p/%E5%9B%BE%E7%81%B5%E5%AE%8C%E5%A4%87%E6%B8%B8%E6%88%8F%E6%94%BB%E7%95%A52/#%E6%97%A0%E7%AC%A6%E5%8F%B7%E5%B0%8F%E4%BA%8E&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;点击跳转&lt;/a&gt;&lt;/span&gt;
+小于的搞定了，小于等于条件也就是小于+等于也就是加一个或门就可以了，小于等于反面就是大于，也就是前面小于等于取一个反就可以了，大于等于是小于的反面，同样取反，
+不等于也就是等于的取反，因为这里涉及1bit的信号8选1嘛，又没有这个元件，只好自己写了一个&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://adeepblue.github.io/p/%E5%9B%BE%E7%81%B5%E5%AE%8C%E5%A4%87%E6%B8%B8%E6%88%8F%E6%94%BB%E7%95%A54/1bit-8select1_conponent.png&#34;
+	width=&#34;1274&#34;
+	height=&#34;1051&#34;
+	srcset=&#34;https://adeepblue.github.io/p/%E5%9B%BE%E7%81%B5%E5%AE%8C%E5%A4%87%E6%B8%B8%E6%88%8F%E6%94%BB%E7%95%A54/1bit-8select1_conponent_hu_9f8a72e3091e842f.png 480w, https://adeepblue.github.io/p/%E5%9B%BE%E7%81%B5%E5%AE%8C%E5%A4%87%E6%B8%B8%E6%88%8F%E6%94%BB%E7%95%A54/1bit-8select1_conponent_hu_bcc5cc4f28b29073.png 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;1位8选1选择器&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;121&#34;
+		data-flex-basis=&#34;290px&#34;
+	
+&gt;
+&lt;img src=&#34;https://adeepblue.github.io/p/%E5%9B%BE%E7%81%B5%E5%AE%8C%E5%A4%87%E6%B8%B8%E6%88%8F%E6%94%BB%E7%95%A54/COND-plus-conponent.png&#34;
+	width=&#34;885&#34;
+	height=&#34;1023&#34;
+	srcset=&#34;https://adeepblue.github.io/p/%E5%9B%BE%E7%81%B5%E5%AE%8C%E5%A4%87%E6%B8%B8%E6%88%8F%E6%94%BB%E7%95%A54/COND-plus-conponent_hu_8a0162e65109f12.png 480w, https://adeepblue.github.io/p/%E5%9B%BE%E7%81%B5%E5%AE%8C%E5%A4%87%E6%B8%B8%E6%88%8F%E6%94%BB%E7%95%A54/COND-plus-conponent_hu_b28deda811f1bcac.png 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;LEG框架下的逻辑判断元件&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;86&#34;
+		data-flex-basis=&#34;207px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;p&gt;首先先把COND-plus元件加入main中，并顺带蹭一下隔壁ALU的输入，因为都是一样的，其次用八位开关分别控制输出内容的去向，安排完cond-plus先把它的输出放着，来改动另一边的&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://adeepblue.github.io/p/%E5%9B%BE%E7%81%B5%E5%AE%8C%E5%A4%87%E6%B8%B8%E6%88%8F%E6%94%BB%E7%95%A54/COND-plus-in-LEG-main.png&#34;
+	width=&#34;1211&#34;
+	height=&#34;703&#34;
+	srcset=&#34;https://adeepblue.github.io/p/%E5%9B%BE%E7%81%B5%E5%AE%8C%E5%A4%87%E6%B8%B8%E6%88%8F%E6%94%BB%E7%95%A54/COND-plus-in-LEG-main_hu_8bea070b63101184.png 480w, https://adeepblue.github.io/p/%E5%9B%BE%E7%81%B5%E5%AE%8C%E5%A4%87%E6%B8%B8%E6%88%8F%E6%94%BB%E7%95%A54/COND-plus-in-LEG-main_hu_56a620ca85d0955d.png 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;改动1&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;172&#34;
+		data-flex-basis=&#34;413px&#34;
+	
+&gt;
+&lt;img src=&#34;https://adeepblue.github.io/p/%E5%9B%BE%E7%81%B5%E5%AE%8C%E5%A4%87%E6%B8%B8%E6%88%8F%E6%94%BB%E7%95%A54/some-change-in-LEG-main.png&#34;
+	width=&#34;1633&#34;
+	height=&#34;961&#34;
+	srcset=&#34;https://adeepblue.github.io/p/%E5%9B%BE%E7%81%B5%E5%AE%8C%E5%A4%87%E6%B8%B8%E6%88%8F%E6%94%BB%E7%95%A54/some-change-in-LEG-main_hu_d0fa91f8536c94f2.png 480w, https://adeepblue.github.io/p/%E5%9B%BE%E7%81%B5%E5%AE%8C%E5%A4%87%E6%B8%B8%E6%88%8F%E6%94%BB%E7%95%A54/some-change-in-LEG-main_hu_b9f7fce9cd1c8a37.png 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;左侧程序最后一个值输入处修改&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;169&#34;
+		data-flex-basis=&#34;407px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;p&gt;说明一下左侧的内容，因为切到条件判断之后，原本是作为地址码输入的第四位，变成了直接修改计时器的值的数，因此，它需要两边都有能过的线，下面一侧直接输入的值，
+也就是上面的32位的值，一旦处于1的状态就放行下面这个，使他作为一个数直接输入进计时器，另一侧，原本是直接输入地址码的变成了直接固定以访问计数器栏的值，
+也就是说需要一个二选一的数据选择器，一旦条件改变变成执行条件检查就打到6这侧，这就完了么？不，并没有，还记得上面那一侧的COND的输出么？如果COND输出为0，
+也就是说条件不成立，那么是否应该拦住去计数器的信号呢？那条画着没放全的线，就作为了右边两处方框的控制开关，如果条件没有成立，那就通过开关来自动关闭，即，
+如上&lt;/p&gt;
+&lt;h2 id=&#34;移位&#34;&gt;移位
+&lt;/h2&gt;&lt;p&gt;&lt;img src=&#34;https://adeepblue.github.io/p/%E5%9B%BE%E7%81%B5%E5%AE%8C%E5%A4%87%E6%B8%B8%E6%88%8F%E6%94%BB%E7%95%A54/shift-require.png&#34;
+	width=&#34;1412&#34;
+	height=&#34;1036&#34;
+	srcset=&#34;https://adeepblue.github.io/p/%E5%9B%BE%E7%81%B5%E5%AE%8C%E5%A4%87%E6%B8%B8%E6%88%8F%E6%94%BB%E7%95%A54/shift-require_hu_7667466b7ec4e4e5.png 480w, https://adeepblue.github.io/p/%E5%9B%BE%E7%81%B5%E5%AE%8C%E5%A4%87%E6%B8%B8%E6%88%8F%E6%94%BB%E7%95%A54/shift-require_hu_5af3da16de83b620.png 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;要求说明&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;136&#34;
+		data-flex-basis=&#34;327px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;p&gt;唔，刚好以前写了，就很离谱，当时写乘法运算器的时候用到了&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://adeepblue.github.io/p/%E5%9B%BE%E7%81%B5%E5%AE%8C%E5%A4%87%E6%B8%B8%E6%88%8F%E6%94%BB%E7%95%A54/custom-shift.png&#34;
+	width=&#34;935&#34;
+	height=&#34;1080&#34;
+	srcset=&#34;https://adeepblue.github.io/p/%E5%9B%BE%E7%81%B5%E5%AE%8C%E5%A4%87%E6%B8%B8%E6%88%8F%E6%94%BB%E7%95%A54/custom-shift_hu_363df9b09509a311.png 480w, https://adeepblue.github.io/p/%E5%9B%BE%E7%81%B5%E5%AE%8C%E5%A4%87%E6%B8%B8%E6%88%8F%E6%94%BB%E7%95%A54/custom-shift_hu_edf839820aad450d.png 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;自定义的移位运算器&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;86&#34;
+		data-flex-basis=&#34;207px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;p&gt;当时还采用了两位8bit数的输出，不过看起来这里只需要给一位分配输出就好了，以及还有禁用开关，实际本质上就是把输出的8bit数分线后移位挨个输出，然后另一个按照八位开关考虑好输出哪一位就好了，
+原理其实挺简单，实际画的东西相当多就是了&lt;/p&gt;
+&lt;h2 id=&#34;延迟量&#34;&gt;延迟量
+&lt;/h2&gt;&lt;p&gt;&lt;img src=&#34;https://adeepblue.github.io/p/%E5%9B%BE%E7%81%B5%E5%AE%8C%E5%A4%87%E6%B8%B8%E6%88%8F%E6%94%BB%E7%95%A54/delay_require.png&#34;
+	width=&#34;1920&#34;
+	height=&#34;1080&#34;
+	srcset=&#34;https://adeepblue.github.io/p/%E5%9B%BE%E7%81%B5%E5%AE%8C%E5%A4%87%E6%B8%B8%E6%88%8F%E6%94%BB%E7%95%A54/delay_require_hu_1dbf10ed3357ec63.png 480w, https://adeepblue.github.io/p/%E5%9B%BE%E7%81%B5%E5%AE%8C%E5%A4%87%E6%B8%B8%E6%88%8F%E6%94%BB%E7%95%A54/delay_require_hu_64aaf5235eae6269.png 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;要求&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;177&#34;
+		data-flex-basis=&#34;426px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;p&gt;六个单位延迟量，以及是使用五个nand门，结果需要有变化，nand的突变点在于两个高电平会返回低电平，其他时候都是高电平，那也就是说，如果两个口都接一处，
+两个信号不同的情况会坍缩了，输出相反，同理，这样可以再接一级，再是最后一个nand再改一次，
+&lt;img src=&#34;https://adeepblue.github.io/p/%E5%9B%BE%E7%81%B5%E5%AE%8C%E5%A4%87%E6%B8%B8%E6%88%8F%E6%94%BB%E7%95%A54/delay_solve.png&#34;
+	width=&#34;1732&#34;
+	height=&#34;1066&#34;
+	srcset=&#34;https://adeepblue.github.io/p/%E5%9B%BE%E7%81%B5%E5%AE%8C%E5%A4%87%E6%B8%B8%E6%88%8F%E6%94%BB%E7%95%A54/delay_solve_hu_2858a16462ad27a1.png 480w, https://adeepblue.github.io/p/%E5%9B%BE%E7%81%B5%E5%AE%8C%E5%A4%87%E6%B8%B8%E6%88%8F%E6%94%BB%E7%95%A54/delay_solve_hu_924b3e2189df5432.png 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;最终电路&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;162&#34;
+		data-flex-basis=&#34;389px&#34;
+	
+&gt;&lt;/p&gt;
+</description>
+        </item>
+        <item>
         <title>图灵完备游戏攻略3</title>
         <link>https://adeepblue.github.io/p/%E5%9B%BE%E7%81%B5%E5%AE%8C%E5%A4%87%E6%B8%B8%E6%88%8F%E6%94%BB%E7%95%A53/</link>
         <pubDate>Thu, 13 Feb 2025 16:21:04 +0800</pubDate>
