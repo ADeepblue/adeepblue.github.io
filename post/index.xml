@@ -230,6 +230,139 @@
 		data-flex-basis=&#34;389px&#34;
 	
 &gt;&lt;/p&gt;
+&lt;h2 id=&#34;随机存储器&#34;&gt;随机存储器
+&lt;/h2&gt;&lt;p&gt;&lt;img src=&#34;https://adeepblue.github.io/p/%E5%9B%BE%E7%81%B5%E5%AE%8C%E5%A4%87%E6%B8%B8%E6%88%8F%E6%94%BB%E7%95%A54/random-RAM-require-1.png&#34;
+	width=&#34;1920&#34;
+	height=&#34;1080&#34;
+	srcset=&#34;https://adeepblue.github.io/p/%E5%9B%BE%E7%81%B5%E5%AE%8C%E5%A4%87%E6%B8%B8%E6%88%8F%E6%94%BB%E7%95%A54/random-RAM-require-1_hu_f057e3f64222168.png 480w, https://adeepblue.github.io/p/%E5%9B%BE%E7%81%B5%E5%AE%8C%E5%A4%87%E6%B8%B8%E6%88%8F%E6%94%BB%E7%95%A54/random-RAM-require-1_hu_3d8255b8e7f7d671.png 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;要求1&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;177&#34;
+		data-flex-basis=&#34;426px&#34;
+	
+&gt;
+&lt;img src=&#34;https://adeepblue.github.io/p/%E5%9B%BE%E7%81%B5%E5%AE%8C%E5%A4%87%E6%B8%B8%E6%88%8F%E6%94%BB%E7%95%A54/random-RAM-require-2.png&#34;
+	width=&#34;756&#34;
+	height=&#34;506&#34;
+	srcset=&#34;https://adeepblue.github.io/p/%E5%9B%BE%E7%81%B5%E5%AE%8C%E5%A4%87%E6%B8%B8%E6%88%8F%E6%94%BB%E7%95%A54/random-RAM-require-2_hu_e50b3873f1904111.png 480w, https://adeepblue.github.io/p/%E5%9B%BE%E7%81%B5%E5%AE%8C%E5%A4%87%E6%B8%B8%E6%88%8F%E6%94%BB%E7%95%A54/random-RAM-require-2_hu_66acc4da9ad6f7e2.png 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;要求2&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;149&#34;
+		data-flex-basis=&#34;358px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;p&gt;讲真，我看到这个要求之后，人有点懵，说实话，已经没有额外的寄存器位置可以供分配了，走线都已经布好了，想要撬开其实怪麻烦的，唯一有点头绪的可能是指令集中依旧没分配的其中两位指令资源，
+现在也就考虑16位以及是最后三位的联动了，内存，已知的也就两个功能，读内存和写内存，但是要考虑好怎么搞定，目前实现的就是，一旦涉及内存信号位高电平，意味着这一刻必须断开8位写入器，
+也就是通过一定手段激活禁用开关即可。&lt;/p&gt;
+&lt;p&gt;但又碰到了麻烦，我调试后才发现，最大的问题在于，，说是说依次读取，但是一个时钟刻就进来一位数，写入的时候并没有什么时间执行其他东西，比如说累加，以及是跳转，要打达成这边的循环得有几个必要条件，
+先要有label loop标记循环行，再有if类的条件进行跳转到计数器内进行改变程序执行的位置，其中if和累加必定冲突，if需要占用程序操作位的前3bit，累加需要前三bit是0，
+也不可能俩一起出现，如果这样那只有用丑陋的办法了， 就是代码一行一行自己指定内存写入位，十分的丑陋，我目前没想到啥解决办法，也没去看过官方攻略&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://adeepblue.github.io/p/%E5%9B%BE%E7%81%B5%E5%AE%8C%E5%A4%87%E6%B8%B8%E6%88%8F%E6%94%BB%E7%95%A54/add_a_control_position.png&#34;
+	width=&#34;994&#34;
+	height=&#34;775&#34;
+	srcset=&#34;https://adeepblue.github.io/p/%E5%9B%BE%E7%81%B5%E5%AE%8C%E5%A4%87%E6%B8%B8%E6%88%8F%E6%94%BB%E7%95%A54/add_a_control_position_hu_20a0b5f4077a8c68.png 480w, https://adeepblue.github.io/p/%E5%9B%BE%E7%81%B5%E5%AE%8C%E5%A4%87%E6%B8%B8%E6%88%8F%E6%94%BB%E7%95%A54/add_a_control_position_hu_f37f97a0d15a6746.png 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;增加的内存控制位&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;128&#34;
+		data-flex-basis=&#34;307px&#34;
+	
+&gt;
+&lt;img src=&#34;https://adeepblue.github.io/p/%E5%9B%BE%E7%81%B5%E5%AE%8C%E5%A4%87%E6%B8%B8%E6%88%8F%E6%94%BB%E7%95%A54/ugly_code.png&#34;
+	width=&#34;739&#34;
+	height=&#34;882&#34;
+	srcset=&#34;https://adeepblue.github.io/p/%E5%9B%BE%E7%81%B5%E5%AE%8C%E5%A4%87%E6%B8%B8%E6%88%8F%E6%94%BB%E7%95%A54/ugly_code_hu_3deeeba5bd61c539.png 480w, https://adeepblue.github.io/p/%E5%9B%BE%E7%81%B5%E5%AE%8C%E5%A4%87%E6%B8%B8%E6%88%8F%E6%94%BB%E7%95%A54/ugly_code_hu_6a416846cf2f9242.png 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;丑陋的代码&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;83&#34;
+		data-flex-basis=&#34;201px&#34;
+	
+&gt;
+&lt;img src=&#34;https://adeepblue.github.io/p/%E5%9B%BE%E7%81%B5%E5%AE%8C%E5%A4%87%E6%B8%B8%E6%88%8F%E6%94%BB%E7%95%A54/custom_ram_wr.png&#34;
+	width=&#34;1194&#34;
+	height=&#34;558&#34;
+	srcset=&#34;https://adeepblue.github.io/p/%E5%9B%BE%E7%81%B5%E5%AE%8C%E5%A4%87%E6%B8%B8%E6%88%8F%E6%94%BB%E7%95%A54/custom_ram_wr_hu_e3efe4a641ba9f8.png 480w, https://adeepblue.github.io/p/%E5%9B%BE%E7%81%B5%E5%AE%8C%E5%A4%87%E6%B8%B8%E6%88%8F%E6%94%BB%E7%95%A54/custom_ram_wr_hu_9dcad62bf5b59116.png 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;内存读取&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;213&#34;
+		data-flex-basis=&#34;513px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;p&gt;以及是，我指定了内存的读和写的两位，写则是16&lt;/p&gt;
+&lt;hr&gt;
+&lt;p&gt;过了一些时间才着手解决这个麻烦，想好了思路，先确定好指令样式之后再决定怎么搭线是最好的，题中也就说了一句额外加寄存器，讲真不如直接拿一位的寄存器来当内存地址，
+确定好的命令如下:&lt;/p&gt;
+&lt;p&gt;内存信号高点平的相关指令 输入位 内存位 输出位
+如果是写入状态，
+OP_write_RAM 写入位  内存地址位  空
+OP_read_RAM   空   内存地址读取位 输出位
+其实很纠结，因为空了东西了，但确定下来就好办了，其中以下是内存写入的代码&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;OP_write_RAM 7 1 0
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;OP_write_RAM 7 2 0
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;...
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;OP_write_RAM 7 31 0
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;OP_write_RAM 7 0 0
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;其中OP_read_RAM相关的命令则变成了&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;OP_read_RAM 0 reg0 7
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;说明一下，内存地址读取位是指，从那一位寄存器里读出数据然后来写入，也就是说，只要从第二位选择器中拿到后面的数据就可以了，其中二选一控制器用读的17（控制码）就可以了，
+这样可以通过寄存器直接输入数值了就，这样就可以构成循环的条件了，因为题目中没要求输出的时间紧凑度，如果再是上面那样急着输出就很难搞了，接上个话题，比如说我指定reg0为内存地址读取位，
+那么我后面指定让reg0累加1，然后判断reg0是否小于等于32就可以了&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://adeepblue.github.io/p/%E5%9B%BE%E7%81%B5%E5%AE%8C%E5%A4%87%E6%B8%B8%E6%88%8F%E6%94%BB%E7%95%A54/LEG-ram-read-control.png&#34;
+	width=&#34;1651&#34;
+	height=&#34;753&#34;
+	srcset=&#34;https://adeepblue.github.io/p/%E5%9B%BE%E7%81%B5%E5%AE%8C%E5%A4%87%E6%B8%B8%E6%88%8F%E6%94%BB%E7%95%A54/LEG-ram-read-control_hu_eae572e999179219.png 480w, https://adeepblue.github.io/p/%E5%9B%BE%E7%81%B5%E5%AE%8C%E5%A4%87%E6%B8%B8%E6%88%8F%E6%94%BB%E7%95%A54/LEG-ram-read-control_hu_2173bd549e2f17bb.png 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;读取时控制码&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;219&#34;
+		data-flex-basis=&#34;526px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://adeepblue.github.io/p/%E5%9B%BE%E7%81%B5%E5%AE%8C%E5%A4%87%E6%B8%B8%E6%88%8F%E6%94%BB%E7%95%A54/output_control.png&#34;
+	width=&#34;1452&#34;
+	height=&#34;881&#34;
+	srcset=&#34;https://adeepblue.github.io/p/%E5%9B%BE%E7%81%B5%E5%AE%8C%E5%A4%87%E6%B8%B8%E6%88%8F%E6%94%BB%E7%95%A54/output_control_hu_8235041c9fa35bb4.png 480w, https://adeepblue.github.io/p/%E5%9B%BE%E7%81%B5%E5%AE%8C%E5%A4%87%E6%B8%B8%E6%88%8F%E6%94%BB%E7%95%A54/output_control_hu_31a53ed7aa189b0c.png 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;img.png&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;164&#34;
+		data-flex-basis=&#34;395px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;label loop
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;OP_read_RAM  0  reg0   out
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;add_i1 1 reg0 reg0
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;lesseq1i reg0 32 loop
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;其中这是代码，add_i1是指第一位是立即数第二位是reg寄存器地址的，下面的lesseq1i也是一样，指的第二位是立即数模式进来的数字，这样就能解决了&lt;/p&gt;
+&lt;p&gt;吐槽一下这个出的问题，太烂了，我很讨厌低效的代码，拷贝，改数字，挺丑陋的，但我又拿它没办法，read部分我其实想破罐破摔了，但是程序本身放不下貌似，溢出了，那就作罢只能换循环了，
+这题是解的算扫兴了，希望后面别碰到这样的题了。&lt;/p&gt;
+&lt;hr&gt;
+&lt;p&gt;下一篇博文见,下一篇链接(还没更新，更新完了放这里)&lt;/p&gt;
 </description>
         </item>
         <item>
@@ -567,7 +700,9 @@
 	
 	
 &gt;&lt;/p&gt;
-&lt;p&gt;下一篇博文见,下一篇链接(还没更新，更新完链接放这里)&lt;/p&gt;
+&lt;hr&gt;
+&lt;p&gt;下一篇博文见,下一篇链接&lt;a class=&#34;link&#34; href=&#34;https://adeepblue.github.io/p/%E5%9B%BE%E7%81%B5%E5%AE%8C%E5%A4%87%E6%B8%B8%E6%88%8F%E6%94%BB%E7%95%A54/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;图灵完备游戏攻略4&lt;/a&gt;&lt;/p&gt;
 </description>
         </item>
         <item>
@@ -1110,7 +1245,9 @@
 		data-flex-basis=&#34;426px&#34;
 	
 &gt;&lt;/p&gt;
-&lt;p&gt;下一篇博文见,下一篇链接(还没更新，更新完链接放这里)&lt;/p&gt;
+&lt;hr&gt;
+&lt;p&gt;下一篇博文见,下一篇链接&lt;a class=&#34;link&#34; href=&#34;https://adeepblue.github.io/p/%E5%9B%BE%E7%81%B5%E5%AE%8C%E5%A4%87%E6%B8%B8%E6%88%8F%E6%94%BB%E7%95%A53/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;图灵完备游戏攻略3&lt;/a&gt;&lt;/p&gt;
 </description>
         </item>
         <item>
@@ -2116,7 +2253,8 @@ label的定义的关键字是&lt;code&gt;loop&lt;/code&gt;，也就是，后面�
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;n&#34;&gt;reg0_to_out&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;n&#34;&gt;left_loop&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;n&#34;&gt;always&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;因为东西太满了，我打算新开一篇，下一篇链接&lt;a class=&#34;link&#34; href=&#34;https://adeepblue.github.io/p/%E5%9B%BE%E7%81%B5%E5%AE%8C%E5%A4%87%E6%B8%B8%E6%88%8F%E6%94%BB%E7%95%A52/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;hr&gt;
+&lt;p&gt;因为东西太满了，我打算新开一篇，下一篇链接&lt;a class=&#34;link&#34; href=&#34;https://adeepblue.github.io/p/%E5%9B%BE%E7%81%B5%E5%AE%8C%E5%A4%87%E6%B8%B8%E6%88%8F%E6%94%BB%E7%95%A52/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
     &gt;图灵完备游戏攻略2&lt;/a&gt;&lt;/p&gt;
 </description>
         </item>

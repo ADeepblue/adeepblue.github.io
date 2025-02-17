@@ -1,19 +1,19 @@
 <!DOCTYPE html>
 <html lang="zh-cn" dir="ltr">
-    <head><meta charset='utf-8'>
+    <head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script><meta charset='utf-8'>
 <meta name='viewport' content='width=device-width, initial-scale=1'><meta name='description' content="图灵完备部分游戏攻略 条件判断 现在可以自定义指令集了，顺带改一改吧就，刚差点没找到怎么移动描述的位置，抓住AND右边的引脚拉到最边上再拖动左边的引脚即可\n">
 <title>图灵完备游戏攻略4</title>
 
-<link rel='canonical' href='https://adeepblue.github.io/p/%E5%9B%BE%E7%81%B5%E5%AE%8C%E5%A4%87%E6%B8%B8%E6%88%8F%E6%94%BB%E7%95%A54/'>
+<link rel='canonical' href='http://localhost:1313/p/%E5%9B%BE%E7%81%B5%E5%AE%8C%E5%A4%87%E6%B8%B8%E6%88%8F%E6%94%BB%E7%95%A54/'>
 
 <link rel="stylesheet" href="/scss/style.min.663803bebe609202d5b39d848f2d7c2dc8b598a2d879efa079fa88893d29c49c.css"><meta property='og:title' content="图灵完备游戏攻略4">
 <meta property='og:description' content="图灵完备部分游戏攻略 条件判断 现在可以自定义指令集了，顺带改一改吧就，刚差点没找到怎么移动描述的位置，抓住AND右边的引脚拉到最边上再拖动左边的引脚即可\n">
-<meta property='og:url' content='https://adeepblue.github.io/p/%E5%9B%BE%E7%81%B5%E5%AE%8C%E5%A4%87%E6%B8%B8%E6%88%8F%E6%94%BB%E7%95%A54/'>
+<meta property='og:url' content='http://localhost:1313/p/%E5%9B%BE%E7%81%B5%E5%AE%8C%E5%A4%87%E6%B8%B8%E6%88%8F%E6%94%BB%E7%95%A54/'>
 <meta property='og:site_name' content='深蓝之亘的博客'>
-<meta property='og:type' content='article'><meta property='article:section' content='Post' /><meta property='article:published_time' content='2025-02-14T15:10:30&#43;08:00'/><meta property='article:modified_time' content='2025-02-14T15:10:30&#43;08:00'/><meta property='og:image' content='https://adeepblue.github.io/image/Turing-Complete-Logo.png' />
+<meta property='og:type' content='article'><meta property='article:section' content='Post' /><meta property='article:published_time' content='2025-02-14T15:10:30&#43;08:00'/><meta property='article:modified_time' content='2025-02-14T15:10:30&#43;08:00'/><meta property='og:image' content='http://localhost:1313/image/Turing-Complete-Logo.png' />
 <meta name="twitter:title" content="图灵完备游戏攻略4">
 <meta name="twitter:description" content="图灵完备部分游戏攻略 条件判断 现在可以自定义指令集了，顺带改一改吧就，刚差点没找到怎么移动描述的位置，抓住AND右边的引脚拉到最边上再拖动左边的引脚即可\n"><meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:image" content='https://adeepblue.github.io/image/Turing-Complete-Logo.png' />
+    <meta name="twitter:image" content='http://localhost:1313/image/Turing-Complete-Logo.png' />
     <link rel="shortcut icon" href="/favicon.ico" />
 
          <link rel="stylesheet" href="/css/custom.css">
@@ -264,6 +264,7 @@
     <li><a href="#条件判断">条件判断</a></li>
     <li><a href="#移位">移位</a></li>
     <li><a href="#延迟量">延迟量</a></li>
+    <li><a href="#随机存储器">随机存储器</a></li>
   </ol>
 </nav>
         </div>
@@ -554,6 +555,139 @@
 		data-flex-basis="389px"
 	
 ></p>
+<h2 id="随机存储器">随机存储器
+</h2><p><img src="/p/%E5%9B%BE%E7%81%B5%E5%AE%8C%E5%A4%87%E6%B8%B8%E6%88%8F%E6%94%BB%E7%95%A54/random-RAM-require-1.png"
+	width="1920"
+	height="1080"
+	srcset="/p/%E5%9B%BE%E7%81%B5%E5%AE%8C%E5%A4%87%E6%B8%B8%E6%88%8F%E6%94%BB%E7%95%A54/random-RAM-require-1_hu_f057e3f64222168.png 480w, /p/%E5%9B%BE%E7%81%B5%E5%AE%8C%E5%A4%87%E6%B8%B8%E6%88%8F%E6%94%BB%E7%95%A54/random-RAM-require-1_hu_3d8255b8e7f7d671.png 1024w"
+	loading="lazy"
+	
+		alt="要求1"
+	
+	
+		class="gallery-image" 
+		data-flex-grow="177"
+		data-flex-basis="426px"
+	
+>
+<img src="/p/%E5%9B%BE%E7%81%B5%E5%AE%8C%E5%A4%87%E6%B8%B8%E6%88%8F%E6%94%BB%E7%95%A54/random-RAM-require-2.png"
+	width="756"
+	height="506"
+	srcset="/p/%E5%9B%BE%E7%81%B5%E5%AE%8C%E5%A4%87%E6%B8%B8%E6%88%8F%E6%94%BB%E7%95%A54/random-RAM-require-2_hu_e50b3873f1904111.png 480w, /p/%E5%9B%BE%E7%81%B5%E5%AE%8C%E5%A4%87%E6%B8%B8%E6%88%8F%E6%94%BB%E7%95%A54/random-RAM-require-2_hu_66acc4da9ad6f7e2.png 1024w"
+	loading="lazy"
+	
+		alt="要求2"
+	
+	
+		class="gallery-image" 
+		data-flex-grow="149"
+		data-flex-basis="358px"
+	
+></p>
+<p>讲真，我看到这个要求之后，人有点懵，说实话，已经没有额外的寄存器位置可以供分配了，走线都已经布好了，想要撬开其实怪麻烦的，唯一有点头绪的可能是指令集中依旧没分配的其中两位指令资源，
+现在也就考虑16位以及是最后三位的联动了，内存，已知的也就两个功能，读内存和写内存，但是要考虑好怎么搞定，目前实现的就是，一旦涉及内存信号位高电平，意味着这一刻必须断开8位写入器，
+也就是通过一定手段激活禁用开关即可。</p>
+<p>但又碰到了麻烦，我调试后才发现，最大的问题在于，，说是说依次读取，但是一个时钟刻就进来一位数，写入的时候并没有什么时间执行其他东西，比如说累加，以及是跳转，要打达成这边的循环得有几个必要条件，
+先要有label loop标记循环行，再有if类的条件进行跳转到计数器内进行改变程序执行的位置，其中if和累加必定冲突，if需要占用程序操作位的前3bit，累加需要前三bit是0，
+也不可能俩一起出现，如果这样那只有用丑陋的办法了， 就是代码一行一行自己指定内存写入位，十分的丑陋，我目前没想到啥解决办法，也没去看过官方攻略</p>
+<p><img src="/p/%E5%9B%BE%E7%81%B5%E5%AE%8C%E5%A4%87%E6%B8%B8%E6%88%8F%E6%94%BB%E7%95%A54/add_a_control_position.png"
+	width="994"
+	height="775"
+	srcset="/p/%E5%9B%BE%E7%81%B5%E5%AE%8C%E5%A4%87%E6%B8%B8%E6%88%8F%E6%94%BB%E7%95%A54/add_a_control_position_hu_20a0b5f4077a8c68.png 480w, /p/%E5%9B%BE%E7%81%B5%E5%AE%8C%E5%A4%87%E6%B8%B8%E6%88%8F%E6%94%BB%E7%95%A54/add_a_control_position_hu_f37f97a0d15a6746.png 1024w"
+	loading="lazy"
+	
+		alt="增加的内存控制位"
+	
+	
+		class="gallery-image" 
+		data-flex-grow="128"
+		data-flex-basis="307px"
+	
+>
+<img src="/p/%E5%9B%BE%E7%81%B5%E5%AE%8C%E5%A4%87%E6%B8%B8%E6%88%8F%E6%94%BB%E7%95%A54/ugly_code.png"
+	width="739"
+	height="882"
+	srcset="/p/%E5%9B%BE%E7%81%B5%E5%AE%8C%E5%A4%87%E6%B8%B8%E6%88%8F%E6%94%BB%E7%95%A54/ugly_code_hu_3deeeba5bd61c539.png 480w, /p/%E5%9B%BE%E7%81%B5%E5%AE%8C%E5%A4%87%E6%B8%B8%E6%88%8F%E6%94%BB%E7%95%A54/ugly_code_hu_6a416846cf2f9242.png 1024w"
+	loading="lazy"
+	
+		alt="丑陋的代码"
+	
+	
+		class="gallery-image" 
+		data-flex-grow="83"
+		data-flex-basis="201px"
+	
+>
+<img src="/p/%E5%9B%BE%E7%81%B5%E5%AE%8C%E5%A4%87%E6%B8%B8%E6%88%8F%E6%94%BB%E7%95%A54/custom_ram_wr.png"
+	width="1194"
+	height="558"
+	srcset="/p/%E5%9B%BE%E7%81%B5%E5%AE%8C%E5%A4%87%E6%B8%B8%E6%88%8F%E6%94%BB%E7%95%A54/custom_ram_wr_hu_e3efe4a641ba9f8.png 480w, /p/%E5%9B%BE%E7%81%B5%E5%AE%8C%E5%A4%87%E6%B8%B8%E6%88%8F%E6%94%BB%E7%95%A54/custom_ram_wr_hu_9dcad62bf5b59116.png 1024w"
+	loading="lazy"
+	
+		alt="内存读取"
+	
+	
+		class="gallery-image" 
+		data-flex-grow="213"
+		data-flex-basis="513px"
+	
+></p>
+<p>以及是，我指定了内存的读和写的两位，写则是16</p>
+<hr>
+<p>过了一些时间才着手解决这个麻烦，想好了思路，先确定好指令样式之后再决定怎么搭线是最好的，题中也就说了一句额外加寄存器，讲真不如直接拿一位的寄存器来当内存地址，
+确定好的命令如下:</p>
+<p>内存信号高点平的相关指令 输入位 内存位 输出位
+如果是写入状态，
+OP_write_RAM 写入位  内存地址位  空
+OP_read_RAM   空   内存地址读取位 输出位
+其实很纠结，因为空了东西了，但确定下来就好办了，其中以下是内存写入的代码</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">OP_write_RAM 7 1 0
+</span></span><span class="line"><span class="cl">OP_write_RAM 7 2 0
+</span></span><span class="line"><span class="cl">...
+</span></span><span class="line"><span class="cl">OP_write_RAM 7 31 0
+</span></span><span class="line"><span class="cl">OP_write_RAM 7 0 0
+</span></span></code></pre></div><p>其中OP_read_RAM相关的命令则变成了</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">OP_read_RAM 0 reg0 7
+</span></span></code></pre></div><p>说明一下，内存地址读取位是指，从那一位寄存器里读出数据然后来写入，也就是说，只要从第二位选择器中拿到后面的数据就可以了，其中二选一控制器用读的17（控制码）就可以了，
+这样可以通过寄存器直接输入数值了就，这样就可以构成循环的条件了，因为题目中没要求输出的时间紧凑度，如果再是上面那样急着输出就很难搞了，接上个话题，比如说我指定reg0为内存地址读取位，
+那么我后面指定让reg0累加1，然后判断reg0是否小于等于32就可以了</p>
+<p><img src="/p/%E5%9B%BE%E7%81%B5%E5%AE%8C%E5%A4%87%E6%B8%B8%E6%88%8F%E6%94%BB%E7%95%A54/LEG-ram-read-control.png"
+	width="1651"
+	height="753"
+	srcset="/p/%E5%9B%BE%E7%81%B5%E5%AE%8C%E5%A4%87%E6%B8%B8%E6%88%8F%E6%94%BB%E7%95%A54/LEG-ram-read-control_hu_eae572e999179219.png 480w, /p/%E5%9B%BE%E7%81%B5%E5%AE%8C%E5%A4%87%E6%B8%B8%E6%88%8F%E6%94%BB%E7%95%A54/LEG-ram-read-control_hu_2173bd549e2f17bb.png 1024w"
+	loading="lazy"
+	
+		alt="读取时控制码"
+	
+	
+		class="gallery-image" 
+		data-flex-grow="219"
+		data-flex-basis="526px"
+	
+></p>
+<p><img src="/p/%E5%9B%BE%E7%81%B5%E5%AE%8C%E5%A4%87%E6%B8%B8%E6%88%8F%E6%94%BB%E7%95%A54/output_control.png"
+	width="1452"
+	height="881"
+	srcset="/p/%E5%9B%BE%E7%81%B5%E5%AE%8C%E5%A4%87%E6%B8%B8%E6%88%8F%E6%94%BB%E7%95%A54/output_control_hu_8235041c9fa35bb4.png 480w, /p/%E5%9B%BE%E7%81%B5%E5%AE%8C%E5%A4%87%E6%B8%B8%E6%88%8F%E6%94%BB%E7%95%A54/output_control_hu_31a53ed7aa189b0c.png 1024w"
+	loading="lazy"
+	
+		alt="img.png"
+	
+	
+		class="gallery-image" 
+		data-flex-grow="164"
+		data-flex-basis="395px"
+	
+></p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">label loop
+</span></span><span class="line"><span class="cl">OP_read_RAM  0  reg0   out
+</span></span><span class="line"><span class="cl">add_i1 1 reg0 reg0
+</span></span><span class="line"><span class="cl">lesseq1i reg0 32 loop
+</span></span></code></pre></div><p>其中这是代码，add_i1是指第一位是立即数第二位是reg寄存器地址的，下面的lesseq1i也是一样，指的第二位是立即数模式进来的数字，这样就能解决了</p>
+<p>吐槽一下这个出的问题，太烂了，我很讨厌低效的代码，拷贝，改数字，挺丑陋的，但我又拿它没办法，read部分我其实想破罐破摔了，但是程序本身放不下貌似，溢出了，那就作罢只能换循环了，
+这题是解的算扫兴了，希望后面别碰到这样的题了。</p>
+<hr>
+<p>下一篇博文见,下一篇链接(还没更新，更新完了放这里)</p>
 
 </section>
 
@@ -742,7 +876,7 @@
                 src="https://cdn.jsdelivr.net/npm/node-vibrant@3.1.6/dist/vibrant.min.js"integrity="sha256-awcR2jno4kI5X0zL8ex0vi2z&#43;KMkF24hUW8WePSA9HM="crossorigin="anonymous"
                 
                 >
-            </script><script type="text/javascript" src="/ts/main.1e9a3bafd846ced4c345d084b355fb8c7bae75701c338f8a1f8a82c780137826.js" defer></script>
+            </script><script type="text/javascript" src="/ts/main.ff9bf7f7d6d12bd155b580c0791cb9e6c59e4550b3b6b94aaf8c2c456ab525b0.js" defer></script>
 <script>
     (function () {
         const customFont = document.createElement('link');
@@ -757,7 +891,7 @@
 
 <style>
   body {
-    background: url(https://adeepblue.github.io/background/background.png) no-repeat center top;
+    background: url(http://localhost:1313/background/background.png) no-repeat center top;
     background-size: cover;
     background-attachment: fixed;
   }
