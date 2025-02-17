@@ -2,23 +2,23 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
     <channel>
         <title>深蓝之亘的博客</title>
-        <link>https://adeepblue.github.io/</link>
+        <link>http://localhost:1313/</link>
         <description>Recent content on 深蓝之亘的博客</description>
         <generator>Hugo -- gohugo.io</generator>
         <language>zh-cn</language>
         <copyright>深蓝之亘</copyright>
-        <lastBuildDate>Fri, 14 Feb 2025 15:10:30 +0800</lastBuildDate><atom:link href="https://adeepblue.github.io/index.xml" rel="self" type="application/rss+xml" /><item>
+        <lastBuildDate>Fri, 14 Feb 2025 15:10:30 +0800</lastBuildDate><atom:link href="http://localhost:1313/index.xml" rel="self" type="application/rss+xml" /><item>
         <title>图灵完备游戏攻略4</title>
-        <link>https://adeepblue.github.io/p/%E5%9B%BE%E7%81%B5%E5%AE%8C%E5%A4%87%E6%B8%B8%E6%88%8F%E6%94%BB%E7%95%A54/</link>
+        <link>http://localhost:1313/p/%E5%9B%BE%E7%81%B5%E5%AE%8C%E5%A4%87%E6%B8%B8%E6%88%8F%E6%94%BB%E7%95%A54/</link>
         <pubDate>Fri, 14 Feb 2025 15:10:30 +0800</pubDate>
         
-        <guid>https://adeepblue.github.io/p/%E5%9B%BE%E7%81%B5%E5%AE%8C%E5%A4%87%E6%B8%B8%E6%88%8F%E6%94%BB%E7%95%A54/</guid>
-        <description>&lt;img src="https://adeepblue.github.io/image/Turing-Complete-Logo.png" alt="Featured image of post 图灵完备游戏攻略4" /&gt;&lt;h1 id=&#34;图灵完备部分游戏攻略&#34;&gt;图灵完备部分游戏攻略
+        <guid>http://localhost:1313/p/%E5%9B%BE%E7%81%B5%E5%AE%8C%E5%A4%87%E6%B8%B8%E6%88%8F%E6%94%BB%E7%95%A54/</guid>
+        <description>&lt;img src="http://localhost:1313/image/Turing-Complete-Logo.png" alt="Featured image of post 图灵完备游戏攻略4" /&gt;&lt;h1 id=&#34;图灵完备部分游戏攻略&#34;&gt;图灵完备部分游戏攻略
 &lt;/h1&gt;&lt;h2 id=&#34;条件判断&#34;&gt;条件判断
-&lt;/h2&gt;&lt;p&gt;&lt;img src=&#34;https://adeepblue.github.io/p/%E5%9B%BE%E7%81%B5%E5%AE%8C%E5%A4%87%E6%B8%B8%E6%88%8F%E6%94%BB%E7%95%A54/condition-check-require-1.png&#34;
+&lt;/h2&gt;&lt;p&gt;&lt;img src=&#34;http://localhost:1313/p/%E5%9B%BE%E7%81%B5%E5%AE%8C%E5%A4%87%E6%B8%B8%E6%88%8F%E6%94%BB%E7%95%A54/condition-check-require-1.png&#34;
 	width=&#34;747&#34;
 	height=&#34;510&#34;
-	srcset=&#34;https://adeepblue.github.io/p/%E5%9B%BE%E7%81%B5%E5%AE%8C%E5%A4%87%E6%B8%B8%E6%88%8F%E6%94%BB%E7%95%A54/condition-check-require-1_hu_edfd0783439daea6.png 480w, https://adeepblue.github.io/p/%E5%9B%BE%E7%81%B5%E5%AE%8C%E5%A4%87%E6%B8%B8%E6%88%8F%E6%94%BB%E7%95%A54/condition-check-require-1_hu_92520d88f683917a.png 1024w&#34;
+	srcset=&#34;http://localhost:1313/p/%E5%9B%BE%E7%81%B5%E5%AE%8C%E5%A4%87%E6%B8%B8%E6%88%8F%E6%94%BB%E7%95%A54/condition-check-require-1_hu_edfd0783439daea6.png 480w, http://localhost:1313/p/%E5%9B%BE%E7%81%B5%E5%AE%8C%E5%A4%87%E6%B8%B8%E6%88%8F%E6%94%BB%E7%95%A54/condition-check-require-1_hu_92520d88f683917a.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 		alt=&#34;条件判断要求1&#34;
@@ -29,10 +29,10 @@
 		data-flex-basis=&#34;351px&#34;
 	
 &gt;
-&lt;img src=&#34;https://adeepblue.github.io/p/%E5%9B%BE%E7%81%B5%E5%AE%8C%E5%A4%87%E6%B8%B8%E6%88%8F%E6%94%BB%E7%95%A54/condition-check-require-2.png&#34;
+&lt;img src=&#34;http://localhost:1313/p/%E5%9B%BE%E7%81%B5%E5%AE%8C%E5%A4%87%E6%B8%B8%E6%88%8F%E6%94%BB%E7%95%A54/condition-check-require-2.png&#34;
 	width=&#34;749&#34;
 	height=&#34;512&#34;
-	srcset=&#34;https://adeepblue.github.io/p/%E5%9B%BE%E7%81%B5%E5%AE%8C%E5%A4%87%E6%B8%B8%E6%88%8F%E6%94%BB%E7%95%A54/condition-check-require-2_hu_1904a003efee3105.png 480w, https://adeepblue.github.io/p/%E5%9B%BE%E7%81%B5%E5%AE%8C%E5%A4%87%E6%B8%B8%E6%88%8F%E6%94%BB%E7%95%A54/condition-check-require-2_hu_90665525ecb78548.png 1024w&#34;
+	srcset=&#34;http://localhost:1313/p/%E5%9B%BE%E7%81%B5%E5%AE%8C%E5%A4%87%E6%B8%B8%E6%88%8F%E6%94%BB%E7%95%A54/condition-check-require-2_hu_1904a003efee3105.png 480w, http://localhost:1313/p/%E5%9B%BE%E7%81%B5%E5%AE%8C%E5%A4%87%E6%B8%B8%E6%88%8F%E6%94%BB%E7%95%A54/condition-check-require-2_hu_90665525ecb78548.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 		alt=&#34;条件判断要求2&#34;
@@ -43,10 +43,10 @@
 		data-flex-basis=&#34;351px&#34;
 	
 &gt;
-&lt;img src=&#34;https://adeepblue.github.io/p/%E5%9B%BE%E7%81%B5%E5%AE%8C%E5%A4%87%E6%B8%B8%E6%88%8F%E6%94%BB%E7%95%A54/condition-check-require-3.png&#34;
+&lt;img src=&#34;http://localhost:1313/p/%E5%9B%BE%E7%81%B5%E5%AE%8C%E5%A4%87%E6%B8%B8%E6%88%8F%E6%94%BB%E7%95%A54/condition-check-require-3.png&#34;
 	width=&#34;747&#34;
 	height=&#34;497&#34;
-	srcset=&#34;https://adeepblue.github.io/p/%E5%9B%BE%E7%81%B5%E5%AE%8C%E5%A4%87%E6%B8%B8%E6%88%8F%E6%94%BB%E7%95%A54/condition-check-require-3_hu_ece95d84fc861958.png 480w, https://adeepblue.github.io/p/%E5%9B%BE%E7%81%B5%E5%AE%8C%E5%A4%87%E6%B8%B8%E6%88%8F%E6%94%BB%E7%95%A54/condition-check-require-3_hu_dd772ab552dd8109.png 1024w&#34;
+	srcset=&#34;http://localhost:1313/p/%E5%9B%BE%E7%81%B5%E5%AE%8C%E5%A4%87%E6%B8%B8%E6%88%8F%E6%94%BB%E7%95%A54/condition-check-require-3_hu_ece95d84fc861958.png 480w, http://localhost:1313/p/%E5%9B%BE%E7%81%B5%E5%AE%8C%E5%A4%87%E6%B8%B8%E6%88%8F%E6%94%BB%E7%95%A54/condition-check-require-3_hu_dd772ab552dd8109.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 		alt=&#34;条件判断要求2&#34;
@@ -58,10 +58,10 @@
 	
 &gt;&lt;/p&gt;
 &lt;p&gt;现在可以自定义指令集了，顺带改一改吧就，刚差点没找到怎么移动描述的位置，抓住AND右边的引脚拉到最边上再拖动左边的引脚即可&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://adeepblue.github.io/p/%E5%9B%BE%E7%81%B5%E5%AE%8C%E5%A4%87%E6%B8%B8%E6%88%8F%E6%94%BB%E7%95%A54/custom-introduction-set.png&#34;
+&lt;p&gt;&lt;img src=&#34;http://localhost:1313/p/%E5%9B%BE%E7%81%B5%E5%AE%8C%E5%A4%87%E6%B8%B8%E6%88%8F%E6%94%BB%E7%95%A54/custom-introduction-set.png&#34;
 	width=&#34;936&#34;
 	height=&#34;932&#34;
-	srcset=&#34;https://adeepblue.github.io/p/%E5%9B%BE%E7%81%B5%E5%AE%8C%E5%A4%87%E6%B8%B8%E6%88%8F%E6%94%BB%E7%95%A54/custom-introduction-set_hu_10e0796c09561fe8.png 480w, https://adeepblue.github.io/p/%E5%9B%BE%E7%81%B5%E5%AE%8C%E5%A4%87%E6%B8%B8%E6%88%8F%E6%94%BB%E7%95%A54/custom-introduction-set_hu_11b25261a5be4b5f.png 1024w&#34;
+	srcset=&#34;http://localhost:1313/p/%E5%9B%BE%E7%81%B5%E5%AE%8C%E5%A4%87%E6%B8%B8%E6%88%8F%E6%94%BB%E7%95%A54/custom-introduction-set_hu_10e0796c09561fe8.png 480w, http://localhost:1313/p/%E5%9B%BE%E7%81%B5%E5%AE%8C%E5%A4%87%E6%B8%B8%E6%88%8F%E6%94%BB%E7%95%A54/custom-introduction-set_hu_11b25261a5be4b5f.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 		alt=&#34;自定义指令集&#34;
@@ -72,10 +72,10 @@
 		data-flex-basis=&#34;241px&#34;
 	
 &gt;
-&lt;img src=&#34;https://adeepblue.github.io/p/%E5%9B%BE%E7%81%B5%E5%AE%8C%E5%A4%87%E6%B8%B8%E6%88%8F%E6%94%BB%E7%95%A54/new-introduction-set-1.png&#34;
+&lt;img src=&#34;http://localhost:1313/p/%E5%9B%BE%E7%81%B5%E5%AE%8C%E5%A4%87%E6%B8%B8%E6%88%8F%E6%94%BB%E7%95%A54/new-introduction-set-1.png&#34;
 	width=&#34;925&#34;
 	height=&#34;941&#34;
-	srcset=&#34;https://adeepblue.github.io/p/%E5%9B%BE%E7%81%B5%E5%AE%8C%E5%A4%87%E6%B8%B8%E6%88%8F%E6%94%BB%E7%95%A54/new-introduction-set-1_hu_2356b79f9851a1d1.png 480w, https://adeepblue.github.io/p/%E5%9B%BE%E7%81%B5%E5%AE%8C%E5%A4%87%E6%B8%B8%E6%88%8F%E6%94%BB%E7%95%A54/new-introduction-set-1_hu_dc6ed7535b36ffbb.png 1024w&#34;
+	srcset=&#34;http://localhost:1313/p/%E5%9B%BE%E7%81%B5%E5%AE%8C%E5%A4%87%E6%B8%B8%E6%88%8F%E6%94%BB%E7%95%A54/new-introduction-set-1_hu_2356b79f9851a1d1.png 480w, http://localhost:1313/p/%E5%9B%BE%E7%81%B5%E5%AE%8C%E5%A4%87%E6%B8%B8%E6%88%8F%E6%94%BB%E7%95%A54/new-introduction-set-1_hu_dc6ed7535b36ffbb.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 		alt=&#34;新建的指令集&#34;
@@ -87,10 +87,10 @@
 	
 &gt;&lt;/p&gt;
 &lt;p&gt;通过新建的指令集我们能看到，如果一旦涉及条件判断了，32位是必定亮起的，既然我们之前用过自定义的解码器，这回就得继续在解码器上进行修改了&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://adeepblue.github.io/p/%E5%9B%BE%E7%81%B5%E5%AE%8C%E5%A4%87%E6%B8%B8%E6%88%8F%E6%94%BB%E7%95%A54/new-logic-component-list.png&#34;
+&lt;p&gt;&lt;img src=&#34;http://localhost:1313/p/%E5%9B%BE%E7%81%B5%E5%AE%8C%E5%A4%87%E6%B8%B8%E6%88%8F%E6%94%BB%E7%95%A54/new-logic-component-list.png&#34;
 	width=&#34;947&#34;
 	height=&#34;684&#34;
-	srcset=&#34;https://adeepblue.github.io/p/%E5%9B%BE%E7%81%B5%E5%AE%8C%E5%A4%87%E6%B8%B8%E6%88%8F%E6%94%BB%E7%95%A54/new-logic-component-list_hu_614ca44f015a463c.png 480w, https://adeepblue.github.io/p/%E5%9B%BE%E7%81%B5%E5%AE%8C%E5%A4%87%E6%B8%B8%E6%88%8F%E6%94%BB%E7%95%A54/new-logic-component-list_hu_76b9f77ca9ea016b.png 1024w&#34;
+	srcset=&#34;http://localhost:1313/p/%E5%9B%BE%E7%81%B5%E5%AE%8C%E5%A4%87%E6%B8%B8%E6%88%8F%E6%94%BB%E7%95%A54/new-logic-component-list_hu_614ca44f015a463c.png 480w, http://localhost:1313/p/%E5%9B%BE%E7%81%B5%E5%AE%8C%E5%A4%87%E6%B8%B8%E6%88%8F%E6%94%BB%E7%95%A54/new-logic-component-list_hu_76b9f77ca9ea016b.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 		alt=&#34;新建逻辑输出&#34;
@@ -105,10 +105,10 @@
     &gt;点击跳转&lt;/a&gt;&lt;/span&gt;
 小于的搞定了，小于等于条件也就是小于+等于也就是加一个或门就可以了，小于等于反面就是大于，也就是前面小于等于取一个反就可以了，大于等于是小于的反面，同样取反，
 不等于也就是等于的取反，因为这里涉及1bit的信号8选1嘛，又没有这个元件，只好自己写了一个&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://adeepblue.github.io/p/%E5%9B%BE%E7%81%B5%E5%AE%8C%E5%A4%87%E6%B8%B8%E6%88%8F%E6%94%BB%E7%95%A54/1bit-8select1_conponent.png&#34;
+&lt;p&gt;&lt;img src=&#34;http://localhost:1313/p/%E5%9B%BE%E7%81%B5%E5%AE%8C%E5%A4%87%E6%B8%B8%E6%88%8F%E6%94%BB%E7%95%A54/1bit-8select1_conponent.png&#34;
 	width=&#34;1274&#34;
 	height=&#34;1051&#34;
-	srcset=&#34;https://adeepblue.github.io/p/%E5%9B%BE%E7%81%B5%E5%AE%8C%E5%A4%87%E6%B8%B8%E6%88%8F%E6%94%BB%E7%95%A54/1bit-8select1_conponent_hu_9f8a72e3091e842f.png 480w, https://adeepblue.github.io/p/%E5%9B%BE%E7%81%B5%E5%AE%8C%E5%A4%87%E6%B8%B8%E6%88%8F%E6%94%BB%E7%95%A54/1bit-8select1_conponent_hu_bcc5cc4f28b29073.png 1024w&#34;
+	srcset=&#34;http://localhost:1313/p/%E5%9B%BE%E7%81%B5%E5%AE%8C%E5%A4%87%E6%B8%B8%E6%88%8F%E6%94%BB%E7%95%A54/1bit-8select1_conponent_hu_9f8a72e3091e842f.png 480w, http://localhost:1313/p/%E5%9B%BE%E7%81%B5%E5%AE%8C%E5%A4%87%E6%B8%B8%E6%88%8F%E6%94%BB%E7%95%A54/1bit-8select1_conponent_hu_bcc5cc4f28b29073.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 		alt=&#34;1位8选1选择器&#34;
@@ -119,10 +119,10 @@
 		data-flex-basis=&#34;290px&#34;
 	
 &gt;
-&lt;img src=&#34;https://adeepblue.github.io/p/%E5%9B%BE%E7%81%B5%E5%AE%8C%E5%A4%87%E6%B8%B8%E6%88%8F%E6%94%BB%E7%95%A54/COND-plus-conponent.png&#34;
+&lt;img src=&#34;http://localhost:1313/p/%E5%9B%BE%E7%81%B5%E5%AE%8C%E5%A4%87%E6%B8%B8%E6%88%8F%E6%94%BB%E7%95%A54/COND-plus-conponent.png&#34;
 	width=&#34;885&#34;
 	height=&#34;1023&#34;
-	srcset=&#34;https://adeepblue.github.io/p/%E5%9B%BE%E7%81%B5%E5%AE%8C%E5%A4%87%E6%B8%B8%E6%88%8F%E6%94%BB%E7%95%A54/COND-plus-conponent_hu_8a0162e65109f12.png 480w, https://adeepblue.github.io/p/%E5%9B%BE%E7%81%B5%E5%AE%8C%E5%A4%87%E6%B8%B8%E6%88%8F%E6%94%BB%E7%95%A54/COND-plus-conponent_hu_b28deda811f1bcac.png 1024w&#34;
+	srcset=&#34;http://localhost:1313/p/%E5%9B%BE%E7%81%B5%E5%AE%8C%E5%A4%87%E6%B8%B8%E6%88%8F%E6%94%BB%E7%95%A54/COND-plus-conponent_hu_8a0162e65109f12.png 480w, http://localhost:1313/p/%E5%9B%BE%E7%81%B5%E5%AE%8C%E5%A4%87%E6%B8%B8%E6%88%8F%E6%94%BB%E7%95%A54/COND-plus-conponent_hu_b28deda811f1bcac.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 		alt=&#34;LEG框架下的逻辑判断元件&#34;
@@ -134,10 +134,10 @@
 	
 &gt;&lt;/p&gt;
 &lt;p&gt;首先先把COND-plus元件加入main中，并顺带蹭一下隔壁ALU的输入，因为都是一样的，其次用八位开关分别控制输出内容的去向，安排完cond-plus先把它的输出放着，来改动另一边的&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://adeepblue.github.io/p/%E5%9B%BE%E7%81%B5%E5%AE%8C%E5%A4%87%E6%B8%B8%E6%88%8F%E6%94%BB%E7%95%A54/COND-plus-in-LEG-main.png&#34;
+&lt;p&gt;&lt;img src=&#34;http://localhost:1313/p/%E5%9B%BE%E7%81%B5%E5%AE%8C%E5%A4%87%E6%B8%B8%E6%88%8F%E6%94%BB%E7%95%A54/COND-plus-in-LEG-main.png&#34;
 	width=&#34;1211&#34;
 	height=&#34;703&#34;
-	srcset=&#34;https://adeepblue.github.io/p/%E5%9B%BE%E7%81%B5%E5%AE%8C%E5%A4%87%E6%B8%B8%E6%88%8F%E6%94%BB%E7%95%A54/COND-plus-in-LEG-main_hu_8bea070b63101184.png 480w, https://adeepblue.github.io/p/%E5%9B%BE%E7%81%B5%E5%AE%8C%E5%A4%87%E6%B8%B8%E6%88%8F%E6%94%BB%E7%95%A54/COND-plus-in-LEG-main_hu_56a620ca85d0955d.png 1024w&#34;
+	srcset=&#34;http://localhost:1313/p/%E5%9B%BE%E7%81%B5%E5%AE%8C%E5%A4%87%E6%B8%B8%E6%88%8F%E6%94%BB%E7%95%A54/COND-plus-in-LEG-main_hu_8bea070b63101184.png 480w, http://localhost:1313/p/%E5%9B%BE%E7%81%B5%E5%AE%8C%E5%A4%87%E6%B8%B8%E6%88%8F%E6%94%BB%E7%95%A54/COND-plus-in-LEG-main_hu_56a620ca85d0955d.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 		alt=&#34;改动1&#34;
@@ -148,10 +148,10 @@
 		data-flex-basis=&#34;413px&#34;
 	
 &gt;
-&lt;img src=&#34;https://adeepblue.github.io/p/%E5%9B%BE%E7%81%B5%E5%AE%8C%E5%A4%87%E6%B8%B8%E6%88%8F%E6%94%BB%E7%95%A54/some-change-in-LEG-main.png&#34;
+&lt;img src=&#34;http://localhost:1313/p/%E5%9B%BE%E7%81%B5%E5%AE%8C%E5%A4%87%E6%B8%B8%E6%88%8F%E6%94%BB%E7%95%A54/some-change-in-LEG-main.png&#34;
 	width=&#34;1633&#34;
 	height=&#34;961&#34;
-	srcset=&#34;https://adeepblue.github.io/p/%E5%9B%BE%E7%81%B5%E5%AE%8C%E5%A4%87%E6%B8%B8%E6%88%8F%E6%94%BB%E7%95%A54/some-change-in-LEG-main_hu_d0fa91f8536c94f2.png 480w, https://adeepblue.github.io/p/%E5%9B%BE%E7%81%B5%E5%AE%8C%E5%A4%87%E6%B8%B8%E6%88%8F%E6%94%BB%E7%95%A54/some-change-in-LEG-main_hu_b9f7fce9cd1c8a37.png 1024w&#34;
+	srcset=&#34;http://localhost:1313/p/%E5%9B%BE%E7%81%B5%E5%AE%8C%E5%A4%87%E6%B8%B8%E6%88%8F%E6%94%BB%E7%95%A54/some-change-in-LEG-main_hu_d0fa91f8536c94f2.png 480w, http://localhost:1313/p/%E5%9B%BE%E7%81%B5%E5%AE%8C%E5%A4%87%E6%B8%B8%E6%88%8F%E6%94%BB%E7%95%A54/some-change-in-LEG-main_hu_b9f7fce9cd1c8a37.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 		alt=&#34;左侧程序最后一个值输入处修改&#34;
@@ -168,10 +168,10 @@
 也就是说条件不成立，那么是否应该拦住去计数器的信号呢？那条画着没放全的线，就作为了右边两处方框的控制开关，如果条件没有成立，那就通过开关来自动关闭，即，
 如上&lt;/p&gt;
 &lt;h2 id=&#34;移位&#34;&gt;移位
-&lt;/h2&gt;&lt;p&gt;&lt;img src=&#34;https://adeepblue.github.io/p/%E5%9B%BE%E7%81%B5%E5%AE%8C%E5%A4%87%E6%B8%B8%E6%88%8F%E6%94%BB%E7%95%A54/shift-require.png&#34;
+&lt;/h2&gt;&lt;p&gt;&lt;img src=&#34;http://localhost:1313/p/%E5%9B%BE%E7%81%B5%E5%AE%8C%E5%A4%87%E6%B8%B8%E6%88%8F%E6%94%BB%E7%95%A54/shift-require.png&#34;
 	width=&#34;1412&#34;
 	height=&#34;1036&#34;
-	srcset=&#34;https://adeepblue.github.io/p/%E5%9B%BE%E7%81%B5%E5%AE%8C%E5%A4%87%E6%B8%B8%E6%88%8F%E6%94%BB%E7%95%A54/shift-require_hu_7667466b7ec4e4e5.png 480w, https://adeepblue.github.io/p/%E5%9B%BE%E7%81%B5%E5%AE%8C%E5%A4%87%E6%B8%B8%E6%88%8F%E6%94%BB%E7%95%A54/shift-require_hu_5af3da16de83b620.png 1024w&#34;
+	srcset=&#34;http://localhost:1313/p/%E5%9B%BE%E7%81%B5%E5%AE%8C%E5%A4%87%E6%B8%B8%E6%88%8F%E6%94%BB%E7%95%A54/shift-require_hu_7667466b7ec4e4e5.png 480w, http://localhost:1313/p/%E5%9B%BE%E7%81%B5%E5%AE%8C%E5%A4%87%E6%B8%B8%E6%88%8F%E6%94%BB%E7%95%A54/shift-require_hu_5af3da16de83b620.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 		alt=&#34;要求说明&#34;
@@ -183,10 +183,10 @@
 	
 &gt;&lt;/p&gt;
 &lt;p&gt;唔，刚好以前写了，就很离谱，当时写乘法运算器的时候用到了&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://adeepblue.github.io/p/%E5%9B%BE%E7%81%B5%E5%AE%8C%E5%A4%87%E6%B8%B8%E6%88%8F%E6%94%BB%E7%95%A54/custom-shift.png&#34;
+&lt;p&gt;&lt;img src=&#34;http://localhost:1313/p/%E5%9B%BE%E7%81%B5%E5%AE%8C%E5%A4%87%E6%B8%B8%E6%88%8F%E6%94%BB%E7%95%A54/custom-shift.png&#34;
 	width=&#34;935&#34;
 	height=&#34;1080&#34;
-	srcset=&#34;https://adeepblue.github.io/p/%E5%9B%BE%E7%81%B5%E5%AE%8C%E5%A4%87%E6%B8%B8%E6%88%8F%E6%94%BB%E7%95%A54/custom-shift_hu_363df9b09509a311.png 480w, https://adeepblue.github.io/p/%E5%9B%BE%E7%81%B5%E5%AE%8C%E5%A4%87%E6%B8%B8%E6%88%8F%E6%94%BB%E7%95%A54/custom-shift_hu_edf839820aad450d.png 1024w&#34;
+	srcset=&#34;http://localhost:1313/p/%E5%9B%BE%E7%81%B5%E5%AE%8C%E5%A4%87%E6%B8%B8%E6%88%8F%E6%94%BB%E7%95%A54/custom-shift_hu_363df9b09509a311.png 480w, http://localhost:1313/p/%E5%9B%BE%E7%81%B5%E5%AE%8C%E5%A4%87%E6%B8%B8%E6%88%8F%E6%94%BB%E7%95%A54/custom-shift_hu_edf839820aad450d.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 		alt=&#34;自定义的移位运算器&#34;
@@ -200,10 +200,10 @@
 &lt;p&gt;当时还采用了两位8bit数的输出，不过看起来这里只需要给一位分配输出就好了，以及还有禁用开关，实际本质上就是把输出的8bit数分线后移位挨个输出，然后另一个按照八位开关考虑好输出哪一位就好了，
 原理其实挺简单，实际画的东西相当多就是了&lt;/p&gt;
 &lt;h2 id=&#34;延迟量&#34;&gt;延迟量
-&lt;/h2&gt;&lt;p&gt;&lt;img src=&#34;https://adeepblue.github.io/p/%E5%9B%BE%E7%81%B5%E5%AE%8C%E5%A4%87%E6%B8%B8%E6%88%8F%E6%94%BB%E7%95%A54/delay_require.png&#34;
+&lt;/h2&gt;&lt;p&gt;&lt;img src=&#34;http://localhost:1313/p/%E5%9B%BE%E7%81%B5%E5%AE%8C%E5%A4%87%E6%B8%B8%E6%88%8F%E6%94%BB%E7%95%A54/delay_require.png&#34;
 	width=&#34;1920&#34;
 	height=&#34;1080&#34;
-	srcset=&#34;https://adeepblue.github.io/p/%E5%9B%BE%E7%81%B5%E5%AE%8C%E5%A4%87%E6%B8%B8%E6%88%8F%E6%94%BB%E7%95%A54/delay_require_hu_1dbf10ed3357ec63.png 480w, https://adeepblue.github.io/p/%E5%9B%BE%E7%81%B5%E5%AE%8C%E5%A4%87%E6%B8%B8%E6%88%8F%E6%94%BB%E7%95%A54/delay_require_hu_64aaf5235eae6269.png 1024w&#34;
+	srcset=&#34;http://localhost:1313/p/%E5%9B%BE%E7%81%B5%E5%AE%8C%E5%A4%87%E6%B8%B8%E6%88%8F%E6%94%BB%E7%95%A54/delay_require_hu_1dbf10ed3357ec63.png 480w, http://localhost:1313/p/%E5%9B%BE%E7%81%B5%E5%AE%8C%E5%A4%87%E6%B8%B8%E6%88%8F%E6%94%BB%E7%95%A54/delay_require_hu_64aaf5235eae6269.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 		alt=&#34;要求&#34;
@@ -216,10 +216,10 @@
 &gt;&lt;/p&gt;
 &lt;p&gt;六个单位延迟量，以及是使用五个nand门，结果需要有变化，nand的突变点在于两个高电平会返回低电平，其他时候都是高电平，那也就是说，如果两个口都接一处，
 两个信号不同的情况会坍缩了，输出相反，同理，这样可以再接一级，再是最后一个nand再改一次，
-&lt;img src=&#34;https://adeepblue.github.io/p/%E5%9B%BE%E7%81%B5%E5%AE%8C%E5%A4%87%E6%B8%B8%E6%88%8F%E6%94%BB%E7%95%A54/delay_solve.png&#34;
+&lt;img src=&#34;http://localhost:1313/p/%E5%9B%BE%E7%81%B5%E5%AE%8C%E5%A4%87%E6%B8%B8%E6%88%8F%E6%94%BB%E7%95%A54/delay_solve.png&#34;
 	width=&#34;1732&#34;
 	height=&#34;1066&#34;
-	srcset=&#34;https://adeepblue.github.io/p/%E5%9B%BE%E7%81%B5%E5%AE%8C%E5%A4%87%E6%B8%B8%E6%88%8F%E6%94%BB%E7%95%A54/delay_solve_hu_2858a16462ad27a1.png 480w, https://adeepblue.github.io/p/%E5%9B%BE%E7%81%B5%E5%AE%8C%E5%A4%87%E6%B8%B8%E6%88%8F%E6%94%BB%E7%95%A54/delay_solve_hu_924b3e2189df5432.png 1024w&#34;
+	srcset=&#34;http://localhost:1313/p/%E5%9B%BE%E7%81%B5%E5%AE%8C%E5%A4%87%E6%B8%B8%E6%88%8F%E6%94%BB%E7%95%A54/delay_solve_hu_2858a16462ad27a1.png 480w, http://localhost:1313/p/%E5%9B%BE%E7%81%B5%E5%AE%8C%E5%A4%87%E6%B8%B8%E6%88%8F%E6%94%BB%E7%95%A54/delay_solve_hu_924b3e2189df5432.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 		alt=&#34;最终电路&#34;
@@ -230,20 +230,153 @@
 		data-flex-basis=&#34;389px&#34;
 	
 &gt;&lt;/p&gt;
+&lt;h2 id=&#34;随机存储器&#34;&gt;随机存储器
+&lt;/h2&gt;&lt;p&gt;&lt;img src=&#34;http://localhost:1313/p/%E5%9B%BE%E7%81%B5%E5%AE%8C%E5%A4%87%E6%B8%B8%E6%88%8F%E6%94%BB%E7%95%A54/random-RAM-require-1.png&#34;
+	width=&#34;1920&#34;
+	height=&#34;1080&#34;
+	srcset=&#34;http://localhost:1313/p/%E5%9B%BE%E7%81%B5%E5%AE%8C%E5%A4%87%E6%B8%B8%E6%88%8F%E6%94%BB%E7%95%A54/random-RAM-require-1_hu_f057e3f64222168.png 480w, http://localhost:1313/p/%E5%9B%BE%E7%81%B5%E5%AE%8C%E5%A4%87%E6%B8%B8%E6%88%8F%E6%94%BB%E7%95%A54/random-RAM-require-1_hu_3d8255b8e7f7d671.png 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;要求1&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;177&#34;
+		data-flex-basis=&#34;426px&#34;
+	
+&gt;
+&lt;img src=&#34;http://localhost:1313/p/%E5%9B%BE%E7%81%B5%E5%AE%8C%E5%A4%87%E6%B8%B8%E6%88%8F%E6%94%BB%E7%95%A54/random-RAM-require-2.png&#34;
+	width=&#34;756&#34;
+	height=&#34;506&#34;
+	srcset=&#34;http://localhost:1313/p/%E5%9B%BE%E7%81%B5%E5%AE%8C%E5%A4%87%E6%B8%B8%E6%88%8F%E6%94%BB%E7%95%A54/random-RAM-require-2_hu_e50b3873f1904111.png 480w, http://localhost:1313/p/%E5%9B%BE%E7%81%B5%E5%AE%8C%E5%A4%87%E6%B8%B8%E6%88%8F%E6%94%BB%E7%95%A54/random-RAM-require-2_hu_66acc4da9ad6f7e2.png 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;要求2&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;149&#34;
+		data-flex-basis=&#34;358px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;p&gt;讲真，我看到这个要求之后，人有点懵，说实话，已经没有额外的寄存器位置可以供分配了，走线都已经布好了，想要撬开其实怪麻烦的，唯一有点头绪的可能是指令集中依旧没分配的其中两位指令资源，
+现在也就考虑16位以及是最后三位的联动了，内存，已知的也就两个功能，读内存和写内存，但是要考虑好怎么搞定，目前实现的就是，一旦涉及内存信号位高电平，意味着这一刻必须断开8位写入器，
+也就是通过一定手段激活禁用开关即可。&lt;/p&gt;
+&lt;p&gt;但又碰到了麻烦，我调试后才发现，最大的问题在于，，说是说依次读取，但是一个时钟刻就进来一位数，写入的时候并没有什么时间执行其他东西，比如说累加，以及是跳转，要打达成这边的循环得有几个必要条件，
+先要有label loop标记循环行，再有if类的条件进行跳转到计数器内进行改变程序执行的位置，其中if和累加必定冲突，if需要占用程序操作位的前3bit，累加需要前三bit是0，
+也不可能俩一起出现，如果这样那只有用丑陋的办法了， 就是代码一行一行自己指定内存写入位，十分的丑陋，我目前没想到啥解决办法，也没去看过官方攻略&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;http://localhost:1313/p/%E5%9B%BE%E7%81%B5%E5%AE%8C%E5%A4%87%E6%B8%B8%E6%88%8F%E6%94%BB%E7%95%A54/add_a_control_position.png&#34;
+	width=&#34;994&#34;
+	height=&#34;775&#34;
+	srcset=&#34;http://localhost:1313/p/%E5%9B%BE%E7%81%B5%E5%AE%8C%E5%A4%87%E6%B8%B8%E6%88%8F%E6%94%BB%E7%95%A54/add_a_control_position_hu_20a0b5f4077a8c68.png 480w, http://localhost:1313/p/%E5%9B%BE%E7%81%B5%E5%AE%8C%E5%A4%87%E6%B8%B8%E6%88%8F%E6%94%BB%E7%95%A54/add_a_control_position_hu_f37f97a0d15a6746.png 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;增加的内存控制位&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;128&#34;
+		data-flex-basis=&#34;307px&#34;
+	
+&gt;
+&lt;img src=&#34;http://localhost:1313/p/%E5%9B%BE%E7%81%B5%E5%AE%8C%E5%A4%87%E6%B8%B8%E6%88%8F%E6%94%BB%E7%95%A54/ugly_code.png&#34;
+	width=&#34;739&#34;
+	height=&#34;882&#34;
+	srcset=&#34;http://localhost:1313/p/%E5%9B%BE%E7%81%B5%E5%AE%8C%E5%A4%87%E6%B8%B8%E6%88%8F%E6%94%BB%E7%95%A54/ugly_code_hu_3deeeba5bd61c539.png 480w, http://localhost:1313/p/%E5%9B%BE%E7%81%B5%E5%AE%8C%E5%A4%87%E6%B8%B8%E6%88%8F%E6%94%BB%E7%95%A54/ugly_code_hu_6a416846cf2f9242.png 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;丑陋的代码&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;83&#34;
+		data-flex-basis=&#34;201px&#34;
+	
+&gt;
+&lt;img src=&#34;http://localhost:1313/p/%E5%9B%BE%E7%81%B5%E5%AE%8C%E5%A4%87%E6%B8%B8%E6%88%8F%E6%94%BB%E7%95%A54/custom_ram_wr.png&#34;
+	width=&#34;1194&#34;
+	height=&#34;558&#34;
+	srcset=&#34;http://localhost:1313/p/%E5%9B%BE%E7%81%B5%E5%AE%8C%E5%A4%87%E6%B8%B8%E6%88%8F%E6%94%BB%E7%95%A54/custom_ram_wr_hu_e3efe4a641ba9f8.png 480w, http://localhost:1313/p/%E5%9B%BE%E7%81%B5%E5%AE%8C%E5%A4%87%E6%B8%B8%E6%88%8F%E6%94%BB%E7%95%A54/custom_ram_wr_hu_9dcad62bf5b59116.png 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;内存读取&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;213&#34;
+		data-flex-basis=&#34;513px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;p&gt;以及是，我指定了内存的读和写的两位，写则是16&lt;/p&gt;
+&lt;hr&gt;
+&lt;p&gt;过了一些时间才着手解决这个麻烦，想好了思路，先确定好指令样式之后再决定怎么搭线是最好的，题中也就说了一句额外加寄存器，讲真不如直接拿一位的寄存器来当内存地址，
+确定好的命令如下:&lt;/p&gt;
+&lt;p&gt;内存信号高点平的相关指令 输入位 内存位 输出位
+如果是写入状态，
+OP_write_RAM 写入位  内存地址位  空
+OP_read_RAM   空   内存地址读取位 输出位
+其实很纠结，因为空了东西了，但确定下来就好办了，其中以下是内存写入的代码&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;OP_write_RAM 7 1 0
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;OP_write_RAM 7 2 0
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;...
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;OP_write_RAM 7 31 0
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;OP_write_RAM 7 0 0
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;其中OP_read_RAM相关的命令则变成了&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;OP_read_RAM 0 reg0 7
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;说明一下，内存地址读取位是指，从那一位寄存器里读出数据然后来写入，也就是说，只要从第二位选择器中拿到后面的数据就可以了，其中二选一控制器用读的17（控制码）就可以了，
+这样可以通过寄存器直接输入数值了就，这样就可以构成循环的条件了，因为题目中没要求输出的时间紧凑度，如果再是上面那样急着输出就很难搞了，接上个话题，比如说我指定reg0为内存地址读取位，
+那么我后面指定让reg0累加1，然后判断reg0是否小于等于32就可以了&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;http://localhost:1313/p/%E5%9B%BE%E7%81%B5%E5%AE%8C%E5%A4%87%E6%B8%B8%E6%88%8F%E6%94%BB%E7%95%A54/LEG-ram-read-control.png&#34;
+	width=&#34;1651&#34;
+	height=&#34;753&#34;
+	srcset=&#34;http://localhost:1313/p/%E5%9B%BE%E7%81%B5%E5%AE%8C%E5%A4%87%E6%B8%B8%E6%88%8F%E6%94%BB%E7%95%A54/LEG-ram-read-control_hu_eae572e999179219.png 480w, http://localhost:1313/p/%E5%9B%BE%E7%81%B5%E5%AE%8C%E5%A4%87%E6%B8%B8%E6%88%8F%E6%94%BB%E7%95%A54/LEG-ram-read-control_hu_2173bd549e2f17bb.png 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;读取时控制码&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;219&#34;
+		data-flex-basis=&#34;526px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;http://localhost:1313/p/%E5%9B%BE%E7%81%B5%E5%AE%8C%E5%A4%87%E6%B8%B8%E6%88%8F%E6%94%BB%E7%95%A54/output_control.png&#34;
+	width=&#34;1452&#34;
+	height=&#34;881&#34;
+	srcset=&#34;http://localhost:1313/p/%E5%9B%BE%E7%81%B5%E5%AE%8C%E5%A4%87%E6%B8%B8%E6%88%8F%E6%94%BB%E7%95%A54/output_control_hu_8235041c9fa35bb4.png 480w, http://localhost:1313/p/%E5%9B%BE%E7%81%B5%E5%AE%8C%E5%A4%87%E6%B8%B8%E6%88%8F%E6%94%BB%E7%95%A54/output_control_hu_31a53ed7aa189b0c.png 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;img.png&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;164&#34;
+		data-flex-basis=&#34;395px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;label loop
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;OP_read_RAM  0  reg0   out
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;add_i1 1 reg0 reg0
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;lesseq1i reg0 32 loop
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;其中这是代码，add_i1是指第一位是立即数第二位是reg寄存器地址的，下面的lesseq1i也是一样，指的第二位是立即数模式进来的数字，这样就能解决了&lt;/p&gt;
+&lt;p&gt;吐槽一下这个出的问题，太烂了，我很讨厌低效的代码，拷贝，改数字，挺丑陋的，但我又拿它没办法，read部分我其实想破罐破摔了，但是程序本身放不下貌似，溢出了，那就作罢只能换循环了，
+这题是解的算扫兴了，希望后面别碰到这样的题了。&lt;/p&gt;
+&lt;hr&gt;
+&lt;p&gt;下一篇博文见,下一篇链接(还没更新，更新完了放这里)&lt;/p&gt;
 </description>
         </item>
         <item>
         <title>图灵完备游戏攻略3</title>
-        <link>https://adeepblue.github.io/p/%E5%9B%BE%E7%81%B5%E5%AE%8C%E5%A4%87%E6%B8%B8%E6%88%8F%E6%94%BB%E7%95%A53/</link>
+        <link>http://localhost:1313/p/%E5%9B%BE%E7%81%B5%E5%AE%8C%E5%A4%87%E6%B8%B8%E6%88%8F%E6%94%BB%E7%95%A53/</link>
         <pubDate>Thu, 13 Feb 2025 16:21:04 +0800</pubDate>
         
-        <guid>https://adeepblue.github.io/p/%E5%9B%BE%E7%81%B5%E5%AE%8C%E5%A4%87%E6%B8%B8%E6%88%8F%E6%94%BB%E7%95%A53/</guid>
-        <description>&lt;img src="https://adeepblue.github.io/image/Turing-Complete-Logo.png" alt="Featured image of post 图灵完备游戏攻略3" /&gt;&lt;h1 id=&#34;图灵完备部分游戏攻略&#34;&gt;图灵完备部分游戏攻略
+        <guid>http://localhost:1313/p/%E5%9B%BE%E7%81%B5%E5%AE%8C%E5%A4%87%E6%B8%B8%E6%88%8F%E6%94%BB%E7%95%A53/</guid>
+        <description>&lt;img src="http://localhost:1313/image/Turing-Complete-Logo.png" alt="Featured image of post 图灵完备游戏攻略3" /&gt;&lt;h1 id=&#34;图灵完备部分游戏攻略&#34;&gt;图灵完备部分游戏攻略
 &lt;/h1&gt;&lt;h2 id=&#34;宽指令&#34;&gt;宽指令
-&lt;/h2&gt;&lt;p&gt;&lt;img src=&#34;https://adeepblue.github.io/p/%E5%9B%BE%E7%81%B5%E5%AE%8C%E5%A4%87%E6%B8%B8%E6%88%8F%E6%94%BB%E7%95%A53/Wide-instruction.png&#34;
+&lt;/h2&gt;&lt;p&gt;&lt;img src=&#34;http://localhost:1313/p/%E5%9B%BE%E7%81%B5%E5%AE%8C%E5%A4%87%E6%B8%B8%E6%88%8F%E6%94%BB%E7%95%A53/Wide-instruction.png&#34;
 	width=&#34;1492&#34;
 	height=&#34;988&#34;
-	srcset=&#34;https://adeepblue.github.io/p/%E5%9B%BE%E7%81%B5%E5%AE%8C%E5%A4%87%E6%B8%B8%E6%88%8F%E6%94%BB%E7%95%A53/Wide-instruction_hu_cbfb11152500250b.png 480w, https://adeepblue.github.io/p/%E5%9B%BE%E7%81%B5%E5%AE%8C%E5%A4%87%E6%B8%B8%E6%88%8F%E6%94%BB%E7%95%A53/Wide-instruction_hu_ed7862908053c5ee.png 1024w&#34;
+	srcset=&#34;http://localhost:1313/p/%E5%9B%BE%E7%81%B5%E5%AE%8C%E5%A4%87%E6%B8%B8%E6%88%8F%E6%94%BB%E7%95%A53/Wide-instruction_hu_cbfb11152500250b.png 480w, http://localhost:1313/p/%E5%9B%BE%E7%81%B5%E5%AE%8C%E5%A4%87%E6%B8%B8%E6%88%8F%E6%94%BB%E7%95%A53/Wide-instruction_hu_ed7862908053c5ee.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 		alt=&#34;要求&#34;
@@ -258,10 +391,10 @@
 偶数时刻，比如说0，也就是说1位处于低电平的时候写入寄存器，也就是需要套一个非门，因为程序的输出口还有直接输出到输出的功能，所以最好给程序输出口套一个八位开关，没有低电平的时候直接不输出值，
 这样偶数刻的操作就结束了，再有奇数刻要输出两个数的值，也就是说，1位高电平亮起，同时，控制寄存器一位和程序一位分别向输出口输出即可，分别套一个八位开关
 如下：&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://adeepblue.github.io/p/%E5%9B%BE%E7%81%B5%E5%AE%8C%E5%A4%87%E6%B8%B8%E6%88%8F%E6%94%BB%E7%95%A53/Wide-instruction-solve.png&#34;
+&lt;p&gt;&lt;img src=&#34;http://localhost:1313/p/%E5%9B%BE%E7%81%B5%E5%AE%8C%E5%A4%87%E6%B8%B8%E6%88%8F%E6%94%BB%E7%95%A53/Wide-instruction-solve.png&#34;
 	width=&#34;1674&#34;
 	height=&#34;1009&#34;
-	srcset=&#34;https://adeepblue.github.io/p/%E5%9B%BE%E7%81%B5%E5%AE%8C%E5%A4%87%E6%B8%B8%E6%88%8F%E6%94%BB%E7%95%A53/Wide-instruction-solve_hu_48c78e96e2726ba9.png 480w, https://adeepblue.github.io/p/%E5%9B%BE%E7%81%B5%E5%AE%8C%E5%A4%87%E6%B8%B8%E6%88%8F%E6%94%BB%E7%95%A53/Wide-instruction-solve_hu_c0d29fc005e66974.png 1024w&#34;
+	srcset=&#34;http://localhost:1313/p/%E5%9B%BE%E7%81%B5%E5%AE%8C%E5%A4%87%E6%B8%B8%E6%88%8F%E6%94%BB%E7%95%A53/Wide-instruction-solve_hu_48c78e96e2726ba9.png 480w, http://localhost:1313/p/%E5%9B%BE%E7%81%B5%E5%AE%8C%E5%A4%87%E6%B8%B8%E6%88%8F%E6%94%BB%E7%95%A53/Wide-instruction-solve_hu_c0d29fc005e66974.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 		alt=&#34;解法&#34;
@@ -273,10 +406,10 @@
 	
 &gt;&lt;/p&gt;
 &lt;h2 id=&#34;一把线像挂面&#34;&gt;一把线，像挂面
-&lt;/h2&gt;&lt;p&gt;&lt;img src=&#34;https://adeepblue.github.io/p/%E5%9B%BE%E7%81%B5%E5%AE%8C%E5%A4%87%E6%B8%B8%E6%88%8F%E6%94%BB%E7%95%A53/new-architecture-require-1.png&#34;
+&lt;/h2&gt;&lt;p&gt;&lt;img src=&#34;http://localhost:1313/p/%E5%9B%BE%E7%81%B5%E5%AE%8C%E5%A4%87%E6%B8%B8%E6%88%8F%E6%94%BB%E7%95%A53/new-architecture-require-1.png&#34;
 	width=&#34;774&#34;
 	height=&#34;508&#34;
-	srcset=&#34;https://adeepblue.github.io/p/%E5%9B%BE%E7%81%B5%E5%AE%8C%E5%A4%87%E6%B8%B8%E6%88%8F%E6%94%BB%E7%95%A53/new-architecture-require-1_hu_48765ed6236ee3be.png 480w, https://adeepblue.github.io/p/%E5%9B%BE%E7%81%B5%E5%AE%8C%E5%A4%87%E6%B8%B8%E6%88%8F%E6%94%BB%E7%95%A53/new-architecture-require-1_hu_ec1899faad8f3c72.png 1024w&#34;
+	srcset=&#34;http://localhost:1313/p/%E5%9B%BE%E7%81%B5%E5%AE%8C%E5%A4%87%E6%B8%B8%E6%88%8F%E6%94%BB%E7%95%A53/new-architecture-require-1_hu_48765ed6236ee3be.png 480w, http://localhost:1313/p/%E5%9B%BE%E7%81%B5%E5%AE%8C%E5%A4%87%E6%B8%B8%E6%88%8F%E6%94%BB%E7%95%A53/new-architecture-require-1_hu_ec1899faad8f3c72.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 		alt=&#34;要求说明1&#34;
@@ -287,10 +420,10 @@
 		data-flex-basis=&#34;365px&#34;
 	
 &gt;
-&lt;img src=&#34;https://adeepblue.github.io/p/%E5%9B%BE%E7%81%B5%E5%AE%8C%E5%A4%87%E6%B8%B8%E6%88%8F%E6%94%BB%E7%95%A53/new-architecture-require-2.png&#34;
+&lt;img src=&#34;http://localhost:1313/p/%E5%9B%BE%E7%81%B5%E5%AE%8C%E5%A4%87%E6%B8%B8%E6%88%8F%E6%94%BB%E7%95%A53/new-architecture-require-2.png&#34;
 	width=&#34;572&#34;
 	height=&#34;394&#34;
-	srcset=&#34;https://adeepblue.github.io/p/%E5%9B%BE%E7%81%B5%E5%AE%8C%E5%A4%87%E6%B8%B8%E6%88%8F%E6%94%BB%E7%95%A53/new-architecture-require-2_hu_a2e96c6061c7a85a.png 480w, https://adeepblue.github.io/p/%E5%9B%BE%E7%81%B5%E5%AE%8C%E5%A4%87%E6%B8%B8%E6%88%8F%E6%94%BB%E7%95%A53/new-architecture-require-2_hu_1d55e3c7cb411bd1.png 1024w&#34;
+	srcset=&#34;http://localhost:1313/p/%E5%9B%BE%E7%81%B5%E5%AE%8C%E5%A4%87%E6%B8%B8%E6%88%8F%E6%94%BB%E7%95%A53/new-architecture-require-2_hu_a2e96c6061c7a85a.png 480w, http://localhost:1313/p/%E5%9B%BE%E7%81%B5%E5%AE%8C%E5%A4%87%E6%B8%B8%E6%88%8F%E6%94%BB%E7%95%A53/new-architecture-require-2_hu_1d55e3c7cb411bd1.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 		alt=&#34;要求说明2&#34;
@@ -301,10 +434,10 @@
 		data-flex-basis=&#34;348px&#34;
 	
 &gt;
-&lt;img src=&#34;https://adeepblue.github.io/p/%E5%9B%BE%E7%81%B5%E5%AE%8C%E5%A4%87%E6%B8%B8%E6%88%8F%E6%94%BB%E7%95%A53/new-architecture-require-3.png&#34;
+&lt;img src=&#34;http://localhost:1313/p/%E5%9B%BE%E7%81%B5%E5%AE%8C%E5%A4%87%E6%B8%B8%E6%88%8F%E6%94%BB%E7%95%A53/new-architecture-require-3.png&#34;
 	width=&#34;766&#34;
 	height=&#34;503&#34;
-	srcset=&#34;https://adeepblue.github.io/p/%E5%9B%BE%E7%81%B5%E5%AE%8C%E5%A4%87%E6%B8%B8%E6%88%8F%E6%94%BB%E7%95%A53/new-architecture-require-3_hu_aa4e7450fa6a5783.png 480w, https://adeepblue.github.io/p/%E5%9B%BE%E7%81%B5%E5%AE%8C%E5%A4%87%E6%B8%B8%E6%88%8F%E6%94%BB%E7%95%A53/new-architecture-require-3_hu_e4a3d821d0af346b.png 1024w&#34;
+	srcset=&#34;http://localhost:1313/p/%E5%9B%BE%E7%81%B5%E5%AE%8C%E5%A4%87%E6%B8%B8%E6%88%8F%E6%94%BB%E7%95%A53/new-architecture-require-3_hu_aa4e7450fa6a5783.png 480w, http://localhost:1313/p/%E5%9B%BE%E7%81%B5%E5%AE%8C%E5%A4%87%E6%B8%B8%E6%88%8F%E6%94%BB%E7%95%A53/new-architecture-require-3_hu_e4a3d821d0af346b.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 		alt=&#34;要求说明3&#34;
@@ -315,10 +448,10 @@
 		data-flex-basis=&#34;365px&#34;
 	
 &gt;&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://adeepblue.github.io/p/%E5%9B%BE%E7%81%B5%E5%AE%8C%E5%A4%87%E6%B8%B8%E6%88%8F%E6%94%BB%E7%95%A53/new-architecture-require-4.png&#34;
+&lt;p&gt;&lt;img src=&#34;http://localhost:1313/p/%E5%9B%BE%E7%81%B5%E5%AE%8C%E5%A4%87%E6%B8%B8%E6%88%8F%E6%94%BB%E7%95%A53/new-architecture-require-4.png&#34;
 	width=&#34;739&#34;
 	height=&#34;510&#34;
-	srcset=&#34;https://adeepblue.github.io/p/%E5%9B%BE%E7%81%B5%E5%AE%8C%E5%A4%87%E6%B8%B8%E6%88%8F%E6%94%BB%E7%95%A53/new-architecture-require-4_hu_8cdb7fc66c09b589.png 480w, https://adeepblue.github.io/p/%E5%9B%BE%E7%81%B5%E5%AE%8C%E5%A4%87%E6%B8%B8%E6%88%8F%E6%94%BB%E7%95%A53/new-architecture-require-4_hu_5a1dc18ddcbdaf74.png 1024w&#34;
+	srcset=&#34;http://localhost:1313/p/%E5%9B%BE%E7%81%B5%E5%AE%8C%E5%A4%87%E6%B8%B8%E6%88%8F%E6%94%BB%E7%95%A53/new-architecture-require-4_hu_8cdb7fc66c09b589.png 480w, http://localhost:1313/p/%E5%9B%BE%E7%81%B5%E5%AE%8C%E5%A4%87%E6%B8%B8%E6%88%8F%E6%94%BB%E7%95%A53/new-architecture-require-4_hu_5a1dc18ddcbdaf74.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 		alt=&#34;要求说明4&#34;
@@ -329,10 +462,10 @@
 		data-flex-basis=&#34;347px&#34;
 	
 &gt;
-&lt;img src=&#34;https://adeepblue.github.io/p/%E5%9B%BE%E7%81%B5%E5%AE%8C%E5%A4%87%E6%B8%B8%E6%88%8F%E6%94%BB%E7%95%A53/new-architecture-require-5.png&#34;
+&lt;img src=&#34;http://localhost:1313/p/%E5%9B%BE%E7%81%B5%E5%AE%8C%E5%A4%87%E6%B8%B8%E6%88%8F%E6%94%BB%E7%95%A53/new-architecture-require-5.png&#34;
 	width=&#34;757&#34;
 	height=&#34;505&#34;
-	srcset=&#34;https://adeepblue.github.io/p/%E5%9B%BE%E7%81%B5%E5%AE%8C%E5%A4%87%E6%B8%B8%E6%88%8F%E6%94%BB%E7%95%A53/new-architecture-require-5_hu_4a4fdb7557844a8c.png 480w, https://adeepblue.github.io/p/%E5%9B%BE%E7%81%B5%E5%AE%8C%E5%A4%87%E6%B8%B8%E6%88%8F%E6%94%BB%E7%95%A53/new-architecture-require-5_hu_5a787b7540ff3284.png 1024w&#34;
+	srcset=&#34;http://localhost:1313/p/%E5%9B%BE%E7%81%B5%E5%AE%8C%E5%A4%87%E6%B8%B8%E6%88%8F%E6%94%BB%E7%95%A53/new-architecture-require-5_hu_4a4fdb7557844a8c.png 480w, http://localhost:1313/p/%E5%9B%BE%E7%81%B5%E5%AE%8C%E5%A4%87%E6%B8%B8%E6%88%8F%E6%94%BB%E7%95%A53/new-architecture-require-5_hu_5a787b7540ff3284.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 		alt=&#34;要求说明5&#34;
@@ -344,10 +477,10 @@
 	
 &gt;&lt;/p&gt;
 &lt;p&gt;按照它上面说的，先将计数器步进设置为4&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://adeepblue.github.io/p/%E5%9B%BE%E7%81%B5%E5%AE%8C%E5%A4%87%E6%B8%B8%E6%88%8F%E6%94%BB%E7%95%A53/set-step.png&#34;
+&lt;p&gt;&lt;img src=&#34;http://localhost:1313/p/%E5%9B%BE%E7%81%B5%E5%AE%8C%E5%A4%87%E6%B8%B8%E6%88%8F%E6%94%BB%E7%95%A53/set-step.png&#34;
 	width=&#34;1920&#34;
 	height=&#34;1080&#34;
-	srcset=&#34;https://adeepblue.github.io/p/%E5%9B%BE%E7%81%B5%E5%AE%8C%E5%A4%87%E6%B8%B8%E6%88%8F%E6%94%BB%E7%95%A53/set-step_hu_86f46e51106089e9.png 480w, https://adeepblue.github.io/p/%E5%9B%BE%E7%81%B5%E5%AE%8C%E5%A4%87%E6%B8%B8%E6%88%8F%E6%94%BB%E7%95%A53/set-step_hu_ff2e45a4f71c2cce.png 1024w&#34;
+	srcset=&#34;http://localhost:1313/p/%E5%9B%BE%E7%81%B5%E5%AE%8C%E5%A4%87%E6%B8%B8%E6%88%8F%E6%94%BB%E7%95%A53/set-step_hu_86f46e51106089e9.png 480w, http://localhost:1313/p/%E5%9B%BE%E7%81%B5%E5%AE%8C%E5%A4%87%E6%B8%B8%E6%88%8F%E6%94%BB%E7%95%A53/set-step_hu_ff2e45a4f71c2cce.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 		alt=&#34;说明&#34;
@@ -359,10 +492,10 @@
 	
 &gt;&lt;/p&gt;
 &lt;p&gt;以及是根据要求说明2里的图，后三个都是操作地址，也就是说，后三个全部需要用到分线装置控制到哪一位，这就可能要点布置&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://adeepblue.github.io/p/%E5%9B%BE%E7%81%B5%E5%AE%8C%E5%A4%87%E6%B8%B8%E6%88%8F%E6%94%BB%E7%95%A53/8bit-8-select-1-8bit.png&#34;
+&lt;p&gt;&lt;img src=&#34;http://localhost:1313/p/%E5%9B%BE%E7%81%B5%E5%AE%8C%E5%A4%87%E6%B8%B8%E6%88%8F%E6%94%BB%E7%95%A53/8bit-8-select-1-8bit.png&#34;
 	width=&#34;852&#34;
 	height=&#34;1054&#34;
-	srcset=&#34;https://adeepblue.github.io/p/%E5%9B%BE%E7%81%B5%E5%AE%8C%E5%A4%87%E6%B8%B8%E6%88%8F%E6%94%BB%E7%95%A53/8bit-8-select-1-8bit_hu_f719f8335691d43b.png 480w, https://adeepblue.github.io/p/%E5%9B%BE%E7%81%B5%E5%AE%8C%E5%A4%87%E6%B8%B8%E6%88%8F%E6%94%BB%E7%95%A53/8bit-8-select-1-8bit_hu_a526c825eb72ce00.png 1024w&#34;
+	srcset=&#34;http://localhost:1313/p/%E5%9B%BE%E7%81%B5%E5%AE%8C%E5%A4%87%E6%B8%B8%E6%88%8F%E6%94%BB%E7%95%A53/8bit-8-select-1-8bit_hu_f719f8335691d43b.png 480w, http://localhost:1313/p/%E5%9B%BE%E7%81%B5%E5%AE%8C%E5%A4%87%E6%B8%B8%E6%88%8F%E6%94%BB%E7%95%A53/8bit-8-select-1-8bit_hu_a526c825eb72ce00.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 		alt=&#34;改造后的8位数据8选1元件&#34;
@@ -374,10 +507,10 @@
 	
 &gt;&lt;/p&gt;
 &lt;p&gt;首先如上改造了一下以前的八选一的数据元器件，改成8bit好方便输入&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://adeepblue.github.io/p/%E5%9B%BE%E7%81%B5%E5%AE%8C%E5%A4%87%E6%B8%B8%E6%88%8F%E6%94%BB%E7%95%A53/8bit-8-select-1-8bit-in-main-1.png&#34;
+&lt;p&gt;&lt;img src=&#34;http://localhost:1313/p/%E5%9B%BE%E7%81%B5%E5%AE%8C%E5%A4%87%E6%B8%B8%E6%88%8F%E6%94%BB%E7%95%A53/8bit-8-select-1-8bit-in-main-1.png&#34;
 	width=&#34;1223&#34;
 	height=&#34;750&#34;
-	srcset=&#34;https://adeepblue.github.io/p/%E5%9B%BE%E7%81%B5%E5%AE%8C%E5%A4%87%E6%B8%B8%E6%88%8F%E6%94%BB%E7%95%A53/8bit-8-select-1-8bit-in-main-1_hu_b737d43b91d5740e.png 480w, https://adeepblue.github.io/p/%E5%9B%BE%E7%81%B5%E5%AE%8C%E5%A4%87%E6%B8%B8%E6%88%8F%E6%94%BB%E7%95%A53/8bit-8-select-1-8bit-in-main-1_hu_83250d36737d2b27.png 1024w&#34;
+	srcset=&#34;http://localhost:1313/p/%E5%9B%BE%E7%81%B5%E5%AE%8C%E5%A4%87%E6%B8%B8%E6%88%8F%E6%94%BB%E7%95%A53/8bit-8-select-1-8bit-in-main-1_hu_b737d43b91d5740e.png 480w, http://localhost:1313/p/%E5%9B%BE%E7%81%B5%E5%AE%8C%E5%A4%87%E6%B8%B8%E6%88%8F%E6%94%BB%E7%95%A53/8bit-8-select-1-8bit-in-main-1_hu_83250d36737d2b27.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 		alt=&#34;布线&#34;
@@ -388,10 +521,10 @@
 		data-flex-basis=&#34;391px&#34;
 	
 &gt;
-&lt;img src=&#34;https://adeepblue.github.io/p/%E5%9B%BE%E7%81%B5%E5%AE%8C%E5%A4%87%E6%B8%B8%E6%88%8F%E6%94%BB%E7%95%A53/describe-ALU.png&#34;
+&lt;img src=&#34;http://localhost:1313/p/%E5%9B%BE%E7%81%B5%E5%AE%8C%E5%A4%87%E6%B8%B8%E6%88%8F%E6%94%BB%E7%95%A53/describe-ALU.png&#34;
 	width=&#34;1510&#34;
 	height=&#34;984&#34;
-	srcset=&#34;https://adeepblue.github.io/p/%E5%9B%BE%E7%81%B5%E5%AE%8C%E5%A4%87%E6%B8%B8%E6%88%8F%E6%94%BB%E7%95%A53/describe-ALU_hu_7d818dc42d99d882.png 480w, https://adeepblue.github.io/p/%E5%9B%BE%E7%81%B5%E5%AE%8C%E5%A4%87%E6%B8%B8%E6%88%8F%E6%94%BB%E7%95%A53/describe-ALU_hu_73984e4bd68966c8.png 1024w&#34;
+	srcset=&#34;http://localhost:1313/p/%E5%9B%BE%E7%81%B5%E5%AE%8C%E5%A4%87%E6%B8%B8%E6%88%8F%E6%94%BB%E7%95%A53/describe-ALU_hu_7d818dc42d99d882.png 480w, http://localhost:1313/p/%E5%9B%BE%E7%81%B5%E5%AE%8C%E5%A4%87%E6%B8%B8%E6%88%8F%E6%94%BB%E7%95%A53/describe-ALU_hu_73984e4bd68966c8.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 		alt=&#34;补一下ALU的描述&#34;
@@ -404,10 +537,10 @@
 &gt;&lt;/p&gt;
 &lt;p&gt;后悔没补上ALU的描述，因为刚才报错我以为要求说明4里的add确实是0输入ALU里面的0了，结果不是，ADD在ALU里对应的控制码是4，那我就补一下，因为现在反正也是临时的，
 不确定后面的控制码要求是什么样的，毕竟0变成add了，那有可能后面ALU也得改，既然现在它要求只是add那我直接就控制码始终是4输入罢，后面要改了再说&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://adeepblue.github.io/p/%E5%9B%BE%E7%81%B5%E5%AE%8C%E5%A4%87%E6%B8%B8%E6%88%8F%E6%94%BB%E7%95%A53/temp-LEG-main-1.png&#34;
+&lt;p&gt;&lt;img src=&#34;http://localhost:1313/p/%E5%9B%BE%E7%81%B5%E5%AE%8C%E5%A4%87%E6%B8%B8%E6%88%8F%E6%94%BB%E7%95%A53/temp-LEG-main-1.png&#34;
 	width=&#34;1388&#34;
 	height=&#34;892&#34;
-	srcset=&#34;https://adeepblue.github.io/p/%E5%9B%BE%E7%81%B5%E5%AE%8C%E5%A4%87%E6%B8%B8%E6%88%8F%E6%94%BB%E7%95%A53/temp-LEG-main-1_hu_c131cfa00c23a193.png 480w, https://adeepblue.github.io/p/%E5%9B%BE%E7%81%B5%E5%AE%8C%E5%A4%87%E6%B8%B8%E6%88%8F%E6%94%BB%E7%95%A53/temp-LEG-main-1_hu_a5f7bdf03e95146a.png 1024w&#34;
+	srcset=&#34;http://localhost:1313/p/%E5%9B%BE%E7%81%B5%E5%AE%8C%E5%A4%87%E6%B8%B8%E6%88%8F%E6%94%BB%E7%95%A53/temp-LEG-main-1_hu_c131cfa00c23a193.png 480w, http://localhost:1313/p/%E5%9B%BE%E7%81%B5%E5%AE%8C%E5%A4%87%E6%B8%B8%E6%88%8F%E6%94%BB%E7%95%A53/temp-LEG-main-1_hu_a5f7bdf03e95146a.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 		alt=&#34;第一版临时的布线方案&#34;
@@ -420,10 +553,10 @@
 &gt;&lt;/p&gt;
 &lt;p&gt;第一版布线方案用了之后，发现一旦输出是0了，就输入不到寄存器里了，意识到了这么个问题，但想想，好像是因为本身的问题，因为上面一版布线我直接就是为了省控制位的线，
 直接用了判断输出是否是0来决定是否要写入寄存器，但明显这是个失误，得补上控制线&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://adeepblue.github.io/p/%E5%9B%BE%E7%81%B5%E5%AE%8C%E5%A4%87%E6%B8%B8%E6%88%8F%E6%94%BB%E7%95%A53/LEG-main-1.png&#34;
+&lt;p&gt;&lt;img src=&#34;http://localhost:1313/p/%E5%9B%BE%E7%81%B5%E5%AE%8C%E5%A4%87%E6%B8%B8%E6%88%8F%E6%94%BB%E7%95%A53/LEG-main-1.png&#34;
 	width=&#34;1319&#34;
 	height=&#34;726&#34;
-	srcset=&#34;https://adeepblue.github.io/p/%E5%9B%BE%E7%81%B5%E5%AE%8C%E5%A4%87%E6%B8%B8%E6%88%8F%E6%94%BB%E7%95%A53/LEG-main-1_hu_495a10c2da4f2fa5.png 480w, https://adeepblue.github.io/p/%E5%9B%BE%E7%81%B5%E5%AE%8C%E5%A4%87%E6%B8%B8%E6%88%8F%E6%94%BB%E7%95%A53/LEG-main-1_hu_8ad6cb543a4b4179.png 1024w&#34;
+	srcset=&#34;http://localhost:1313/p/%E5%9B%BE%E7%81%B5%E5%AE%8C%E5%A4%87%E6%B8%B8%E6%88%8F%E6%94%BB%E7%95%A53/LEG-main-1_hu_495a10c2da4f2fa5.png 480w, http://localhost:1313/p/%E5%9B%BE%E7%81%B5%E5%AE%8C%E5%A4%87%E6%B8%B8%E6%88%8F%E6%94%BB%E7%95%A53/LEG-main-1_hu_8ad6cb543a4b4179.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 		alt=&#34;最终方案&#34;
@@ -434,10 +567,10 @@
 		data-flex-basis=&#34;436px&#34;
 	
 &gt;
-&lt;img src=&#34;https://adeepblue.github.io/p/%E5%9B%BE%E7%81%B5%E5%AE%8C%E5%A4%87%E6%B8%B8%E6%88%8F%E6%94%BB%E7%95%A53/LEG-solve-1.png&#34;
+&lt;img src=&#34;http://localhost:1313/p/%E5%9B%BE%E7%81%B5%E5%AE%8C%E5%A4%87%E6%B8%B8%E6%88%8F%E6%94%BB%E7%95%A53/LEG-solve-1.png&#34;
 	width=&#34;1198&#34;
 	height=&#34;700&#34;
-	srcset=&#34;https://adeepblue.github.io/p/%E5%9B%BE%E7%81%B5%E5%AE%8C%E5%A4%87%E6%B8%B8%E6%88%8F%E6%94%BB%E7%95%A53/LEG-solve-1_hu_68ea801a5650f527.png 480w, https://adeepblue.github.io/p/%E5%9B%BE%E7%81%B5%E5%AE%8C%E5%A4%87%E6%B8%B8%E6%88%8F%E6%94%BB%E7%95%A53/LEG-solve-1_hu_f6d65093e9e3ea2d.png 1024w&#34;
+	srcset=&#34;http://localhost:1313/p/%E5%9B%BE%E7%81%B5%E5%AE%8C%E5%A4%87%E6%B8%B8%E6%88%8F%E6%94%BB%E7%95%A53/LEG-solve-1_hu_68ea801a5650f527.png 480w, http://localhost:1313/p/%E5%9B%BE%E7%81%B5%E5%AE%8C%E5%A4%87%E6%B8%B8%E6%88%8F%E6%94%BB%E7%95%A53/LEG-solve-1_hu_f6d65093e9e3ea2d.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 		alt=&#34;改动处&#34;
@@ -450,10 +583,10 @@
 &gt;&lt;/p&gt;
 &lt;p&gt;有改动的地方如上，也就是操作码强制被指定4，断开初始操作码，以及是新增控制码&lt;/p&gt;
 &lt;h2 id=&#34;操作码&#34;&gt;操作码
-&lt;/h2&gt;&lt;p&gt;&lt;img src=&#34;https://adeepblue.github.io/p/%E5%9B%BE%E7%81%B5%E5%AE%8C%E5%A4%87%E6%B8%B8%E6%88%8F%E6%94%BB%E7%95%A53/LEG-control-code.png&#34;
+&lt;/h2&gt;&lt;p&gt;&lt;img src=&#34;http://localhost:1313/p/%E5%9B%BE%E7%81%B5%E5%AE%8C%E5%A4%87%E6%B8%B8%E6%88%8F%E6%94%BB%E7%95%A53/LEG-control-code.png&#34;
 	width=&#34;794&#34;
 	height=&#34;542&#34;
-	srcset=&#34;https://adeepblue.github.io/p/%E5%9B%BE%E7%81%B5%E5%AE%8C%E5%A4%87%E6%B8%B8%E6%88%8F%E6%94%BB%E7%95%A53/LEG-control-code_hu_800fbb79827928c5.png 480w, https://adeepblue.github.io/p/%E5%9B%BE%E7%81%B5%E5%AE%8C%E5%A4%87%E6%B8%B8%E6%88%8F%E6%94%BB%E7%95%A53/LEG-control-code_hu_7f44b72f0514d870.png 1024w&#34;
+	srcset=&#34;http://localhost:1313/p/%E5%9B%BE%E7%81%B5%E5%AE%8C%E5%A4%87%E6%B8%B8%E6%88%8F%E6%94%BB%E7%95%A53/LEG-control-code_hu_800fbb79827928c5.png 480w, http://localhost:1313/p/%E5%9B%BE%E7%81%B5%E5%AE%8C%E5%A4%87%E6%B8%B8%E6%88%8F%E6%94%BB%E7%95%A53/LEG-control-code_hu_7f44b72f0514d870.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 		alt=&#34;要求&#34;
@@ -465,10 +598,10 @@
 	
 &gt;&lt;/p&gt;
 &lt;p&gt;只能说，果然不出所料了，控制码有变更了，那也就是意味着，ALU我有条件的话重构一个会好一些了，然后按照对应的控制码调整自定义ALU的位置即可&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://adeepblue.github.io/p/%E5%9B%BE%E7%81%B5%E5%AE%8C%E5%A4%87%E6%B8%B8%E6%88%8F%E6%94%BB%E7%95%A53/custom-LEG-ALU.png&#34;
+&lt;p&gt;&lt;img src=&#34;http://localhost:1313/p/%E5%9B%BE%E7%81%B5%E5%AE%8C%E5%A4%87%E6%B8%B8%E6%88%8F%E6%94%BB%E7%95%A53/custom-LEG-ALU.png&#34;
 	width=&#34;854&#34;
 	height=&#34;1009&#34;
-	srcset=&#34;https://adeepblue.github.io/p/%E5%9B%BE%E7%81%B5%E5%AE%8C%E5%A4%87%E6%B8%B8%E6%88%8F%E6%94%BB%E7%95%A53/custom-LEG-ALU_hu_8557c4bae33d3647.png 480w, https://adeepblue.github.io/p/%E5%9B%BE%E7%81%B5%E5%AE%8C%E5%A4%87%E6%B8%B8%E6%88%8F%E6%94%BB%E7%95%A53/custom-LEG-ALU_hu_e0c934c3feda7854.png 1024w&#34;
+	srcset=&#34;http://localhost:1313/p/%E5%9B%BE%E7%81%B5%E5%AE%8C%E5%A4%87%E6%B8%B8%E6%88%8F%E6%94%BB%E7%95%A53/custom-LEG-ALU_hu_8557c4bae33d3647.png 480w, http://localhost:1313/p/%E5%9B%BE%E7%81%B5%E5%AE%8C%E5%A4%87%E6%B8%B8%E6%88%8F%E6%94%BB%E7%95%A53/custom-LEG-ALU_hu_e0c934c3feda7854.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 		alt=&#34;定制的ALU元件&#34;
@@ -479,10 +612,10 @@
 		data-flex-basis=&#34;203px&#34;
 	
 &gt;&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://adeepblue.github.io/p/%E5%9B%BE%E7%81%B5%E5%AE%8C%E5%A4%87%E6%B8%B8%E6%88%8F%E6%94%BB%E7%95%A53/LEG-main-2.png&#34;
+&lt;p&gt;&lt;img src=&#34;http://localhost:1313/p/%E5%9B%BE%E7%81%B5%E5%AE%8C%E5%A4%87%E6%B8%B8%E6%88%8F%E6%94%BB%E7%95%A53/LEG-main-2.png&#34;
 	width=&#34;1920&#34;
 	height=&#34;1080&#34;
-	srcset=&#34;https://adeepblue.github.io/p/%E5%9B%BE%E7%81%B5%E5%AE%8C%E5%A4%87%E6%B8%B8%E6%88%8F%E6%94%BB%E7%95%A53/LEG-main-2_hu_719a652b5c41a109.png 480w, https://adeepblue.github.io/p/%E5%9B%BE%E7%81%B5%E5%AE%8C%E5%A4%87%E6%B8%B8%E6%88%8F%E6%94%BB%E7%95%A53/LEG-main-2_hu_3a2e578d9bce3352.png 1024w&#34;
+	srcset=&#34;http://localhost:1313/p/%E5%9B%BE%E7%81%B5%E5%AE%8C%E5%A4%87%E6%B8%B8%E6%88%8F%E6%94%BB%E7%95%A53/LEG-main-2_hu_719a652b5c41a109.png 480w, http://localhost:1313/p/%E5%9B%BE%E7%81%B5%E5%AE%8C%E5%A4%87%E6%B8%B8%E6%88%8F%E6%94%BB%E7%95%A53/LEG-main-2_hu_3a2e578d9bce3352.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 		alt=&#34;完成&#34;
@@ -495,10 +628,10 @@
 &gt;&lt;/p&gt;
 &lt;p&gt;最终只要把上述的线给连回去就行了，删掉原来的8bit常数&lt;/p&gt;
 &lt;h2 id=&#34;立即数&#34;&gt;立即数
-&lt;/h2&gt;&lt;p&gt;&lt;img src=&#34;https://adeepblue.github.io/p/%E5%9B%BE%E7%81%B5%E5%AE%8C%E5%A4%87%E6%B8%B8%E6%88%8F%E6%94%BB%E7%95%A53/new-immediate.png&#34;
+&lt;/h2&gt;&lt;p&gt;&lt;img src=&#34;http://localhost:1313/p/%E5%9B%BE%E7%81%B5%E5%AE%8C%E5%A4%87%E6%B8%B8%E6%88%8F%E6%94%BB%E7%95%A53/new-immediate.png&#34;
 	width=&#34;1920&#34;
 	height=&#34;1080&#34;
-	srcset=&#34;https://adeepblue.github.io/p/%E5%9B%BE%E7%81%B5%E5%AE%8C%E5%A4%87%E6%B8%B8%E6%88%8F%E6%94%BB%E7%95%A53/new-immediate_hu_e04a4554cf9a960b.png 480w, https://adeepblue.github.io/p/%E5%9B%BE%E7%81%B5%E5%AE%8C%E5%A4%87%E6%B8%B8%E6%88%8F%E6%94%BB%E7%95%A53/new-immediate_hu_e6ac2a132ee6a813.png 1024w&#34;
+	srcset=&#34;http://localhost:1313/p/%E5%9B%BE%E7%81%B5%E5%AE%8C%E5%A4%87%E6%B8%B8%E6%88%8F%E6%94%BB%E7%95%A53/new-immediate_hu_e04a4554cf9a960b.png 480w, http://localhost:1313/p/%E5%9B%BE%E7%81%B5%E5%AE%8C%E5%A4%87%E6%B8%B8%E6%88%8F%E6%94%BB%E7%95%A53/new-immediate_hu_e6ac2a132ee6a813.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 		alt=&#34;新版立即数&#34;
@@ -511,10 +644,10 @@
 &gt;&lt;/p&gt;
 &lt;p&gt;判断是否是立即数模式，我又想造元件了，毕竟，咋说呢，目前8bit后两位是用来判断立即数的，然后前三位是用来判断运算的，估计后面还有加的，不如设计一个元件，
 输出对应立即数模式和计算模式，然后输出对应的东西，这样会快一点，直接放在整个LEG框架空间内就显得太拥挤了，曾经就是输出一位判断码，这次直接输出的是所有控制位，感觉也不错&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://adeepblue.github.io/p/%E5%9B%BE%E7%81%B5%E5%AE%8C%E5%A4%87%E6%B8%B8%E6%88%8F%E6%94%BB%E7%95%A53/last-DEC.png&#34;
+&lt;p&gt;&lt;img src=&#34;http://localhost:1313/p/%E5%9B%BE%E7%81%B5%E5%AE%8C%E5%A4%87%E6%B8%B8%E6%88%8F%E6%94%BB%E7%95%A53/last-DEC.png&#34;
 	width=&#34;1222&#34;
 	height=&#34;782&#34;
-	srcset=&#34;https://adeepblue.github.io/p/%E5%9B%BE%E7%81%B5%E5%AE%8C%E5%A4%87%E6%B8%B8%E6%88%8F%E6%94%BB%E7%95%A53/last-DEC_hu_3e98e36e77516d9a.png 480w, https://adeepblue.github.io/p/%E5%9B%BE%E7%81%B5%E5%AE%8C%E5%A4%87%E6%B8%B8%E6%88%8F%E6%94%BB%E7%95%A53/last-DEC_hu_eb4030101603c72e.png 1024w&#34;
+	srcset=&#34;http://localhost:1313/p/%E5%9B%BE%E7%81%B5%E5%AE%8C%E5%A4%87%E6%B8%B8%E6%88%8F%E6%94%BB%E7%95%A53/last-DEC_hu_3e98e36e77516d9a.png 480w, http://localhost:1313/p/%E5%9B%BE%E7%81%B5%E5%AE%8C%E5%A4%87%E6%B8%B8%E6%88%8F%E6%94%BB%E7%95%A53/last-DEC_hu_eb4030101603c72e.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 		alt=&#34;过去的解码&#34;
@@ -525,10 +658,10 @@
 		data-flex-basis=&#34;375px&#34;
 	
 &gt;
-&lt;img src=&#34;https://adeepblue.github.io/p/%E5%9B%BE%E7%81%B5%E5%AE%8C%E5%A4%87%E6%B8%B8%E6%88%8F%E6%94%BB%E7%95%A53/LEG-DEC.png&#34;
+&lt;img src=&#34;http://localhost:1313/p/%E5%9B%BE%E7%81%B5%E5%AE%8C%E5%A4%87%E6%B8%B8%E6%88%8F%E6%94%BB%E7%95%A53/LEG-DEC.png&#34;
 	width=&#34;860&#34;
 	height=&#34;811&#34;
-	srcset=&#34;https://adeepblue.github.io/p/%E5%9B%BE%E7%81%B5%E5%AE%8C%E5%A4%87%E6%B8%B8%E6%88%8F%E6%94%BB%E7%95%A53/LEG-DEC_hu_e0c7e0c33246d57e.png 480w, https://adeepblue.github.io/p/%E5%9B%BE%E7%81%B5%E5%AE%8C%E5%A4%87%E6%B8%B8%E6%88%8F%E6%94%BB%E7%95%A53/LEG-DEC_hu_fd223b73fe0521ca.png 1024w&#34;
+	srcset=&#34;http://localhost:1313/p/%E5%9B%BE%E7%81%B5%E5%AE%8C%E5%A4%87%E6%B8%B8%E6%88%8F%E6%94%BB%E7%95%A53/LEG-DEC_hu_e0c7e0c33246d57e.png 480w, http://localhost:1313/p/%E5%9B%BE%E7%81%B5%E5%AE%8C%E5%A4%87%E6%B8%B8%E6%88%8F%E6%94%BB%E7%95%A53/LEG-DEC_hu_fd223b73fe0521ca.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 		alt=&#34;现在的分流&#34;
@@ -541,10 +674,10 @@
 &gt;&lt;/p&gt;
 &lt;p&gt;以下是目前的布局方案，其中左边处通过解码，上面的三位直接通过新的分流方案通过三位数的传递接替了上面的原布线，而下面的两位控制立即数模式，也就是右边做出的改动，
 输出的两位是两位控制码，也就是输出的数采用原数还是从寄存器里选出来的数，二选一，所以用了八位数据选择器，这样就能运行的通了&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://adeepblue.github.io/p/%E5%9B%BE%E7%81%B5%E5%AE%8C%E5%A4%87%E6%B8%B8%E6%88%8F%E6%94%BB%E7%95%A53/LEG-main-3.png&#34;
+&lt;p&gt;&lt;img src=&#34;http://localhost:1313/p/%E5%9B%BE%E7%81%B5%E5%AE%8C%E5%A4%87%E6%B8%B8%E6%88%8F%E6%94%BB%E7%95%A53/LEG-main-3.png&#34;
 	width=&#34;1920&#34;
 	height=&#34;1080&#34;
-	srcset=&#34;https://adeepblue.github.io/p/%E5%9B%BE%E7%81%B5%E5%AE%8C%E5%A4%87%E6%B8%B8%E6%88%8F%E6%94%BB%E7%95%A53/LEG-main-3_hu_beb8750c20a06a85.png 480w, https://adeepblue.github.io/p/%E5%9B%BE%E7%81%B5%E5%AE%8C%E5%A4%87%E6%B8%B8%E6%88%8F%E6%94%BB%E7%95%A53/LEG-main-3_hu_9dc5f60043b741c.png 1024w&#34;
+	srcset=&#34;http://localhost:1313/p/%E5%9B%BE%E7%81%B5%E5%AE%8C%E5%A4%87%E6%B8%B8%E6%88%8F%E6%94%BB%E7%95%A53/LEG-main-3_hu_beb8750c20a06a85.png 480w, http://localhost:1313/p/%E5%9B%BE%E7%81%B5%E5%AE%8C%E5%A4%87%E6%B8%B8%E6%88%8F%E6%94%BB%E7%95%A53/LEG-main-3_hu_9dc5f60043b741c.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 		alt=&#34;现在的布局&#34;
@@ -557,7 +690,7 @@
 &gt;&lt;/p&gt;
 &lt;h2 id=&#34;条件判断&#34;&gt;条件判断
 &lt;/h2&gt;&lt;p&gt;现在可以自定义指令集了，顺带改一改吧就，刚差点没找到怎么移动描述的位置，抓住AND右边的引脚拉到最边上再拖动左边的引脚即可&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://adeepblue.github.io/turing-complete-fourth-article/custom-introduction-set.png&#34;
+&lt;p&gt;&lt;img src=&#34;http://localhost:1313/turing-complete-fourth-article/custom-introduction-set.png&#34;
 	
 	
 	
@@ -567,22 +700,24 @@
 	
 	
 &gt;&lt;/p&gt;
-&lt;p&gt;下一篇博文见,下一篇链接(还没更新，更新完链接放这里)&lt;/p&gt;
+&lt;hr&gt;
+&lt;p&gt;下一篇博文见,下一篇链接&lt;a class=&#34;link&#34; href=&#34;https://adeepblue.github.io/p/%E5%9B%BE%E7%81%B5%E5%AE%8C%E5%A4%87%E6%B8%B8%E6%88%8F%E6%94%BB%E7%95%A54/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;图灵完备游戏攻略4&lt;/a&gt;&lt;/p&gt;
 </description>
         </item>
         <item>
         <title>图灵完备游戏攻略2</title>
-        <link>https://adeepblue.github.io/p/%E5%9B%BE%E7%81%B5%E5%AE%8C%E5%A4%87%E6%B8%B8%E6%88%8F%E6%94%BB%E7%95%A52/</link>
+        <link>http://localhost:1313/p/%E5%9B%BE%E7%81%B5%E5%AE%8C%E5%A4%87%E6%B8%B8%E6%88%8F%E6%94%BB%E7%95%A52/</link>
         <pubDate>Wed, 12 Feb 2025 15:23:34 +0800</pubDate>
         
-        <guid>https://adeepblue.github.io/p/%E5%9B%BE%E7%81%B5%E5%AE%8C%E5%A4%87%E6%B8%B8%E6%88%8F%E6%94%BB%E7%95%A52/</guid>
-        <description>&lt;img src="https://adeepblue.github.io/image/Turing-Complete-Logo.png" alt="Featured image of post 图灵完备游戏攻略2" /&gt;&lt;h1 id=&#34;图灵完备部分游戏攻略2&#34;&gt;图灵完备部分游戏攻略2
+        <guid>http://localhost:1313/p/%E5%9B%BE%E7%81%B5%E5%AE%8C%E5%A4%87%E6%B8%B8%E6%88%8F%E6%94%BB%E7%95%A52/</guid>
+        <description>&lt;img src="http://localhost:1313/image/Turing-Complete-Logo.png" alt="Featured image of post 图灵完备游戏攻略2" /&gt;&lt;h1 id=&#34;图灵完备部分游戏攻略2&#34;&gt;图灵完备部分游戏攻略2
 &lt;/h1&gt;&lt;h2 id=&#34;异或&#34;&gt;异或
 &lt;/h2&gt;&lt;p&gt;目标
-&lt;img src=&#34;https://adeepblue.github.io/p/%E5%9B%BE%E7%81%B5%E5%AE%8C%E5%A4%87%E6%B8%B8%E6%88%8F%E6%94%BB%E7%95%A52/computer-command-XOR.png&#34;
+&lt;img src=&#34;http://localhost:1313/p/%E5%9B%BE%E7%81%B5%E5%AE%8C%E5%A4%87%E6%B8%B8%E6%88%8F%E6%94%BB%E7%95%A52/computer-command-XOR.png&#34;
 	width=&#34;1357&#34;
 	height=&#34;1075&#34;
-	srcset=&#34;https://adeepblue.github.io/p/%E5%9B%BE%E7%81%B5%E5%AE%8C%E5%A4%87%E6%B8%B8%E6%88%8F%E6%94%BB%E7%95%A52/computer-command-XOR_hu_e373d288f26ca399.png 480w, https://adeepblue.github.io/p/%E5%9B%BE%E7%81%B5%E5%AE%8C%E5%A4%87%E6%B8%B8%E6%88%8F%E6%94%BB%E7%95%A52/computer-command-XOR_hu_17d205c069920c5c.png 1024w&#34;
+	srcset=&#34;http://localhost:1313/p/%E5%9B%BE%E7%81%B5%E5%AE%8C%E5%A4%87%E6%B8%B8%E6%88%8F%E6%94%BB%E7%95%A52/computer-command-XOR_hu_e373d288f26ca399.png 480w, http://localhost:1313/p/%E5%9B%BE%E7%81%B5%E5%AE%8C%E5%A4%87%E6%B8%B8%E6%88%8F%E6%94%BB%E7%95%A52/computer-command-XOR_hu_17d205c069920c5c.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 		alt=&#34;实现异或&#34;
@@ -594,10 +729,10 @@
 	
 &gt;
 虽然它说的是八位数按位进行执行操作的异或，因为已经实现了多个以八位通道进行的计算，所以，某种程度上它可以通过翻看以前的一位异或来参考解法，当时我为了完成成就也搞定了另一种解法，虽然是我蒙出来的&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://adeepblue.github.io/p/%E5%9B%BE%E7%81%B5%E5%AE%8C%E5%A4%87%E6%B8%B8%E6%88%8F%E6%94%BB%E7%95%A52/4-Nand-solve-XOR.png&#34;
+&lt;p&gt;&lt;img src=&#34;http://localhost:1313/p/%E5%9B%BE%E7%81%B5%E5%AE%8C%E5%A4%87%E6%B8%B8%E6%88%8F%E6%94%BB%E7%95%A52/4-Nand-solve-XOR.png&#34;
 	width=&#34;1057&#34;
 	height=&#34;864&#34;
-	srcset=&#34;https://adeepblue.github.io/p/%E5%9B%BE%E7%81%B5%E5%AE%8C%E5%A4%87%E6%B8%B8%E6%88%8F%E6%94%BB%E7%95%A52/4-Nand-solve-XOR_hu_172c1ff756788a1d.png 480w, https://adeepblue.github.io/p/%E5%9B%BE%E7%81%B5%E5%AE%8C%E5%A4%87%E6%B8%B8%E6%88%8F%E6%94%BB%E7%95%A52/4-Nand-solve-XOR_hu_66aa32fa46e98f9d.png 1024w&#34;
+	srcset=&#34;http://localhost:1313/p/%E5%9B%BE%E7%81%B5%E5%AE%8C%E5%A4%87%E6%B8%B8%E6%88%8F%E6%94%BB%E7%95%A52/4-Nand-solve-XOR_hu_172c1ff756788a1d.png 480w, http://localhost:1313/p/%E5%9B%BE%E7%81%B5%E5%AE%8C%E5%A4%87%E6%B8%B8%E6%88%8F%E6%94%BB%E7%95%A52/4-Nand-solve-XOR_hu_66aa32fa46e98f9d.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 		alt=&#34;4个NAND实现&#34;
@@ -608,10 +743,10 @@
 		data-flex-basis=&#34;293px&#34;
 	
 &gt;
-&lt;img src=&#34;https://adeepblue.github.io/p/%E5%9B%BE%E7%81%B5%E5%AE%8C%E5%A4%87%E6%B8%B8%E6%88%8F%E6%94%BB%E7%95%A52/XOR-default-solve.png&#34;
+&lt;img src=&#34;http://localhost:1313/p/%E5%9B%BE%E7%81%B5%E5%AE%8C%E5%A4%87%E6%B8%B8%E6%88%8F%E6%94%BB%E7%95%A52/XOR-default-solve.png&#34;
 	width=&#34;1357&#34;
 	height=&#34;1069&#34;
-	srcset=&#34;https://adeepblue.github.io/p/%E5%9B%BE%E7%81%B5%E5%AE%8C%E5%A4%87%E6%B8%B8%E6%88%8F%E6%94%BB%E7%95%A52/XOR-default-solve_hu_c581a6aced25b66d.png 480w, https://adeepblue.github.io/p/%E5%9B%BE%E7%81%B5%E5%AE%8C%E5%A4%87%E6%B8%B8%E6%88%8F%E6%94%BB%E7%95%A52/XOR-default-solve_hu_39ec4ec0e84d473d.png 1024w&#34;
+	srcset=&#34;http://localhost:1313/p/%E5%9B%BE%E7%81%B5%E5%AE%8C%E5%A4%87%E6%B8%B8%E6%88%8F%E6%94%BB%E7%95%A52/XOR-default-solve_hu_c581a6aced25b66d.png 480w, http://localhost:1313/p/%E5%9B%BE%E7%81%B5%E5%AE%8C%E5%A4%87%E6%B8%B8%E6%88%8F%E6%94%BB%E7%95%A52/XOR-default-solve_hu_39ec4ec0e84d473d.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 		alt=&#34;正常手段实现&#34;
@@ -655,10 +790,10 @@
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;reg3_to_out
 &lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h3 id=&#34;第二种解法&#34;&gt;第二种解法
 &lt;/h3&gt;&lt;p&gt;因为不满足于一种写法，所以我现在来实现第二种，其中Nor的指令我去加一个，还没加入汇编指令集&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://adeepblue.github.io/p/%E5%9B%BE%E7%81%B5%E5%AE%8C%E5%A4%87%E6%B8%B8%E6%88%8F%E6%94%BB%E7%95%A52/Nor-introduction-set.png&#34;
+&lt;p&gt;&lt;img src=&#34;http://localhost:1313/p/%E5%9B%BE%E7%81%B5%E5%AE%8C%E5%A4%87%E6%B8%B8%E6%88%8F%E6%94%BB%E7%95%A52/Nor-introduction-set.png&#34;
 	width=&#34;951&#34;
 	height=&#34;424&#34;
-	srcset=&#34;https://adeepblue.github.io/p/%E5%9B%BE%E7%81%B5%E5%AE%8C%E5%A4%87%E6%B8%B8%E6%88%8F%E6%94%BB%E7%95%A52/Nor-introduction-set_hu_1db1e0fb129a5261.png 480w, https://adeepblue.github.io/p/%E5%9B%BE%E7%81%B5%E5%AE%8C%E5%A4%87%E6%B8%B8%E6%88%8F%E6%94%BB%E7%95%A52/Nor-introduction-set_hu_8a0a0e2bb7b8ac2.png 1024w&#34;
+	srcset=&#34;http://localhost:1313/p/%E5%9B%BE%E7%81%B5%E5%AE%8C%E5%A4%87%E6%B8%B8%E6%88%8F%E6%94%BB%E7%95%A52/Nor-introduction-set_hu_1db1e0fb129a5261.png 480w, http://localhost:1313/p/%E5%9B%BE%E7%81%B5%E5%AE%8C%E5%A4%87%E6%B8%B8%E6%88%8F%E6%94%BB%E7%95%A52/Nor-introduction-set_hu_8a0a0e2bb7b8ac2.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 		alt=&#34;加入指令集&#34;
@@ -673,10 +808,10 @@
 先把in的读取到reg1和reg2进行预备的运算，然后可以直接复制中间变量到reg4和reg5，至于输入，用完就可以丢了，&lt;/p&gt;
 &lt;p&gt;不过唯一要研究一下的就是，怎么对一个数进行按位的取反就是了，虽然这在单个电路里是个简单的事，但毕竟已经有程序了，肯定还是用现成的东西去实现，以及，立即数模式虽然没办法生成255这个值（到64位以上就已经是控制码了）
 但是要生成可以通过两个运算数都是0的情况下进行nand运算即可得到255&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://adeepblue.github.io/p/%E5%9B%BE%E7%81%B5%E5%AE%8C%E5%A4%87%E6%B8%B8%E6%88%8F%E6%94%BB%E7%95%A52/Arithmetic-engine.png&#34;
+&lt;p&gt;&lt;img src=&#34;http://localhost:1313/p/%E5%9B%BE%E7%81%B5%E5%AE%8C%E5%A4%87%E6%B8%B8%E6%88%8F%E6%94%BB%E7%95%A52/Arithmetic-engine.png&#34;
 	width=&#34;1401&#34;
 	height=&#34;1022&#34;
-	srcset=&#34;https://adeepblue.github.io/p/%E5%9B%BE%E7%81%B5%E5%AE%8C%E5%A4%87%E6%B8%B8%E6%88%8F%E6%94%BB%E7%95%A52/Arithmetic-engine_hu_ae71638482cd2076.png 480w, https://adeepblue.github.io/p/%E5%9B%BE%E7%81%B5%E5%AE%8C%E5%A4%87%E6%B8%B8%E6%88%8F%E6%94%BB%E7%95%A52/Arithmetic-engine_hu_1e32b064f06a311a.png 1024w&#34;
+	srcset=&#34;http://localhost:1313/p/%E5%9B%BE%E7%81%B5%E5%AE%8C%E5%A4%87%E6%B8%B8%E6%88%8F%E6%94%BB%E7%95%A52/Arithmetic-engine_hu_ae71638482cd2076.png 480w, http://localhost:1313/p/%E5%9B%BE%E7%81%B5%E5%AE%8C%E5%A4%87%E6%B8%B8%E6%88%8F%E6%94%BB%E7%95%A52/Arithmetic-engine_hu_1e32b064f06a311a.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 		alt=&#34;算数引擎&#34;
@@ -726,10 +861,10 @@
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;reg3_to_out
 &lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;最终因为not麻烦一点依旧是用了4个nand计算方法吧，最后依旧也是跟上面一样，调用了立即数的出口reg0存储了255来直接使用nand运算打成not的效果，怪麻烦的。&lt;/p&gt;
 &lt;h2 id=&#34;八位常数&#34;&gt;八位常数
-&lt;/h2&gt;&lt;p&gt;&lt;img src=&#34;https://adeepblue.github.io/p/%E5%9B%BE%E7%81%B5%E5%AE%8C%E5%A4%87%E6%B8%B8%E6%88%8F%E6%94%BB%E7%95%A52/8-bit-constant.png&#34;
+&lt;/h2&gt;&lt;p&gt;&lt;img src=&#34;http://localhost:1313/p/%E5%9B%BE%E7%81%B5%E5%AE%8C%E5%A4%87%E6%B8%B8%E6%88%8F%E6%94%BB%E7%95%A52/8-bit-constant.png&#34;
 	width=&#34;1056&#34;
 	height=&#34;1003&#34;
-	srcset=&#34;https://adeepblue.github.io/p/%E5%9B%BE%E7%81%B5%E5%AE%8C%E5%A4%87%E6%B8%B8%E6%88%8F%E6%94%BB%E7%95%A52/8-bit-constant_hu_f64d6de000528a56.png 480w, https://adeepblue.github.io/p/%E5%9B%BE%E7%81%B5%E5%AE%8C%E5%A4%87%E6%B8%B8%E6%88%8F%E6%94%BB%E7%95%A52/8-bit-constant_hu_dc990bdf3320778b.png 1024w&#34;
+	srcset=&#34;http://localhost:1313/p/%E5%9B%BE%E7%81%B5%E5%AE%8C%E5%A4%87%E6%B8%B8%E6%88%8F%E6%94%BB%E7%95%A52/8-bit-constant_hu_f64d6de000528a56.png 480w, http://localhost:1313/p/%E5%9B%BE%E7%81%B5%E5%AE%8C%E5%A4%87%E6%B8%B8%E6%88%8F%E6%94%BB%E7%95%A52/8-bit-constant_hu_dc990bdf3320778b.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 		alt=&#34;要求&#34;
@@ -741,10 +876,10 @@
 	
 &gt;&lt;/p&gt;
 &lt;p&gt;这，好像只要指定八位集线器然后用高电平直接控制对应位置就好了，低电平都可以不放了
-&lt;img src=&#34;https://adeepblue.github.io/p/%E5%9B%BE%E7%81%B5%E5%AE%8C%E5%A4%87%E6%B8%B8%E6%88%8F%E6%94%BB%E7%95%A52/8-bit-constant-solve.png&#34;
+&lt;img src=&#34;http://localhost:1313/p/%E5%9B%BE%E7%81%B5%E5%AE%8C%E5%A4%87%E6%B8%B8%E6%88%8F%E6%94%BB%E7%95%A52/8-bit-constant-solve.png&#34;
 	width=&#34;697&#34;
 	height=&#34;575&#34;
-	srcset=&#34;https://adeepblue.github.io/p/%E5%9B%BE%E7%81%B5%E5%AE%8C%E5%A4%87%E6%B8%B8%E6%88%8F%E6%94%BB%E7%95%A52/8-bit-constant-solve_hu_6dd4165aee52be90.png 480w, https://adeepblue.github.io/p/%E5%9B%BE%E7%81%B5%E5%AE%8C%E5%A4%87%E6%B8%B8%E6%88%8F%E6%94%BB%E7%95%A52/8-bit-constant-solve_hu_236e51f1c36cf856.png 1024w&#34;
+	srcset=&#34;http://localhost:1313/p/%E5%9B%BE%E7%81%B5%E5%AE%8C%E5%A4%87%E6%B8%B8%E6%88%8F%E6%94%BB%E7%95%A52/8-bit-constant-solve_hu_6dd4165aee52be90.png 480w, http://localhost:1313/p/%E5%9B%BE%E7%81%B5%E5%AE%8C%E5%A4%87%E6%B8%B8%E6%88%8F%E6%94%BB%E7%95%A52/8-bit-constant-solve_hu_236e51f1c36cf856.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 		alt=&#34;解法&#34;
@@ -756,10 +891,10 @@
 	
 &gt;&lt;/p&gt;
 &lt;h2 id=&#34;相等&#34;&gt;相等
-&lt;/h2&gt;&lt;p&gt;&lt;img src=&#34;https://adeepblue.github.io/p/%E5%9B%BE%E7%81%B5%E5%AE%8C%E5%A4%87%E6%B8%B8%E6%88%8F%E6%94%BB%E7%95%A52/equal-for-8-bit.png&#34;
+&lt;/h2&gt;&lt;p&gt;&lt;img src=&#34;http://localhost:1313/p/%E5%9B%BE%E7%81%B5%E5%AE%8C%E5%A4%87%E6%B8%B8%E6%88%8F%E6%94%BB%E7%95%A52/equal-for-8-bit.png&#34;
 	width=&#34;1254&#34;
 	height=&#34;1055&#34;
-	srcset=&#34;https://adeepblue.github.io/p/%E5%9B%BE%E7%81%B5%E5%AE%8C%E5%A4%87%E6%B8%B8%E6%88%8F%E6%94%BB%E7%95%A52/equal-for-8-bit_hu_1cb9da160ee32d4f.png 480w, https://adeepblue.github.io/p/%E5%9B%BE%E7%81%B5%E5%AE%8C%E5%A4%87%E6%B8%B8%E6%88%8F%E6%94%BB%E7%95%A52/equal-for-8-bit_hu_fa3724ccfd19f670.png 1024w&#34;
+	srcset=&#34;http://localhost:1313/p/%E5%9B%BE%E7%81%B5%E5%AE%8C%E5%A4%87%E6%B8%B8%E6%88%8F%E6%94%BB%E7%95%A52/equal-for-8-bit_hu_1cb9da160ee32d4f.png 480w, http://localhost:1313/p/%E5%9B%BE%E7%81%B5%E5%AE%8C%E5%A4%87%E6%B8%B8%E6%88%8F%E6%94%BB%E7%95%A52/equal-for-8-bit_hu_fa3724ccfd19f670.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 		alt=&#34;要求&#34;
@@ -773,10 +908,10 @@
 &lt;p&gt;说起相等，前面这一圈下来，好像确实没有涉及跟相等有关的布尔值输出来着，前面也有想要这样判断的并没有
 也有两种思路，一种是先用sub减法一样的电路把两个8位数相减，然后确认出来的值是不是0就行了，也就是or8路线路，检查是否是0就行了，第二种是直接八位分线器出来然后一个一个同或比较，最后and8位输出&lt;/p&gt;
 &lt;h3 id=&#34;思路1&#34;&gt;思路1
-&lt;/h3&gt;&lt;p&gt;&lt;img src=&#34;https://adeepblue.github.io/p/%E5%9B%BE%E7%81%B5%E5%AE%8C%E5%A4%87%E6%B8%B8%E6%88%8F%E6%94%BB%E7%95%A52/equal-for-8-bit-1-solution.png&#34;
+&lt;/h3&gt;&lt;p&gt;&lt;img src=&#34;http://localhost:1313/p/%E5%9B%BE%E7%81%B5%E5%AE%8C%E5%A4%87%E6%B8%B8%E6%88%8F%E6%94%BB%E7%95%A52/equal-for-8-bit-1-solution.png&#34;
 	width=&#34;1153&#34;
 	height=&#34;399&#34;
-	srcset=&#34;https://adeepblue.github.io/p/%E5%9B%BE%E7%81%B5%E5%AE%8C%E5%A4%87%E6%B8%B8%E6%88%8F%E6%94%BB%E7%95%A52/equal-for-8-bit-1-solution_hu_bde579c7e12662de.png 480w, https://adeepblue.github.io/p/%E5%9B%BE%E7%81%B5%E5%AE%8C%E5%A4%87%E6%B8%B8%E6%88%8F%E6%94%BB%E7%95%A52/equal-for-8-bit-1-solution_hu_bfc6a7907896e78f.png 1024w&#34;
+	srcset=&#34;http://localhost:1313/p/%E5%9B%BE%E7%81%B5%E5%AE%8C%E5%A4%87%E6%B8%B8%E6%88%8F%E6%94%BB%E7%95%A52/equal-for-8-bit-1-solution_hu_bde579c7e12662de.png 480w, http://localhost:1313/p/%E5%9B%BE%E7%81%B5%E5%AE%8C%E5%A4%87%E6%B8%B8%E6%88%8F%E6%94%BB%E7%95%A52/equal-for-8-bit-1-solution_hu_bfc6a7907896e78f.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 		alt=&#34;8位两路相减后判断&#34;
@@ -788,10 +923,10 @@
 	
 &gt;&lt;/p&gt;
 &lt;h3 id=&#34;思路2&#34;&gt;思路2
-&lt;/h3&gt;&lt;p&gt;&lt;img src=&#34;https://adeepblue.github.io/p/%E5%9B%BE%E7%81%B5%E5%AE%8C%E5%A4%87%E6%B8%B8%E6%88%8F%E6%94%BB%E7%95%A52/equal-for-8-bit-2-solution.png&#34;
+&lt;/h3&gt;&lt;p&gt;&lt;img src=&#34;http://localhost:1313/p/%E5%9B%BE%E7%81%B5%E5%AE%8C%E5%A4%87%E6%B8%B8%E6%88%8F%E6%94%BB%E7%95%A52/equal-for-8-bit-2-solution.png&#34;
 	width=&#34;1063&#34;
 	height=&#34;783&#34;
-	srcset=&#34;https://adeepblue.github.io/p/%E5%9B%BE%E7%81%B5%E5%AE%8C%E5%A4%87%E6%B8%B8%E6%88%8F%E6%94%BB%E7%95%A52/equal-for-8-bit-2-solution_hu_81ba64494f38fc0d.png 480w, https://adeepblue.github.io/p/%E5%9B%BE%E7%81%B5%E5%AE%8C%E5%A4%87%E6%B8%B8%E6%88%8F%E6%94%BB%E7%95%A52/equal-for-8-bit-2-solution_hu_75346ba6c8a407fb.png 1024w&#34;
+	srcset=&#34;http://localhost:1313/p/%E5%9B%BE%E7%81%B5%E5%AE%8C%E5%A4%87%E6%B8%B8%E6%88%8F%E6%94%BB%E7%95%A52/equal-for-8-bit-2-solution_hu_81ba64494f38fc0d.png 480w, http://localhost:1313/p/%E5%9B%BE%E7%81%B5%E5%AE%8C%E5%A4%87%E6%B8%B8%E6%88%8F%E6%94%BB%E7%95%A52/equal-for-8-bit-2-solution_hu_75346ba6c8a407fb.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 		alt=&#34;分别判断每一位是否相等&#34;
@@ -803,10 +938,10 @@
 	
 &gt;&lt;/p&gt;
 &lt;h2 id=&#34;8位异或&#34;&gt;8位异或
-&lt;/h2&gt;&lt;p&gt;&lt;img src=&#34;https://adeepblue.github.io/p/%E5%9B%BE%E7%81%B5%E5%AE%8C%E5%A4%87%E6%B8%B8%E6%88%8F%E6%94%BB%E7%95%A52/8-bit-XOR.png&#34;
+&lt;/h2&gt;&lt;p&gt;&lt;img src=&#34;http://localhost:1313/p/%E5%9B%BE%E7%81%B5%E5%AE%8C%E5%A4%87%E6%B8%B8%E6%88%8F%E6%94%BB%E7%95%A52/8-bit-XOR.png&#34;
 	width=&#34;1307&#34;
 	height=&#34;1016&#34;
-	srcset=&#34;https://adeepblue.github.io/p/%E5%9B%BE%E7%81%B5%E5%AE%8C%E5%A4%87%E6%B8%B8%E6%88%8F%E6%94%BB%E7%95%A52/8-bit-XOR_hu_d058f58866258ca0.png 480w, https://adeepblue.github.io/p/%E5%9B%BE%E7%81%B5%E5%AE%8C%E5%A4%87%E6%B8%B8%E6%88%8F%E6%94%BB%E7%95%A52/8-bit-XOR_hu_e5ed8209959e5de3.png 1024w&#34;
+	srcset=&#34;http://localhost:1313/p/%E5%9B%BE%E7%81%B5%E5%AE%8C%E5%A4%87%E6%B8%B8%E6%88%8F%E6%94%BB%E7%95%A52/8-bit-XOR_hu_d058f58866258ca0.png 480w, http://localhost:1313/p/%E5%9B%BE%E7%81%B5%E5%AE%8C%E5%A4%87%E6%B8%B8%E6%88%8F%E6%94%BB%E7%95%A52/8-bit-XOR_hu_e5ed8209959e5de3.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 		alt=&#34;要求&#34;
@@ -819,10 +954,10 @@
 &gt;&lt;/p&gt;
 &lt;p&gt;因为8bit已经有了对应的上面对应只有一位情况的所有运算器件，
 所以只要根据上面一位异或换成8bit的版本即可&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://adeepblue.github.io/p/%E5%9B%BE%E7%81%B5%E5%AE%8C%E5%A4%87%E6%B8%B8%E6%88%8F%E6%94%BB%E7%95%A52/8-bit-components.png&#34;
+&lt;p&gt;&lt;img src=&#34;http://localhost:1313/p/%E5%9B%BE%E7%81%B5%E5%AE%8C%E5%A4%87%E6%B8%B8%E6%88%8F%E6%94%BB%E7%95%A52/8-bit-components.png&#34;
 	width=&#34;535&#34;
 	height=&#34;200&#34;
-	srcset=&#34;https://adeepblue.github.io/p/%E5%9B%BE%E7%81%B5%E5%AE%8C%E5%A4%87%E6%B8%B8%E6%88%8F%E6%94%BB%E7%95%A52/8-bit-components_hu_50a90f7e2627f7ce.png 480w, https://adeepblue.github.io/p/%E5%9B%BE%E7%81%B5%E5%AE%8C%E5%A4%87%E6%B8%B8%E6%88%8F%E6%94%BB%E7%95%A52/8-bit-components_hu_6f3cad6924f6314c.png 1024w&#34;
+	srcset=&#34;http://localhost:1313/p/%E5%9B%BE%E7%81%B5%E5%AE%8C%E5%A4%87%E6%B8%B8%E6%88%8F%E6%94%BB%E7%95%A52/8-bit-components_hu_50a90f7e2627f7ce.png 480w, http://localhost:1313/p/%E5%9B%BE%E7%81%B5%E5%AE%8C%E5%A4%87%E6%B8%B8%E6%88%8F%E6%94%BB%E7%95%A52/8-bit-components_hu_6f3cad6924f6314c.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 		alt=&#34;所有8位运算元器件&#34;
@@ -833,10 +968,10 @@
 		data-flex-basis=&#34;642px&#34;
 	
 &gt;&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://adeepblue.github.io/p/%E5%9B%BE%E7%81%B5%E5%AE%8C%E5%A4%87%E6%B8%B8%E6%88%8F%E6%94%BB%E7%95%A52/8-bit-XOR-1-solution.png&#34;
+&lt;p&gt;&lt;img src=&#34;http://localhost:1313/p/%E5%9B%BE%E7%81%B5%E5%AE%8C%E5%A4%87%E6%B8%B8%E6%88%8F%E6%94%BB%E7%95%A52/8-bit-XOR-1-solution.png&#34;
 	width=&#34;1122&#34;
 	height=&#34;785&#34;
-	srcset=&#34;https://adeepblue.github.io/p/%E5%9B%BE%E7%81%B5%E5%AE%8C%E5%A4%87%E6%B8%B8%E6%88%8F%E6%94%BB%E7%95%A52/8-bit-XOR-1-solution_hu_af8ced24f6ac7a61.png 480w, https://adeepblue.github.io/p/%E5%9B%BE%E7%81%B5%E5%AE%8C%E5%A4%87%E6%B8%B8%E6%88%8F%E6%94%BB%E7%95%A52/8-bit-XOR-1-solution_hu_982333bd7412b307.png 1024w&#34;
+	srcset=&#34;http://localhost:1313/p/%E5%9B%BE%E7%81%B5%E5%AE%8C%E5%A4%87%E6%B8%B8%E6%88%8F%E6%94%BB%E7%95%A52/8-bit-XOR-1-solution_hu_af8ced24f6ac7a61.png 480w, http://localhost:1313/p/%E5%9B%BE%E7%81%B5%E5%AE%8C%E5%A4%87%E6%B8%B8%E6%88%8F%E6%94%BB%E7%95%A52/8-bit-XOR-1-solution_hu_982333bd7412b307.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 		alt=&#34;解法1&#34;
@@ -847,10 +982,10 @@
 		data-flex-basis=&#34;343px&#34;
 	
 &gt;
-&lt;img src=&#34;https://adeepblue.github.io/p/%E5%9B%BE%E7%81%B5%E5%AE%8C%E5%A4%87%E6%B8%B8%E6%88%8F%E6%94%BB%E7%95%A52/8-bit-XOR-2-solution.png&#34;
+&lt;img src=&#34;http://localhost:1313/p/%E5%9B%BE%E7%81%B5%E5%AE%8C%E5%A4%87%E6%B8%B8%E6%88%8F%E6%94%BB%E7%95%A52/8-bit-XOR-2-solution.png&#34;
 	width=&#34;1054&#34;
 	height=&#34;742&#34;
-	srcset=&#34;https://adeepblue.github.io/p/%E5%9B%BE%E7%81%B5%E5%AE%8C%E5%A4%87%E6%B8%B8%E6%88%8F%E6%94%BB%E7%95%A52/8-bit-XOR-2-solution_hu_84e3d6961839ba80.png 480w, https://adeepblue.github.io/p/%E5%9B%BE%E7%81%B5%E5%AE%8C%E5%A4%87%E6%B8%B8%E6%88%8F%E6%94%BB%E7%95%A52/8-bit-XOR-2-solution_hu_2a762b55b24b69ee.png 1024w&#34;
+	srcset=&#34;http://localhost:1313/p/%E5%9B%BE%E7%81%B5%E5%AE%8C%E5%A4%87%E6%B8%B8%E6%88%8F%E6%94%BB%E7%95%A52/8-bit-XOR-2-solution_hu_84e3d6961839ba80.png 480w, http://localhost:1313/p/%E5%9B%BE%E7%81%B5%E5%AE%8C%E5%A4%87%E6%B8%B8%E6%88%8F%E6%94%BB%E7%95%A52/8-bit-XOR-2-solution_hu_2a762b55b24b69ee.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 		alt=&#34;解法2&#34;
@@ -862,10 +997,10 @@
 	
 &gt;&lt;/p&gt;
 &lt;h2 id=&#34;无符号小于&#34;&gt;无符号小于
-&lt;/h2&gt;&lt;p&gt;&lt;img src=&#34;https://adeepblue.github.io/p/%E5%9B%BE%E7%81%B5%E5%AE%8C%E5%A4%87%E6%B8%B8%E6%88%8F%E6%94%BB%E7%95%A52/not-sign-smaller-than.png&#34;
+&lt;/h2&gt;&lt;p&gt;&lt;img src=&#34;http://localhost:1313/p/%E5%9B%BE%E7%81%B5%E5%AE%8C%E5%A4%87%E6%B8%B8%E6%88%8F%E6%94%BB%E7%95%A52/not-sign-smaller-than.png&#34;
 	width=&#34;1003&#34;
 	height=&#34;718&#34;
-	srcset=&#34;https://adeepblue.github.io/p/%E5%9B%BE%E7%81%B5%E5%AE%8C%E5%A4%87%E6%B8%B8%E6%88%8F%E6%94%BB%E7%95%A52/not-sign-smaller-than_hu_b4847c79b0eca019.png 480w, https://adeepblue.github.io/p/%E5%9B%BE%E7%81%B5%E5%AE%8C%E5%A4%87%E6%B8%B8%E6%88%8F%E6%94%BB%E7%95%A52/not-sign-smaller-than_hu_af20c8a5902ee02c.png 1024w&#34;
+	srcset=&#34;http://localhost:1313/p/%E5%9B%BE%E7%81%B5%E5%AE%8C%E5%A4%87%E6%B8%B8%E6%88%8F%E6%94%BB%E7%95%A52/not-sign-smaller-than_hu_b4847c79b0eca019.png 480w, http://localhost:1313/p/%E5%9B%BE%E7%81%B5%E5%AE%8C%E5%A4%87%E6%B8%B8%E6%88%8F%E6%94%BB%E7%95%A52/not-sign-smaller-than_hu_af20c8a5902ee02c.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 		alt=&#34;条件&#34;
@@ -879,10 +1014,10 @@
 第一反应是直接相减后判断大小，a&amp;lt;b,也就是证明b-a&amp;gt;0，那也就是说，使用两个相减判断符号就行了，吗？一旦a作为第一位输入是8，作为被减数，然后先取一个反，
 但按位取反一旦变成无符号整数，那就已经不一定奏效了，一位一位比较也比较麻烦，其中无符号状态下的取反，b-a实际上成了b+(255-a),也就是255+b-a，如果b-a
 大于0，那么255加上b-a必定大于0，也就是说，如果进位信号有显示，那么b就是大于a的，也就是输出高电平，刚好跟进位信号对上了，也不用取反了&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://adeepblue.github.io/p/%E5%9B%BE%E7%81%B5%E5%AE%8C%E5%A4%87%E6%B8%B8%E6%88%8F%E6%94%BB%E7%95%A52/no-sign-smaller-than-solve.png&#34;
+&lt;p&gt;&lt;img src=&#34;http://localhost:1313/p/%E5%9B%BE%E7%81%B5%E5%AE%8C%E5%A4%87%E6%B8%B8%E6%88%8F%E6%94%BB%E7%95%A52/no-sign-smaller-than-solve.png&#34;
 	width=&#34;942&#34;
 	height=&#34;796&#34;
-	srcset=&#34;https://adeepblue.github.io/p/%E5%9B%BE%E7%81%B5%E5%AE%8C%E5%A4%87%E6%B8%B8%E6%88%8F%E6%94%BB%E7%95%A52/no-sign-smaller-than-solve_hu_13616683f9b44e7f.png 480w, https://adeepblue.github.io/p/%E5%9B%BE%E7%81%B5%E5%AE%8C%E5%A4%87%E6%B8%B8%E6%88%8F%E6%94%BB%E7%95%A52/no-sign-smaller-than-solve_hu_3f45ad355d5c63a6.png 1024w&#34;
+	srcset=&#34;http://localhost:1313/p/%E5%9B%BE%E7%81%B5%E5%AE%8C%E5%A4%87%E6%B8%B8%E6%88%8F%E6%94%BB%E7%95%A52/no-sign-smaller-than-solve_hu_13616683f9b44e7f.png 480w, http://localhost:1313/p/%E5%9B%BE%E7%81%B5%E5%AE%8C%E5%A4%87%E6%B8%B8%E6%88%8F%E6%94%BB%E7%95%A52/no-sign-smaller-than-solve_hu_3f45ad355d5c63a6.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 		alt=&#34;解法&#34;
@@ -894,10 +1029,10 @@
 	
 &gt;&lt;/p&gt;
 &lt;h2 id=&#34;有符号小于&#34;&gt;有符号小于
-&lt;/h2&gt;&lt;p&gt;&lt;img src=&#34;https://adeepblue.github.io/p/%E5%9B%BE%E7%81%B5%E5%AE%8C%E5%A4%87%E6%B8%B8%E6%88%8F%E6%94%BB%E7%95%A52/sign-smaller-than.png&#34;
+&lt;/h2&gt;&lt;p&gt;&lt;img src=&#34;http://localhost:1313/p/%E5%9B%BE%E7%81%B5%E5%AE%8C%E5%A4%87%E6%B8%B8%E6%88%8F%E6%94%BB%E7%95%A52/sign-smaller-than.png&#34;
 	width=&#34;1158&#34;
 	height=&#34;978&#34;
-	srcset=&#34;https://adeepblue.github.io/p/%E5%9B%BE%E7%81%B5%E5%AE%8C%E5%A4%87%E6%B8%B8%E6%88%8F%E6%94%BB%E7%95%A52/sign-smaller-than_hu_7db72352403ebdcf.png 480w, https://adeepblue.github.io/p/%E5%9B%BE%E7%81%B5%E5%AE%8C%E5%A4%87%E6%B8%B8%E6%88%8F%E6%94%BB%E7%95%A52/sign-smaller-than_hu_3630d139ca1feaca.png 1024w&#34;
+	srcset=&#34;http://localhost:1313/p/%E5%9B%BE%E7%81%B5%E5%AE%8C%E5%A4%87%E6%B8%B8%E6%88%8F%E6%94%BB%E7%95%A52/sign-smaller-than_hu_7db72352403ebdcf.png 480w, http://localhost:1313/p/%E5%9B%BE%E7%81%B5%E5%AE%8C%E5%A4%87%E6%B8%B8%E6%88%8F%E6%94%BB%E7%95%A52/sign-smaller-than_hu_3630d139ca1feaca.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 		alt=&#34;条件&#34;
@@ -908,10 +1043,10 @@
 		data-flex-basis=&#34;284px&#34;
 	
 &gt;
-&lt;img src=&#34;https://adeepblue.github.io/p/%E5%9B%BE%E7%81%B5%E5%AE%8C%E5%A4%87%E6%B8%B8%E6%88%8F%E6%94%BB%E7%95%A52/opposite-number.png&#34;
+&lt;img src=&#34;http://localhost:1313/p/%E5%9B%BE%E7%81%B5%E5%AE%8C%E5%A4%87%E6%B8%B8%E6%88%8F%E6%94%BB%E7%95%A52/opposite-number.png&#34;
 	width=&#34;1147&#34;
 	height=&#34;1003&#34;
-	srcset=&#34;https://adeepblue.github.io/p/%E5%9B%BE%E7%81%B5%E5%AE%8C%E5%A4%87%E6%B8%B8%E6%88%8F%E6%94%BB%E7%95%A52/opposite-number_hu_a6d374b28f69e0db.png 480w, https://adeepblue.github.io/p/%E5%9B%BE%E7%81%B5%E5%AE%8C%E5%A4%87%E6%B8%B8%E6%88%8F%E6%94%BB%E7%95%A52/opposite-number_hu_b7a583b33f0c3dcc.png 1024w&#34;
+	srcset=&#34;http://localhost:1313/p/%E5%9B%BE%E7%81%B5%E5%AE%8C%E5%A4%87%E6%B8%B8%E6%88%8F%E6%94%BB%E7%95%A52/opposite-number_hu_a6d374b28f69e0db.png 480w, http://localhost:1313/p/%E5%9B%BE%E7%81%B5%E5%AE%8C%E5%A4%87%E6%B8%B8%E6%88%8F%E6%94%BB%E7%95%A52/opposite-number_hu_b7a583b33f0c3dcc.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 		alt=&#34;相反数&#34;
@@ -925,10 +1060,10 @@
 &lt;p&gt;看到这个条件，也就是说，128的地方变成-128了，就要去稍微翻一下相反数的那个元器件了，因为，如果是带符号的，那也就意味着，b-a=b+(-a),而又有相反数等于它本身按位取反之后，
 再在加法器上加一得到的，那也就是说，这个加1，我可以当作进位运算，但依旧遇到了点问题，因为，一旦像是如下图这般的，存储溢出了就会失效，进位信号不可用不说，输出直接变成负数，
 但最重要的问题在于，这个溢出不好控制，最后一位一旦填上负数之后就不好说了，因为有其他情况也会出现负数&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://adeepblue.github.io/p/%E5%9B%BE%E7%81%B5%E5%AE%8C%E5%A4%87%E6%B8%B8%E6%88%8F%E6%94%BB%E7%95%A52/trouble-in-sign-smaller-than.png&#34;
+&lt;p&gt;&lt;img src=&#34;http://localhost:1313/p/%E5%9B%BE%E7%81%B5%E5%AE%8C%E5%A4%87%E6%B8%B8%E6%88%8F%E6%94%BB%E7%95%A52/trouble-in-sign-smaller-than.png&#34;
 	width=&#34;1199&#34;
 	height=&#34;815&#34;
-	srcset=&#34;https://adeepblue.github.io/p/%E5%9B%BE%E7%81%B5%E5%AE%8C%E5%A4%87%E6%B8%B8%E6%88%8F%E6%94%BB%E7%95%A52/trouble-in-sign-smaller-than_hu_6896799cd883ae82.png 480w, https://adeepblue.github.io/p/%E5%9B%BE%E7%81%B5%E5%AE%8C%E5%A4%87%E6%B8%B8%E6%88%8F%E6%94%BB%E7%95%A52/trouble-in-sign-smaller-than_hu_612cddcc16bec768.png 1024w&#34;
+	srcset=&#34;http://localhost:1313/p/%E5%9B%BE%E7%81%B5%E5%AE%8C%E5%A4%87%E6%B8%B8%E6%88%8F%E6%94%BB%E7%95%A52/trouble-in-sign-smaller-than_hu_6896799cd883ae82.png 480w, http://localhost:1313/p/%E5%9B%BE%E7%81%B5%E5%AE%8C%E5%A4%87%E6%B8%B8%E6%88%8F%E6%94%BB%E7%95%A52/trouble-in-sign-smaller-than_hu_612cddcc16bec768.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 		alt=&#34;问题图一&#34;
@@ -939,10 +1074,10 @@
 		data-flex-basis=&#34;353px&#34;
 	
 &gt;
-&lt;img src=&#34;https://adeepblue.github.io/p/%E5%9B%BE%E7%81%B5%E5%AE%8C%E5%A4%87%E6%B8%B8%E6%88%8F%E6%94%BB%E7%95%A52/trouble-in-sign-small-than-1.png&#34;
+&lt;img src=&#34;http://localhost:1313/p/%E5%9B%BE%E7%81%B5%E5%AE%8C%E5%A4%87%E6%B8%B8%E6%88%8F%E6%94%BB%E7%95%A52/trouble-in-sign-small-than-1.png&#34;
 	width=&#34;1421&#34;
 	height=&#34;826&#34;
-	srcset=&#34;https://adeepblue.github.io/p/%E5%9B%BE%E7%81%B5%E5%AE%8C%E5%A4%87%E6%B8%B8%E6%88%8F%E6%94%BB%E7%95%A52/trouble-in-sign-small-than-1_hu_97b2f9b7cd5a84be.png 480w, https://adeepblue.github.io/p/%E5%9B%BE%E7%81%B5%E5%AE%8C%E5%A4%87%E6%B8%B8%E6%88%8F%E6%94%BB%E7%95%A52/trouble-in-sign-small-than-1_hu_175825145dbe2c02.png 1024w&#34;
+	srcset=&#34;http://localhost:1313/p/%E5%9B%BE%E7%81%B5%E5%AE%8C%E5%A4%87%E6%B8%B8%E6%88%8F%E6%94%BB%E7%95%A52/trouble-in-sign-small-than-1_hu_97b2f9b7cd5a84be.png 480w, http://localhost:1313/p/%E5%9B%BE%E7%81%B5%E5%AE%8C%E5%A4%87%E6%B8%B8%E6%88%8F%E6%94%BB%E7%95%A52/trouble-in-sign-small-than-1_hu_175825145dbe2c02.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 		alt=&#34;问题图二&#34;
@@ -964,10 +1099,10 @@
 &lt;p&gt;&lt;strong&gt;4.&lt;/strong&gt; 第一个数为x,第二个数为y : -(x+1)+y+1 = y-x, 这个数可大于0可小于0，需要判断符号&lt;/p&gt;&lt;/blockquote&gt;
 &lt;p&gt;在那之前，最好先给两者判断一下-128位的信号，至于等于0的情况再考虑,其他小于0的情况可以直接默认不输出，比如case2
 其他情况剩下case1和case4&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://adeepblue.github.io/p/%E5%9B%BE%E7%81%B5%E5%AE%8C%E5%A4%87%E6%B8%B8%E6%88%8F%E6%94%BB%E7%95%A52/case3.png&#34;
+&lt;p&gt;&lt;img src=&#34;http://localhost:1313/p/%E5%9B%BE%E7%81%B5%E5%AE%8C%E5%A4%87%E6%B8%B8%E6%88%8F%E6%94%BB%E7%95%A52/case3.png&#34;
 	width=&#34;1568&#34;
 	height=&#34;760&#34;
-	srcset=&#34;https://adeepblue.github.io/p/%E5%9B%BE%E7%81%B5%E5%AE%8C%E5%A4%87%E6%B8%B8%E6%88%8F%E6%94%BB%E7%95%A52/case3_hu_250adf8e9e6e1ec5.png 480w, https://adeepblue.github.io/p/%E5%9B%BE%E7%81%B5%E5%AE%8C%E5%A4%87%E6%B8%B8%E6%88%8F%E6%94%BB%E7%95%A52/case3_hu_503beecd8488d79a.png 1024w&#34;
+	srcset=&#34;http://localhost:1313/p/%E5%9B%BE%E7%81%B5%E5%AE%8C%E5%A4%87%E6%B8%B8%E6%88%8F%E6%94%BB%E7%95%A52/case3_hu_250adf8e9e6e1ec5.png 480w, http://localhost:1313/p/%E5%9B%BE%E7%81%B5%E5%AE%8C%E5%A4%87%E6%B8%B8%E6%88%8F%E6%94%BB%E7%95%A52/case3_hu_503beecd8488d79a.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 		alt=&#34;case3&#34;
@@ -979,10 +1114,10 @@
 	
 &gt;&lt;/p&gt;
 &lt;p&gt;case1&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://adeepblue.github.io/p/%E5%9B%BE%E7%81%B5%E5%AE%8C%E5%A4%87%E6%B8%B8%E6%88%8F%E6%94%BB%E7%95%A52/case1-1.png&#34;
+&lt;p&gt;&lt;img src=&#34;http://localhost:1313/p/%E5%9B%BE%E7%81%B5%E5%AE%8C%E5%A4%87%E6%B8%B8%E6%88%8F%E6%94%BB%E7%95%A52/case1-1.png&#34;
 	width=&#34;1423&#34;
 	height=&#34;802&#34;
-	srcset=&#34;https://adeepblue.github.io/p/%E5%9B%BE%E7%81%B5%E5%AE%8C%E5%A4%87%E6%B8%B8%E6%88%8F%E6%94%BB%E7%95%A52/case1-1_hu_f7d81a84d2cf90c3.png 480w, https://adeepblue.github.io/p/%E5%9B%BE%E7%81%B5%E5%AE%8C%E5%A4%87%E6%B8%B8%E6%88%8F%E6%94%BB%E7%95%A52/case1-1_hu_a75ebe56c5702fe8.png 1024w&#34;
+	srcset=&#34;http://localhost:1313/p/%E5%9B%BE%E7%81%B5%E5%AE%8C%E5%A4%87%E6%B8%B8%E6%88%8F%E6%94%BB%E7%95%A52/case1-1_hu_f7d81a84d2cf90c3.png 480w, http://localhost:1313/p/%E5%9B%BE%E7%81%B5%E5%AE%8C%E5%A4%87%E6%B8%B8%E6%88%8F%E6%94%BB%E7%95%A52/case1-1_hu_a75ebe56c5702fe8.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 		alt=&#34;case1-1&#34;
@@ -993,10 +1128,10 @@
 		data-flex-basis=&#34;425px&#34;
 	
 &gt;
-&lt;img src=&#34;https://adeepblue.github.io/p/%E5%9B%BE%E7%81%B5%E5%AE%8C%E5%A4%87%E6%B8%B8%E6%88%8F%E6%94%BB%E7%95%A52/case1-2.png&#34;
+&lt;img src=&#34;http://localhost:1313/p/%E5%9B%BE%E7%81%B5%E5%AE%8C%E5%A4%87%E6%B8%B8%E6%88%8F%E6%94%BB%E7%95%A52/case1-2.png&#34;
 	width=&#34;1353&#34;
 	height=&#34;963&#34;
-	srcset=&#34;https://adeepblue.github.io/p/%E5%9B%BE%E7%81%B5%E5%AE%8C%E5%A4%87%E6%B8%B8%E6%88%8F%E6%94%BB%E7%95%A52/case1-2_hu_fcdadd0b252d3a78.png 480w, https://adeepblue.github.io/p/%E5%9B%BE%E7%81%B5%E5%AE%8C%E5%A4%87%E6%B8%B8%E6%88%8F%E6%94%BB%E7%95%A52/case1-2_hu_d70de838d763cce3.png 1024w&#34;
+	srcset=&#34;http://localhost:1313/p/%E5%9B%BE%E7%81%B5%E5%AE%8C%E5%A4%87%E6%B8%B8%E6%88%8F%E6%94%BB%E7%95%A52/case1-2_hu_fcdadd0b252d3a78.png 480w, http://localhost:1313/p/%E5%9B%BE%E7%81%B5%E5%AE%8C%E5%A4%87%E6%B8%B8%E6%88%8F%E6%94%BB%E7%95%A52/case1-2_hu_d70de838d763cce3.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 		alt=&#34;case1-2&#34;
@@ -1007,10 +1142,10 @@
 		data-flex-basis=&#34;337px&#34;
 	
 &gt;
-&lt;img src=&#34;https://adeepblue.github.io/p/%E5%9B%BE%E7%81%B5%E5%AE%8C%E5%A4%87%E6%B8%B8%E6%88%8F%E6%94%BB%E7%95%A52/case1-3.png&#34;
+&lt;img src=&#34;http://localhost:1313/p/%E5%9B%BE%E7%81%B5%E5%AE%8C%E5%A4%87%E6%B8%B8%E6%88%8F%E6%94%BB%E7%95%A52/case1-3.png&#34;
 	width=&#34;1361&#34;
 	height=&#34;799&#34;
-	srcset=&#34;https://adeepblue.github.io/p/%E5%9B%BE%E7%81%B5%E5%AE%8C%E5%A4%87%E6%B8%B8%E6%88%8F%E6%94%BB%E7%95%A52/case1-3_hu_95587056b5825b28.png 480w, https://adeepblue.github.io/p/%E5%9B%BE%E7%81%B5%E5%AE%8C%E5%A4%87%E6%B8%B8%E6%88%8F%E6%94%BB%E7%95%A52/case1-3_hu_eddd640a74d64e2.png 1024w&#34;
+	srcset=&#34;http://localhost:1313/p/%E5%9B%BE%E7%81%B5%E5%AE%8C%E5%A4%87%E6%B8%B8%E6%88%8F%E6%94%BB%E7%95%A52/case1-3_hu_95587056b5825b28.png 480w, http://localhost:1313/p/%E5%9B%BE%E7%81%B5%E5%AE%8C%E5%A4%87%E6%B8%B8%E6%88%8F%E6%94%BB%E7%95%A52/case1-3_hu_eddd640a74d64e2.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 		alt=&#34;case1-3&#34;
@@ -1030,10 +1165,10 @@
 &lt;p&gt;&lt;strong&gt;1.2&lt;/strong&gt; 进位信号有，输出信号的&lt;strong&gt;总和&lt;/strong&gt;端口大于0 =&amp;gt; -y&amp;gt;-x，第二个数大于第一个数，需要输出1&lt;/p&gt;&lt;/blockquote&gt;
 &lt;blockquote&gt;
 &lt;p&gt;&lt;strong&gt;1.3&lt;/strong&gt; 进位信号无 =&amp;gt; -y&amp;lt;-x,不需要输出&lt;/p&gt;&lt;/blockquote&gt;
-&lt;p&gt;&lt;img src=&#34;https://adeepblue.github.io/p/%E5%9B%BE%E7%81%B5%E5%AE%8C%E5%A4%87%E6%B8%B8%E6%88%8F%E6%94%BB%E7%95%A52/case1-final.png&#34;
+&lt;p&gt;&lt;img src=&#34;http://localhost:1313/p/%E5%9B%BE%E7%81%B5%E5%AE%8C%E5%A4%87%E6%B8%B8%E6%88%8F%E6%94%BB%E7%95%A52/case1-final.png&#34;
 	width=&#34;1846&#34;
 	height=&#34;840&#34;
-	srcset=&#34;https://adeepblue.github.io/p/%E5%9B%BE%E7%81%B5%E5%AE%8C%E5%A4%87%E6%B8%B8%E6%88%8F%E6%94%BB%E7%95%A52/case1-final_hu_90baf03b14d4e7a4.png 480w, https://adeepblue.github.io/p/%E5%9B%BE%E7%81%B5%E5%AE%8C%E5%A4%87%E6%B8%B8%E6%88%8F%E6%94%BB%E7%95%A52/case1-final_hu_8f3e3d893b4677eb.png 1024w&#34;
+	srcset=&#34;http://localhost:1313/p/%E5%9B%BE%E7%81%B5%E5%AE%8C%E5%A4%87%E6%B8%B8%E6%88%8F%E6%94%BB%E7%95%A52/case1-final_hu_90baf03b14d4e7a4.png 480w, http://localhost:1313/p/%E5%9B%BE%E7%81%B5%E5%AE%8C%E5%A4%87%E6%B8%B8%E6%88%8F%E6%94%BB%E7%95%A52/case1-final_hu_8f3e3d893b4677eb.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 		alt=&#34;case1的最终处理&#34;
@@ -1047,10 +1182,10 @@
 其中直接连入输出了，需要一个开关控制，其中两头直接由两个输入的-128位控制，如果两个数都是高电平才触发上面的，其中中间一位可以开关直接连到case3的输出上，
 毕竟开关触发条件也是跟case3一样的，下面-128低电平，上面-128高电平&lt;/p&gt;
 &lt;p&gt;同理&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://adeepblue.github.io/p/%E5%9B%BE%E7%81%B5%E5%AE%8C%E5%A4%87%E6%B8%B8%E6%88%8F%E6%94%BB%E7%95%A52/case3-1.png&#34;
+&lt;p&gt;&lt;img src=&#34;http://localhost:1313/p/%E5%9B%BE%E7%81%B5%E5%AE%8C%E5%A4%87%E6%B8%B8%E6%88%8F%E6%94%BB%E7%95%A52/case3-1.png&#34;
 	width=&#34;1689&#34;
 	height=&#34;967&#34;
-	srcset=&#34;https://adeepblue.github.io/p/%E5%9B%BE%E7%81%B5%E5%AE%8C%E5%A4%87%E6%B8%B8%E6%88%8F%E6%94%BB%E7%95%A52/case3-1_hu_b561b632b225865d.png 480w, https://adeepblue.github.io/p/%E5%9B%BE%E7%81%B5%E5%AE%8C%E5%A4%87%E6%B8%B8%E6%88%8F%E6%94%BB%E7%95%A52/case3-1_hu_403891c6e7e91b2e.png 1024w&#34;
+	srcset=&#34;http://localhost:1313/p/%E5%9B%BE%E7%81%B5%E5%AE%8C%E5%A4%87%E6%B8%B8%E6%88%8F%E6%94%BB%E7%95%A52/case3-1_hu_b561b632b225865d.png 480w, http://localhost:1313/p/%E5%9B%BE%E7%81%B5%E5%AE%8C%E5%A4%87%E6%B8%B8%E6%88%8F%E6%94%BB%E7%95%A52/case3-1_hu_403891c6e7e91b2e.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 		alt=&#34;case3-1&#34;
@@ -1061,10 +1196,10 @@
 		data-flex-basis=&#34;419px&#34;
 	
 &gt;
-&lt;img src=&#34;https://adeepblue.github.io/p/%E5%9B%BE%E7%81%B5%E5%AE%8C%E5%A4%87%E6%B8%B8%E6%88%8F%E6%94%BB%E7%95%A52/case3-2.png&#34;
+&lt;img src=&#34;http://localhost:1313/p/%E5%9B%BE%E7%81%B5%E5%AE%8C%E5%A4%87%E6%B8%B8%E6%88%8F%E6%94%BB%E7%95%A52/case3-2.png&#34;
 	width=&#34;1482&#34;
 	height=&#34;853&#34;
-	srcset=&#34;https://adeepblue.github.io/p/%E5%9B%BE%E7%81%B5%E5%AE%8C%E5%A4%87%E6%B8%B8%E6%88%8F%E6%94%BB%E7%95%A52/case3-2_hu_135155380d86017d.png 480w, https://adeepblue.github.io/p/%E5%9B%BE%E7%81%B5%E5%AE%8C%E5%A4%87%E6%B8%B8%E6%88%8F%E6%94%BB%E7%95%A52/case3-2_hu_f82862bb1aa7f1cd.png 1024w&#34;
+	srcset=&#34;http://localhost:1313/p/%E5%9B%BE%E7%81%B5%E5%AE%8C%E5%A4%87%E6%B8%B8%E6%88%8F%E6%94%BB%E7%95%A52/case3-2_hu_135155380d86017d.png 480w, http://localhost:1313/p/%E5%9B%BE%E7%81%B5%E5%AE%8C%E5%A4%87%E6%B8%B8%E6%88%8F%E6%94%BB%E7%95%A52/case3-2_hu_f82862bb1aa7f1cd.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 		alt=&#34;case3-2&#34;
@@ -1075,10 +1210,10 @@
 		data-flex-basis=&#34;416px&#34;
 	
 &gt;
-&lt;img src=&#34;https://adeepblue.github.io/p/%E5%9B%BE%E7%81%B5%E5%AE%8C%E5%A4%87%E6%B8%B8%E6%88%8F%E6%94%BB%E7%95%A52/case3-3.png&#34;
+&lt;img src=&#34;http://localhost:1313/p/%E5%9B%BE%E7%81%B5%E5%AE%8C%E5%A4%87%E6%B8%B8%E6%88%8F%E6%94%BB%E7%95%A52/case3-3.png&#34;
 	width=&#34;1564&#34;
 	height=&#34;837&#34;
-	srcset=&#34;https://adeepblue.github.io/p/%E5%9B%BE%E7%81%B5%E5%AE%8C%E5%A4%87%E6%B8%B8%E6%88%8F%E6%94%BB%E7%95%A52/case3-3_hu_ae32aa0a09ee9edd.png 480w, https://adeepblue.github.io/p/%E5%9B%BE%E7%81%B5%E5%AE%8C%E5%A4%87%E6%B8%B8%E6%88%8F%E6%94%BB%E7%95%A52/case3-3_hu_6fd57d9ae6c44507.png 1024w&#34;
+	srcset=&#34;http://localhost:1313/p/%E5%9B%BE%E7%81%B5%E5%AE%8C%E5%A4%87%E6%B8%B8%E6%88%8F%E6%94%BB%E7%95%A52/case3-3_hu_ae32aa0a09ee9edd.png 480w, http://localhost:1313/p/%E5%9B%BE%E7%81%B5%E5%AE%8C%E5%A4%87%E6%B8%B8%E6%88%8F%E6%94%BB%E7%95%A52/case3-3_hu_6fd57d9ae6c44507.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 		alt=&#34;case3-3&#34;
@@ -1096,10 +1231,10 @@
 &lt;blockquote&gt;
 &lt;p&gt;&lt;strong&gt;1.3&lt;/strong&gt; 进位信号无 =&amp;gt; -y&amp;lt;-x,不需要输出&lt;/p&gt;&lt;/blockquote&gt;
 &lt;p&gt;仔细一观察，80 48时，除开两处-128信号不同以外，其余部分全部相同，也就是说，现在属于两者同时是1或者0的时候即可成立，那么不用多画了，直接把控制开关的与门替换成同或门即可&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://adeepblue.github.io/p/%E5%9B%BE%E7%81%B5%E5%AE%8C%E5%A4%87%E6%B8%B8%E6%88%8F%E6%94%BB%E7%95%A52/sign-samller-than-final.png&#34;
+&lt;p&gt;&lt;img src=&#34;http://localhost:1313/p/%E5%9B%BE%E7%81%B5%E5%AE%8C%E5%A4%87%E6%B8%B8%E6%88%8F%E6%94%BB%E7%95%A52/sign-samller-than-final.png&#34;
 	width=&#34;1920&#34;
 	height=&#34;1080&#34;
-	srcset=&#34;https://adeepblue.github.io/p/%E5%9B%BE%E7%81%B5%E5%AE%8C%E5%A4%87%E6%B8%B8%E6%88%8F%E6%94%BB%E7%95%A52/sign-samller-than-final_hu_72adaf9bacfc59be.png 480w, https://adeepblue.github.io/p/%E5%9B%BE%E7%81%B5%E5%AE%8C%E5%A4%87%E6%B8%B8%E6%88%8F%E6%94%BB%E7%95%A52/sign-samller-than-final_hu_51c7b20201ead8d5.png 1024w&#34;
+	srcset=&#34;http://localhost:1313/p/%E5%9B%BE%E7%81%B5%E5%AE%8C%E5%A4%87%E6%B8%B8%E6%88%8F%E6%94%BB%E7%95%A52/sign-samller-than-final_hu_72adaf9bacfc59be.png 480w, http://localhost:1313/p/%E5%9B%BE%E7%81%B5%E5%AE%8C%E5%A4%87%E6%B8%B8%E6%88%8F%E6%94%BB%E7%95%A52/sign-samller-than-final_hu_51c7b20201ead8d5.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 		alt=&#34;img.png&#34;
@@ -1110,16 +1245,18 @@
 		data-flex-basis=&#34;426px&#34;
 	
 &gt;&lt;/p&gt;
-&lt;p&gt;下一篇博文见,下一篇链接(还没更新，更新完链接放这里)&lt;/p&gt;
+&lt;hr&gt;
+&lt;p&gt;下一篇博文见,下一篇链接&lt;a class=&#34;link&#34; href=&#34;https://adeepblue.github.io/p/%E5%9B%BE%E7%81%B5%E5%AE%8C%E5%A4%87%E6%B8%B8%E6%88%8F%E6%94%BB%E7%95%A53/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;图灵完备游戏攻略3&lt;/a&gt;&lt;/p&gt;
 </description>
         </item>
         <item>
         <title>Python 开了代理使用requests库报错SSL Error解决办法</title>
-        <link>https://adeepblue.github.io/p/python-%E5%BC%80%E4%BA%86%E4%BB%A3%E7%90%86%E4%BD%BF%E7%94%A8requests%E5%BA%93%E6%8A%A5%E9%94%99ssl-error%E8%A7%A3%E5%86%B3%E5%8A%9E%E6%B3%95/</link>
+        <link>http://localhost:1313/p/python-%E5%BC%80%E4%BA%86%E4%BB%A3%E7%90%86%E4%BD%BF%E7%94%A8requests%E5%BA%93%E6%8A%A5%E9%94%99ssl-error%E8%A7%A3%E5%86%B3%E5%8A%9E%E6%B3%95/</link>
         <pubDate>Tue, 11 Feb 2025 16:35:53 +0800</pubDate>
         
-        <guid>https://adeepblue.github.io/p/python-%E5%BC%80%E4%BA%86%E4%BB%A3%E7%90%86%E4%BD%BF%E7%94%A8requests%E5%BA%93%E6%8A%A5%E9%94%99ssl-error%E8%A7%A3%E5%86%B3%E5%8A%9E%E6%B3%95/</guid>
-        <description>&lt;img src="https://adeepblue.github.io/p/python-%E5%BC%80%E4%BA%86%E4%BB%A3%E7%90%86%E4%BD%BF%E7%94%A8requests%E5%BA%93%E6%8A%A5%E9%94%99ssl-error%E8%A7%A3%E5%86%B3%E5%8A%9E%E6%B3%95/Logo.png" alt="Featured image of post Python 开了代理使用requests库报错SSL Error解决办法" /&gt;&lt;h1 id=&#34;sslerror&#34;&gt;SSLError
+        <guid>http://localhost:1313/p/python-%E5%BC%80%E4%BA%86%E4%BB%A3%E7%90%86%E4%BD%BF%E7%94%A8requests%E5%BA%93%E6%8A%A5%E9%94%99ssl-error%E8%A7%A3%E5%86%B3%E5%8A%9E%E6%B3%95/</guid>
+        <description>&lt;img src="http://localhost:1313/p/python-%E5%BC%80%E4%BA%86%E4%BB%A3%E7%90%86%E4%BD%BF%E7%94%A8requests%E5%BA%93%E6%8A%A5%E9%94%99ssl-error%E8%A7%A3%E5%86%B3%E5%8A%9E%E6%B3%95/Logo.png" alt="Featured image of post Python 开了代理使用requests库报错SSL Error解决办法" /&gt;&lt;h1 id=&#34;sslerror&#34;&gt;SSLError
 &lt;/h1&gt;&lt;p&gt;这是我曾经新开的一个仓库下的提交的ISSUE，虽然没多少人看过了，&lt;/p&gt;
 &lt;h2 id=&#34;解决办法&#34;&gt;解决办法
 &lt;/h2&gt;&lt;p&gt;&lt;a class=&#34;link&#34; href=&#34;https://github.com/ADeepblue/SSLError_involve/issues/2&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
@@ -1169,10 +1306,10 @@ pip同理,复制下列代码至txt文本后,根据你设置内的代理状态进
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;k&#34;&gt;pass&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;这一段逻辑代码我用在过我的另一个翻译脚本上,端口一般不会变化，其实设定好了就一般不必多更改了，可以当作固定接口用的，除非你反复用不同的VPN，具体如何我也没测试过，这一段代码被我当作了
 扩低版本python兼容性的解决方案，因为很有可能会出现&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://adeepblue.github.io/p/python-%E5%BC%80%E4%BA%86%E4%BB%A3%E7%90%86%E4%BD%BF%E7%94%A8requests%E5%BA%93%E6%8A%A5%E9%94%99ssl-error%E8%A7%A3%E5%86%B3%E5%8A%9E%E6%B3%95/proxy-error1.png&#34;
+&lt;p&gt;&lt;img src=&#34;http://localhost:1313/p/python-%E5%BC%80%E4%BA%86%E4%BB%A3%E7%90%86%E4%BD%BF%E7%94%A8requests%E5%BA%93%E6%8A%A5%E9%94%99ssl-error%E8%A7%A3%E5%86%B3%E5%8A%9E%E6%B3%95/proxy-error1.png&#34;
 	width=&#34;971&#34;
 	height=&#34;726&#34;
-	srcset=&#34;https://adeepblue.github.io/p/python-%E5%BC%80%E4%BA%86%E4%BB%A3%E7%90%86%E4%BD%BF%E7%94%A8requests%E5%BA%93%E6%8A%A5%E9%94%99ssl-error%E8%A7%A3%E5%86%B3%E5%8A%9E%E6%B3%95/proxy-error1_hu_eb241909cb31cfba.png 480w, https://adeepblue.github.io/p/python-%E5%BC%80%E4%BA%86%E4%BB%A3%E7%90%86%E4%BD%BF%E7%94%A8requests%E5%BA%93%E6%8A%A5%E9%94%99ssl-error%E8%A7%A3%E5%86%B3%E5%8A%9E%E6%B3%95/proxy-error1_hu_d1966feed3914b5f.png 1024w&#34;
+	srcset=&#34;http://localhost:1313/p/python-%E5%BC%80%E4%BA%86%E4%BB%A3%E7%90%86%E4%BD%BF%E7%94%A8requests%E5%BA%93%E6%8A%A5%E9%94%99ssl-error%E8%A7%A3%E5%86%B3%E5%8A%9E%E6%B3%95/proxy-error1_hu_eb241909cb31cfba.png 480w, http://localhost:1313/p/python-%E5%BC%80%E4%BA%86%E4%BB%A3%E7%90%86%E4%BD%BF%E7%94%A8requests%E5%BA%93%E6%8A%A5%E9%94%99ssl-error%E8%A7%A3%E5%86%B3%E5%8A%9E%E6%B3%95/proxy-error1_hu_d1966feed3914b5f.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 		alt=&#34;https键值处加https报错&#34;
@@ -1183,10 +1320,10 @@ pip同理,复制下列代码至txt文本后,根据你设置内的代理状态进
 		data-flex-basis=&#34;320px&#34;
 	
 &gt;
-&lt;img src=&#34;https://adeepblue.github.io/p/python-%E5%BC%80%E4%BA%86%E4%BB%A3%E7%90%86%E4%BD%BF%E7%94%A8requests%E5%BA%93%E6%8A%A5%E9%94%99ssl-error%E8%A7%A3%E5%86%B3%E5%8A%9E%E6%B3%95/proxy-error2.png&#34;
+&lt;img src=&#34;http://localhost:1313/p/python-%E5%BC%80%E4%BA%86%E4%BB%A3%E7%90%86%E4%BD%BF%E7%94%A8requests%E5%BA%93%E6%8A%A5%E9%94%99ssl-error%E8%A7%A3%E5%86%B3%E5%8A%9E%E6%B3%95/proxy-error2.png&#34;
 	width=&#34;1034&#34;
 	height=&#34;688&#34;
-	srcset=&#34;https://adeepblue.github.io/p/python-%E5%BC%80%E4%BA%86%E4%BB%A3%E7%90%86%E4%BD%BF%E7%94%A8requests%E5%BA%93%E6%8A%A5%E9%94%99ssl-error%E8%A7%A3%E5%86%B3%E5%8A%9E%E6%B3%95/proxy-error2_hu_19f139455b8d8d94.png 480w, https://adeepblue.github.io/p/python-%E5%BC%80%E4%BA%86%E4%BB%A3%E7%90%86%E4%BD%BF%E7%94%A8requests%E5%BA%93%E6%8A%A5%E9%94%99ssl-error%E8%A7%A3%E5%86%B3%E5%8A%9E%E6%B3%95/proxy-error2_hu_8b59f17276883098.png 1024w&#34;
+	srcset=&#34;http://localhost:1313/p/python-%E5%BC%80%E4%BA%86%E4%BB%A3%E7%90%86%E4%BD%BF%E7%94%A8requests%E5%BA%93%E6%8A%A5%E9%94%99ssl-error%E8%A7%A3%E5%86%B3%E5%8A%9E%E6%B3%95/proxy-error2_hu_19f139455b8d8d94.png 480w, http://localhost:1313/p/python-%E5%BC%80%E4%BA%86%E4%BB%A3%E7%90%86%E4%BD%BF%E7%94%A8requests%E5%BA%93%E6%8A%A5%E9%94%99ssl-error%E8%A7%A3%E5%86%B3%E5%8A%9E%E6%B3%95/proxy-error2_hu_8b59f17276883098.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 		alt=&#34;https键值处不加东西其他改了也没事&#34;
@@ -1209,17 +1346,17 @@ pip同理,复制下列代码至txt文本后,根据你设置内的代理状态进
         </item>
         <item>
         <title>关闭 LM studio的开机启动</title>
-        <link>https://adeepblue.github.io/p/%E5%85%B3%E9%97%AD-lm-studio%E7%9A%84%E5%BC%80%E6%9C%BA%E5%90%AF%E5%8A%A8/</link>
+        <link>http://localhost:1313/p/%E5%85%B3%E9%97%AD-lm-studio%E7%9A%84%E5%BC%80%E6%9C%BA%E5%90%AF%E5%8A%A8/</link>
         <pubDate>Sat, 08 Feb 2025 13:52:52 +0800</pubDate>
         
-        <guid>https://adeepblue.github.io/p/%E5%85%B3%E9%97%AD-lm-studio%E7%9A%84%E5%BC%80%E6%9C%BA%E5%90%AF%E5%8A%A8/</guid>
-        <description>&lt;img src="https://adeepblue.github.io/p/%E5%85%B3%E9%97%AD-lm-studio%E7%9A%84%E5%BC%80%E6%9C%BA%E5%90%AF%E5%8A%A8/LM-studio.jpg" alt="Featured image of post 关闭 LM studio的开机启动" /&gt;&lt;h1 id=&#34;分享关闭lm-studio开机启动的方法&#34;&gt;分享关闭LM studio开机启动的方法
+        <guid>http://localhost:1313/p/%E5%85%B3%E9%97%AD-lm-studio%E7%9A%84%E5%BC%80%E6%9C%BA%E5%90%AF%E5%8A%A8/</guid>
+        <description>&lt;img src="http://localhost:1313/p/%E5%85%B3%E9%97%AD-lm-studio%E7%9A%84%E5%BC%80%E6%9C%BA%E5%90%AF%E5%8A%A8/LM-studio.jpg" alt="Featured image of post 关闭 LM studio的开机启动" /&gt;&lt;h1 id=&#34;分享关闭lm-studio开机启动的方法&#34;&gt;分享关闭LM studio开机启动的方法
 &lt;/h1&gt;&lt;h2 id=&#34;关闭方法&#34;&gt;关闭方法
 &lt;/h2&gt;&lt;p&gt;关闭无头开关(headless)就可以不让LMstudio开机启动
-&lt;img src=&#34;https://adeepblue.github.io/p/%E5%85%B3%E9%97%AD-lm-studio%E7%9A%84%E5%BC%80%E6%9C%BA%E5%90%AF%E5%8A%A8/setting-for-headless.png&#34;
+&lt;img src=&#34;http://localhost:1313/p/%E5%85%B3%E9%97%AD-lm-studio%E7%9A%84%E5%BC%80%E6%9C%BA%E5%90%AF%E5%8A%A8/setting-for-headless.png&#34;
 	width=&#34;1920&#34;
 	height=&#34;1024&#34;
-	srcset=&#34;https://adeepblue.github.io/p/%E5%85%B3%E9%97%AD-lm-studio%E7%9A%84%E5%BC%80%E6%9C%BA%E5%90%AF%E5%8A%A8/setting-for-headless_hu_15ec6c234864fb35.png 480w, https://adeepblue.github.io/p/%E5%85%B3%E9%97%AD-lm-studio%E7%9A%84%E5%BC%80%E6%9C%BA%E5%90%AF%E5%8A%A8/setting-for-headless_hu_123ddbe42509ff77.png 1024w&#34;
+	srcset=&#34;http://localhost:1313/p/%E5%85%B3%E9%97%AD-lm-studio%E7%9A%84%E5%BC%80%E6%9C%BA%E5%90%AF%E5%8A%A8/setting-for-headless_hu_15ec6c234864fb35.png 480w, http://localhost:1313/p/%E5%85%B3%E9%97%AD-lm-studio%E7%9A%84%E5%BC%80%E6%9C%BA%E5%90%AF%E5%8A%A8/setting-for-headless_hu_123ddbe42509ff77.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 		alt=&#34;关闭方法&#34;
@@ -1235,10 +1372,10 @@ pip同理,复制下列代码至txt文本后,根据你设置内的代理状态进
     &gt;网页链接&lt;/a&gt;,区别在于我会在这里讲一下我是怎么找到这个的&lt;/p&gt;
 &lt;p&gt;没找到显式开关的情况下，当时搜谷歌时候的内容如上，其他内容几乎没有，当时觉得挺绝望的，一个半开源软件把开机自启开关都藏得这么深的么？甚至还没多少人关注这个，只是说了它支持开机启动，其中的更新日志里，
 那，换个说法，之前的状态就是不支持开机启动咯，那你总有开关做着让人选的吧？&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://adeepblue.github.io/p/%E5%85%B3%E9%97%AD-lm-studio%E7%9A%84%E5%BC%80%E6%9C%BA%E5%90%AF%E5%8A%A8/google-search-LM-studio-update-log.png&#34;
+&lt;p&gt;&lt;img src=&#34;http://localhost:1313/p/%E5%85%B3%E9%97%AD-lm-studio%E7%9A%84%E5%BC%80%E6%9C%BA%E5%90%AF%E5%8A%A8/google-search-LM-studio-update-log.png&#34;
 	width=&#34;1099&#34;
 	height=&#34;329&#34;
-	srcset=&#34;https://adeepblue.github.io/p/%E5%85%B3%E9%97%AD-lm-studio%E7%9A%84%E5%BC%80%E6%9C%BA%E5%90%AF%E5%8A%A8/google-search-LM-studio-update-log_hu_cfbe8b472f9db527.png 480w, https://adeepblue.github.io/p/%E5%85%B3%E9%97%AD-lm-studio%E7%9A%84%E5%BC%80%E6%9C%BA%E5%90%AF%E5%8A%A8/google-search-LM-studio-update-log_hu_e14138d72a17499b.png 1024w&#34;
+	srcset=&#34;http://localhost:1313/p/%E5%85%B3%E9%97%AD-lm-studio%E7%9A%84%E5%BC%80%E6%9C%BA%E5%90%AF%E5%8A%A8/google-search-LM-studio-update-log_hu_cfbe8b472f9db527.png 480w, http://localhost:1313/p/%E5%85%B3%E9%97%AD-lm-studio%E7%9A%84%E5%BC%80%E6%9C%BA%E5%90%AF%E5%8A%A8/google-search-LM-studio-update-log_hu_e14138d72a17499b.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 		alt=&#34;谷歌搜到的内容&#34;
@@ -1249,10 +1386,10 @@ pip同理,复制下列代码至txt文本后,根据你设置内的代理状态进
 		data-flex-basis=&#34;801px&#34;
 	
 &gt;&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://adeepblue.github.io/p/%E5%85%B3%E9%97%AD-lm-studio%E7%9A%84%E5%BC%80%E6%9C%BA%E5%90%AF%E5%8A%A8/LM-studio-update-log.png&#34;
+&lt;p&gt;&lt;img src=&#34;http://localhost:1313/p/%E5%85%B3%E9%97%AD-lm-studio%E7%9A%84%E5%BC%80%E6%9C%BA%E5%90%AF%E5%8A%A8/LM-studio-update-log.png&#34;
 	width=&#34;1916&#34;
 	height=&#34;1028&#34;
-	srcset=&#34;https://adeepblue.github.io/p/%E5%85%B3%E9%97%AD-lm-studio%E7%9A%84%E5%BC%80%E6%9C%BA%E5%90%AF%E5%8A%A8/LM-studio-update-log_hu_f76476af7e81313f.png 480w, https://adeepblue.github.io/p/%E5%85%B3%E9%97%AD-lm-studio%E7%9A%84%E5%BC%80%E6%9C%BA%E5%90%AF%E5%8A%A8/LM-studio-update-log_hu_de80dd25e9c30c00.png 1024w&#34;
+	srcset=&#34;http://localhost:1313/p/%E5%85%B3%E9%97%AD-lm-studio%E7%9A%84%E5%BC%80%E6%9C%BA%E5%90%AF%E5%8A%A8/LM-studio-update-log_hu_f76476af7e81313f.png 480w, http://localhost:1313/p/%E5%85%B3%E9%97%AD-lm-studio%E7%9A%84%E5%BC%80%E6%9C%BA%E5%90%AF%E5%8A%A8/LM-studio-update-log_hu_de80dd25e9c30c00.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 		alt=&#34;LM studio更新日志&#34;
@@ -1264,10 +1401,10 @@ pip同理,复制下列代码至txt文本后,根据你设置内的代理状态进
 	
 &gt;&lt;/p&gt;
 &lt;p&gt;开机启动，我第一个想到的就是任务管理器里的启动，去看了一眼&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://adeepblue.github.io/p/%E5%85%B3%E9%97%AD-lm-studio%E7%9A%84%E5%BC%80%E6%9C%BA%E5%90%AF%E5%8A%A8/task-with-LM-studio.png&#34;
+&lt;p&gt;&lt;img src=&#34;http://localhost:1313/p/%E5%85%B3%E9%97%AD-lm-studio%E7%9A%84%E5%BC%80%E6%9C%BA%E5%90%AF%E5%8A%A8/task-with-LM-studio.png&#34;
 	width=&#34;1007&#34;
 	height=&#34;741&#34;
-	srcset=&#34;https://adeepblue.github.io/p/%E5%85%B3%E9%97%AD-lm-studio%E7%9A%84%E5%BC%80%E6%9C%BA%E5%90%AF%E5%8A%A8/task-with-LM-studio_hu_faf694d78da67d7f.png 480w, https://adeepblue.github.io/p/%E5%85%B3%E9%97%AD-lm-studio%E7%9A%84%E5%BC%80%E6%9C%BA%E5%90%AF%E5%8A%A8/task-with-LM-studio_hu_f3769c4f3e36e7d4.png 1024w&#34;
+	srcset=&#34;http://localhost:1313/p/%E5%85%B3%E9%97%AD-lm-studio%E7%9A%84%E5%BC%80%E6%9C%BA%E5%90%AF%E5%8A%A8/task-with-LM-studio_hu_faf694d78da67d7f.png 480w, http://localhost:1313/p/%E5%85%B3%E9%97%AD-lm-studio%E7%9A%84%E5%BC%80%E6%9C%BA%E5%90%AF%E5%8A%A8/task-with-LM-studio_hu_f3769c4f3e36e7d4.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 		alt=&#34;任务管理器内的开机启动显示&#34;
@@ -1282,10 +1419,10 @@ pip同理,复制下列代码至txt文本后,根据你设置内的代理状态进
 关闭软件然后重新启动就可以，毕竟如果是后者的话，一旦修改成功就会观察到吧？&lt;/p&gt;
 &lt;p&gt;然后，就真的，观察到启动一次软件就把这个开关给打开了，说明，&lt;span style=&#34;color:red&#34;&gt;这是每次启动一旦检测到软件内一个设置选项是啥样的就会去改任务管理器里的那个开关&lt;/span&gt;,&lt;/p&gt;
 &lt;p&gt;再之后，我考虑到有可能是注册表注册了某个键值，导致的反复修改设置里的选项，不过没找到开关就是了，按照LM studio的名字搜了之后加上AI帮助倒是搜到了开机启动项的位置，以及我其他设定的几个开机启动项&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://adeepblue.github.io/p/%E5%85%B3%E9%97%AD-lm-studio%E7%9A%84%E5%BC%80%E6%9C%BA%E5%90%AF%E5%8A%A8/regedit-with-LM-studio.png&#34;
+&lt;p&gt;&lt;img src=&#34;http://localhost:1313/p/%E5%85%B3%E9%97%AD-lm-studio%E7%9A%84%E5%BC%80%E6%9C%BA%E5%90%AF%E5%8A%A8/regedit-with-LM-studio.png&#34;
 	width=&#34;1913&#34;
 	height=&#34;634&#34;
-	srcset=&#34;https://adeepblue.github.io/p/%E5%85%B3%E9%97%AD-lm-studio%E7%9A%84%E5%BC%80%E6%9C%BA%E5%90%AF%E5%8A%A8/regedit-with-LM-studio_hu_8af9d099fc9a90c0.png 480w, https://adeepblue.github.io/p/%E5%85%B3%E9%97%AD-lm-studio%E7%9A%84%E5%BC%80%E6%9C%BA%E5%90%AF%E5%8A%A8/regedit-with-LM-studio_hu_52f548d54553f1b6.png 1024w&#34;
+	srcset=&#34;http://localhost:1313/p/%E5%85%B3%E9%97%AD-lm-studio%E7%9A%84%E5%BC%80%E6%9C%BA%E5%90%AF%E5%8A%A8/regedit-with-LM-studio_hu_8af9d099fc9a90c0.png 480w, http://localhost:1313/p/%E5%85%B3%E9%97%AD-lm-studio%E7%9A%84%E5%BC%80%E6%9C%BA%E5%90%AF%E5%8A%A8/regedit-with-LM-studio_hu_52f548d54553f1b6.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 		alt=&#34;相关注册表&#34;
@@ -1299,10 +1436,10 @@ pip同理,复制下列代码至txt文本后,根据你设置内的代理状态进
 &lt;p&gt;以及又按照上述方法测试了一下，只是这次直接就是删除相关键值，依旧也是上面的结果，也就是坐实了就是有个设置项，再结合上述日志提到的无头开关，它只提到了最小化托盘选项开关的事，开机启动只是带过了一嘴，
 那我有理由怀疑，这个开关同时也控制着开机启动？&lt;/p&gt;
 &lt;p&gt;结果，一测试，还真是，任务管理器内的启动那边，和注册表这边的，同时变了&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://adeepblue.github.io/p/%E5%85%B3%E9%97%AD-lm-studio%E7%9A%84%E5%BC%80%E6%9C%BA%E5%90%AF%E5%8A%A8/reg-without-LM-studio.png&#34;
+&lt;p&gt;&lt;img src=&#34;http://localhost:1313/p/%E5%85%B3%E9%97%AD-lm-studio%E7%9A%84%E5%BC%80%E6%9C%BA%E5%90%AF%E5%8A%A8/reg-without-LM-studio.png&#34;
 	width=&#34;1920&#34;
 	height=&#34;726&#34;
-	srcset=&#34;https://adeepblue.github.io/p/%E5%85%B3%E9%97%AD-lm-studio%E7%9A%84%E5%BC%80%E6%9C%BA%E5%90%AF%E5%8A%A8/reg-without-LM-studio_hu_5e1f7306cc6c704e.png 480w, https://adeepblue.github.io/p/%E5%85%B3%E9%97%AD-lm-studio%E7%9A%84%E5%BC%80%E6%9C%BA%E5%90%AF%E5%8A%A8/reg-without-LM-studio_hu_3b27fea65cb8dc9d.png 1024w&#34;
+	srcset=&#34;http://localhost:1313/p/%E5%85%B3%E9%97%AD-lm-studio%E7%9A%84%E5%BC%80%E6%9C%BA%E5%90%AF%E5%8A%A8/reg-without-LM-studio_hu_5e1f7306cc6c704e.png 480w, http://localhost:1313/p/%E5%85%B3%E9%97%AD-lm-studio%E7%9A%84%E5%BC%80%E6%9C%BA%E5%90%AF%E5%8A%A8/reg-without-LM-studio_hu_3b27fea65cb8dc9d.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 		alt=&#34;变动后的注册表&#34;
@@ -1313,10 +1450,10 @@ pip同理,复制下列代码至txt文本后,根据你设置内的代理状态进
 		data-flex-basis=&#34;634px&#34;
 	
 &gt;&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://adeepblue.github.io/p/%E5%85%B3%E9%97%AD-lm-studio%E7%9A%84%E5%BC%80%E6%9C%BA%E5%90%AF%E5%8A%A8/task-control-without-LM-studio.png&#34;
+&lt;p&gt;&lt;img src=&#34;http://localhost:1313/p/%E5%85%B3%E9%97%AD-lm-studio%E7%9A%84%E5%BC%80%E6%9C%BA%E5%90%AF%E5%8A%A8/task-control-without-LM-studio.png&#34;
 	width=&#34;1007&#34;
 	height=&#34;741&#34;
-	srcset=&#34;https://adeepblue.github.io/p/%E5%85%B3%E9%97%AD-lm-studio%E7%9A%84%E5%BC%80%E6%9C%BA%E5%90%AF%E5%8A%A8/task-control-without-LM-studio_hu_b9eb6fb7fb3d3585.png 480w, https://adeepblue.github.io/p/%E5%85%B3%E9%97%AD-lm-studio%E7%9A%84%E5%BC%80%E6%9C%BA%E5%90%AF%E5%8A%A8/task-control-without-LM-studio_hu_7a22c71461a036cf.png 1024w&#34;
+	srcset=&#34;http://localhost:1313/p/%E5%85%B3%E9%97%AD-lm-studio%E7%9A%84%E5%BC%80%E6%9C%BA%E5%90%AF%E5%8A%A8/task-control-without-LM-studio_hu_b9eb6fb7fb3d3585.png 480w, http://localhost:1313/p/%E5%85%B3%E9%97%AD-lm-studio%E7%9A%84%E5%BC%80%E6%9C%BA%E5%90%AF%E5%8A%A8/task-control-without-LM-studio_hu_7a22c71461a036cf.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 		alt=&#34;变动后的任务管理器&#34;
@@ -1333,11 +1470,11 @@ pip同理,复制下列代码至txt文本后,根据你设置内的代理状态进
         </item>
         <item>
         <title>Python Matplotlib绘图库</title>
-        <link>https://adeepblue.github.io/p/python-matplotlib%E7%BB%98%E5%9B%BE%E5%BA%93/</link>
+        <link>http://localhost:1313/p/python-matplotlib%E7%BB%98%E5%9B%BE%E5%BA%93/</link>
         <pubDate>Fri, 07 Feb 2025 19:00:05 +0800</pubDate>
         
-        <guid>https://adeepblue.github.io/p/python-matplotlib%E7%BB%98%E5%9B%BE%E5%BA%93/</guid>
-        <description>&lt;img src="https://adeepblue.github.io/p/python-matplotlib%E7%BB%98%E5%9B%BE%E5%BA%93/matplotlib.png" alt="Featured image of post Python Matplotlib绘图库" /&gt;&lt;h1 id=&#34;python-matplotlib绘图库介绍&#34;&gt;Python Matplotlib绘图库介绍
+        <guid>http://localhost:1313/p/python-matplotlib%E7%BB%98%E5%9B%BE%E5%BA%93/</guid>
+        <description>&lt;img src="http://localhost:1313/p/python-matplotlib%E7%BB%98%E5%9B%BE%E5%BA%93/matplotlib.png" alt="Featured image of post Python Matplotlib绘图库" /&gt;&lt;h1 id=&#34;python-matplotlib绘图库介绍&#34;&gt;Python Matplotlib绘图库介绍
 &lt;/h1&gt;&lt;h2 id=&#34;安装库&#34;&gt;安装库
 &lt;/h2&gt;&lt;p&gt;没啥好说的，pip install 一下就行&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-python&#34; data-lang=&#34;python&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;n&#34;&gt;pip&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;install&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;matplotlib&lt;/span&gt;
@@ -1352,7 +1489,7 @@ pip同理,复制下列代码至txt文本后,根据你设置内的代理状态进
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt; &lt;span class=&#34;n&#34;&gt;plt&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;plot&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;x&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;y&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt; &lt;span class=&#34;n&#34;&gt;plt&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;show&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;()&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;赋值完毕之后直接进行plot操作读入类似缓存区的位置，然后再由&lt;code&gt;plt.show()&lt;/code&gt;输出包含着图表 (figure) 的窗口&lt;/p&gt;
-&lt;figure&gt;&lt;img src=&#34;https://adeepblue.github.io/p/python-matplotlib%E7%BB%98%E5%9B%BE%E5%BA%93/plot-single-line.png&#34; width=&#34;400px&#34; height=&#34;340px&#34;&gt;
+&lt;figure&gt;&lt;img src=&#34;http://localhost:1313/p/python-matplotlib%E7%BB%98%E5%9B%BE%E5%BA%93/plot-single-line.png&#34; width=&#34;400px&#34; height=&#34;340px&#34;&gt;
 &lt;/figure&gt;
 
 &lt;h2 id=&#34;同时绘制多条直线&#34;&gt;同时绘制多条直线？
@@ -1364,7 +1501,7 @@ pip同理,复制下列代码至txt文本后,根据你设置内的代理状态进
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-python&#34; data-lang=&#34;python&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;n&#34;&gt;plt&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;plot&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;x&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;y&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;n&#34;&gt;plt&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;show&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;()&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;但输出完就傻眼了，什么情况?
-&lt;figure&gt;&lt;img src=&#34;https://adeepblue.github.io/p/python-matplotlib%E7%BB%98%E5%9B%BE%E5%BA%93/plot-2line-error.png&#34; width=&#34;400px&#34; height=&#34;340px&#34;&gt;
+&lt;figure&gt;&lt;img src=&#34;http://localhost:1313/p/python-matplotlib%E7%BB%98%E5%9B%BE%E5%BA%93/plot-2line-error.png&#34; width=&#34;400px&#34; height=&#34;340px&#34;&gt;
 &lt;/figure&gt;
 
 别急，仔细观察图表里，总共有6条线，刚好对应了列表x的长度-1,另一个1去哪里了？(1,1)和(1,1)重合了，变成点了
@@ -1510,19 +1647,19 @@ pip同理,复制下列代码至txt文本后,根据你设置内的代理状态进
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt; &lt;span class=&#34;p&#34;&gt;[&lt;/span&gt;&lt;span class=&#34;mi&#34;&gt;7&lt;/span&gt; &lt;span class=&#34;mi&#34;&gt;7&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;]]&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;顺带一提，矩阵和包含数的列表都可以被matplotlib接收
 此时&lt;code&gt;plot(x,y)&lt;/code&gt;即可得到结果
-&lt;figure&gt;&lt;img src=&#34;https://adeepblue.github.io/p/python-matplotlib%E7%BB%98%E5%9B%BE%E5%BA%93/plot-2line-right.png&#34; width=&#34;400px&#34; height=&#34;340px&#34;&gt;
+&lt;figure&gt;&lt;img src=&#34;http://localhost:1313/p/python-matplotlib%E7%BB%98%E5%9B%BE%E5%BA%93/plot-2line-right.png&#34; width=&#34;400px&#34; height=&#34;340px&#34;&gt;
 &lt;/figure&gt;
 &lt;/p&gt;
 &lt;h2 id=&#34;不同区域显示&#34;&gt;不同区域显示？
 &lt;/h2&gt;&lt;p&gt;plt库包含subplot功能，可以进行一张figure的多个区域的分割，用法则是,&lt;code&gt;plt.subplot()&lt;/code&gt;结束表示在你表示的区域绘图
 其中可以用简单的数字来表示，第一个数字表示把宽分隔成多少行,第二个数字表示把长分割成多少列，比如说&lt;code&gt;plt.subplot(4,4,1)&lt;/code&gt;最后一个数表示
 位置，其中三个数都小于9可以直接写在一起,&lt;code&gt;plt.subplot(441)&lt;/code&gt;&lt;/p&gt;
-&lt;p&gt;&lt;figure&gt;&lt;img src=&#34;https://adeepblue.github.io/p/python-matplotlib%E7%BB%98%E5%9B%BE%E5%BA%93/subplot-figure1.png&#34; width=&#34;200px&#34; height=&#34;170px&#34;&gt;&lt;figcaption&gt;
+&lt;p&gt;&lt;figure&gt;&lt;img src=&#34;http://localhost:1313/p/python-matplotlib%E7%BB%98%E5%9B%BE%E5%BA%93/subplot-figure1.png&#34; width=&#34;200px&#34; height=&#34;170px&#34;&gt;&lt;figcaption&gt;
       &lt;h4&gt;subplot(441)&lt;/h4&gt;
     &lt;/figcaption&gt;
 &lt;/figure&gt;
 
-&lt;figure&gt;&lt;img src=&#34;https://adeepblue.github.io/p/python-matplotlib%E7%BB%98%E5%9B%BE%E5%BA%93/subplot-figure2.png&#34; width=&#34;200px&#34; height=&#34;170px&#34;&gt;&lt;figcaption&gt;
+&lt;figure&gt;&lt;img src=&#34;http://localhost:1313/p/python-matplotlib%E7%BB%98%E5%9B%BE%E5%BA%93/subplot-figure2.png&#34; width=&#34;200px&#34; height=&#34;170px&#34;&gt;&lt;figcaption&gt;
       &lt;h4&gt;subplot(445)&lt;/h4&gt;
     &lt;/figcaption&gt;
 &lt;/figure&gt;
@@ -1545,7 +1682,7 @@ pip同理,复制下列代码至txt文本后,根据你设置内的代理状态进
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;plt.subplot(3,3,4)
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;plt.plot(x, y)
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;plt.show()
-&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;figure&gt;&lt;img src=&#34;https://adeepblue.github.io/p/python-matplotlib%E7%BB%98%E5%9B%BE%E5%BA%93/subplot-figure3.png&#34; width=&#34;200px&#34; height=&#34;170px&#34;&gt;&lt;figcaption&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;figure&gt;&lt;img src=&#34;http://localhost:1313/p/python-matplotlib%E7%BB%98%E5%9B%BE%E5%BA%93/subplot-figure3.png&#34; width=&#34;200px&#34; height=&#34;170px&#34;&gt;&lt;figcaption&gt;
       &lt;h4&gt;效果&lt;/h4&gt;
     &lt;/figcaption&gt;
 &lt;/figure&gt;
@@ -1564,7 +1701,7 @@ pip同理,复制下列代码至txt文本后,根据你设置内的代理状态进
 &lt;/h2&gt;&lt;p&gt;散点图&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-python&#34; data-lang=&#34;python&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;n&#34;&gt;plt&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;scatter&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;x&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;y&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;n&#34;&gt;plt&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;show&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;()&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;figure&gt;&lt;img src=&#34;https://adeepblue.github.io/p/python-matplotlib%E7%BB%98%E5%9B%BE%E5%BA%93/scatter-plot.png&#34; width=&#34;200px&#34; height=&#34;170px&#34;&gt;&lt;figcaption&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;figure&gt;&lt;img src=&#34;http://localhost:1313/p/python-matplotlib%E7%BB%98%E5%9B%BE%E5%BA%93/scatter-plot.png&#34; width=&#34;200px&#34; height=&#34;170px&#34;&gt;&lt;figcaption&gt;
       &lt;h4&gt;效果&lt;/h4&gt;
     &lt;/figcaption&gt;
 &lt;/figure&gt;
@@ -1572,7 +1709,7 @@ pip同理,复制下列代码至txt文本后,根据你设置内的代理状态进
 &lt;p&gt;柱状图&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-python&#34; data-lang=&#34;python&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;n&#34;&gt;plt&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;bar&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;x&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;y&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;n&#34;&gt;plt&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;show&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;()&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;figure&gt;&lt;img src=&#34;https://adeepblue.github.io/p/python-matplotlib%E7%BB%98%E5%9B%BE%E5%BA%93/bar-plot.png&#34; width=&#34;200px&#34; height=&#34;170px&#34;&gt;&lt;figcaption&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;figure&gt;&lt;img src=&#34;http://localhost:1313/p/python-matplotlib%E7%BB%98%E5%9B%BE%E5%BA%93/bar-plot.png&#34; width=&#34;200px&#34; height=&#34;170px&#34;&gt;&lt;figcaption&gt;
       &lt;h4&gt;效果&lt;/h4&gt;
     &lt;/figcaption&gt;
 &lt;/figure&gt;
@@ -1590,20 +1727,20 @@ pip同理,复制下列代码至txt文本后,根据你设置内的代理状态进
         </item>
         <item>
         <title>图灵完备游戏攻略</title>
-        <link>https://adeepblue.github.io/p/%E5%9B%BE%E7%81%B5%E5%AE%8C%E5%A4%87%E6%B8%B8%E6%88%8F%E6%94%BB%E7%95%A5/</link>
+        <link>http://localhost:1313/p/%E5%9B%BE%E7%81%B5%E5%AE%8C%E5%A4%87%E6%B8%B8%E6%88%8F%E6%94%BB%E7%95%A5/</link>
         <pubDate>Thu, 06 Feb 2025 10:07:57 +0800</pubDate>
         
-        <guid>https://adeepblue.github.io/p/%E5%9B%BE%E7%81%B5%E5%AE%8C%E5%A4%87%E6%B8%B8%E6%88%8F%E6%94%BB%E7%95%A5/</guid>
-        <description>&lt;img src="https://adeepblue.github.io/image/Turing-Complete-Logo.png" alt="Featured image of post 图灵完备游戏攻略" /&gt;&lt;h1 id=&#34;图灵完备部分游戏攻略&#34;&gt;图灵完备部分游戏攻略
+        <guid>http://localhost:1313/p/%E5%9B%BE%E7%81%B5%E5%AE%8C%E5%A4%87%E6%B8%B8%E6%88%8F%E6%94%BB%E7%95%A5/</guid>
+        <description>&lt;img src="http://localhost:1313/image/Turing-Complete-Logo.png" alt="Featured image of post 图灵完备游戏攻略" /&gt;&lt;h1 id=&#34;图灵完备部分游戏攻略&#34;&gt;图灵完备部分游戏攻略
 &lt;/h1&gt;&lt;h2 id=&#34;前言&#34;&gt;前言
 &lt;/h2&gt;&lt;p&gt;话说在前面，因为先前并没有开博客网站，我先前的内容，除非我再去玩一次，可能会再写记录，目前估计不打算写了
 ,目前的进度如下图，已经造出了可以运行的计算机，也实现了简单的几个程序，以及开始了游戏内的汇编，会简单讲一下我造的计算机的布局，
 我并不打算多看教程，基本多数是我自己在思考然后自己搞定的，写这个博客的目的是在我写一些程序或者跟程序相关的东西的时候留下一些痕迹，
 不写就有可能会像我python这里这边这样，用过3D的绘图但回过头来不知道文件夹放在哪了，甚至还很难搜到，干脆就写博客了就&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://adeepblue.github.io/p/%E5%9B%BE%E7%81%B5%E5%AE%8C%E5%A4%87%E6%B8%B8%E6%88%8F%E6%94%BB%E7%95%A5/2025-02-08-progress.png&#34;
+&lt;p&gt;&lt;img src=&#34;http://localhost:1313/p/%E5%9B%BE%E7%81%B5%E5%AE%8C%E5%A4%87%E6%B8%B8%E6%88%8F%E6%94%BB%E7%95%A5/2025-02-08-progress.png&#34;
 	width=&#34;1920&#34;
 	height=&#34;1080&#34;
-	srcset=&#34;https://adeepblue.github.io/p/%E5%9B%BE%E7%81%B5%E5%AE%8C%E5%A4%87%E6%B8%B8%E6%88%8F%E6%94%BB%E7%95%A5/2025-02-08-progress_hu_f2ad59014f640033.png 480w, https://adeepblue.github.io/p/%E5%9B%BE%E7%81%B5%E5%AE%8C%E5%A4%87%E6%B8%B8%E6%88%8F%E6%94%BB%E7%95%A5/2025-02-08-progress_hu_6941cd167dc29966.png 1024w&#34;
+	srcset=&#34;http://localhost:1313/p/%E5%9B%BE%E7%81%B5%E5%AE%8C%E5%A4%87%E6%B8%B8%E6%88%8F%E6%94%BB%E7%95%A5/2025-02-08-progress_hu_f2ad59014f640033.png 480w, http://localhost:1313/p/%E5%9B%BE%E7%81%B5%E5%AE%8C%E5%A4%87%E6%B8%B8%E6%88%8F%E6%94%BB%E7%95%A5/2025-02-08-progress_hu_6941cd167dc29966.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 		alt=&#34;进度&#34;
@@ -1618,10 +1755,10 @@ pip同理,复制下列代码至txt文本后,根据你设置内的代理状态进
 &lt;/h2&gt;&lt;p&gt;这是我目前造好的计算机，如下图&lt;/p&gt;
 &lt;h3 id=&#34;寄存器&#34;&gt;寄存器
 &lt;/h3&gt;&lt;p&gt;下面的是6个寄存器和一个输入，可以用来存储读取数据
-&lt;img src=&#34;https://adeepblue.github.io/p/%E5%9B%BE%E7%81%B5%E5%AE%8C%E5%A4%87%E6%B8%B8%E6%88%8F%E6%94%BB%E7%95%A5/reg_in_my_computer.png&#34;
+&lt;img src=&#34;http://localhost:1313/p/%E5%9B%BE%E7%81%B5%E5%AE%8C%E5%A4%87%E6%B8%B8%E6%88%8F%E6%94%BB%E7%95%A5/reg_in_my_computer.png&#34;
 	width=&#34;1453&#34;
 	height=&#34;912&#34;
-	srcset=&#34;https://adeepblue.github.io/p/%E5%9B%BE%E7%81%B5%E5%AE%8C%E5%A4%87%E6%B8%B8%E6%88%8F%E6%94%BB%E7%95%A5/reg_in_my_computer_hu_a33932f982e856eb.png 480w, https://adeepblue.github.io/p/%E5%9B%BE%E7%81%B5%E5%AE%8C%E5%A4%87%E6%B8%B8%E6%88%8F%E6%94%BB%E7%95%A5/reg_in_my_computer_hu_414e3ab19dc4b79d.png 1024w&#34;
+	srcset=&#34;http://localhost:1313/p/%E5%9B%BE%E7%81%B5%E5%AE%8C%E5%A4%87%E6%B8%B8%E6%88%8F%E6%94%BB%E7%95%A5/reg_in_my_computer_hu_a33932f982e856eb.png 480w, http://localhost:1313/p/%E5%9B%BE%E7%81%B5%E5%AE%8C%E5%A4%87%E6%B8%B8%E6%88%8F%E6%94%BB%E7%95%A5/reg_in_my_computer_hu_414e3ab19dc4b79d.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 	
@@ -1639,10 +1776,10 @@ pip同理,复制下列代码至txt文本后,根据你设置内的代理状态进
 ，它会读取后面的六位直接存储在reg0中，&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;# 直接写数据会把程序码变成这个数,小于64时前两位数字都是0，立即数模式直接把1写入reg0
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;1
-&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;&lt;img src=&#34;https://adeepblue.github.io/p/%E5%9B%BE%E7%81%B5%E5%AE%8C%E5%A4%87%E6%B8%B8%E6%88%8F%E6%94%BB%E7%95%A5/DEC_mode.png&#34;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;&lt;img src=&#34;http://localhost:1313/p/%E5%9B%BE%E7%81%B5%E5%AE%8C%E5%A4%87%E6%B8%B8%E6%88%8F%E6%94%BB%E7%95%A5/DEC_mode.png&#34;
 	width=&#34;1920&#34;
 	height=&#34;1080&#34;
-	srcset=&#34;https://adeepblue.github.io/p/%E5%9B%BE%E7%81%B5%E5%AE%8C%E5%A4%87%E6%B8%B8%E6%88%8F%E6%94%BB%E7%95%A5/DEC_mode_hu_646067bc0deb64a5.png 480w, https://adeepblue.github.io/p/%E5%9B%BE%E7%81%B5%E5%AE%8C%E5%A4%87%E6%B8%B8%E6%88%8F%E6%94%BB%E7%95%A5/DEC_mode_hu_1e533864bc37f34.png 1024w&#34;
+	srcset=&#34;http://localhost:1313/p/%E5%9B%BE%E7%81%B5%E5%AE%8C%E5%A4%87%E6%B8%B8%E6%88%8F%E6%94%BB%E7%95%A5/DEC_mode_hu_646067bc0deb64a5.png 480w, http://localhost:1313/p/%E5%9B%BE%E7%81%B5%E5%AE%8C%E5%A4%87%E6%B8%B8%E6%88%8F%E6%94%BB%E7%95%A5/DEC_mode_hu_1e533864bc37f34.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 		alt=&#34;DEC-mode&#34;
@@ -1653,10 +1790,10 @@ pip同理,复制下列代码至txt文本后,根据你设置内的代理状态进
 		data-flex-basis=&#34;426px&#34;
 	
 &gt;
-&lt;img src=&#34;https://adeepblue.github.io/p/%E5%9B%BE%E7%81%B5%E5%AE%8C%E5%A4%87%E6%B8%B8%E6%88%8F%E6%94%BB%E7%95%A5/DEC-caculation.png&#34;
+&lt;img src=&#34;http://localhost:1313/p/%E5%9B%BE%E7%81%B5%E5%AE%8C%E5%A4%87%E6%B8%B8%E6%88%8F%E6%94%BB%E7%95%A5/DEC-caculation.png&#34;
 	width=&#34;1293&#34;
 	height=&#34;990&#34;
-	srcset=&#34;https://adeepblue.github.io/p/%E5%9B%BE%E7%81%B5%E5%AE%8C%E5%A4%87%E6%B8%B8%E6%88%8F%E6%94%BB%E7%95%A5/DEC-caculation_hu_e923643cd775523e.png 480w, https://adeepblue.github.io/p/%E5%9B%BE%E7%81%B5%E5%AE%8C%E5%A4%87%E6%B8%B8%E6%88%8F%E6%94%BB%E7%95%A5/DEC-caculation_hu_5f827abf56ae9f56.png 1024w&#34;
+	srcset=&#34;http://localhost:1313/p/%E5%9B%BE%E7%81%B5%E5%AE%8C%E5%A4%87%E6%B8%B8%E6%88%8F%E6%94%BB%E7%95%A5/DEC-caculation_hu_e923643cd775523e.png 480w, http://localhost:1313/p/%E5%9B%BE%E7%81%B5%E5%AE%8C%E5%A4%87%E6%B8%B8%E6%88%8F%E6%94%BB%E7%95%A5/DEC-caculation_hu_5f827abf56ae9f56.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 		alt=&#34;CACULATION&#34;
@@ -1672,10 +1809,10 @@ pip同理,复制下列代码至txt文本后,根据你设置内的代理状态进
 其中ALU的输出通过一个二选一线连到了reg3的输入端，在模式是计算模式下，reg3的读写开关时打开的,至于ALU是什么在下一步处讲
 现在可以理解为，输入1跟输入2经过ALU的一翻操作之后输出变成了reg3的值，这些都是基于先前给的指令集添加的功能，以下是之前的游戏要求，也就是
 现在已经实现了的东西，指令码是最后三位&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://adeepblue.github.io/p/%E5%9B%BE%E7%81%B5%E5%AE%8C%E5%A4%87%E6%B8%B8%E6%88%8F%E6%94%BB%E7%95%A5/ALU-game-function.png&#34;
+&lt;p&gt;&lt;img src=&#34;http://localhost:1313/p/%E5%9B%BE%E7%81%B5%E5%AE%8C%E5%A4%87%E6%B8%B8%E6%88%8F%E6%94%BB%E7%95%A5/ALU-game-function.png&#34;
 	width=&#34;756&#34;
 	height=&#34;506&#34;
-	srcset=&#34;https://adeepblue.github.io/p/%E5%9B%BE%E7%81%B5%E5%AE%8C%E5%A4%87%E6%B8%B8%E6%88%8F%E6%94%BB%E7%95%A5/ALU-game-function_hu_67d5cb9e2e5bba0c.png 480w, https://adeepblue.github.io/p/%E5%9B%BE%E7%81%B5%E5%AE%8C%E5%A4%87%E6%B8%B8%E6%88%8F%E6%94%BB%E7%95%A5/ALU-game-function_hu_9a5c38a1c42b6f83.png 1024w&#34;
+	srcset=&#34;http://localhost:1313/p/%E5%9B%BE%E7%81%B5%E5%AE%8C%E5%A4%87%E6%B8%B8%E6%88%8F%E6%94%BB%E7%95%A5/ALU-game-function_hu_67d5cb9e2e5bba0c.png 480w, http://localhost:1313/p/%E5%9B%BE%E7%81%B5%E5%AE%8C%E5%A4%87%E6%B8%B8%E6%88%8F%E6%94%BB%E7%95%A5/ALU-game-function_hu_9a5c38a1c42b6f83.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 		alt=&#34;function&#34;
@@ -1687,10 +1824,10 @@ pip同理,复制下列代码至txt文本后,根据你设置内的代理状态进
 	
 &gt;&lt;/p&gt;
 &lt;p&gt;在这个基础上,我新增了两数相乘的功能，也就是现在写着的unused的地方，现在已经这个按键位置可以实现乘法的功能了&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://adeepblue.github.io/p/%E5%9B%BE%E7%81%B5%E5%AE%8C%E5%A4%87%E6%B8%B8%E6%88%8F%E6%94%BB%E7%95%A5/ALU-extra-function-times.png&#34;
+&lt;p&gt;&lt;img src=&#34;http://localhost:1313/p/%E5%9B%BE%E7%81%B5%E5%AE%8C%E5%A4%87%E6%B8%B8%E6%88%8F%E6%94%BB%E7%95%A5/ALU-extra-function-times.png&#34;
 	width=&#34;835&#34;
 	height=&#34;971&#34;
-	srcset=&#34;https://adeepblue.github.io/p/%E5%9B%BE%E7%81%B5%E5%AE%8C%E5%A4%87%E6%B8%B8%E6%88%8F%E6%94%BB%E7%95%A5/ALU-extra-function-times_hu_1c346d33f4993dc6.png 480w, https://adeepblue.github.io/p/%E5%9B%BE%E7%81%B5%E5%AE%8C%E5%A4%87%E6%B8%B8%E6%88%8F%E6%94%BB%E7%95%A5/ALU-extra-function-times_hu_90c941bc18ea998a.png 1024w&#34;
+	srcset=&#34;http://localhost:1313/p/%E5%9B%BE%E7%81%B5%E5%AE%8C%E5%A4%87%E6%B8%B8%E6%88%8F%E6%94%BB%E7%95%A5/ALU-extra-function-times_hu_1c346d33f4993dc6.png 480w, http://localhost:1313/p/%E5%9B%BE%E7%81%B5%E5%AE%8C%E5%A4%87%E6%B8%B8%E6%88%8F%E6%94%BB%E7%95%A5/ALU-extra-function-times_hu_90c941bc18ea998a.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 		alt=&#34;times&#34;
@@ -1701,10 +1838,10 @@ pip同理,复制下列代码至txt文本后,根据你设置内的代理状态进
 		data-flex-basis=&#34;206px&#34;
 	
 &gt;
-&lt;img src=&#34;https://adeepblue.github.io/p/%E5%9B%BE%E7%81%B5%E5%AE%8C%E5%A4%87%E6%B8%B8%E6%88%8F%E6%94%BB%E7%95%A5/times-in-introduction-set.png&#34;
+&lt;img src=&#34;http://localhost:1313/p/%E5%9B%BE%E7%81%B5%E5%AE%8C%E5%A4%87%E6%B8%B8%E6%88%8F%E6%94%BB%E7%95%A5/times-in-introduction-set.png&#34;
 	width=&#34;935&#34;
 	height=&#34;417&#34;
-	srcset=&#34;https://adeepblue.github.io/p/%E5%9B%BE%E7%81%B5%E5%AE%8C%E5%A4%87%E6%B8%B8%E6%88%8F%E6%94%BB%E7%95%A5/times-in-introduction-set_hu_aec8024a67cf03ed.png 480w, https://adeepblue.github.io/p/%E5%9B%BE%E7%81%B5%E5%AE%8C%E5%A4%87%E6%B8%B8%E6%88%8F%E6%94%BB%E7%95%A5/times-in-introduction-set_hu_bd4ca54fd38a8639.png 1024w&#34;
+	srcset=&#34;http://localhost:1313/p/%E5%9B%BE%E7%81%B5%E5%AE%8C%E5%A4%87%E6%B8%B8%E6%88%8F%E6%94%BB%E7%95%A5/times-in-introduction-set_hu_aec8024a67cf03ed.png 480w, http://localhost:1313/p/%E5%9B%BE%E7%81%B5%E5%AE%8C%E5%A4%87%E6%B8%B8%E6%88%8F%E6%94%BB%E7%95%A5/times-in-introduction-set_hu_bd4ca54fd38a8639.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 		alt=&#34;乘法在指令集中对应的指令&#34;
@@ -1718,10 +1855,10 @@ pip同理,复制下列代码至txt文本后,根据你设置内的代理状态进
 以及，这个指令的操作意味着，我先设定好reg2和reg1的值之后，我只要输入这个指令就可以把以上能得到的结果输入到reg3，至于怎么设定reg1和reg2的值后面会说&lt;/p&gt;
 &lt;h3 id=&#34;复制模式&#34;&gt;复制模式
 &lt;/h3&gt;&lt;p&gt;再然后是&lt;span style=&#34;color:red&#34;&gt;模式2&lt;/span&gt;,copy模式，数字复制模式，这个指令会执行的操作是从前三位指代的寄存器的位置复制数值到后三位指代的寄存器上
-&lt;img src=&#34;https://adeepblue.github.io/p/%E5%9B%BE%E7%81%B5%E5%AE%8C%E5%A4%87%E6%B8%B8%E6%88%8F%E6%94%BB%E7%95%A5/copy-mode.png&#34;
+&lt;img src=&#34;http://localhost:1313/p/%E5%9B%BE%E7%81%B5%E5%AE%8C%E5%A4%87%E6%B8%B8%E6%88%8F%E6%94%BB%E7%95%A5/copy-mode.png&#34;
 	width=&#34;970&#34;
 	height=&#34;426&#34;
-	srcset=&#34;https://adeepblue.github.io/p/%E5%9B%BE%E7%81%B5%E5%AE%8C%E5%A4%87%E6%B8%B8%E6%88%8F%E6%94%BB%E7%95%A5/copy-mode_hu_49235b015449fdb0.png 480w, https://adeepblue.github.io/p/%E5%9B%BE%E7%81%B5%E5%AE%8C%E5%A4%87%E6%B8%B8%E6%88%8F%E6%94%BB%E7%95%A5/copy-mode_hu_1adc55dc803cdc0c.png 1024w&#34;
+	srcset=&#34;http://localhost:1313/p/%E5%9B%BE%E7%81%B5%E5%AE%8C%E5%A4%87%E6%B8%B8%E6%88%8F%E6%94%BB%E7%95%A5/copy-mode_hu_49235b015449fdb0.png 480w, http://localhost:1313/p/%E5%9B%BE%E7%81%B5%E5%AE%8C%E5%A4%87%E6%B8%B8%E6%88%8F%E6%94%BB%E7%95%A5/copy-mode_hu_1adc55dc803cdc0c.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 	
@@ -1732,10 +1869,10 @@ pip同理,复制下列代码至txt文本后,根据你设置内的代理状态进
 &gt;
 也有特殊的，三位值如果指代的是6，也就是110的状态下，左侧三位指代的输入，右侧三位指代的输出&lt;/p&gt;
 &lt;h3 id=&#34;条件判断模式&#34;&gt;条件判断模式
-&lt;/h3&gt;&lt;p&gt;&lt;img src=&#34;https://adeepblue.github.io/p/%E5%9B%BE%E7%81%B5%E5%AE%8C%E5%A4%87%E6%B8%B8%E6%88%8F%E6%94%BB%E7%95%A5/condition.png&#34;
+&lt;/h3&gt;&lt;p&gt;&lt;img src=&#34;http://localhost:1313/p/%E5%9B%BE%E7%81%B5%E5%AE%8C%E5%A4%87%E6%B8%B8%E6%88%8F%E6%94%BB%E7%95%A5/condition.png&#34;
 	width=&#34;584&#34;
 	height=&#34;479&#34;
-	srcset=&#34;https://adeepblue.github.io/p/%E5%9B%BE%E7%81%B5%E5%AE%8C%E5%A4%87%E6%B8%B8%E6%88%8F%E6%94%BB%E7%95%A5/condition_hu_74afcc7b9ea9ae5e.png 480w, https://adeepblue.github.io/p/%E5%9B%BE%E7%81%B5%E5%AE%8C%E5%A4%87%E6%B8%B8%E6%88%8F%E6%94%BB%E7%95%A5/condition_hu_17f1329e18dc0a18.png 1024w&#34;
+	srcset=&#34;http://localhost:1313/p/%E5%9B%BE%E7%81%B5%E5%AE%8C%E5%A4%87%E6%B8%B8%E6%88%8F%E6%94%BB%E7%95%A5/condition_hu_74afcc7b9ea9ae5e.png 480w, http://localhost:1313/p/%E5%9B%BE%E7%81%B5%E5%AE%8C%E5%A4%87%E6%B8%B8%E6%88%8F%E6%94%BB%E7%95%A5/condition_hu_17f1329e18dc0a18.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 		alt=&#34;所有条件&#34;
@@ -1749,10 +1886,10 @@ pip同理,复制下列代码至txt文本后,根据你设置内的代理状态进
 &lt;span style=&#34;color:red&#34;&gt;模式3&lt;/span&gt;，条件判断模式，条件是否满足如上，检测到reg3是否满足条件，满足后把reg0的值输入到程序的计数器内，也就是
 可以实现跳转功能&lt;/p&gt;
 &lt;h2 id=&#34;汇编&#34;&gt;汇编
-&lt;/h2&gt;&lt;p&gt;&lt;img src=&#34;https://adeepblue.github.io/p/%E5%9B%BE%E7%81%B5%E5%AE%8C%E5%A4%87%E6%B8%B8%E6%88%8F%E6%94%BB%E7%95%A5/compiler.png&#34;
+&lt;/h2&gt;&lt;p&gt;&lt;img src=&#34;http://localhost:1313/p/%E5%9B%BE%E7%81%B5%E5%AE%8C%E5%A4%87%E6%B8%B8%E6%88%8F%E6%94%BB%E7%95%A5/compiler.png&#34;
 	width=&#34;1502&#34;
 	height=&#34;927&#34;
-	srcset=&#34;https://adeepblue.github.io/p/%E5%9B%BE%E7%81%B5%E5%AE%8C%E5%A4%87%E6%B8%B8%E6%88%8F%E6%94%BB%E7%95%A5/compiler_hu_c1ae04e25c80b603.png 480w, https://adeepblue.github.io/p/%E5%9B%BE%E7%81%B5%E5%AE%8C%E5%A4%87%E6%B8%B8%E6%88%8F%E6%94%BB%E7%95%A5/compiler_hu_34d913da72a7842b.png 1024w&#34;
+	srcset=&#34;http://localhost:1313/p/%E5%9B%BE%E7%81%B5%E5%AE%8C%E5%A4%87%E6%B8%B8%E6%88%8F%E6%94%BB%E7%95%A5/compiler_hu_c1ae04e25c80b603.png 480w, http://localhost:1313/p/%E5%9B%BE%E7%81%B5%E5%AE%8C%E5%A4%87%E6%B8%B8%E6%88%8F%E6%94%BB%E7%95%A5/compiler_hu_34d913da72a7842b.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 		alt=&#34;img.png&#34;
@@ -1818,10 +1955,10 @@ label的定义的关键字是&lt;code&gt;loop&lt;/code&gt;，也就是，后面�
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;if_reg3_not0
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;# 如果执行完毕，输出reg5累加数
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;reg5_to_out
-&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;&lt;img src=&#34;https://adeepblue.github.io/p/%E5%9B%BE%E7%81%B5%E5%AE%8C%E5%A4%87%E6%B8%B8%E6%88%8F%E6%94%BB%E7%95%A5/DEC_mode.png&#34;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;&lt;img src=&#34;http://localhost:1313/p/%E5%9B%BE%E7%81%B5%E5%AE%8C%E5%A4%87%E6%B8%B8%E6%88%8F%E6%94%BB%E7%95%A5/DEC_mode.png&#34;
 	width=&#34;1920&#34;
 	height=&#34;1080&#34;
-	srcset=&#34;https://adeepblue.github.io/p/%E5%9B%BE%E7%81%B5%E5%AE%8C%E5%A4%87%E6%B8%B8%E6%88%8F%E6%94%BB%E7%95%A5/DEC_mode_hu_646067bc0deb64a5.png 480w, https://adeepblue.github.io/p/%E5%9B%BE%E7%81%B5%E5%AE%8C%E5%A4%87%E6%B8%B8%E6%88%8F%E6%94%BB%E7%95%A5/DEC_mode_hu_1e533864bc37f34.png 1024w&#34;
+	srcset=&#34;http://localhost:1313/p/%E5%9B%BE%E7%81%B5%E5%AE%8C%E5%A4%87%E6%B8%B8%E6%88%8F%E6%94%BB%E7%95%A5/DEC_mode_hu_646067bc0deb64a5.png 480w, http://localhost:1313/p/%E5%9B%BE%E7%81%B5%E5%AE%8C%E5%A4%87%E6%B8%B8%E6%88%8F%E6%94%BB%E7%95%A5/DEC_mode_hu_1e533864bc37f34.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 		alt=&#34;DEC元器件&#34;
@@ -1834,10 +1971,10 @@ label的定义的关键字是&lt;code&gt;loop&lt;/code&gt;，也就是，后面�
 &gt;&lt;/p&gt;
 &lt;h2 id=&#34;关卡密码锁&#34;&gt;关卡密码锁
 &lt;/h2&gt;&lt;p&gt;&amp;mdash;2025 02 06记录
-&lt;img src=&#34;https://adeepblue.github.io/p/%E5%9B%BE%E7%81%B5%E5%AE%8C%E5%A4%87%E6%B8%B8%E6%88%8F%E6%94%BB%E7%95%A5/password_lock_introduce.png&#34;
+&lt;img src=&#34;http://localhost:1313/p/%E5%9B%BE%E7%81%B5%E5%AE%8C%E5%A4%87%E6%B8%B8%E6%88%8F%E6%94%BB%E7%95%A5/password_lock_introduce.png&#34;
 	width=&#34;1920&#34;
 	height=&#34;1080&#34;
-	srcset=&#34;https://adeepblue.github.io/p/%E5%9B%BE%E7%81%B5%E5%AE%8C%E5%A4%87%E6%B8%B8%E6%88%8F%E6%94%BB%E7%95%A5/password_lock_introduce_hu_9b54e3d87ebb1b4c.png 480w, https://adeepblue.github.io/p/%E5%9B%BE%E7%81%B5%E5%AE%8C%E5%A4%87%E6%B8%B8%E6%88%8F%E6%94%BB%E7%95%A5/password_lock_introduce_hu_1b984f1a187751ef.png 1024w&#34;
+	srcset=&#34;http://localhost:1313/p/%E5%9B%BE%E7%81%B5%E5%AE%8C%E5%A4%87%E6%B8%B8%E6%88%8F%E6%94%BB%E7%95%A5/password_lock_introduce_hu_9b54e3d87ebb1b4c.png 480w, http://localhost:1313/p/%E5%9B%BE%E7%81%B5%E5%AE%8C%E5%A4%87%E6%B8%B8%E6%88%8F%E6%94%BB%E7%95%A5/password_lock_introduce_hu_1b984f1a187751ef.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 		alt=&#34;如题&#34;
@@ -1848,10 +1985,10 @@ label的定义的关键字是&lt;code&gt;loop&lt;/code&gt;，也就是，后面�
 		data-flex-basis=&#34;426px&#34;
 	
 &gt;
-&lt;img src=&#34;https://adeepblue.github.io/p/%E5%9B%BE%E7%81%B5%E5%AE%8C%E5%A4%87%E6%B8%B8%E6%88%8F%E6%94%BB%E7%95%A5/1depart2.png&#34;
+&lt;img src=&#34;http://localhost:1313/p/%E5%9B%BE%E7%81%B5%E5%AE%8C%E5%A4%87%E6%B8%B8%E6%88%8F%E6%94%BB%E7%95%A5/1depart2.png&#34;
 	width=&#34;756&#34;
 	height=&#34;505&#34;
-	srcset=&#34;https://adeepblue.github.io/p/%E5%9B%BE%E7%81%B5%E5%AE%8C%E5%A4%87%E6%B8%B8%E6%88%8F%E6%94%BB%E7%95%A5/1depart2_hu_1b5c6f0965961f4b.png 480w, https://adeepblue.github.io/p/%E5%9B%BE%E7%81%B5%E5%AE%8C%E5%A4%87%E6%B8%B8%E6%88%8F%E6%94%BB%E7%95%A5/1depart2_hu_7352b35f29333e0b.png 1024w&#34;
+	srcset=&#34;http://localhost:1313/p/%E5%9B%BE%E7%81%B5%E5%AE%8C%E5%A4%87%E6%B8%B8%E6%88%8F%E6%94%BB%E7%95%A5/1depart2_hu_1b5c6f0965961f4b.png 480w, http://localhost:1313/p/%E5%9B%BE%E7%81%B5%E5%AE%8C%E5%A4%87%E6%B8%B8%E6%88%8F%E6%94%BB%E7%95%A5/1depart2_hu_7352b35f29333e0b.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 		alt=&#34;二分法&#34;
@@ -1884,10 +2021,10 @@ label的定义的关键字是&lt;code&gt;loop&lt;/code&gt;，也就是，后面�
 &lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;&amp;mdash;2025 02 09记录&lt;/p&gt;
 &lt;h2 id=&#34;对4取模&#34;&gt;对4取模
 &lt;/h2&gt;&lt;p&gt;需要对一个数模4的结果等效于 4 % 3
-&lt;img src=&#34;https://adeepblue.github.io/p/%E5%9B%BE%E7%81%B5%E5%AE%8C%E5%A4%87%E6%B8%B8%E6%88%8F%E6%94%BB%E7%95%A5/mod4.png&#34;
+&lt;img src=&#34;http://localhost:1313/p/%E5%9B%BE%E7%81%B5%E5%AE%8C%E5%A4%87%E6%B8%B8%E6%88%8F%E6%94%BB%E7%95%A5/mod4.png&#34;
 	width=&#34;1178&#34;
 	height=&#34;1047&#34;
-	srcset=&#34;https://adeepblue.github.io/p/%E5%9B%BE%E7%81%B5%E5%AE%8C%E5%A4%87%E6%B8%B8%E6%88%8F%E6%94%BB%E7%95%A5/mod4_hu_60c861bfd505556c.png 480w, https://adeepblue.github.io/p/%E5%9B%BE%E7%81%B5%E5%AE%8C%E5%A4%87%E6%B8%B8%E6%88%8F%E6%94%BB%E7%95%A5/mod4_hu_c37fe15bc5135cff.png 1024w&#34;
+	srcset=&#34;http://localhost:1313/p/%E5%9B%BE%E7%81%B5%E5%AE%8C%E5%A4%87%E6%B8%B8%E6%88%8F%E6%94%BB%E7%95%A5/mod4_hu_60c861bfd505556c.png 480w, http://localhost:1313/p/%E5%9B%BE%E7%81%B5%E5%AE%8C%E5%A4%87%E6%B8%B8%E6%88%8F%E6%94%BB%E7%95%A5/mod4_hu_c37fe15bc5135cff.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 	
@@ -1898,10 +2035,10 @@ label的定义的关键字是&lt;code&gt;loop&lt;/code&gt;，也就是，后面�
 &gt;
 因为模的数是4，是2的倍数，也就是说，我只需要拿到这个数的最后两位就好了，看到这个我第一反应是，直接移位，我写乘法器的过程中有使用过移位的一个计算工具，&lt;/p&gt;
 &lt;p&gt;但现在去细看ALU元件输入输出我才意识到，取最后两位我可以让&lt;span style=&#34;color:red&#34;&gt;一个数的最后两位同时亮起然后进行and操作&lt;/span&gt;，也就是说，其他部分全是0的地方，会被直接不并入计算，&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://adeepblue.github.io/p/%E5%9B%BE%E7%81%B5%E5%AE%8C%E5%A4%87%E6%B8%B8%E6%88%8F%E6%94%BB%E7%95%A5/how-to-use-and.png&#34;
+&lt;p&gt;&lt;img src=&#34;http://localhost:1313/p/%E5%9B%BE%E7%81%B5%E5%AE%8C%E5%A4%87%E6%B8%B8%E6%88%8F%E6%94%BB%E7%95%A5/how-to-use-and.png&#34;
 	width=&#34;1513&#34;
 	height=&#34;788&#34;
-	srcset=&#34;https://adeepblue.github.io/p/%E5%9B%BE%E7%81%B5%E5%AE%8C%E5%A4%87%E6%B8%B8%E6%88%8F%E6%94%BB%E7%95%A5/how-to-use-and_hu_6a6b04cd0e6fb27d.png 480w, https://adeepblue.github.io/p/%E5%9B%BE%E7%81%B5%E5%AE%8C%E5%A4%87%E6%B8%B8%E6%88%8F%E6%94%BB%E7%95%A5/how-to-use-and_hu_343b5b96231f4843.png 1024w&#34;
+	srcset=&#34;http://localhost:1313/p/%E5%9B%BE%E7%81%B5%E5%AE%8C%E5%A4%87%E6%B8%B8%E6%88%8F%E6%94%BB%E7%95%A5/how-to-use-and_hu_6a6b04cd0e6fb27d.png 480w, http://localhost:1313/p/%E5%9B%BE%E7%81%B5%E5%AE%8C%E5%A4%87%E6%B8%B8%E6%88%8F%E6%94%BB%E7%95%A5/how-to-use-and_hu_343b5b96231f4843.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 		alt=&#34;and&#34;
@@ -1920,10 +2057,10 @@ label的定义的关键字是&lt;code&gt;loop&lt;/code&gt;，也就是，后面�
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;reg3_to_out
 &lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;这关就走通了&lt;/p&gt;
 &lt;h2 id=&#34;迷宫&#34;&gt;迷宫
-&lt;/h2&gt;&lt;p&gt;&lt;img src=&#34;https://adeepblue.github.io/p/%E5%9B%BE%E7%81%B5%E5%AE%8C%E5%A4%87%E6%B8%B8%E6%88%8F%E6%94%BB%E7%95%A5/labyrinth.png&#34;
+&lt;/h2&gt;&lt;p&gt;&lt;img src=&#34;http://localhost:1313/p/%E5%9B%BE%E7%81%B5%E5%AE%8C%E5%A4%87%E6%B8%B8%E6%88%8F%E6%94%BB%E7%95%A5/labyrinth.png&#34;
 	width=&#34;1697&#34;
 	height=&#34;859&#34;
-	srcset=&#34;https://adeepblue.github.io/p/%E5%9B%BE%E7%81%B5%E5%AE%8C%E5%A4%87%E6%B8%B8%E6%88%8F%E6%94%BB%E7%95%A5/labyrinth_hu_56c1e2c2adcb646b.png 480w, https://adeepblue.github.io/p/%E5%9B%BE%E7%81%B5%E5%AE%8C%E5%A4%87%E6%B8%B8%E6%88%8F%E6%94%BB%E7%95%A5/labyrinth_hu_a0ccfea2a09b2b3d.png 1024w&#34;
+	srcset=&#34;http://localhost:1313/p/%E5%9B%BE%E7%81%B5%E5%AE%8C%E5%A4%87%E6%B8%B8%E6%88%8F%E6%94%BB%E7%95%A5/labyrinth_hu_56c1e2c2adcb646b.png 480w, http://localhost:1313/p/%E5%9B%BE%E7%81%B5%E5%AE%8C%E5%A4%87%E6%B8%B8%E6%88%8F%E6%94%BB%E7%95%A5/labyrinth_hu_a0ccfea2a09b2b3d.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 		alt=&#34;迷宫&#34;
@@ -1935,10 +2072,10 @@ label的定义的关键字是&lt;code&gt;loop&lt;/code&gt;，也就是，后面�
 	
 &gt;&lt;/p&gt;
 &lt;p&gt;这玩意就让我想到了以前有说的，摸着墙走通关什么的，但该说不说确实可行，以左转为例，逻辑也就是左转，碰墙就转弯&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://adeepblue.github.io/p/%E5%9B%BE%E7%81%B5%E5%AE%8C%E5%A4%87%E6%B8%B8%E6%88%8F%E6%94%BB%E7%95%A5/the-way-for-turn-lift-all-the-time.png&#34;
+&lt;p&gt;&lt;img src=&#34;http://localhost:1313/p/%E5%9B%BE%E7%81%B5%E5%AE%8C%E5%A4%87%E6%B8%B8%E6%88%8F%E6%94%BB%E7%95%A5/the-way-for-turn-lift-all-the-time.png&#34;
 	width=&#34;1167&#34;
 	height=&#34;665&#34;
-	srcset=&#34;https://adeepblue.github.io/p/%E5%9B%BE%E7%81%B5%E5%AE%8C%E5%A4%87%E6%B8%B8%E6%88%8F%E6%94%BB%E7%95%A5/the-way-for-turn-lift-all-the-time_hu_d0e8f6c732f1564d.png 480w, https://adeepblue.github.io/p/%E5%9B%BE%E7%81%B5%E5%AE%8C%E5%A4%87%E6%B8%B8%E6%88%8F%E6%94%BB%E7%95%A5/the-way-for-turn-lift-all-the-time_hu_b1d87b8cdb5dfb5b.png 1024w&#34;
+	srcset=&#34;http://localhost:1313/p/%E5%9B%BE%E7%81%B5%E5%AE%8C%E5%A4%87%E6%B8%B8%E6%88%8F%E6%94%BB%E7%95%A5/the-way-for-turn-lift-all-the-time_hu_d0e8f6c732f1564d.png 480w, http://localhost:1313/p/%E5%9B%BE%E7%81%B5%E5%AE%8C%E5%A4%87%E6%B8%B8%E6%88%8F%E6%94%BB%E7%95%A5/the-way-for-turn-lift-all-the-time_hu_b1d87b8cdb5dfb5b.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 		alt=&#34;一直左转路线&#34;
@@ -1950,10 +2087,10 @@ label的定义的关键字是&lt;code&gt;loop&lt;/code&gt;，也就是，后面�
 	
 &gt;&lt;/p&gt;
 &lt;p&gt;这样逻辑可行但总感觉少吃了点金币（贪），但好像也有办法实现，先看看正常的实现吧，实现完了再去看看&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://adeepblue.github.io/p/%E5%9B%BE%E7%81%B5%E5%AE%8C%E5%A4%87%E6%B8%B8%E6%88%8F%E6%94%BB%E7%95%A5/introduction-set-help.png&#34;
+&lt;p&gt;&lt;img src=&#34;http://localhost:1313/p/%E5%9B%BE%E7%81%B5%E5%AE%8C%E5%A4%87%E6%B8%B8%E6%88%8F%E6%94%BB%E7%95%A5/introduction-set-help.png&#34;
 	width=&#34;910&#34;
 	height=&#34;747&#34;
-	srcset=&#34;https://adeepblue.github.io/p/%E5%9B%BE%E7%81%B5%E5%AE%8C%E5%A4%87%E6%B8%B8%E6%88%8F%E6%94%BB%E7%95%A5/introduction-set-help_hu_35141ef20ec3f985.png 480w, https://adeepblue.github.io/p/%E5%9B%BE%E7%81%B5%E5%AE%8C%E5%A4%87%E6%B8%B8%E6%88%8F%E6%94%BB%E7%95%A5/introduction-set-help_hu_8b150c985a4cbc3d.png 1024w&#34;
+	srcset=&#34;http://localhost:1313/p/%E5%9B%BE%E7%81%B5%E5%AE%8C%E5%A4%87%E6%B8%B8%E6%88%8F%E6%94%BB%E7%95%A5/introduction-set-help_hu_35141ef20ec3f985.png 480w, http://localhost:1313/p/%E5%9B%BE%E7%81%B5%E5%AE%8C%E5%A4%87%E6%B8%B8%E6%88%8F%E6%94%BB%E7%95%A5/introduction-set-help_hu_8b150c985a4cbc3d.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 		alt=&#34;汇编指南&#34;
@@ -1964,10 +2101,10 @@ label的定义的关键字是&lt;code&gt;loop&lt;/code&gt;，也就是，后面�
 		data-flex-basis=&#34;292px&#34;
 	
 &gt;
-&lt;img src=&#34;https://adeepblue.github.io/p/%E5%9B%BE%E7%81%B5%E5%AE%8C%E5%A4%87%E6%B8%B8%E6%88%8F%E6%94%BB%E7%95%A5/robot-control-code.png&#34;
+&lt;img src=&#34;http://localhost:1313/p/%E5%9B%BE%E7%81%B5%E5%AE%8C%E5%A4%87%E6%B8%B8%E6%88%8F%E6%94%BB%E7%95%A5/robot-control-code.png&#34;
 	width=&#34;1246&#34;
 	height=&#34;791&#34;
-	srcset=&#34;https://adeepblue.github.io/p/%E5%9B%BE%E7%81%B5%E5%AE%8C%E5%A4%87%E6%B8%B8%E6%88%8F%E6%94%BB%E7%95%A5/robot-control-code_hu_3588c283ff7a593e.png 480w, https://adeepblue.github.io/p/%E5%9B%BE%E7%81%B5%E5%AE%8C%E5%A4%87%E6%B8%B8%E6%88%8F%E6%94%BB%E7%95%A5/robot-control-code_hu_669179163fa17c79.png 1024w&#34;
+	srcset=&#34;http://localhost:1313/p/%E5%9B%BE%E7%81%B5%E5%AE%8C%E5%A4%87%E6%B8%B8%E6%88%8F%E6%94%BB%E7%95%A5/robot-control-code_hu_3588c283ff7a593e.png 480w, http://localhost:1313/p/%E5%9B%BE%E7%81%B5%E5%AE%8C%E5%A4%87%E6%B8%B8%E6%88%8F%E6%94%BB%E7%95%A5/robot-control-code_hu_669179163fa17c79.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 		alt=&#34;机器人控制指令&#34;
@@ -1979,10 +2116,10 @@ label的定义的关键字是&lt;code&gt;loop&lt;/code&gt;，也就是，后面�
 	
 &gt;
 根据以上最先写好的肯定是直接const好机器人的指令，总是用0，1的来看终究还是不方便
-&lt;img src=&#34;https://adeepblue.github.io/p/%E5%9B%BE%E7%81%B5%E5%AE%8C%E5%A4%87%E6%B8%B8%E6%88%8F%E6%94%BB%E7%95%A5/const-for-robot-do.png&#34;
+&lt;img src=&#34;http://localhost:1313/p/%E5%9B%BE%E7%81%B5%E5%AE%8C%E5%A4%87%E6%B8%B8%E6%88%8F%E6%94%BB%E7%95%A5/const-for-robot-do.png&#34;
 	width=&#34;1902&#34;
 	height=&#34;961&#34;
-	srcset=&#34;https://adeepblue.github.io/p/%E5%9B%BE%E7%81%B5%E5%AE%8C%E5%A4%87%E6%B8%B8%E6%88%8F%E6%94%BB%E7%95%A5/const-for-robot-do_hu_1cb3adea7f9b4e08.png 480w, https://adeepblue.github.io/p/%E5%9B%BE%E7%81%B5%E5%AE%8C%E5%A4%87%E6%B8%B8%E6%88%8F%E6%94%BB%E7%95%A5/const-for-robot-do_hu_37a38b150368bdcd.png 1024w&#34;
+	srcset=&#34;http://localhost:1313/p/%E5%9B%BE%E7%81%B5%E5%AE%8C%E5%A4%87%E6%B8%B8%E6%88%8F%E6%94%BB%E7%95%A5/const-for-robot-do_hu_1cb3adea7f9b4e08.png 480w, http://localhost:1313/p/%E5%9B%BE%E7%81%B5%E5%AE%8C%E5%A4%87%E6%B8%B8%E6%88%8F%E6%94%BB%E7%95%A5/const-for-robot-do_hu_37a38b150368bdcd.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 		alt=&#34;指令对照&#34;
@@ -2000,10 +2137,10 @@ label的定义的关键字是&lt;code&gt;loop&lt;/code&gt;，也就是，后面�
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;k&#34;&gt;const&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;stay&lt;/span&gt; &lt;span class=&#34;mi&#34;&gt;3&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;细致来考虑一下，先检测当前前方物体，是墙右转，如果一直是墙就一直右转（总不能被四处围着吧），如果不是墙，是跳转到直行处执行直行操作，但是一开始我对这样的if操作有点犹豫，因为考虑到可能比如左转&lt;/p&gt;
 &lt;p&gt;不管了，先来画个思维导图吧，如果全部要在脑子里面实现感觉又会卡不少时间了，画好了，如下&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://adeepblue.github.io/p/%E5%9B%BE%E7%81%B5%E5%AE%8C%E5%A4%87%E6%B8%B8%E6%88%8F%E6%94%BB%E7%95%A5/mindmap-forlabyrinth.png&#34;
+&lt;p&gt;&lt;img src=&#34;http://localhost:1313/p/%E5%9B%BE%E7%81%B5%E5%AE%8C%E5%A4%87%E6%B8%B8%E6%88%8F%E6%94%BB%E7%95%A5/mindmap-forlabyrinth.png&#34;
 	width=&#34;1601&#34;
 	height=&#34;798&#34;
-	srcset=&#34;https://adeepblue.github.io/p/%E5%9B%BE%E7%81%B5%E5%AE%8C%E5%A4%87%E6%B8%B8%E6%88%8F%E6%94%BB%E7%95%A5/mindmap-forlabyrinth_hu_164ed0b26448595a.png 480w, https://adeepblue.github.io/p/%E5%9B%BE%E7%81%B5%E5%AE%8C%E5%A4%87%E6%B8%B8%E6%88%8F%E6%94%BB%E7%95%A5/mindmap-forlabyrinth_hu_bbc15dda942a3590.png 1024w&#34;
+	srcset=&#34;http://localhost:1313/p/%E5%9B%BE%E7%81%B5%E5%AE%8C%E5%A4%87%E6%B8%B8%E6%88%8F%E6%94%BB%E7%95%A5/mindmap-forlabyrinth_hu_164ed0b26448595a.png 480w, http://localhost:1313/p/%E5%9B%BE%E7%81%B5%E5%AE%8C%E5%A4%87%E6%B8%B8%E6%88%8F%E6%94%BB%E7%95%A5/mindmap-forlabyrinth_hu_bbc15dda942a3590.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 		alt=&#34;思维导图&#34;
@@ -2116,21 +2253,22 @@ label的定义的关键字是&lt;code&gt;loop&lt;/code&gt;，也就是，后面�
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;n&#34;&gt;reg0_to_out&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;n&#34;&gt;left_loop&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;n&#34;&gt;always&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;因为东西太满了，我打算新开一篇，下一篇链接&lt;a class=&#34;link&#34; href=&#34;https://adeepblue.github.io/p/%E5%9B%BE%E7%81%B5%E5%AE%8C%E5%A4%87%E6%B8%B8%E6%88%8F%E6%94%BB%E7%95%A52/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;hr&gt;
+&lt;p&gt;因为东西太满了，我打算新开一篇，下一篇链接&lt;a class=&#34;link&#34; href=&#34;https://adeepblue.github.io/p/%E5%9B%BE%E7%81%B5%E5%AE%8C%E5%A4%87%E6%B8%B8%E6%88%8F%E6%94%BB%E7%95%A52/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
     &gt;图灵完备游戏攻略2&lt;/a&gt;&lt;/p&gt;
 </description>
         </item>
         <item>
         <title>Cmd命令介绍</title>
-        <link>https://adeepblue.github.io/p/cmd%E5%91%BD%E4%BB%A4%E4%BB%8B%E7%BB%8D/</link>
+        <link>http://localhost:1313/p/cmd%E5%91%BD%E4%BB%A4%E4%BB%8B%E7%BB%8D/</link>
         <pubDate>Tue, 04 Feb 2025 22:34:00 +0800</pubDate>
         
-        <guid>https://adeepblue.github.io/p/cmd%E5%91%BD%E4%BB%A4%E4%BB%8B%E7%BB%8D/</guid>
-        <description>&lt;img src="https://adeepblue.github.io/p/cmd%E5%91%BD%E4%BB%A4%E4%BB%8B%E7%BB%8D/CommandLineIcon.png" alt="Featured image of post Cmd命令介绍" /&gt;&lt;h1 id=&#34;cmd一些命令介绍&#34;&gt;CMD一些命令介绍
-&lt;/h1&gt;&lt;p&gt;&lt;img src=&#34;https://adeepblue.github.io/p/cmd%E5%91%BD%E4%BB%A4%E4%BB%8B%E7%BB%8D/winRopencmd.png&#34;
+        <guid>http://localhost:1313/p/cmd%E5%91%BD%E4%BB%A4%E4%BB%8B%E7%BB%8D/</guid>
+        <description>&lt;img src="http://localhost:1313/p/cmd%E5%91%BD%E4%BB%A4%E4%BB%8B%E7%BB%8D/CommandLineIcon.png" alt="Featured image of post Cmd命令介绍" /&gt;&lt;h1 id=&#34;cmd一些命令介绍&#34;&gt;CMD一些命令介绍
+&lt;/h1&gt;&lt;p&gt;&lt;img src=&#34;http://localhost:1313/p/cmd%E5%91%BD%E4%BB%A4%E4%BB%8B%E7%BB%8D/winRopencmd.png&#34;
 	width=&#34;513&#34;
 	height=&#34;272&#34;
-	srcset=&#34;https://adeepblue.github.io/p/cmd%E5%91%BD%E4%BB%A4%E4%BB%8B%E7%BB%8D/winRopencmd_hu_1e13ac354f794f6.png 480w, https://adeepblue.github.io/p/cmd%E5%91%BD%E4%BB%A4%E4%BB%8B%E7%BB%8D/winRopencmd_hu_22b380be5e699e40.png 1024w&#34;
+	srcset=&#34;http://localhost:1313/p/cmd%E5%91%BD%E4%BB%A4%E4%BB%8B%E7%BB%8D/winRopencmd_hu_1e13ac354f794f6.png 480w, http://localhost:1313/p/cmd%E5%91%BD%E4%BB%A4%E4%BB%8B%E7%BB%8D/winRopencmd_hu_22b380be5e699e40.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 		alt=&#34;运行窗口&#34;
@@ -2141,10 +2279,10 @@ label的定义的关键字是&lt;code&gt;loop&lt;/code&gt;，也就是，后面�
 		data-flex-basis=&#34;452px&#34;
 	
 &gt;
-&lt;img src=&#34;https://adeepblue.github.io/p/cmd%E5%91%BD%E4%BB%A4%E4%BB%8B%E7%BB%8D/exploreropencmd.png&#34;
+&lt;img src=&#34;http://localhost:1313/p/cmd%E5%91%BD%E4%BB%A4%E4%BB%8B%E7%BB%8D/exploreropencmd.png&#34;
 	width=&#34;1576&#34;
 	height=&#34;899&#34;
-	srcset=&#34;https://adeepblue.github.io/p/cmd%E5%91%BD%E4%BB%A4%E4%BB%8B%E7%BB%8D/exploreropencmd_hu_f8a90abd74421795.png 480w, https://adeepblue.github.io/p/cmd%E5%91%BD%E4%BB%A4%E4%BB%8B%E7%BB%8D/exploreropencmd_hu_b9b3401b4077ceaf.png 1024w&#34;
+	srcset=&#34;http://localhost:1313/p/cmd%E5%91%BD%E4%BB%A4%E4%BB%8B%E7%BB%8D/exploreropencmd_hu_f8a90abd74421795.png 480w, http://localhost:1313/p/cmd%E5%91%BD%E4%BB%A4%E4%BB%8B%E7%BB%8D/exploreropencmd_hu_b9b3401b4077ceaf.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 		alt=&#34;从文件资源管理器的地址栏打开&#34;
@@ -2216,10 +2354,10 @@ label的定义的关键字是&lt;code&gt;loop&lt;/code&gt;，也就是，后面�
 &lt;strong&gt;set&lt;/strong&gt;&lt;/p&gt;
 &lt;p&gt;可以临时定义变量，&lt;code&gt;set &amp;quot;a=1&amp;quot;&lt;/code&gt;不过需要被包裹在双引号里面，调用的时候需要&lt;code&gt;%a%&lt;/code&gt;来调用即可，比如说&lt;code&gt;echo %a%&lt;/code&gt;,也可在%a%前后加入内容，比如说&amp;quot;echo 1-%a%&amp;ldquo;输出1-1&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;环境变量&lt;/strong&gt;
-&lt;img src=&#34;https://adeepblue.github.io/p/cmd%E5%91%BD%E4%BB%A4%E4%BB%8B%E7%BB%8D/environment.png&#34;
+&lt;img src=&#34;http://localhost:1313/p/cmd%E5%91%BD%E4%BB%A4%E4%BB%8B%E7%BB%8D/environment.png&#34;
 	width=&#34;794&#34;
 	height=&#34;777&#34;
-	srcset=&#34;https://adeepblue.github.io/p/cmd%E5%91%BD%E4%BB%A4%E4%BB%8B%E7%BB%8D/environment_hu_3f23337887826f24.png 480w, https://adeepblue.github.io/p/cmd%E5%91%BD%E4%BB%A4%E4%BB%8B%E7%BB%8D/environment_hu_12a8ebe8f3b2992.png 1024w&#34;
+	srcset=&#34;http://localhost:1313/p/cmd%E5%91%BD%E4%BB%A4%E4%BB%8B%E7%BB%8D/environment_hu_3f23337887826f24.png 480w, http://localhost:1313/p/cmd%E5%91%BD%E4%BB%A4%E4%BB%8B%E7%BB%8D/environment_hu_12a8ebe8f3b2992.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 		alt=&#34;系统环境变量&#34;
@@ -2235,10 +2373,10 @@ label的定义的关键字是&lt;code&gt;loop&lt;/code&gt;，也就是，后面�
 很多时候这相当有用，其中环境变量可以通过&lt;code&gt;win+S&lt;/code&gt;呼出搜索框然后输入环境变量打开对应的设置选项即可，而我，我更懒，我直接新建了一个快捷方式，填入了&lt;code&gt;C:\Windows\System32\SystemPropertiesAdvanced.exe&lt;/code&gt;
 并把快捷方式命名成了environment，然后把这个快捷方式加入了环境变量，然后，我就可以很方便的通过&lt;code&gt;win R&lt;/code&gt;运行框中输入environment进行直接打开环境变量属性框了
 尤其是配合历史记录的情况下，如果你上一次打开的是cmd，这次你不输入任何值默认就会显示cmd，以及如果发现这个功能没了请去设置内开启下列图片中的开关，即可使用这个功能了
-&lt;img src=&#34;https://adeepblue.github.io/p/cmd%E5%91%BD%E4%BB%A4%E4%BB%8B%E7%BB%8D/setting_for_running.png&#34;
+&lt;img src=&#34;http://localhost:1313/p/cmd%E5%91%BD%E4%BB%A4%E4%BB%8B%E7%BB%8D/setting_for_running.png&#34;
 	width=&#34;1276&#34;
 	height=&#34;649&#34;
-	srcset=&#34;https://adeepblue.github.io/p/cmd%E5%91%BD%E4%BB%A4%E4%BB%8B%E7%BB%8D/setting_for_running_hu_934d1766afa5550e.png 480w, https://adeepblue.github.io/p/cmd%E5%91%BD%E4%BB%A4%E4%BB%8B%E7%BB%8D/setting_for_running_hu_3e5be8e39197457c.png 1024w&#34;
+	srcset=&#34;http://localhost:1313/p/cmd%E5%91%BD%E4%BB%A4%E4%BB%8B%E7%BB%8D/setting_for_running_hu_934d1766afa5550e.png 480w, http://localhost:1313/p/cmd%E5%91%BD%E4%BB%A4%E4%BB%8B%E7%BB%8D/setting_for_running_hu_3e5be8e39197457c.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 	
@@ -2268,10 +2406,10 @@ label的定义的关键字是&lt;code&gt;loop&lt;/code&gt;，也就是，后面�
     &gt;git教程&lt;/a&gt;
 但记住一点，尽量用ANSI格式去保存代码文件,全英文状态下可能只能是默认的utf-8，&lt;a class=&#34;link&#34; href=&#34;https://www.bilibili.com/video/BV1cB4y177QR&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
     &gt;编解码参考视频&lt;/a&gt;
-&lt;img src=&#34;https://adeepblue.github.io/p/cmd%E5%91%BD%E4%BB%A4%E4%BB%8B%E7%BB%8D/bat-utf-8.png&#34;
+&lt;img src=&#34;http://localhost:1313/p/cmd%E5%91%BD%E4%BB%A4%E4%BB%8B%E7%BB%8D/bat-utf-8.png&#34;
 	width=&#34;1414&#34;
 	height=&#34;912&#34;
-	srcset=&#34;https://adeepblue.github.io/p/cmd%E5%91%BD%E4%BB%A4%E4%BB%8B%E7%BB%8D/bat-utf-8_hu_b11d0d2aeda1b4d6.png 480w, https://adeepblue.github.io/p/cmd%E5%91%BD%E4%BB%A4%E4%BB%8B%E7%BB%8D/bat-utf-8_hu_d6eabd63b9f56ada.png 1024w&#34;
+	srcset=&#34;http://localhost:1313/p/cmd%E5%91%BD%E4%BB%A4%E4%BB%8B%E7%BB%8D/bat-utf-8_hu_b11d0d2aeda1b4d6.png 480w, http://localhost:1313/p/cmd%E5%91%BD%E4%BB%A4%E4%BB%8B%E7%BB%8D/bat-utf-8_hu_d6eabd63b9f56ada.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 	
@@ -2280,10 +2418,10 @@ label的定义的关键字是&lt;code&gt;loop&lt;/code&gt;，也就是，后面�
 		data-flex-basis=&#34;372px&#34;
 	
 &gt;
-&lt;img src=&#34;https://adeepblue.github.io/p/cmd%E5%91%BD%E4%BB%A4%E4%BB%8B%E7%BB%8D/bat-ANSI.png&#34;
+&lt;img src=&#34;http://localhost:1313/p/cmd%E5%91%BD%E4%BB%A4%E4%BB%8B%E7%BB%8D/bat-ANSI.png&#34;
 	width=&#34;1414&#34;
 	height=&#34;912&#34;
-	srcset=&#34;https://adeepblue.github.io/p/cmd%E5%91%BD%E4%BB%A4%E4%BB%8B%E7%BB%8D/bat-ANSI_hu_96befcaedb6075b9.png 480w, https://adeepblue.github.io/p/cmd%E5%91%BD%E4%BB%A4%E4%BB%8B%E7%BB%8D/bat-ANSI_hu_a326c62fab7f6369.png 1024w&#34;
+	srcset=&#34;http://localhost:1313/p/cmd%E5%91%BD%E4%BB%A4%E4%BB%8B%E7%BB%8D/bat-ANSI_hu_96befcaedb6075b9.png 480w, http://localhost:1313/p/cmd%E5%91%BD%E4%BB%A4%E4%BB%8B%E7%BB%8D/bat-ANSI_hu_a326c62fab7f6369.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 	
@@ -2315,11 +2453,11 @@ label的定义的关键字是&lt;code&gt;loop&lt;/code&gt;，也就是，后面�
         </item>
         <item>
         <title>Hugo初始化网站笔记</title>
-        <link>https://adeepblue.github.io/p/hugo%E5%88%9D%E5%A7%8B%E5%8C%96%E7%BD%91%E7%AB%99%E7%AC%94%E8%AE%B0/</link>
+        <link>http://localhost:1313/p/hugo%E5%88%9D%E5%A7%8B%E5%8C%96%E7%BD%91%E7%AB%99%E7%AC%94%E8%AE%B0/</link>
         <pubDate>Tue, 04 Feb 2025 22:34:00 +0800</pubDate>
         
-        <guid>https://adeepblue.github.io/p/hugo%E5%88%9D%E5%A7%8B%E5%8C%96%E7%BD%91%E7%AB%99%E7%AC%94%E8%AE%B0/</guid>
-        <description>&lt;img src="https://adeepblue.github.io/p/hugo%E5%88%9D%E5%A7%8B%E5%8C%96%E7%BD%91%E7%AB%99%E7%AC%94%E8%AE%B0/Logo_of_Hugo_the_static_website_generator.svg.png" alt="Featured image of post Hugo初始化网站笔记" /&gt;&lt;h1 id=&#34;hugo笔记&#34;&gt;Hugo笔记
+        <guid>http://localhost:1313/p/hugo%E5%88%9D%E5%A7%8B%E5%8C%96%E7%BD%91%E7%AB%99%E7%AC%94%E8%AE%B0/</guid>
+        <description>&lt;img src="http://localhost:1313/p/hugo%E5%88%9D%E5%A7%8B%E5%8C%96%E7%BD%91%E7%AB%99%E7%AC%94%E8%AE%B0/Logo_of_Hugo_the_static_website_generator.svg.png" alt="Featured image of post Hugo初始化网站笔记" /&gt;&lt;h1 id=&#34;hugo笔记&#34;&gt;Hugo笔记
 &lt;/h1&gt;&lt;p&gt;首先是先下载hugo,我的话因为后面可能命令行会比较常用，所以手动把它添加进了环境变量 path里面
 也是有这个步骤才可以下面直接hugo命令直接用了&lt;/p&gt;
 &lt;p&gt;前前后后也搞了不少时间，万一以后文件丢失了可以来这边参考我自己写的hugo笔记&lt;/p&gt;
@@ -2423,10 +2561,10 @@ label的定义的关键字是&lt;code&gt;loop&lt;/code&gt;，也就是，后面�
 &lt;/h2&gt;&lt;p&gt;呃啊，折腾了一两天的代码高亮，我以为被原始的样式覆盖了，折腾了很久都没搞好，结果一删AI生成的代码立马好了，我无法接受啊啊啊啊&lt;/p&gt;
 &lt;p&gt;不推荐用
 &lt;code&gt;npm install highlight.js&lt;/code&gt;的方式安装，我安装完少了&lt;code&gt;highlight.min.js&lt;/code&gt;文件&lt;/p&gt;
-&lt;p&gt;&lt;code&gt;highlight.min.js&lt;/code&gt;放在./assets/js/目录下，&lt;img src=&#34;https://adeepblue.github.io/p/hugo%E5%88%9D%E5%A7%8B%E5%8C%96%E7%BD%91%E7%AB%99%E7%AC%94%E8%AE%B0/highlight1.png&#34;
+&lt;p&gt;&lt;code&gt;highlight.min.js&lt;/code&gt;放在./assets/js/目录下，&lt;img src=&#34;http://localhost:1313/p/hugo%E5%88%9D%E5%A7%8B%E5%8C%96%E7%BD%91%E7%AB%99%E7%AC%94%E8%AE%B0/highlight1.png&#34;
 	width=&#34;972&#34;
 	height=&#34;326&#34;
-	srcset=&#34;https://adeepblue.github.io/p/hugo%E5%88%9D%E5%A7%8B%E5%8C%96%E7%BD%91%E7%AB%99%E7%AC%94%E8%AE%B0/highlight1_hu_8f8b7365f78964db.png 480w, https://adeepblue.github.io/p/hugo%E5%88%9D%E5%A7%8B%E5%8C%96%E7%BD%91%E7%AB%99%E7%AC%94%E8%AE%B0/highlight1_hu_aee1d9e3faa97d24.png 1024w&#34;
+	srcset=&#34;http://localhost:1313/p/hugo%E5%88%9D%E5%A7%8B%E5%8C%96%E7%BD%91%E7%AB%99%E7%AC%94%E8%AE%B0/highlight1_hu_8f8b7365f78964db.png 480w, http://localhost:1313/p/hugo%E5%88%9D%E5%A7%8B%E5%8C%96%E7%BD%91%E7%AB%99%E7%AC%94%E8%AE%B0/highlight1_hu_aee1d9e3faa97d24.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 		alt=&#34;highlight.min.js&#34;
@@ -2437,10 +2575,10 @@ label的定义的关键字是&lt;code&gt;loop&lt;/code&gt;，也就是，后面�
 		data-flex-basis=&#34;715px&#34;
 	
 &gt;
-styles文件夹复制出来改文件名成highlight-styles后放在/assets/css/目录下，如下 &lt;img src=&#34;https://adeepblue.github.io/p/hugo%E5%88%9D%E5%A7%8B%E5%8C%96%E7%BD%91%E7%AB%99%E7%AC%94%E8%AE%B0/highlight3.png&#34;
+styles文件夹复制出来改文件名成highlight-styles后放在/assets/css/目录下，如下 &lt;img src=&#34;http://localhost:1313/p/hugo%E5%88%9D%E5%A7%8B%E5%8C%96%E7%BD%91%E7%AB%99%E7%AC%94%E8%AE%B0/highlight3.png&#34;
 	width=&#34;1424&#34;
 	height=&#34;739&#34;
-	srcset=&#34;https://adeepblue.github.io/p/hugo%E5%88%9D%E5%A7%8B%E5%8C%96%E7%BD%91%E7%AB%99%E7%AC%94%E8%AE%B0/highlight3_hu_9dd9b449a24f586c.png 480w, https://adeepblue.github.io/p/hugo%E5%88%9D%E5%A7%8B%E5%8C%96%E7%BD%91%E7%AB%99%E7%AC%94%E8%AE%B0/highlight3_hu_7da3f648c360d08b.png 1024w&#34;
+	srcset=&#34;http://localhost:1313/p/hugo%E5%88%9D%E5%A7%8B%E5%8C%96%E7%BD%91%E7%AB%99%E7%AC%94%E8%AE%B0/highlight3_hu_9dd9b449a24f586c.png 480w, http://localhost:1313/p/hugo%E5%88%9D%E5%A7%8B%E5%8C%96%E7%BD%91%E7%AB%99%E7%AC%94%E8%AE%B0/highlight3_hu_7da3f648c360d08b.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 		alt=&#34;styles 文件夹&#34;
@@ -2450,10 +2588,10 @@ styles文件夹复制出来改文件名成highlight-styles后放在/assets/css/�
 		data-flex-grow=&#34;192&#34;
 		data-flex-basis=&#34;462px&#34;
 	
-&gt; &lt;img src=&#34;https://adeepblue.github.io/p/hugo%E5%88%9D%E5%A7%8B%E5%8C%96%E7%BD%91%E7%AB%99%E7%AC%94%E8%AE%B0/highlight2.png&#34;
+&gt; &lt;img src=&#34;http://localhost:1313/p/hugo%E5%88%9D%E5%A7%8B%E5%8C%96%E7%BD%91%E7%AB%99%E7%AC%94%E8%AE%B0/highlight2.png&#34;
 	width=&#34;901&#34;
 	height=&#34;379&#34;
-	srcset=&#34;https://adeepblue.github.io/p/hugo%E5%88%9D%E5%A7%8B%E5%8C%96%E7%BD%91%E7%AB%99%E7%AC%94%E8%AE%B0/highlight2_hu_c3d3f68df5e26b46.png 480w, https://adeepblue.github.io/p/hugo%E5%88%9D%E5%A7%8B%E5%8C%96%E7%BD%91%E7%AB%99%E7%AC%94%E8%AE%B0/highlight2_hu_d81c363c10dc2a2e.png 1024w&#34;
+	srcset=&#34;http://localhost:1313/p/hugo%E5%88%9D%E5%A7%8B%E5%8C%96%E7%BD%91%E7%AB%99%E7%AC%94%E8%AE%B0/highlight2_hu_c3d3f68df5e26b46.png 480w, http://localhost:1313/p/hugo%E5%88%9D%E5%A7%8B%E5%8C%96%E7%BD%91%E7%AB%99%E7%AC%94%E8%AE%B0/highlight2_hu_d81c363c10dc2a2e.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 		alt=&#34;highlight-styles文件夹&#34;
@@ -2667,10 +2805,10 @@ styles文件夹复制出来改文件名成highlight-styles后放在/assets/css/�
 &lt;/table&gt;
 &lt;h2 id=&#34;链接css样式表进页面&#34;&gt;链接css样式表进页面
 &lt;/h2&gt;&lt;p&gt;因为我当时要改左侧样式表的页面，因为完全没有颜色会让左侧标签栏变得看不到，如下，我选择了加入伪元素达到类似蒙版的效果
-&lt;img src=&#34;https://adeepblue.github.io/p/hugo%E5%88%9D%E5%A7%8B%E5%8C%96%E7%BD%91%E7%AB%99%E7%AC%94%E8%AE%B0/nochange-aside-page.png&#34;
+&lt;img src=&#34;http://localhost:1313/p/hugo%E5%88%9D%E5%A7%8B%E5%8C%96%E7%BD%91%E7%AB%99%E7%AC%94%E8%AE%B0/nochange-aside-page.png&#34;
 	width=&#34;506&#34;
 	height=&#34;899&#34;
-	srcset=&#34;https://adeepblue.github.io/p/hugo%E5%88%9D%E5%A7%8B%E5%8C%96%E7%BD%91%E7%AB%99%E7%AC%94%E8%AE%B0/nochange-aside-page_hu_c9264d45a83e5e89.png 480w, https://adeepblue.github.io/p/hugo%E5%88%9D%E5%A7%8B%E5%8C%96%E7%BD%91%E7%AB%99%E7%AC%94%E8%AE%B0/nochange-aside-page_hu_d7354d2292bff500.png 1024w&#34;
+	srcset=&#34;http://localhost:1313/p/hugo%E5%88%9D%E5%A7%8B%E5%8C%96%E7%BD%91%E7%AB%99%E7%AC%94%E8%AE%B0/nochange-aside-page_hu_c9264d45a83e5e89.png 480w, http://localhost:1313/p/hugo%E5%88%9D%E5%A7%8B%E5%8C%96%E7%BD%91%E7%AB%99%E7%AC%94%E8%AE%B0/nochange-aside-page_hu_d7354d2292bff500.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 		alt=&#34;deepseek直接给出的&#34;
@@ -2681,10 +2819,10 @@ styles文件夹复制出来改文件名成highlight-styles后放在/assets/css/�
 		data-flex-basis=&#34;135px&#34;
 	
 &gt;
-&lt;img src=&#34;https://adeepblue.github.io/p/hugo%E5%88%9D%E5%A7%8B%E5%8C%96%E7%BD%91%E7%AB%99%E7%AC%94%E8%AE%B0/change-aside-page.png&#34;
+&lt;img src=&#34;http://localhost:1313/p/hugo%E5%88%9D%E5%A7%8B%E5%8C%96%E7%BD%91%E7%AB%99%E7%AC%94%E8%AE%B0/change-aside-page.png&#34;
 	width=&#34;1905&#34;
 	height=&#34;899&#34;
-	srcset=&#34;https://adeepblue.github.io/p/hugo%E5%88%9D%E5%A7%8B%E5%8C%96%E7%BD%91%E7%AB%99%E7%AC%94%E8%AE%B0/change-aside-page_hu_ddefcd17cb2dbec0.png 480w, https://adeepblue.github.io/p/hugo%E5%88%9D%E5%A7%8B%E5%8C%96%E7%BD%91%E7%AB%99%E7%AC%94%E8%AE%B0/change-aside-page_hu_1453e37e1d5977e9.png 1024w&#34;
+	srcset=&#34;http://localhost:1313/p/hugo%E5%88%9D%E5%A7%8B%E5%8C%96%E7%BD%91%E7%AB%99%E7%AC%94%E8%AE%B0/change-aside-page_hu_ddefcd17cb2dbec0.png 480w, http://localhost:1313/p/hugo%E5%88%9D%E5%A7%8B%E5%8C%96%E7%BD%91%E7%AB%99%E7%AC%94%E8%AE%B0/change-aside-page_hu_1453e37e1d5977e9.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 		alt=&#34;最终调好的白色页面的&#34;
@@ -2698,10 +2836,10 @@ styles文件夹复制出来改文件名成highlight-styles后放在/assets/css/�
 &lt;p&gt;因为deepseek给出的文件放置位置错误，当时它提示我放在./assets/css/custom.css中调用，调用的时候只需要调用/css/custom.css就行了，
 结果没生效，到头来是在./static/css/custom目录下调用成了,参考了&lt;a class=&#34;link&#34; href=&#34;https://hugo-mini-course.netlify.app/sections/styling/custom/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
     &gt;网页链接&lt;/a&gt;这篇文章
-&lt;img src=&#34;https://adeepblue.github.io/p/hugo%E5%88%9D%E5%A7%8B%E5%8C%96%E7%BD%91%E7%AB%99%E7%AC%94%E8%AE%B0/assets-css.png&#34;
+&lt;img src=&#34;http://localhost:1313/p/hugo%E5%88%9D%E5%A7%8B%E5%8C%96%E7%BD%91%E7%AB%99%E7%AC%94%E8%AE%B0/assets-css.png&#34;
 	width=&#34;875&#34;
 	height=&#34;404&#34;
-	srcset=&#34;https://adeepblue.github.io/p/hugo%E5%88%9D%E5%A7%8B%E5%8C%96%E7%BD%91%E7%AB%99%E7%AC%94%E8%AE%B0/assets-css_hu_5cdcdec86106459f.png 480w, https://adeepblue.github.io/p/hugo%E5%88%9D%E5%A7%8B%E5%8C%96%E7%BD%91%E7%AB%99%E7%AC%94%E8%AE%B0/assets-css_hu_b2be30825f8cd2f1.png 1024w&#34;
+	srcset=&#34;http://localhost:1313/p/hugo%E5%88%9D%E5%A7%8B%E5%8C%96%E7%BD%91%E7%AB%99%E7%AC%94%E8%AE%B0/assets-css_hu_5cdcdec86106459f.png 480w, http://localhost:1313/p/hugo%E5%88%9D%E5%A7%8B%E5%8C%96%E7%BD%91%E7%AB%99%E7%AC%94%E8%AE%B0/assets-css_hu_b2be30825f8cd2f1.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 		alt=&#34;原本的放置目录&#34;
@@ -2712,10 +2850,10 @@ styles文件夹复制出来改文件名成highlight-styles后放在/assets/css/�
 		data-flex-basis=&#34;519px&#34;
 	
 &gt;
-&lt;img src=&#34;https://adeepblue.github.io/p/hugo%E5%88%9D%E5%A7%8B%E5%8C%96%E7%BD%91%E7%AB%99%E7%AC%94%E8%AE%B0/static-css.png&#34;
+&lt;img src=&#34;http://localhost:1313/p/hugo%E5%88%9D%E5%A7%8B%E5%8C%96%E7%BD%91%E7%AB%99%E7%AC%94%E8%AE%B0/static-css.png&#34;
 	width=&#34;865&#34;
 	height=&#34;343&#34;
-	srcset=&#34;https://adeepblue.github.io/p/hugo%E5%88%9D%E5%A7%8B%E5%8C%96%E7%BD%91%E7%AB%99%E7%AC%94%E8%AE%B0/static-css_hu_ea454566e3905611.png 480w, https://adeepblue.github.io/p/hugo%E5%88%9D%E5%A7%8B%E5%8C%96%E7%BD%91%E7%AB%99%E7%AC%94%E8%AE%B0/static-css_hu_6e12ddc4a4cc4c06.png 1024w&#34;
+	srcset=&#34;http://localhost:1313/p/hugo%E5%88%9D%E5%A7%8B%E5%8C%96%E7%BD%91%E7%AB%99%E7%AC%94%E8%AE%B0/static-css_hu_ea454566e3905611.png 480w, http://localhost:1313/p/hugo%E5%88%9D%E5%A7%8B%E5%8C%96%E7%BD%91%E7%AB%99%E7%AC%94%E8%AE%B0/static-css_hu_6e12ddc4a4cc4c06.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 		alt=&#34;img.png&#34;
@@ -2756,11 +2894,11 @@ styles文件夹复制出来改文件名成highlight-styles后放在/assets/css/�
         </item>
         <item>
         <title>Git初始化记录</title>
-        <link>https://adeepblue.github.io/p/git%E5%88%9D%E5%A7%8B%E5%8C%96%E8%AE%B0%E5%BD%95/</link>
+        <link>http://localhost:1313/p/git%E5%88%9D%E5%A7%8B%E5%8C%96%E8%AE%B0%E5%BD%95/</link>
         <pubDate>Tue, 04 Feb 2025 21:39:19 +0800</pubDate>
         
-        <guid>https://adeepblue.github.io/p/git%E5%88%9D%E5%A7%8B%E5%8C%96%E8%AE%B0%E5%BD%95/</guid>
-        <description>&lt;img src="https://adeepblue.github.io/p/git%E5%88%9D%E5%A7%8B%E5%8C%96%E8%AE%B0%E5%BD%95/git-bash.svg" alt="Featured image of post Git初始化记录" /&gt;&lt;h1 id=&#34;git连接踩坑记录&#34;&gt;Git连接踩坑记录
+        <guid>http://localhost:1313/p/git%E5%88%9D%E5%A7%8B%E5%8C%96%E8%AE%B0%E5%BD%95/</guid>
+        <description>&lt;img src="http://localhost:1313/p/git%E5%88%9D%E5%A7%8B%E5%8C%96%E8%AE%B0%E5%BD%95/git-bash.svg" alt="Featured image of post Git初始化记录" /&gt;&lt;h1 id=&#34;git连接踩坑记录&#34;&gt;Git连接踩坑记录
 &lt;/h1&gt;&lt;h2 id=&#34;配置ssh&#34;&gt;配置SSH
 &lt;/h2&gt;&lt;p&gt;重装电脑之后（并不重装D盘），git又连不上GitHub了，也不知道是出了什么毛病，
 昨晚连接SSH都连不上，我只依稀记得以前踩了许多坑，再回过头来
@@ -2817,10 +2955,10 @@ styles文件夹复制出来改文件名成highlight-styles后放在/assets/css/�
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;git commit -m &lt;span class=&#34;s2&#34;&gt;&amp;#34;Publish site&amp;#34;&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;git subtree push --prefix public origin gh-pages
 &lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;以及，现在的hugo推送，这样就可以推送到gh-pages分区进行展示了，需要GitHub修改一下仓库设置&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://adeepblue.github.io/p/git%E5%88%9D%E5%A7%8B%E5%8C%96%E8%AE%B0%E5%BD%95/1.png&#34;
+&lt;p&gt;&lt;img src=&#34;http://localhost:1313/p/git%E5%88%9D%E5%A7%8B%E5%8C%96%E8%AE%B0%E5%BD%95/1.png&#34;
 	width=&#34;1723&#34;
 	height=&#34;907&#34;
-	srcset=&#34;https://adeepblue.github.io/p/git%E5%88%9D%E5%A7%8B%E5%8C%96%E8%AE%B0%E5%BD%95/1_hu_fc76ac9a4f991b12.png 480w, https://adeepblue.github.io/p/git%E5%88%9D%E5%A7%8B%E5%8C%96%E8%AE%B0%E5%BD%95/1_hu_ea5b54ac5615fbb1.png 1024w&#34;
+	srcset=&#34;http://localhost:1313/p/git%E5%88%9D%E5%A7%8B%E5%8C%96%E8%AE%B0%E5%BD%95/1_hu_fc76ac9a4f991b12.png 480w, http://localhost:1313/p/git%E5%88%9D%E5%A7%8B%E5%8C%96%E8%AE%B0%E5%BD%95/1_hu_ea5b54ac5615fbb1.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 		alt=&#34;github页面图修改配置&#34;
@@ -2883,18 +3021,18 @@ styles文件夹复制出来改文件名成highlight-styles后放在/assets/css/�
         </item>
         <item>
         <title>archives</title>
-        <link>https://adeepblue.github.io/archives/</link>
+        <link>http://localhost:1313/archives/</link>
         <pubDate>Tue, 28 May 2019 00:00:00 +0000</pubDate>
         
-        <guid>https://adeepblue.github.io/archives/</guid>
+        <guid>http://localhost:1313/archives/</guid>
         <description></description>
         </item>
         <item>
         <title>Links</title>
-        <link>https://adeepblue.github.io/links/</link>
+        <link>http://localhost:1313/links/</link>
         <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
         
-        <guid>https://adeepblue.github.io/links/</guid>
+        <guid>http://localhost:1313/links/</guid>
         <description>&lt;p&gt;To use this feature, add &lt;code&gt;links&lt;/code&gt; section to frontmatter.&lt;/p&gt;
 &lt;p&gt;This page&amp;rsquo;s frontmatter:&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-yaml&#34; data-lang=&#34;yaml&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;nt&#34;&gt;links&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
@@ -2911,10 +3049,10 @@ styles文件夹复制出来改文件名成highlight-styles后放在/assets/css/�
         </item>
         <item>
         <title>更新日志</title>
-        <link>https://adeepblue.github.io/%E6%9B%B4%E6%96%B0%E6%97%A5%E5%BF%97/</link>
+        <link>http://localhost:1313/%E6%9B%B4%E6%96%B0%E6%97%A5%E5%BF%97/</link>
         <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
         
-        <guid>https://adeepblue.github.io/%E6%9B%B4%E6%96%B0%E6%97%A5%E5%BF%97/</guid>
+        <guid>http://localhost:1313/%E6%9B%B4%E6%96%B0%E6%97%A5%E5%BF%97/</guid>
         <description>&lt;h1 id=&#34;更新记录&#34;&gt;更新记录
 &lt;/h1&gt;&lt;h2 id=&#34;---------------2025-02-14更新---------------------&#34;&gt;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;2025-02-14更新&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;
 &lt;/h2&gt;&lt;p&gt;更新完了图灵完备第三篇攻略，包含宽指令、一把线，像挂面、操作码、立即数、条件判断的破关思路&lt;/p&gt;
@@ -2936,10 +3074,10 @@ styles文件夹复制出来改文件名成highlight-styles后放在/assets/css/�
         </item>
         <item>
         <title>搜索</title>
-        <link>https://adeepblue.github.io/search/</link>
+        <link>http://localhost:1313/search/</link>
         <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
         
-        <guid>https://adeepblue.github.io/search/</guid>
+        <guid>http://localhost:1313/search/</guid>
         <description></description>
         </item>
         

@@ -90,5 +90,6 @@ categories = [
 
 ![自定义指令集](../turing-complete-fourth-article/custom-introduction-set.png)
 
+------------------------
 
-下一篇博文见,下一篇链接(还没更新，更新完链接放这里)
+下一篇博文见,下一篇链接[图灵完备游戏攻略4](https://adeepblue.github.io/p/%E5%9B%BE%E7%81%B5%E5%AE%8C%E5%A4%87%E6%B8%B8%E6%88%8F%E6%94%BB%E7%95%A54/)

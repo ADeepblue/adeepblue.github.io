@@ -329,4 +329,7 @@ reg0_to_out
 left_loop
 always
 ```
+
+-----------------
+
 因为东西太满了，我打算新开一篇，下一篇链接[图灵完备游戏攻略2](https://adeepblue.github.io/p/%E5%9B%BE%E7%81%B5%E5%AE%8C%E5%A4%87%E6%B8%B8%E6%88%8F%E6%94%BB%E7%95%A52/)
