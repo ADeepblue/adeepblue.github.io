@@ -1,18 +1,18 @@
 <!DOCTYPE html>
 <html lang="zh-cn" dir="ltr">
     <head><meta charset='utf-8'>
-<meta name='viewport' content='width=device-width, initial-scale=1'><meta name='description' content="解决了包含宽指令、一把线，像挂面、操作码、立即数、条件判断的破关思路">
-<title>图灵完备游戏攻略3</title>
+<meta name='viewport' content='width=device-width, initial-scale=1'><meta name='description' content="图灵完备部分游戏攻略 AI打牌 如果要机器人输，那也就是说，我得把它逼到它不得不取最后一张牌，最后一次行动，以及是，可以限制机器人跟我们之间的取牌，具体怎么限制呢？因为1到3张牌， 一回合我能做到固定一定能拿掉的牌数，是最大数加上最小数，也就是4张，比如说机器人拿1张，我就拿3张，刚好互补上，其他牌数量也一样，方针确定了，接下来就好办了， 1+4+4=9张，也就是说，我第一次就要取掉3张牌，再通过两次每回合\n">
+<title>图灵完备游戏攻略5</title>
 
-<link rel='canonical' href='https://adeepblue.github.io/p/%E5%9B%BE%E7%81%B5%E5%AE%8C%E5%A4%87%E6%B8%B8%E6%88%8F%E6%94%BB%E7%95%A53/'>
+<link rel='canonical' href='https://adeepblue.github.io/p/%E5%9B%BE%E7%81%B5%E5%AE%8C%E5%A4%87%E6%B8%B8%E6%88%8F%E6%94%BB%E7%95%A55/'>
 
-<link rel="stylesheet" href="/scss/style.min.663803bebe609202d5b39d848f2d7c2dc8b598a2d879efa079fa88893d29c49c.css"><meta property='og:title' content="图灵完备游戏攻略3">
-<meta property='og:description' content="解决了包含宽指令、一把线，像挂面、操作码、立即数、条件判断的破关思路">
-<meta property='og:url' content='https://adeepblue.github.io/p/%E5%9B%BE%E7%81%B5%E5%AE%8C%E5%A4%87%E6%B8%B8%E6%88%8F%E6%94%BB%E7%95%A53/'>
+<link rel="stylesheet" href="/scss/style.min.663803bebe609202d5b39d848f2d7c2dc8b598a2d879efa079fa88893d29c49c.css"><meta property='og:title' content="图灵完备游戏攻略5">
+<meta property='og:description' content="图灵完备部分游戏攻略 AI打牌 如果要机器人输，那也就是说，我得把它逼到它不得不取最后一张牌，最后一次行动，以及是，可以限制机器人跟我们之间的取牌，具体怎么限制呢？因为1到3张牌， 一回合我能做到固定一定能拿掉的牌数，是最大数加上最小数，也就是4张，比如说机器人拿1张，我就拿3张，刚好互补上，其他牌数量也一样，方针确定了，接下来就好办了， 1+4+4=9张，也就是说，我第一次就要取掉3张牌，再通过两次每回合\n">
+<meta property='og:url' content='https://adeepblue.github.io/p/%E5%9B%BE%E7%81%B5%E5%AE%8C%E5%A4%87%E6%B8%B8%E6%88%8F%E6%94%BB%E7%95%A55/'>
 <meta property='og:site_name' content='深蓝之亘的博客'>
-<meta property='og:type' content='article'><meta property='article:section' content='Post' /><meta property='article:published_time' content='2025-02-13T16:21:04&#43;08:00'/><meta property='article:modified_time' content='2025-02-13T16:21:04&#43;08:00'/><meta property='og:image' content='https://adeepblue.github.io/image/Turing-Complete-Logo.png' />
-<meta name="twitter:title" content="图灵完备游戏攻略3">
-<meta name="twitter:description" content="解决了包含宽指令、一把线，像挂面、操作码、立即数、条件判断的破关思路"><meta name="twitter:card" content="summary_large_image">
+<meta property='og:type' content='article'><meta property='article:section' content='Post' /><meta property='article:published_time' content='2025-02-17T21:35:17&#43;08:00'/><meta property='article:modified_time' content='2025-02-17T21:35:17&#43;08:00'/><meta property='og:image' content='https://adeepblue.github.io/image/Turing-Complete-Logo.png' />
+<meta name="twitter:title" content="图灵完备游戏攻略5">
+<meta name="twitter:description" content="图灵完备部分游戏攻略 AI打牌 如果要机器人输，那也就是说，我得把它逼到它不得不取最后一张牌，最后一次行动，以及是，可以限制机器人跟我们之间的取牌，具体怎么限制呢？因为1到3张牌， 一回合我能做到固定一定能拿掉的牌数，是最大数加上最小数，也就是4张，比如说机器人拿1张，我就拿3张，刚好互补上，其他牌数量也一样，方针确定了，接下来就好办了， 1+4+4=9张，也就是说，我第一次就要取掉3张牌，再通过两次每回合\n"><meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:image" content='https://adeepblue.github.io/image/Turing-Complete-Logo.png' />
     <link rel="shortcut icon" href="/favicon.ico" />
 
@@ -261,11 +261,15 @@
         <div class="widget--toc">
             <nav id="TableOfContents">
   <ol>
-    <li><a href="#宽指令">宽指令</a></li>
-    <li><a href="#一把线像挂面">一把线，像挂面</a></li>
-    <li><a href="#操作码">操作码</a></li>
-    <li><a href="#立即数">立即数</a></li>
-    <li><a href="#条件判断">条件判断</a></li>
+    <li><a href="#ai打牌">AI打牌</a></li>
+    <li><a href="#半字节乘法">半字节乘法</a></li>
+    <li><a href="#栈">栈</a>
+      <ol>
+        <li><a href="#压栈">压栈</a></li>
+        <li><a href="#弹栈">弹栈</a></li>
+      </ol>
+    </li>
+    <li><a href="#压栈和弹栈">压栈和弹栈</a></li>
   </ol>
 </nav>
         </div>
@@ -280,9 +284,9 @@
     <article class="has-image main-article">
     <header class="article-header">
         <div class="article-image">
-            <a href="/p/%E5%9B%BE%E7%81%B5%E5%AE%8C%E5%A4%87%E6%B8%B8%E6%88%8F%E6%94%BB%E7%95%A53/">
+            <a href="/p/%E5%9B%BE%E7%81%B5%E5%AE%8C%E5%A4%87%E6%B8%B8%E6%88%8F%E6%94%BB%E7%95%A55/">
                 
-                    <img src="/image/Turing-Complete-Logo.png" loading="lazy" alt="Featured image of post 图灵完备游戏攻略3" />
+                    <img src="/image/Turing-Complete-Logo.png" loading="lazy" alt="Featured image of post 图灵完备游戏攻略5" />
                 
             </a>
         </div>
@@ -301,13 +305,9 @@
 
     <div class="article-title-wrapper">
         <h2 class="article-title">
-            <a href="/p/%E5%9B%BE%E7%81%B5%E5%AE%8C%E5%A4%87%E6%B8%B8%E6%88%8F%E6%94%BB%E7%95%A53/">图灵完备游戏攻略3</a>
+            <a href="/p/%E5%9B%BE%E7%81%B5%E5%AE%8C%E5%A4%87%E6%B8%B8%E6%88%8F%E6%94%BB%E7%95%A55/">图灵完备游戏攻略5</a>
         </h2>
     
-        
-        <h3 class="article-subtitle">
-            解决了包含宽指令、一把线，像挂面、操作码、立即数、条件判断的破关思路
-        </h3>
         
     </div>
 
@@ -327,7 +327,7 @@
   <path d="M3 11h16" />
   <path d="M18 16.496v1.504l1 1" />
 </svg>
-                <time class="article-time--published">2025-02-13</time>
+                <time class="article-time--published">2025-02-17</time>
             </div>
         
 
@@ -344,337 +344,189 @@
     
     
     <h1 id="图灵完备部分游戏攻略">图灵完备部分游戏攻略
-</h1><h2 id="宽指令">宽指令
-</h2><p><img src="/p/%E5%9B%BE%E7%81%B5%E5%AE%8C%E5%A4%87%E6%B8%B8%E6%88%8F%E6%94%BB%E7%95%A53/Wide-instruction.png"
-	width="1492"
-	height="988"
-	srcset="/p/%E5%9B%BE%E7%81%B5%E5%AE%8C%E5%A4%87%E6%B8%B8%E6%88%8F%E6%94%BB%E7%95%A53/Wide-instruction_hu_cbfb11152500250b.png 480w, /p/%E5%9B%BE%E7%81%B5%E5%AE%8C%E5%A4%87%E6%B8%B8%E6%88%8F%E6%94%BB%E7%95%A53/Wide-instruction_hu_ed7862908053c5ee.png 1024w"
+</h1><h2 id="ai打牌">AI打牌
+</h2><p><img src="/p/%E5%9B%BE%E7%81%B5%E5%AE%8C%E5%A4%87%E6%B8%B8%E6%88%8F%E6%94%BB%E7%95%A55/AI_play_poker.png"
+	width="784"
+	height="541"
+	srcset="/p/%E5%9B%BE%E7%81%B5%E5%AE%8C%E5%A4%87%E6%B8%B8%E6%88%8F%E6%94%BB%E7%95%A55/AI_play_poker_hu_73420f047ae9d1ca.png 480w, /p/%E5%9B%BE%E7%81%B5%E5%AE%8C%E5%A4%87%E6%B8%B8%E6%88%8F%E6%94%BB%E7%95%A55/AI_play_poker_hu_b211ca5712f311b9.png 1024w"
 	loading="lazy"
 	
 		alt="要求"
-	
-	
-		class="gallery-image" 
-		data-flex-grow="151"
-		data-flex-basis="362px"
-	
-></p>
-<p>要求偶数刻存储，奇数刻一次输出存储的一个值和本身程序的值，也就是说，我需要调用一个寄存器，然后用一个分线器，查看一下最低位的1的值就知道现在是奇数偶数了，
-偶数时刻，比如说0，也就是说1位处于低电平的时候写入寄存器，也就是需要套一个非门，因为程序的输出口还有直接输出到输出的功能，所以最好给程序输出口套一个八位开关，没有低电平的时候直接不输出值，
-这样偶数刻的操作就结束了，再有奇数刻要输出两个数的值，也就是说，1位高电平亮起，同时，控制寄存器一位和程序一位分别向输出口输出即可，分别套一个八位开关
-如下：</p>
-<p><img src="/p/%E5%9B%BE%E7%81%B5%E5%AE%8C%E5%A4%87%E6%B8%B8%E6%88%8F%E6%94%BB%E7%95%A53/Wide-instruction-solve.png"
-	width="1674"
-	height="1009"
-	srcset="/p/%E5%9B%BE%E7%81%B5%E5%AE%8C%E5%A4%87%E6%B8%B8%E6%88%8F%E6%94%BB%E7%95%A53/Wide-instruction-solve_hu_48c78e96e2726ba9.png 480w, /p/%E5%9B%BE%E7%81%B5%E5%AE%8C%E5%A4%87%E6%B8%B8%E6%88%8F%E6%94%BB%E7%95%A53/Wide-instruction-solve_hu_c0d29fc005e66974.png 1024w"
-	loading="lazy"
-	
-		alt="解法"
-	
-	
-		class="gallery-image" 
-		data-flex-grow="165"
-		data-flex-basis="398px"
-	
-></p>
-<h2 id="一把线像挂面">一把线，像挂面
-</h2><p><img src="/p/%E5%9B%BE%E7%81%B5%E5%AE%8C%E5%A4%87%E6%B8%B8%E6%88%8F%E6%94%BB%E7%95%A53/new-architecture-require-1.png"
-	width="774"
-	height="508"
-	srcset="/p/%E5%9B%BE%E7%81%B5%E5%AE%8C%E5%A4%87%E6%B8%B8%E6%88%8F%E6%94%BB%E7%95%A53/new-architecture-require-1_hu_48765ed6236ee3be.png 480w, /p/%E5%9B%BE%E7%81%B5%E5%AE%8C%E5%A4%87%E6%B8%B8%E6%88%8F%E6%94%BB%E7%95%A53/new-architecture-require-1_hu_ec1899faad8f3c72.png 1024w"
-	loading="lazy"
-	
-		alt="要求说明1"
-	
-	
-		class="gallery-image" 
-		data-flex-grow="152"
-		data-flex-basis="365px"
-	
->
-<img src="/p/%E5%9B%BE%E7%81%B5%E5%AE%8C%E5%A4%87%E6%B8%B8%E6%88%8F%E6%94%BB%E7%95%A53/new-architecture-require-2.png"
-	width="572"
-	height="394"
-	srcset="/p/%E5%9B%BE%E7%81%B5%E5%AE%8C%E5%A4%87%E6%B8%B8%E6%88%8F%E6%94%BB%E7%95%A53/new-architecture-require-2_hu_a2e96c6061c7a85a.png 480w, /p/%E5%9B%BE%E7%81%B5%E5%AE%8C%E5%A4%87%E6%B8%B8%E6%88%8F%E6%94%BB%E7%95%A53/new-architecture-require-2_hu_1d55e3c7cb411bd1.png 1024w"
-	loading="lazy"
-	
-		alt="要求说明2"
-	
-	
-		class="gallery-image" 
-		data-flex-grow="145"
-		data-flex-basis="348px"
-	
->
-<img src="/p/%E5%9B%BE%E7%81%B5%E5%AE%8C%E5%A4%87%E6%B8%B8%E6%88%8F%E6%94%BB%E7%95%A53/new-architecture-require-3.png"
-	width="766"
-	height="503"
-	srcset="/p/%E5%9B%BE%E7%81%B5%E5%AE%8C%E5%A4%87%E6%B8%B8%E6%88%8F%E6%94%BB%E7%95%A53/new-architecture-require-3_hu_aa4e7450fa6a5783.png 480w, /p/%E5%9B%BE%E7%81%B5%E5%AE%8C%E5%A4%87%E6%B8%B8%E6%88%8F%E6%94%BB%E7%95%A53/new-architecture-require-3_hu_e4a3d821d0af346b.png 1024w"
-	loading="lazy"
-	
-		alt="要求说明3"
-	
-	
-		class="gallery-image" 
-		data-flex-grow="152"
-		data-flex-basis="365px"
-	
-></p>
-<p><img src="/p/%E5%9B%BE%E7%81%B5%E5%AE%8C%E5%A4%87%E6%B8%B8%E6%88%8F%E6%94%BB%E7%95%A53/new-architecture-require-4.png"
-	width="739"
-	height="510"
-	srcset="/p/%E5%9B%BE%E7%81%B5%E5%AE%8C%E5%A4%87%E6%B8%B8%E6%88%8F%E6%94%BB%E7%95%A53/new-architecture-require-4_hu_8cdb7fc66c09b589.png 480w, /p/%E5%9B%BE%E7%81%B5%E5%AE%8C%E5%A4%87%E6%B8%B8%E6%88%8F%E6%94%BB%E7%95%A53/new-architecture-require-4_hu_5a1dc18ddcbdaf74.png 1024w"
-	loading="lazy"
-	
-		alt="要求说明4"
 	
 	
 		class="gallery-image" 
 		data-flex-grow="144"
 		data-flex-basis="347px"
 	
->
-<img src="/p/%E5%9B%BE%E7%81%B5%E5%AE%8C%E5%A4%87%E6%B8%B8%E6%88%8F%E6%94%BB%E7%95%A53/new-architecture-require-5.png"
-	width="757"
-	height="505"
-	srcset="/p/%E5%9B%BE%E7%81%B5%E5%AE%8C%E5%A4%87%E6%B8%B8%E6%88%8F%E6%94%BB%E7%95%A53/new-architecture-require-5_hu_4a4fdb7557844a8c.png 480w, /p/%E5%9B%BE%E7%81%B5%E5%AE%8C%E5%A4%87%E6%B8%B8%E6%88%8F%E6%94%BB%E7%95%A53/new-architecture-require-5_hu_5a787b7540ff3284.png 1024w"
-	loading="lazy"
-	
-		alt="要求说明5"
-	
-	
-		class="gallery-image" 
-		data-flex-grow="149"
-		data-flex-basis="359px"
-	
 ></p>
-<p>按照它上面说的，先将计数器步进设置为4</p>
-<p><img src="/p/%E5%9B%BE%E7%81%B5%E5%AE%8C%E5%A4%87%E6%B8%B8%E6%88%8F%E6%94%BB%E7%95%A53/set-step.png"
-	width="1920"
-	height="1080"
-	srcset="/p/%E5%9B%BE%E7%81%B5%E5%AE%8C%E5%A4%87%E6%B8%B8%E6%88%8F%E6%94%BB%E7%95%A53/set-step_hu_86f46e51106089e9.png 480w, /p/%E5%9B%BE%E7%81%B5%E5%AE%8C%E5%A4%87%E6%B8%B8%E6%88%8F%E6%94%BB%E7%95%A53/set-step_hu_ff2e45a4f71c2cce.png 1024w"
-	loading="lazy"
-	
-		alt="说明"
-	
-	
-		class="gallery-image" 
-		data-flex-grow="177"
-		data-flex-basis="426px"
-	
-></p>
-<p>以及是根据要求说明2里的图，后三个都是操作地址，也就是说，后三个全部需要用到分线装置控制到哪一位，这就可能要点布置</p>
-<p><img src="/p/%E5%9B%BE%E7%81%B5%E5%AE%8C%E5%A4%87%E6%B8%B8%E6%88%8F%E6%94%BB%E7%95%A53/8bit-8-select-1-8bit.png"
-	width="852"
-	height="1054"
-	srcset="/p/%E5%9B%BE%E7%81%B5%E5%AE%8C%E5%A4%87%E6%B8%B8%E6%88%8F%E6%94%BB%E7%95%A53/8bit-8-select-1-8bit_hu_f719f8335691d43b.png 480w, /p/%E5%9B%BE%E7%81%B5%E5%AE%8C%E5%A4%87%E6%B8%B8%E6%88%8F%E6%94%BB%E7%95%A53/8bit-8-select-1-8bit_hu_a526c825eb72ce00.png 1024w"
-	loading="lazy"
-	
-		alt="改造后的8位数据8选1元件"
-	
-	
-		class="gallery-image" 
-		data-flex-grow="80"
-		data-flex-basis="194px"
-	
-></p>
-<p>首先如上改造了一下以前的八选一的数据元器件，改成8bit好方便输入</p>
-<p><img src="/p/%E5%9B%BE%E7%81%B5%E5%AE%8C%E5%A4%87%E6%B8%B8%E6%88%8F%E6%94%BB%E7%95%A53/8bit-8-select-1-8bit-in-main-1.png"
-	width="1223"
-	height="750"
-	srcset="/p/%E5%9B%BE%E7%81%B5%E5%AE%8C%E5%A4%87%E6%B8%B8%E6%88%8F%E6%94%BB%E7%95%A53/8bit-8-select-1-8bit-in-main-1_hu_b737d43b91d5740e.png 480w, /p/%E5%9B%BE%E7%81%B5%E5%AE%8C%E5%A4%87%E6%B8%B8%E6%88%8F%E6%94%BB%E7%95%A53/8bit-8-select-1-8bit-in-main-1_hu_83250d36737d2b27.png 1024w"
-	loading="lazy"
-	
-		alt="布线"
-	
-	
-		class="gallery-image" 
-		data-flex-grow="163"
-		data-flex-basis="391px"
-	
->
-<img src="/p/%E5%9B%BE%E7%81%B5%E5%AE%8C%E5%A4%87%E6%B8%B8%E6%88%8F%E6%94%BB%E7%95%A53/describe-ALU.png"
-	width="1510"
-	height="984"
-	srcset="/p/%E5%9B%BE%E7%81%B5%E5%AE%8C%E5%A4%87%E6%B8%B8%E6%88%8F%E6%94%BB%E7%95%A53/describe-ALU_hu_7d818dc42d99d882.png 480w, /p/%E5%9B%BE%E7%81%B5%E5%AE%8C%E5%A4%87%E6%B8%B8%E6%88%8F%E6%94%BB%E7%95%A53/describe-ALU_hu_73984e4bd68966c8.png 1024w"
-	loading="lazy"
-	
-		alt="补一下ALU的描述"
-	
-	
-		class="gallery-image" 
-		data-flex-grow="153"
-		data-flex-basis="368px"
-	
-></p>
-<p>后悔没补上ALU的描述，因为刚才报错我以为要求说明4里的add确实是0输入ALU里面的0了，结果不是，ADD在ALU里对应的控制码是4，那我就补一下，因为现在反正也是临时的，
-不确定后面的控制码要求是什么样的，毕竟0变成add了，那有可能后面ALU也得改，既然现在它要求只是add那我直接就控制码始终是4输入罢，后面要改了再说</p>
-<p><img src="/p/%E5%9B%BE%E7%81%B5%E5%AE%8C%E5%A4%87%E6%B8%B8%E6%88%8F%E6%94%BB%E7%95%A53/temp-LEG-main-1.png"
-	width="1388"
-	height="892"
-	srcset="/p/%E5%9B%BE%E7%81%B5%E5%AE%8C%E5%A4%87%E6%B8%B8%E6%88%8F%E6%94%BB%E7%95%A53/temp-LEG-main-1_hu_c131cfa00c23a193.png 480w, /p/%E5%9B%BE%E7%81%B5%E5%AE%8C%E5%A4%87%E6%B8%B8%E6%88%8F%E6%94%BB%E7%95%A53/temp-LEG-main-1_hu_a5f7bdf03e95146a.png 1024w"
-	loading="lazy"
-	
-		alt="第一版临时的布线方案"
-	
-	
-		class="gallery-image" 
-		data-flex-grow="155"
-		data-flex-basis="373px"
-	
-></p>
-<p>第一版布线方案用了之后，发现一旦输出是0了，就输入不到寄存器里了，意识到了这么个问题，但想想，好像是因为本身的问题，因为上面一版布线我直接就是为了省控制位的线，
-直接用了判断输出是否是0来决定是否要写入寄存器，但明显这是个失误，得补上控制线</p>
-<p><img src="/p/%E5%9B%BE%E7%81%B5%E5%AE%8C%E5%A4%87%E6%B8%B8%E6%88%8F%E6%94%BB%E7%95%A53/LEG-main-1.png"
-	width="1319"
-	height="726"
-	srcset="/p/%E5%9B%BE%E7%81%B5%E5%AE%8C%E5%A4%87%E6%B8%B8%E6%88%8F%E6%94%BB%E7%95%A53/LEG-main-1_hu_495a10c2da4f2fa5.png 480w, /p/%E5%9B%BE%E7%81%B5%E5%AE%8C%E5%A4%87%E6%B8%B8%E6%88%8F%E6%94%BB%E7%95%A53/LEG-main-1_hu_8ad6cb543a4b4179.png 1024w"
-	loading="lazy"
-	
-		alt="最终方案"
-	
-	
-		class="gallery-image" 
-		data-flex-grow="181"
-		data-flex-basis="436px"
-	
->
-<img src="/p/%E5%9B%BE%E7%81%B5%E5%AE%8C%E5%A4%87%E6%B8%B8%E6%88%8F%E6%94%BB%E7%95%A53/LEG-solve-1.png"
-	width="1198"
-	height="700"
-	srcset="/p/%E5%9B%BE%E7%81%B5%E5%AE%8C%E5%A4%87%E6%B8%B8%E6%88%8F%E6%94%BB%E7%95%A53/LEG-solve-1_hu_68ea801a5650f527.png 480w, /p/%E5%9B%BE%E7%81%B5%E5%AE%8C%E5%A4%87%E6%B8%B8%E6%88%8F%E6%94%BB%E7%95%A53/LEG-solve-1_hu_f6d65093e9e3ea2d.png 1024w"
-	loading="lazy"
-	
-		alt="改动处"
-	
-	
-		class="gallery-image" 
-		data-flex-grow="171"
-		data-flex-basis="410px"
-	
-></p>
-<p>有改动的地方如上，也就是操作码强制被指定4，断开初始操作码，以及是新增控制码</p>
-<h2 id="操作码">操作码
-</h2><p><img src="/p/%E5%9B%BE%E7%81%B5%E5%AE%8C%E5%A4%87%E6%B8%B8%E6%88%8F%E6%94%BB%E7%95%A53/LEG-control-code.png"
-	width="794"
-	height="542"
-	srcset="/p/%E5%9B%BE%E7%81%B5%E5%AE%8C%E5%A4%87%E6%B8%B8%E6%88%8F%E6%94%BB%E7%95%A53/LEG-control-code_hu_800fbb79827928c5.png 480w, /p/%E5%9B%BE%E7%81%B5%E5%AE%8C%E5%A4%87%E6%B8%B8%E6%88%8F%E6%94%BB%E7%95%A53/LEG-control-code_hu_7f44b72f0514d870.png 1024w"
+<p>如果要机器人输，那也就是说，我得把它逼到它不得不取最后一张牌，最后一次行动，以及是，可以限制机器人跟我们之间的取牌，具体怎么限制呢？因为1到3张牌，
+一回合我能做到固定一定能拿掉的牌数，是最大数加上最小数，也就是4张，比如说机器人拿1张，我就拿3张，刚好互补上，其他牌数量也一样，方针确定了，接下来就好办了，
+1+4+4=9张，也就是说，我第一次就要取掉3张牌，再通过两次每回合</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl"># take 3 poker
+</span></span><span class="line"><span class="cl">add_ii 0 3 7
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"># 4 poker per bout
+</span></span><span class="line"><span class="cl">add_i1 0 in reg0
+</span></span><span class="line"><span class="cl">sub_1i reg0 5 out
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">add_i1 0 in reg0
+</span></span><span class="line"><span class="cl">sub_1i reg0 1 out
+</span></span></code></pre></div><p>我的汇编命名规则参照上一篇文章<a class="link" href="https://adeepblue.github.io/p/%E5%9B%BE%E7%81%B5%E5%AE%8C%E5%A4%87%E6%B8%B8%E6%88%8F%E6%94%BB%E7%95%A54/"  target="_blank" rel="noopener"
+    >图灵完备游戏攻略4</a>
+不过，看了一下是真优雅，对比起随机存储器那关来说</p>
+<h2 id="半字节乘法">半字节乘法
+</h2><p><img src="/p/%E5%9B%BE%E7%81%B5%E5%AE%8C%E5%A4%87%E6%B8%B8%E6%88%8F%E6%94%BB%E7%95%A55/half-times-require.png"
+	width="1369"
+	height="1068"
+	srcset="/p/%E5%9B%BE%E7%81%B5%E5%AE%8C%E5%A4%87%E6%B8%B8%E6%88%8F%E6%94%BB%E7%95%A55/half-times-require_hu_33dc80fe397890d1.png 480w, /p/%E5%9B%BE%E7%81%B5%E5%AE%8C%E5%A4%87%E6%B8%B8%E6%88%8F%E6%94%BB%E7%95%A55/half-times-require_hu_7d473713cc9f00b7.png 1024w"
 	loading="lazy"
 	
 		alt="要求"
 	
 	
 		class="gallery-image" 
-		data-flex-grow="146"
-		data-flex-basis="351px"
+		data-flex-grow="128"
+		data-flex-basis="307px"
 	
 ></p>
-<p>只能说，果然不出所料了，控制码有变更了，那也就是意味着，ALU我有条件的话重构一个会好一些了，然后按照对应的控制码调整自定义ALU的位置即可</p>
-<p><img src="/p/%E5%9B%BE%E7%81%B5%E5%AE%8C%E5%A4%87%E6%B8%B8%E6%88%8F%E6%94%BB%E7%95%A53/custom-LEG-ALU.png"
-	width="854"
-	height="1009"
-	srcset="/p/%E5%9B%BE%E7%81%B5%E5%AE%8C%E5%A4%87%E6%B8%B8%E6%88%8F%E6%94%BB%E7%95%A53/custom-LEG-ALU_hu_8557c4bae33d3647.png 480w, /p/%E5%9B%BE%E7%81%B5%E5%AE%8C%E5%A4%87%E6%B8%B8%E6%88%8F%E6%94%BB%E7%95%A53/custom-LEG-ALU_hu_e0c934c3feda7854.png 1024w"
+<p>解法其实挺简单的，因为已经被表示成二进制的数了，也就是说a*b已经变成<img src="/p/%E5%9B%BE%E7%81%B5%E5%AE%8C%E5%A4%87%E6%B8%B8%E6%88%8F%E6%94%BB%E7%95%A55/math-type-in-word-1.png"
+	width="724"
+	height="46"
+	srcset="/p/%E5%9B%BE%E7%81%B5%E5%AE%8C%E5%A4%87%E6%B8%B8%E6%88%8F%E6%94%BB%E7%95%A55/math-type-in-word-1_hu_9a835d3e08ecfcf8.png 480w, /p/%E5%9B%BE%E7%81%B5%E5%AE%8C%E5%A4%87%E6%B8%B8%E6%88%8F%E6%94%BB%E7%95%A55/math-type-in-word-1_hu_30c4c4a451fb0dcd.png 1024w"
 	loading="lazy"
-	
-		alt="定制的ALU元件"
 	
 	
 		class="gallery-image" 
-		data-flex-grow="84"
-		data-flex-basis="203px"
+		data-flex-grow="1573"
+		data-flex-basis="3777px"
 	
 ></p>
-<p><img src="/p/%E5%9B%BE%E7%81%B5%E5%AE%8C%E5%A4%87%E6%B8%B8%E6%88%8F%E6%94%BB%E7%95%A53/LEG-main-2.png"
-	width="1920"
-	height="1080"
-	srcset="/p/%E5%9B%BE%E7%81%B5%E5%AE%8C%E5%A4%87%E6%B8%B8%E6%88%8F%E6%94%BB%E7%95%A53/LEG-main-2_hu_719a652b5c41a109.png 480w, /p/%E5%9B%BE%E7%81%B5%E5%AE%8C%E5%A4%87%E6%B8%B8%E6%88%8F%E6%94%BB%E7%95%A53/LEG-main-2_hu_3a2e578d9bce3352.png 1024w"
+<p>其中的展开项，其中又有乘2以及2的倍数实际上就等于数字左移，也就是说，可以按一边当作操作数那样然后后面挨个加起来，再有
+<img src="/p/%E5%9B%BE%E7%81%B5%E5%AE%8C%E5%A4%87%E6%B8%B8%E6%88%8F%E6%94%BB%E7%95%A55/math-type-in-word-2.png"
+	width="607"
+	height="41"
+	srcset="/p/%E5%9B%BE%E7%81%B5%E5%AE%8C%E5%A4%87%E6%B8%B8%E6%88%8F%E6%94%BB%E7%95%A55/math-type-in-word-2_hu_95dc22192e2a24c2.png 480w, /p/%E5%9B%BE%E7%81%B5%E5%AE%8C%E5%A4%87%E6%B8%B8%E6%88%8F%E6%94%BB%E7%95%A55/math-type-in-word-2_hu_ef3fba535094402f.png 1024w"
 	loading="lazy"
-	
-		alt="完成"
 	
 	
 		class="gallery-image" 
-		data-flex-grow="177"
-		data-flex-basis="426px"
+		data-flex-grow="1480"
+		data-flex-basis="3553px"
 	
 ></p>
-<p>最终只要把上述的线给连回去就行了，删掉原来的8bit常数</p>
-<h2 id="立即数">立即数
-</h2><p><img src="/p/%E5%9B%BE%E7%81%B5%E5%AE%8C%E5%A4%87%E6%B8%B8%E6%88%8F%E6%94%BB%E7%95%A53/new-immediate.png"
-	width="1920"
-	height="1080"
-	srcset="/p/%E5%9B%BE%E7%81%B5%E5%AE%8C%E5%A4%87%E6%B8%B8%E6%88%8F%E6%94%BB%E7%95%A53/new-immediate_hu_e04a4554cf9a960b.png 480w, /p/%E5%9B%BE%E7%81%B5%E5%AE%8C%E5%A4%87%E6%B8%B8%E6%88%8F%E6%94%BB%E7%95%A53/new-immediate_hu_e6ac2a132ee6a813.png 1024w"
+<p>所以两个4位二进制数一定不会在八位上溢出，add上的进位也不需要了，只需要直接加起来就行了</p>
+<p><img src="/p/%E5%9B%BE%E7%81%B5%E5%AE%8C%E5%A4%87%E6%B8%B8%E6%88%8F%E6%94%BB%E7%95%A55/half-times-require-final.png"
+	width="1473"
+	height="794"
+	srcset="/p/%E5%9B%BE%E7%81%B5%E5%AE%8C%E5%A4%87%E6%B8%B8%E6%88%8F%E6%94%BB%E7%95%A55/half-times-require-final_hu_b9e0aad378c14a5b.png 480w, /p/%E5%9B%BE%E7%81%B5%E5%AE%8C%E5%A4%87%E6%B8%B8%E6%88%8F%E6%94%BB%E7%95%A55/half-times-require-final_hu_c46e2f0670203010.png 1024w"
 	loading="lazy"
 	
-		alt="新版立即数"
+		alt="最终结果"
 	
 	
 		class="gallery-image" 
-		data-flex-grow="177"
-		data-flex-basis="426px"
+		data-flex-grow="185"
+		data-flex-basis="445px"
 	
 ></p>
-<p>判断是否是立即数模式，我又想造元件了，毕竟，咋说呢，目前8bit后两位是用来判断立即数的，然后前三位是用来判断运算的，估计后面还有加的，不如设计一个元件，
-输出对应立即数模式和计算模式，然后输出对应的东西，这样会快一点，直接放在整个LEG框架空间内就显得太拥挤了，曾经就是输出一位判断码，这次直接输出的是所有控制位，感觉也不错</p>
-<p><img src="/p/%E5%9B%BE%E7%81%B5%E5%AE%8C%E5%A4%87%E6%B8%B8%E6%88%8F%E6%94%BB%E7%95%A53/last-DEC.png"
-	width="1222"
-	height="782"
-	srcset="/p/%E5%9B%BE%E7%81%B5%E5%AE%8C%E5%A4%87%E6%B8%B8%E6%88%8F%E6%94%BB%E7%95%A53/last-DEC_hu_3e98e36e77516d9a.png 480w, /p/%E5%9B%BE%E7%81%B5%E5%AE%8C%E5%A4%87%E6%B8%B8%E6%88%8F%E6%94%BB%E7%95%A53/last-DEC_hu_eb4030101603c72e.png 1024w"
+<h2 id="栈">栈
+</h2><p><img src="/p/%E5%9B%BE%E7%81%B5%E5%AE%8C%E5%A4%87%E6%B8%B8%E6%88%8F%E6%94%BB%E7%95%A55/stack-require.png"
+	width="1757"
+	height="809"
+	srcset="/p/%E5%9B%BE%E7%81%B5%E5%AE%8C%E5%A4%87%E6%B8%B8%E6%88%8F%E6%94%BB%E7%95%A55/stack-require_hu_d37adc9a90f741a8.png 480w, /p/%E5%9B%BE%E7%81%B5%E5%AE%8C%E5%A4%87%E6%B8%B8%E6%88%8F%E6%94%BB%E7%95%A55/stack-require_hu_3b95c03d5dd01cd9.png 1024w"
 	loading="lazy"
 	
-		alt="过去的解码"
+		alt="要求"
 	
 	
 		class="gallery-image" 
-		data-flex-grow="156"
-		data-flex-basis="375px"
+		data-flex-grow="217"
+		data-flex-basis="521px"
 	
->
-<img src="/p/%E5%9B%BE%E7%81%B5%E5%AE%8C%E5%A4%87%E6%B8%B8%E6%88%8F%E6%94%BB%E7%95%A53/LEG-DEC.png"
-	width="860"
-	height="811"
-	srcset="/p/%E5%9B%BE%E7%81%B5%E5%AE%8C%E5%A4%87%E6%B8%B8%E6%88%8F%E6%94%BB%E7%95%A53/LEG-DEC_hu_e0c7e0c33246d57e.png 480w, /p/%E5%9B%BE%E7%81%B5%E5%AE%8C%E5%A4%87%E6%B8%B8%E6%88%8F%E6%94%BB%E7%95%A53/LEG-DEC_hu_fd223b73fe0521ca.png 1024w"
+></p>
+<p>写到这里，我其实还是挺希望我可以把我所有的思考步骤完整写下来的，但考虑到一方面比较花精力，另一方面感觉这也不是适合放在博客里的东西，有时候会太长了，
+如果只是给我自己看我写这一些就已经够了，我也不知道看我博客的其他人是否多，但我感觉基本是我自己而已，有需要的话在我的B站私信或者评论区留言再考虑是否拿出来吧。</p>
+<p><img src="/p/%E5%9B%BE%E7%81%B5%E5%AE%8C%E5%A4%87%E6%B8%B8%E6%88%8F%E6%94%BB%E7%95%A55/stack-finish.png"
+	width="1207"
+	height="625"
+	srcset="/p/%E5%9B%BE%E7%81%B5%E5%AE%8C%E5%A4%87%E6%B8%B8%E6%88%8F%E6%94%BB%E7%95%A55/stack-finish_hu_f3c6a175a4f793a5.png 480w, /p/%E5%9B%BE%E7%81%B5%E5%AE%8C%E5%A4%87%E6%B8%B8%E6%88%8F%E6%94%BB%E7%95%A55/stack-finish_hu_1a6249c090af4b9a.png 1024w"
 	loading="lazy"
 	
-		alt="现在的分流"
+		alt="最终结果"
 	
 	
 		class="gallery-image" 
-		data-flex-grow="106"
-		data-flex-basis="254px"
+		data-flex-grow="193"
+		data-flex-basis="463px"
 	
 ></p>
-<p>以下是目前的布局方案，其中左边处通过解码，上面的三位直接通过新的分流方案通过三位数的传递接替了上面的原布线，而下面的两位控制立即数模式，也就是右边做出的改动，
-输出的两位是两位控制码，也就是输出的数采用原数还是从寄存器里选出来的数，二选一，所以用了八位数据选择器，这样就能运行的通了</p>
-<p><img src="/p/%E5%9B%BE%E7%81%B5%E5%AE%8C%E5%A4%87%E6%B8%B8%E6%88%8F%E6%94%BB%E7%95%A53/LEG-main-3.png"
-	width="1920"
-	height="1080"
-	srcset="/p/%E5%9B%BE%E7%81%B5%E5%AE%8C%E5%A4%87%E6%B8%B8%E6%88%8F%E6%94%BB%E7%95%A53/LEG-main-3_hu_beb8750c20a06a85.png 480w, /p/%E5%9B%BE%E7%81%B5%E5%AE%8C%E5%A4%87%E6%B8%B8%E6%88%8F%E6%94%BB%E7%95%A53/LEG-main-3_hu_9dc5f60043b741c.png 1024w"
+<p><img src="/p/%E5%9B%BE%E7%81%B5%E5%AE%8C%E5%A4%87%E6%B8%B8%E6%88%8F%E6%94%BB%E7%95%A55/stack-for-introduce.png"
+	width="1140"
+	height="617"
+	srcset="/p/%E5%9B%BE%E7%81%B5%E5%AE%8C%E5%A4%87%E6%B8%B8%E6%88%8F%E6%94%BB%E7%95%A55/stack-for-introduce_hu_18d4533e0a17a2dc.png 480w, /p/%E5%9B%BE%E7%81%B5%E5%AE%8C%E5%A4%87%E6%B8%B8%E6%88%8F%E6%94%BB%E7%95%A55/stack-for-introduce_hu_f6521f5576126ee.png 1024w"
 	loading="lazy"
 	
-		alt="现在的布局"
+		alt="解释图"
 	
 	
 		class="gallery-image" 
-		data-flex-grow="177"
-		data-flex-basis="426px"
+		data-flex-grow="184"
+		data-flex-basis="443px"
 	
 ></p>
-<h2 id="条件判断">条件判断
-</h2><p>现在可以自定义指令集了，顺带改一改吧就，刚差点没找到怎么移动描述的位置，抓住AND右边的引脚拉到最边上再拖动左边的引脚即可</p>
-<p><img src="/turing-complete-fourth-article/custom-introduction-set.png"
-	
-	
-	
+<h3 id="压栈">压栈
+</h3><p>首先，先清楚两个操作要干什么，压栈和弹栈，分别是push和pop操作，push，也就是写入一个列表里面，想到栈我第一想到的是要用不小的存储空间，也就是先想到了内存，
+毕竟寄存器也是只是临时存一下数据，空间毕竟还是太小了，但，根据前面写内存的经验来看，一般需要一个寄存器读取地址位，毕竟可以栈这个玩意，可以理解为指针放在某个位置然后在那附近进行读写或者擦除操作，
+需要一个临时的存储工具，也就是寄存器，虽然整个任务比较复杂，但是这些东西构建的时候也不必慌张。</p>
+<p>从简单的入手开始即可，比如我先从压栈操作开始实现，一旦压栈的信号电平变为高电平，
+也就是开始执行压栈压入输入的数值，因为考虑到后面弹栈操作也会需要使用这个寄存器，然后再想到这个信号本身是个1bit的信号，如果不想影响其他信号可以通过这个信号到目标处添加一个开关，
+然后通过这个信号来控制这个开关，那么一旦这路信号不通的时候，其他路信号控制寄存器的时候就可以被开关隔断，不过，一开始我是寄存器出来的数值直接读入内存寻址位的，
+但是这部分在前面的关卡内存读写那边没写好是真的，因为内存初始值指针就是0，然后考虑到还需要累加，那么我在后面直接加入一个add 1就可以了，但是如果压栈操作信号处于低电平了，
+我要求add不工作或者工作了输出，所以就有了那个add出门之后的开关，以及是，压栈开启时得开启内存的写入开关，把写入开关连上信号+开关后的输出即可，以及是需要输入端接上一个开关连到内存的输入部分即可</p>
+<h3 id="弹栈">弹栈
+</h3><p>弹栈的操作，第一是先输出完一次运算值，然后对这个值覆写0的操作，也就是其中要同时激活读和写的开关，读先是读出这个位置的数据，输出开关跟弹栈开关相连，压栈操作并不会控制它毕竟，
+可以直接连，以及是对寄存器的操作，要求每次写入减1，先实现减1的操作，也就是寄存器输出的值回路连上减法器，减法器，add前面加not并不能直接实现，毕竟直接对1取反是254，
+加2才会等于0，也就是说直接就是0位的取反，255,+1就等于0了，实际上是256-1，也就是说加号那边写255或者是0的取反，以及开关操作同上，</p>
+<p>但有一点得注意的是，寄存器输出会有延迟，因为压栈的时候默认的值就是0所以才忽略不计了，然后默认每次+1,每次都可以按时写入，但读取并不是，比如说进行一次压栈操作，寄存器原来是0，输出也是0，
+然后配合数值写入0位，寄存器写入1，但是此刻输出还是0，得等下一刻才会变成1，然后下一刻输出1的值，写入没关系，因为原本就放在那个位置，可以是先进行写入再移动指针等待下一刻的写入或者输出，
+但弹栈不行，比如说我写入一次之后立刻进行弹栈，此时寄存器的输出是1，也就是原本的值，减法器输出0了，我们知道现在寄存器1的位置因为没有经过读写，是没有东西，
+就是默认数值0的，但是我要读写1的位置怎么办呢？直接读写减号后面的输出，那已经经过运算变成0了，以及是输入处被我们禁用输入变成0了，此时可以直接同时接通读和写的开关，
+先让输出要输出的值，然后写入0完成覆写，到这基本已经完成了，但是依旧有个小细节，就是，你的弹栈输出部分读和写并不能相连，一旦连上会导致压栈的时候，你一激活写的开关会把读的开关也一并激活了，
+（当时我输出的开关也连上了后面的线，导致输出也被激活了，实际不应该激活的，如果是直接输出没激活输出了其实也没事）所以我选择用另一个信号+开关的方式来分别激活读和写的信号位。
+到此，两个功能就实现结束了</p>
+<h2 id="压栈和弹栈">压栈和弹栈
+</h2><p><img src="/p/%E5%9B%BE%E7%81%B5%E5%AE%8C%E5%A4%87%E6%B8%B8%E6%88%8F%E6%94%BB%E7%95%A55/push-pop-request.png"
+	width="762"
+	height="508"
+	srcset="/p/%E5%9B%BE%E7%81%B5%E5%AE%8C%E5%A4%87%E6%B8%B8%E6%88%8F%E6%94%BB%E7%95%A55/push-pop-request_hu_3c951c90c0e44904.png 480w, /p/%E5%9B%BE%E7%81%B5%E5%AE%8C%E5%A4%87%E6%B8%B8%E6%88%8F%E6%94%BB%E7%95%A55/push-pop-request_hu_766f96afa1622e1e.png 1024w"
 	loading="lazy"
 	
-		alt="自定义指令集"
+		alt="要求"
 	
+	
+		class="gallery-image" 
+		data-flex-grow="150"
+		data-flex-basis="360px"
 	
 ></p>
-<hr>
-<p>下一篇博文见,下一篇链接<a class="link" href="https://adeepblue.github.io/p/%E5%9B%BE%E7%81%B5%E5%AE%8C%E5%A4%87%E6%B8%B8%E6%88%8F%E6%94%BB%E7%95%A54/"  target="_blank" rel="noopener"
-    >图灵完备游戏攻略4</a></p>
+<p>既然要集成到LEG体系内，就基本必须得给分配一位信号位了，我分配了一个16bit的信号位给压栈和弹栈，然后直接输入输出交互，但是为了以后的可操作性，我把第二位分配成了输入地址位，
+然后第四位分配成了输出地址位，第三位置空，其中有个注意事项就是，一旦这一位栈位亮起，意味着前面的运算位的输出得受到抑制，以及是，输出接到第四位没过解码器之前，
+然后通过最后一位进入输出位即可，其中下图上方部分得稍加判断输入信号的值</p>
+<p><img src="/p/%E5%9B%BE%E7%81%B5%E5%AE%8C%E5%A4%87%E6%B8%B8%E6%88%8F%E6%94%BB%E7%95%A55/push-and-pop.png"
+	width="1288"
+	height="851"
+	srcset="/p/%E5%9B%BE%E7%81%B5%E5%AE%8C%E5%A4%87%E6%B8%B8%E6%88%8F%E6%94%BB%E7%95%A55/push-and-pop_hu_82f0a75eb2969972.png 480w, /p/%E5%9B%BE%E7%81%B5%E5%AE%8C%E5%A4%87%E6%B8%B8%E6%88%8F%E6%94%BB%E7%95%A55/push-and-pop_hu_675c764f6e416a2a.png 1024w"
+	loading="lazy"
+	
+		alt="最终效果"
+	
+	
+		class="gallery-image" 
+		data-flex-grow="151"
+		data-flex-basis="363px"
+	
+></p>
+<p>29/18</p>
 
 </section>
 
@@ -684,6 +536,32 @@
 
     </footer>
 
+
+    
+        <link 
+                rel="stylesheet" 
+                href="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css"integrity="sha384-n8MVd4RsNIU0tAv4ct0nTaAbDJwPJzDEaqSD1odI&#43;WdtXRGWt2kTvGFasHpSy3SV"crossorigin="anonymous"
+            ><script 
+                src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.js"integrity="sha384-XjKyOOlGwcjNTAIQHIpgOno0Hl1YQqzUOEleOLALmuqehneUG&#43;vnGctmUb0ZY0l8"crossorigin="anonymous"
+                defer
+                >
+            </script><script 
+                src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/contrib/auto-render.min.js"integrity="sha384-&#43;VBxd3r6XgURycqtZ117nYw44OOcIax56Z4dCRWbxyPt0Koah1uHoK0o4&#43;/RRE05"crossorigin="anonymous"
+                defer
+                >
+            </script><script>
+    window.addEventListener("DOMContentLoaded", () => {
+	const mainArticleElement = document.querySelector(".main-article");
+        renderMathInElement(mainArticleElement, {
+            delimiters: [
+                { left: "$$", right: "$$", display: true },
+                { left: "$", right: "$", display: false },
+                { left: "\\(", right: "\\)", display: false },
+                { left: "\\[", right: "\\]", display: true }
+            ],
+            ignoredClasses: ["gist"]
+        });})
+</script>
 
     
 </article>
@@ -699,25 +577,6 @@
             
                 
 <article class="has-image">
-    <a href="/p/%E5%9B%BE%E7%81%B5%E5%AE%8C%E5%A4%87%E6%B8%B8%E6%88%8F%E6%94%BB%E7%95%A55/">
-        
-        
-            <div class="article-image">
-                
-                    <img src="/image/Turing-Complete-Logo.png" loading="lazy" data-key="" data-hash="/image/Turing-Complete-Logo.png"/>
-                
-            </div>
-        
-
-        <div class="article-details">
-            <h2 class="article-title">图灵完备游戏攻略5</h2>
-        </div>
-    </a>
-</article>
-
-            
-                
-<article class="has-image">
     <a href="/p/%E5%9B%BE%E7%81%B5%E5%AE%8C%E5%A4%87%E6%B8%B8%E6%88%8F%E6%94%BB%E7%95%A54/">
         
         
@@ -730,6 +589,25 @@
 
         <div class="article-details">
             <h2 class="article-title">图灵完备游戏攻略4</h2>
+        </div>
+    </a>
+</article>
+
+            
+                
+<article class="has-image">
+    <a href="/p/%E5%9B%BE%E7%81%B5%E5%AE%8C%E5%A4%87%E6%B8%B8%E6%88%8F%E6%94%BB%E7%95%A53/">
+        
+        
+            <div class="article-image">
+                
+                    <img src="/image/Turing-Complete-Logo.png" loading="lazy" data-key="" data-hash="/image/Turing-Complete-Logo.png"/>
+                
+            </div>
+        
+
+        <div class="article-details">
+            <h2 class="article-title">图灵完备游戏攻略3</h2>
         </div>
     </a>
 </article>
