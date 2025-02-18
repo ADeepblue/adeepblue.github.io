@@ -3,6 +3,7 @@ date = '2025-02-14T15:10:30+08:00'
 draft = false
 title = '图灵完备游戏攻略4'
 image = "/image/Turing-Complete-Logo.png"
+description = "解决了条件判断2、移位、延迟量、随机存储器的破关思路"
 categories = [
     "steamgame"
 ]
