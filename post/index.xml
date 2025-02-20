@@ -59,31 +59,12 @@
 		data-flex-basis=&#34;307px&#34;
 	
 &gt;&lt;/p&gt;
-&lt;p&gt;解法其实挺简单的，因为已经被表示成二进制的数了，也就是说a*b已经变成&lt;img src=&#34;https://adeepblue.github.io/p/%E5%9B%BE%E7%81%B5%E5%AE%8C%E5%A4%87%E6%B8%B8%E6%88%8F%E6%94%BB%E7%95%A55/math-type-in-word-1.png&#34;
-	width=&#34;724&#34;
-	height=&#34;46&#34;
-	srcset=&#34;https://adeepblue.github.io/p/%E5%9B%BE%E7%81%B5%E5%AE%8C%E5%A4%87%E6%B8%B8%E6%88%8F%E6%94%BB%E7%95%A55/math-type-in-word-1_hu_9a835d3e08ecfcf8.png 480w, https://adeepblue.github.io/p/%E5%9B%BE%E7%81%B5%E5%AE%8C%E5%A4%87%E6%B8%B8%E6%88%8F%E6%94%BB%E7%95%A55/math-type-in-word-1_hu_30c4c4a451fb0dcd.png 1024w&#34;
-	loading=&#34;lazy&#34;
-	
-	
-		class=&#34;gallery-image&#34; 
-		data-flex-grow=&#34;1573&#34;
-		data-flex-basis=&#34;3777px&#34;
-	
-&gt;&lt;/p&gt;
-&lt;p&gt;其中的展开项，其中又有乘2以及2的倍数实际上就等于数字左移，也就是说，可以按一边当作操作数那样然后后面挨个加起来，再有
-&lt;img src=&#34;https://adeepblue.github.io/p/%E5%9B%BE%E7%81%B5%E5%AE%8C%E5%A4%87%E6%B8%B8%E6%88%8F%E6%94%BB%E7%95%A55/math-type-in-word-2.png&#34;
-	width=&#34;607&#34;
-	height=&#34;41&#34;
-	srcset=&#34;https://adeepblue.github.io/p/%E5%9B%BE%E7%81%B5%E5%AE%8C%E5%A4%87%E6%B8%B8%E6%88%8F%E6%94%BB%E7%95%A55/math-type-in-word-2_hu_95dc22192e2a24c2.png 480w, https://adeepblue.github.io/p/%E5%9B%BE%E7%81%B5%E5%AE%8C%E5%A4%87%E6%B8%B8%E6%88%8F%E6%94%BB%E7%95%A55/math-type-in-word-2_hu_ef3fba535094402f.png 1024w&#34;
-	loading=&#34;lazy&#34;
-	
-	
-		class=&#34;gallery-image&#34; 
-		data-flex-grow=&#34;1480&#34;
-		data-flex-basis=&#34;3553px&#34;
-	
-&gt;&lt;/p&gt;
+&lt;p&gt;解法其实挺简单的，因为已经被表示成二进制的数了，也就是说$a \cdot b$ 可以化成&lt;/p&gt;
+&lt;p&gt;a必定可以被表示成二进制，所以令$a = a_0 \cdot 2^0 + a_1 \cdot 2^1+a_2 \cdot 2^2+a_3 \cdot 2^3 , b = b_0 \cdot 2^0 + b_1 \cdot 2^1+b_2 \cdot 2^2+b_3 \cdot 2^3$&lt;/p&gt;
+&lt;p&gt;则
+$ a \cdot b = (a_0 \cdot 2^0 + a_1 \cdot 2^1+a_2 \cdot 2^2+a_3 \cdot 2^3) \cdot (b_0 \cdot 2^0 + b_1 \cdot 2^1+b_2 \cdot 2^2+b_3 \cdot 2^3)$&lt;/p&gt;
+&lt;p&gt;其中的展开项，其中又有乘2以及2的倍数实际上就等于数字左移，也就是说，可以按一边当作操作数那样然后后面挨个加起来，再有&lt;/p&gt;
+&lt;p&gt;$(2^0+2^1+2^2+&amp;hellip;+2^n) \cdot (2^0+2^1+2^2+&amp;hellip;+2^m) = (2^n-1)(2^m-1) &amp;lt; 2^{n+m}$&lt;/p&gt;
 &lt;p&gt;所以两个4位二进制数一定不会在八位上溢出，add上的进位也不需要了，只需要直接加起来就行了&lt;/p&gt;
 &lt;p&gt;&lt;img src=&#34;https://adeepblue.github.io/p/%E5%9B%BE%E7%81%B5%E5%AE%8C%E5%A4%87%E6%B8%B8%E6%88%8F%E6%94%BB%E7%95%A55/half-times-require-final.png&#34;
 	width=&#34;1473&#34;
@@ -196,8 +177,51 @@
 		data-flex-basis=&#34;363px&#34;
 	
 &gt;&lt;/p&gt;
-&lt;p&gt;29/18&lt;/p&gt;
-</description>
+&lt;h2 id=&#34;除法&#34;&gt;除法
+&lt;/h2&gt;&lt;p&gt;$29 \div 18= 1$ ，余数是11&lt;/p&gt;
+&lt;p&gt;思路方向：&lt;/p&gt;
+&lt;p&gt;$a = a_0 \cdot 2^0 + a_1 \cdot 2^1+a_2 \cdot 2^2+a_3 \cdot 2^3$&lt;/p&gt;
+&lt;p&gt;$b = b_0 \cdot 2^0 + b_1 \cdot 2^1+b_2 \cdot 2^2+b_3 \cdot 2^3$&lt;/p&gt;
+&lt;p&gt;令$a$为被除数吧，$b$为除数，现在的思路如下，先找结果最高位，其中在十进制中，小学的时候学过，除法是先对齐最高位，然后判断最高位处的大小
+比如$732 \div 25$&lt;/p&gt;
+$$
+\begin{array}{r|r}
+ &amp; \text{29} \\
+  \hline
+  \text{25}&amp; \text{732} \\
+&amp; \text{-500} \\
+  \hline
+&amp; \text{232} \\
+&amp; \text{-225} \\
+  \hline
+  &amp; \text{7}
+\end{array}
+$$&lt;p&gt;类似于图中这样的计算过程，二进制也是一样的，十进制乘10就移动一位，二进制乘2就移动移位，计算规则其实一样，
+不过最高位得看是否能除的下来&lt;/p&gt;
+&lt;p&gt;要完成这个有一说一跟乘法器一样的麻烦，我现在在构造取最大位的一个元件，如下，已经构建完毕了&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://adeepblue.github.io/p/%E5%9B%BE%E7%81%B5%E5%AE%8C%E5%A4%87%E6%B8%B8%E6%88%8F%E6%94%BB%E7%95%A55/max-bit-output-conponent.png&#34;
+	width=&#34;1158&#34;
+	height=&#34;948&#34;
+	srcset=&#34;https://adeepblue.github.io/p/%E5%9B%BE%E7%81%B5%E5%AE%8C%E5%A4%87%E6%B8%B8%E6%88%8F%E6%94%BB%E7%95%A55/max-bit-output-conponent_hu_3500950d8d4975a5.png 480w, https://adeepblue.github.io/p/%E5%9B%BE%E7%81%B5%E5%AE%8C%E5%A4%87%E6%B8%B8%E6%88%8F%E6%94%BB%E7%95%A55/max-bit-output-conponent_hu_75c2451d64c7b0ce.png 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;取最大位元件&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;122&#34;
+		data-flex-basis=&#34;293px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;p&gt;曾经我本来的想法是，第一个不可行了怎么样换第二个条件，实际就有点时间换空间的刻板印象了，实际则是条件$A$满足时运行,也就是$ABC&amp;hellip;$
+然后如果$A$不成立，则补充$\overline{A}BC&amp;hellip;$,其中$BC&amp;hellip;$为其他条件，也就是意为A不成立时其他条件加入的情况来表示当前状态就可以了&lt;/p&gt;
+$$
+\frac{a}{b} = \frac {1 \cdot 2^m+a_{m-1} \cdot 2^{m-1}+...+a_0 \cdot 2^0} {1 \cdot 2^n+b_{n-1} \cdot 2^{n-1}+...+b_0 \cdot 2^0}
+$$&lt;p&gt;(其中$m$和$n$分别为$a$和$b$的最高位，以及，设定$m&amp;gt;n$),
+则&lt;/p&gt;
+$$
+\frac{a}{2^\frac{m} {n} \cdot b}= \frac {1 \cdot 2^m+a_{m-1} \cdot 2^{m-1}+...+a_0 \cdot 2^0}{1 \cdot 2^m+b_{n-1} \cdot 2^{m-1}+...+b_0 \cdot 2^{m-n}}
+$$</description>
         </item>
         <item>
         <title>图灵完备游戏攻略4</title>
@@ -3082,6 +3106,42 @@ styles文件夹复制出来改文件名成highlight-styles后放在/assets/css/�
 &lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;w&#34;&gt;            &lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;sidebar&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;w&#34;&gt;                &lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;subtitle&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;l&#34;&gt;欢迎来到我的博客网站&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;上述位置删掉en键值就行，只保留一个zh-cn，或者保留en但需要去调模板的值&lt;/p&gt;
+&lt;h2 id=&#34;数学公式的渲染&#34;&gt;数学公式的渲染
+&lt;/h2&gt;&lt;p&gt;一直没动手，因为稍微有点懒，这回几乎是有硬需求了才更新这块，在/layouts/partials/head/head.html中加入以下内容&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-html&#34; data-lang=&#34;html&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c&#34;&gt;&amp;lt;!-- KaTeX --&amp;gt;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;p&#34;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;link&lt;/span&gt; &lt;span class=&#34;na&#34;&gt;rel&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;stylesheet&amp;#34;&lt;/span&gt; &lt;span class=&#34;na&#34;&gt;href&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0-rc.1/katex.min.css&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;&amp;gt;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;p&#34;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;script&lt;/span&gt; &lt;span class=&#34;na&#34;&gt;src&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0-rc.1/katex.min.js&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;&amp;gt;&amp;lt;/&lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;script&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;&amp;gt;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;p&#34;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;script&lt;/span&gt; &lt;span class=&#34;na&#34;&gt;src&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0-rc.1/contrib/auto-render.min.js&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;&amp;gt;&amp;lt;/&lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;script&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;&amp;gt;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;p&#34;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;script&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;&amp;gt;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &lt;span class=&#34;nb&#34;&gt;document&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;nx&#34;&gt;addEventListener&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;&amp;#34;DOMContentLoaded&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;kd&#34;&gt;function&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;()&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;{&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;      &lt;span class=&#34;nx&#34;&gt;renderMathInElement&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;nb&#34;&gt;document&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;nx&#34;&gt;body&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;);&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &lt;span class=&#34;p&#34;&gt;});&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;p&#34;&gt;&amp;lt;/&lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;script&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;&amp;gt;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;参考了&lt;a class=&#34;link&#34; href=&#34;https://orianna-zzo.github.io/sci-tech/2018-03/blog%E5%85%BB%E6%88%90%E8%AE%B06-hugo%E4%B8%AD%E7%9A%84latex%E6%B8%B2%E6%9F%93/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;网页链接&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;下标，如果只是一个数&lt;code&gt;$a_0$&lt;/code&gt;可以直接化成$a_0$,但如果多个数就得&lt;code&gt;$a_{a+b}$&lt;/code&gt;,这样可以化成$a_{a+b}$,分数的使用则是&lt;code&gt;$\frac {1} {2}$&lt;/code&gt;&lt;/p&gt;
+$$\frac {1} {2}$$&lt;p&gt;还有，切记，在代码段前如果放文字会被吞，比如&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;123
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;$$
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;\frac {1}{2}
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;$$
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;其中这个123会不显示&lt;/p&gt;
+&lt;p&gt;矩阵的输入，虽然这个实例中表示的不是矩阵，是除法&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-latex&#34; data-lang=&#34;latex&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;sb&#34;&gt;$$&lt;/span&gt;&lt;span class=&#34;nb&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;nb&#34;&gt;&lt;/span&gt;&lt;span class=&#34;nv&#34;&gt;\begin&lt;/span&gt;&lt;span class=&#34;nb&#34;&gt;{array}{r|r}
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;nb&#34;&gt; &amp;amp; &lt;/span&gt;&lt;span class=&#34;nv&#34;&gt;\text&lt;/span&gt;&lt;span class=&#34;nb&#34;&gt;{&lt;/span&gt;&lt;span class=&#34;m&#34;&gt;29&lt;/span&gt;&lt;span class=&#34;nb&#34;&gt;} &lt;/span&gt;&lt;span class=&#34;nv&#34;&gt;\\&lt;/span&gt;&lt;span class=&#34;nb&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;nb&#34;&gt;  &lt;/span&gt;&lt;span class=&#34;nv&#34;&gt;\hline&lt;/span&gt;&lt;span class=&#34;nb&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;nb&#34;&gt;  &lt;/span&gt;&lt;span class=&#34;nv&#34;&gt;\text&lt;/span&gt;&lt;span class=&#34;nb&#34;&gt;{&lt;/span&gt;&lt;span class=&#34;m&#34;&gt;25&lt;/span&gt;&lt;span class=&#34;nb&#34;&gt;}&amp;amp; &lt;/span&gt;&lt;span class=&#34;nv&#34;&gt;\text&lt;/span&gt;&lt;span class=&#34;nb&#34;&gt;{&lt;/span&gt;&lt;span class=&#34;m&#34;&gt;732&lt;/span&gt;&lt;span class=&#34;nb&#34;&gt;} &lt;/span&gt;&lt;span class=&#34;nv&#34;&gt;\\&lt;/span&gt;&lt;span class=&#34;nb&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;nb&#34;&gt;  &lt;/span&gt;&lt;span class=&#34;nv&#34;&gt;\hline&lt;/span&gt;&lt;span class=&#34;nb&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;nb&#34;&gt;  &amp;amp; &lt;/span&gt;&lt;span class=&#34;nv&#34;&gt;\vdots&lt;/span&gt;&lt;span class=&#34;nb&#34;&gt; &lt;/span&gt;&lt;span class=&#34;nv&#34;&gt;\\&lt;/span&gt;&lt;span class=&#34;nb&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;nb&#34;&gt;  &amp;amp; &lt;/span&gt;&lt;span class=&#34;nv&#34;&gt;\text&lt;/span&gt;&lt;span class=&#34;nb&#34;&gt;{余数}
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;nb&#34;&gt;&lt;/span&gt;&lt;span class=&#34;nv&#34;&gt;\end&lt;/span&gt;&lt;span class=&#34;nb&#34;&gt;{array}
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;nb&#34;&gt;&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;$$&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;目前用到的一些符号
+&lt;code&gt;$\cdot$&lt;/code&gt; -&amp;gt; $\cdot$,
+&lt;code&gt;$\div$&lt;/code&gt;-&amp;gt; $\div$
+&lt;code&gt;\overline{A}&lt;/code&gt; -&amp;gt;$\overline{A}$&lt;/p&gt;
 </description>
         </item>
         <item>
