@@ -16,6 +16,15 @@
     <meta name="twitter:image" content='https://adeepblue.github.io/image/Turing-Complete-Logo.png' />
     <link rel="shortcut icon" href="/favicon.ico" />
 
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0-rc.1/katex.min.css">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0-rc.1/katex.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0-rc.1/contrib/auto-render.min.js"></script>
+
+<script>
+    document.addEventListener("DOMContentLoaded", function() {
+      renderMathInElement(document.body);
+    });
+</script>
          <link rel="stylesheet" href="/css/custom.css">
     </head>
     <body class="
@@ -270,6 +279,7 @@
       </ol>
     </li>
     <li><a href="#压栈和弹栈">压栈和弹栈</a></li>
+    <li><a href="#除法">除法</a></li>
   </ol>
 </nav>
         </div>
@@ -389,31 +399,12 @@
 		data-flex-basis="307px"
 	
 ></p>
-<p>解法其实挺简单的，因为已经被表示成二进制的数了，也就是说a*b已经变成<img src="/p/%E5%9B%BE%E7%81%B5%E5%AE%8C%E5%A4%87%E6%B8%B8%E6%88%8F%E6%94%BB%E7%95%A55/math-type-in-word-1.png"
-	width="724"
-	height="46"
-	srcset="/p/%E5%9B%BE%E7%81%B5%E5%AE%8C%E5%A4%87%E6%B8%B8%E6%88%8F%E6%94%BB%E7%95%A55/math-type-in-word-1_hu_9a835d3e08ecfcf8.png 480w, /p/%E5%9B%BE%E7%81%B5%E5%AE%8C%E5%A4%87%E6%B8%B8%E6%88%8F%E6%94%BB%E7%95%A55/math-type-in-word-1_hu_30c4c4a451fb0dcd.png 1024w"
-	loading="lazy"
-	
-	
-		class="gallery-image" 
-		data-flex-grow="1573"
-		data-flex-basis="3777px"
-	
-></p>
-<p>其中的展开项，其中又有乘2以及2的倍数实际上就等于数字左移，也就是说，可以按一边当作操作数那样然后后面挨个加起来，再有
-<img src="/p/%E5%9B%BE%E7%81%B5%E5%AE%8C%E5%A4%87%E6%B8%B8%E6%88%8F%E6%94%BB%E7%95%A55/math-type-in-word-2.png"
-	width="607"
-	height="41"
-	srcset="/p/%E5%9B%BE%E7%81%B5%E5%AE%8C%E5%A4%87%E6%B8%B8%E6%88%8F%E6%94%BB%E7%95%A55/math-type-in-word-2_hu_95dc22192e2a24c2.png 480w, /p/%E5%9B%BE%E7%81%B5%E5%AE%8C%E5%A4%87%E6%B8%B8%E6%88%8F%E6%94%BB%E7%95%A55/math-type-in-word-2_hu_ef3fba535094402f.png 1024w"
-	loading="lazy"
-	
-	
-		class="gallery-image" 
-		data-flex-grow="1480"
-		data-flex-basis="3553px"
-	
-></p>
+<p>解法其实挺简单的，因为已经被表示成二进制的数了，也就是说$a \cdot b$ 可以化成</p>
+<p>a必定可以被表示成二进制，所以令$a = a_0 \cdot 2^0 + a_1 \cdot 2^1+a_2 \cdot 2^2+a_3 \cdot 2^3 , b = b_0 \cdot 2^0 + b_1 \cdot 2^1+b_2 \cdot 2^2+b_3 \cdot 2^3$</p>
+<p>则
+$ a \cdot b = (a_0 \cdot 2^0 + a_1 \cdot 2^1+a_2 \cdot 2^2+a_3 \cdot 2^3) \cdot (b_0 \cdot 2^0 + b_1 \cdot 2^1+b_2 \cdot 2^2+b_3 \cdot 2^3)$</p>
+<p>其中的展开项，其中又有乘2以及2的倍数实际上就等于数字左移，也就是说，可以按一边当作操作数那样然后后面挨个加起来，再有</p>
+<p>$(2^0+2^1+2^2+&hellip;+2^n) \cdot (2^0+2^1+2^2+&hellip;+2^m) = (2^n-1)(2^m-1) &lt; 2^{n+m}$</p>
 <p>所以两个4位二进制数一定不会在八位上溢出，add上的进位也不需要了，只需要直接加起来就行了</p>
 <p><img src="/p/%E5%9B%BE%E7%81%B5%E5%AE%8C%E5%A4%87%E6%B8%B8%E6%88%8F%E6%94%BB%E7%95%A55/half-times-require-final.png"
 	width="1473"
@@ -526,8 +517,51 @@
 		data-flex-basis="363px"
 	
 ></p>
-<p>29/18</p>
-
+<h2 id="除法">除法
+</h2><p>$29 \div 18= 1$ ，余数是11</p>
+<p>思路方向：</p>
+<p>$a = a_0 \cdot 2^0 + a_1 \cdot 2^1+a_2 \cdot 2^2+a_3 \cdot 2^3$</p>
+<p>$b = b_0 \cdot 2^0 + b_1 \cdot 2^1+b_2 \cdot 2^2+b_3 \cdot 2^3$</p>
+<p>令$a$为被除数吧，$b$为除数，现在的思路如下，先找结果最高位，其中在十进制中，小学的时候学过，除法是先对齐最高位，然后判断最高位处的大小
+比如$732 \div 25$</p>
+$$
+\begin{array}{r|r}
+ & \text{29} \\
+  \hline
+  \text{25}& \text{732} \\
+& \text{-500} \\
+  \hline
+& \text{232} \\
+& \text{-225} \\
+  \hline
+  & \text{7}
+\end{array}
+$$<p>类似于图中这样的计算过程，二进制也是一样的，十进制乘10就移动一位，二进制乘2就移动移位，计算规则其实一样，
+不过最高位得看是否能除的下来</p>
+<p>要完成这个有一说一跟乘法器一样的麻烦，我现在在构造取最大位的一个元件，如下，已经构建完毕了</p>
+<p><img src="/p/%E5%9B%BE%E7%81%B5%E5%AE%8C%E5%A4%87%E6%B8%B8%E6%88%8F%E6%94%BB%E7%95%A55/max-bit-output-conponent.png"
+	width="1158"
+	height="948"
+	srcset="/p/%E5%9B%BE%E7%81%B5%E5%AE%8C%E5%A4%87%E6%B8%B8%E6%88%8F%E6%94%BB%E7%95%A55/max-bit-output-conponent_hu_3500950d8d4975a5.png 480w, /p/%E5%9B%BE%E7%81%B5%E5%AE%8C%E5%A4%87%E6%B8%B8%E6%88%8F%E6%94%BB%E7%95%A55/max-bit-output-conponent_hu_75c2451d64c7b0ce.png 1024w"
+	loading="lazy"
+	
+		alt="取最大位元件"
+	
+	
+		class="gallery-image" 
+		data-flex-grow="122"
+		data-flex-basis="293px"
+	
+></p>
+<p>曾经我本来的想法是，第一个不可行了怎么样换第二个条件，实际就有点时间换空间的刻板印象了，实际则是条件$A$满足时运行,也就是$ABC&hellip;$
+然后如果$A$不成立，则补充$\overline{A}BC&hellip;$,其中$BC&hellip;$为其他条件，也就是意为A不成立时其他条件加入的情况来表示当前状态就可以了</p>
+$$
+\frac{a}{b} = \frac {1 \cdot 2^m+a_{m-1} \cdot 2^{m-1}+...+a_0 \cdot 2^0} {1 \cdot 2^n+b_{n-1} \cdot 2^{n-1}+...+b_0 \cdot 2^0}
+$$<p>(其中$m$和$n$分别为$a$和$b$的最高位，以及，设定$m&gt;n$),
+则</p>
+$$
+\frac{a}{2^\frac{m} {n} \cdot b}= \frac {1 \cdot 2^m+a_{m-1} \cdot 2^{m-1}+...+a_0 \cdot 2^0}{1 \cdot 2^m+b_{n-1} \cdot 2^{m-1}+...+b_0 \cdot 2^{m-n}}
+$$
 </section>
 
 

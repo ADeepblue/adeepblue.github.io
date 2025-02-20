@@ -16,6 +16,15 @@
     <meta name="twitter:image" content='https://adeepblue.github.io/p/hugo%E5%88%9D%E5%A7%8B%E5%8C%96%E7%BD%91%E7%AB%99%E7%AC%94%E8%AE%B0/Logo_of_Hugo_the_static_website_generator.svg.png' />
     <link rel="shortcut icon" href="/favicon.ico" />
 
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0-rc.1/katex.min.css">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0-rc.1/katex.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0-rc.1/contrib/auto-render.min.js"></script>
+
+<script>
+    document.addEventListener("DOMContentLoaded", function() {
+      renderMathInElement(document.body);
+    });
+</script>
          <link rel="stylesheet" href="/css/custom.css">
     </head>
     <body class="
@@ -282,6 +291,7 @@
     <li><a href="#链接css样式表进页面">链接css样式表进页面</a></li>
     <li><a href="#企图修改边栏文字">企图修改边栏文字</a></li>
     <li><a href="#删除多语言选项框">删除多语言选项框</a></li>
+    <li><a href="#数学公式的渲染">数学公式的渲染</a></li>
   </ol>
 </nav>
         </div>
@@ -796,6 +806,42 @@ styles文件夹复制出来改文件名成highlight-styles后放在/assets/css/�
 </span></span></span><span class="line"><span class="cl"><span class="w">            </span><span class="nt">sidebar</span><span class="p">:</span><span class="w">
 </span></span></span><span class="line"><span class="cl"><span class="w">                </span><span class="nt">subtitle</span><span class="p">:</span><span class="w"> </span><span class="l">欢迎来到我的博客网站</span><span class="w">
 </span></span></span></code></pre></div><p>上述位置删掉en键值就行，只保留一个zh-cn，或者保留en但需要去调模板的值</p>
+<h2 id="数学公式的渲染">数学公式的渲染
+</h2><p>一直没动手，因为稍微有点懒，这回几乎是有硬需求了才更新这块，在/layouts/partials/head/head.html中加入以下内容</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-html" data-lang="html"><span class="line"><span class="cl"><span class="c">&lt;!-- KaTeX --&gt;</span>
+</span></span><span class="line"><span class="cl"><span class="p">&lt;</span><span class="nt">link</span> <span class="na">rel</span><span class="o">=</span><span class="s">&#34;stylesheet&#34;</span> <span class="na">href</span><span class="o">=</span><span class="s">&#34;https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0-rc.1/katex.min.css&#34;</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl"><span class="p">&lt;</span><span class="nt">script</span> <span class="na">src</span><span class="o">=</span><span class="s">&#34;https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0-rc.1/katex.min.js&#34;</span><span class="p">&gt;&lt;/</span><span class="nt">script</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl"><span class="p">&lt;</span><span class="nt">script</span> <span class="na">src</span><span class="o">=</span><span class="s">&#34;https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0-rc.1/contrib/auto-render.min.js&#34;</span><span class="p">&gt;&lt;/</span><span class="nt">script</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="p">&lt;</span><span class="nt">script</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">    <span class="nb">document</span><span class="p">.</span><span class="nx">addEventListener</span><span class="p">(</span><span class="s2">&#34;DOMContentLoaded&#34;</span><span class="p">,</span> <span class="kd">function</span><span class="p">()</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">      <span class="nx">renderMathInElement</span><span class="p">(</span><span class="nb">document</span><span class="p">.</span><span class="nx">body</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">    <span class="p">});</span>
+</span></span><span class="line"><span class="cl"><span class="p">&lt;/</span><span class="nt">script</span><span class="p">&gt;</span>
+</span></span></code></pre></div><p>参考了<a class="link" href="https://orianna-zzo.github.io/sci-tech/2018-03/blog%E5%85%BB%E6%88%90%E8%AE%B06-hugo%E4%B8%AD%E7%9A%84latex%E6%B8%B2%E6%9F%93/"  target="_blank" rel="noopener"
+    >网页链接</a></p>
+<p>下标，如果只是一个数<code>$a_0$</code>可以直接化成$a_0$,但如果多个数就得<code>$a_{a+b}$</code>,这样可以化成$a_{a+b}$,分数的使用则是<code>$\frac {1} {2}$</code></p>
+$$\frac {1} {2}$$<p>还有，切记，在代码段前如果放文字会被吞，比如</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">123
+</span></span><span class="line"><span class="cl">$$
+</span></span><span class="line"><span class="cl">\frac {1}{2}
+</span></span><span class="line"><span class="cl">$$
+</span></span></code></pre></div><p>其中这个123会不显示</p>
+<p>矩阵的输入，虽然这个实例中表示的不是矩阵，是除法</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-latex" data-lang="latex"><span class="line"><span class="cl"><span class="sb">$$</span><span class="nb">
+</span></span></span><span class="line"><span class="cl"><span class="nb"></span><span class="nv">\begin</span><span class="nb">{array}{r|r}
+</span></span></span><span class="line"><span class="cl"><span class="nb"> &amp; </span><span class="nv">\text</span><span class="nb">{</span><span class="m">29</span><span class="nb">} </span><span class="nv">\\</span><span class="nb">
+</span></span></span><span class="line"><span class="cl"><span class="nb">  </span><span class="nv">\hline</span><span class="nb">
+</span></span></span><span class="line"><span class="cl"><span class="nb">  </span><span class="nv">\text</span><span class="nb">{</span><span class="m">25</span><span class="nb">}&amp; </span><span class="nv">\text</span><span class="nb">{</span><span class="m">732</span><span class="nb">} </span><span class="nv">\\</span><span class="nb">
+</span></span></span><span class="line"><span class="cl"><span class="nb">  </span><span class="nv">\hline</span><span class="nb">
+</span></span></span><span class="line"><span class="cl"><span class="nb">  &amp; </span><span class="nv">\vdots</span><span class="nb"> </span><span class="nv">\\</span><span class="nb">
+</span></span></span><span class="line"><span class="cl"><span class="nb">  &amp; </span><span class="nv">\text</span><span class="nb">{余数}
+</span></span></span><span class="line"><span class="cl"><span class="nb"></span><span class="nv">\end</span><span class="nb">{array}
+</span></span></span><span class="line"><span class="cl"><span class="nb"></span><span class="s">$$</span>
+</span></span></code></pre></div><p>目前用到的一些符号
+<code>$\cdot$</code> -&gt; $\cdot$,
+<code>$\div$</code>-&gt; $\div$
+<code>\overline{A}</code> -&gt;$\overline{A}$</p>
 
 </section>
 
@@ -805,6 +851,32 @@ styles文件夹复制出来改文件名成highlight-styles后放在/assets/css/�
 
     </footer>
 
+
+    
+        <link 
+                rel="stylesheet" 
+                href="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css"integrity="sha384-n8MVd4RsNIU0tAv4ct0nTaAbDJwPJzDEaqSD1odI&#43;WdtXRGWt2kTvGFasHpSy3SV"crossorigin="anonymous"
+            ><script 
+                src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.js"integrity="sha384-XjKyOOlGwcjNTAIQHIpgOno0Hl1YQqzUOEleOLALmuqehneUG&#43;vnGctmUb0ZY0l8"crossorigin="anonymous"
+                defer
+                >
+            </script><script 
+                src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/contrib/auto-render.min.js"integrity="sha384-&#43;VBxd3r6XgURycqtZ117nYw44OOcIax56Z4dCRWbxyPt0Koah1uHoK0o4&#43;/RRE05"crossorigin="anonymous"
+                defer
+                >
+            </script><script>
+    window.addEventListener("DOMContentLoaded", () => {
+	const mainArticleElement = document.querySelector(".main-article");
+        renderMathInElement(mainArticleElement, {
+            delimiters: [
+                { left: "$$", right: "$$", display: true },
+                { left: "$", right: "$", display: false },
+                { left: "\\(", right: "\\)", display: false },
+                { left: "\\[", right: "\\]", display: true }
+            ],
+            ignoredClasses: ["gist"]
+        });})
+</script>
 
     
 </article>

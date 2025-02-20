@@ -7,6 +7,7 @@ image = "Logo_of_Hugo_the_static_website_generator.svg.png"
 categories = [
     "hugo"
 ]
+math =true
 +++
 
 # Hugo笔记
@@ -278,3 +279,51 @@ languages:
                 subtitle: 欢迎来到我的博客网站
 ```
 上述位置删掉en键值就行，只保留一个zh-cn，或者保留en但需要去调模板的值
+
+## 数学公式的渲染
+
+一直没动手，因为稍微有点懒，这回几乎是有硬需求了才更新这块，在/layouts/partials/head/head.html中加入以下内容
+```html
+<!-- KaTeX -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0-rc.1/katex.min.css">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0-rc.1/katex.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0-rc.1/contrib/auto-render.min.js"></script>
+
+<script>
+    document.addEventListener("DOMContentLoaded", function() {
+      renderMathInElement(document.body);
+    });
+</script>
+```
+参考了[网页链接](https://orianna-zzo.github.io/sci-tech/2018-03/blog%E5%85%BB%E6%88%90%E8%AE%B06-hugo%E4%B8%AD%E7%9A%84latex%E6%B8%B2%E6%9F%93/)
+
+下标，如果只是一个数`$a_0$`可以直接化成$a_0$,但如果多个数就得`$a_{a+b}$`,这样可以化成$a_{a+b}$,分数的使用则是`$\frac {1} {2}$`
+
+$$\frac {1} {2}$$
+
+还有，切记，在代码段前如果放文字会被吞，比如
+```
+123
+$$
+\frac {1}{2}
+$$
+```
+其中这个123会不显示
+
+矩阵的输入，虽然这个实例中表示的不是矩阵，是除法
+```latex
+$$
+\begin{array}{r|r}
+ & \text{29} \\
+  \hline
+  \text{25}& \text{732} \\
+  \hline
+  & \vdots \\
+  & \text{余数}
+\end{array}
+$$
+```
+目前用到的一些符号
+`$\cdot$` -> $\cdot$,
+`$\div$`-> $\div$
+`\overline{A}` ->$\overline{A}$
