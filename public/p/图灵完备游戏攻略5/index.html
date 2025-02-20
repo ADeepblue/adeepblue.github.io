@@ -1,18 +1,18 @@
 <!DOCTYPE html>
 <html lang="zh-cn" dir="ltr">
     <head><meta charset='utf-8'>
-<meta name='viewport' content='width=device-width, initial-scale=1'><meta name='description' content="图灵完备部分游戏攻略 AI打牌 如果要机器人输，那也就是说，我得把它逼到它不得不取最后一张牌，最后一次行动，以及是，可以限制机器人跟我们之间的取牌，具体怎么限制呢？因为1到3张牌， 一回合我能做到固定一定能拿掉的牌数，是最大数加上最小数，也就是4张，比如说机器人拿1张，我就拿3张，刚好互补上，其他牌数量也一样，方针确定了，接下来就好办了， 1+4+4=9张，也就是说，我第一次就要取掉3张牌，再通过两次每回合\n">
+<meta name='viewport' content='width=device-width, initial-scale=1'><meta name='description' content="解决了包含AI打牌、半字节乘法、栈、压栈和弹栈和除法的破关思路">
 <title>图灵完备游戏攻略5</title>
 
 <link rel='canonical' href='https://adeepblue.github.io/p/%E5%9B%BE%E7%81%B5%E5%AE%8C%E5%A4%87%E6%B8%B8%E6%88%8F%E6%94%BB%E7%95%A55/'>
 
 <link rel="stylesheet" href="/scss/style.min.663803bebe609202d5b39d848f2d7c2dc8b598a2d879efa079fa88893d29c49c.css"><meta property='og:title' content="图灵完备游戏攻略5">
-<meta property='og:description' content="图灵完备部分游戏攻略 AI打牌 如果要机器人输，那也就是说，我得把它逼到它不得不取最后一张牌，最后一次行动，以及是，可以限制机器人跟我们之间的取牌，具体怎么限制呢？因为1到3张牌， 一回合我能做到固定一定能拿掉的牌数，是最大数加上最小数，也就是4张，比如说机器人拿1张，我就拿3张，刚好互补上，其他牌数量也一样，方针确定了，接下来就好办了， 1+4+4=9张，也就是说，我第一次就要取掉3张牌，再通过两次每回合\n">
+<meta property='og:description' content="解决了包含AI打牌、半字节乘法、栈、压栈和弹栈和除法的破关思路">
 <meta property='og:url' content='https://adeepblue.github.io/p/%E5%9B%BE%E7%81%B5%E5%AE%8C%E5%A4%87%E6%B8%B8%E6%88%8F%E6%94%BB%E7%95%A55/'>
 <meta property='og:site_name' content='深蓝之亘的博客'>
 <meta property='og:type' content='article'><meta property='article:section' content='Post' /><meta property='article:published_time' content='2025-02-17T21:35:17&#43;08:00'/><meta property='article:modified_time' content='2025-02-17T21:35:17&#43;08:00'/><meta property='og:image' content='https://adeepblue.github.io/image/Turing-Complete-Logo.png' />
 <meta name="twitter:title" content="图灵完备游戏攻略5">
-<meta name="twitter:description" content="图灵完备部分游戏攻略 AI打牌 如果要机器人输，那也就是说，我得把它逼到它不得不取最后一张牌，最后一次行动，以及是，可以限制机器人跟我们之间的取牌，具体怎么限制呢？因为1到3张牌， 一回合我能做到固定一定能拿掉的牌数，是最大数加上最小数，也就是4张，比如说机器人拿1张，我就拿3张，刚好互补上，其他牌数量也一样，方针确定了，接下来就好办了， 1+4+4=9张，也就是说，我第一次就要取掉3张牌，再通过两次每回合\n"><meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:description" content="解决了包含AI打牌、半字节乘法、栈、压栈和弹栈和除法的破关思路"><meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:image" content='https://adeepblue.github.io/image/Turing-Complete-Logo.png' />
     <link rel="shortcut icon" href="/favicon.ico" />
 
@@ -319,6 +319,10 @@
         </h2>
     
         
+        <h3 class="article-subtitle">
+            解决了包含AI打牌、半字节乘法、栈、压栈和弹栈和除法的破关思路
+        </h3>
+        
     </div>
 
     
@@ -518,7 +522,21 @@ $ a \cdot b = (a_0 \cdot 2^0 + a_1 \cdot 2^1+a_2 \cdot 2^2+a_3 \cdot 2^3) \cdot 
 	
 ></p>
 <h2 id="除法">除法
-</h2><p>$29 \div 18= 1$ ，余数是11</p>
+</h2><p><img src="/p/%E5%9B%BE%E7%81%B5%E5%AE%8C%E5%A4%87%E6%B8%B8%E6%88%8F%E6%94%BB%E7%95%A55/divide-require.png"
+	width="749"
+	height="497"
+	srcset="/p/%E5%9B%BE%E7%81%B5%E5%AE%8C%E5%A4%87%E6%B8%B8%E6%88%8F%E6%94%BB%E7%95%A55/divide-require_hu_b7ac0c87e454924d.png 480w, /p/%E5%9B%BE%E7%81%B5%E5%AE%8C%E5%A4%87%E6%B8%B8%E6%88%8F%E6%94%BB%E7%95%A55/divide-require_hu_1dc746601ec28a6d.png 1024w"
+	loading="lazy"
+	
+		alt="要求"
+	
+	
+		class="gallery-image" 
+		data-flex-grow="150"
+		data-flex-basis="361px"
+	
+></p>
+<p>$29 \div 18= 1$ ，余数是11</p>
 <p>思路方向：</p>
 <p>$a = a_0 \cdot 2^0 + a_1 \cdot 2^1+a_2 \cdot 2^2+a_3 \cdot 2^3$</p>
 <p>$b = b_0 \cdot 2^0 + b_1 \cdot 2^1+b_2 \cdot 2^2+b_3 \cdot 2^3$</p>
@@ -537,31 +555,163 @@ $$
   & \text{7}
 \end{array}
 $$<p>类似于图中这样的计算过程，二进制也是一样的，十进制乘10就移动一位，二进制乘2就移动移位，计算规则其实一样，
-不过最高位得看是否能除的下来</p>
-<p>要完成这个有一说一跟乘法器一样的麻烦，我现在在构造取最大位的一个元件，如下，已经构建完毕了</p>
-<p><img src="/p/%E5%9B%BE%E7%81%B5%E5%AE%8C%E5%A4%87%E6%B8%B8%E6%88%8F%E6%94%BB%E7%95%A55/max-bit-output-conponent.png"
-	width="1158"
-	height="948"
-	srcset="/p/%E5%9B%BE%E7%81%B5%E5%AE%8C%E5%A4%87%E6%B8%B8%E6%88%8F%E6%94%BB%E7%95%A55/max-bit-output-conponent_hu_3500950d8d4975a5.png 480w, /p/%E5%9B%BE%E7%81%B5%E5%AE%8C%E5%A4%87%E6%B8%B8%E6%88%8F%E6%94%BB%E7%95%A55/max-bit-output-conponent_hu_75c2451d64c7b0ce.png 1024w"
-	loading="lazy"
-	
-		alt="取最大位元件"
-	
-	
-		class="gallery-image" 
-		data-flex-grow="122"
-		data-flex-basis="293px"
-	
-></p>
+不过最高位得看是否能除的下来，然后一位一位递减判断，能除下来就写1不能除就写0，但这有个例外就是0是被除数得输出错误</p>
 <p>曾经我本来的想法是，第一个不可行了怎么样换第二个条件，实际就有点时间换空间的刻板印象了，实际则是条件$A$满足时运行,也就是$ABC&hellip;$
-然后如果$A$不成立，则补充$\overline{A}BC&hellip;$,其中$BC&hellip;$为其他条件，也就是意为A不成立时其他条件加入的情况来表示当前状态就可以了</p>
+然后如果$A$不成立，则补充$\overline{A}BC&hellip;$,其中$BC&hellip;$为其他条件，也就是意为A不成立时其他条件加入的情况来表示当前状态就可以了，带入到下面的状态就是，
+左移被除数到对齐时最高位跟原数进行比较这个事件为$A$事件，然后$BC&hellip;$其余则是比它低的位的情况</p>
 $$
 \frac{a}{b} = \frac {1 \cdot 2^m+a_{m-1} \cdot 2^{m-1}+...+a_0 \cdot 2^0} {1 \cdot 2^n+b_{n-1} \cdot 2^{n-1}+...+b_0 \cdot 2^0}
 $$<p>(其中$m$和$n$分别为$a$和$b$的最高位，以及，设定$m&gt;n$),
 则</p>
 $$
 \frac{a}{2^\frac{m} {n} \cdot b}= \frac {1 \cdot 2^m+a_{m-1} \cdot 2^{m-1}+...+a_0 \cdot 2^0}{1 \cdot 2^m+b_{n-1} \cdot 2^{m-1}+...+b_0 \cdot 2^{m-n}}
-$$
+$$<p>此时如果$a&gt;2^{\frac {m}{n}}\cdot b$则$2^{\frac {m}{n}}$此位大于$0$,输出的两数比较也就是用比较器比一下$a$和$2^{\frac{m}{n}} \cdot b$的大小即可，
+如果大于则把该位标记1后减去$2^{\frac{m}{n}}\cdot b$然后进入低一位进行判断即可</p>
+<p><img src="/p/%E5%9B%BE%E7%81%B5%E5%AE%8C%E5%A4%87%E6%B8%B8%E6%88%8F%E6%94%BB%E7%95%A55/div-pre.png"
+	width="1448"
+	height="1030"
+	srcset="/p/%E5%9B%BE%E7%81%B5%E5%AE%8C%E5%A4%87%E6%B8%B8%E6%88%8F%E6%94%BB%E7%95%A55/div-pre_hu_7f4f7deb3ac9ca86.png 480w, /p/%E5%9B%BE%E7%81%B5%E5%AE%8C%E5%A4%87%E6%B8%B8%E6%88%8F%E6%94%BB%E7%95%A55/div-pre_hu_716b12bd41d2b661.png 1024w"
+	loading="lazy"
+	
+		alt="初步动手"
+	
+	
+		class="gallery-image" 
+		data-flex-grow="140"
+		data-flex-basis="337px"
+	
+></p>
+<p>实际动手了之后发现可以有复用的地方，如果不复用一部分最后产生的除法运算器实在是太大了，而且线全部要自己拉，所以我选择复用一部分</p>
+<p><img src="/p/%E5%9B%BE%E7%81%B5%E5%AE%8C%E5%A4%87%E6%B8%B8%E6%88%8F%E6%94%BB%E7%95%A55/div-mid-1.png"
+	width="813"
+	height="785"
+	srcset="/p/%E5%9B%BE%E7%81%B5%E5%AE%8C%E5%A4%87%E6%B8%B8%E6%88%8F%E6%94%BB%E7%95%A55/div-mid-1_hu_2175d3b2b86ad64a.png 480w, /p/%E5%9B%BE%E7%81%B5%E5%AE%8C%E5%A4%87%E6%B8%B8%E6%88%8F%E6%94%BB%E7%95%A55/div-mid-1_hu_54af6d20d0355dc.png 1024w"
+	loading="lazy"
+	
+		alt="第一版中继方案"
+	
+	
+		class="gallery-image" 
+		data-flex-grow="103"
+		data-flex-basis="248px"
+	
+></p>
+<p>但我很快发现了问题，一旦除数和要取的位超过8bit，那么溢出之后将得不出结果了，于是我直接想着，既然已经有16位了，我干脆直接把我的乘法运算器也升级到16位算了，
+于是，去调了一下乘法运算器，也就是把原本的16位合并进输出就可以了，如下</p>
+<p><img src="/p/%E5%9B%BE%E7%81%B5%E5%AE%8C%E5%A4%87%E6%B8%B8%E6%88%8F%E6%94%BB%E7%95%A55/times-update-to-16bit.png"
+	width="1920"
+	height="1080"
+	srcset="/p/%E5%9B%BE%E7%81%B5%E5%AE%8C%E5%A4%87%E6%B8%B8%E6%88%8F%E6%94%BB%E7%95%A55/times-update-to-16bit_hu_378f2ffe3531cec0.png 480w, /p/%E5%9B%BE%E7%81%B5%E5%AE%8C%E5%A4%87%E6%B8%B8%E6%88%8F%E6%94%BB%E7%95%A55/times-update-to-16bit_hu_b92ee4bfefa1fba3.png 1024w"
+	loading="lazy"
+	
+		alt="升级完成的乘法运算器"
+	
+	
+		class="gallery-image" 
+		data-flex-grow="177"
+		data-flex-basis="426px"
+	
+></p>
+<p>改动完之后发现，比较器如果不升级成16位的也没办法了，于是把比较器也换成了16位的，如果过于溢出就不必输出8位的了，因为被减数都是8bit的，输出也只要指定8bit就可以了，
+以及其他的</p>
+<p><img src="/p/%E5%9B%BE%E7%81%B5%E5%AE%8C%E5%A4%87%E6%B8%B8%E6%88%8F%E6%94%BB%E7%95%A55/div-mid-2.png"
+	width="1355"
+	height="905"
+	srcset="/p/%E5%9B%BE%E7%81%B5%E5%AE%8C%E5%A4%87%E6%B8%B8%E6%88%8F%E6%94%BB%E7%95%A55/div-mid-2_hu_2a0c2723f30669b9.png 480w, /p/%E5%9B%BE%E7%81%B5%E5%AE%8C%E5%A4%87%E6%B8%B8%E6%88%8F%E6%94%BB%E7%95%A55/div-mid-2_hu_c2d4103dbd0a9582.png 1024w"
+	loading="lazy"
+	
+		alt="第二版除法中继方案"
+	
+	
+		class="gallery-image" 
+		data-flex-grow="149"
+		data-flex-basis="359px"
+	
+></p>
+<p>其中，如果一旦被除数是0，那么直接ban了其他两位的输出，所以需要开关，另外，排除掉除数是0的状态后，讨论一下输出位是0或者1的情况</p>
+<ul>
+<li>如果是0，也就是说最高位移动后大于被除数，也就是类似$245 \div 50$这样，最高位处已经输出得是0了，那么余数就原样输出就可以，然后进行到下一轮的循环，也就是取下一位</li>
+<li>如果是1，也就是说最高位移动后小于被除数，类似的对比则是$245 \div 22$,最高位输出是1，余数得输出两数相减，即$a-2^{\frac {m}{n}} \cdot b$</li>
+</ul>
+<p>所以余数位得规划两路输出，一路是原数输出，另一路是两数相减的输出，启用一个二选一选择器即可</p>
+<p>搞定完这些之后，除法处输出就轻松了，不用摆那么多东西了</p>
+<p><img src="/p/%E5%9B%BE%E7%81%B5%E5%AE%8C%E5%A4%87%E6%B8%B8%E6%88%8F%E6%94%BB%E7%95%A55/division-finish.png"
+	width="781"
+	height="1047"
+	srcset="/p/%E5%9B%BE%E7%81%B5%E5%AE%8C%E5%A4%87%E6%B8%B8%E6%88%8F%E6%94%BB%E7%95%A55/division-finish_hu_a7ef4e7ec77407d9.png 480w, /p/%E5%9B%BE%E7%81%B5%E5%AE%8C%E5%A4%87%E6%B8%B8%E6%88%8F%E6%94%BB%E7%95%A55/division-finish_hu_d9b27b8b1fcb8025.png 1024w"
+	loading="lazy"
+	
+		alt="除法运算器"
+	
+	
+		class="gallery-image" 
+		data-flex-grow="74"
+		data-flex-basis="179px"
+	
+></p>
+<p>然后在LEG-ALU模块中加入除法运算器</p>
+<p><img src="/p/%E5%9B%BE%E7%81%B5%E5%AE%8C%E5%A4%87%E6%B8%B8%E6%88%8F%E6%94%BB%E7%95%A55/LEG-ALU-add-division.png"
+	width="1920"
+	height="1080"
+	srcset="/p/%E5%9B%BE%E7%81%B5%E5%AE%8C%E5%A4%87%E6%B8%B8%E6%88%8F%E6%94%BB%E7%95%A55/LEG-ALU-add-division_hu_f5c50a8c67dd8ba3.png 480w, /p/%E5%9B%BE%E7%81%B5%E5%AE%8C%E5%A4%87%E6%B8%B8%E6%88%8F%E6%94%BB%E7%95%A55/LEG-ALU-add-division_hu_5474470d2fb0b093.png 1024w"
+	loading="lazy"
+	
+		alt="加入除法的LEG-ALU"
+	
+	
+		class="gallery-image" 
+		data-flex-grow="177"
+		data-flex-basis="426px"
+	
+></p>
+<p>到最终这边测试的时候又发现一个问题，我真TM恨啊，你游戏开发者最后平衡也没顾好了，讲真，LEG-ALU里一堆用不上的玩意，塞里面，然后把我可能要用的运算吧，
+塞的没法动了，搞的我原本搭好的逻辑框架不想再去动一下</p>
+<p><img src="/p/%E5%9B%BE%E7%81%B5%E5%AE%8C%E5%A4%87%E6%B8%B8%E6%88%8F%E6%94%BB%E7%95%A55/divide-ALU.png"
+	width="1920"
+	height="1080"
+	srcset="/p/%E5%9B%BE%E7%81%B5%E5%AE%8C%E5%A4%87%E6%B8%B8%E6%88%8F%E6%94%BB%E7%95%A55/divide-ALU_hu_bab859f6426f6035.png 480w, /p/%E5%9B%BE%E7%81%B5%E5%AE%8C%E5%A4%87%E6%B8%B8%E6%88%8F%E6%94%BB%E7%95%A55/divide-ALU_hu_7b30d2dd0223a1f8.png 1024w"
+	loading="lazy"
+	
+		alt="divide版本的ALU"
+	
+	
+		class="gallery-image" 
+		data-flex-grow="177"
+		data-flex-basis="426px"
+	
+></p>
+<p>现在反正有存不同版本的LEG框架，干脆直接就是魔改一个divide版本的ALU出来算了，然后把原本的线路复制出来复制到一个单独的divide线，然后把改完的ALU替换掉原来的ALU，唯一麻烦的地方在于需要重新搞一下指令集</p>
+<p><img src="/p/%E5%9B%BE%E7%81%B5%E5%AE%8C%E5%A4%87%E6%B8%B8%E6%88%8F%E6%94%BB%E7%95%A55/instead-ALU.png"
+	width="1920"
+	height="1080"
+	srcset="/p/%E5%9B%BE%E7%81%B5%E5%AE%8C%E5%A4%87%E6%B8%B8%E6%88%8F%E6%94%BB%E7%95%A55/instead-ALU_hu_5149dc917951a72f.png 480w, /p/%E5%9B%BE%E7%81%B5%E5%AE%8C%E5%A4%87%E6%B8%B8%E6%88%8F%E6%94%BB%E7%95%A55/instead-ALU_hu_dec8f6a63c3dfcb3.png 1024w"
+	loading="lazy"
+	
+		alt="divide版本的LEG框架"
+	
+	
+		class="gallery-image" 
+		data-flex-grow="177"
+		data-flex-basis="426px"
+	
+></p>
+<p>输入代码后发现依旧有错误，结果是发现div-mid的错误，才发现只有小于号，加了一个or算了，有时候不如自己写一个</p>
+<p><img src="/p/%E5%9B%BE%E7%81%B5%E5%AE%8C%E5%A4%87%E6%B8%B8%E6%88%8F%E6%94%BB%E7%95%A55/less-equal.png"
+	width="1163"
+	height="1039"
+	srcset="/p/%E5%9B%BE%E7%81%B5%E5%AE%8C%E5%A4%87%E6%B8%B8%E6%88%8F%E6%94%BB%E7%95%A55/less-equal_hu_3a90bc583e721e02.png 480w, /p/%E5%9B%BE%E7%81%B5%E5%AE%8C%E5%A4%87%E6%B8%B8%E6%88%8F%E6%94%BB%E7%95%A55/less-equal_hu_1dccbda58e887534.png 1024w"
+	loading="lazy"
+	
+		alt="div-mid更新"
+	
+	
+		class="gallery-image" 
+		data-flex-grow="111"
+		data-flex-basis="268px"
+	
+></p>
+<p>这样这一关就过了，拖了不少时间</p>
+
 </section>
 
 

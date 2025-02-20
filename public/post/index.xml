@@ -178,7 +178,21 @@ $ a \cdot b = (a_0 \cdot 2^0 + a_1 \cdot 2^1+a_2 \cdot 2^2+a_3 \cdot 2^3) \cdot 
 	
 &gt;&lt;/p&gt;
 &lt;h2 id=&#34;除法&#34;&gt;除法
-&lt;/h2&gt;&lt;p&gt;$29 \div 18= 1$ ，余数是11&lt;/p&gt;
+&lt;/h2&gt;&lt;p&gt;&lt;img src=&#34;https://adeepblue.github.io/p/%E5%9B%BE%E7%81%B5%E5%AE%8C%E5%A4%87%E6%B8%B8%E6%88%8F%E6%94%BB%E7%95%A55/divide-require.png&#34;
+	width=&#34;749&#34;
+	height=&#34;497&#34;
+	srcset=&#34;https://adeepblue.github.io/p/%E5%9B%BE%E7%81%B5%E5%AE%8C%E5%A4%87%E6%B8%B8%E6%88%8F%E6%94%BB%E7%95%A55/divide-require_hu_b7ac0c87e454924d.png 480w, https://adeepblue.github.io/p/%E5%9B%BE%E7%81%B5%E5%AE%8C%E5%A4%87%E6%B8%B8%E6%88%8F%E6%94%BB%E7%95%A55/divide-require_hu_1dc746601ec28a6d.png 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;要求&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;150&#34;
+		data-flex-basis=&#34;361px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;p&gt;$29 \div 18= 1$ ，余数是11&lt;/p&gt;
 &lt;p&gt;思路方向：&lt;/p&gt;
 &lt;p&gt;$a = a_0 \cdot 2^0 + a_1 \cdot 2^1+a_2 \cdot 2^2+a_3 \cdot 2^3$&lt;/p&gt;
 &lt;p&gt;$b = b_0 \cdot 2^0 + b_1 \cdot 2^1+b_2 \cdot 2^2+b_3 \cdot 2^3$&lt;/p&gt;
@@ -197,31 +211,163 @@ $$
   &amp; \text{7}
 \end{array}
 $$&lt;p&gt;类似于图中这样的计算过程，二进制也是一样的，十进制乘10就移动一位，二进制乘2就移动移位，计算规则其实一样，
-不过最高位得看是否能除的下来&lt;/p&gt;
-&lt;p&gt;要完成这个有一说一跟乘法器一样的麻烦，我现在在构造取最大位的一个元件，如下，已经构建完毕了&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://adeepblue.github.io/p/%E5%9B%BE%E7%81%B5%E5%AE%8C%E5%A4%87%E6%B8%B8%E6%88%8F%E6%94%BB%E7%95%A55/max-bit-output-conponent.png&#34;
-	width=&#34;1158&#34;
-	height=&#34;948&#34;
-	srcset=&#34;https://adeepblue.github.io/p/%E5%9B%BE%E7%81%B5%E5%AE%8C%E5%A4%87%E6%B8%B8%E6%88%8F%E6%94%BB%E7%95%A55/max-bit-output-conponent_hu_3500950d8d4975a5.png 480w, https://adeepblue.github.io/p/%E5%9B%BE%E7%81%B5%E5%AE%8C%E5%A4%87%E6%B8%B8%E6%88%8F%E6%94%BB%E7%95%A55/max-bit-output-conponent_hu_75c2451d64c7b0ce.png 1024w&#34;
-	loading=&#34;lazy&#34;
-	
-		alt=&#34;取最大位元件&#34;
-	
-	
-		class=&#34;gallery-image&#34; 
-		data-flex-grow=&#34;122&#34;
-		data-flex-basis=&#34;293px&#34;
-	
-&gt;&lt;/p&gt;
+不过最高位得看是否能除的下来，然后一位一位递减判断，能除下来就写1不能除就写0，但这有个例外就是0是被除数得输出错误&lt;/p&gt;
 &lt;p&gt;曾经我本来的想法是，第一个不可行了怎么样换第二个条件，实际就有点时间换空间的刻板印象了，实际则是条件$A$满足时运行,也就是$ABC&amp;hellip;$
-然后如果$A$不成立，则补充$\overline{A}BC&amp;hellip;$,其中$BC&amp;hellip;$为其他条件，也就是意为A不成立时其他条件加入的情况来表示当前状态就可以了&lt;/p&gt;
+然后如果$A$不成立，则补充$\overline{A}BC&amp;hellip;$,其中$BC&amp;hellip;$为其他条件，也就是意为A不成立时其他条件加入的情况来表示当前状态就可以了，带入到下面的状态就是，
+左移被除数到对齐时最高位跟原数进行比较这个事件为$A$事件，然后$BC&amp;hellip;$其余则是比它低的位的情况&lt;/p&gt;
 $$
 \frac{a}{b} = \frac {1 \cdot 2^m+a_{m-1} \cdot 2^{m-1}+...+a_0 \cdot 2^0} {1 \cdot 2^n+b_{n-1} \cdot 2^{n-1}+...+b_0 \cdot 2^0}
 $$&lt;p&gt;(其中$m$和$n$分别为$a$和$b$的最高位，以及，设定$m&amp;gt;n$),
 则&lt;/p&gt;
 $$
 \frac{a}{2^\frac{m} {n} \cdot b}= \frac {1 \cdot 2^m+a_{m-1} \cdot 2^{m-1}+...+a_0 \cdot 2^0}{1 \cdot 2^m+b_{n-1} \cdot 2^{m-1}+...+b_0 \cdot 2^{m-n}}
-$$</description>
+$$&lt;p&gt;此时如果$a&amp;gt;2^{\frac {m}{n}}\cdot b$则$2^{\frac {m}{n}}$此位大于$0$,输出的两数比较也就是用比较器比一下$a$和$2^{\frac{m}{n}} \cdot b$的大小即可，
+如果大于则把该位标记1后减去$2^{\frac{m}{n}}\cdot b$然后进入低一位进行判断即可&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://adeepblue.github.io/p/%E5%9B%BE%E7%81%B5%E5%AE%8C%E5%A4%87%E6%B8%B8%E6%88%8F%E6%94%BB%E7%95%A55/div-pre.png&#34;
+	width=&#34;1448&#34;
+	height=&#34;1030&#34;
+	srcset=&#34;https://adeepblue.github.io/p/%E5%9B%BE%E7%81%B5%E5%AE%8C%E5%A4%87%E6%B8%B8%E6%88%8F%E6%94%BB%E7%95%A55/div-pre_hu_7f4f7deb3ac9ca86.png 480w, https://adeepblue.github.io/p/%E5%9B%BE%E7%81%B5%E5%AE%8C%E5%A4%87%E6%B8%B8%E6%88%8F%E6%94%BB%E7%95%A55/div-pre_hu_716b12bd41d2b661.png 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;初步动手&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;140&#34;
+		data-flex-basis=&#34;337px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;p&gt;实际动手了之后发现可以有复用的地方，如果不复用一部分最后产生的除法运算器实在是太大了，而且线全部要自己拉，所以我选择复用一部分&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://adeepblue.github.io/p/%E5%9B%BE%E7%81%B5%E5%AE%8C%E5%A4%87%E6%B8%B8%E6%88%8F%E6%94%BB%E7%95%A55/div-mid-1.png&#34;
+	width=&#34;813&#34;
+	height=&#34;785&#34;
+	srcset=&#34;https://adeepblue.github.io/p/%E5%9B%BE%E7%81%B5%E5%AE%8C%E5%A4%87%E6%B8%B8%E6%88%8F%E6%94%BB%E7%95%A55/div-mid-1_hu_2175d3b2b86ad64a.png 480w, https://adeepblue.github.io/p/%E5%9B%BE%E7%81%B5%E5%AE%8C%E5%A4%87%E6%B8%B8%E6%88%8F%E6%94%BB%E7%95%A55/div-mid-1_hu_54af6d20d0355dc.png 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;第一版中继方案&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;103&#34;
+		data-flex-basis=&#34;248px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;p&gt;但我很快发现了问题，一旦除数和要取的位超过8bit，那么溢出之后将得不出结果了，于是我直接想着，既然已经有16位了，我干脆直接把我的乘法运算器也升级到16位算了，
+于是，去调了一下乘法运算器，也就是把原本的16位合并进输出就可以了，如下&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://adeepblue.github.io/p/%E5%9B%BE%E7%81%B5%E5%AE%8C%E5%A4%87%E6%B8%B8%E6%88%8F%E6%94%BB%E7%95%A55/times-update-to-16bit.png&#34;
+	width=&#34;1920&#34;
+	height=&#34;1080&#34;
+	srcset=&#34;https://adeepblue.github.io/p/%E5%9B%BE%E7%81%B5%E5%AE%8C%E5%A4%87%E6%B8%B8%E6%88%8F%E6%94%BB%E7%95%A55/times-update-to-16bit_hu_378f2ffe3531cec0.png 480w, https://adeepblue.github.io/p/%E5%9B%BE%E7%81%B5%E5%AE%8C%E5%A4%87%E6%B8%B8%E6%88%8F%E6%94%BB%E7%95%A55/times-update-to-16bit_hu_b92ee4bfefa1fba3.png 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;升级完成的乘法运算器&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;177&#34;
+		data-flex-basis=&#34;426px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;p&gt;改动完之后发现，比较器如果不升级成16位的也没办法了，于是把比较器也换成了16位的，如果过于溢出就不必输出8位的了，因为被减数都是8bit的，输出也只要指定8bit就可以了，
+以及其他的&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://adeepblue.github.io/p/%E5%9B%BE%E7%81%B5%E5%AE%8C%E5%A4%87%E6%B8%B8%E6%88%8F%E6%94%BB%E7%95%A55/div-mid-2.png&#34;
+	width=&#34;1355&#34;
+	height=&#34;905&#34;
+	srcset=&#34;https://adeepblue.github.io/p/%E5%9B%BE%E7%81%B5%E5%AE%8C%E5%A4%87%E6%B8%B8%E6%88%8F%E6%94%BB%E7%95%A55/div-mid-2_hu_2a0c2723f30669b9.png 480w, https://adeepblue.github.io/p/%E5%9B%BE%E7%81%B5%E5%AE%8C%E5%A4%87%E6%B8%B8%E6%88%8F%E6%94%BB%E7%95%A55/div-mid-2_hu_c2d4103dbd0a9582.png 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;第二版除法中继方案&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;149&#34;
+		data-flex-basis=&#34;359px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;p&gt;其中，如果一旦被除数是0，那么直接ban了其他两位的输出，所以需要开关，另外，排除掉除数是0的状态后，讨论一下输出位是0或者1的情况&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;如果是0，也就是说最高位移动后大于被除数，也就是类似$245 \div 50$这样，最高位处已经输出得是0了，那么余数就原样输出就可以，然后进行到下一轮的循环，也就是取下一位&lt;/li&gt;
+&lt;li&gt;如果是1，也就是说最高位移动后小于被除数，类似的对比则是$245 \div 22$,最高位输出是1，余数得输出两数相减，即$a-2^{\frac {m}{n}} \cdot b$&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;所以余数位得规划两路输出，一路是原数输出，另一路是两数相减的输出，启用一个二选一选择器即可&lt;/p&gt;
+&lt;p&gt;搞定完这些之后，除法处输出就轻松了，不用摆那么多东西了&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://adeepblue.github.io/p/%E5%9B%BE%E7%81%B5%E5%AE%8C%E5%A4%87%E6%B8%B8%E6%88%8F%E6%94%BB%E7%95%A55/division-finish.png&#34;
+	width=&#34;781&#34;
+	height=&#34;1047&#34;
+	srcset=&#34;https://adeepblue.github.io/p/%E5%9B%BE%E7%81%B5%E5%AE%8C%E5%A4%87%E6%B8%B8%E6%88%8F%E6%94%BB%E7%95%A55/division-finish_hu_a7ef4e7ec77407d9.png 480w, https://adeepblue.github.io/p/%E5%9B%BE%E7%81%B5%E5%AE%8C%E5%A4%87%E6%B8%B8%E6%88%8F%E6%94%BB%E7%95%A55/division-finish_hu_d9b27b8b1fcb8025.png 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;除法运算器&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;74&#34;
+		data-flex-basis=&#34;179px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;p&gt;然后在LEG-ALU模块中加入除法运算器&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://adeepblue.github.io/p/%E5%9B%BE%E7%81%B5%E5%AE%8C%E5%A4%87%E6%B8%B8%E6%88%8F%E6%94%BB%E7%95%A55/LEG-ALU-add-division.png&#34;
+	width=&#34;1920&#34;
+	height=&#34;1080&#34;
+	srcset=&#34;https://adeepblue.github.io/p/%E5%9B%BE%E7%81%B5%E5%AE%8C%E5%A4%87%E6%B8%B8%E6%88%8F%E6%94%BB%E7%95%A55/LEG-ALU-add-division_hu_f5c50a8c67dd8ba3.png 480w, https://adeepblue.github.io/p/%E5%9B%BE%E7%81%B5%E5%AE%8C%E5%A4%87%E6%B8%B8%E6%88%8F%E6%94%BB%E7%95%A55/LEG-ALU-add-division_hu_5474470d2fb0b093.png 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;加入除法的LEG-ALU&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;177&#34;
+		data-flex-basis=&#34;426px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;p&gt;到最终这边测试的时候又发现一个问题，我真TM恨啊，你游戏开发者最后平衡也没顾好了，讲真，LEG-ALU里一堆用不上的玩意，塞里面，然后把我可能要用的运算吧，
+塞的没法动了，搞的我原本搭好的逻辑框架不想再去动一下&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://adeepblue.github.io/p/%E5%9B%BE%E7%81%B5%E5%AE%8C%E5%A4%87%E6%B8%B8%E6%88%8F%E6%94%BB%E7%95%A55/divide-ALU.png&#34;
+	width=&#34;1920&#34;
+	height=&#34;1080&#34;
+	srcset=&#34;https://adeepblue.github.io/p/%E5%9B%BE%E7%81%B5%E5%AE%8C%E5%A4%87%E6%B8%B8%E6%88%8F%E6%94%BB%E7%95%A55/divide-ALU_hu_bab859f6426f6035.png 480w, https://adeepblue.github.io/p/%E5%9B%BE%E7%81%B5%E5%AE%8C%E5%A4%87%E6%B8%B8%E6%88%8F%E6%94%BB%E7%95%A55/divide-ALU_hu_7b30d2dd0223a1f8.png 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;divide版本的ALU&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;177&#34;
+		data-flex-basis=&#34;426px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;p&gt;现在反正有存不同版本的LEG框架，干脆直接就是魔改一个divide版本的ALU出来算了，然后把原本的线路复制出来复制到一个单独的divide线，然后把改完的ALU替换掉原来的ALU，唯一麻烦的地方在于需要重新搞一下指令集&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://adeepblue.github.io/p/%E5%9B%BE%E7%81%B5%E5%AE%8C%E5%A4%87%E6%B8%B8%E6%88%8F%E6%94%BB%E7%95%A55/instead-ALU.png&#34;
+	width=&#34;1920&#34;
+	height=&#34;1080&#34;
+	srcset=&#34;https://adeepblue.github.io/p/%E5%9B%BE%E7%81%B5%E5%AE%8C%E5%A4%87%E6%B8%B8%E6%88%8F%E6%94%BB%E7%95%A55/instead-ALU_hu_5149dc917951a72f.png 480w, https://adeepblue.github.io/p/%E5%9B%BE%E7%81%B5%E5%AE%8C%E5%A4%87%E6%B8%B8%E6%88%8F%E6%94%BB%E7%95%A55/instead-ALU_hu_dec8f6a63c3dfcb3.png 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;divide版本的LEG框架&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;177&#34;
+		data-flex-basis=&#34;426px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;p&gt;输入代码后发现依旧有错误，结果是发现div-mid的错误，才发现只有小于号，加了一个or算了，有时候不如自己写一个&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://adeepblue.github.io/p/%E5%9B%BE%E7%81%B5%E5%AE%8C%E5%A4%87%E6%B8%B8%E6%88%8F%E6%94%BB%E7%95%A55/less-equal.png&#34;
+	width=&#34;1163&#34;
+	height=&#34;1039&#34;
+	srcset=&#34;https://adeepblue.github.io/p/%E5%9B%BE%E7%81%B5%E5%AE%8C%E5%A4%87%E6%B8%B8%E6%88%8F%E6%94%BB%E7%95%A55/less-equal_hu_3a90bc583e721e02.png 480w, https://adeepblue.github.io/p/%E5%9B%BE%E7%81%B5%E5%AE%8C%E5%A4%87%E6%B8%B8%E6%88%8F%E6%94%BB%E7%95%A55/less-equal_hu_1dccbda58e887534.png 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;div-mid更新&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;111&#34;
+		data-flex-basis=&#34;268px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;p&gt;这样这一关就过了，拖了不少时间&lt;/p&gt;
+</description>
         </item>
         <item>
         <title>图灵完备游戏攻略4</title>
