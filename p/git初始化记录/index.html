@@ -389,7 +389,8 @@
 除这个文件之后<code>ssh -T git@github.com</code>立马可以通了，也是给我整无语了</p>
 <h2 id="初始化仓库">初始化仓库
 </h2><h1 id="仓库的配置先需要初始化仓库">仓库的配置，先需要初始化仓库
-</h1><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">git init
+</h1><p>HTTPS协议的通道的演示：</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">git init
 </span></span><span class="line"><span class="cl">REM 新建并切到主分支（此处为cmd的备注方式）
 </span></span><span class="line"><span class="cl">git checkout -b main
 </span></span><span class="line"><span class="cl">REM 添加所有文件到git暂存区
@@ -404,10 +405,11 @@
 </span></span><span class="line"><span class="cl">REM 推送另一种方式我没用所以此处不写
 </span></span><span class="line"><span class="cl">REM 初次添加使用add，如果是一不小心输入错误需要修改就用第二条命令 set-url参数的
 </span></span><span class="line"><span class="cl">git remote add origin https://github.com/Adeepblue/adeepblue.github.io
-</span></span><span class="line"><span class="cl">git remote set-url origin git@github.com:Adeepblue/adeepblue.github.io
+</span></span><span class="line"><span class="cl">git remote set-url origin https://github.com/Adeepblue/adeepblue.github.io
 </span></span><span class="line"><span class="cl">REM 推送，如果本地分支跟远程分支不同可使用-f参数强制推送
 </span></span><span class="line"><span class="cl">git push -f origin main / git push origin main --force
 </span></span></code></pre></div><p>以上，调试完毕</p>
+<p>如果走SSH协议的话，上面add origin或者是set-url origin后面的命令得修改成 <a class="link" href="mailto:git@github.com" >git@github.com</a>:Adeepblue/adeepblue.github.io，其中要确保SSH已经验证过了，</p>
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">git add -f public
 </span></span><span class="line"><span class="cl">git commit -m <span class="s2">&#34;Publish site&#34;</span>
 </span></span><span class="line"><span class="cl">git subtree push --prefix public origin gh-pages

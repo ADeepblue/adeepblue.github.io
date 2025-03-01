@@ -7,7 +7,158 @@
         <generator>Hugo -- gohugo.io</generator>
         <language>zh-cn</language>
         <copyright>深蓝之亘</copyright>
-        <lastBuildDate>Fri, 21 Feb 2025 09:15:00 +0800</lastBuildDate><atom:link href="https://adeepblue.github.io/index.xml" rel="self" type="application/rss+xml" /><item>
+        <lastBuildDate>Sat, 01 Mar 2025 10:55:46 +0800</lastBuildDate><atom:link href="https://adeepblue.github.io/index.xml" rel="self" type="application/rss+xml" /><item>
+        <title>Phi Plugin Koishi</title>
+        <link>https://adeepblue.github.io/p/phi-plugin-koishi/</link>
+        <pubDate>Sat, 01 Mar 2025 10:55:46 +0800</pubDate>
+        
+        <guid>https://adeepblue.github.io/p/phi-plugin-koishi/</guid>
+        <description>&lt;img src="https://adeepblue.github.io/p/phi-plugin-koishi/phi-plugin-logo.png" alt="Featured image of post Phi Plugin Koishi" /&gt;&lt;h1 id=&#34;教程&#34;&gt;教程
+&lt;/h1&gt;&lt;h2 id=&#34;安装nodejs&#34;&gt;安装node.js
+&lt;/h2&gt;&lt;p&gt;官网链接&lt;a class=&#34;link&#34; href=&#34;https://nodejs.org/en/download&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;node.js&lt;/a&gt;
+下一步下一步安装完毕之后在cmd环境下测试一下以下命令，如果下面没有where npm添加环境变量，具体来说是在你安装nodejs文件夹下找到npm之后，添加npm所在的目录进环境变量即可，
+例如这是我的安装路径，那么就把这&lt;code&gt;E:\Program Files\nodejs\&lt;/code&gt;一段新增入环境变量&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;E:\Program Files\nodejs\npm
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;E:\Program Files\nodejs\npm.cmd
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;where npm
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;npm install axios
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;&lt;img src=&#34;https://adeepblue.github.io/p/phi-plugin-koishi/where-npm.cmd.png&#34;
+	width=&#34;1081&#34;
+	height=&#34;526&#34;
+	srcset=&#34;https://adeepblue.github.io/p/phi-plugin-koishi/where-npm.cmd_hu_c67dbf9cb692032c.png 480w, https://adeepblue.github.io/p/phi-plugin-koishi/where-npm.cmd_hu_ec57521e716e780.png 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;图片来源https://blog.csdn.net/qq_51461574/article/details/137583711&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;205&#34;
+		data-flex-basis=&#34;493px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;p&gt;其中检查第一步的输出，是否有包含一个空的npm的文件，在system32目录下，而且在如果有就去对应目录给删了。&lt;/p&gt;
+&lt;p&gt;因为环境变量的执行优先级，system32文件夹处在一个很高的优先级上， 会导致你在命令行输入npm时，系统在环境变量内从前往后查找名为npm的文件或者支持直接执行的文件，
+因为一般新增环境变量通常都是补在末尾，也就是说，system32这样的系统文件一般会获得极高的优先级，然后下面又有空的那个npm文件，就会导致你使用npm命令时调用的就是system32下面的npm空文件，
+导致了你的文件不可用，但是处于system32文件夹下的npm，好像没有任何用处，删除即可  &lt;del&gt;（谁家包管理器有事没事往system32里塞文件啊）&lt;/del&gt;&lt;/p&gt;
+&lt;h2 id=&#34;安装yarn&#34;&gt;安装yarn
+&lt;/h2&gt;&lt;p&gt;安装 yarn&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;npm install -g yarn
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id=&#34;安装koishimsi文件&#34;&gt;安装koishi.msi文件
+&lt;/h2&gt;&lt;p&gt;安装koishi.msi后，在目标目录下初始化koishi,使用以下命令&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;npm init koishi@latest
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;第一次启动会直接启动本地服务端口，第二次启动需要cd koishi-app进入文件夹后执行npm run dev
+然后执行&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;yarn install
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;该命令会自动调用同目录下的package.json文件执行安装koishi的依赖&lt;/p&gt;
+&lt;h2 id=&#34;添加插件&#34;&gt;添加插件
+&lt;/h2&gt;&lt;h3 id=&#34;步骤一&#34;&gt;步骤一
+&lt;/h3&gt;&lt;p&gt;下载好phi-plugin-koishi之后,确保src文件上一级有额外的文件夹，比如说记录你的&lt;strong&gt;父级文件夹&lt;/strong&gt;为&lt;strong&gt;phi-plugin&lt;/strong&gt;，则确保目录为/phi-plugin/src这样的目录结构就行&lt;/p&gt;
+&lt;h3 id=&#34;步骤二&#34;&gt;步骤二
+&lt;/h3&gt;&lt;p&gt;因为koishi并不会给你拖入的文件夹主动添加工作环境内，所以有两种可选的方式来初始化&lt;/p&gt;
+&lt;h4 id=&#34;新建插件方案&#34;&gt;新建插件方案
+&lt;/h4&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;yarn setup phi-plugin
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;它会在/koishi-app/目录下新建一个external文件夹,然后创建/phi-plugin/src/index.ts这样的文件结构，此时你可以直接删除phi-plugin文件夹然后拖动上面步骤一同名的phi-plugin文件夹过来，就可以正常被读取了&lt;/p&gt;
+&lt;h4 id=&#34;修改koishiyml方案&#34;&gt;修改koishi.yml方案
+&lt;/h4&gt;&lt;p&gt;直接在/koishi-app/目录下新建external文件夹，新建插件方案的文件夹是因为yarn setup phi-plugin命令新建的，这里我们自己新建一个文件夹，然后拖动步骤一中的phi-plugin文件夹进来，
+再去/koishi-app/koishi.yml文件内追加以下内容:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;phi-plugin: {}
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;其中对齐plugin下一级即可，如下图,其中不必在意gkna40编号，添加上面的即可，npm run dev后会自动添加&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://adeepblue.github.io/p/phi-plugin-koishi/koishi-yml-file-change.png&#34;
+	width=&#34;1093&#34;
+	height=&#34;1034&#34;
+	srcset=&#34;https://adeepblue.github.io/p/phi-plugin-koishi/koishi-yml-file-change_hu_44e07c130be8ec6e.png 480w, https://adeepblue.github.io/p/phi-plugin-koishi/koishi-yml-file-change_hu_625eeee514d90d7f.png 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;对齐处&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;105&#34;
+		data-flex-basis=&#34;253px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;h2 id=&#34;构建源代码&#34;&gt;构建源代码
+&lt;/h2&gt;&lt;p&gt;yarn build&lt;/p&gt;
+&lt;p&gt;随后参考官网即可&lt;a class=&#34;link&#34; href=&#34;https://koishi.js.org/manual/cli/development.html&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;https://koishi.js.org&lt;/a&gt;&lt;/p&gt;
+</description>
+        </item>
+        <item>
+        <title>图灵完备alpha版攻略1</title>
+        <link>https://adeepblue.github.io/p/%E5%9B%BE%E7%81%B5%E5%AE%8C%E5%A4%87alpha%E7%89%88%E6%94%BB%E7%95%A51/</link>
+        <pubDate>Fri, 28 Feb 2025 11:08:48 +0800</pubDate>
+        
+        <guid>https://adeepblue.github.io/p/%E5%9B%BE%E7%81%B5%E5%AE%8C%E5%A4%87alpha%E7%89%88%E6%94%BB%E7%95%A51/</guid>
+        <description>&lt;img src="https://adeepblue.github.io/image/Turing-Complete-Logo.png" alt="Featured image of post 图灵完备alpha版攻略1" /&gt;&lt;h1 id=&#34;一些说明&#34;&gt;一些说明
+&lt;/h1&gt;&lt;p&gt;图灵完备更新了版本，疑似修复了我图灵完备攻略6的bug，但是以前的存档不能用了（可能类似于内部数据结构变动），也正好，我打算借着这个机会重新玩一下以前的关卡，有一些在现在的视角有更优雅更好的解法，
+就当是补以前没写博客时的攻略了,虽然躲不掉bug也挺难受的&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://adeepblue.github.io/p/%E5%9B%BE%E7%81%B5%E5%AE%8C%E5%A4%87alpha%E7%89%88%E6%94%BB%E7%95%A51/some-language-bug.png&#34;
+	width=&#34;1523&#34;
+	height=&#34;1039&#34;
+	srcset=&#34;https://adeepblue.github.io/p/%E5%9B%BE%E7%81%B5%E5%AE%8C%E5%A4%87alpha%E7%89%88%E6%94%BB%E7%95%A51/some-language-bug_hu_4cb0502480f1b515.png 480w, https://adeepblue.github.io/p/%E5%9B%BE%E7%81%B5%E5%AE%8C%E5%A4%87alpha%E7%89%88%E6%94%BB%E7%95%A51/some-language-bug_hu_ba92a670ffc74218.png 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;一些语言bug&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;146&#34;
+		data-flex-basis=&#34;351px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;h1 id=&#34;图灵完备alpha篇攻略&#34;&gt;图灵完备alpha篇攻略
+&lt;/h1&gt;&lt;h2 id=&#34;nand门-nand-gate&#34;&gt;NAND门 (NAND GATE)
+&lt;/h2&gt;&lt;p&gt;&lt;img src=&#34;https://adeepblue.github.io/p/%E5%9B%BE%E7%81%B5%E5%AE%8C%E5%A4%87alpha%E7%89%88%E6%94%BB%E7%95%A51/nand-solve.png&#34;
+	width=&#34;1679&#34;
+	height=&#34;990&#34;
+	srcset=&#34;https://adeepblue.github.io/p/%E5%9B%BE%E7%81%B5%E5%AE%8C%E5%A4%87alpha%E7%89%88%E6%94%BB%E7%95%A51/nand-solve_hu_6fc8cc7915534bfc.png 480w, https://adeepblue.github.io/p/%E5%9B%BE%E7%81%B5%E5%AE%8C%E5%A4%87alpha%E7%89%88%E6%94%BB%E7%95%A51/nand-solve_hu_bf904213cdcf491d.png 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;说明&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;169&#34;
+		data-flex-basis=&#34;407px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;p&gt;点击输入观察输出，改成对应的类型即可，最终结果是，除了输入1和2都是高电平的时候低电平输出&lt;/p&gt;
+&lt;h2 id=&#34;not-gate&#34;&gt;NOT GATE
+&lt;/h2&gt;&lt;p&gt;&lt;img src=&#34;https://adeepblue.github.io/p/%E5%9B%BE%E7%81%B5%E5%AE%8C%E5%A4%87alpha%E7%89%88%E6%94%BB%E7%95%A51/not-gate.png&#34;
+	width=&#34;1461&#34;
+	height=&#34;1029&#34;
+	srcset=&#34;https://adeepblue.github.io/p/%E5%9B%BE%E7%81%B5%E5%AE%8C%E5%A4%87alpha%E7%89%88%E6%94%BB%E7%95%A51/not-gate_hu_bad33732f383b2b2.png 480w, https://adeepblue.github.io/p/%E5%9B%BE%E7%81%B5%E5%AE%8C%E5%A4%87alpha%E7%89%88%E6%94%BB%E7%95%A51/not-gate_hu_2cecc06dd5812909.png 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;说明&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;141&#34;
+		data-flex-basis=&#34;340px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;p&gt;现在我们手里的只有一个NAND门，但是，由于nand门的特性，我们只要把nand的两个输入绑定成一样即可，4个不同的输入就会坍缩成2输入，也就是0和1&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://adeepblue.github.io/p/%E5%9B%BE%E7%81%B5%E5%AE%8C%E5%A4%87alpha%E7%89%88%E6%94%BB%E7%95%A51/not-solve.png&#34;
+	width=&#34;644&#34;
+	height=&#34;577&#34;
+	srcset=&#34;https://adeepblue.github.io/p/%E5%9B%BE%E7%81%B5%E5%AE%8C%E5%A4%87alpha%E7%89%88%E6%94%BB%E7%95%A51/not-solve_hu_af1859bb3c44665f.png 480w, https://adeepblue.github.io/p/%E5%9B%BE%E7%81%B5%E5%AE%8C%E5%A4%87alpha%E7%89%88%E6%94%BB%E7%95%A51/not-solve_hu_4cd6f41cd529635c.png 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;111&#34;
+		data-flex-basis=&#34;267px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;h2 id=&#34;and-gate&#34;&gt;AND GATE
+&lt;/h2&gt;&lt;h3 id=&#34;解释一&#34;&gt;解释一
+&lt;/h3&gt;&lt;p&gt;观察NAND门，它信号也只有两个输入都是1的时候才会为0，这是一个特殊的突变点，and门也有类似的结构，但是突变点在两个输入都是1的时候，结果为1，那么，
+现在已经有not门可以取反了，我就可以用not门直接反转输出结果，在nand的末尾加上not门就是and门了&lt;/p&gt;
+</description>
+        </item>
+        <item>
         <title>图灵完备游戏攻略6</title>
         <link>https://adeepblue.github.io/p/%E5%9B%BE%E7%81%B5%E5%AE%8C%E5%A4%87%E6%B8%B8%E6%88%8F%E6%94%BB%E7%95%A56/</link>
         <pubDate>Fri, 21 Feb 2025 09:15:00 +0800</pubDate>
@@ -339,12 +490,16 @@
 即get_ram以及其他指令等，以下介绍各种模块&lt;/p&gt;
 &lt;h3 id=&#34;calc-计算模块&#34;&gt;calc 计算模块
 &lt;/h3&gt;&lt;p&gt;&lt;strong&gt;语法&lt;/strong&gt;&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;[command] [reg] [reg] [reg](result)
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;except not
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;[command]|[command+im] [reg] [reg] [reg](result)
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;not 
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;not|not+im [reg] [reg]
 &lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;&lt;strong&gt;机器码指令对照表&lt;/strong&gt;&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;1 add 2 sub 3 times 4 div 5 or 6 nor 7 nand 8 and 9 xor 10 xnor  11 ashr 12 ror 13 rol 14 shr 15 shl 63 not
-&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h3 id=&#34;logic-逻辑模块&#34;&gt;logic 逻辑模块
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;特意把not放到末尾是因为它只要占用3个程序位即可,其他在process-center可以一起包起来，因为语法都是一样的&lt;/p&gt;
+&lt;h3 id=&#34;logic-逻辑模块&#34;&gt;logic 逻辑模块
 &lt;/h3&gt;&lt;p&gt;&lt;strong&gt;语法&lt;/strong&gt;&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;[command] [reg] [reg] [num](count)
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;[command]|[command+im] [reg] [reg] [num](count)
 &lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;&lt;strong&gt;机器码指令对照表&lt;/strong&gt;&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;64 eq 65 noteq 66 lessns 67 lesseqns 68 greater_ns 69 greatereq_ns 70 less_s 71 lesseq_s 72 greater_s 73 greatereq_s
 &lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h3 id=&#34;其他指令及其语法&#34;&gt;其他指令及其语法
@@ -365,7 +520,36 @@
 &lt;/h3&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;1-16 reg
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;17 count
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;18 io
-&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</description>
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;停更这个系列，等bug修复，如下&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://adeepblue.github.io/p/%E5%9B%BE%E7%81%B5%E5%AE%8C%E5%A4%87%E6%B8%B8%E6%88%8F%E6%94%BB%E7%95%A56/screenshot1.png&#34;
+	width=&#34;1920&#34;
+	height=&#34;1080&#34;
+	srcset=&#34;https://adeepblue.github.io/p/%E5%9B%BE%E7%81%B5%E5%AE%8C%E5%A4%87%E6%B8%B8%E6%88%8F%E6%94%BB%E7%95%A56/screenshot1_hu_29740b7a1cba0773.png 480w, https://adeepblue.github.io/p/%E5%9B%BE%E7%81%B5%E5%AE%8C%E5%A4%87%E6%B8%B8%E6%88%8F%E6%94%BB%E7%95%A56/screenshot1_hu_33c00b13d042c2a7.png 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;电路中的S&amp;#43;&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;177&#34;
+		data-flex-basis=&#34;426px&#34;
+	
+&gt;
+&lt;img src=&#34;https://adeepblue.github.io/p/%E5%9B%BE%E7%81%B5%E5%AE%8C%E5%A4%87%E6%B8%B8%E6%88%8F%E6%94%BB%E7%95%A56/screenshot2.png&#34;
+	width=&#34;1920&#34;
+	height=&#34;1080&#34;
+	srcset=&#34;https://adeepblue.github.io/p/%E5%9B%BE%E7%81%B5%E5%AE%8C%E5%A4%87%E6%B8%B8%E6%88%8F%E6%94%BB%E7%95%A56/screenshot2_hu_f46a9fedd2f3e06f.png 480w, https://adeepblue.github.io/p/%E5%9B%BE%E7%81%B5%E5%AE%8C%E5%A4%87%E6%B8%B8%E6%88%8F%E6%94%BB%E7%95%A56/screenshot2_hu_493d00ca954825c9.png 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;S&amp;#43;元件&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;177&#34;
+		data-flex-basis=&#34;426px&#34;
+	
+&gt;&lt;/p&gt;
+</description>
         </item>
         <item>
         <title>图灵完备游戏攻略5</title>
@@ -3171,6 +3355,10 @@ label的定义的关键字是&lt;code&gt;loop&lt;/code&gt;，也就是，后面�
 &lt;/h2&gt;&lt;p&gt;一般bat脚本被用来直接用for循环的还是少，一般会被用来作一些简单的启动，比如启动python执行某个脚本什么的，这种比较方便，虽然有for循环
 但对比其他语言来说，实在有点眼花缭乱，一般用AI去问问就差不多了，我不喜欢在cmd命令里用for循环，在里面定义读取个变量很多时候也够呛，
 但也不否认，如果用它写一些简单的东西，可以省去很多的重复劳动，做到一定的自动化，这一点我还是比较喜欢的&lt;/p&gt;
+&lt;h2 id=&#34;curl&#34;&gt;curl
+&lt;/h2&gt;&lt;p&gt;curl &amp;ndash;proxy 127.0.0.1:4780 &lt;a class=&#34;link&#34; href=&#34;https://www.google.com&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;www.google.com&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;kimi给了错误的x参数，然后报错了，被AI气晕.jpg，先贴在这吧，以及是，powershell环境运行有可能会导致未知报错，可能需要切换cmd环境&lt;/p&gt;
 </description>
         </item>
         <item>
@@ -3690,7 +3878,8 @@ $$\frac {1} {2}$$&lt;p&gt;还有，切记，在代码段前如果放文字会被
 除这个文件之后&lt;code&gt;ssh -T git@github.com&lt;/code&gt;立马可以通了，也是给我整无语了&lt;/p&gt;
 &lt;h2 id=&#34;初始化仓库&#34;&gt;初始化仓库
 &lt;/h2&gt;&lt;h1 id=&#34;仓库的配置先需要初始化仓库&#34;&gt;仓库的配置，先需要初始化仓库
-&lt;/h1&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;git init
+&lt;/h1&gt;&lt;p&gt;HTTPS协议的通道的演示：&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;git init
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;REM 新建并切到主分支（此处为cmd的备注方式）
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;git checkout -b main
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;REM 添加所有文件到git暂存区
@@ -3705,10 +3894,11 @@ $$\frac {1} {2}$$&lt;p&gt;还有，切记，在代码段前如果放文字会被
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;REM 推送另一种方式我没用所以此处不写
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;REM 初次添加使用add，如果是一不小心输入错误需要修改就用第二条命令 set-url参数的
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;git remote add origin https://github.com/Adeepblue/adeepblue.github.io
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;git remote set-url origin git@github.com:Adeepblue/adeepblue.github.io
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;git remote set-url origin https://github.com/Adeepblue/adeepblue.github.io
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;REM 推送，如果本地分支跟远程分支不同可使用-f参数强制推送
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;git push -f origin main / git push origin main --force
 &lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;以上，调试完毕&lt;/p&gt;
+&lt;p&gt;如果走SSH协议的话，上面add origin或者是set-url origin后面的命令得修改成 &lt;a class=&#34;link&#34; href=&#34;mailto:git@github.com&#34; &gt;git@github.com&lt;/a&gt;:Adeepblue/adeepblue.github.io，其中要确保SSH已经验证过了，&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;git add -f public
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;git commit -m &lt;span class=&#34;s2&#34;&gt;&amp;#34;Publish site&amp;#34;&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;git subtree push --prefix public origin gh-pages
@@ -3800,7 +3990,9 @@ $$\frac {1} {2}$$&lt;p&gt;还有，切记，在代码段前如果放文字会被
         
         <guid>https://adeepblue.github.io/%E6%9B%B4%E6%96%B0%E6%97%A5%E5%BF%97/</guid>
         <description>&lt;h1 id=&#34;更新记录&#34;&gt;更新记录
-&lt;/h1&gt;&lt;h2 id=&#34;---------------2025-02-24更新---------------------&#34;&gt;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;2025-02-24更新&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;
+&lt;/h1&gt;&lt;h2 id=&#34;---------------2025-03-1更新---------------------&#34;&gt;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;2025-03-1更新&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;
+&lt;/h2&gt;&lt;p&gt;新增了phi-plugin篇&lt;/p&gt;
+&lt;h2 id=&#34;---------------2025-02-24更新---------------------&#34;&gt;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;2025-02-24更新&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;
 &lt;/h2&gt;&lt;p&gt;更新64位架构ing&lt;/p&gt;
 &lt;h2 id=&#34;---------------2025-02-20更新---------------------&#34;&gt;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;2025-02-20更新&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;
 &lt;/h2&gt;&lt;p&gt;完结了图灵完备第五篇攻略，解决了除法的破关思路&lt;/p&gt;

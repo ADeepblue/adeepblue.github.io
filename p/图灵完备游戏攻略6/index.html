@@ -679,12 +679,16 @@
 即get_ram以及其他指令等，以下介绍各种模块</p>
 <h3 id="calc-计算模块">calc 计算模块
 </h3><p><strong>语法</strong></p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">[command] [reg] [reg] [reg](result)
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">except not
+</span></span><span class="line"><span class="cl">[command]|[command+im] [reg] [reg] [reg](result)
+</span></span><span class="line"><span class="cl">not 
+</span></span><span class="line"><span class="cl">not|not+im [reg] [reg]
 </span></span></code></pre></div><p><strong>机器码指令对照表</strong></p>
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">1 add 2 sub 3 times 4 div 5 or 6 nor 7 nand 8 and 9 xor 10 xnor  11 ashr 12 ror 13 rol 14 shr 15 shl 63 not
-</span></span></code></pre></div><h3 id="logic-逻辑模块">logic 逻辑模块
+</span></span></code></pre></div><p>特意把not放到末尾是因为它只要占用3个程序位即可,其他在process-center可以一起包起来，因为语法都是一样的</p>
+<h3 id="logic-逻辑模块">logic 逻辑模块
 </h3><p><strong>语法</strong></p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">[command] [reg] [reg] [num](count)
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">[command]|[command+im] [reg] [reg] [num](count)
 </span></span></code></pre></div><p><strong>机器码指令对照表</strong></p>
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">64 eq 65 noteq 66 lessns 67 lesseqns 68 greater_ns 69 greatereq_ns 70 less_s 71 lesseq_s 72 greater_s 73 greatereq_s
 </span></span></code></pre></div><h3 id="其他指令及其语法">其他指令及其语法
@@ -705,7 +709,36 @@
 </h3><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">1-16 reg
 </span></span><span class="line"><span class="cl">17 count
 </span></span><span class="line"><span class="cl">18 io
-</span></span></code></pre></div>
+</span></span></code></pre></div><p>停更这个系列，等bug修复，如下</p>
+<p><img src="/p/%E5%9B%BE%E7%81%B5%E5%AE%8C%E5%A4%87%E6%B8%B8%E6%88%8F%E6%94%BB%E7%95%A56/screenshot1.png"
+	width="1920"
+	height="1080"
+	srcset="/p/%E5%9B%BE%E7%81%B5%E5%AE%8C%E5%A4%87%E6%B8%B8%E6%88%8F%E6%94%BB%E7%95%A56/screenshot1_hu_29740b7a1cba0773.png 480w, /p/%E5%9B%BE%E7%81%B5%E5%AE%8C%E5%A4%87%E6%B8%B8%E6%88%8F%E6%94%BB%E7%95%A56/screenshot1_hu_33c00b13d042c2a7.png 1024w"
+	loading="lazy"
+	
+		alt="电路中的S&#43;"
+	
+	
+		class="gallery-image" 
+		data-flex-grow="177"
+		data-flex-basis="426px"
+	
+>
+<img src="/p/%E5%9B%BE%E7%81%B5%E5%AE%8C%E5%A4%87%E6%B8%B8%E6%88%8F%E6%94%BB%E7%95%A56/screenshot2.png"
+	width="1920"
+	height="1080"
+	srcset="/p/%E5%9B%BE%E7%81%B5%E5%AE%8C%E5%A4%87%E6%B8%B8%E6%88%8F%E6%94%BB%E7%95%A56/screenshot2_hu_f46a9fedd2f3e06f.png 480w, /p/%E5%9B%BE%E7%81%B5%E5%AE%8C%E5%A4%87%E6%B8%B8%E6%88%8F%E6%94%BB%E7%95%A56/screenshot2_hu_493d00ca954825c9.png 1024w"
+	loading="lazy"
+	
+		alt="S&#43;元件"
+	
+	
+		class="gallery-image" 
+		data-flex-grow="177"
+		data-flex-basis="426px"
+	
+></p>
+
 </section>
 
 
