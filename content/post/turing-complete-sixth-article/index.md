@@ -120,17 +120,21 @@ default-not [reg] [reg]
 ### calc 计算模块
 **语法** 
 ```
-[command] [reg] [reg] [reg](result)
+except not
+[command]|[command+im] [reg] [reg] [reg](result)
+not 
+not|not+im [reg] [reg]
 ```
 **机器码指令对照表**
 ```
 1 add 2 sub 3 times 4 div 5 or 6 nor 7 nand 8 and 9 xor 10 xnor  11 ashr 12 ror 13 rol 14 shr 15 shl 63 not
 ```
+特意把not放到末尾是因为它只要占用3个程序位即可,其他在process-center可以一起包起来，因为语法都是一样的
 
 ### logic 逻辑模块
 **语法** 
 ```
-[command] [reg] [reg] [num](count)
+[command]|[command+im] [reg] [reg] [num](count)
 ```
 **机器码指令对照表**
 ```
@@ -159,4 +163,9 @@ default-add+[im|io] [reg|io] [reg|io] [result-reg](result)
 17 count
 18 io
 ```
+
+停更这个系列，等bug修复，如下
+
+![电路中的S+](screenshot1.png)
+![S+元件](screenshot2.png)
 

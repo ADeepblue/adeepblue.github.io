@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+    <channel>
+        <title>Turing Complete Alpha on 深蓝之亘的博客</title>
+        <link>https://adeepblue.github.io/categories/turing-complete-alpha/</link>
+        <description>Recent content in Turing Complete Alpha on 深蓝之亘的博客</description>
+        <generator>Hugo -- gohugo.io</generator>
+        <language>zh-cn</language>
+        <copyright>深蓝之亘</copyright>
+        <lastBuildDate>Fri, 28 Feb 2025 11:08:48 +0800</lastBuildDate><atom:link href="https://adeepblue.github.io/categories/turing-complete-alpha/index.xml" rel="self" type="application/rss+xml" /><item>
+        <title>图灵完备alpha版攻略1</title>
+        <link>https://adeepblue.github.io/p/%E5%9B%BE%E7%81%B5%E5%AE%8C%E5%A4%87alpha%E7%89%88%E6%94%BB%E7%95%A51/</link>
+        <pubDate>Fri, 28 Feb 2025 11:08:48 +0800</pubDate>
+        
+        <guid>https://adeepblue.github.io/p/%E5%9B%BE%E7%81%B5%E5%AE%8C%E5%A4%87alpha%E7%89%88%E6%94%BB%E7%95%A51/</guid>
+        <description>&lt;img src="https://adeepblue.github.io/image/Turing-Complete-Logo.png" alt="Featured image of post 图灵完备alpha版攻略1" /&gt;&lt;h1 id=&#34;一些说明&#34;&gt;一些说明
+&lt;/h1&gt;&lt;p&gt;图灵完备更新了版本，疑似修复了我图灵完备攻略6的bug，但是以前的存档不能用了（可能类似于内部数据结构变动），也正好，我打算借着这个机会重新玩一下以前的关卡，有一些在现在的视角有更优雅更好的解法，
+就当是补以前没写博客时的攻略了,虽然躲不掉bug也挺难受的&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://adeepblue.github.io/p/%E5%9B%BE%E7%81%B5%E5%AE%8C%E5%A4%87alpha%E7%89%88%E6%94%BB%E7%95%A51/some-language-bug.png&#34;
+	width=&#34;1523&#34;
+	height=&#34;1039&#34;
+	srcset=&#34;https://adeepblue.github.io/p/%E5%9B%BE%E7%81%B5%E5%AE%8C%E5%A4%87alpha%E7%89%88%E6%94%BB%E7%95%A51/some-language-bug_hu_4cb0502480f1b515.png 480w, https://adeepblue.github.io/p/%E5%9B%BE%E7%81%B5%E5%AE%8C%E5%A4%87alpha%E7%89%88%E6%94%BB%E7%95%A51/some-language-bug_hu_ba92a670ffc74218.png 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;一些语言bug&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;146&#34;
+		data-flex-basis=&#34;351px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;h1 id=&#34;图灵完备alpha篇攻略&#34;&gt;图灵完备alpha篇攻略
+&lt;/h1&gt;&lt;h2 id=&#34;nand门-nand-gate&#34;&gt;NAND门 (NAND GATE)
+&lt;/h2&gt;&lt;p&gt;&lt;img src=&#34;https://adeepblue.github.io/p/%E5%9B%BE%E7%81%B5%E5%AE%8C%E5%A4%87alpha%E7%89%88%E6%94%BB%E7%95%A51/nand-solve.png&#34;
+	width=&#34;1679&#34;
+	height=&#34;990&#34;
+	srcset=&#34;https://adeepblue.github.io/p/%E5%9B%BE%E7%81%B5%E5%AE%8C%E5%A4%87alpha%E7%89%88%E6%94%BB%E7%95%A51/nand-solve_hu_6fc8cc7915534bfc.png 480w, https://adeepblue.github.io/p/%E5%9B%BE%E7%81%B5%E5%AE%8C%E5%A4%87alpha%E7%89%88%E6%94%BB%E7%95%A51/nand-solve_hu_bf904213cdcf491d.png 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;说明&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;169&#34;
+		data-flex-basis=&#34;407px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;p&gt;点击输入观察输出，改成对应的类型即可，最终结果是，除了输入1和2都是高电平的时候低电平输出&lt;/p&gt;
+&lt;h2 id=&#34;not-gate&#34;&gt;NOT GATE
+&lt;/h2&gt;&lt;p&gt;&lt;img src=&#34;https://adeepblue.github.io/p/%E5%9B%BE%E7%81%B5%E5%AE%8C%E5%A4%87alpha%E7%89%88%E6%94%BB%E7%95%A51/not-gate.png&#34;
+	width=&#34;1461&#34;
+	height=&#34;1029&#34;
+	srcset=&#34;https://adeepblue.github.io/p/%E5%9B%BE%E7%81%B5%E5%AE%8C%E5%A4%87alpha%E7%89%88%E6%94%BB%E7%95%A51/not-gate_hu_bad33732f383b2b2.png 480w, https://adeepblue.github.io/p/%E5%9B%BE%E7%81%B5%E5%AE%8C%E5%A4%87alpha%E7%89%88%E6%94%BB%E7%95%A51/not-gate_hu_2cecc06dd5812909.png 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;说明&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;141&#34;
+		data-flex-basis=&#34;340px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;p&gt;现在我们手里的只有一个NAND门，但是，由于nand门的特性，我们只要把nand的两个输入绑定成一样即可，4个不同的输入就会坍缩成2输入，也就是0和1&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://adeepblue.github.io/p/%E5%9B%BE%E7%81%B5%E5%AE%8C%E5%A4%87alpha%E7%89%88%E6%94%BB%E7%95%A51/not-solve.png&#34;
+	width=&#34;644&#34;
+	height=&#34;577&#34;
+	srcset=&#34;https://adeepblue.github.io/p/%E5%9B%BE%E7%81%B5%E5%AE%8C%E5%A4%87alpha%E7%89%88%E6%94%BB%E7%95%A51/not-solve_hu_af1859bb3c44665f.png 480w, https://adeepblue.github.io/p/%E5%9B%BE%E7%81%B5%E5%AE%8C%E5%A4%87alpha%E7%89%88%E6%94%BB%E7%95%A51/not-solve_hu_4cd6f41cd529635c.png 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;111&#34;
+		data-flex-basis=&#34;267px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;h2 id=&#34;and-gate&#34;&gt;AND GATE
+&lt;/h2&gt;&lt;h3 id=&#34;解释一&#34;&gt;解释一
+&lt;/h3&gt;&lt;p&gt;观察NAND门，它信号也只有两个输入都是1的时候才会为0，这是一个特殊的突变点，and门也有类似的结构，但是突变点在两个输入都是1的时候，结果为1，那么，
+现在已经有not门可以取反了，我就可以用not门直接反转输出结果，在nand的末尾加上not门就是and门了&lt;/p&gt;
+</description>
+        </item>
+        
+    </channel>
+</rss>

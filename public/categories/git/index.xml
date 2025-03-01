@@ -47,7 +47,8 @@
 除这个文件之后&lt;code&gt;ssh -T git@github.com&lt;/code&gt;立马可以通了，也是给我整无语了&lt;/p&gt;
 &lt;h2 id=&#34;初始化仓库&#34;&gt;初始化仓库
 &lt;/h2&gt;&lt;h1 id=&#34;仓库的配置先需要初始化仓库&#34;&gt;仓库的配置，先需要初始化仓库
-&lt;/h1&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;git init
+&lt;/h1&gt;&lt;p&gt;HTTPS协议的通道的演示：&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;git init
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;REM 新建并切到主分支（此处为cmd的备注方式）
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;git checkout -b main
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;REM 添加所有文件到git暂存区
@@ -62,10 +63,11 @@
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;REM 推送另一种方式我没用所以此处不写
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;REM 初次添加使用add，如果是一不小心输入错误需要修改就用第二条命令 set-url参数的
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;git remote add origin https://github.com/Adeepblue/adeepblue.github.io
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;git remote set-url origin git@github.com:Adeepblue/adeepblue.github.io
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;git remote set-url origin https://github.com/Adeepblue/adeepblue.github.io
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;REM 推送，如果本地分支跟远程分支不同可使用-f参数强制推送
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;git push -f origin main / git push origin main --force
 &lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;以上，调试完毕&lt;/p&gt;
+&lt;p&gt;如果走SSH协议的话，上面add origin或者是set-url origin后面的命令得修改成 &lt;a class=&#34;link&#34; href=&#34;mailto:git@github.com&#34; &gt;git@github.com&lt;/a&gt;:Adeepblue/adeepblue.github.io，其中要确保SSH已经验证过了，&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;git add -f public
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;git commit -m &lt;span class=&#34;s2&#34;&gt;&amp;#34;Publish site&amp;#34;&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;git subtree push --prefix public origin gh-pages
