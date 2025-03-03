@@ -107,6 +107,10 @@ remote:   git@github.com:ADeepblue/adeepblue.github.io.git
 git remote set-url origin git@github.com:ADeepblue/adeepblue.github.io.git
 ```
 
+
+## .gitignore文件
+直接写入需要忽视的文件即可，可以让git add . 时跳过这些文件以回车分隔即可
+
 [//]: # (## 关于对git一些主要功能的解释)
 
 [//]: # ()
