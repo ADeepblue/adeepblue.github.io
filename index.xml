@@ -7,7 +7,122 @@
         <generator>Hugo -- gohugo.io</generator>
         <language>zh-cn</language>
         <copyright>深蓝之亘</copyright>
-        <lastBuildDate>Sun, 02 Mar 2025 14:36:14 +0800</lastBuildDate><atom:link href="https://adeepblue.github.io/index.xml" rel="self" type="application/rss+xml" /><item>
+        <lastBuildDate>Mon, 03 Mar 2025 15:32:57 +0800</lastBuildDate><atom:link href="https://adeepblue.github.io/index.xml" rel="self" type="application/rss+xml" /><item>
+        <title>图灵完备alpha版攻略3</title>
+        <link>https://adeepblue.github.io/p/%E5%9B%BE%E7%81%B5%E5%AE%8C%E5%A4%87alpha%E7%89%88%E6%94%BB%E7%95%A53/</link>
+        <pubDate>Mon, 03 Mar 2025 15:32:57 +0800</pubDate>
+        
+        <guid>https://adeepblue.github.io/p/%E5%9B%BE%E7%81%B5%E5%AE%8C%E5%A4%87alpha%E7%89%88%E6%94%BB%E7%95%A53/</guid>
+        <description>&lt;img src="https://adeepblue.github.io/image/Turing-Complete-Logo.png" alt="Featured image of post 图灵完备alpha版攻略3" /&gt;&lt;h1 id=&#34;图灵完备alpha篇攻略3&#34;&gt;图灵完备alpha篇攻略3
+&lt;/h1&gt;&lt;h2 id=&#34;byte-nand&#34;&gt;BYTE NAND
+&lt;/h2&gt;&lt;p&gt;&lt;img src=&#34;https://adeepblue.github.io/p/%E5%9B%BE%E7%81%B5%E5%AE%8C%E5%A4%87alpha%E7%89%88%E6%94%BB%E7%95%A53/byte-nand.png&#34;
+	width=&#34;1037&#34;
+	height=&#34;1074&#34;
+	srcset=&#34;https://adeepblue.github.io/p/%E5%9B%BE%E7%81%B5%E5%AE%8C%E5%A4%87alpha%E7%89%88%E6%94%BB%E7%95%A53/byte-nand_hu_b1996384443c57ff.png 480w, https://adeepblue.github.io/p/%E5%9B%BE%E7%81%B5%E5%AE%8C%E5%A4%87alpha%E7%89%88%E6%94%BB%E7%95%A53/byte-nand_hu_4dd849443c37d7a9.png 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;要求1&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;96&#34;
+		data-flex-basis=&#34;231px&#34;
+	
+&gt;
+&lt;img src=&#34;https://adeepblue.github.io/p/%E5%9B%BE%E7%81%B5%E5%AE%8C%E5%A4%87alpha%E7%89%88%E6%94%BB%E7%95%A53/byte-nand-2.png&#34;
+	width=&#34;743&#34;
+	height=&#34;501&#34;
+	srcset=&#34;https://adeepblue.github.io/p/%E5%9B%BE%E7%81%B5%E5%AE%8C%E5%A4%87alpha%E7%89%88%E6%94%BB%E7%95%A53/byte-nand-2_hu_1a217bf754afeff0.png 480w, https://adeepblue.github.io/p/%E5%9B%BE%E7%81%B5%E5%AE%8C%E5%A4%87alpha%E7%89%88%E6%94%BB%E7%95%A53/byte-nand-2_hu_d6f7e2e055ee92fa.png 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;要求2&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;148&#34;
+		data-flex-basis=&#34;355px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;p&gt;虽然但是，它好像写错了，标题写着nand门，也就是与非门，要求里也是写着与非门，但中文翻译处写着或门，按与非门来吧，也就是逐位处理，如下&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://adeepblue.github.io/p/%E5%9B%BE%E7%81%B5%E5%AE%8C%E5%A4%87alpha%E7%89%88%E6%94%BB%E7%95%A53/byte-nand-solve.png&#34;
+	width=&#34;981&#34;
+	height=&#34;1008&#34;
+	srcset=&#34;https://adeepblue.github.io/p/%E5%9B%BE%E7%81%B5%E5%AE%8C%E5%A4%87alpha%E7%89%88%E6%94%BB%E7%95%A53/byte-nand-solve_hu_81a3f9adf4bd31b5.png 480w, https://adeepblue.github.io/p/%E5%9B%BE%E7%81%B5%E5%AE%8C%E5%A4%87alpha%E7%89%88%E6%94%BB%E7%95%A53/byte-nand-solve_hu_f259dd35db33f97b.png 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;img.png&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;97&#34;
+		data-flex-basis=&#34;233px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;h2 id=&#34;byte-not&#34;&gt;BYTE NOT
+&lt;/h2&gt;&lt;p&gt;&lt;img src=&#34;https://adeepblue.github.io/p/%E5%9B%BE%E7%81%B5%E5%AE%8C%E5%A4%87alpha%E7%89%88%E6%94%BB%E7%95%A53/byte-not-solve.png&#34;
+	width=&#34;961&#34;
+	height=&#34;699&#34;
+	srcset=&#34;https://adeepblue.github.io/p/%E5%9B%BE%E7%81%B5%E5%AE%8C%E5%A4%87alpha%E7%89%88%E6%94%BB%E7%95%A53/byte-not-solve_hu_312cf8d09e86d8e7.png 480w, https://adeepblue.github.io/p/%E5%9B%BE%E7%81%B5%E5%AE%8C%E5%A4%87alpha%E7%89%88%E6%94%BB%E7%95%A53/byte-not-solve_hu_1130b69c2dff65ba.png 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;img.png&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;137&#34;
+		data-flex-basis=&#34;329px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;p&gt;简单的不解释了&lt;/p&gt;
+&lt;h2 id=&#34;adding-bytes&#34;&gt;ADDING BYTES
+&lt;/h2&gt;&lt;p&gt;&lt;img src=&#34;https://adeepblue.github.io/p/%E5%9B%BE%E7%81%B5%E5%AE%8C%E5%A4%87alpha%E7%89%88%E6%94%BB%E7%95%A53/adding-bytes.png&#34;
+	width=&#34;865&#34;
+	height=&#34;823&#34;
+	srcset=&#34;https://adeepblue.github.io/p/%E5%9B%BE%E7%81%B5%E5%AE%8C%E5%A4%87alpha%E7%89%88%E6%94%BB%E7%95%A53/adding-bytes_hu_4276978fc80f33ef.png 480w, https://adeepblue.github.io/p/%E5%9B%BE%E7%81%B5%E5%AE%8C%E5%A4%87alpha%E7%89%88%E6%94%BB%E7%95%A53/adding-bytes_hu_f2a90a4c3a9dc2a7.png 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;要求&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;105&#34;
+		data-flex-basis=&#34;252px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;p&gt;8bit的加法，先按最低位使用加法，，如果有进位那就给下一位的提供进位信号，然后按对应的位输入对应的位置，实现如下&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://adeepblue.github.io/p/%E5%9B%BE%E7%81%B5%E5%AE%8C%E5%A4%87alpha%E7%89%88%E6%94%BB%E7%95%A53/adding-bytes-solve.png&#34;
+	width=&#34;1070&#34;
+	height=&#34;991&#34;
+	srcset=&#34;https://adeepblue.github.io/p/%E5%9B%BE%E7%81%B5%E5%AE%8C%E5%A4%87alpha%E7%89%88%E6%94%BB%E7%95%A53/adding-bytes-solve_hu_ac7e084d1ba1ebf5.png 480w, https://adeepblue.github.io/p/%E5%9B%BE%E7%81%B5%E5%AE%8C%E5%A4%87alpha%E7%89%88%E6%94%BB%E7%95%A53/adding-bytes-solve_hu_47cbeb373bb36e72.png 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;解法&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;107&#34;
+		data-flex-basis=&#34;259px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;h2 id=&#34;multiplexer&#34;&gt;MULTIPLEXER
+&lt;/h2&gt;&lt;p&gt;&lt;img src=&#34;https://adeepblue.github.io/p/%E5%9B%BE%E7%81%B5%E5%AE%8C%E5%A4%87alpha%E7%89%88%E6%94%BB%E7%95%A53/multiplexer-solve.png&#34;
+	width=&#34;891&#34;
+	height=&#34;681&#34;
+	srcset=&#34;https://adeepblue.github.io/p/%E5%9B%BE%E7%81%B5%E5%AE%8C%E5%A4%87alpha%E7%89%88%E6%94%BB%E7%95%A53/multiplexer-solve_hu_4483a8661f6cbb19.png 480w, https://adeepblue.github.io/p/%E5%9B%BE%E7%81%B5%E5%AE%8C%E5%A4%87alpha%E7%89%88%E6%94%BB%E7%95%A53/multiplexer-solve_hu_65ba7b9152ff1635.png 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;解法&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;130&#34;
+		data-flex-basis=&#34;314px&#34;
+	
+&gt;
+同&lt;/p&gt;
+</description>
+        </item>
+        <item>
         <title>图灵完备alpha版攻略2</title>
         <link>https://adeepblue.github.io/p/%E5%9B%BE%E7%81%B5%E5%AE%8C%E5%A4%87alpha%E7%89%88%E6%94%BB%E7%95%A52/</link>
         <pubDate>Sun, 02 Mar 2025 14:36:14 +0800</pubDate>
@@ -4521,7 +4636,9 @@ $$\frac {1} {2}$$&lt;p&gt;还有，切记，在代码段前如果放文字会被
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;remote:   git@github.com:ADeepblue/adeepblue.github.io.git   
 &lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;然后我现在就用一行命令移动过去了&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;git remote set-url origin git@github.com:ADeepblue/adeepblue.github.io.git
-&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id=&#34;自动化部署&#34;&gt;自动化部署
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id=&#34;gitignore文件&#34;&gt;.gitignore文件
+&lt;/h2&gt;&lt;p&gt;直接写入需要忽视的文件即可，可以让git add . 时跳过这些文件以回车分隔即可&lt;/p&gt;
+&lt;h2 id=&#34;自动化部署&#34;&gt;自动化部署
 &lt;/h2&gt;&lt;p&gt;我给一个我目前在用的自动化部署方案吧，我现在的仓库根目录是&lt;code&gt;E:\personal-blog\personal-blog&lt;/code&gt;,我配置了我的自动化目录在&lt;code&gt;E:\personal-blog\automatical-test&lt;/code&gt;
 这里并不是git仓库的一部分，所以这个文件并不会上传，但是我分享在这里吧，仅作为参考，如果需要解析请移步隔壁cmd教程&lt;a class=&#34;link&#34; href=&#34;https://adeepblue.github.io/p/cmd%E5%91%BD%E4%BB%A4%E4%BB%8B%E7%BB%8D/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
     &gt;cmd命令介绍&lt;/a&gt;&lt;/p&gt;
@@ -4588,9 +4705,9 @@ $$\frac {1} {2}$$&lt;p&gt;还有，切记，在代码段前如果放文字会被
         
         <guid>https://adeepblue.github.io/%E6%9B%B4%E6%96%B0%E6%97%A5%E5%BF%97/</guid>
         <description>&lt;h1 id=&#34;更新记录&#34;&gt;更新记录
-&lt;/h1&gt;&lt;h2 id=&#34;---------------2025-03-2更新---------------------&#34;&gt;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;2025-03-2更新&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;
+&lt;/h1&gt;&lt;h2 id=&#34;---------------2025-03-3更新---------------------&#34;&gt;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;2025-03-3更新&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;
 &lt;/h2&gt;&lt;p&gt;更新了图灵完备alpha第二篇攻略&lt;/p&gt;
-&lt;h2 id=&#34;---------------2025-03-2更新----------------------1&#34;&gt;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;2025-03-2更新&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;
+&lt;h2 id=&#34;---------------2025-03-2更新---------------------&#34;&gt;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;2025-03-2更新&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;
 &lt;/h2&gt;&lt;p&gt;更新了图灵完备alpha第一篇攻略&lt;/p&gt;
 &lt;h2 id=&#34;---------------2025-03-1更新---------------------&#34;&gt;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;2025-03-1更新&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;
 &lt;/h2&gt;&lt;p&gt;新增了phi-plugin篇&lt;/p&gt;
