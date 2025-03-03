@@ -1,7 +1,7 @@
 +++
 date = '2025-03-01T10:55:46+08:00'
 draft = false
-title = 'Phi Plugin Koishi'
+title = 'Phi Plugin Koishi初始化记录'
 image = "phi-plugin-logo.png"
 +++
 # 教程

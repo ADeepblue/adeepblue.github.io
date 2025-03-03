@@ -1,0 +1,893 @@
+<!DOCTYPE html>
+<html lang="zh-cn" dir="ltr">
+    <head><meta charset='utf-8'>
+<meta name='viewport' content='width=device-width, initial-scale=1'><meta name='description' content="解决了包含单双数到开关的破关思路">
+<title>图灵完备alpha版攻略2</title>
+
+<link rel='canonical' href='https://adeepblue.github.io/p/%E5%9B%BE%E7%81%B5%E5%AE%8C%E5%A4%87alpha%E7%89%88%E6%94%BB%E7%95%A52/'>
+
+<link rel="stylesheet" href="/scss/style.min.663803bebe609202d5b39d848f2d7c2dc8b598a2d879efa079fa88893d29c49c.css"><meta property='og:title' content="图灵完备alpha版攻略2">
+<meta property='og:description' content="解决了包含单双数到开关的破关思路">
+<meta property='og:url' content='https://adeepblue.github.io/p/%E5%9B%BE%E7%81%B5%E5%AE%8C%E5%A4%87alpha%E7%89%88%E6%94%BB%E7%95%A52/'>
+<meta property='og:site_name' content='深蓝之亘的博客'>
+<meta property='og:type' content='article'><meta property='article:section' content='Post' /><meta property='article:published_time' content='2025-03-02T14:36:14&#43;08:00'/><meta property='article:modified_time' content='2025-03-02T14:36:14&#43;08:00'/><meta property='og:image' content='https://adeepblue.github.io/image/Turing-Complete-Logo.png' />
+<meta name="twitter:title" content="图灵完备alpha版攻略2">
+<meta name="twitter:description" content="解决了包含单双数到开关的破关思路"><meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:image" content='https://adeepblue.github.io/image/Turing-Complete-Logo.png' />
+    <link rel="shortcut icon" href="/favicon.ico" />
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0-rc.1/katex.min.css">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0-rc.1/katex.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0-rc.1/contrib/auto-render.min.js"></script>
+
+<script>
+    document.addEventListener("DOMContentLoaded", function() {
+      renderMathInElement(document.body);
+    });
+</script>
+         <link rel="stylesheet" href="/css/custom.css">
+    </head>
+    <body class="
+    article-page
+    ">
+    <script>
+        (function() {
+            const colorSchemeKey = 'StackColorScheme';
+            if(!localStorage.getItem(colorSchemeKey)){
+                localStorage.setItem(colorSchemeKey, "auto");
+            }
+        })();
+    </script><script>
+    (function() {
+        const colorSchemeKey = 'StackColorScheme';
+        const colorSchemeItem = localStorage.getItem(colorSchemeKey);
+        const supportDarkMode = window.matchMedia('(prefers-color-scheme: dark)').matches === true;
+
+        if (colorSchemeItem == 'dark' || colorSchemeItem === 'auto' && supportDarkMode) {
+            
+
+            document.documentElement.dataset.scheme = 'dark';
+        } else {
+            document.documentElement.dataset.scheme = 'light';
+        }
+    })();
+</script>
+<div class="container main-container flex on-phone--column extended"><aside class="sidebar left-sidebar sticky ">
+    <button class="hamburger hamburger--spin" type="button" id="toggle-menu" aria-label="切换菜单">
+        <span class="hamburger-box">
+            <span class="hamburger-inner"></span>
+        </span>
+    </button>
+
+    <header>
+        
+            
+            <figure class="site-avatar">
+                <a href="/">
+                
+                    
+                    
+                    
+                        
+                        <img src="/img/avatar_hu_996f7fae539f5332.png" width="300"
+                            height="300" class="site-logo" loading="lazy" alt="Avatar">
+                    
+                
+                </a>
+                
+            </figure>
+            
+        
+        
+        <div class="site-meta">
+            <h1 class="site-name"><a href="/">深蓝之亘的博客</a></h1>
+            <h2 class="site-description">欢迎来到我的博客网站</h2>
+        </div>
+    </header><ol class="menu-social">
+            
+                <li>
+                    <a 
+                        href='https://github.com/Adeepblue'
+                        target="_blank"
+                        title="GitHub"
+                        rel="me"
+                    >
+                        
+                        
+                            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-brand-github" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+  <path d="M9 19c-4.3 1.4 -4.3 -2.5 -6 -3m12 5v-3.5c0 -1 .1 -1.4 -.5 -2c2.8 -.3 5.5 -1.4 5.5 -6a4.6 4.6 0 0 0 -1.3 -3.2a4.2 4.2 0 0 0 -.1 -3.2s-1.1 -.3 -3.5 1.3a12.3 12.3 0 0 0 -6.2 0c-2.4 -1.6 -3.5 -1.3 -3.5 -1.3a4.2 4.2 0 0 0 -.1 3.2a4.6 4.6 0 0 0 -1.3 3.2c0 4.6 2.7 5.7 5.5 6c-.6 .6 -.6 1.2 -.5 2v3.5" />
+</svg>
+
+
+
+                        
+                    </a>
+                </li>
+            
+                <li>
+                    <a 
+                        href='https://space.bilibili.com/435022639'
+                        target="_blank"
+                        title="Twitter"
+                        rel="me"
+                    >
+                        
+                        
+                            <svg  xmlns="http://www.w3.org/2000/svg"  width="24"  height="24"  viewBox="0 0 24 24"  fill="none"  stroke="currentColor"  stroke-width="2"  stroke-linecap="round"  stroke-linejoin="round"  class="icon icon-tabler icons-tabler-outline icon-tabler-brand-bilibili"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M3 10a4 4 0 0 1 4 -4h10a4 4 0 0 1 4 4v6a4 4 0 0 1 -4 4h-10a4 4 0 0 1 -4 -4v-6z" /><path d="M8 3l2 3" /><path d="M16 3l-2 3" /><path d="M9 13v-2" /><path d="M15 11v2" /></svg>
+                        
+                    </a>
+                </li>
+            
+        </ol><ol class="menu" id="main-menu">
+        
+        
+        
+        <li >
+            <a href='/' >
+                
+                
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-home" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <polyline points="5 12 3 12 12 3 21 12 19 12" />
+  <path d="M5 12v7a2 2 0 0 0 2 2h10a2 2 0 0 0 2 -2v-7" />
+  <path d="M9 21v-6a2 2 0 0 1 2 -2h2a2 2 0 0 1 2 2v6" />
+</svg>
+
+
+
+                
+                <span>主页</span>
+            </a>
+        </li>
+        
+        
+        <li >
+            <a href='/%E6%9B%B4%E6%96%B0%E6%97%A5%E5%BF%97/' >
+                
+                
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-user" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="12" cy="7" r="4" />
+  <path d="M6 21v-2a4 4 0 0 1 4 -4h4a4 4 0 0 1 4 4v2" />
+</svg>
+
+
+
+                
+                <span>更新日志</span>
+            </a>
+        </li>
+        
+        
+        <li >
+            <a href='/archives/' >
+                
+                
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-archive" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <rect x="3" y="4" width="18" height="4" rx="2" />
+  <path d="M5 8v10a2 2 0 0 0 2 2h10a2 2 0 0 0 2 -2v-10" />
+  <line x1="10" y1="12" x2="14" y2="12" />
+</svg>
+
+
+
+                
+                <span>archives</span>
+            </a>
+        </li>
+        
+        
+        <li >
+            <a href='/search/' >
+                
+                
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-search" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="10" cy="10" r="7" />
+  <line x1="21" y1="21" x2="15" y2="15" />
+</svg>
+
+
+
+                
+                <span>搜索</span>
+            </a>
+        </li>
+        
+        
+        <li >
+            <a href='/links/' >
+                
+                
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-link" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <path d="M10 14a3.5 3.5 0 0 0 5 0l4 -4a3.5 3.5 0 0 0 -5 -5l-.5 .5" />
+  <path d="M14 10a3.5 3.5 0 0 0 -5 0l-4 4a3.5 3.5 0 0 0 5 5l.5 -.5" />
+</svg>
+
+
+
+                
+                <span>Links</span>
+            </a>
+        </li>
+        
+        <li class="menu-bottom-section">
+            <ol class="menu">
+
+                
+                    <li id="dark-mode-toggle">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-toggle-left" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="8" cy="12" r="2" />
+  <rect x="2" y="6" width="20" height="12" rx="6" />
+</svg>
+
+
+
+                        <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-toggle-right" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="16" cy="12" r="2" />
+  <rect x="2" y="6" width="20" height="12" rx="6" />
+</svg>
+
+
+
+                        <span>暗色模式</span>
+                    </li>
+                
+            </ol>
+        </li>
+    </ol>
+</aside>
+
+    <aside class="sidebar right-sidebar sticky">
+        
+            
+                
+    <section class="widget archives">
+        <div class="widget-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-hash" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <line x1="5" y1="9" x2="19" y2="9" />
+  <line x1="5" y1="15" x2="19" y2="15" />
+  <line x1="11" y1="4" x2="7" y2="20" />
+  <line x1="17" y1="4" x2="13" y2="20" />
+</svg>
+
+
+
+        </div>
+        <h2 class="widget-title section-title">目录</h2>
+        
+        <div class="widget--toc">
+            <nav id="TableOfContents">
+  <ol>
+    <li><a href="#odd-number-of-singals">ODD Number of Singals</a></li>
+    <li><a href="#circular-dependency">CIRCULAR DEPENDENCY</a></li>
+    <li><a href="#counting-siginals">counting siginals</a>
+      <ol>
+        <li><a href="#解法1-排除法">解法1 排除法</a></li>
+        <li><a href="#解法2-暴力解法">解法2 暴力解法</a></li>
+      </ol>
+    </li>
+    <li><a href="#half-adder">HALF ADDER</a></li>
+    <li><a href="#delayed-lines">DELAYED LINES</a></li>
+    <li><a href="#double-the-number">DOUBLE THE NUMBER</a></li>
+    <li><a href="#full-adder">FULL ADDER</a></li>
+    <li><a href="#odd-ticks">ODD TICKS</a></li>
+    <li><a href="#bit-inverter">BIT INVERTER</a></li>
+    <li><a href="#big-switch">BIG SWITCH</a></li>
+  </ol>
+</nav>
+        </div>
+    </section>
+
+            
+        
+    </aside>
+
+
+            <main class="main full-width">
+    <article class="has-image main-article">
+    <header class="article-header">
+        <div class="article-image">
+            <a href="/p/%E5%9B%BE%E7%81%B5%E5%AE%8C%E5%A4%87alpha%E7%89%88%E6%94%BB%E7%95%A52/">
+                
+                    <img src="/image/Turing-Complete-Logo.png" loading="lazy" alt="Featured image of post 图灵完备alpha版攻略2" />
+                
+            </a>
+        </div>
+    
+
+    <div class="article-details">
+    
+    <header class="article-category">
+        
+            <a href="/categories/turing-complete-alpha/" >
+                Turing Complete Alpha
+            </a>
+        
+    </header>
+    
+
+    <div class="article-title-wrapper">
+        <h2 class="article-title">
+            <a href="/p/%E5%9B%BE%E7%81%B5%E5%AE%8C%E5%A4%87alpha%E7%89%88%E6%94%BB%E7%95%A52/">图灵完备alpha版攻略2</a>
+        </h2>
+    
+        
+        <h3 class="article-subtitle">
+            解决了包含单双数到开关的破关思路
+        </h3>
+        
+    </div>
+
+    
+    
+    
+    
+    <footer class="article-time">
+        
+            <div>
+                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-calendar-time" width="56" height="56" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <path d="M11.795 21h-6.795a2 2 0 0 1 -2 -2v-12a2 2 0 0 1 2 -2h12a2 2 0 0 1 2 2v4" />
+  <circle cx="18" cy="18" r="4" />
+  <path d="M15 3v4" />
+  <path d="M7 3v4" />
+  <path d="M3 11h16" />
+  <path d="M18 16.496v1.504l1 1" />
+</svg>
+                <time class="article-time--published">2025-03-02</time>
+            </div>
+        
+
+        
+    </footer>
+    
+
+    
+</div>
+
+</header>
+
+    <section class="article-content">
+    
+    
+    <h1 id="图灵完备alpha篇攻略2">图灵完备alpha篇攻略2
+</h1><h2 id="odd-number-of-singals">ODD Number of Singals
+</h2><p><img src="/p/%E5%9B%BE%E7%81%B5%E5%AE%8C%E5%A4%87alpha%E7%89%88%E6%94%BB%E7%95%A52/odd-number-of-signals.png"
+	width="1175"
+	height="637"
+	srcset="/p/%E5%9B%BE%E7%81%B5%E5%AE%8C%E5%A4%87alpha%E7%89%88%E6%94%BB%E7%95%A52/odd-number-of-signals_hu_ff1bfb2e5514402b.png 480w, /p/%E5%9B%BE%E7%81%B5%E5%AE%8C%E5%A4%87alpha%E7%89%88%E6%94%BB%E7%95%A52/odd-number-of-signals_hu_b71cec1b09f9145c.png 1024w"
+	loading="lazy"
+	
+		alt="要求"
+	
+	
+		class="gallery-image" 
+		data-flex-grow="184"
+		data-flex-basis="442px"
+	
+></p>
+<p>这个要求是，单数个高电平的时候输出高电平，其他时候低电平，但是，现在已经有同或门了，如果两个数相同，就输出1，不同就输出0，那么，如果输出是1，必定是一个1和一个0的组合，
+也就是必定是单数，但又有，两个单数加起来是双数，所以得排除两个都是单数或者两个都是双数的情况，总结而言，就是需要一个异或门，所以，输出示例如下：</p>
+<p><img src="/p/%E5%9B%BE%E7%81%B5%E5%AE%8C%E5%A4%87alpha%E7%89%88%E6%94%BB%E7%95%A52/odd-number-of-signals-solve.png"
+	width="1316"
+	height="737"
+	srcset="/p/%E5%9B%BE%E7%81%B5%E5%AE%8C%E5%A4%87alpha%E7%89%88%E6%94%BB%E7%95%A52/odd-number-of-signals-solve_hu_d037e13c612e7879.png 480w, /p/%E5%9B%BE%E7%81%B5%E5%AE%8C%E5%A4%87alpha%E7%89%88%E6%94%BB%E7%95%A52/odd-number-of-signals-solve_hu_e8d891fdc031ef8a.png 1024w"
+	loading="lazy"
+	
+		alt="解法"
+	
+	
+		class="gallery-image" 
+		data-flex-grow="178"
+		data-flex-basis="428px"
+	
+></p>
+<h2 id="circular-dependency">CIRCULAR DEPENDENCY
+</h2><p>循环依赖，输出跟输入的一个脚不同即可，最好正负还会影响输出结果，如下</p>
+<p><img src="/p/%E5%9B%BE%E7%81%B5%E5%AE%8C%E5%A4%87alpha%E7%89%88%E6%94%BB%E7%95%A52/circular-dependency.png"
+	width="1041"
+	height="761"
+	srcset="/p/%E5%9B%BE%E7%81%B5%E5%AE%8C%E5%A4%87alpha%E7%89%88%E6%94%BB%E7%95%A52/circular-dependency_hu_fff2294fff0abac9.png 480w, /p/%E5%9B%BE%E7%81%B5%E5%AE%8C%E5%A4%87alpha%E7%89%88%E6%94%BB%E7%95%A52/circular-dependency_hu_4780ba3bf9bea691.png 1024w"
+	loading="lazy"
+	
+		alt="循环依赖"
+	
+	
+		class="gallery-image" 
+		data-flex-grow="136"
+		data-flex-basis="328px"
+	
+></p>
+<h2 id="counting-siginals">counting siginals
+</h2><h3 id="解法1-排除法">解法1 排除法
+</h3><p>是一个数高电平数的一个元件，输入需要按4，2，1排列，那么首先可以确定，如果四个全部亮起时，4的开关得亮起</p>
+<p>其中第二好确认的是另一个0的位置，其中解法就在上面单双数那，因为单双数就是影响的第一位的数值，</p>
+<p><img src="/p/%E5%9B%BE%E7%81%B5%E5%AE%8C%E5%A4%87alpha%E7%89%88%E6%94%BB%E7%95%A52/counting-signals-1-4.png"
+	width="1185"
+	height="1025"
+	srcset="/p/%E5%9B%BE%E7%81%B5%E5%AE%8C%E5%A4%87alpha%E7%89%88%E6%94%BB%E7%95%A52/counting-signals-1-4_hu_aa1e9870c1246d66.png 480w, /p/%E5%9B%BE%E7%81%B5%E5%AE%8C%E5%A4%87alpha%E7%89%88%E6%94%BB%E7%95%A52/counting-signals-1-4_hu_795df82fe5e52e20.png 1024w"
+	loading="lazy"
+	
+		alt="1位和4位"
+	
+	
+		class="gallery-image" 
+		data-flex-grow="115"
+		data-flex-basis="277px"
+	
+></p>
+<p>2位处最复杂，如果按照正向去找会比较麻烦，亮起时包含条件2、3，此时采用反向讨论，也就是说，我们需要排除以下几种情况，0，1，4，这样会比较方便一些，</p>
+<blockquote>
+<p><strong>0</strong> 其实就是四个or门不满足的情况，突变点时四个输入都为0，但目前还无法搭建4or门，结构即是两个or门分别连着四路输出，然后这两个or门的输出为第三个or门的输入，此时最后如果最后一个门是or的话输出会导致突变点正常$（0,0,0,0）$，但输出相反，所以需要输出接着not，就是nor门，所以结构如下图标0处</p></blockquote>
+<blockquote>
+<p><strong>1</strong> 这里有四种情况，也就是亮的4路选一路，然后其他三路全部为0，全部为0的突变点在(0,0,0)，对应3or门，但是输出需要取反，然后这个结果需要同时满足最后一路是1，此时and门的逻辑作用就体现了，需要两个条件同时满足，即(A&amp;B)，做法只需要把多个条件全部接入and门即可，以及，四种情况只要满足1个条件即可，所以满足条件的3个0、1个1的四种情况用三个or门连接起来即可</p></blockquote>
+<p><img src="/p/%E5%9B%BE%E7%81%B5%E5%AE%8C%E5%A4%87alpha%E7%89%88%E6%94%BB%E7%95%A52/counting-signals-0-1-4-except.png"
+	width="1237"
+	height="1001"
+	srcset="/p/%E5%9B%BE%E7%81%B5%E5%AE%8C%E5%A4%87alpha%E7%89%88%E6%94%BB%E7%95%A52/counting-signals-0-1-4-except_hu_27acc76f84e727b4.png 480w, /p/%E5%9B%BE%E7%81%B5%E5%AE%8C%E5%A4%87alpha%E7%89%88%E6%94%BB%E7%95%A52/counting-signals-0-1-4-except_hu_5759f2a2bc1d6c90.png 1024w"
+	loading="lazy"
+	
+		alt="0,1,4三种情况"
+	
+	
+		class="gallery-image" 
+		data-flex-grow="123"
+		data-flex-basis="296px"
+	
+></p>
+<p>那么，要2，3的情况亮起，我需要$0,1,4$三种情况都不满足时亮起，也就是突变点对应的$(0,0,0)$,也就是说，我需要使用3or门取反即可实现</p>
+<p><img src="/p/%E5%9B%BE%E7%81%B5%E5%AE%8C%E5%A4%87alpha%E7%89%88%E6%94%BB%E7%95%A52/counting-signals-solve-1.png"
+	width="1093"
+	height="684"
+	srcset="/p/%E5%9B%BE%E7%81%B5%E5%AE%8C%E5%A4%87alpha%E7%89%88%E6%94%BB%E7%95%A52/counting-signals-solve-1_hu_514848553d8a9262.png 480w, /p/%E5%9B%BE%E7%81%B5%E5%AE%8C%E5%A4%87alpha%E7%89%88%E6%94%BB%E7%95%A52/counting-signals-solve-1_hu_11b5b68312313804.png 1024w"
+	loading="lazy"
+	
+		alt="解法1"
+	
+	
+		class="gallery-image" 
+		data-flex-grow="159"
+		data-flex-basis="383px"
+	
+></p>
+<h3 id="解法2-暴力解法">解法2 暴力解法
+</h3><p>参考解法1，0，4不动，主要看中间第三路，三路参考1路解法，即调换3or门处类似换成3and门即可，正负有小的变化，但2的情况有所复杂化，按1的值来取，有
+$(1,2),(1,3),(1,4),(2,3),(2,4),(3,4)$六种可能性，其中其余全是0，也就是启用nor即可，因为是6种条件随便满足一种即可，所以3*2的or门即可</p>
+<p><img src="/p/%E5%9B%BE%E7%81%B5%E5%AE%8C%E5%A4%87alpha%E7%89%88%E6%94%BB%E7%95%A52/count-signals-solve-mid-2.png"
+	width="1201"
+	height="1079"
+	srcset="/p/%E5%9B%BE%E7%81%B5%E5%AE%8C%E5%A4%87alpha%E7%89%88%E6%94%BB%E7%95%A52/count-signals-solve-mid-2_hu_62500a4358de9579.png 480w, /p/%E5%9B%BE%E7%81%B5%E5%AE%8C%E5%A4%87alpha%E7%89%88%E6%94%BB%E7%95%A52/count-signals-solve-mid-2_hu_3c443fae3e0c2375.png 1024w"
+	loading="lazy"
+	
+		alt="2和3"
+	
+	
+		class="gallery-image" 
+		data-flex-grow="111"
+		data-flex-basis="267px"
+	
+>
+<img src="/p/%E5%9B%BE%E7%81%B5%E5%AE%8C%E5%A4%87alpha%E7%89%88%E6%94%BB%E7%95%A52/counting-signals-solve-2.png"
+	width="1009"
+	height="1005"
+	srcset="/p/%E5%9B%BE%E7%81%B5%E5%AE%8C%E5%A4%87alpha%E7%89%88%E6%94%BB%E7%95%A52/counting-signals-solve-2_hu_e9629bc89efda108.png 480w, /p/%E5%9B%BE%E7%81%B5%E5%AE%8C%E5%A4%87alpha%E7%89%88%E6%94%BB%E7%95%A52/counting-signals-solve-2_hu_595707d60b56db6f.png 1024w"
+	loading="lazy"
+	
+		alt="解法2"
+	
+	
+		class="gallery-image" 
+		data-flex-grow="100"
+		data-flex-basis="240px"
+	
+></p>
+<h2 id="half-adder">HALF ADDER
+</h2><p><img src="/p/%E5%9B%BE%E7%81%B5%E5%AE%8C%E5%A4%87alpha%E7%89%88%E6%94%BB%E7%95%A52/half-adder.png"
+	width="881"
+	height="724"
+	srcset="/p/%E5%9B%BE%E7%81%B5%E5%AE%8C%E5%A4%87alpha%E7%89%88%E6%94%BB%E7%95%A52/half-adder_hu_ebfaac281f8c4e8c.png 480w, /p/%E5%9B%BE%E7%81%B5%E5%AE%8C%E5%A4%87alpha%E7%89%88%E6%94%BB%E7%95%A52/half-adder_hu_ac892c01d53ffaea.png 1024w"
+	loading="lazy"
+	
+		alt="要求"
+	
+	
+		class="gallery-image" 
+		data-flex-grow="121"
+		data-flex-basis="292px"
+	
+>
+<img src="/p/%E5%9B%BE%E7%81%B5%E5%AE%8C%E5%A4%87alpha%E7%89%88%E6%94%BB%E7%95%A52/half-adder-solve.png"
+	width="855"
+	height="749"
+	srcset="/p/%E5%9B%BE%E7%81%B5%E5%AE%8C%E5%A4%87alpha%E7%89%88%E6%94%BB%E7%95%A52/half-adder-solve_hu_7d44353db65c2cc4.png 480w, /p/%E5%9B%BE%E7%81%B5%E5%AE%8C%E5%A4%87alpha%E7%89%88%E6%94%BB%E7%95%A52/half-adder-solve_hu_71bc9dad9826a370.png 1024w"
+	loading="lazy"
+	
+		alt="解法"
+	
+	
+		class="gallery-image" 
+		data-flex-grow="114"
+		data-flex-basis="273px"
+	
+></p>
+<p>很明确，只要两个门分开处理就行，刚好能对应上异或门和与门，解法如上</p>
+<h2 id="delayed-lines">DELAYED LINES
+</h2><p><img src="/p/%E5%9B%BE%E7%81%B5%E5%AE%8C%E5%A4%87alpha%E7%89%88%E6%94%BB%E7%95%A52/delayed-lines-solve.png"
+	width="1563"
+	height="1080"
+	srcset="/p/%E5%9B%BE%E7%81%B5%E5%AE%8C%E5%A4%87alpha%E7%89%88%E6%94%BB%E7%95%A52/delayed-lines-solve_hu_5dfb916904ad15ce.png 480w, /p/%E5%9B%BE%E7%81%B5%E5%AE%8C%E5%A4%87alpha%E7%89%88%E6%94%BB%E7%95%A52/delayed-lines-solve_hu_5b11267d2678eba4.png 1024w"
+	loading="lazy"
+	
+		alt="解法"
+	
+	
+		class="gallery-image" 
+		data-flex-grow="144"
+		data-flex-basis="347px"
+	
+></p>
+<p>过于简单的我就不解说了，延迟两刻输出</p>
+<h2 id="double-the-number">DOUBLE THE NUMBER
+</h2><p>把数值放大两倍后输出，其实实际上就是左移数字，毕竟</p>
+$$假定输入数是a,a=(a_7\cdot2^7+...+a_0\cdot2^0),则2a=(a_7\cdot2^8+...+a_0\cdot2^1+0\cdot2^0)$$$$a = \sum_{0}^{7} {a_i\cdot2^i},2a=2\cdot\sum_{0}^{7} {a_i\cdot2^i}=\sum_{1}^{8} {a_i\cdot2^i}+0\cdot2^0$$<p>其中$2^8$部分因为进位可以直接舍去了，如果在8bit数据中，存在$2^8$就是已经溢出了，易见a_0的数值，也就是第一位被填到了第二位，以此类推，全部发生了移位操作，</p>
+<p><img src="/p/%E5%9B%BE%E7%81%B5%E5%AE%8C%E5%A4%87alpha%E7%89%88%E6%94%BB%E7%95%A52/double-the-number.png"
+	width="1022"
+	height="760"
+	srcset="/p/%E5%9B%BE%E7%81%B5%E5%AE%8C%E5%A4%87alpha%E7%89%88%E6%94%BB%E7%95%A52/double-the-number_hu_2ba6cd845764dff2.png 480w, /p/%E5%9B%BE%E7%81%B5%E5%AE%8C%E5%A4%87alpha%E7%89%88%E6%94%BB%E7%95%A52/double-the-number_hu_b15fcb8b2db7fde2.png 1024w"
+	loading="lazy"
+	
+		alt="解法"
+	
+	
+		class="gallery-image" 
+		data-flex-grow="134"
+		data-flex-basis="322px"
+	
+></p>
+<h2 id="full-adder">FULL ADDER
+</h2><p><img src="/p/%E5%9B%BE%E7%81%B5%E5%AE%8C%E5%A4%87alpha%E7%89%88%E6%94%BB%E7%95%A52/full-adder.png"
+	width="902"
+	height="677"
+	srcset="/p/%E5%9B%BE%E7%81%B5%E5%AE%8C%E5%A4%87alpha%E7%89%88%E6%94%BB%E7%95%A52/full-adder_hu_42ddae43d5b0e29e.png 480w, /p/%E5%9B%BE%E7%81%B5%E5%AE%8C%E5%A4%87alpha%E7%89%88%E6%94%BB%E7%95%A52/full-adder_hu_7f4678e3ad365562.png 1024w"
+	loading="lazy"
+	
+		alt="要求"
+	
+	
+		class="gallery-image" 
+		data-flex-grow="133"
+		data-flex-basis="319px"
+	
+></p>
+<p>全加器，其中sum部分的很明显，只是一个观察单双数的位，另一位则是观察是否有两位以上的1，那么开工</p>
+<ol>
+<li>先用异或门判断两位是否相同，输出则是这两位是否是单数，如果是单数输出1，另一位也是1的话，那么输出2，不是单数，则需要输出0，也就是后面的算法依旧也是判断单双数，都亮起或者灭了就是双，不同就是单数，实际就是一个异或门，所以，使用两个异或门即可完成任务，参考如解法图</li>
+<li>第二位进位car位，需要有两位及两位以上的1，2位，刚好and门要有1的输出必须要有两个1，那么，思路很明确了，只要对3个输入进行两两检测，有and门为1即可，也就是说，3个and门只要满足一个或者以上即可，所以可以对这三个and门的输出使用3or门</li>
+</ol>
+<p><img src="/p/%E5%9B%BE%E7%81%B5%E5%AE%8C%E5%A4%87alpha%E7%89%88%E6%94%BB%E7%95%A52/full-adder-solve.png"
+	width="820"
+	height="835"
+	srcset="/p/%E5%9B%BE%E7%81%B5%E5%AE%8C%E5%A4%87alpha%E7%89%88%E6%94%BB%E7%95%A52/full-adder-solve_hu_7edba35cef41290b.png 480w, /p/%E5%9B%BE%E7%81%B5%E5%AE%8C%E5%A4%87alpha%E7%89%88%E6%94%BB%E7%95%A52/full-adder-solve_hu_69c85bc5b462b368.png 1024w"
+	loading="lazy"
+	
+		alt="解法"
+	
+	
+		class="gallery-image" 
+		data-flex-grow="98"
+		data-flex-basis="235px"
+	
+></p>
+<h2 id="odd-ticks">ODD TICKS
+</h2><p><img src="/p/%E5%9B%BE%E7%81%B5%E5%AE%8C%E5%A4%87alpha%E7%89%88%E6%94%BB%E7%95%A52/odd-ticks.png"
+	width="911"
+	height="563"
+	srcset="/p/%E5%9B%BE%E7%81%B5%E5%AE%8C%E5%A4%87alpha%E7%89%88%E6%94%BB%E7%95%A52/odd-ticks_hu_3f714d868b35bac6.png 480w, /p/%E5%9B%BE%E7%81%B5%E5%AE%8C%E5%A4%87alpha%E7%89%88%E6%94%BB%E7%95%A52/odd-ticks_hu_d37f903ad564d495.png 1024w"
+	loading="lazy"
+	
+		alt="要求"
+	
+	
+		class="gallery-image" 
+		data-flex-grow="161"
+		data-flex-basis="388px"
+	
+>
+<img src="/p/%E5%9B%BE%E7%81%B5%E5%AE%8C%E5%A4%87alpha%E7%89%88%E6%94%BB%E7%95%A52/oddticks-mindmap.png"
+	width="973"
+	height="482"
+	srcset="/p/%E5%9B%BE%E7%81%B5%E5%AE%8C%E5%A4%87alpha%E7%89%88%E6%94%BB%E7%95%A52/oddticks-mindmap_hu_b94492436bde2a02.png 480w, /p/%E5%9B%BE%E7%81%B5%E5%AE%8C%E5%A4%87alpha%E7%89%88%E6%94%BB%E7%95%A52/oddticks-mindmap_hu_9f6667b8084d0e45.png 1024w"
+	loading="lazy"
+	
+		alt="思维导图"
+	
+	
+		class="gallery-image" 
+		data-flex-grow="201"
+		data-flex-basis="484px"
+	
+></p>
+<p>看到延迟输入，我的第一个想法就是，其他先不管，先想办法实现一下类似时钟的功能，通过or门，然后延迟输出它的相反数，这样就可以实现了，第一刻延迟线相反之后输出是1，
+也就是说时钟第一刻输出就是1，然后延迟线存储上一位的1，第二刻时输出1的相反，也就是0，0or0输出0，然后，寄存器输出，为啥想到or呢，因为这时候还没有开关，图灵完备不允许0和1一起输出，
+属于游戏特性，那么可以用这个数和0经过or门来实现，但第一刻是1，不是0，每个都相反了，那么只要取一次反即可</p>
+<p><img src="/p/%E5%9B%BE%E7%81%B5%E5%AE%8C%E5%A4%87alpha%E7%89%88%E6%94%BB%E7%95%A52/odd-ticks-solve.png"
+	width="848"
+	height="667"
+	srcset="/p/%E5%9B%BE%E7%81%B5%E5%AE%8C%E5%A4%87alpha%E7%89%88%E6%94%BB%E7%95%A52/odd-ticks-solve_hu_42cdf70ecd667596.png 480w, /p/%E5%9B%BE%E7%81%B5%E5%AE%8C%E5%A4%87alpha%E7%89%88%E6%94%BB%E7%95%A52/odd-ticks-solve_hu_f54489f75f937cf9.png 1024w"
+	loading="lazy"
+	
+		alt="解法"
+	
+	
+		class="gallery-image" 
+		data-flex-grow="127"
+		data-flex-basis="305px"
+	
+></p>
+<h2 id="bit-inverter">BIT INVERTER
+</h2><p><img src="/p/%E5%9B%BE%E7%81%B5%E5%AE%8C%E5%A4%87alpha%E7%89%88%E6%94%BB%E7%95%A52/bit-inverter-solve.png"
+	width="1452"
+	height="1077"
+	srcset="/p/%E5%9B%BE%E7%81%B5%E5%AE%8C%E5%A4%87alpha%E7%89%88%E6%94%BB%E7%95%A52/bit-inverter-solve_hu_4ff35f42d6239caa.png 480w, /p/%E5%9B%BE%E7%81%B5%E5%AE%8C%E5%A4%87alpha%E7%89%88%E6%94%BB%E7%95%A52/bit-inverter-solve_hu_cbbcd28196031e7d.png 1024w"
+	loading="lazy"
+	
+		alt="img_1.png"
+	
+	
+		class="gallery-image" 
+		data-flex-grow="134"
+		data-flex-basis="323px"
+	
+>
+不解释，对比信号输出即可</p>
+<h2 id="big-switch">BIG SWITCH
+</h2><p><img src="/p/%E5%9B%BE%E7%81%B5%E5%AE%8C%E5%A4%87alpha%E7%89%88%E6%94%BB%E7%95%A52/big-switch.png"
+	width="1475"
+	height="1080"
+	srcset="/p/%E5%9B%BE%E7%81%B5%E5%AE%8C%E5%A4%87alpha%E7%89%88%E6%94%BB%E7%95%A52/big-switch_hu_c56ce988a63bfba6.png 480w, /p/%E5%9B%BE%E7%81%B5%E5%AE%8C%E5%A4%87alpha%E7%89%88%E6%94%BB%E7%95%A52/big-switch_hu_806e96ff1761287e.png 1024w"
+	loading="lazy"
+	
+		alt="要求"
+	
+	
+		class="gallery-image" 
+		data-flex-grow="136"
+		data-flex-basis="327px"
+	
+></p>
+<p>只允许使用两个开关和两个非门来完成这个关卡，无疑思路就是，两路数据，开关必须得都处于不同状态，同时开启会导致图灵完备游戏报错，怎么控制呢？思路也很明了了，有个非门在提示着，
+也就是说，可以用一个输入作为信号控制开关，如果输入是1开一路，输入时2开另一路，那么另一个输入也如此了，也就是通过not来控制本信号位的通断，</p>
+<p>先从这一位信号控制的地方下手</p>
+<ol>
+<li>
+<p>如果信号位直接控制的一路，现在这个控制位信号是1，那么如果这开关的输入位是1的话，根据对照表，输出就得是0，此时控制位已经没法动了，所以只能是输入位接上not，此时消耗一个not</p>
+</li>
+<li>
+<p>又有控制位信号是0的话，控制取反信号一路的开，如果这一路输入也是0的话，得输出0，刚好不用取反，输入是1的话也导通</p>
+</li>
+</ol>
+<p>那么，就有</p>
+<p><img src="/p/%E5%9B%BE%E7%81%B5%E5%AE%8C%E5%A4%87alpha%E7%89%88%E6%94%BB%E7%95%A52/big-switch-solve.png"
+	width="1022"
+	height="733"
+	srcset="/p/%E5%9B%BE%E7%81%B5%E5%AE%8C%E5%A4%87alpha%E7%89%88%E6%94%BB%E7%95%A52/big-switch-solve_hu_af71d56a41ac6a10.png 480w, /p/%E5%9B%BE%E7%81%B5%E5%AE%8C%E5%A4%87alpha%E7%89%88%E6%94%BB%E7%95%A52/big-switch-solve_hu_b39011ec0dbc13bf.png 1024w"
+	loading="lazy"
+	
+		alt="img.png"
+	
+	
+		class="gallery-image" 
+		data-flex-grow="139"
+		data-flex-basis="334px"
+	
+></p>
+
+</section>
+
+
+    <footer class="article-footer">
+    
+
+    </footer>
+
+
+    
+        <link 
+                rel="stylesheet" 
+                href="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css"integrity="sha384-n8MVd4RsNIU0tAv4ct0nTaAbDJwPJzDEaqSD1odI&#43;WdtXRGWt2kTvGFasHpSy3SV"crossorigin="anonymous"
+            ><script 
+                src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.js"integrity="sha384-XjKyOOlGwcjNTAIQHIpgOno0Hl1YQqzUOEleOLALmuqehneUG&#43;vnGctmUb0ZY0l8"crossorigin="anonymous"
+                defer
+                >
+            </script><script 
+                src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/contrib/auto-render.min.js"integrity="sha384-&#43;VBxd3r6XgURycqtZ117nYw44OOcIax56Z4dCRWbxyPt0Koah1uHoK0o4&#43;/RRE05"crossorigin="anonymous"
+                defer
+                >
+            </script><script>
+    window.addEventListener("DOMContentLoaded", () => {
+	const mainArticleElement = document.querySelector(".main-article");
+        renderMathInElement(mainArticleElement, {
+            delimiters: [
+                { left: "$$", right: "$$", display: true },
+                { left: "$", right: "$", display: false },
+                { left: "\\(", right: "\\)", display: false },
+                { left: "\\[", right: "\\]", display: true }
+            ],
+            ignoredClasses: ["gist"]
+        });})
+</script>
+
+    
+</article>
+
+    
+
+    
+
+<aside class="related-content--wrapper">
+    <h2 class="section-title">相关文章</h2>
+    <div class="related-content">
+        <div class="flex article-list--tile">
+            
+                
+<article class="has-image">
+    <a href="/p/%E5%9B%BE%E7%81%B5%E5%AE%8C%E5%A4%87alpha%E7%89%88%E6%94%BB%E7%95%A51/">
+        
+        
+            <div class="article-image">
+                
+                    <img src="/image/Turing-Complete-Logo.png" loading="lazy" data-key="" data-hash="/image/Turing-Complete-Logo.png"/>
+                
+            </div>
+        
+
+        <div class="article-details">
+            <h2 class="article-title">图灵完备alpha版攻略1</h2>
+        </div>
+    </a>
+</article>
+
+            
+        </div>
+    </div>
+</aside>
+
+     
+    
+        
+    
+
+    <footer class="site-footer">
+    <section class="copyright">
+        &copy; 
+        
+        2025 深蓝之亘
+    </section>
+    
+    <section class="powerby">
+        
+            深蓝之亘的博客网站 https://adeepblue.github.io <br/>
+        使用 <a href="https://gohugo.io/" target="_blank" rel="noopener">Hugo</a> 构建 <br />
+        主题 <b><a href="https://github.com/CaiJimmy/hugo-theme-stack" target="_blank" rel="noopener" data-version="3.30.0">Stack</a></b> 由 <a href="https://jimmycai.com" target="_blank" rel="noopener">Jimmy</a> 设计
+    </section>
+</footer>
+
+
+    
+<div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
+
+    
+    <div class="pswp__bg"></div>
+
+    
+    <div class="pswp__scroll-wrap">
+
+        
+        <div class="pswp__container">
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+        </div>
+
+        
+        <div class="pswp__ui pswp__ui--hidden">
+
+            <div class="pswp__top-bar">
+
+                
+
+                <div class="pswp__counter"></div>
+
+                <button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+
+                <button class="pswp__button pswp__button--share" title="Share"></button>
+
+                <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
+
+                <button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
+
+                
+                
+                <div class="pswp__preloader">
+                    <div class="pswp__preloader__icn">
+                        <div class="pswp__preloader__cut">
+                            <div class="pswp__preloader__donut"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+                <div class="pswp__share-tooltip"></div>
+            </div>
+
+            <button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)">
+            </button>
+
+            <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)">
+            </button>
+
+            <div class="pswp__caption">
+                <div class="pswp__caption__center"></div>
+            </div>
+
+        </div>
+
+    </div>
+
+</div><script 
+                src="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe.min.js"integrity="sha256-ePwmChbbvXbsO02lbM3HoHbSHTHFAeChekF1xKJdleo="crossorigin="anonymous"
+                defer
+                >
+            </script><script 
+                src="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe-ui-default.min.js"integrity="sha256-UKkzOn/w1mBxRmLLGrSeyB4e1xbrp4xylgAWb3M42pU="crossorigin="anonymous"
+                defer
+                >
+            </script><link 
+                rel="stylesheet" 
+                href="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/default-skin/default-skin.min.css"crossorigin="anonymous"
+            ><link 
+                rel="stylesheet" 
+                href="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe.min.css"crossorigin="anonymous"
+            >
+
+            </main>
+        </div>
+        <script 
+                src="https://cdn.jsdelivr.net/npm/node-vibrant@3.1.6/dist/vibrant.min.js"integrity="sha256-awcR2jno4kI5X0zL8ex0vi2z&#43;KMkF24hUW8WePSA9HM="crossorigin="anonymous"
+                
+                >
+            </script><script type="text/javascript" src="/ts/main.1e9a3bafd846ced4c345d084b355fb8c7bae75701c338f8a1f8a82c780137826.js" defer></script>
+<script>
+    (function () {
+        const customFont = document.createElement('link');
+        customFont.href = "https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap";
+
+        customFont.type = "text/css";
+        customFont.rel = "stylesheet";
+
+        document.head.appendChild(customFont);
+    }());
+</script>
+
+<style>
+  body {
+    background: url(https://adeepblue.github.io/background/background.png) no-repeat center top;
+    background-size: cover;
+    background-attachment: fixed;
+  }
+</style>
+    </body>
+</html>

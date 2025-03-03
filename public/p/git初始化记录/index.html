@@ -408,6 +408,11 @@
 </span></span><span class="line"><span class="cl">git remote set-url origin https://github.com/Adeepblue/adeepblue.github.io
 </span></span><span class="line"><span class="cl">REM 推送，如果本地分支跟远程分支不同可使用-f参数强制推送
 </span></span><span class="line"><span class="cl">git push -f origin main / git push origin main --force
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">REM 列出所有配置
+</span></span><span class="line"><span class="cl">git config --list
+</span></span><span class="line"><span class="cl">REM 删除配置
+</span></span><span class="line"><span class="cl">git config --global --unset http.https://github.com.proxy
 </span></span></code></pre></div><p>以上，调试完毕</p>
 <p>如果走SSH协议的话，上面add origin或者是set-url origin后面的命令得修改成 <a class="link" href="mailto:git@github.com" >git@github.com</a>:Adeepblue/adeepblue.github.io，其中要确保SSH已经验证过了，</p>
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">git add -f public

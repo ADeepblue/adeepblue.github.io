@@ -77,7 +77,10 @@ git remote set-url origin https://github.com/Adeepblue/adeepblue.github.io
 REM 推送，如果本地分支跟远程分支不同可使用-f参数强制推送
 git push -f origin main / git push origin main --force
 
-
+REM 列出所有配置
+git config --list
+REM 删除配置
+git config --global --unset http.https://github.com.proxy
 ```
 以上，调试完毕
 
