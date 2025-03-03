@@ -336,7 +336,7 @@ $$假定输入数是a,a=(a_7\cdot2^7+...+a_0\cdot2^0),则2a=(a_7\cdot2^8+...+a_0
 	srcset=&#34;https://adeepblue.github.io/p/%E5%9B%BE%E7%81%B5%E5%AE%8C%E5%A4%87alpha%E7%89%88%E6%94%BB%E7%95%A52/big-switch-solve_hu_af71d56a41ac6a10.png 480w, https://adeepblue.github.io/p/%E5%9B%BE%E7%81%B5%E5%AE%8C%E5%A4%87alpha%E7%89%88%E6%94%BB%E7%95%A52/big-switch-solve_hu_b39011ec0dbc13bf.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
-		alt=&#34;img.png&#34;
+		alt=&#34;解法&#34;
 	
 	
 		class=&#34;gallery-image&#34; 
@@ -4588,7 +4588,11 @@ $$\frac {1} {2}$$&lt;p&gt;还有，切记，在代码段前如果放文字会被
         
         <guid>https://adeepblue.github.io/%E6%9B%B4%E6%96%B0%E6%97%A5%E5%BF%97/</guid>
         <description>&lt;h1 id=&#34;更新记录&#34;&gt;更新记录
-&lt;/h1&gt;&lt;h2 id=&#34;---------------2025-03-1更新---------------------&#34;&gt;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;2025-03-1更新&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;
+&lt;/h1&gt;&lt;h2 id=&#34;---------------2025-03-2更新---------------------&#34;&gt;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;2025-03-2更新&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;
+&lt;/h2&gt;&lt;p&gt;更新了图灵完备alpha第二篇攻略&lt;/p&gt;
+&lt;h2 id=&#34;---------------2025-03-2更新----------------------1&#34;&gt;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;2025-03-2更新&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;
+&lt;/h2&gt;&lt;p&gt;更新了图灵完备alpha第一篇攻略&lt;/p&gt;
+&lt;h2 id=&#34;---------------2025-03-1更新---------------------&#34;&gt;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;2025-03-1更新&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;
 &lt;/h2&gt;&lt;p&gt;新增了phi-plugin篇&lt;/p&gt;
 &lt;h2 id=&#34;---------------2025-02-24更新---------------------&#34;&gt;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;2025-02-24更新&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;
 &lt;/h2&gt;&lt;p&gt;更新64位架构ing&lt;/p&gt;

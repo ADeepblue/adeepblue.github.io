@@ -124,5 +124,5 @@ $$a = \sum_{0}^{7} {a_i\cdot2^i},2a=2\cdot\sum_{0}^{7} {a_i\cdot2^i}=\sum_{1}^{8
 
 那么，就有
 
-![img.png](big-switch-solve.png)
+![解法](big-switch-solve.png)
 

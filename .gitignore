@@ -1,0 +1,14 @@
+# lib
+
+.eslintcache
+.DS_Store
+.idea
+.vscode
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+发布文章.bat
+启动服务器.bat
+推送主分支.bat
+lib/
