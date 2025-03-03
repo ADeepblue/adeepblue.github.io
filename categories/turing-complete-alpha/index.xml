@@ -7,13 +7,352 @@
         <generator>Hugo -- gohugo.io</generator>
         <language>zh-cn</language>
         <copyright>深蓝之亘</copyright>
-        <lastBuildDate>Fri, 28 Feb 2025 11:08:48 +0800</lastBuildDate><atom:link href="https://adeepblue.github.io/categories/turing-complete-alpha/index.xml" rel="self" type="application/rss+xml" /><item>
+        <lastBuildDate>Sun, 02 Mar 2025 14:36:14 +0800</lastBuildDate><atom:link href="https://adeepblue.github.io/categories/turing-complete-alpha/index.xml" rel="self" type="application/rss+xml" /><item>
+        <title>图灵完备alpha版攻略2</title>
+        <link>https://adeepblue.github.io/p/%E5%9B%BE%E7%81%B5%E5%AE%8C%E5%A4%87alpha%E7%89%88%E6%94%BB%E7%95%A52/</link>
+        <pubDate>Sun, 02 Mar 2025 14:36:14 +0800</pubDate>
+        
+        <guid>https://adeepblue.github.io/p/%E5%9B%BE%E7%81%B5%E5%AE%8C%E5%A4%87alpha%E7%89%88%E6%94%BB%E7%95%A52/</guid>
+        <description>&lt;img src="https://adeepblue.github.io/image/Turing-Complete-Logo.png" alt="Featured image of post 图灵完备alpha版攻略2" /&gt;&lt;h1 id=&#34;图灵完备alpha篇攻略2&#34;&gt;图灵完备alpha篇攻略2
+&lt;/h1&gt;&lt;h2 id=&#34;odd-number-of-singals&#34;&gt;ODD Number of Singals
+&lt;/h2&gt;&lt;p&gt;&lt;img src=&#34;https://adeepblue.github.io/p/%E5%9B%BE%E7%81%B5%E5%AE%8C%E5%A4%87alpha%E7%89%88%E6%94%BB%E7%95%A52/odd-number-of-signals.png&#34;
+	width=&#34;1175&#34;
+	height=&#34;637&#34;
+	srcset=&#34;https://adeepblue.github.io/p/%E5%9B%BE%E7%81%B5%E5%AE%8C%E5%A4%87alpha%E7%89%88%E6%94%BB%E7%95%A52/odd-number-of-signals_hu_ff1bfb2e5514402b.png 480w, https://adeepblue.github.io/p/%E5%9B%BE%E7%81%B5%E5%AE%8C%E5%A4%87alpha%E7%89%88%E6%94%BB%E7%95%A52/odd-number-of-signals_hu_b71cec1b09f9145c.png 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;要求&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;184&#34;
+		data-flex-basis=&#34;442px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;p&gt;这个要求是，单数个高电平的时候输出高电平，其他时候低电平，但是，现在已经有同或门了，如果两个数相同，就输出1，不同就输出0，那么，如果输出是1，必定是一个1和一个0的组合，
+也就是必定是单数，但又有，两个单数加起来是双数，所以得排除两个都是单数或者两个都是双数的情况，总结而言，就是需要一个异或门，所以，输出示例如下：&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://adeepblue.github.io/p/%E5%9B%BE%E7%81%B5%E5%AE%8C%E5%A4%87alpha%E7%89%88%E6%94%BB%E7%95%A52/odd-number-of-signals-solve.png&#34;
+	width=&#34;1316&#34;
+	height=&#34;737&#34;
+	srcset=&#34;https://adeepblue.github.io/p/%E5%9B%BE%E7%81%B5%E5%AE%8C%E5%A4%87alpha%E7%89%88%E6%94%BB%E7%95%A52/odd-number-of-signals-solve_hu_d037e13c612e7879.png 480w, https://adeepblue.github.io/p/%E5%9B%BE%E7%81%B5%E5%AE%8C%E5%A4%87alpha%E7%89%88%E6%94%BB%E7%95%A52/odd-number-of-signals-solve_hu_e8d891fdc031ef8a.png 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;解法&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;178&#34;
+		data-flex-basis=&#34;428px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;h2 id=&#34;circular-dependency&#34;&gt;CIRCULAR DEPENDENCY
+&lt;/h2&gt;&lt;p&gt;循环依赖，输出跟输入的一个脚不同即可，最好正负还会影响输出结果，如下&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://adeepblue.github.io/p/%E5%9B%BE%E7%81%B5%E5%AE%8C%E5%A4%87alpha%E7%89%88%E6%94%BB%E7%95%A52/circular-dependency.png&#34;
+	width=&#34;1041&#34;
+	height=&#34;761&#34;
+	srcset=&#34;https://adeepblue.github.io/p/%E5%9B%BE%E7%81%B5%E5%AE%8C%E5%A4%87alpha%E7%89%88%E6%94%BB%E7%95%A52/circular-dependency_hu_fff2294fff0abac9.png 480w, https://adeepblue.github.io/p/%E5%9B%BE%E7%81%B5%E5%AE%8C%E5%A4%87alpha%E7%89%88%E6%94%BB%E7%95%A52/circular-dependency_hu_4780ba3bf9bea691.png 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;循环依赖&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;136&#34;
+		data-flex-basis=&#34;328px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;h2 id=&#34;counting-siginals&#34;&gt;counting siginals
+&lt;/h2&gt;&lt;h3 id=&#34;解法1-排除法&#34;&gt;解法1 排除法
+&lt;/h3&gt;&lt;p&gt;是一个数高电平数的一个元件，输入需要按4，2，1排列，那么首先可以确定，如果四个全部亮起时，4的开关得亮起&lt;/p&gt;
+&lt;p&gt;其中第二好确认的是另一个0的位置，其中解法就在上面单双数那，因为单双数就是影响的第一位的数值，&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://adeepblue.github.io/p/%E5%9B%BE%E7%81%B5%E5%AE%8C%E5%A4%87alpha%E7%89%88%E6%94%BB%E7%95%A52/counting-signals-1-4.png&#34;
+	width=&#34;1185&#34;
+	height=&#34;1025&#34;
+	srcset=&#34;https://adeepblue.github.io/p/%E5%9B%BE%E7%81%B5%E5%AE%8C%E5%A4%87alpha%E7%89%88%E6%94%BB%E7%95%A52/counting-signals-1-4_hu_aa1e9870c1246d66.png 480w, https://adeepblue.github.io/p/%E5%9B%BE%E7%81%B5%E5%AE%8C%E5%A4%87alpha%E7%89%88%E6%94%BB%E7%95%A52/counting-signals-1-4_hu_795df82fe5e52e20.png 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;1位和4位&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;115&#34;
+		data-flex-basis=&#34;277px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;p&gt;2位处最复杂，如果按照正向去找会比较麻烦，亮起时包含条件2、3，此时采用反向讨论，也就是说，我们需要排除以下几种情况，0，1，4，这样会比较方便一些，&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&lt;strong&gt;0&lt;/strong&gt; 其实就是四个or门不满足的情况，突变点时四个输入都为0，但目前还无法搭建4or门，结构即是两个or门分别连着四路输出，然后这两个or门的输出为第三个or门的输入，此时最后如果最后一个门是or的话输出会导致突变点正常$（0,0,0,0）$，但输出相反，所以需要输出接着not，就是nor门，所以结构如下图标0处&lt;/p&gt;&lt;/blockquote&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&lt;strong&gt;1&lt;/strong&gt; 这里有四种情况，也就是亮的4路选一路，然后其他三路全部为0，全部为0的突变点在(0,0,0)，对应3or门，但是输出需要取反，然后这个结果需要同时满足最后一路是1，此时and门的逻辑作用就体现了，需要两个条件同时满足，即(A&amp;amp;B)，做法只需要把多个条件全部接入and门即可，以及，四种情况只要满足1个条件即可，所以满足条件的3个0、1个1的四种情况用三个or门连接起来即可&lt;/p&gt;&lt;/blockquote&gt;
+&lt;p&gt;&lt;img src=&#34;https://adeepblue.github.io/p/%E5%9B%BE%E7%81%B5%E5%AE%8C%E5%A4%87alpha%E7%89%88%E6%94%BB%E7%95%A52/counting-signals-0-1-4-except.png&#34;
+	width=&#34;1237&#34;
+	height=&#34;1001&#34;
+	srcset=&#34;https://adeepblue.github.io/p/%E5%9B%BE%E7%81%B5%E5%AE%8C%E5%A4%87alpha%E7%89%88%E6%94%BB%E7%95%A52/counting-signals-0-1-4-except_hu_27acc76f84e727b4.png 480w, https://adeepblue.github.io/p/%E5%9B%BE%E7%81%B5%E5%AE%8C%E5%A4%87alpha%E7%89%88%E6%94%BB%E7%95%A52/counting-signals-0-1-4-except_hu_5759f2a2bc1d6c90.png 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;0,1,4三种情况&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;123&#34;
+		data-flex-basis=&#34;296px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;p&gt;那么，要2，3的情况亮起，我需要$0,1,4$三种情况都不满足时亮起，也就是突变点对应的$(0,0,0)$,也就是说，我需要使用3or门取反即可实现&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://adeepblue.github.io/p/%E5%9B%BE%E7%81%B5%E5%AE%8C%E5%A4%87alpha%E7%89%88%E6%94%BB%E7%95%A52/counting-signals-solve-1.png&#34;
+	width=&#34;1093&#34;
+	height=&#34;684&#34;
+	srcset=&#34;https://adeepblue.github.io/p/%E5%9B%BE%E7%81%B5%E5%AE%8C%E5%A4%87alpha%E7%89%88%E6%94%BB%E7%95%A52/counting-signals-solve-1_hu_514848553d8a9262.png 480w, https://adeepblue.github.io/p/%E5%9B%BE%E7%81%B5%E5%AE%8C%E5%A4%87alpha%E7%89%88%E6%94%BB%E7%95%A52/counting-signals-solve-1_hu_11b5b68312313804.png 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;解法1&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;159&#34;
+		data-flex-basis=&#34;383px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;h3 id=&#34;解法2-暴力解法&#34;&gt;解法2 暴力解法
+&lt;/h3&gt;&lt;p&gt;参考解法1，0，4不动，主要看中间第三路，三路参考1路解法，即调换3or门处类似换成3and门即可，正负有小的变化，但2的情况有所复杂化，按1的值来取，有
+$(1,2),(1,3),(1,4),(2,3),(2,4),(3,4)$六种可能性，其中其余全是0，也就是启用nor即可，因为是6种条件随便满足一种即可，所以3*2的or门即可&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://adeepblue.github.io/p/%E5%9B%BE%E7%81%B5%E5%AE%8C%E5%A4%87alpha%E7%89%88%E6%94%BB%E7%95%A52/count-signals-solve-mid-2.png&#34;
+	width=&#34;1201&#34;
+	height=&#34;1079&#34;
+	srcset=&#34;https://adeepblue.github.io/p/%E5%9B%BE%E7%81%B5%E5%AE%8C%E5%A4%87alpha%E7%89%88%E6%94%BB%E7%95%A52/count-signals-solve-mid-2_hu_62500a4358de9579.png 480w, https://adeepblue.github.io/p/%E5%9B%BE%E7%81%B5%E5%AE%8C%E5%A4%87alpha%E7%89%88%E6%94%BB%E7%95%A52/count-signals-solve-mid-2_hu_3c443fae3e0c2375.png 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;2和3&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;111&#34;
+		data-flex-basis=&#34;267px&#34;
+	
+&gt;
+&lt;img src=&#34;https://adeepblue.github.io/p/%E5%9B%BE%E7%81%B5%E5%AE%8C%E5%A4%87alpha%E7%89%88%E6%94%BB%E7%95%A52/counting-signals-solve-2.png&#34;
+	width=&#34;1009&#34;
+	height=&#34;1005&#34;
+	srcset=&#34;https://adeepblue.github.io/p/%E5%9B%BE%E7%81%B5%E5%AE%8C%E5%A4%87alpha%E7%89%88%E6%94%BB%E7%95%A52/counting-signals-solve-2_hu_e9629bc89efda108.png 480w, https://adeepblue.github.io/p/%E5%9B%BE%E7%81%B5%E5%AE%8C%E5%A4%87alpha%E7%89%88%E6%94%BB%E7%95%A52/counting-signals-solve-2_hu_595707d60b56db6f.png 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;解法2&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;100&#34;
+		data-flex-basis=&#34;240px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;h2 id=&#34;half-adder&#34;&gt;HALF ADDER
+&lt;/h2&gt;&lt;p&gt;&lt;img src=&#34;https://adeepblue.github.io/p/%E5%9B%BE%E7%81%B5%E5%AE%8C%E5%A4%87alpha%E7%89%88%E6%94%BB%E7%95%A52/half-adder.png&#34;
+	width=&#34;881&#34;
+	height=&#34;724&#34;
+	srcset=&#34;https://adeepblue.github.io/p/%E5%9B%BE%E7%81%B5%E5%AE%8C%E5%A4%87alpha%E7%89%88%E6%94%BB%E7%95%A52/half-adder_hu_ebfaac281f8c4e8c.png 480w, https://adeepblue.github.io/p/%E5%9B%BE%E7%81%B5%E5%AE%8C%E5%A4%87alpha%E7%89%88%E6%94%BB%E7%95%A52/half-adder_hu_ac892c01d53ffaea.png 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;要求&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;121&#34;
+		data-flex-basis=&#34;292px&#34;
+	
+&gt;
+&lt;img src=&#34;https://adeepblue.github.io/p/%E5%9B%BE%E7%81%B5%E5%AE%8C%E5%A4%87alpha%E7%89%88%E6%94%BB%E7%95%A52/half-adder-solve.png&#34;
+	width=&#34;855&#34;
+	height=&#34;749&#34;
+	srcset=&#34;https://adeepblue.github.io/p/%E5%9B%BE%E7%81%B5%E5%AE%8C%E5%A4%87alpha%E7%89%88%E6%94%BB%E7%95%A52/half-adder-solve_hu_7d44353db65c2cc4.png 480w, https://adeepblue.github.io/p/%E5%9B%BE%E7%81%B5%E5%AE%8C%E5%A4%87alpha%E7%89%88%E6%94%BB%E7%95%A52/half-adder-solve_hu_71bc9dad9826a370.png 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;解法&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;114&#34;
+		data-flex-basis=&#34;273px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;p&gt;很明确，只要两个门分开处理就行，刚好能对应上异或门和与门，解法如上&lt;/p&gt;
+&lt;h2 id=&#34;delayed-lines&#34;&gt;DELAYED LINES
+&lt;/h2&gt;&lt;p&gt;&lt;img src=&#34;https://adeepblue.github.io/p/%E5%9B%BE%E7%81%B5%E5%AE%8C%E5%A4%87alpha%E7%89%88%E6%94%BB%E7%95%A52/delayed-lines-solve.png&#34;
+	width=&#34;1563&#34;
+	height=&#34;1080&#34;
+	srcset=&#34;https://adeepblue.github.io/p/%E5%9B%BE%E7%81%B5%E5%AE%8C%E5%A4%87alpha%E7%89%88%E6%94%BB%E7%95%A52/delayed-lines-solve_hu_5dfb916904ad15ce.png 480w, https://adeepblue.github.io/p/%E5%9B%BE%E7%81%B5%E5%AE%8C%E5%A4%87alpha%E7%89%88%E6%94%BB%E7%95%A52/delayed-lines-solve_hu_5b11267d2678eba4.png 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;解法&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;144&#34;
+		data-flex-basis=&#34;347px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;p&gt;过于简单的我就不解说了，延迟两刻输出&lt;/p&gt;
+&lt;h2 id=&#34;double-the-number&#34;&gt;DOUBLE THE NUMBER
+&lt;/h2&gt;&lt;p&gt;把数值放大两倍后输出，其实实际上就是左移数字，毕竟&lt;/p&gt;
+$$假定输入数是a,a=(a_7\cdot2^7+...+a_0\cdot2^0),则2a=(a_7\cdot2^8+...+a_0\cdot2^1+0\cdot2^0)$$$$a = \sum_{0}^{7} {a_i\cdot2^i},2a=2\cdot\sum_{0}^{7} {a_i\cdot2^i}=\sum_{1}^{8} {a_i\cdot2^i}+0\cdot2^0$$&lt;p&gt;其中$2^8$部分因为进位可以直接舍去了，如果在8bit数据中，存在$2^8$就是已经溢出了，易见a_0的数值，也就是第一位被填到了第二位，以此类推，全部发生了移位操作，&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://adeepblue.github.io/p/%E5%9B%BE%E7%81%B5%E5%AE%8C%E5%A4%87alpha%E7%89%88%E6%94%BB%E7%95%A52/double-the-number.png&#34;
+	width=&#34;1022&#34;
+	height=&#34;760&#34;
+	srcset=&#34;https://adeepblue.github.io/p/%E5%9B%BE%E7%81%B5%E5%AE%8C%E5%A4%87alpha%E7%89%88%E6%94%BB%E7%95%A52/double-the-number_hu_2ba6cd845764dff2.png 480w, https://adeepblue.github.io/p/%E5%9B%BE%E7%81%B5%E5%AE%8C%E5%A4%87alpha%E7%89%88%E6%94%BB%E7%95%A52/double-the-number_hu_b15fcb8b2db7fde2.png 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;解法&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;134&#34;
+		data-flex-basis=&#34;322px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;h2 id=&#34;full-adder&#34;&gt;FULL ADDER
+&lt;/h2&gt;&lt;p&gt;&lt;img src=&#34;https://adeepblue.github.io/p/%E5%9B%BE%E7%81%B5%E5%AE%8C%E5%A4%87alpha%E7%89%88%E6%94%BB%E7%95%A52/full-adder.png&#34;
+	width=&#34;902&#34;
+	height=&#34;677&#34;
+	srcset=&#34;https://adeepblue.github.io/p/%E5%9B%BE%E7%81%B5%E5%AE%8C%E5%A4%87alpha%E7%89%88%E6%94%BB%E7%95%A52/full-adder_hu_42ddae43d5b0e29e.png 480w, https://adeepblue.github.io/p/%E5%9B%BE%E7%81%B5%E5%AE%8C%E5%A4%87alpha%E7%89%88%E6%94%BB%E7%95%A52/full-adder_hu_7f4678e3ad365562.png 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;要求&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;133&#34;
+		data-flex-basis=&#34;319px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;p&gt;全加器，其中sum部分的很明显，只是一个观察单双数的位，另一位则是观察是否有两位以上的1，那么开工&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;先用异或门判断两位是否相同，输出则是这两位是否是单数，如果是单数输出1，另一位也是1的话，那么输出2，不是单数，则需要输出0，也就是后面的算法依旧也是判断单双数，都亮起或者灭了就是双，不同就是单数，实际就是一个异或门，所以，使用两个异或门即可完成任务，参考如解法图&lt;/li&gt;
+&lt;li&gt;第二位进位car位，需要有两位及两位以上的1，2位，刚好and门要有1的输出必须要有两个1，那么，思路很明确了，只要对3个输入进行两两检测，有and门为1即可，也就是说，3个and门只要满足一个或者以上即可，所以可以对这三个and门的输出使用3or门&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;&lt;img src=&#34;https://adeepblue.github.io/p/%E5%9B%BE%E7%81%B5%E5%AE%8C%E5%A4%87alpha%E7%89%88%E6%94%BB%E7%95%A52/full-adder-solve.png&#34;
+	width=&#34;820&#34;
+	height=&#34;835&#34;
+	srcset=&#34;https://adeepblue.github.io/p/%E5%9B%BE%E7%81%B5%E5%AE%8C%E5%A4%87alpha%E7%89%88%E6%94%BB%E7%95%A52/full-adder-solve_hu_7edba35cef41290b.png 480w, https://adeepblue.github.io/p/%E5%9B%BE%E7%81%B5%E5%AE%8C%E5%A4%87alpha%E7%89%88%E6%94%BB%E7%95%A52/full-adder-solve_hu_69c85bc5b462b368.png 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;解法&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;98&#34;
+		data-flex-basis=&#34;235px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;h2 id=&#34;odd-ticks&#34;&gt;ODD TICKS
+&lt;/h2&gt;&lt;p&gt;&lt;img src=&#34;https://adeepblue.github.io/p/%E5%9B%BE%E7%81%B5%E5%AE%8C%E5%A4%87alpha%E7%89%88%E6%94%BB%E7%95%A52/odd-ticks.png&#34;
+	width=&#34;911&#34;
+	height=&#34;563&#34;
+	srcset=&#34;https://adeepblue.github.io/p/%E5%9B%BE%E7%81%B5%E5%AE%8C%E5%A4%87alpha%E7%89%88%E6%94%BB%E7%95%A52/odd-ticks_hu_3f714d868b35bac6.png 480w, https://adeepblue.github.io/p/%E5%9B%BE%E7%81%B5%E5%AE%8C%E5%A4%87alpha%E7%89%88%E6%94%BB%E7%95%A52/odd-ticks_hu_d37f903ad564d495.png 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;要求&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;161&#34;
+		data-flex-basis=&#34;388px&#34;
+	
+&gt;
+&lt;img src=&#34;https://adeepblue.github.io/p/%E5%9B%BE%E7%81%B5%E5%AE%8C%E5%A4%87alpha%E7%89%88%E6%94%BB%E7%95%A52/oddticks-mindmap.png&#34;
+	width=&#34;973&#34;
+	height=&#34;482&#34;
+	srcset=&#34;https://adeepblue.github.io/p/%E5%9B%BE%E7%81%B5%E5%AE%8C%E5%A4%87alpha%E7%89%88%E6%94%BB%E7%95%A52/oddticks-mindmap_hu_b94492436bde2a02.png 480w, https://adeepblue.github.io/p/%E5%9B%BE%E7%81%B5%E5%AE%8C%E5%A4%87alpha%E7%89%88%E6%94%BB%E7%95%A52/oddticks-mindmap_hu_9f6667b8084d0e45.png 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;思维导图&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;201&#34;
+		data-flex-basis=&#34;484px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;p&gt;看到延迟输入，我的第一个想法就是，其他先不管，先想办法实现一下类似时钟的功能，通过or门，然后延迟输出它的相反数，这样就可以实现了，第一刻延迟线相反之后输出是1，
+也就是说时钟第一刻输出就是1，然后延迟线存储上一位的1，第二刻时输出1的相反，也就是0，0or0输出0，然后，寄存器输出，为啥想到or呢，因为这时候还没有开关，图灵完备不允许0和1一起输出，
+属于游戏特性，那么可以用这个数和0经过or门来实现，但第一刻是1，不是0，每个都相反了，那么只要取一次反即可&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://adeepblue.github.io/p/%E5%9B%BE%E7%81%B5%E5%AE%8C%E5%A4%87alpha%E7%89%88%E6%94%BB%E7%95%A52/odd-ticks-solve.png&#34;
+	width=&#34;848&#34;
+	height=&#34;667&#34;
+	srcset=&#34;https://adeepblue.github.io/p/%E5%9B%BE%E7%81%B5%E5%AE%8C%E5%A4%87alpha%E7%89%88%E6%94%BB%E7%95%A52/odd-ticks-solve_hu_42cdf70ecd667596.png 480w, https://adeepblue.github.io/p/%E5%9B%BE%E7%81%B5%E5%AE%8C%E5%A4%87alpha%E7%89%88%E6%94%BB%E7%95%A52/odd-ticks-solve_hu_f54489f75f937cf9.png 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;解法&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;127&#34;
+		data-flex-basis=&#34;305px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;h2 id=&#34;bit-inverter&#34;&gt;BIT INVERTER
+&lt;/h2&gt;&lt;p&gt;&lt;img src=&#34;https://adeepblue.github.io/p/%E5%9B%BE%E7%81%B5%E5%AE%8C%E5%A4%87alpha%E7%89%88%E6%94%BB%E7%95%A52/bit-inverter-solve.png&#34;
+	width=&#34;1452&#34;
+	height=&#34;1077&#34;
+	srcset=&#34;https://adeepblue.github.io/p/%E5%9B%BE%E7%81%B5%E5%AE%8C%E5%A4%87alpha%E7%89%88%E6%94%BB%E7%95%A52/bit-inverter-solve_hu_4ff35f42d6239caa.png 480w, https://adeepblue.github.io/p/%E5%9B%BE%E7%81%B5%E5%AE%8C%E5%A4%87alpha%E7%89%88%E6%94%BB%E7%95%A52/bit-inverter-solve_hu_cbbcd28196031e7d.png 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;img_1.png&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;134&#34;
+		data-flex-basis=&#34;323px&#34;
+	
+&gt;
+不解释，对比信号输出即可&lt;/p&gt;
+&lt;h2 id=&#34;big-switch&#34;&gt;BIG SWITCH
+&lt;/h2&gt;&lt;p&gt;&lt;img src=&#34;https://adeepblue.github.io/p/%E5%9B%BE%E7%81%B5%E5%AE%8C%E5%A4%87alpha%E7%89%88%E6%94%BB%E7%95%A52/big-switch.png&#34;
+	width=&#34;1475&#34;
+	height=&#34;1080&#34;
+	srcset=&#34;https://adeepblue.github.io/p/%E5%9B%BE%E7%81%B5%E5%AE%8C%E5%A4%87alpha%E7%89%88%E6%94%BB%E7%95%A52/big-switch_hu_c56ce988a63bfba6.png 480w, https://adeepblue.github.io/p/%E5%9B%BE%E7%81%B5%E5%AE%8C%E5%A4%87alpha%E7%89%88%E6%94%BB%E7%95%A52/big-switch_hu_806e96ff1761287e.png 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;要求&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;136&#34;
+		data-flex-basis=&#34;327px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;p&gt;只允许使用两个开关和两个非门来完成这个关卡，无疑思路就是，两路数据，开关必须得都处于不同状态，同时开启会导致图灵完备游戏报错，怎么控制呢？思路也很明了了，有个非门在提示着，
+也就是说，可以用一个输入作为信号控制开关，如果输入是1开一路，输入时2开另一路，那么另一个输入也如此了，也就是通过not来控制本信号位的通断，&lt;/p&gt;
+&lt;p&gt;先从这一位信号控制的地方下手&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;
+&lt;p&gt;如果信号位直接控制的一路，现在这个控制位信号是1，那么如果这开关的输入位是1的话，根据对照表，输出就得是0，此时控制位已经没法动了，所以只能是输入位接上not，此时消耗一个not&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;又有控制位信号是0的话，控制取反信号一路的开，如果这一路输入也是0的话，得输出0，刚好不用取反，输入是1的话也导通&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;那么，就有&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://adeepblue.github.io/p/%E5%9B%BE%E7%81%B5%E5%AE%8C%E5%A4%87alpha%E7%89%88%E6%94%BB%E7%95%A52/big-switch-solve.png&#34;
+	width=&#34;1022&#34;
+	height=&#34;733&#34;
+	srcset=&#34;https://adeepblue.github.io/p/%E5%9B%BE%E7%81%B5%E5%AE%8C%E5%A4%87alpha%E7%89%88%E6%94%BB%E7%95%A52/big-switch-solve_hu_af71d56a41ac6a10.png 480w, https://adeepblue.github.io/p/%E5%9B%BE%E7%81%B5%E5%AE%8C%E5%A4%87alpha%E7%89%88%E6%94%BB%E7%95%A52/big-switch-solve_hu_b39011ec0dbc13bf.png 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;img.png&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;139&#34;
+		data-flex-basis=&#34;334px&#34;
+	
+&gt;&lt;/p&gt;
+</description>
+        </item>
+        <item>
         <title>图灵完备alpha版攻略1</title>
         <link>https://adeepblue.github.io/p/%E5%9B%BE%E7%81%B5%E5%AE%8C%E5%A4%87alpha%E7%89%88%E6%94%BB%E7%95%A51/</link>
         <pubDate>Fri, 28 Feb 2025 11:08:48 +0800</pubDate>
         
         <guid>https://adeepblue.github.io/p/%E5%9B%BE%E7%81%B5%E5%AE%8C%E5%A4%87alpha%E7%89%88%E6%94%BB%E7%95%A51/</guid>
-        <description>&lt;img src="https://adeepblue.github.io/image/Turing-Complete-Logo.png" alt="Featured image of post 图灵完备alpha版攻略1" /&gt;&lt;h1 id=&#34;一些说明&#34;&gt;一些说明
+        <description>&lt;img src="https://adeepblue.github.io/image/Turing-Complete-Logo.png" alt="Featured image of post 图灵完备alpha版攻略1" /&gt;&lt;h1 id=&#34;一些关于游戏的说明&#34;&gt;一些关于游戏的说明
 &lt;/h1&gt;&lt;p&gt;图灵完备更新了版本，疑似修复了我图灵完备攻略6的bug，但是以前的存档不能用了（可能类似于内部数据结构变动），也正好，我打算借着这个机会重新玩一下以前的关卡，有一些在现在的视角有更优雅更好的解法，
 就当是补以前没写博客时的攻略了,虽然躲不掉bug也挺难受的&lt;/p&gt;
 &lt;p&gt;&lt;img src=&#34;https://adeepblue.github.io/p/%E5%9B%BE%E7%81%B5%E5%AE%8C%E5%A4%87alpha%E7%89%88%E6%94%BB%E7%95%A51/some-language-bug.png&#34;
@@ -30,7 +369,11 @@
 		data-flex-basis=&#34;351px&#34;
 	
 &gt;&lt;/p&gt;
-&lt;h1 id=&#34;图灵完备alpha篇攻略&#34;&gt;图灵完备alpha篇攻略
+&lt;h2 id=&#34;前置的一些逻辑说明&#34;&gt;前置的一些逻辑说明
+&lt;/h2&gt;&lt;p&gt;AND门和OR门，一定程度可以理解为统合一些条件的检查，比如说我有条件1，条件2，条件3全部满足的情况，可以理解为编程中的if，那么也就是说三个条件都要满足才会让输出变成高电平，
+也就是 (condition1)&amp;amp;&amp;amp;(condition2)&amp;amp;&amp;amp;(condition3),or门同理，(condition1)||(condition2)||(condition3)，这点在以后的分类讨论中会很有用，
+比如满足需要输出的条件1，条件2，条件3，然后所有需要输出的条件状态下，用or连接即可，表示只要有一个条件满足了就允许输出高电平&lt;/p&gt;
+&lt;h1 id=&#34;图灵完备alpha篇攻略1&#34;&gt;图灵完备alpha篇攻略1
 &lt;/h1&gt;&lt;h2 id=&#34;nand门-nand-gate&#34;&gt;NAND门 (NAND GATE)
 &lt;/h2&gt;&lt;p&gt;&lt;img src=&#34;https://adeepblue.github.io/p/%E5%9B%BE%E7%81%B5%E5%AE%8C%E5%A4%87alpha%E7%89%88%E6%94%BB%E7%95%A51/nand-solve.png&#34;
 	width=&#34;1679&#34;
@@ -69,6 +412,8 @@
 	srcset=&#34;https://adeepblue.github.io/p/%E5%9B%BE%E7%81%B5%E5%AE%8C%E5%A4%87alpha%E7%89%88%E6%94%BB%E7%95%A51/not-solve_hu_af1859bb3c44665f.png 480w, https://adeepblue.github.io/p/%E5%9B%BE%E7%81%B5%E5%AE%8C%E5%A4%87alpha%E7%89%88%E6%94%BB%E7%95%A51/not-solve_hu_4cd6f41cd529635c.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
+		alt=&#34;解法&#34;
+	
 	
 		class=&#34;gallery-image&#34; 
 		data-flex-grow=&#34;111&#34;
@@ -76,9 +421,257 @@
 	
 &gt;&lt;/p&gt;
 &lt;h2 id=&#34;and-gate&#34;&gt;AND GATE
-&lt;/h2&gt;&lt;h3 id=&#34;解释一&#34;&gt;解释一
-&lt;/h3&gt;&lt;p&gt;观察NAND门，它信号也只有两个输入都是1的时候才会为0，这是一个特殊的突变点，and门也有类似的结构，但是突变点在两个输入都是1的时候，结果为1，那么，
+&lt;/h2&gt;&lt;p&gt;观察NAND门，它信号也只有两个输入都是1的时候才会为0，这是一个特殊的突变点，and门也有类似的结构，但是突变点在两个输入都是1的时候，结果为1，那么，
 现在已经有not门可以取反了，我就可以用not门直接反转输出结果，在nand的末尾加上not门就是and门了&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://adeepblue.github.io/p/%E5%9B%BE%E7%81%B5%E5%AE%8C%E5%A4%87alpha%E7%89%88%E6%94%BB%E7%95%A51/and-solve.png&#34;
+	width=&#34;1003&#34;
+	height=&#34;719&#34;
+	srcset=&#34;https://adeepblue.github.io/p/%E5%9B%BE%E7%81%B5%E5%AE%8C%E5%A4%87alpha%E7%89%88%E6%94%BB%E7%95%A51/and-solve_hu_5f147141f463c1ad.png 480w, https://adeepblue.github.io/p/%E5%9B%BE%E7%81%B5%E5%AE%8C%E5%A4%87alpha%E7%89%88%E6%94%BB%E7%95%A51/and-solve_hu_25296c8bc6f37091.png 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;解法&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;139&#34;
+		data-flex-basis=&#34;334px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;h2 id=&#34;nor-gate&#34;&gt;NOR GATE
+&lt;/h2&gt;&lt;p&gt;或非门&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://adeepblue.github.io/p/%E5%9B%BE%E7%81%B5%E5%AE%8C%E5%A4%87alpha%E7%89%88%E6%94%BB%E7%95%A51/NOR-gate.png&#34;
+	width=&#34;734&#34;
+	height=&#34;713&#34;
+	srcset=&#34;https://adeepblue.github.io/p/%E5%9B%BE%E7%81%B5%E5%AE%8C%E5%A4%87alpha%E7%89%88%E6%94%BB%E7%95%A51/NOR-gate_hu_bd5802fb2d351453.png 480w, https://adeepblue.github.io/p/%E5%9B%BE%E7%81%B5%E5%AE%8C%E5%A4%87alpha%E7%89%88%E6%94%BB%E7%95%A51/NOR-gate_hu_773d633fdbf3e5d7.png 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;要求&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;102&#34;
+		data-flex-basis=&#34;247px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;p&gt;我们所使用的只有两个元件，一个nand，一个not，其中抓住突变点，两个低电平输入时,突变为高电平，那么，我直接选择反转两个输入电平，使用非门就可以了，这样突变发生在（0，0）处，
+但是，这样更改后的nand门的输出跟预期输出完全相反，那么我们只需要反转一下输出，给输出加一个非门即可&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://adeepblue.github.io/p/%E5%9B%BE%E7%81%B5%E5%AE%8C%E5%A4%87alpha%E7%89%88%E6%94%BB%E7%95%A51/nor-solve.png&#34;
+	width=&#34;918&#34;
+	height=&#34;763&#34;
+	srcset=&#34;https://adeepblue.github.io/p/%E5%9B%BE%E7%81%B5%E5%AE%8C%E5%A4%87alpha%E7%89%88%E6%94%BB%E7%95%A51/nor-solve_hu_95a5a0b4058ecc63.png 480w, https://adeepblue.github.io/p/%E5%9B%BE%E7%81%B5%E5%AE%8C%E5%A4%87alpha%E7%89%88%E6%94%BB%E7%95%A51/nor-solve_hu_f36a57d59d028bd4.png 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;解法&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;120&#34;
+		data-flex-basis=&#34;288px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;h2 id=&#34;or-gate&#34;&gt;OR GATE
+&lt;/h2&gt;&lt;p&gt;或门，上面或非门不安非门即可，不上图了&lt;/p&gt;
+&lt;h2 id=&#34;always-on&#34;&gt;ALWAYS ON
+&lt;/h2&gt;&lt;p&gt;&lt;img src=&#34;https://adeepblue.github.io/p/%E5%9B%BE%E7%81%B5%E5%AE%8C%E5%A4%87alpha%E7%89%88%E6%94%BB%E7%95%A51/on-solve.png&#34;
+	width=&#34;869&#34;
+	height=&#34;1048&#34;
+	srcset=&#34;https://adeepblue.github.io/p/%E5%9B%BE%E7%81%B5%E5%AE%8C%E5%A4%87alpha%E7%89%88%E6%94%BB%E7%95%A51/on-solve_hu_c9faf34d3540a670.png 480w, https://adeepblue.github.io/p/%E5%9B%BE%E7%81%B5%E5%AE%8C%E5%A4%87alpha%E7%89%88%E6%94%BB%E7%95%A51/on-solve_hu_83ce1082b9a47142.png 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;解法&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;82&#34;
+		data-flex-basis=&#34;199px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;h2 id=&#34;second-tick&#34;&gt;SECOND TICK
+&lt;/h2&gt;&lt;p&gt;&lt;img src=&#34;https://adeepblue.github.io/p/%E5%9B%BE%E7%81%B5%E5%AE%8C%E5%A4%87alpha%E7%89%88%E6%94%BB%E7%95%A51/second-tick.png&#34;
+	width=&#34;1273&#34;
+	height=&#34;1067&#34;
+	srcset=&#34;https://adeepblue.github.io/p/%E5%9B%BE%E7%81%B5%E5%AE%8C%E5%A4%87alpha%E7%89%88%E6%94%BB%E7%95%A51/second-tick_hu_f64d58da07042230.png 480w, https://adeepblue.github.io/p/%E5%9B%BE%E7%81%B5%E5%AE%8C%E5%A4%87alpha%E7%89%88%E6%94%BB%E7%95%A51/second-tick_hu_e6948830884dfb3e.png 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;要求&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;119&#34;
+		data-flex-basis=&#34;286px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;p&gt;小技巧嘛，咋说呢，现在已经有and门了，and是严格限制输入的，必须两个都是正才提供输出，跟题目预期吻合，那么只要修改输入端就可以了，也就是确定了输入+not门得得到正正（输入了and才输出高电平）
+那么，一个正一个负，很明显第二个需要not来反转信号&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://adeepblue.github.io/p/%E5%9B%BE%E7%81%B5%E5%AE%8C%E5%A4%87alpha%E7%89%88%E6%94%BB%E7%95%A51/second-tick-solve.png&#34;
+	width=&#34;927&#34;
+	height=&#34;719&#34;
+	srcset=&#34;https://adeepblue.github.io/p/%E5%9B%BE%E7%81%B5%E5%AE%8C%E5%A4%87alpha%E7%89%88%E6%94%BB%E7%95%A51/second-tick-solve_hu_19dea1e0cbb89a8a.png 480w, https://adeepblue.github.io/p/%E5%9B%BE%E7%81%B5%E5%AE%8C%E5%A4%87alpha%E7%89%88%E6%94%BB%E7%95%A51/second-tick-solve_hu_170386d72b9a0b04.png 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;img.png&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;128&#34;
+		data-flex-basis=&#34;309px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;h2 id=&#34;xor-gate&#34;&gt;XOR GATE
+&lt;/h2&gt;&lt;p&gt;异或门&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://adeepblue.github.io/p/%E5%9B%BE%E7%81%B5%E5%AE%8C%E5%A4%87alpha%E7%89%88%E6%94%BB%E7%95%A51/xor-gate-require.png&#34;
+	width=&#34;927&#34;
+	height=&#34;719&#34;
+	srcset=&#34;https://adeepblue.github.io/p/%E5%9B%BE%E7%81%B5%E5%AE%8C%E5%A4%87alpha%E7%89%88%E6%94%BB%E7%95%A51/xor-gate-require_hu_19dea1e0cbb89a8a.png 480w, https://adeepblue.github.io/p/%E5%9B%BE%E7%81%B5%E5%AE%8C%E5%A4%87alpha%E7%89%88%E6%94%BB%E7%95%A51/xor-gate-require_hu_170386d72b9a0b04.png 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;要求&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;128&#34;
+		data-flex-basis=&#34;309px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;p&gt;异或门
+仔细观察一下，我们也可以理解为，有两个突变点，一个是正正，一个是负负，其中or,and,nor,nand门的另一个作用是，可以统合两个输入的结果,其中or门，这个形状，其实中心反转一下，
+稍微重合一下，就有点类似能得到图中的结果对吧，突变点是&lt;code&gt;0，0&lt;/code&gt;而另一边突变点是&lt;code&gt;1,1&lt;/code&gt;找到该元件nand，这样，一边已知的是or的&lt;code&gt;1，1&lt;/code&gt;处的输出需要被nand覆盖，nand处&lt;code&gt;0，0&lt;/code&gt;处的输出也需要被or覆盖
+其中中间部分在or和nand下都是1，那很明显了，在最后两边结果出来的时候加一个and门统合一下两边的输出即可&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://adeepblue.github.io/p/%E5%9B%BE%E7%81%B5%E5%AE%8C%E5%A4%87alpha%E7%89%88%E6%94%BB%E7%95%A51/or.png&#34;
+	width=&#34;226&#34;
+	height=&#34;167&#34;
+	srcset=&#34;https://adeepblue.github.io/p/%E5%9B%BE%E7%81%B5%E5%AE%8C%E5%A4%87alpha%E7%89%88%E6%94%BB%E7%95%A51/or_hu_a9c3a4b85109e090.png 480w, https://adeepblue.github.io/p/%E5%9B%BE%E7%81%B5%E5%AE%8C%E5%A4%87alpha%E7%89%88%E6%94%BB%E7%95%A51/or_hu_76251f2252931e0.png 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;or门&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;135&#34;
+		data-flex-basis=&#34;324px&#34;
+	
+&gt;
+&lt;img src=&#34;https://adeepblue.github.io/p/%E5%9B%BE%E7%81%B5%E5%AE%8C%E5%A4%87alpha%E7%89%88%E6%94%BB%E7%95%A51/xor-solve.png&#34;
+	width=&#34;924&#34;
+	height=&#34;745&#34;
+	srcset=&#34;https://adeepblue.github.io/p/%E5%9B%BE%E7%81%B5%E5%AE%8C%E5%A4%87alpha%E7%89%88%E6%94%BB%E7%95%A51/xor-solve_hu_8a81a5cc80a7ef2c.png 480w, https://adeepblue.github.io/p/%E5%9B%BE%E7%81%B5%E5%AE%8C%E5%A4%87alpha%E7%89%88%E6%94%BB%E7%95%A51/xor-solve_hu_c4be04cd11a1ad73.png 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;解法&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;124&#34;
+		data-flex-basis=&#34;297px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;h2 id=&#34;bigger-or-gate&#34;&gt;BIGGER OR GATE
+&lt;/h2&gt;&lt;p&gt;因为比较简单我直接放结果图了&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://adeepblue.github.io/p/%E5%9B%BE%E7%81%B5%E5%AE%8C%E5%A4%87alpha%E7%89%88%E6%94%BB%E7%95%A51/3or.png&#34;
+	width=&#34;992&#34;
+	height=&#34;836&#34;
+	srcset=&#34;https://adeepblue.github.io/p/%E5%9B%BE%E7%81%B5%E5%AE%8C%E5%A4%87alpha%E7%89%88%E6%94%BB%E7%95%A51/3or_hu_9b8e4a3bde1d3b92.png 480w, https://adeepblue.github.io/p/%E5%9B%BE%E7%81%B5%E5%AE%8C%E5%A4%87alpha%E7%89%88%E6%94%BB%E7%95%A51/3or_hu_c18992ebc4c13cdd.png 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;大or门&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;118&#34;
+		data-flex-basis=&#34;284px&#34;
+	
+&gt;
+&lt;img src=&#34;https://adeepblue.github.io/p/%E5%9B%BE%E7%81%B5%E5%AE%8C%E5%A4%87alpha%E7%89%88%E6%94%BB%E7%95%A51/3or-solve.png&#34;
+	width=&#34;845&#34;
+	height=&#34;666&#34;
+	srcset=&#34;https://adeepblue.github.io/p/%E5%9B%BE%E7%81%B5%E5%AE%8C%E5%A4%87alpha%E7%89%88%E6%94%BB%E7%95%A51/3or-solve_hu_321a4af4804a70a7.png 480w, https://adeepblue.github.io/p/%E5%9B%BE%E7%81%B5%E5%AE%8C%E5%A4%87alpha%E7%89%88%E6%94%BB%E7%95%A51/3or-solve_hu_6f9ec68498149c72.png 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;解法&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;126&#34;
+		data-flex-basis=&#34;304px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;h2 id=&#34;bigger-and-gate&#34;&gt;BIGGER AND GATE
+&lt;/h2&gt;&lt;p&gt;&lt;img src=&#34;https://adeepblue.github.io/p/%E5%9B%BE%E7%81%B5%E5%AE%8C%E5%A4%87alpha%E7%89%88%E6%94%BB%E7%95%A51/3and.png&#34;
+	width=&#34;1067&#34;
+	height=&#34;757&#34;
+	srcset=&#34;https://adeepblue.github.io/p/%E5%9B%BE%E7%81%B5%E5%AE%8C%E5%A4%87alpha%E7%89%88%E6%94%BB%E7%95%A51/3and_hu_96a810bd0aed8a6d.png 480w, https://adeepblue.github.io/p/%E5%9B%BE%E7%81%B5%E5%AE%8C%E5%A4%87alpha%E7%89%88%E6%94%BB%E7%95%A51/3and_hu_b818402bea20a317.png 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;大and门&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;140&#34;
+		data-flex-basis=&#34;338px&#34;
+	
+&gt;
+&lt;img src=&#34;https://adeepblue.github.io/p/%E5%9B%BE%E7%81%B5%E5%AE%8C%E5%A4%87alpha%E7%89%88%E6%94%BB%E7%95%A51/3and-solve.png&#34;
+	width=&#34;777&#34;
+	height=&#34;709&#34;
+	srcset=&#34;https://adeepblue.github.io/p/%E5%9B%BE%E7%81%B5%E5%AE%8C%E5%A4%87alpha%E7%89%88%E6%94%BB%E7%95%A51/3and-solve_hu_76a99dfe15fbf909.png 480w, https://adeepblue.github.io/p/%E5%9B%BE%E7%81%B5%E5%AE%8C%E5%A4%87alpha%E7%89%88%E6%94%BB%E7%95%A51/3and-solve_hu_fee4e865c3df657f.png 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;解法&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;109&#34;
+		data-flex-basis=&#34;263px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;h2 id=&#34;xnor-gate&#34;&gt;XNOR GATE
+&lt;/h2&gt;&lt;p&gt;反转XOR门即可&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://adeepblue.github.io/p/%E5%9B%BE%E7%81%B5%E5%AE%8C%E5%A4%87alpha%E7%89%88%E6%94%BB%E7%95%A51/xnor.png&#34;
+	width=&#34;776&#34;
+	height=&#34;1065&#34;
+	srcset=&#34;https://adeepblue.github.io/p/%E5%9B%BE%E7%81%B5%E5%AE%8C%E5%A4%87alpha%E7%89%88%E6%94%BB%E7%95%A51/xnor_hu_30d090cb1ba7b4a5.png 480w, https://adeepblue.github.io/p/%E5%9B%BE%E7%81%B5%E5%AE%8C%E5%A4%87alpha%E7%89%88%E6%94%BB%E7%95%A51/xnor_hu_8b5e85e358ffb269.png 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;要求&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;72&#34;
+		data-flex-basis=&#34;174px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;h2 id=&#34;double-trouble&#34;&gt;DOUBLE TROUBLE
+&lt;/h2&gt;&lt;p&gt;&lt;img src=&#34;https://adeepblue.github.io/p/%E5%9B%BE%E7%81%B5%E5%AE%8C%E5%A4%87alpha%E7%89%88%E6%94%BB%E7%95%A51/double-trouble.png&#34;
+	width=&#34;1209&#34;
+	height=&#34;876&#34;
+	srcset=&#34;https://adeepblue.github.io/p/%E5%9B%BE%E7%81%B5%E5%AE%8C%E5%A4%87alpha%E7%89%88%E6%94%BB%E7%95%A51/double-trouble_hu_3d74d4b03735e4cf.png 480w, https://adeepblue.github.io/p/%E5%9B%BE%E7%81%B5%E5%AE%8C%E5%A4%87alpha%E7%89%88%E6%94%BB%E7%95%A51/double-trouble_hu_b2e0bceb2463a9da.png 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;要求&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;138&#34;
+		data-flex-basis=&#34;331px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;p&gt;具体要求是，如果高电平数大于2就输出高电平，那么，我也可以理解为，对所有的输入进行一个and门操作，得到的结果有$3+2+1=6$种结果，这其中只要有一种是高电平，
+就可以输出高电平了，这正好就是&lt;a class=&#34;link&#34; href=&#34;#%e5%89%8d%e7%bd%ae%e7%9a%84%e4%b8%80%e4%ba%9b%e9%80%bb%e8%be%91%e8%af%b4%e6%98%8e&#34; &gt;逻辑说明中or门&lt;/a&gt;,刚好又有3输入or门，将他们衔接起来，最后两个3or门用一个2输入or门再衔接（实际就是一个6输入or门的电路）&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://adeepblue.github.io/p/%E5%9B%BE%E7%81%B5%E5%AE%8C%E5%A4%87alpha%E7%89%88%E6%94%BB%E7%95%A51/double-trouble-solve.png&#34;
+	width=&#34;1253&#34;
+	height=&#34;884&#34;
+	srcset=&#34;https://adeepblue.github.io/p/%E5%9B%BE%E7%81%B5%E5%AE%8C%E5%A4%87alpha%E7%89%88%E6%94%BB%E7%95%A51/double-trouble-solve_hu_54fcd15f6d608f4d.png 480w, https://adeepblue.github.io/p/%E5%9B%BE%E7%81%B5%E5%AE%8C%E5%A4%87alpha%E7%89%88%E6%94%BB%E7%95%A51/double-trouble-solve_hu_e503d0a1b7fffc1a.png 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;解法&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;141&#34;
+		data-flex-basis=&#34;340px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;p&gt;下一篇攻略链接（更新后放入）&lt;/p&gt;
 </description>
         </item>
         

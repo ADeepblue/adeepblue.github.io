@@ -1,18 +1,18 @@
 <!DOCTYPE html>
 <html lang="zh-cn" dir="ltr">
     <head><meta charset='utf-8'>
-<meta name='viewport' content='width=device-width, initial-scale=1'><meta name='description' content="一些说明 图灵完备更新了版本，疑似修复了我图灵完备攻略6的bug，但是以前的存档不能用了（可能类似于内部数据结构变动），也正好，我打算借着这个机会重新玩一下以前的关卡，有一些在现在的视角有更优雅更好的解法， 就当是补以前没写博客时的攻略了,虽然躲不掉bug也挺难受的\n">
+<meta name='viewport' content='width=device-width, initial-scale=1'><meta name='description' content="更新了图灵完备alpha版的从头到XNOR以及double trouble的关卡解法以及思路">
 <title>图灵完备alpha版攻略1</title>
 
 <link rel='canonical' href='https://adeepblue.github.io/p/%E5%9B%BE%E7%81%B5%E5%AE%8C%E5%A4%87alpha%E7%89%88%E6%94%BB%E7%95%A51/'>
 
 <link rel="stylesheet" href="/scss/style.min.663803bebe609202d5b39d848f2d7c2dc8b598a2d879efa079fa88893d29c49c.css"><meta property='og:title' content="图灵完备alpha版攻略1">
-<meta property='og:description' content="一些说明 图灵完备更新了版本，疑似修复了我图灵完备攻略6的bug，但是以前的存档不能用了（可能类似于内部数据结构变动），也正好，我打算借着这个机会重新玩一下以前的关卡，有一些在现在的视角有更优雅更好的解法， 就当是补以前没写博客时的攻略了,虽然躲不掉bug也挺难受的\n">
+<meta property='og:description' content="更新了图灵完备alpha版的从头到XNOR以及double trouble的关卡解法以及思路">
 <meta property='og:url' content='https://adeepblue.github.io/p/%E5%9B%BE%E7%81%B5%E5%AE%8C%E5%A4%87alpha%E7%89%88%E6%94%BB%E7%95%A51/'>
 <meta property='og:site_name' content='深蓝之亘的博客'>
 <meta property='og:type' content='article'><meta property='article:section' content='Post' /><meta property='article:published_time' content='2025-02-28T11:08:48&#43;08:00'/><meta property='article:modified_time' content='2025-02-28T11:08:48&#43;08:00'/><meta property='og:image' content='https://adeepblue.github.io/image/Turing-Complete-Logo.png' />
 <meta name="twitter:title" content="图灵完备alpha版攻略1">
-<meta name="twitter:description" content="一些说明 图灵完备更新了版本，疑似修复了我图灵完备攻略6的bug，但是以前的存档不能用了（可能类似于内部数据结构变动），也正好，我打算借着这个机会重新玩一下以前的关卡，有一些在现在的视角有更优雅更好的解法， 就当是补以前没写博客时的攻略了,虽然躲不掉bug也挺难受的\n"><meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:description" content="更新了图灵完备alpha版的从头到XNOR以及double trouble的关卡解法以及思路"><meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:image" content='https://adeepblue.github.io/image/Turing-Complete-Logo.png' />
     <link rel="shortcut icon" href="/favicon.ico" />
 
@@ -270,13 +270,22 @@
         <div class="widget--toc">
             <nav id="TableOfContents">
   <ol>
+    <li><a href="#前置的一些逻辑说明">前置的一些逻辑说明</a></li>
+  </ol>
+
+  <ol>
     <li><a href="#nand门-nand-gate">NAND门 (NAND GATE)</a></li>
     <li><a href="#not-gate">NOT GATE</a></li>
-    <li><a href="#and-gate">AND GATE</a>
-      <ol>
-        <li><a href="#解释一">解释一</a></li>
-      </ol>
-    </li>
+    <li><a href="#and-gate">AND GATE</a></li>
+    <li><a href="#nor-gate">NOR GATE</a></li>
+    <li><a href="#or-gate">OR GATE</a></li>
+    <li><a href="#always-on">ALWAYS ON</a></li>
+    <li><a href="#second-tick">SECOND TICK</a></li>
+    <li><a href="#xor-gate">XOR GATE</a></li>
+    <li><a href="#bigger-or-gate">BIGGER OR GATE</a></li>
+    <li><a href="#bigger-and-gate">BIGGER AND GATE</a></li>
+    <li><a href="#xnor-gate">XNOR GATE</a></li>
+    <li><a href="#double-trouble">DOUBLE TROUBLE</a></li>
   </ol>
 </nav>
         </div>
@@ -316,6 +325,10 @@
         </h2>
     
         
+        <h3 class="article-subtitle">
+            更新了图灵完备alpha版的从头到XNOR以及double trouble的关卡解法以及思路
+        </h3>
+        
     </div>
 
     
@@ -350,7 +363,7 @@
     <section class="article-content">
     
     
-    <h1 id="一些说明">一些说明
+    <h1 id="一些关于游戏的说明">一些关于游戏的说明
 </h1><p>图灵完备更新了版本，疑似修复了我图灵完备攻略6的bug，但是以前的存档不能用了（可能类似于内部数据结构变动），也正好，我打算借着这个机会重新玩一下以前的关卡，有一些在现在的视角有更优雅更好的解法，
 就当是补以前没写博客时的攻略了,虽然躲不掉bug也挺难受的</p>
 <p><img src="/p/%E5%9B%BE%E7%81%B5%E5%AE%8C%E5%A4%87alpha%E7%89%88%E6%94%BB%E7%95%A51/some-language-bug.png"
@@ -367,7 +380,11 @@
 		data-flex-basis="351px"
 	
 ></p>
-<h1 id="图灵完备alpha篇攻略">图灵完备alpha篇攻略
+<h2 id="前置的一些逻辑说明">前置的一些逻辑说明
+</h2><p>AND门和OR门，一定程度可以理解为统合一些条件的检查，比如说我有条件1，条件2，条件3全部满足的情况，可以理解为编程中的if，那么也就是说三个条件都要满足才会让输出变成高电平，
+也就是 (condition1)&amp;&amp;(condition2)&amp;&amp;(condition3),or门同理，(condition1)||(condition2)||(condition3)，这点在以后的分类讨论中会很有用，
+比如满足需要输出的条件1，条件2，条件3，然后所有需要输出的条件状态下，用or连接即可，表示只要有一个条件满足了就允许输出高电平</p>
+<h1 id="图灵完备alpha篇攻略1">图灵完备alpha篇攻略1
 </h1><h2 id="nand门-nand-gate">NAND门 (NAND GATE)
 </h2><p><img src="/p/%E5%9B%BE%E7%81%B5%E5%AE%8C%E5%A4%87alpha%E7%89%88%E6%94%BB%E7%95%A51/nand-solve.png"
 	width="1679"
@@ -406,6 +423,8 @@
 	srcset="/p/%E5%9B%BE%E7%81%B5%E5%AE%8C%E5%A4%87alpha%E7%89%88%E6%94%BB%E7%95%A51/not-solve_hu_af1859bb3c44665f.png 480w, /p/%E5%9B%BE%E7%81%B5%E5%AE%8C%E5%A4%87alpha%E7%89%88%E6%94%BB%E7%95%A51/not-solve_hu_4cd6f41cd529635c.png 1024w"
 	loading="lazy"
 	
+		alt="解法"
+	
 	
 		class="gallery-image" 
 		data-flex-grow="111"
@@ -413,9 +432,257 @@
 	
 ></p>
 <h2 id="and-gate">AND GATE
-</h2><h3 id="解释一">解释一
-</h3><p>观察NAND门，它信号也只有两个输入都是1的时候才会为0，这是一个特殊的突变点，and门也有类似的结构，但是突变点在两个输入都是1的时候，结果为1，那么，
+</h2><p>观察NAND门，它信号也只有两个输入都是1的时候才会为0，这是一个特殊的突变点，and门也有类似的结构，但是突变点在两个输入都是1的时候，结果为1，那么，
 现在已经有not门可以取反了，我就可以用not门直接反转输出结果，在nand的末尾加上not门就是and门了</p>
+<p><img src="/p/%E5%9B%BE%E7%81%B5%E5%AE%8C%E5%A4%87alpha%E7%89%88%E6%94%BB%E7%95%A51/and-solve.png"
+	width="1003"
+	height="719"
+	srcset="/p/%E5%9B%BE%E7%81%B5%E5%AE%8C%E5%A4%87alpha%E7%89%88%E6%94%BB%E7%95%A51/and-solve_hu_5f147141f463c1ad.png 480w, /p/%E5%9B%BE%E7%81%B5%E5%AE%8C%E5%A4%87alpha%E7%89%88%E6%94%BB%E7%95%A51/and-solve_hu_25296c8bc6f37091.png 1024w"
+	loading="lazy"
+	
+		alt="解法"
+	
+	
+		class="gallery-image" 
+		data-flex-grow="139"
+		data-flex-basis="334px"
+	
+></p>
+<h2 id="nor-gate">NOR GATE
+</h2><p>或非门</p>
+<p><img src="/p/%E5%9B%BE%E7%81%B5%E5%AE%8C%E5%A4%87alpha%E7%89%88%E6%94%BB%E7%95%A51/NOR-gate.png"
+	width="734"
+	height="713"
+	srcset="/p/%E5%9B%BE%E7%81%B5%E5%AE%8C%E5%A4%87alpha%E7%89%88%E6%94%BB%E7%95%A51/NOR-gate_hu_bd5802fb2d351453.png 480w, /p/%E5%9B%BE%E7%81%B5%E5%AE%8C%E5%A4%87alpha%E7%89%88%E6%94%BB%E7%95%A51/NOR-gate_hu_773d633fdbf3e5d7.png 1024w"
+	loading="lazy"
+	
+		alt="要求"
+	
+	
+		class="gallery-image" 
+		data-flex-grow="102"
+		data-flex-basis="247px"
+	
+></p>
+<p>我们所使用的只有两个元件，一个nand，一个not，其中抓住突变点，两个低电平输入时,突变为高电平，那么，我直接选择反转两个输入电平，使用非门就可以了，这样突变发生在（0，0）处，
+但是，这样更改后的nand门的输出跟预期输出完全相反，那么我们只需要反转一下输出，给输出加一个非门即可</p>
+<p><img src="/p/%E5%9B%BE%E7%81%B5%E5%AE%8C%E5%A4%87alpha%E7%89%88%E6%94%BB%E7%95%A51/nor-solve.png"
+	width="918"
+	height="763"
+	srcset="/p/%E5%9B%BE%E7%81%B5%E5%AE%8C%E5%A4%87alpha%E7%89%88%E6%94%BB%E7%95%A51/nor-solve_hu_95a5a0b4058ecc63.png 480w, /p/%E5%9B%BE%E7%81%B5%E5%AE%8C%E5%A4%87alpha%E7%89%88%E6%94%BB%E7%95%A51/nor-solve_hu_f36a57d59d028bd4.png 1024w"
+	loading="lazy"
+	
+		alt="解法"
+	
+	
+		class="gallery-image" 
+		data-flex-grow="120"
+		data-flex-basis="288px"
+	
+></p>
+<h2 id="or-gate">OR GATE
+</h2><p>或门，上面或非门不安非门即可，不上图了</p>
+<h2 id="always-on">ALWAYS ON
+</h2><p><img src="/p/%E5%9B%BE%E7%81%B5%E5%AE%8C%E5%A4%87alpha%E7%89%88%E6%94%BB%E7%95%A51/on-solve.png"
+	width="869"
+	height="1048"
+	srcset="/p/%E5%9B%BE%E7%81%B5%E5%AE%8C%E5%A4%87alpha%E7%89%88%E6%94%BB%E7%95%A51/on-solve_hu_c9faf34d3540a670.png 480w, /p/%E5%9B%BE%E7%81%B5%E5%AE%8C%E5%A4%87alpha%E7%89%88%E6%94%BB%E7%95%A51/on-solve_hu_83ce1082b9a47142.png 1024w"
+	loading="lazy"
+	
+		alt="解法"
+	
+	
+		class="gallery-image" 
+		data-flex-grow="82"
+		data-flex-basis="199px"
+	
+></p>
+<h2 id="second-tick">SECOND TICK
+</h2><p><img src="/p/%E5%9B%BE%E7%81%B5%E5%AE%8C%E5%A4%87alpha%E7%89%88%E6%94%BB%E7%95%A51/second-tick.png"
+	width="1273"
+	height="1067"
+	srcset="/p/%E5%9B%BE%E7%81%B5%E5%AE%8C%E5%A4%87alpha%E7%89%88%E6%94%BB%E7%95%A51/second-tick_hu_f64d58da07042230.png 480w, /p/%E5%9B%BE%E7%81%B5%E5%AE%8C%E5%A4%87alpha%E7%89%88%E6%94%BB%E7%95%A51/second-tick_hu_e6948830884dfb3e.png 1024w"
+	loading="lazy"
+	
+		alt="要求"
+	
+	
+		class="gallery-image" 
+		data-flex-grow="119"
+		data-flex-basis="286px"
+	
+></p>
+<p>小技巧嘛，咋说呢，现在已经有and门了，and是严格限制输入的，必须两个都是正才提供输出，跟题目预期吻合，那么只要修改输入端就可以了，也就是确定了输入+not门得得到正正（输入了and才输出高电平）
+那么，一个正一个负，很明显第二个需要not来反转信号</p>
+<p><img src="/p/%E5%9B%BE%E7%81%B5%E5%AE%8C%E5%A4%87alpha%E7%89%88%E6%94%BB%E7%95%A51/second-tick-solve.png"
+	width="927"
+	height="719"
+	srcset="/p/%E5%9B%BE%E7%81%B5%E5%AE%8C%E5%A4%87alpha%E7%89%88%E6%94%BB%E7%95%A51/second-tick-solve_hu_19dea1e0cbb89a8a.png 480w, /p/%E5%9B%BE%E7%81%B5%E5%AE%8C%E5%A4%87alpha%E7%89%88%E6%94%BB%E7%95%A51/second-tick-solve_hu_170386d72b9a0b04.png 1024w"
+	loading="lazy"
+	
+		alt="img.png"
+	
+	
+		class="gallery-image" 
+		data-flex-grow="128"
+		data-flex-basis="309px"
+	
+></p>
+<h2 id="xor-gate">XOR GATE
+</h2><p>异或门</p>
+<p><img src="/p/%E5%9B%BE%E7%81%B5%E5%AE%8C%E5%A4%87alpha%E7%89%88%E6%94%BB%E7%95%A51/xor-gate-require.png"
+	width="927"
+	height="719"
+	srcset="/p/%E5%9B%BE%E7%81%B5%E5%AE%8C%E5%A4%87alpha%E7%89%88%E6%94%BB%E7%95%A51/xor-gate-require_hu_19dea1e0cbb89a8a.png 480w, /p/%E5%9B%BE%E7%81%B5%E5%AE%8C%E5%A4%87alpha%E7%89%88%E6%94%BB%E7%95%A51/xor-gate-require_hu_170386d72b9a0b04.png 1024w"
+	loading="lazy"
+	
+		alt="要求"
+	
+	
+		class="gallery-image" 
+		data-flex-grow="128"
+		data-flex-basis="309px"
+	
+></p>
+<p>异或门
+仔细观察一下，我们也可以理解为，有两个突变点，一个是正正，一个是负负，其中or,and,nor,nand门的另一个作用是，可以统合两个输入的结果,其中or门，这个形状，其实中心反转一下，
+稍微重合一下，就有点类似能得到图中的结果对吧，突变点是<code>0，0</code>而另一边突变点是<code>1,1</code>找到该元件nand，这样，一边已知的是or的<code>1，1</code>处的输出需要被nand覆盖，nand处<code>0，0</code>处的输出也需要被or覆盖
+其中中间部分在or和nand下都是1，那很明显了，在最后两边结果出来的时候加一个and门统合一下两边的输出即可</p>
+<p><img src="/p/%E5%9B%BE%E7%81%B5%E5%AE%8C%E5%A4%87alpha%E7%89%88%E6%94%BB%E7%95%A51/or.png"
+	width="226"
+	height="167"
+	srcset="/p/%E5%9B%BE%E7%81%B5%E5%AE%8C%E5%A4%87alpha%E7%89%88%E6%94%BB%E7%95%A51/or_hu_a9c3a4b85109e090.png 480w, /p/%E5%9B%BE%E7%81%B5%E5%AE%8C%E5%A4%87alpha%E7%89%88%E6%94%BB%E7%95%A51/or_hu_76251f2252931e0.png 1024w"
+	loading="lazy"
+	
+		alt="or门"
+	
+	
+		class="gallery-image" 
+		data-flex-grow="135"
+		data-flex-basis="324px"
+	
+>
+<img src="/p/%E5%9B%BE%E7%81%B5%E5%AE%8C%E5%A4%87alpha%E7%89%88%E6%94%BB%E7%95%A51/xor-solve.png"
+	width="924"
+	height="745"
+	srcset="/p/%E5%9B%BE%E7%81%B5%E5%AE%8C%E5%A4%87alpha%E7%89%88%E6%94%BB%E7%95%A51/xor-solve_hu_8a81a5cc80a7ef2c.png 480w, /p/%E5%9B%BE%E7%81%B5%E5%AE%8C%E5%A4%87alpha%E7%89%88%E6%94%BB%E7%95%A51/xor-solve_hu_c4be04cd11a1ad73.png 1024w"
+	loading="lazy"
+	
+		alt="解法"
+	
+	
+		class="gallery-image" 
+		data-flex-grow="124"
+		data-flex-basis="297px"
+	
+></p>
+<h2 id="bigger-or-gate">BIGGER OR GATE
+</h2><p>因为比较简单我直接放结果图了</p>
+<p><img src="/p/%E5%9B%BE%E7%81%B5%E5%AE%8C%E5%A4%87alpha%E7%89%88%E6%94%BB%E7%95%A51/3or.png"
+	width="992"
+	height="836"
+	srcset="/p/%E5%9B%BE%E7%81%B5%E5%AE%8C%E5%A4%87alpha%E7%89%88%E6%94%BB%E7%95%A51/3or_hu_9b8e4a3bde1d3b92.png 480w, /p/%E5%9B%BE%E7%81%B5%E5%AE%8C%E5%A4%87alpha%E7%89%88%E6%94%BB%E7%95%A51/3or_hu_c18992ebc4c13cdd.png 1024w"
+	loading="lazy"
+	
+		alt="大or门"
+	
+	
+		class="gallery-image" 
+		data-flex-grow="118"
+		data-flex-basis="284px"
+	
+>
+<img src="/p/%E5%9B%BE%E7%81%B5%E5%AE%8C%E5%A4%87alpha%E7%89%88%E6%94%BB%E7%95%A51/3or-solve.png"
+	width="845"
+	height="666"
+	srcset="/p/%E5%9B%BE%E7%81%B5%E5%AE%8C%E5%A4%87alpha%E7%89%88%E6%94%BB%E7%95%A51/3or-solve_hu_321a4af4804a70a7.png 480w, /p/%E5%9B%BE%E7%81%B5%E5%AE%8C%E5%A4%87alpha%E7%89%88%E6%94%BB%E7%95%A51/3or-solve_hu_6f9ec68498149c72.png 1024w"
+	loading="lazy"
+	
+		alt="解法"
+	
+	
+		class="gallery-image" 
+		data-flex-grow="126"
+		data-flex-basis="304px"
+	
+></p>
+<h2 id="bigger-and-gate">BIGGER AND GATE
+</h2><p><img src="/p/%E5%9B%BE%E7%81%B5%E5%AE%8C%E5%A4%87alpha%E7%89%88%E6%94%BB%E7%95%A51/3and.png"
+	width="1067"
+	height="757"
+	srcset="/p/%E5%9B%BE%E7%81%B5%E5%AE%8C%E5%A4%87alpha%E7%89%88%E6%94%BB%E7%95%A51/3and_hu_96a810bd0aed8a6d.png 480w, /p/%E5%9B%BE%E7%81%B5%E5%AE%8C%E5%A4%87alpha%E7%89%88%E6%94%BB%E7%95%A51/3and_hu_b818402bea20a317.png 1024w"
+	loading="lazy"
+	
+		alt="大and门"
+	
+	
+		class="gallery-image" 
+		data-flex-grow="140"
+		data-flex-basis="338px"
+	
+>
+<img src="/p/%E5%9B%BE%E7%81%B5%E5%AE%8C%E5%A4%87alpha%E7%89%88%E6%94%BB%E7%95%A51/3and-solve.png"
+	width="777"
+	height="709"
+	srcset="/p/%E5%9B%BE%E7%81%B5%E5%AE%8C%E5%A4%87alpha%E7%89%88%E6%94%BB%E7%95%A51/3and-solve_hu_76a99dfe15fbf909.png 480w, /p/%E5%9B%BE%E7%81%B5%E5%AE%8C%E5%A4%87alpha%E7%89%88%E6%94%BB%E7%95%A51/3and-solve_hu_fee4e865c3df657f.png 1024w"
+	loading="lazy"
+	
+		alt="解法"
+	
+	
+		class="gallery-image" 
+		data-flex-grow="109"
+		data-flex-basis="263px"
+	
+></p>
+<h2 id="xnor-gate">XNOR GATE
+</h2><p>反转XOR门即可</p>
+<p><img src="/p/%E5%9B%BE%E7%81%B5%E5%AE%8C%E5%A4%87alpha%E7%89%88%E6%94%BB%E7%95%A51/xnor.png"
+	width="776"
+	height="1065"
+	srcset="/p/%E5%9B%BE%E7%81%B5%E5%AE%8C%E5%A4%87alpha%E7%89%88%E6%94%BB%E7%95%A51/xnor_hu_30d090cb1ba7b4a5.png 480w, /p/%E5%9B%BE%E7%81%B5%E5%AE%8C%E5%A4%87alpha%E7%89%88%E6%94%BB%E7%95%A51/xnor_hu_8b5e85e358ffb269.png 1024w"
+	loading="lazy"
+	
+		alt="要求"
+	
+	
+		class="gallery-image" 
+		data-flex-grow="72"
+		data-flex-basis="174px"
+	
+></p>
+<h2 id="double-trouble">DOUBLE TROUBLE
+</h2><p><img src="/p/%E5%9B%BE%E7%81%B5%E5%AE%8C%E5%A4%87alpha%E7%89%88%E6%94%BB%E7%95%A51/double-trouble.png"
+	width="1209"
+	height="876"
+	srcset="/p/%E5%9B%BE%E7%81%B5%E5%AE%8C%E5%A4%87alpha%E7%89%88%E6%94%BB%E7%95%A51/double-trouble_hu_3d74d4b03735e4cf.png 480w, /p/%E5%9B%BE%E7%81%B5%E5%AE%8C%E5%A4%87alpha%E7%89%88%E6%94%BB%E7%95%A51/double-trouble_hu_b2e0bceb2463a9da.png 1024w"
+	loading="lazy"
+	
+		alt="要求"
+	
+	
+		class="gallery-image" 
+		data-flex-grow="138"
+		data-flex-basis="331px"
+	
+></p>
+<p>具体要求是，如果高电平数大于2就输出高电平，那么，我也可以理解为，对所有的输入进行一个and门操作，得到的结果有$3+2+1=6$种结果，这其中只要有一种是高电平，
+就可以输出高电平了，这正好就是<a class="link" href="#%e5%89%8d%e7%bd%ae%e7%9a%84%e4%b8%80%e4%ba%9b%e9%80%bb%e8%be%91%e8%af%b4%e6%98%8e" >逻辑说明中or门</a>,刚好又有3输入or门，将他们衔接起来，最后两个3or门用一个2输入or门再衔接（实际就是一个6输入or门的电路）</p>
+<p><img src="/p/%E5%9B%BE%E7%81%B5%E5%AE%8C%E5%A4%87alpha%E7%89%88%E6%94%BB%E7%95%A51/double-trouble-solve.png"
+	width="1253"
+	height="884"
+	srcset="/p/%E5%9B%BE%E7%81%B5%E5%AE%8C%E5%A4%87alpha%E7%89%88%E6%94%BB%E7%95%A51/double-trouble-solve_hu_54fcd15f6d608f4d.png 480w, /p/%E5%9B%BE%E7%81%B5%E5%AE%8C%E5%A4%87alpha%E7%89%88%E6%94%BB%E7%95%A51/double-trouble-solve_hu_e503d0a1b7fffc1a.png 1024w"
+	loading="lazy"
+	
+		alt="解法"
+	
+	
+		class="gallery-image" 
+		data-flex-grow="141"
+		data-flex-basis="340px"
+	
+></p>
+<p>下一篇攻略链接（更新后放入）</p>
 
 </section>
 
@@ -458,6 +725,34 @@
     
 
     
+
+<aside class="related-content--wrapper">
+    <h2 class="section-title">相关文章</h2>
+    <div class="related-content">
+        <div class="flex article-list--tile">
+            
+                
+<article class="has-image">
+    <a href="/p/%E5%9B%BE%E7%81%B5%E5%AE%8C%E5%A4%87alpha%E7%89%88%E6%94%BB%E7%95%A52/">
+        
+        
+            <div class="article-image">
+                
+                    <img src="/image/Turing-Complete-Logo.png" loading="lazy" data-key="" data-hash="/image/Turing-Complete-Logo.png"/>
+                
+            </div>
+        
+
+        <div class="article-details">
+            <h2 class="article-title">图灵完备alpha版攻略2</h2>
+        </div>
+    </a>
+</article>
+
+            
+        </div>
+    </div>
+</aside>
 
      
     
