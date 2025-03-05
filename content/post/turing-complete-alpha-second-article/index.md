@@ -126,3 +126,4 @@ $$a = \sum_{0}^{7} {a_i\cdot2^i},2a=2\cdot\sum_{0}^{7} {a_i\cdot2^i}=\sum_{1}^{8
 
 ![解法](big-switch-solve.png)
 
+下一篇攻略连接[图灵完备alpha篇攻略3](https://adeepblue.github.io/p/%E5%9B%BE%E7%81%B5%E5%AE%8C%E5%A4%87alpha%E7%89%88%E6%94%BB%E7%95%A52/)

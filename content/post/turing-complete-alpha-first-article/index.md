@@ -111,4 +111,4 @@ AND门和OR门，一定程度可以理解为统合一些条件的检查，比如
 
 ![解法](double-trouble-solve.png)
 
-下一篇攻略链接（更新后放入）
+下一篇攻略链接[图灵完备alpha篇攻略2](https://adeepblue.github.io/p/%E5%9B%BE%E7%81%B5%E5%AE%8C%E5%A4%87alpha%E7%89%88%E6%94%BB%E7%95%A52/)
