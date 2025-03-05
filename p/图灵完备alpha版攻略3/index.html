@@ -274,6 +274,14 @@
     <li><a href="#byte-not">BYTE NOT</a></li>
     <li><a href="#adding-bytes">ADDING BYTES</a></li>
     <li><a href="#multiplexer">MULTIPLEXER</a></li>
+    <li><a href="#signed-negator">SIGNED NEGATOR</a></li>
+    <li><a href="#the-bus">THE BUS</a></li>
+    <li><a href="#saving-gracefully">SAVING GRACEFULLY</a></li>
+    <li><a href="#saving-bytes">SAVING BYTES</a></li>
+    <li><a href="#1-bit-decoder">1 BIT DECODER</a></li>
+    <li><a href="#2-bit-decoder">2 BIT DECODER</a></li>
+    <li><a href="#3bit-decoder">3BIT DECODER</a></li>
+    <li><a href="#letter-box">LETTER BOX</a></li>
   </ol>
 </nav>
         </div>
@@ -453,7 +461,164 @@
 		data-flex-basis="314px"
 	
 >
-同</p>
+同<a class="link" href="https://adeepblue.github.io/p/%E5%9B%BE%E7%81%B5%E5%AE%8C%E5%A4%87alpha%E7%89%88%E6%94%BB%E7%95%A52/#big-switch"  target="_blank" rel="noopener"
+    >图灵完备alpha篇攻略2#BIG SWITCH</a></p>
+<h2 id="signed-negator">SIGNED NEGATOR
+</h2>$$
+a=-a_7\cdot2^7+\sum_{0}^{6} {a_i\cdot2^i}  
+$$<p>或</p>
+$$
+a=-a_7\cdot2^7+a_6\cdot2^6+...+a_0\cdot2^0
+$$<p>则</p>
+$$
+nota = -(-a_7\cdot2^7+\sum_{0}^{6} {a_i\cdot2^i}) = a_7\cdot2^7-\sum_{0}^{6} {a_i\cdot2^i}
+$$<p>这里并不能直接用-a直接套入取反，因为$nota$不等于$-a$，从$a = 0$就可以看到了，此时的a按位取反等于$0b11111111$,等于-1，但$-a$依旧等于0,此时通过$a+(-a) = 0$这个等式来推得-a，
+因为-a也是需要占用数字位的，所以最好的选择就是，要满足刚好溢出的条件，要两数相加等于256，也就是$0b00000000$，然后进位信号亮起，已知$nota+a = 0b11111111$
+$nota+a+1 = 0b00000000$,则</p>
+$$
+-a=nota+1
+$$<p>所以，相反数就是nota+1,解法如下</p>
+<p><img src="/p/%E5%9B%BE%E7%81%B5%E5%AE%8C%E5%A4%87alpha%E7%89%88%E6%94%BB%E7%95%A53/signed-negator-solve.png"
+	width="1190"
+	height="739"
+	srcset="/p/%E5%9B%BE%E7%81%B5%E5%AE%8C%E5%A4%87alpha%E7%89%88%E6%94%BB%E7%95%A53/signed-negator-solve_hu_2e66e3f7f207b87b.png 480w, /p/%E5%9B%BE%E7%81%B5%E5%AE%8C%E5%A4%87alpha%E7%89%88%E6%94%BB%E7%95%A53/signed-negator-solve_hu_e20eccd52a070039.png 1024w"
+	loading="lazy"
+	
+		alt="解法"
+	
+	
+		class="gallery-image" 
+		data-flex-grow="161"
+		data-flex-basis="386px"
+	
+></p>
+<h2 id="the-bus">THE BUS
+</h2><p><img src="/p/%E5%9B%BE%E7%81%B5%E5%AE%8C%E5%A4%87alpha%E7%89%88%E6%94%BB%E7%95%A53/the-bus-solve.png"
+	width="1051"
+	height="819"
+	srcset="/p/%E5%9B%BE%E7%81%B5%E5%AE%8C%E5%A4%87alpha%E7%89%88%E6%94%BB%E7%95%A53/the-bus-solve_hu_7a6fc789ca3f8a65.png 480w, /p/%E5%9B%BE%E7%81%B5%E5%AE%8C%E5%A4%87alpha%E7%89%88%E6%94%BB%E7%95%A53/the-bus-solve_hu_fcfcfb319af12098.png 1024w"
+	loading="lazy"
+	
+		alt="img.png"
+	
+	
+		class="gallery-image" 
+		data-flex-grow="128"
+		data-flex-basis="307px"
+	
+></p>
+<h2 id="saving-gracefully">SAVING GRACEFULLY
+</h2><p><img src="/p/%E5%9B%BE%E7%81%B5%E5%AE%8C%E5%A4%87alpha%E7%89%88%E6%94%BB%E7%95%A53/saving-gracefully.png"
+	width="1120"
+	height="1080"
+	srcset="/p/%E5%9B%BE%E7%81%B5%E5%AE%8C%E5%A4%87alpha%E7%89%88%E6%94%BB%E7%95%A53/saving-gracefully_hu_622a40fda64a2a68.png 480w, /p/%E5%9B%BE%E7%81%B5%E5%AE%8C%E5%A4%87alpha%E7%89%88%E6%94%BB%E7%95%A53/saving-gracefully_hu_a5cc43ba29ddde85.png 1024w"
+	loading="lazy"
+	
+		alt="要求"
+	
+	
+		class="gallery-image" 
+		data-flex-grow="103"
+		data-flex-basis="248px"
+	
+></p>
+<p>优雅存储</p>
+<p>观察下面写入和输出内容，不难发现，它希望内部存在一个线路，它希望存储一个数，如果这一刻的写入开关被打开的话，那就按照写入的内容改变这个存储的数，利用开关，可以实现如下的行为，用两个开关，一个是在0的时候发生作用，一个在1的时候发生作用，
+来改变对下一刻输入的影响，其中这时候的输入还得等到下一刻，所以最后输出还必须加上一个延迟线</p>
+<p><img src="/p/%E5%9B%BE%E7%81%B5%E5%AE%8C%E5%A4%87alpha%E7%89%88%E6%94%BB%E7%95%A53/saving-gracefully-solve.png"
+	width="1191"
+	height="834"
+	srcset="/p/%E5%9B%BE%E7%81%B5%E5%AE%8C%E5%A4%87alpha%E7%89%88%E6%94%BB%E7%95%A53/saving-gracefully-solve_hu_637cf1b6c5ddd30.png 480w, /p/%E5%9B%BE%E7%81%B5%E5%AE%8C%E5%A4%87alpha%E7%89%88%E6%94%BB%E7%95%A53/saving-gracefully-solve_hu_12aae52ae8f8a252.png 1024w"
+	loading="lazy"
+	
+		alt="解法"
+	
+	
+		class="gallery-image" 
+		data-flex-grow="142"
+		data-flex-basis="342px"
+	
+></p>
+<h2 id="saving-bytes">SAVING BYTES
+</h2><p><img src="/p/%E5%9B%BE%E7%81%B5%E5%AE%8C%E5%A4%87alpha%E7%89%88%E6%94%BB%E7%95%A53/saving-bytes-solve.png"
+	width="853"
+	height="871"
+	srcset="/p/%E5%9B%BE%E7%81%B5%E5%AE%8C%E5%A4%87alpha%E7%89%88%E6%94%BB%E7%95%A53/saving-bytes-solve_hu_880fbed439ac0df8.png 480w, /p/%E5%9B%BE%E7%81%B5%E5%AE%8C%E5%A4%87alpha%E7%89%88%E6%94%BB%E7%95%A53/saving-bytes-solve_hu_3c4425cf47bbe6c3.png 1024w"
+	loading="lazy"
+	
+		alt="img.png"
+	
+	
+		class="gallery-image" 
+		data-flex-grow="97"
+		data-flex-basis="235px"
+	
+></p>
+<p>等于是把8个寄存器封装起来，然后最后一位控制是否输出，即，如上</p>
+<h2 id="1-bit-decoder">1 BIT DECODER
+</h2><p><img src="/p/%E5%9B%BE%E7%81%B5%E5%AE%8C%E5%A4%87alpha%E7%89%88%E6%94%BB%E7%95%A53/1-bit-decoder-solve.png"
+	width="968"
+	height="1072"
+	srcset="/p/%E5%9B%BE%E7%81%B5%E5%AE%8C%E5%A4%87alpha%E7%89%88%E6%94%BB%E7%95%A53/1-bit-decoder-solve_hu_4d3c4d8fddcf7b0d.png 480w, /p/%E5%9B%BE%E7%81%B5%E5%AE%8C%E5%A4%87alpha%E7%89%88%E6%94%BB%E7%95%A53/1-bit-decoder-solve_hu_5207665ef9c6ec46.png 1024w"
+	loading="lazy"
+	
+		alt="img.png"
+	
+	
+		class="gallery-image" 
+		data-flex-grow="90"
+		data-flex-basis="216px"
+	
+></p>
+<h2 id="2-bit-decoder">2 BIT DECODER
+</h2><p><img src="/p/%E5%9B%BE%E7%81%B5%E5%AE%8C%E5%A4%87alpha%E7%89%88%E6%94%BB%E7%95%A53/2-bit-decoder-solve.png"
+	width="1021"
+	height="1047"
+	srcset="/p/%E5%9B%BE%E7%81%B5%E5%AE%8C%E5%A4%87alpha%E7%89%88%E6%94%BB%E7%95%A53/2-bit-decoder-solve_hu_f334eb134f16e34.png 480w, /p/%E5%9B%BE%E7%81%B5%E5%AE%8C%E5%A4%87alpha%E7%89%88%E6%94%BB%E7%95%A53/2-bit-decoder-solve_hu_22d60d6ba68ba856.png 1024w"
+	loading="lazy"
+	
+		alt="img.png"
+	
+	
+		class="gallery-image" 
+		data-flex-grow="97"
+		data-flex-basis="234px"
+	
+></p>
+<p>这里只能是使用and的条件严格限制了</p>
+<h2 id="3bit-decoder">3BIT DECODER
+</h2><p><img src="/p/%E5%9B%BE%E7%81%B5%E5%AE%8C%E5%A4%87alpha%E7%89%88%E6%94%BB%E7%95%A53/3-bit-decoder-solve.png"
+	width="1099"
+	height="890"
+	srcset="/p/%E5%9B%BE%E7%81%B5%E5%AE%8C%E5%A4%87alpha%E7%89%88%E6%94%BB%E7%95%A53/3-bit-decoder-solve_hu_b919a61f999d1625.png 480w, /p/%E5%9B%BE%E7%81%B5%E5%AE%8C%E5%A4%87alpha%E7%89%88%E6%94%BB%E7%95%A53/3-bit-decoder-solve_hu_d110e71da70ab599.png 1024w"
+	loading="lazy"
+	
+		alt="img.png"
+	
+	
+		class="gallery-image" 
+		data-flex-grow="123"
+		data-flex-basis="296px"
+	
+>
+同上</p>
+<h2 id="letter-box">LETTER BOX
+</h2><p><img src="/p/%E5%9B%BE%E7%81%B5%E5%AE%8C%E5%A4%87alpha%E7%89%88%E6%94%BB%E7%95%A53/litter-box-solve.png"
+	width="1727"
+	height="1080"
+	srcset="/p/%E5%9B%BE%E7%81%B5%E5%AE%8C%E5%A4%87alpha%E7%89%88%E6%94%BB%E7%95%A53/litter-box-solve_hu_3024bb67e459a321.png 480w, /p/%E5%9B%BE%E7%81%B5%E5%AE%8C%E5%A4%87alpha%E7%89%88%E6%94%BB%E7%95%A53/litter-box-solve_hu_f35938dfad03fe7b.png 1024w"
+	loading="lazy"
+	
+		alt="img.png"
+	
+	
+		class="gallery-image" 
+		data-flex-grow="159"
+		data-flex-basis="383px"
+	
+></p>
+<p>这个解法比较麻烦，我也摸索了好一会，有之前的版本的，布线布的很乱，也很麻烦，后面想到了4路一位开关，这个可以代替两路开关，不过，四路的地方，得控制输入也得控制输出，
+于是就有了控制电路直接连带输出一起控制了，开关输入的时候控制的写入信号，是否就哪怕开关在也没关系了，打开就是不写入，以及只需要额外增加一个输出的控制开关即可，貌似现在版本的图灵完备默认的输出区分开了0输出和不输出，虽然现实中没区别</p>
 
 </section>
 

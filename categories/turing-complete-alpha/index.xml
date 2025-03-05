@@ -119,7 +119,164 @@
 		data-flex-basis=&#34;314px&#34;
 	
 &gt;
-同&lt;/p&gt;
+同&lt;a class=&#34;link&#34; href=&#34;https://adeepblue.github.io/p/%E5%9B%BE%E7%81%B5%E5%AE%8C%E5%A4%87alpha%E7%89%88%E6%94%BB%E7%95%A52/#big-switch&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;图灵完备alpha篇攻略2#BIG SWITCH&lt;/a&gt;&lt;/p&gt;
+&lt;h2 id=&#34;signed-negator&#34;&gt;SIGNED NEGATOR
+&lt;/h2&gt;$$
+a=-a_7\cdot2^7+\sum_{0}^{6} {a_i\cdot2^i}  
+$$&lt;p&gt;或&lt;/p&gt;
+$$
+a=-a_7\cdot2^7+a_6\cdot2^6+...+a_0\cdot2^0
+$$&lt;p&gt;则&lt;/p&gt;
+$$
+nota = -(-a_7\cdot2^7+\sum_{0}^{6} {a_i\cdot2^i}) = a_7\cdot2^7-\sum_{0}^{6} {a_i\cdot2^i}
+$$&lt;p&gt;这里并不能直接用-a直接套入取反，因为$nota$不等于$-a$，从$a = 0$就可以看到了，此时的a按位取反等于$0b11111111$,等于-1，但$-a$依旧等于0,此时通过$a+(-a) = 0$这个等式来推得-a，
+因为-a也是需要占用数字位的，所以最好的选择就是，要满足刚好溢出的条件，要两数相加等于256，也就是$0b00000000$，然后进位信号亮起，已知$nota+a = 0b11111111$
+$nota+a+1 = 0b00000000$,则&lt;/p&gt;
+$$
+-a=nota+1
+$$&lt;p&gt;所以，相反数就是nota+1,解法如下&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://adeepblue.github.io/p/%E5%9B%BE%E7%81%B5%E5%AE%8C%E5%A4%87alpha%E7%89%88%E6%94%BB%E7%95%A53/signed-negator-solve.png&#34;
+	width=&#34;1190&#34;
+	height=&#34;739&#34;
+	srcset=&#34;https://adeepblue.github.io/p/%E5%9B%BE%E7%81%B5%E5%AE%8C%E5%A4%87alpha%E7%89%88%E6%94%BB%E7%95%A53/signed-negator-solve_hu_2e66e3f7f207b87b.png 480w, https://adeepblue.github.io/p/%E5%9B%BE%E7%81%B5%E5%AE%8C%E5%A4%87alpha%E7%89%88%E6%94%BB%E7%95%A53/signed-negator-solve_hu_e20eccd52a070039.png 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;解法&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;161&#34;
+		data-flex-basis=&#34;386px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;h2 id=&#34;the-bus&#34;&gt;THE BUS
+&lt;/h2&gt;&lt;p&gt;&lt;img src=&#34;https://adeepblue.github.io/p/%E5%9B%BE%E7%81%B5%E5%AE%8C%E5%A4%87alpha%E7%89%88%E6%94%BB%E7%95%A53/the-bus-solve.png&#34;
+	width=&#34;1051&#34;
+	height=&#34;819&#34;
+	srcset=&#34;https://adeepblue.github.io/p/%E5%9B%BE%E7%81%B5%E5%AE%8C%E5%A4%87alpha%E7%89%88%E6%94%BB%E7%95%A53/the-bus-solve_hu_7a6fc789ca3f8a65.png 480w, https://adeepblue.github.io/p/%E5%9B%BE%E7%81%B5%E5%AE%8C%E5%A4%87alpha%E7%89%88%E6%94%BB%E7%95%A53/the-bus-solve_hu_fcfcfb319af12098.png 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;img.png&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;128&#34;
+		data-flex-basis=&#34;307px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;h2 id=&#34;saving-gracefully&#34;&gt;SAVING GRACEFULLY
+&lt;/h2&gt;&lt;p&gt;&lt;img src=&#34;https://adeepblue.github.io/p/%E5%9B%BE%E7%81%B5%E5%AE%8C%E5%A4%87alpha%E7%89%88%E6%94%BB%E7%95%A53/saving-gracefully.png&#34;
+	width=&#34;1120&#34;
+	height=&#34;1080&#34;
+	srcset=&#34;https://adeepblue.github.io/p/%E5%9B%BE%E7%81%B5%E5%AE%8C%E5%A4%87alpha%E7%89%88%E6%94%BB%E7%95%A53/saving-gracefully_hu_622a40fda64a2a68.png 480w, https://adeepblue.github.io/p/%E5%9B%BE%E7%81%B5%E5%AE%8C%E5%A4%87alpha%E7%89%88%E6%94%BB%E7%95%A53/saving-gracefully_hu_a5cc43ba29ddde85.png 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;要求&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;103&#34;
+		data-flex-basis=&#34;248px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;p&gt;优雅存储&lt;/p&gt;
+&lt;p&gt;观察下面写入和输出内容，不难发现，它希望内部存在一个线路，它希望存储一个数，如果这一刻的写入开关被打开的话，那就按照写入的内容改变这个存储的数，利用开关，可以实现如下的行为，用两个开关，一个是在0的时候发生作用，一个在1的时候发生作用，
+来改变对下一刻输入的影响，其中这时候的输入还得等到下一刻，所以最后输出还必须加上一个延迟线&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://adeepblue.github.io/p/%E5%9B%BE%E7%81%B5%E5%AE%8C%E5%A4%87alpha%E7%89%88%E6%94%BB%E7%95%A53/saving-gracefully-solve.png&#34;
+	width=&#34;1191&#34;
+	height=&#34;834&#34;
+	srcset=&#34;https://adeepblue.github.io/p/%E5%9B%BE%E7%81%B5%E5%AE%8C%E5%A4%87alpha%E7%89%88%E6%94%BB%E7%95%A53/saving-gracefully-solve_hu_637cf1b6c5ddd30.png 480w, https://adeepblue.github.io/p/%E5%9B%BE%E7%81%B5%E5%AE%8C%E5%A4%87alpha%E7%89%88%E6%94%BB%E7%95%A53/saving-gracefully-solve_hu_12aae52ae8f8a252.png 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;解法&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;142&#34;
+		data-flex-basis=&#34;342px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;h2 id=&#34;saving-bytes&#34;&gt;SAVING BYTES
+&lt;/h2&gt;&lt;p&gt;&lt;img src=&#34;https://adeepblue.github.io/p/%E5%9B%BE%E7%81%B5%E5%AE%8C%E5%A4%87alpha%E7%89%88%E6%94%BB%E7%95%A53/saving-bytes-solve.png&#34;
+	width=&#34;853&#34;
+	height=&#34;871&#34;
+	srcset=&#34;https://adeepblue.github.io/p/%E5%9B%BE%E7%81%B5%E5%AE%8C%E5%A4%87alpha%E7%89%88%E6%94%BB%E7%95%A53/saving-bytes-solve_hu_880fbed439ac0df8.png 480w, https://adeepblue.github.io/p/%E5%9B%BE%E7%81%B5%E5%AE%8C%E5%A4%87alpha%E7%89%88%E6%94%BB%E7%95%A53/saving-bytes-solve_hu_3c4425cf47bbe6c3.png 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;img.png&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;97&#34;
+		data-flex-basis=&#34;235px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;p&gt;等于是把8个寄存器封装起来，然后最后一位控制是否输出，即，如上&lt;/p&gt;
+&lt;h2 id=&#34;1-bit-decoder&#34;&gt;1 BIT DECODER
+&lt;/h2&gt;&lt;p&gt;&lt;img src=&#34;https://adeepblue.github.io/p/%E5%9B%BE%E7%81%B5%E5%AE%8C%E5%A4%87alpha%E7%89%88%E6%94%BB%E7%95%A53/1-bit-decoder-solve.png&#34;
+	width=&#34;968&#34;
+	height=&#34;1072&#34;
+	srcset=&#34;https://adeepblue.github.io/p/%E5%9B%BE%E7%81%B5%E5%AE%8C%E5%A4%87alpha%E7%89%88%E6%94%BB%E7%95%A53/1-bit-decoder-solve_hu_4d3c4d8fddcf7b0d.png 480w, https://adeepblue.github.io/p/%E5%9B%BE%E7%81%B5%E5%AE%8C%E5%A4%87alpha%E7%89%88%E6%94%BB%E7%95%A53/1-bit-decoder-solve_hu_5207665ef9c6ec46.png 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;img.png&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;90&#34;
+		data-flex-basis=&#34;216px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;h2 id=&#34;2-bit-decoder&#34;&gt;2 BIT DECODER
+&lt;/h2&gt;&lt;p&gt;&lt;img src=&#34;https://adeepblue.github.io/p/%E5%9B%BE%E7%81%B5%E5%AE%8C%E5%A4%87alpha%E7%89%88%E6%94%BB%E7%95%A53/2-bit-decoder-solve.png&#34;
+	width=&#34;1021&#34;
+	height=&#34;1047&#34;
+	srcset=&#34;https://adeepblue.github.io/p/%E5%9B%BE%E7%81%B5%E5%AE%8C%E5%A4%87alpha%E7%89%88%E6%94%BB%E7%95%A53/2-bit-decoder-solve_hu_f334eb134f16e34.png 480w, https://adeepblue.github.io/p/%E5%9B%BE%E7%81%B5%E5%AE%8C%E5%A4%87alpha%E7%89%88%E6%94%BB%E7%95%A53/2-bit-decoder-solve_hu_22d60d6ba68ba856.png 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;img.png&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;97&#34;
+		data-flex-basis=&#34;234px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;p&gt;这里只能是使用and的条件严格限制了&lt;/p&gt;
+&lt;h2 id=&#34;3bit-decoder&#34;&gt;3BIT DECODER
+&lt;/h2&gt;&lt;p&gt;&lt;img src=&#34;https://adeepblue.github.io/p/%E5%9B%BE%E7%81%B5%E5%AE%8C%E5%A4%87alpha%E7%89%88%E6%94%BB%E7%95%A53/3-bit-decoder-solve.png&#34;
+	width=&#34;1099&#34;
+	height=&#34;890&#34;
+	srcset=&#34;https://adeepblue.github.io/p/%E5%9B%BE%E7%81%B5%E5%AE%8C%E5%A4%87alpha%E7%89%88%E6%94%BB%E7%95%A53/3-bit-decoder-solve_hu_b919a61f999d1625.png 480w, https://adeepblue.github.io/p/%E5%9B%BE%E7%81%B5%E5%AE%8C%E5%A4%87alpha%E7%89%88%E6%94%BB%E7%95%A53/3-bit-decoder-solve_hu_d110e71da70ab599.png 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;img.png&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;123&#34;
+		data-flex-basis=&#34;296px&#34;
+	
+&gt;
+同上&lt;/p&gt;
+&lt;h2 id=&#34;letter-box&#34;&gt;LETTER BOX
+&lt;/h2&gt;&lt;p&gt;&lt;img src=&#34;https://adeepblue.github.io/p/%E5%9B%BE%E7%81%B5%E5%AE%8C%E5%A4%87alpha%E7%89%88%E6%94%BB%E7%95%A53/litter-box-solve.png&#34;
+	width=&#34;1727&#34;
+	height=&#34;1080&#34;
+	srcset=&#34;https://adeepblue.github.io/p/%E5%9B%BE%E7%81%B5%E5%AE%8C%E5%A4%87alpha%E7%89%88%E6%94%BB%E7%95%A53/litter-box-solve_hu_3024bb67e459a321.png 480w, https://adeepblue.github.io/p/%E5%9B%BE%E7%81%B5%E5%AE%8C%E5%A4%87alpha%E7%89%88%E6%94%BB%E7%95%A53/litter-box-solve_hu_f35938dfad03fe7b.png 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;img.png&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;159&#34;
+		data-flex-basis=&#34;383px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;p&gt;这个解法比较麻烦，我也摸索了好一会，有之前的版本的，布线布的很乱，也很麻烦，后面想到了4路一位开关，这个可以代替两路开关，不过，四路的地方，得控制输入也得控制输出，
+于是就有了控制电路直接连带输出一起控制了，开关输入的时候控制的写入信号，是否就哪怕开关在也没关系了，打开就是不写入，以及只需要额外增加一个输出的控制开关即可，貌似现在版本的图灵完备默认的输出区分开了0输出和不输出，虽然现实中没区别&lt;/p&gt;
 </description>
         </item>
         <item>
@@ -459,6 +616,8 @@ $$假定输入数是a,a=(a_7\cdot2^7+...+a_0\cdot2^0),则2a=(a_7\cdot2^8+...+a_0
 		data-flex-basis=&#34;334px&#34;
 	
 &gt;&lt;/p&gt;
+&lt;p&gt;下一篇攻略连接&lt;a class=&#34;link&#34; href=&#34;https://adeepblue.github.io/p/%E5%9B%BE%E7%81%B5%E5%AE%8C%E5%A4%87alpha%E7%89%88%E6%94%BB%E7%95%A52/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;图灵完备alpha篇攻略3&lt;/a&gt;&lt;/p&gt;
 </description>
         </item>
         <item>
@@ -786,7 +945,8 @@ $$假定输入数是a,a=(a_7\cdot2^7+...+a_0\cdot2^0),则2a=(a_7\cdot2^8+...+a_0
 		data-flex-basis=&#34;340px&#34;
 	
 &gt;&lt;/p&gt;
-&lt;p&gt;下一篇攻略链接（更新后放入）&lt;/p&gt;
+&lt;p&gt;下一篇攻略链接&lt;a class=&#34;link&#34; href=&#34;https://adeepblue.github.io/p/%E5%9B%BE%E7%81%B5%E5%AE%8C%E5%A4%87alpha%E7%89%88%E6%94%BB%E7%95%A52/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;图灵完备alpha篇攻略2&lt;/a&gt;&lt;/p&gt;
 </description>
         </item>
         
