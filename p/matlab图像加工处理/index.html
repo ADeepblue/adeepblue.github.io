@@ -1,0 +1,628 @@
+<!DOCTYPE html>
+<html lang="zh-cn" dir="ltr">
+    <head><meta charset='utf-8'>
+<meta name='viewport' content='width=device-width, initial-scale=1'><meta name='description' content="图像分割 此为应朋友需求写的代码改核心而来，仅供参考 图源https://zhuanlan.zhihu.com/p/57405494\n图像读取(Image Read) % 单图片读取方式 img = imread(&#34;image.jpg&#34;); %image.jpg为图源 % 从视频的某一帧读取，此处注释 % vid = VideoReader(&#34;video.jpg&#34;) % frame = read(vid,index); 一定的加工(Process Image) 加工方案1 % 灰度化 grayFrame = rgb2gray(img); % 二值化 bw = imbinarize(grayFrame,&#34;adaptive&#34;,&#34;Sensitivity&#34;,0.7); % 反转颜色 bw = not(bw); % 填充孔洞 bw = imfill(bw,&#34;holes&#34;); 这里使用了 imfill来填充图片内部的孔洞，也可以用imopen和imclose进行处理，但是需要注意精度，其中需要not反转的原因主要是气泡是黑色的，二值化处理之后其他背景部分都是白色的， 只有气泡是黑色的，黑色对应的是0，不是1，其他地方对应的都是1，如果黑色的反而是缺陷处了，如果使用imfill会直接将黑色气泡的洞填掉，这一点尤为需要注意\n">
+<title>Matlab图像加工处理</title>
+
+<link rel='canonical' href='https://adeepblue.github.io/p/matlab%E5%9B%BE%E5%83%8F%E5%8A%A0%E5%B7%A5%E5%A4%84%E7%90%86/'>
+
+<link rel="stylesheet" href="/scss/style.min.663803bebe609202d5b39d848f2d7c2dc8b598a2d879efa079fa88893d29c49c.css"><meta property='og:title' content="Matlab图像加工处理">
+<meta property='og:description' content="图像分割 此为应朋友需求写的代码改核心而来，仅供参考 图源https://zhuanlan.zhihu.com/p/57405494\n图像读取(Image Read) % 单图片读取方式 img = imread(&#34;image.jpg&#34;); %image.jpg为图源 % 从视频的某一帧读取，此处注释 % vid = VideoReader(&#34;video.jpg&#34;) % frame = read(vid,index); 一定的加工(Process Image) 加工方案1 % 灰度化 grayFrame = rgb2gray(img); % 二值化 bw = imbinarize(grayFrame,&#34;adaptive&#34;,&#34;Sensitivity&#34;,0.7); % 反转颜色 bw = not(bw); % 填充孔洞 bw = imfill(bw,&#34;holes&#34;); 这里使用了 imfill来填充图片内部的孔洞，也可以用imopen和imclose进行处理，但是需要注意精度，其中需要not反转的原因主要是气泡是黑色的，二值化处理之后其他背景部分都是白色的， 只有气泡是黑色的，黑色对应的是0，不是1，其他地方对应的都是1，如果黑色的反而是缺陷处了，如果使用imfill会直接将黑色气泡的洞填掉，这一点尤为需要注意\n">
+<meta property='og:url' content='https://adeepblue.github.io/p/matlab%E5%9B%BE%E5%83%8F%E5%8A%A0%E5%B7%A5%E5%A4%84%E7%90%86/'>
+<meta property='og:site_name' content='深蓝之亘的博客'>
+<meta property='og:type' content='article'><meta property='article:section' content='Post' /><meta property='article:published_time' content='2025-03-19T23:34:59&#43;08:00'/><meta property='article:modified_time' content='2025-03-19T23:34:59&#43;08:00'/><meta property='og:image' content='https://adeepblue.github.io/image/MATLAB-Symbol.jpg' />
+<meta name="twitter:title" content="Matlab图像加工处理">
+<meta name="twitter:description" content="图像分割 此为应朋友需求写的代码改核心而来，仅供参考 图源https://zhuanlan.zhihu.com/p/57405494\n图像读取(Image Read) % 单图片读取方式 img = imread(&#34;image.jpg&#34;); %image.jpg为图源 % 从视频的某一帧读取，此处注释 % vid = VideoReader(&#34;video.jpg&#34;) % frame = read(vid,index); 一定的加工(Process Image) 加工方案1 % 灰度化 grayFrame = rgb2gray(img); % 二值化 bw = imbinarize(grayFrame,&#34;adaptive&#34;,&#34;Sensitivity&#34;,0.7); % 反转颜色 bw = not(bw); % 填充孔洞 bw = imfill(bw,&#34;holes&#34;); 这里使用了 imfill来填充图片内部的孔洞，也可以用imopen和imclose进行处理，但是需要注意精度，其中需要not反转的原因主要是气泡是黑色的，二值化处理之后其他背景部分都是白色的， 只有气泡是黑色的，黑色对应的是0，不是1，其他地方对应的都是1，如果黑色的反而是缺陷处了，如果使用imfill会直接将黑色气泡的洞填掉，这一点尤为需要注意\n"><meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:image" content='https://adeepblue.github.io/image/MATLAB-Symbol.jpg' />
+    <link rel="shortcut icon" href="/favicon.ico" />
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0-rc.1/katex.min.css">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0-rc.1/katex.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0-rc.1/contrib/auto-render.min.js"></script>
+
+<script>
+    document.addEventListener("DOMContentLoaded", function() {
+      renderMathInElement(document.body);
+    });
+</script>
+         <link rel="stylesheet" href="/css/custom.css">
+    </head>
+    <body class="
+    article-page
+    ">
+    <script>
+        (function() {
+            const colorSchemeKey = 'StackColorScheme';
+            if(!localStorage.getItem(colorSchemeKey)){
+                localStorage.setItem(colorSchemeKey, "auto");
+            }
+        })();
+    </script><script>
+    (function() {
+        const colorSchemeKey = 'StackColorScheme';
+        const colorSchemeItem = localStorage.getItem(colorSchemeKey);
+        const supportDarkMode = window.matchMedia('(prefers-color-scheme: dark)').matches === true;
+
+        if (colorSchemeItem == 'dark' || colorSchemeItem === 'auto' && supportDarkMode) {
+            
+
+            document.documentElement.dataset.scheme = 'dark';
+        } else {
+            document.documentElement.dataset.scheme = 'light';
+        }
+    })();
+</script>
+<div class="container main-container flex on-phone--column extended"><aside class="sidebar left-sidebar sticky ">
+    <button class="hamburger hamburger--spin" type="button" id="toggle-menu" aria-label="切换菜单">
+        <span class="hamburger-box">
+            <span class="hamburger-inner"></span>
+        </span>
+    </button>
+
+    <header>
+        
+            
+            <figure class="site-avatar">
+                <a href="/">
+                
+                    
+                    
+                    
+                        
+                        <img src="/img/avatar_hu_996f7fae539f5332.png" width="300"
+                            height="300" class="site-logo" loading="lazy" alt="Avatar">
+                    
+                
+                </a>
+                
+            </figure>
+            
+        
+        
+        <div class="site-meta">
+            <h1 class="site-name"><a href="/">深蓝之亘的博客</a></h1>
+            <h2 class="site-description">欢迎来到我的博客网站</h2>
+        </div>
+    </header><ol class="menu-social">
+            
+                <li>
+                    <a 
+                        href='https://github.com/Adeepblue'
+                        target="_blank"
+                        title="GitHub"
+                        rel="me"
+                    >
+                        
+                        
+                            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-brand-github" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+  <path d="M9 19c-4.3 1.4 -4.3 -2.5 -6 -3m12 5v-3.5c0 -1 .1 -1.4 -.5 -2c2.8 -.3 5.5 -1.4 5.5 -6a4.6 4.6 0 0 0 -1.3 -3.2a4.2 4.2 0 0 0 -.1 -3.2s-1.1 -.3 -3.5 1.3a12.3 12.3 0 0 0 -6.2 0c-2.4 -1.6 -3.5 -1.3 -3.5 -1.3a4.2 4.2 0 0 0 -.1 3.2a4.6 4.6 0 0 0 -1.3 3.2c0 4.6 2.7 5.7 5.5 6c-.6 .6 -.6 1.2 -.5 2v3.5" />
+</svg>
+
+
+
+                        
+                    </a>
+                </li>
+            
+                <li>
+                    <a 
+                        href='https://space.bilibili.com/435022639'
+                        target="_blank"
+                        title="Twitter"
+                        rel="me"
+                    >
+                        
+                        
+                            <svg  xmlns="http://www.w3.org/2000/svg"  width="24"  height="24"  viewBox="0 0 24 24"  fill="none"  stroke="currentColor"  stroke-width="2"  stroke-linecap="round"  stroke-linejoin="round"  class="icon icon-tabler icons-tabler-outline icon-tabler-brand-bilibili"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M3 10a4 4 0 0 1 4 -4h10a4 4 0 0 1 4 4v6a4 4 0 0 1 -4 4h-10a4 4 0 0 1 -4 -4v-6z" /><path d="M8 3l2 3" /><path d="M16 3l-2 3" /><path d="M9 13v-2" /><path d="M15 11v2" /></svg>
+                        
+                    </a>
+                </li>
+            
+        </ol><ol class="menu" id="main-menu">
+        
+        
+        
+        <li >
+            <a href='/' >
+                
+                
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-home" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <polyline points="5 12 3 12 12 3 21 12 19 12" />
+  <path d="M5 12v7a2 2 0 0 0 2 2h10a2 2 0 0 0 2 -2v-7" />
+  <path d="M9 21v-6a2 2 0 0 1 2 -2h2a2 2 0 0 1 2 2v6" />
+</svg>
+
+
+
+                
+                <span>主页</span>
+            </a>
+        </li>
+        
+        
+        <li >
+            <a href='/%E6%9B%B4%E6%96%B0%E6%97%A5%E5%BF%97/' >
+                
+                
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-user" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="12" cy="7" r="4" />
+  <path d="M6 21v-2a4 4 0 0 1 4 -4h4a4 4 0 0 1 4 4v2" />
+</svg>
+
+
+
+                
+                <span>更新日志</span>
+            </a>
+        </li>
+        
+        
+        <li >
+            <a href='/archives/' >
+                
+                
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-archive" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <rect x="3" y="4" width="18" height="4" rx="2" />
+  <path d="M5 8v10a2 2 0 0 0 2 2h10a2 2 0 0 0 2 -2v-10" />
+  <line x1="10" y1="12" x2="14" y2="12" />
+</svg>
+
+
+
+                
+                <span>archives</span>
+            </a>
+        </li>
+        
+        
+        <li >
+            <a href='/search/' >
+                
+                
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-search" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="10" cy="10" r="7" />
+  <line x1="21" y1="21" x2="15" y2="15" />
+</svg>
+
+
+
+                
+                <span>搜索</span>
+            </a>
+        </li>
+        
+        
+        <li >
+            <a href='/links/' >
+                
+                
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-link" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <path d="M10 14a3.5 3.5 0 0 0 5 0l4 -4a3.5 3.5 0 0 0 -5 -5l-.5 .5" />
+  <path d="M14 10a3.5 3.5 0 0 0 -5 0l-4 4a3.5 3.5 0 0 0 5 5l.5 -.5" />
+</svg>
+
+
+
+                
+                <span>Links</span>
+            </a>
+        </li>
+        
+        <li class="menu-bottom-section">
+            <ol class="menu">
+
+                
+                    <li id="dark-mode-toggle">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-toggle-left" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="8" cy="12" r="2" />
+  <rect x="2" y="6" width="20" height="12" rx="6" />
+</svg>
+
+
+
+                        <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-toggle-right" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="16" cy="12" r="2" />
+  <rect x="2" y="6" width="20" height="12" rx="6" />
+</svg>
+
+
+
+                        <span>暗色模式</span>
+                    </li>
+                
+            </ol>
+        </li>
+    </ol>
+</aside>
+
+    <aside class="sidebar right-sidebar sticky">
+        
+            
+                
+    <section class="widget archives">
+        <div class="widget-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-hash" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <line x1="5" y1="9" x2="19" y2="9" />
+  <line x1="5" y1="15" x2="19" y2="15" />
+  <line x1="11" y1="4" x2="7" y2="20" />
+  <line x1="17" y1="4" x2="13" y2="20" />
+</svg>
+
+
+
+        </div>
+        <h2 class="widget-title section-title">目录</h2>
+        
+        <div class="widget--toc">
+            <nav id="TableOfContents">
+  <ol>
+    <li><a href="#图像分割">图像分割</a>
+      <ol>
+        <li><a href="#图像读取image-read">图像读取(Image Read)</a></li>
+        <li><a href="#一定的加工process-image">一定的加工(Process Image)</a>
+          <ol>
+            <li><a href="#加工方案1">加工方案1</a></li>
+            <li><a href="#加工方案2">加工方案2</a></li>
+          </ol>
+        </li>
+        <li><a href="#图像分割image-segmentation">图像分割(image segmentation)</a></li>
+      </ol>
+    </li>
+    <li><a href="#三维可视化图像">三维可视化图像</a>
+      <ol>
+        <li><a href="#绘制过程">绘制过程</a></li>
+      </ol>
+    </li>
+  </ol>
+</nav>
+        </div>
+    </section>
+
+            
+        
+    </aside>
+
+
+            <main class="main full-width">
+    <article class="has-image main-article">
+    <header class="article-header">
+        <div class="article-image">
+            <a href="/p/matlab%E5%9B%BE%E5%83%8F%E5%8A%A0%E5%B7%A5%E5%A4%84%E7%90%86/">
+                
+                    <img src="/image/MATLAB-Symbol.jpg" loading="lazy" alt="Featured image of post Matlab图像加工处理" />
+                
+            </a>
+        </div>
+    
+
+    <div class="article-details">
+    
+    <header class="article-category">
+        
+            <a href="/categories/matlab/" >
+                Matlab
+            </a>
+        
+    </header>
+    
+
+    <div class="article-title-wrapper">
+        <h2 class="article-title">
+            <a href="/p/matlab%E5%9B%BE%E5%83%8F%E5%8A%A0%E5%B7%A5%E5%A4%84%E7%90%86/">Matlab图像加工处理</a>
+        </h2>
+    
+        
+    </div>
+
+    
+    
+    
+    
+    <footer class="article-time">
+        
+            <div>
+                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-calendar-time" width="56" height="56" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <path d="M11.795 21h-6.795a2 2 0 0 1 -2 -2v-12a2 2 0 0 1 2 -2h12a2 2 0 0 1 2 2v4" />
+  <circle cx="18" cy="18" r="4" />
+  <path d="M15 3v4" />
+  <path d="M7 3v4" />
+  <path d="M3 11h16" />
+  <path d="M18 16.496v1.504l1 1" />
+</svg>
+                <time class="article-time--published">2025-03-19</time>
+            </div>
+        
+
+        
+    </footer>
+    
+
+    
+</div>
+
+</header>
+
+    <section class="article-content">
+    
+    
+    <h2 id="图像分割">图像分割
+</h2><p>此为应朋友需求写的代码改核心而来，仅供参考
+图源<a class="link" href="https://zhuanlan.zhihu.com/p/57405494"  target="_blank" rel="noopener"
+    >https://zhuanlan.zhihu.com/p/57405494</a></p>
+<p><img src="/p/matlab%E5%9B%BE%E5%83%8F%E5%8A%A0%E5%B7%A5%E5%A4%84%E7%90%86/image.jpg"
+	width="670"
+	height="598"
+	srcset="/p/matlab%E5%9B%BE%E5%83%8F%E5%8A%A0%E5%B7%A5%E5%A4%84%E7%90%86/image_hu_a4cb982bcb355db6.jpg 480w, /p/matlab%E5%9B%BE%E5%83%8F%E5%8A%A0%E5%B7%A5%E5%A4%84%E7%90%86/image_hu_e2111425689539c5.jpg 1024w"
+	loading="lazy"
+	
+		alt="待处理图片"
+	
+	
+		class="gallery-image" 
+		data-flex-grow="112"
+		data-flex-basis="268px"
+	
+></p>
+<h3 id="图像读取image-read">图像读取(Image Read)
+</h3><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-matlab" data-lang="matlab"><span class="line"><span class="cl"><span class="c">% 单图片读取方式</span>
+</span></span><span class="line"><span class="cl"><span class="n">img</span> <span class="p">=</span> <span class="n">imread</span><span class="p">(</span>&#34;<span class="n">image</span><span class="p">.</span><span class="n">jpg</span>&#34;<span class="p">);</span> <span class="c">%image.jpg为图源</span>
+</span></span><span class="line"><span class="cl"><span class="c">% 从视频的某一帧读取，此处注释</span>
+</span></span><span class="line"><span class="cl"><span class="c">% vid = VideoReader(&#34;video.jpg&#34;)</span>
+</span></span><span class="line"><span class="cl"><span class="c">% frame = read(vid,index);</span>
+</span></span></code></pre></div><h3 id="一定的加工process-image">一定的加工(Process Image)
+</h3><h4 id="加工方案1">加工方案1
+</h4><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-matlab" data-lang="matlab"><span class="line"><span class="cl"><span class="c">% 灰度化</span>
+</span></span><span class="line"><span class="cl"><span class="n">grayFrame</span> <span class="p">=</span> <span class="n">rgb2gray</span><span class="p">(</span><span class="n">img</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl"><span class="c">% 二值化</span>
+</span></span><span class="line"><span class="cl"><span class="n">bw</span> <span class="p">=</span> <span class="n">imbinarize</span><span class="p">(</span><span class="n">grayFrame</span><span class="p">,</span>&#34;<span class="n">adaptive</span>&#34;<span class="p">,</span>&#34;<span class="n">Sensitivity</span>&#34;<span class="p">,</span><span class="mf">0.7</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl"><span class="c">% 反转颜色</span>
+</span></span><span class="line"><span class="cl"><span class="n">bw</span> <span class="p">=</span> <span class="n">not</span><span class="p">(</span><span class="n">bw</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl"><span class="c">% 填充孔洞</span>
+</span></span><span class="line"><span class="cl"><span class="n">bw</span> <span class="p">=</span> <span class="n">imfill</span><span class="p">(</span><span class="n">bw</span><span class="p">,</span>&#34;<span class="n">holes</span>&#34;<span class="p">);</span>
+</span></span></code></pre></div><p>这里使用了 <code>imfill</code>来填充图片内部的孔洞，也可以用imopen和imclose进行处理，但是需要注意精度，其中需要not反转的原因主要是气泡是黑色的，二值化处理之后其他背景部分都是白色的，
+只有气泡是黑色的，黑色对应的是0，不是1，其他地方对应的都是1，如果黑色的反而是缺陷处了，如果使用imfill会直接将黑色气泡的洞填掉，这一点尤为需要注意</p>
+<h4 id="加工方案2">加工方案2
+</h4><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-matlab" data-lang="matlab"><span class="line"><span class="cl"><span class="n">grayFrame</span> <span class="p">=</span> <span class="n">rgb2gray</span><span class="p">(</span><span class="n">img</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">    <span class="n">bw</span> <span class="p">=</span> <span class="n">imbinarize</span><span class="p">(</span><span class="n">grayFrame</span><span class="p">,</span>&#34;<span class="n">adaptive</span>&#34;<span class="p">,</span>&#34;<span class="n">Sensitivity</span>&#34;<span class="p">,</span><span class="mf">0.7</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">    <span class="n">bw</span> <span class="p">=</span> <span class="n">not</span><span class="p">(</span><span class="n">bw</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">    <span class="c">% 形态学开闭运算去噪</span>
+</span></span><span class="line"><span class="cl">    <span class="n">bw</span> <span class="p">=</span> <span class="n">imopen</span><span class="p">(</span><span class="n">bw</span><span class="p">,</span> <span class="n">strel</span><span class="p">(</span><span class="s">&#39;disk&#39;</span><span class="p">,</span> <span class="mi">2</span><span class="p">));</span>
+</span></span><span class="line"><span class="cl">    <span class="n">bw</span> <span class="p">=</span> <span class="n">imclose</span><span class="p">(</span><span class="n">bw</span><span class="p">,</span> <span class="n">strel</span><span class="p">(</span><span class="s">&#39;disk&#39;</span><span class="p">,</span> <span class="mi">3</span><span class="p">));</span>
+</span></span></code></pre></div><p>(下面此行解释来源于deepseek)
+解释:形态学开运算是先腐蚀后膨胀，用于去除小物体和平滑边界，而闭运算是先膨胀后腐蚀，用于填充小孔和连接邻近物体。结构元素的大小（如<code>strel('disk',3)</code>）决定了操作的强度，较大的结构元素会影响更大的区域。</p>
+<p>上面的imfill好处在于单个气泡的填充，忽视了一些图像过滤的方面，形态学开和闭运算则是直接去掉一些大小不满足的气泡，不过,因为先膨胀后腐蚀的原因，需要注意一下图像的精确度，有可能会丢失一些边缘信息</p>
+<h3 id="图像分割image-segmentation">图像分割(image segmentation)
+</h3><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-matlab" data-lang="matlab"><span class="line"><span class="cl"><span class="c">% 设定区域的最小像素数量</span>
+</span></span><span class="line"><span class="cl"><span class="n">minArea</span> <span class="p">=</span> <span class="mi">20</span><span class="p">;</span>  
+</span></span><span class="line"><span class="cl"><span class="c">% 分割图像，其中bw后跟的是你所需要的参数，现在是面积，还有当前所在</span>
+</span></span><span class="line"><span class="cl"><span class="n">stats</span> <span class="p">=</span> <span class="n">regionprops</span><span class="p">(</span><span class="n">bw</span><span class="p">,</span> <span class="s">&#39;Area&#39;</span><span class="p">,</span> <span class="s">&#39;Centroid&#39;</span><span class="p">,</span> <span class="s">&#39;BoundingBox&#39;</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">    <span class="n">areas</span> <span class="p">=</span> <span class="p">[</span><span class="n">stats</span><span class="p">.</span><span class="n">Area</span><span class="p">];</span>
+</span></span><span class="line"><span class="cl">    <span class="n">invalidIdx</span> <span class="p">=</span> <span class="nb">find</span><span class="p">(</span><span class="n">areas</span><span class="o">&lt;</span><span class="n">minArea</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">    <span class="n">stats</span><span class="p">(</span><span class="n">invalidIdx</span><span class="p">)</span> <span class="p">=</span> <span class="p">[];</span>
+</span></span></code></pre></div><p>其中stats返回的是个struck结构，如果你使用<code>stats.Area</code>去获取它的属性，它只会给你第一个的值，但是如果你使用<code>[stats.Area]</code>，则可以获取到完整的所有的struck结构的值，
+然后使用将<code>stats(invalidIdx) = [];</code>删除面积小于20的区域，以前我好像还没啥批量删除的思路，可能还要考虑从后往前删，现在matlab这边貌似可以直接批量把要删的内容块直接设置为空内容就行了</p>
+<p>以下是stats的返回值，其他你所需要的返回值可以参考<a class="link" href="https://ww2.mathworks.cn/help/images/ref/regionprops.html"  target="_blank" rel="noopener"
+    >官网链接</a></p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-matlab" data-lang="matlab"><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="n">stats</span> <span class="p">=</span> 
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">  包含以下字段的 <span class="mi">15</span>×<span class="mi">1</span> <span class="n">struct</span> 数组<span class="p">:</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    <span class="n">Area</span>
+</span></span><span class="line"><span class="cl">    <span class="n">Centroid</span>
+</span></span><span class="line"><span class="cl">    <span class="n">BoundingBox</span>
+</span></span></code></pre></div><p>其中就按照然后是从上到下，从左到右的顺序逐个标记区域，返回的值包含你想要的东西，也就是image(x,y)</p>
+<h2 id="三维可视化图像">三维可视化图像
+</h2><p><img src="/p/matlab%E5%9B%BE%E5%83%8F%E5%8A%A0%E5%B7%A5%E5%A4%84%E7%90%86/mesh-visual.png"
+	width="702"
+	height="628"
+	srcset="/p/matlab%E5%9B%BE%E5%83%8F%E5%8A%A0%E5%B7%A5%E5%A4%84%E7%90%86/mesh-visual_hu_14f23abedea2b52d.png 480w, /p/matlab%E5%9B%BE%E5%83%8F%E5%8A%A0%E5%B7%A5%E5%A4%84%E7%90%86/mesh-visual_hu_ed5db8a34cc47d93.png 1024w"
+	loading="lazy"
+	
+	
+		class="gallery-image" 
+		data-flex-grow="111"
+		data-flex-basis="268px"
+	
+></p>
+<p>就拿上面的那张灰度化后的图举例吧，mesh函数可视化之后会变成上图</p>
+<h3 id="绘制过程">绘制过程
+</h3><p>假设你想绘制的灰度图是上面那张灰度化之后的<code>grayFrame</code>图片，我先说过程再解释原因</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-matlab" data-lang="matlab"><span class="line"><span class="cl"><span class="p">[</span><span class="n">a</span><span class="p">,</span><span class="n">b</span><span class="p">]</span> <span class="p">=</span> <span class="nb">size</span><span class="p">(</span><span class="n">grayFrame</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl"><span class="n">x</span> <span class="p">=</span> <span class="nb">linspace</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="n">b</span><span class="p">,</span><span class="n">b</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl"><span class="n">y</span> <span class="p">=</span> <span class="nb">linspace</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="n">a</span><span class="p">,</span><span class="n">a</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl"><span class="p">[</span><span class="n">X</span><span class="p">,</span><span class="n">Y</span><span class="p">]</span> <span class="p">=</span> <span class="nb">meshgrid</span><span class="p">(</span><span class="n">x</span><span class="p">,</span><span class="n">y</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl"><span class="n">mesh</span><span class="p">(</span><span class="n">X</span><span class="p">,</span><span class="n">Y</span><span class="p">,</span><span class="n">grayFrame</span><span class="p">)</span>
+</span></span></code></pre></div><p>绘制需要三个数据，X，Y，grayFrame,其中grayFrame是个矩阵，$598\cdot670$大小的矩阵，我目前可以构建的是，先框定$598\cdot670$的绘制框架，再增加一个维度的它的像素数据，这就是三维了</p>
+<p>回忆一下plot的绘制，需要x和y的数据要一一对应，这里也一样，由于绘制的是个3D曲面，我们需要掌握到所有$598\cdot670$个点的X,Y,Z的坐标的值，此时<code>meshgrid</code>函数就派上用场了，
+先用<code>x = linspace(1,b,b);</code>获取到1到a的所有整数数列，linspace()函数<a class="link" href="https://ww2.mathworks.cn/help/matlab/ref/double.linspace.html"  target="_blank" rel="noopener"
+    >详解见此</a>，y同理</p>
+<p>其中$a = 598,b = 670$，那么x和y生成出来分别是$x:1\cdot598，y:1\cdot670$两个一维向量，然后交给meshgrid这两个向量就会生成对应的上面需要的X和Y，其中X和Y都是$598\cdot670$大小的</p>
+<p>你可以如此理解这两个矩阵，如果把它可视化在有坐标轴的位置，其中规定(0,0)是图像左上角，670的长是x轴的1到670的位置，然后598是y轴1到598的位置，
+这里也有$598\cdot670$，刚好能放下$598\cdot670$个图像的数据对吧？而且刚好能移植过来，此时这$598\cdot670$所有点的横坐标，全提出来也就是一个$598\cdot670$的矩阵，这就是上面的X，Y也如此，也就是对应着每个图像像素点的Y的值</p>
+<p>再提一嘴，此时X，Y，grayFrame的矩阵大小都是$598\cdot670$，mesh只要读取$598\cdot670$次，每次读取都可以读到一个像素的X值（X中来），Y值（Y中来），以及像素值（grayFrame中来），这样就完成了</p>
+
+</section>
+
+
+    <footer class="article-footer">
+    
+
+    </footer>
+
+
+    
+        <link 
+                rel="stylesheet" 
+                href="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css"integrity="sha384-n8MVd4RsNIU0tAv4ct0nTaAbDJwPJzDEaqSD1odI&#43;WdtXRGWt2kTvGFasHpSy3SV"crossorigin="anonymous"
+            ><script 
+                src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.js"integrity="sha384-XjKyOOlGwcjNTAIQHIpgOno0Hl1YQqzUOEleOLALmuqehneUG&#43;vnGctmUb0ZY0l8"crossorigin="anonymous"
+                defer
+                >
+            </script><script 
+                src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/contrib/auto-render.min.js"integrity="sha384-&#43;VBxd3r6XgURycqtZ117nYw44OOcIax56Z4dCRWbxyPt0Koah1uHoK0o4&#43;/RRE05"crossorigin="anonymous"
+                defer
+                >
+            </script><script>
+    window.addEventListener("DOMContentLoaded", () => {
+	const mainArticleElement = document.querySelector(".main-article");
+        renderMathInElement(mainArticleElement, {
+            delimiters: [
+                { left: "$$", right: "$$", display: true },
+                { left: "$", right: "$", display: false },
+                { left: "\\(", right: "\\)", display: false },
+                { left: "\\[", right: "\\]", display: true }
+            ],
+            ignoredClasses: ["gist"]
+        });})
+</script>
+
+    
+</article>
+
+    
+
+    
+
+     
+    
+        
+    
+
+    <footer class="site-footer">
+    <section class="copyright">
+        &copy; 
+        
+        2025 深蓝之亘
+    </section>
+    
+    <section class="powerby">
+        
+            深蓝之亘的博客网站 https://adeepblue.github.io <br/>
+        使用 <a href="https://gohugo.io/" target="_blank" rel="noopener">Hugo</a> 构建 <br />
+        主题 <b><a href="https://github.com/CaiJimmy/hugo-theme-stack" target="_blank" rel="noopener" data-version="3.30.0">Stack</a></b> 由 <a href="https://jimmycai.com" target="_blank" rel="noopener">Jimmy</a> 设计
+    </section>
+</footer>
+
+
+    
+<div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
+
+    
+    <div class="pswp__bg"></div>
+
+    
+    <div class="pswp__scroll-wrap">
+
+        
+        <div class="pswp__container">
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+        </div>
+
+        
+        <div class="pswp__ui pswp__ui--hidden">
+
+            <div class="pswp__top-bar">
+
+                
+
+                <div class="pswp__counter"></div>
+
+                <button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+
+                <button class="pswp__button pswp__button--share" title="Share"></button>
+
+                <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
+
+                <button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
+
+                
+                
+                <div class="pswp__preloader">
+                    <div class="pswp__preloader__icn">
+                        <div class="pswp__preloader__cut">
+                            <div class="pswp__preloader__donut"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+                <div class="pswp__share-tooltip"></div>
+            </div>
+
+            <button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)">
+            </button>
+
+            <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)">
+            </button>
+
+            <div class="pswp__caption">
+                <div class="pswp__caption__center"></div>
+            </div>
+
+        </div>
+
+    </div>
+
+</div><script 
+                src="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe.min.js"integrity="sha256-ePwmChbbvXbsO02lbM3HoHbSHTHFAeChekF1xKJdleo="crossorigin="anonymous"
+                defer
+                >
+            </script><script 
+                src="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe-ui-default.min.js"integrity="sha256-UKkzOn/w1mBxRmLLGrSeyB4e1xbrp4xylgAWb3M42pU="crossorigin="anonymous"
+                defer
+                >
+            </script><link 
+                rel="stylesheet" 
+                href="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/default-skin/default-skin.min.css"crossorigin="anonymous"
+            ><link 
+                rel="stylesheet" 
+                href="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe.min.css"crossorigin="anonymous"
+            >
+
+            </main>
+        </div>
+        <script 
+                src="https://cdn.jsdelivr.net/npm/node-vibrant@3.1.6/dist/vibrant.min.js"integrity="sha256-awcR2jno4kI5X0zL8ex0vi2z&#43;KMkF24hUW8WePSA9HM="crossorigin="anonymous"
+                
+                >
+            </script><script type="text/javascript" src="/ts/main.1e9a3bafd846ced4c345d084b355fb8c7bae75701c338f8a1f8a82c780137826.js" defer></script>
+<script>
+    (function () {
+        const customFont = document.createElement('link');
+        customFont.href = "https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap";
+
+        customFont.type = "text/css";
+        customFont.rel = "stylesheet";
+
+        document.head.appendChild(customFont);
+    }());
+</script>
+
+<style>
+  body {
+    background: url(https://adeepblue.github.io/background/background.png) no-repeat center top;
+    background-size: cover;
+    background-attachment: fixed;
+  }
+</style>
+    </body>
+</html>

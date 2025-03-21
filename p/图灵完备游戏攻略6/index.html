@@ -1,18 +1,18 @@
 <!DOCTYPE html>
 <html lang="zh-cn" dir="ltr">
     <head><meta charset='utf-8'>
-<meta name='viewport' content='width=device-width, initial-scale=1'><meta name='description' content="图灵完备部分游戏攻略 函数 后面再更新了，目前觉得架构太差后面改了64位了再调了\n机器赛跑 有一说一，改动架构之前，我使用了通过最简陋的代码通过了，后续再改动吧\n">
+<meta name='viewport' content='width=device-width, initial-scale=1'><meta name='description' content="介绍了一些我的后续构建的64bit计算机的一些思路以及是指令集">
 <title>图灵完备游戏攻略6</title>
 
 <link rel='canonical' href='https://adeepblue.github.io/p/%E5%9B%BE%E7%81%B5%E5%AE%8C%E5%A4%87%E6%B8%B8%E6%88%8F%E6%94%BB%E7%95%A56/'>
 
 <link rel="stylesheet" href="/scss/style.min.663803bebe609202d5b39d848f2d7c2dc8b598a2d879efa079fa88893d29c49c.css"><meta property='og:title' content="图灵完备游戏攻略6">
-<meta property='og:description' content="图灵完备部分游戏攻略 函数 后面再更新了，目前觉得架构太差后面改了64位了再调了\n机器赛跑 有一说一，改动架构之前，我使用了通过最简陋的代码通过了，后续再改动吧\n">
+<meta property='og:description' content="介绍了一些我的后续构建的64bit计算机的一些思路以及是指令集">
 <meta property='og:url' content='https://adeepblue.github.io/p/%E5%9B%BE%E7%81%B5%E5%AE%8C%E5%A4%87%E6%B8%B8%E6%88%8F%E6%94%BB%E7%95%A56/'>
 <meta property='og:site_name' content='深蓝之亘的博客'>
 <meta property='og:type' content='article'><meta property='article:section' content='Post' /><meta property='article:published_time' content='2025-02-21T09:15:00&#43;08:00'/><meta property='article:modified_time' content='2025-02-21T09:15:00&#43;08:00'/><meta property='og:image' content='https://adeepblue.github.io/image/Turing-Complete-Logo.png' />
 <meta name="twitter:title" content="图灵完备游戏攻略6">
-<meta name="twitter:description" content="图灵完备部分游戏攻略 函数 后面再更新了，目前觉得架构太差后面改了64位了再调了\n机器赛跑 有一说一，改动架构之前，我使用了通过最简陋的代码通过了，后续再改动吧\n"><meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:description" content="介绍了一些我的后续构建的64bit计算机的一些思路以及是指令集"><meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:image" content='https://adeepblue.github.io/image/Turing-Complete-Logo.png' />
     <link rel="shortcut icon" href="/favicon.ico" />
 
@@ -272,14 +272,16 @@
   <ol>
     <li><a href="#函数">函数</a></li>
     <li><a href="#机器赛跑">机器赛跑</a></li>
-    <li><a href="#我开始搭的64位计算机">我开始搭的64位计算机</a>
-      <ol>
-        <li><a href="#calc-计算模块">calc 计算模块</a></li>
-        <li><a href="#logic-逻辑模块">logic 逻辑模块</a></li>
-        <li><a href="#其他指令及其语法">其他指令及其语法</a></li>
-        <li><a href="#地址表">地址表</a></li>
-      </ol>
-    </li>
+    <li><a href="#我开始搭的64位计算机">我开始搭的64位计算机</a></li>
+  </ol>
+
+  <ol>
+    <li><a href="#calc-计算模块">calc 计算模块</a></li>
+    <li><a href="#机器码指令对照表"><strong>机器码指令对照表</strong></a></li>
+    <li><a href="#logic-逻辑模块">logic 逻辑模块</a></li>
+    <li><a href="#其他指令及其语法">其他指令及其语法</a></li>
+    <li><a href="#地址表">地址表</a></li>
+    <li><a href="#内存控制模式">内存控制模式</a></li>
   </ol>
 </nav>
         </div>
@@ -318,6 +320,10 @@
             <a href="/p/%E5%9B%BE%E7%81%B5%E5%AE%8C%E5%A4%87%E6%B8%B8%E6%88%8F%E6%94%BB%E7%95%A56/">图灵完备游戏攻略6</a>
         </h2>
     
+        
+        <h3 class="article-subtitle">
+            介绍了一些我的后续构建的64bit计算机的一些思路以及是指令集
+        </h3>
         
     </div>
 
@@ -659,7 +665,8 @@
 <p>最后修了几个小bug</p>
 <p>因为noteq忘了现在在上面作为第38位补上</p>
 <hr>
-<p>20250226更新</p>
+<h1 id="新架构">新架构
+</h1><p>20250226更新</p>
 <p>更新一下我的计算机架构</p>
 <p><img src="/p/%E5%9B%BE%E7%81%B5%E5%AE%8C%E5%A4%87%E6%B8%B8%E6%88%8F%E6%94%BB%E7%95%A56/mind-map.png"
 	width="1540"
@@ -677,68 +684,60 @@
 ></p>
 <p>因为get_ram的读写问题，我准备把指令划区了，目前打算1-64划给add等计算指令，填不满的空着，以及64到128的给逻辑指令，129后面则是其他，例如内存的读写指令
 即get_ram以及其他指令等，以下介绍各种模块</p>
-<h3 id="calc-计算模块">calc 计算模块
-</h3><p><strong>语法</strong></p>
+<h2 id="calc-计算模块">calc 计算模块
+</h2><p><strong>语法</strong></p>
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">except not
 </span></span><span class="line"><span class="cl">[command]|[command+im] [reg] [reg] [reg](result)
 </span></span><span class="line"><span class="cl">not 
 </span></span><span class="line"><span class="cl">not|not+im [reg] [reg]
-</span></span></code></pre></div><p><strong>机器码指令对照表</strong></p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">1 add 2 sub 3 times 4 div 5 or 6 nor 7 nand 8 and 9 xor 10 xnor  11 ashr 12 ror 13 rol 14 shr 15 shl 63 not
+</span></span></code></pre></div><h2 id="机器码指令对照表"><strong>机器码指令对照表</strong>
+</h2><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">1 add 2 sub 3 times 4 div 5 or 6 nor 7 nand 8 and 9 xor 10 xnor  11 ashr 12 ror 13 rol 14 shr 15 shl 63 not
+</span></span></code></pre></div><p>语法</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">非not
+</span></span><span class="line"><span class="cl">[command]|[command+im] [reg] [reg] [reg](result)
+</span></span><span class="line"><span class="cl">not
+</span></span><span class="line"><span class="cl">not|im [reg] [reg](result)
 </span></span></code></pre></div><p>特意把not放到末尾是因为它只要占用3个程序位即可,其他在process-center可以一起包起来，因为语法都是一样的</p>
-<h3 id="logic-逻辑模块">logic 逻辑模块
-</h3><p><strong>语法</strong></p>
+<h2 id="logic-逻辑模块">logic 逻辑模块
+</h2><p><strong>语法</strong></p>
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">[command]|[command+im] [reg] [reg] [num](count)
 </span></span></code></pre></div><p><strong>机器码指令对照表</strong></p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">64 eq 65 noteq 66 lessns 67 lesseqns 68 greater_ns 69 greatereq_ns 70 less_s 71 lesseq_s 72 greater_s 73 greatereq_s
-</span></span></code></pre></div><h3 id="其他指令及其语法">其他指令及其语法
-</h3><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">128-mov [reg|io] [reg|io](result)
-</span></span><span class="line"><span class="cl">129-jmp [label]
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">64 eq 65 noteq 66 lessns 67 lesseqns 68 greater_ns 69 greatereq_ns 70 less_s 71 lesseq_s 72 greater_s 73 greatereq_s 74 always 75 notime
+</span></span></code></pre></div><h2 id="其他指令及其语法">其他指令及其语法
+</h2><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">128-mov [reg|io] [reg|io](result)
+</span></span><span class="line"><span class="cl">129-jmp [label](count)
 </span></span><span class="line"><span class="cl">default-add+[im|io] [reg|io] [reg|io] [result-reg](result)
 </span></span><span class="line"><span class="cl">130-pop [reg|io](result)
 </span></span><span class="line"><span class="cl">131-push+[im] [reg|num|io]
 </span></span><span class="line"><span class="cl">132-call [label]
 </span></span><span class="line"><span class="cl">133-ret
 </span></span><span class="line"><span class="cl">134-set [reg](result) [num]
-</span></span><span class="line"><span class="cl">135-write_ram+[index_or_not|1] [reg|io] [reg] #可以是0是默认写入1是加入索引,见36
+</span></span><span class="line"><span class="cl">135-write_ram+[index_or_not|1] [reg|io] [reg](reg的值作为索引) #可以是0是默认写入1是加入索引,见36
 </span></span><span class="line"><span class="cl">136-write_ram+[index_or_not|0] [reg|io] 
 </span></span><span class="line"><span class="cl">137-write_ram+[index_or_not|1] [reg|io] [index]
 </span></span><span class="line"><span class="cl">138-get_ram [reg](index) [reg](result)
 </span></span><span class="line"><span class="cl">139-get_ram+1 [num] [reg](result)
-</span></span></code></pre></div><h3 id="地址表">地址表
-</h3><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">1-16 reg
+</span></span><span class="line"><span class="cl">140-function 
+</span></span><span class="line"><span class="cl">141-end 
+</span></span></code></pre></div><h2 id="地址表">地址表
+</h2><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">1-16 reg
 </span></span><span class="line"><span class="cl">17 count
 </span></span><span class="line"><span class="cl">18 io
-</span></span></code></pre></div><p>停更这个系列，等bug修复，如下</p>
-<p><img src="/p/%E5%9B%BE%E7%81%B5%E5%AE%8C%E5%A4%87%E6%B8%B8%E6%88%8F%E6%94%BB%E7%95%A56/screenshot1.png"
-	width="1920"
-	height="1080"
-	srcset="/p/%E5%9B%BE%E7%81%B5%E5%AE%8C%E5%A4%87%E6%B8%B8%E6%88%8F%E6%94%BB%E7%95%A56/screenshot1_hu_29740b7a1cba0773.png 480w, /p/%E5%9B%BE%E7%81%B5%E5%AE%8C%E5%A4%87%E6%B8%B8%E6%88%8F%E6%94%BB%E7%95%A56/screenshot1_hu_33c00b13d042c2a7.png 1024w"
-	loading="lazy"
-	
-		alt="电路中的S&#43;"
-	
-	
-		class="gallery-image" 
-		data-flex-grow="177"
-		data-flex-basis="426px"
-	
->
-<img src="/p/%E5%9B%BE%E7%81%B5%E5%AE%8C%E5%A4%87%E6%B8%B8%E6%88%8F%E6%94%BB%E7%95%A56/screenshot2.png"
-	width="1920"
-	height="1080"
-	srcset="/p/%E5%9B%BE%E7%81%B5%E5%AE%8C%E5%A4%87%E6%B8%B8%E6%88%8F%E6%94%BB%E7%95%A56/screenshot2_hu_f46a9fedd2f3e06f.png 480w, /p/%E5%9B%BE%E7%81%B5%E5%AE%8C%E5%A4%87%E6%B8%B8%E6%88%8F%E6%94%BB%E7%95%A56/screenshot2_hu_493d00ca954825c9.png 1024w"
-	loading="lazy"
-	
-		alt="S&#43;元件"
-	
-	
-		class="gallery-image" 
-		data-flex-grow="177"
-		data-flex-basis="426px"
-	
-></p>
-
+</span></span></code></pre></div><p>新增关键词
+如果执行遇到function，直接跳到funend(未实现)</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">function
+</span></span><span class="line"><span class="cl">label [function_name]
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">pass
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">return
+</span></span><span class="line"><span class="cl">funend
+</span></span></code></pre></div><p>以及，调试时可以先把调试值改了，然后观察自己需要什么输出，避免迷茫</p>
+<h2 id="内存控制模式">内存控制模式
+</h2><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">1 read
+</span></span><span class="line"><span class="cl">2 write by reg write_reg [reg|io]
+</span></span><span class="line"><span class="cl">3 write by index  write_reg [reg|io] [reg|io]
+</span></span></code></pre></div>
 </section>
 
 
@@ -788,7 +787,7 @@
             
                 
 <article class="has-image">
-    <a href="/p/%E5%9B%BE%E7%81%B5%E5%AE%8C%E5%A4%87%E6%B8%B8%E6%88%8F%E6%94%BB%E7%95%A55/">
+    <a href="/p/%E5%9B%BE%E7%81%B5%E5%AE%8C%E5%A4%87%E6%B8%B8%E6%88%8F%E6%94%BB%E7%95%A57/">
         
         
             <div class="article-image">
@@ -799,7 +798,7 @@
         
 
         <div class="article-details">
-            <h2 class="article-title">图灵完备游戏攻略5</h2>
+            <h2 class="article-title">图灵完备游戏攻略7</h2>
         </div>
     </a>
 </article>
@@ -807,7 +806,7 @@
             
                 
 <article class="has-image">
-    <a href="/p/%E5%9B%BE%E7%81%B5%E5%AE%8C%E5%A4%87%E6%B8%B8%E6%88%8F%E6%94%BB%E7%95%A54/">
+    <a href="/p/%E5%9B%BE%E7%81%B5%E5%AE%8C%E5%A4%87alpha%E7%89%88%E6%94%BB%E7%95%A54/">
         
         
             <div class="article-image">
@@ -818,7 +817,7 @@
         
 
         <div class="article-details">
-            <h2 class="article-title">图灵完备游戏攻略4</h2>
+            <h2 class="article-title">图灵完备alpha版攻略4</h2>
         </div>
     </a>
 </article>
@@ -826,7 +825,7 @@
             
                 
 <article class="has-image">
-    <a href="/p/%E5%9B%BE%E7%81%B5%E5%AE%8C%E5%A4%87%E6%B8%B8%E6%88%8F%E6%94%BB%E7%95%A53/">
+    <a href="/p/%E5%9B%BE%E7%81%B5%E5%AE%8C%E5%A4%87alpha%E7%89%88%E6%94%BB%E7%95%A53/">
         
         
             <div class="article-image">
@@ -837,7 +836,7 @@
         
 
         <div class="article-details">
-            <h2 class="article-title">图灵完备游戏攻略3</h2>
+            <h2 class="article-title">图灵完备alpha版攻略3</h2>
         </div>
     </a>
 </article>
@@ -845,7 +844,7 @@
             
                 
 <article class="has-image">
-    <a href="/p/%E5%9B%BE%E7%81%B5%E5%AE%8C%E5%A4%87%E6%B8%B8%E6%88%8F%E6%94%BB%E7%95%A52/">
+    <a href="/p/%E5%9B%BE%E7%81%B5%E5%AE%8C%E5%A4%87alpha%E7%89%88%E6%94%BB%E7%95%A52/">
         
         
             <div class="article-image">
@@ -856,7 +855,7 @@
         
 
         <div class="article-details">
-            <h2 class="article-title">图灵完备游戏攻略2</h2>
+            <h2 class="article-title">图灵完备alpha版攻略2</h2>
         </div>
     </a>
 </article>
@@ -864,7 +863,7 @@
             
                 
 <article class="has-image">
-    <a href="/p/%E5%9B%BE%E7%81%B5%E5%AE%8C%E5%A4%87%E6%B8%B8%E6%88%8F%E6%94%BB%E7%95%A5/">
+    <a href="/p/%E5%9B%BE%E7%81%B5%E5%AE%8C%E5%A4%87alpha%E7%89%88%E6%94%BB%E7%95%A51/">
         
         
             <div class="article-image">
@@ -875,7 +874,7 @@
         
 
         <div class="article-details">
-            <h2 class="article-title">图灵完备游戏攻略</h2>
+            <h2 class="article-title">图灵完备alpha版攻略1</h2>
         </div>
     </a>
 </article>

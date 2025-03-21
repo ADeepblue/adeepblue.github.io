@@ -7,7 +7,429 @@
         <generator>Hugo -- gohugo.io</generator>
         <language>zh-cn</language>
         <copyright>深蓝之亘</copyright>
-        <lastBuildDate>Mon, 03 Mar 2025 15:32:57 +0800</lastBuildDate><atom:link href="https://adeepblue.github.io/index.xml" rel="self" type="application/rss+xml" /><item>
+        <lastBuildDate>Wed, 19 Mar 2025 23:34:59 +0800</lastBuildDate><atom:link href="https://adeepblue.github.io/index.xml" rel="self" type="application/rss+xml" /><item>
+        <title>Matlab图像加工处理</title>
+        <link>https://adeepblue.github.io/p/matlab%E5%9B%BE%E5%83%8F%E5%8A%A0%E5%B7%A5%E5%A4%84%E7%90%86/</link>
+        <pubDate>Wed, 19 Mar 2025 23:34:59 +0800</pubDate>
+        
+        <guid>https://adeepblue.github.io/p/matlab%E5%9B%BE%E5%83%8F%E5%8A%A0%E5%B7%A5%E5%A4%84%E7%90%86/</guid>
+        <description>&lt;img src="https://adeepblue.github.io/image/MATLAB-Symbol.jpg" alt="Featured image of post Matlab图像加工处理" /&gt;&lt;h2 id=&#34;图像分割&#34;&gt;图像分割
+&lt;/h2&gt;&lt;p&gt;此为应朋友需求写的代码改核心而来，仅供参考
+图源&lt;a class=&#34;link&#34; href=&#34;https://zhuanlan.zhihu.com/p/57405494&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;https://zhuanlan.zhihu.com/p/57405494&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://adeepblue.github.io/p/matlab%E5%9B%BE%E5%83%8F%E5%8A%A0%E5%B7%A5%E5%A4%84%E7%90%86/image.jpg&#34;
+	width=&#34;670&#34;
+	height=&#34;598&#34;
+	srcset=&#34;https://adeepblue.github.io/p/matlab%E5%9B%BE%E5%83%8F%E5%8A%A0%E5%B7%A5%E5%A4%84%E7%90%86/image_hu_a4cb982bcb355db6.jpg 480w, https://adeepblue.github.io/p/matlab%E5%9B%BE%E5%83%8F%E5%8A%A0%E5%B7%A5%E5%A4%84%E7%90%86/image_hu_e2111425689539c5.jpg 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;待处理图片&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;112&#34;
+		data-flex-basis=&#34;268px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;h3 id=&#34;图像读取image-read&#34;&gt;图像读取(Image Read)
+&lt;/h3&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-matlab&#34; data-lang=&#34;matlab&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c&#34;&gt;% 单图片读取方式&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;n&#34;&gt;img&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;imread&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&amp;#34;&lt;span class=&#34;n&#34;&gt;image&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;jpg&lt;/span&gt;&amp;#34;&lt;span class=&#34;p&#34;&gt;);&lt;/span&gt; &lt;span class=&#34;c&#34;&gt;%image.jpg为图源&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c&#34;&gt;% 从视频的某一帧读取，此处注释&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c&#34;&gt;% vid = VideoReader(&amp;#34;video.jpg&amp;#34;)&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c&#34;&gt;% frame = read(vid,index);&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h3 id=&#34;一定的加工process-image&#34;&gt;一定的加工(Process Image)
+&lt;/h3&gt;&lt;h4 id=&#34;加工方案1&#34;&gt;加工方案1
+&lt;/h4&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-matlab&#34; data-lang=&#34;matlab&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c&#34;&gt;% 灰度化&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;n&#34;&gt;grayFrame&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;rgb2gray&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;img&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;);&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c&#34;&gt;% 二值化&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;n&#34;&gt;bw&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;imbinarize&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;grayFrame&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;&amp;#34;&lt;span class=&#34;n&#34;&gt;adaptive&lt;/span&gt;&amp;#34;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;&amp;#34;&lt;span class=&#34;n&#34;&gt;Sensitivity&lt;/span&gt;&amp;#34;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;&lt;span class=&#34;mf&#34;&gt;0.7&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;);&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c&#34;&gt;% 反转颜色&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;n&#34;&gt;bw&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;not&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;bw&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;);&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c&#34;&gt;% 填充孔洞&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;n&#34;&gt;bw&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;imfill&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;bw&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;&amp;#34;&lt;span class=&#34;n&#34;&gt;holes&lt;/span&gt;&amp;#34;&lt;span class=&#34;p&#34;&gt;);&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;这里使用了 &lt;code&gt;imfill&lt;/code&gt;来填充图片内部的孔洞，也可以用imopen和imclose进行处理，但是需要注意精度，其中需要not反转的原因主要是气泡是黑色的，二值化处理之后其他背景部分都是白色的，
+只有气泡是黑色的，黑色对应的是0，不是1，其他地方对应的都是1，如果黑色的反而是缺陷处了，如果使用imfill会直接将黑色气泡的洞填掉，这一点尤为需要注意&lt;/p&gt;
+&lt;h4 id=&#34;加工方案2&#34;&gt;加工方案2
+&lt;/h4&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-matlab&#34; data-lang=&#34;matlab&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;n&#34;&gt;grayFrame&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;rgb2gray&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;img&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;);&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &lt;span class=&#34;n&#34;&gt;bw&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;imbinarize&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;grayFrame&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;&amp;#34;&lt;span class=&#34;n&#34;&gt;adaptive&lt;/span&gt;&amp;#34;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;&amp;#34;&lt;span class=&#34;n&#34;&gt;Sensitivity&lt;/span&gt;&amp;#34;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;&lt;span class=&#34;mf&#34;&gt;0.7&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;);&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &lt;span class=&#34;n&#34;&gt;bw&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;not&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;bw&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;);&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &lt;span class=&#34;c&#34;&gt;% 形态学开闭运算去噪&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &lt;span class=&#34;n&#34;&gt;bw&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;imopen&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;bw&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;strel&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#39;disk&amp;#39;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;mi&#34;&gt;2&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;));&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &lt;span class=&#34;n&#34;&gt;bw&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;imclose&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;bw&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;strel&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#39;disk&amp;#39;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;mi&#34;&gt;3&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;));&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;(下面此行解释来源于deepseek)
+解释:形态学开运算是先腐蚀后膨胀，用于去除小物体和平滑边界，而闭运算是先膨胀后腐蚀，用于填充小孔和连接邻近物体。结构元素的大小（如&lt;code&gt;strel(&#39;disk&#39;,3)&lt;/code&gt;）决定了操作的强度，较大的结构元素会影响更大的区域。&lt;/p&gt;
+&lt;p&gt;上面的imfill好处在于单个气泡的填充，忽视了一些图像过滤的方面，形态学开和闭运算则是直接去掉一些大小不满足的气泡，不过,因为先膨胀后腐蚀的原因，需要注意一下图像的精确度，有可能会丢失一些边缘信息&lt;/p&gt;
+&lt;h3 id=&#34;图像分割image-segmentation&#34;&gt;图像分割(image segmentation)
+&lt;/h3&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-matlab&#34; data-lang=&#34;matlab&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c&#34;&gt;% 设定区域的最小像素数量&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;n&#34;&gt;minArea&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;mi&#34;&gt;20&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt;  
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c&#34;&gt;% 分割图像，其中bw后跟的是你所需要的参数，现在是面积，还有当前所在&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;n&#34;&gt;stats&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;regionprops&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;bw&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;s&#34;&gt;&amp;#39;Area&amp;#39;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;s&#34;&gt;&amp;#39;Centroid&amp;#39;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;s&#34;&gt;&amp;#39;BoundingBox&amp;#39;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;);&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &lt;span class=&#34;n&#34;&gt;areas&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;[&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;stats&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;Area&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;];&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &lt;span class=&#34;n&#34;&gt;invalidIdx&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;nb&#34;&gt;find&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;areas&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;minArea&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;);&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &lt;span class=&#34;n&#34;&gt;stats&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;invalidIdx&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;[];&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;其中stats返回的是个struck结构，如果你使用&lt;code&gt;stats.Area&lt;/code&gt;去获取它的属性，它只会给你第一个的值，但是如果你使用&lt;code&gt;[stats.Area]&lt;/code&gt;，则可以获取到完整的所有的struck结构的值，
+然后使用将&lt;code&gt;stats(invalidIdx) = [];&lt;/code&gt;删除面积小于20的区域，以前我好像还没啥批量删除的思路，可能还要考虑从后往前删，现在matlab这边貌似可以直接批量把要删的内容块直接设置为空内容就行了&lt;/p&gt;
+&lt;p&gt;以下是stats的返回值，其他你所需要的返回值可以参考&lt;a class=&#34;link&#34; href=&#34;https://ww2.mathworks.cn/help/images/ref/regionprops.html&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;官网链接&lt;/a&gt;&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-matlab&#34; data-lang=&#34;matlab&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;n&#34;&gt;stats&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;=&lt;/span&gt; 
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  包含以下字段的 &lt;span class=&#34;mi&#34;&gt;15&lt;/span&gt;×&lt;span class=&#34;mi&#34;&gt;1&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;struct&lt;/span&gt; 数组&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &lt;span class=&#34;n&#34;&gt;Area&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &lt;span class=&#34;n&#34;&gt;Centroid&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &lt;span class=&#34;n&#34;&gt;BoundingBox&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;其中就按照然后是从上到下，从左到右的顺序逐个标记区域，返回的值包含你想要的东西，也就是image(x,y)&lt;/p&gt;
+&lt;h2 id=&#34;三维可视化图像&#34;&gt;三维可视化图像
+&lt;/h2&gt;&lt;p&gt;&lt;img src=&#34;https://adeepblue.github.io/p/matlab%E5%9B%BE%E5%83%8F%E5%8A%A0%E5%B7%A5%E5%A4%84%E7%90%86/mesh-visual.png&#34;
+	width=&#34;702&#34;
+	height=&#34;628&#34;
+	srcset=&#34;https://adeepblue.github.io/p/matlab%E5%9B%BE%E5%83%8F%E5%8A%A0%E5%B7%A5%E5%A4%84%E7%90%86/mesh-visual_hu_14f23abedea2b52d.png 480w, https://adeepblue.github.io/p/matlab%E5%9B%BE%E5%83%8F%E5%8A%A0%E5%B7%A5%E5%A4%84%E7%90%86/mesh-visual_hu_ed5db8a34cc47d93.png 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;111&#34;
+		data-flex-basis=&#34;268px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;p&gt;就拿上面的那张灰度化后的图举例吧，mesh函数可视化之后会变成上图&lt;/p&gt;
+&lt;h3 id=&#34;绘制过程&#34;&gt;绘制过程
+&lt;/h3&gt;&lt;p&gt;假设你想绘制的灰度图是上面那张灰度化之后的&lt;code&gt;grayFrame&lt;/code&gt;图片，我先说过程再解释原因&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-matlab&#34; data-lang=&#34;matlab&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;p&#34;&gt;[&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;a&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;b&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;]&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;nb&#34;&gt;size&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;grayFrame&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;);&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;n&#34;&gt;x&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;nb&#34;&gt;linspace&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;mi&#34;&gt;1&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;b&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;b&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;);&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;n&#34;&gt;y&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;nb&#34;&gt;linspace&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;mi&#34;&gt;1&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;a&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;a&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;);&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;p&#34;&gt;[&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;X&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;Y&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;]&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;nb&#34;&gt;meshgrid&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;x&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;y&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;);&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;n&#34;&gt;mesh&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;X&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;Y&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;grayFrame&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;绘制需要三个数据，X，Y，grayFrame,其中grayFrame是个矩阵，$598\cdot670$大小的矩阵，我目前可以构建的是，先框定$598\cdot670$的绘制框架，再增加一个维度的它的像素数据，这就是三维了&lt;/p&gt;
+&lt;p&gt;回忆一下plot的绘制，需要x和y的数据要一一对应，这里也一样，由于绘制的是个3D曲面，我们需要掌握到所有$598\cdot670$个点的X,Y,Z的坐标的值，此时&lt;code&gt;meshgrid&lt;/code&gt;函数就派上用场了，
+先用&lt;code&gt;x = linspace(1,b,b);&lt;/code&gt;获取到1到a的所有整数数列，linspace()函数&lt;a class=&#34;link&#34; href=&#34;https://ww2.mathworks.cn/help/matlab/ref/double.linspace.html&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;详解见此&lt;/a&gt;，y同理&lt;/p&gt;
+&lt;p&gt;其中$a = 598,b = 670$，那么x和y生成出来分别是$x:1\cdot598，y:1\cdot670$两个一维向量，然后交给meshgrid这两个向量就会生成对应的上面需要的X和Y，其中X和Y都是$598\cdot670$大小的&lt;/p&gt;
+&lt;p&gt;你可以如此理解这两个矩阵，如果把它可视化在有坐标轴的位置，其中规定(0,0)是图像左上角，670的长是x轴的1到670的位置，然后598是y轴1到598的位置，
+这里也有$598\cdot670$，刚好能放下$598\cdot670$个图像的数据对吧？而且刚好能移植过来，此时这$598\cdot670$所有点的横坐标，全提出来也就是一个$598\cdot670$的矩阵，这就是上面的X，Y也如此，也就是对应着每个图像像素点的Y的值&lt;/p&gt;
+&lt;p&gt;再提一嘴，此时X，Y，grayFrame的矩阵大小都是$598\cdot670$，mesh只要读取$598\cdot670$次，每次读取都可以读到一个像素的X值（X中来），Y值（Y中来），以及像素值（grayFrame中来），这样就完成了&lt;/p&gt;
+</description>
+        </item>
+        <item>
+        <title>图灵完备游戏攻略7</title>
+        <link>https://adeepblue.github.io/p/%E5%9B%BE%E7%81%B5%E5%AE%8C%E5%A4%87%E6%B8%B8%E6%88%8F%E6%94%BB%E7%95%A57/</link>
+        <pubDate>Fri, 14 Mar 2025 21:13:36 +0800</pubDate>
+        
+        <guid>https://adeepblue.github.io/p/%E5%9B%BE%E7%81%B5%E5%AE%8C%E5%A4%87%E6%B8%B8%E6%88%8F%E6%94%BB%E7%95%A57/</guid>
+        <description>&lt;img src="https://adeepblue.github.io/image/Turing-Complete-Logo.png" alt="Featured image of post 图灵完备游戏攻略7" /&gt;&lt;h1 id=&#34;完结&#34;&gt;完结
+&lt;/h1&gt;&lt;h2 id=&#34;总览&#34;&gt;总览
+&lt;/h2&gt;&lt;p&gt;耗时未知,我的64bit位的计算机终于是写完了，期间基本没有更新博客内容，指令集可以见&lt;a class=&#34;link&#34; href=&#34;https://adeepblue.github.io/p/%E5%9B%BE%E7%81%B5%E5%AE%8C%E5%A4%87%E6%B8%B8%E6%88%8F%E6%94%BB%E7%95%A56/#%E6%88%91%E5%BC%80%E5%A7%8B%E6%90%AD%E7%9A%8464%E4%BD%8D%E8%AE%A1%E7%AE%97%E6%9C%BA&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;图灵完备游戏攻略6#我开始搭的64位计算机&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://adeepblue.github.io/p/%E5%9B%BE%E7%81%B5%E5%AE%8C%E5%A4%87%E6%B8%B8%E6%88%8F%E6%94%BB%E7%95%A57/64-bit-computer.png&#34;
+	width=&#34;1837&#34;
+	height=&#34;930&#34;
+	srcset=&#34;https://adeepblue.github.io/p/%E5%9B%BE%E7%81%B5%E5%AE%8C%E5%A4%87%E6%B8%B8%E6%88%8F%E6%94%BB%E7%95%A57/64-bit-computer_hu_6c20c773c26624e.png 480w, https://adeepblue.github.io/p/%E5%9B%BE%E7%81%B5%E5%AE%8C%E5%A4%87%E6%B8%B8%E6%88%8F%E6%94%BB%E7%95%A57/64-bit-computer_hu_9a3ea6cdb055eea2.png 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;现在版本v1.0.2&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;197&#34;
+		data-flex-basis=&#34;474px&#34;
+	
+&gt;
+&lt;img src=&#34;https://adeepblue.github.io/p/%E5%9B%BE%E7%81%B5%E5%AE%8C%E5%A4%87%E6%B8%B8%E6%88%8F%E6%94%BB%E7%95%A57/64-bit-computer-early-version.png&#34;
+	width=&#34;1920&#34;
+	height=&#34;1080&#34;
+	srcset=&#34;https://adeepblue.github.io/p/%E5%9B%BE%E7%81%B5%E5%AE%8C%E5%A4%87%E6%B8%B8%E6%88%8F%E6%94%BB%E7%95%A57/64-bit-computer-early-version_hu_799e9c7023a2e918.png 480w, https://adeepblue.github.io/p/%E5%9B%BE%E7%81%B5%E5%AE%8C%E5%A4%87%E6%B8%B8%E6%88%8F%E6%94%BB%E7%95%A57/64-bit-computer-early-version_hu_abc59f90649794e4.png 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;早期版本v1.0.1&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;177&#34;
+		data-flex-basis=&#34;426px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;p&gt;具体功能如图所示，目前没有加硬盘，也有点懒得去加了，重写了一下以前版本的64bit的计算机，以前的规模庞大而且因为没法封装，比较丑陋,最后跟群友交流后得知是因为没双向端子整个元件偷懒了才变成没有双向端子报错，有就不报错，一旦元件拥有双向端子，哪怕没有发挥实际作用，都会迫使游戏把元件拆开计算循环依赖&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://adeepblue.github.io/p/%E5%9B%BE%E7%81%B5%E5%AE%8C%E5%A4%87%E6%B8%B8%E6%88%8F%E6%94%BB%E7%95%A57/tools.png&#34;
+	width=&#34;750&#34;
+	height=&#34;216&#34;
+	srcset=&#34;https://adeepblue.github.io/p/%E5%9B%BE%E7%81%B5%E5%AE%8C%E5%A4%87%E6%B8%B8%E6%88%8F%E6%94%BB%E7%95%A57/tools_hu_40f6916485408ed8.png 480w, https://adeepblue.github.io/p/%E5%9B%BE%E7%81%B5%E5%AE%8C%E5%A4%87%E6%B8%B8%E6%88%8F%E6%94%BB%E7%95%A57/tools_hu_8d2718a9e8e0853b.png 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;双向端子&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;347&#34;
+		data-flex-basis=&#34;833px&#34;
+	
+&gt;
+&lt;img src=&#34;https://adeepblue.github.io/p/%E5%9B%BE%E7%81%B5%E5%AE%8C%E5%A4%87%E6%B8%B8%E6%88%8F%E6%94%BB%E7%95%A57/use-tools.png&#34;
+	width=&#34;1920&#34;
+	height=&#34;1080&#34;
+	srcset=&#34;https://adeepblue.github.io/p/%E5%9B%BE%E7%81%B5%E5%AE%8C%E5%A4%87%E6%B8%B8%E6%88%8F%E6%94%BB%E7%95%A57/use-tools_hu_69df5394467375c8.png 480w, https://adeepblue.github.io/p/%E5%9B%BE%E7%81%B5%E5%AE%8C%E5%A4%87%E6%B8%B8%E6%88%8F%E6%94%BB%E7%95%A57/use-tools_hu_ca0022e0da881abe.png 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;指令解码器内包含了双向端子&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;177&#34;
+		data-flex-basis=&#34;426px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;p&gt;虽然抄作业可能比较难，毕竟对着手搭也挺麻烦的，展示一下我的上面展示过的各个基础元件吧&lt;/p&gt;
+&lt;h2 id=&#34;指令解码器&#34;&gt;指令解码器
+&lt;/h2&gt;&lt;p&gt;&lt;img src=&#34;https://adeepblue.github.io/p/%E5%9B%BE%E7%81%B5%E5%AE%8C%E5%A4%87%E6%B8%B8%E6%88%8F%E6%94%BB%E7%95%A57/process-centerv_1_0_2.png&#34;
+	width=&#34;1070&#34;
+	height=&#34;1012&#34;
+	srcset=&#34;https://adeepblue.github.io/p/%E5%9B%BE%E7%81%B5%E5%AE%8C%E5%A4%87%E6%B8%B8%E6%88%8F%E6%94%BB%E7%95%A57/process-centerv_1_0_2_hu_db42485c646c6a2f.png 480w, https://adeepblue.github.io/p/%E5%9B%BE%E7%81%B5%E5%AE%8C%E5%A4%87%E6%B8%B8%E6%88%8F%E6%94%BB%E7%95%A57/process-centerv_1_0_2_hu_6a62872ce968311a.png 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;现在的指令解码器&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;105&#34;
+		data-flex-basis=&#34;253px&#34;
+	
+&gt;
+&lt;img src=&#34;https://adeepblue.github.io/p/%E5%9B%BE%E7%81%B5%E5%AE%8C%E5%A4%87%E6%B8%B8%E6%88%8F%E6%94%BB%E7%95%A57/precess-centerv1_0_0.png&#34;
+	width=&#34;1028&#34;
+	height=&#34;983&#34;
+	srcset=&#34;https://adeepblue.github.io/p/%E5%9B%BE%E7%81%B5%E5%AE%8C%E5%A4%87%E6%B8%B8%E6%88%8F%E6%94%BB%E7%95%A57/precess-centerv1_0_0_hu_f5f3db3b83bcf459.png 480w, https://adeepblue.github.io/p/%E5%9B%BE%E7%81%B5%E5%AE%8C%E5%A4%87%E6%B8%B8%E6%88%8F%E6%94%BB%E7%95%A57/precess-centerv1_0_0_hu_4a8f8dc5f83632ac.png 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;前一代指令解码器&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;104&#34;
+		data-flex-basis=&#34;250px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;p&gt;汇流的那个元件前一代属实有点不太美观，前一代通过开关的两个端口来控制信号是否流出，不流出变为高阻态不影响其他端口输出，所以用了现在的方案替代，加上前一代基本没有完成复用，有多少指令基本拉多少线&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://adeepblue.github.io/p/%E5%9B%BE%E7%81%B5%E5%AE%8C%E5%A4%87%E6%B8%B8%E6%88%8F%E6%94%BB%E7%95%A57/S_plus.png&#34;
+	width=&#34;1281&#34;
+	height=&#34;725&#34;
+	srcset=&#34;https://adeepblue.github.io/p/%E5%9B%BE%E7%81%B5%E5%AE%8C%E5%A4%87%E6%B8%B8%E6%88%8F%E6%94%BB%E7%95%A57/S_plus_hu_60ee31552afa5204.png 480w, https://adeepblue.github.io/p/%E5%9B%BE%E7%81%B5%E5%AE%8C%E5%A4%87%E6%B8%B8%E6%88%8F%E6%94%BB%E7%95%A57/S_plus_hu_f6eef61a5cdc1438.png 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;现在的汇入方案&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;176&#34;
+		data-flex-basis=&#34;424px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;h2 id=&#34;寄存器组&#34;&gt;寄存器组
+&lt;/h2&gt;&lt;p&gt;&lt;img src=&#34;https://adeepblue.github.io/p/%E5%9B%BE%E7%81%B5%E5%AE%8C%E5%A4%87%E6%B8%B8%E6%88%8F%E6%94%BB%E7%95%A57/16regs.png&#34;
+	width=&#34;929&#34;
+	height=&#34;978&#34;
+	srcset=&#34;https://adeepblue.github.io/p/%E5%9B%BE%E7%81%B5%E5%AE%8C%E5%A4%87%E6%B8%B8%E6%88%8F%E6%94%BB%E7%95%A57/16regs_hu_1ad8030b5eb392bd.png 480w, https://adeepblue.github.io/p/%E5%9B%BE%E7%81%B5%E5%AE%8C%E5%A4%87%E6%B8%B8%E6%88%8F%E6%94%BB%E7%95%A57/16regs_hu_ab3826ce369986f8.png 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;寄存器组&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;94&#34;
+		data-flex-basis=&#34;227px&#34;
+	
+&gt;
+&lt;img src=&#34;https://adeepblue.github.io/p/%E5%9B%BE%E7%81%B5%E5%AE%8C%E5%A4%87%E6%B8%B8%E6%88%8F%E6%94%BB%E7%95%A57/find-address-16regs.png&#34;
+	width=&#34;1361&#34;
+	height=&#34;703&#34;
+	srcset=&#34;https://adeepblue.github.io/p/%E5%9B%BE%E7%81%B5%E5%AE%8C%E5%A4%87%E6%B8%B8%E6%88%8F%E6%94%BB%E7%95%A57/find-address-16regs_hu_a9c587d1cb166e7.png 480w, https://adeepblue.github.io/p/%E5%9B%BE%E7%81%B5%E5%AE%8C%E5%A4%87%E6%B8%B8%E6%88%8F%E6%94%BB%E7%95%A57/find-address-16regs_hu_a8eb6cd4b5c98f0a.png 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;放大后的比较地址单元&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;193&#34;
+		data-flex-basis=&#34;464px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;p&gt;大概如此吧，也挺庞大的&lt;/p&gt;
+&lt;h2 id=&#34;io和计时器控制元件&#34;&gt;IO和计时器控制元件
+&lt;/h2&gt;&lt;p&gt;&lt;img src=&#34;https://adeepblue.github.io/p/%E5%9B%BE%E7%81%B5%E5%AE%8C%E5%A4%87%E6%B8%B8%E6%88%8F%E6%94%BB%E7%95%A57/IO-count-component.png&#34;
+	width=&#34;1235&#34;
+	height=&#34;1080&#34;
+	srcset=&#34;https://adeepblue.github.io/p/%E5%9B%BE%E7%81%B5%E5%AE%8C%E5%A4%87%E6%B8%B8%E6%88%8F%E6%94%BB%E7%95%A57/IO-count-component_hu_83228bb749af1095.png 480w, https://adeepblue.github.io/p/%E5%9B%BE%E7%81%B5%E5%AE%8C%E5%A4%87%E6%B8%B8%E6%88%8F%E6%94%BB%E7%95%A57/IO-count-component_hu_869fac6d2690b3ff.png 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;img.png&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;114&#34;
+		data-flex-basis=&#34;274px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;p&gt;因为元件比较小，所以组件预览处的字也没那么小，能看到一些（主要还是一个个点过去展示太麻烦了），也添加了双向端口避免报错&lt;/p&gt;
+&lt;h2 id=&#34;内存&#34;&gt;内存
+&lt;/h2&gt;&lt;p&gt;&lt;img src=&#34;https://adeepblue.github.io/p/%E5%9B%BE%E7%81%B5%E5%AE%8C%E5%A4%87%E6%B8%B8%E6%88%8F%E6%94%BB%E7%95%A57/ram_v_1_0_2.png&#34;
+	width=&#34;1404&#34;
+	height=&#34;965&#34;
+	srcset=&#34;https://adeepblue.github.io/p/%E5%9B%BE%E7%81%B5%E5%AE%8C%E5%A4%87%E6%B8%B8%E6%88%8F%E6%94%BB%E7%95%A57/ram_v_1_0_2_hu_e3689c8c66232d34.png 480w, https://adeepblue.github.io/p/%E5%9B%BE%E7%81%B5%E5%AE%8C%E5%A4%87%E6%B8%B8%E6%88%8F%E6%94%BB%E7%95%A57/ram_v_1_0_2_hu_fcb2c3e9bec5728f.png 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;145&#34;
+		data-flex-basis=&#34;349px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;p&gt;左上处为控制指令，1为read_ram,2和3都是write_ram，具体区别见指令集&lt;/p&gt;
+&lt;h2 id=&#34;栈&#34;&gt;栈
+&lt;/h2&gt;&lt;p&gt;&lt;img src=&#34;https://adeepblue.github.io/p/%E5%9B%BE%E7%81%B5%E5%AE%8C%E5%A4%87%E6%B8%B8%E6%88%8F%E6%94%BB%E7%95%A57/stackv_1_0_2.png&#34;
+	width=&#34;1337&#34;
+	height=&#34;895&#34;
+	srcset=&#34;https://adeepblue.github.io/p/%E5%9B%BE%E7%81%B5%E5%AE%8C%E5%A4%87%E6%B8%B8%E6%88%8F%E6%94%BB%E7%95%A57/stackv_1_0_2_hu_a886cd2c58483fc6.png 480w, https://adeepblue.github.io/p/%E5%9B%BE%E7%81%B5%E5%AE%8C%E5%A4%87%E6%B8%B8%E6%88%8F%E6%94%BB%E7%95%A57/stackv_1_0_2_hu_87d97089bc3d1ddd.png 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;149&#34;
+		data-flex-basis=&#34;358px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;h2 id=&#34;计算单元&#34;&gt;计算单元
+&lt;/h2&gt;&lt;p&gt;&lt;img src=&#34;https://adeepblue.github.io/p/%E5%9B%BE%E7%81%B5%E5%AE%8C%E5%A4%87%E6%B8%B8%E6%88%8F%E6%94%BB%E7%95%A57/calc_v1_0_2.png&#34;
+	width=&#34;768&#34;
+	height=&#34;1028&#34;
+	srcset=&#34;https://adeepblue.github.io/p/%E5%9B%BE%E7%81%B5%E5%AE%8C%E5%A4%87%E6%B8%B8%E6%88%8F%E6%94%BB%E7%95%A57/calc_v1_0_2_hu_754114f8190732c4.png 480w, https://adeepblue.github.io/p/%E5%9B%BE%E7%81%B5%E5%AE%8C%E5%A4%87%E6%B8%B8%E6%88%8F%E6%94%BB%E7%95%A57/calc_v1_0_2_hu_a1471fa991859e5d.png 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;74&#34;
+		data-flex-basis=&#34;179px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;h2 id=&#34;逻辑单元&#34;&gt;逻辑单元
+&lt;/h2&gt;&lt;p&gt;&lt;img src=&#34;https://adeepblue.github.io/p/%E5%9B%BE%E7%81%B5%E5%AE%8C%E5%A4%87%E6%B8%B8%E6%88%8F%E6%94%BB%E7%95%A57/logic_v_1_0_2.png&#34;
+	width=&#34;866&#34;
+	height=&#34;962&#34;
+	srcset=&#34;https://adeepblue.github.io/p/%E5%9B%BE%E7%81%B5%E5%AE%8C%E5%A4%87%E6%B8%B8%E6%88%8F%E6%94%BB%E7%95%A57/logic_v_1_0_2_hu_8ad58cec85b01052.png 480w, https://adeepblue.github.io/p/%E5%9B%BE%E7%81%B5%E5%AE%8C%E5%A4%87%E6%B8%B8%E6%88%8F%E6%94%BB%E7%95%A57/logic_v_1_0_2_hu_4a81e662c4feb6c5.png 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;90&#34;
+		data-flex-basis=&#34;216px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;h2 id=&#34;最后的杂谈&#34;&gt;最后的杂谈
+&lt;/h2&gt;&lt;p&gt;虽说这玩意怎么说呢，是个游戏，但其实更不像是个游戏，不过至少我在这造轮子然后搭自己的计算机搭的挺开心的，听人说alpha版后面有SSD和乱序发射，干脆先留着等以后玩吧，对比beta版就是好像要吃掉我20%的CPU资源，beta版的低一点&lt;/p&gt;
+</description>
+        </item>
+        <item>
+        <title>图灵完备alpha版攻略4</title>
+        <link>https://adeepblue.github.io/p/%E5%9B%BE%E7%81%B5%E5%AE%8C%E5%A4%87alpha%E7%89%88%E6%94%BB%E7%95%A54/</link>
+        <pubDate>Wed, 05 Mar 2025 22:37:33 +0800</pubDate>
+        
+        <guid>https://adeepblue.github.io/p/%E5%9B%BE%E7%81%B5%E5%AE%8C%E5%A4%87alpha%E7%89%88%E6%94%BB%E7%95%A54/</guid>
+        <description>&lt;img src="https://adeepblue.github.io/image/Turing-Complete-Logo.png" alt="Featured image of post 图灵完备alpha版攻略4" /&gt;&lt;h1 id=&#34;图灵完备alpha篇攻略4&#34;&gt;图灵完备alpha篇攻略4
+&lt;/h1&gt;&lt;h2 id=&#34;counter&#34;&gt;COUNTER
+&lt;/h2&gt;&lt;p&gt;&lt;img src=&#34;https://adeepblue.github.io/p/%E5%9B%BE%E7%81%B5%E5%AE%8C%E5%A4%87alpha%E7%89%88%E6%94%BB%E7%95%A54/counter-solve.png&#34;
+	width=&#34;1243&#34;
+	height=&#34;862&#34;
+	srcset=&#34;https://adeepblue.github.io/p/%E5%9B%BE%E7%81%B5%E5%AE%8C%E5%A4%87alpha%E7%89%88%E6%94%BB%E7%95%A54/counter-solve_hu_95c8c2c808081dd0.png 480w, https://adeepblue.github.io/p/%E5%9B%BE%E7%81%B5%E5%AE%8C%E5%A4%87alpha%E7%89%88%E6%94%BB%E7%95%A54/counter-solve_hu_ef8ffe939986f502.png 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;解法&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;144&#34;
+		data-flex-basis=&#34;346px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;h2 id=&#34;arithmetic-logic-unit-alu-1&#34;&gt;ARITHMETIC LOGIC UNIT (ALU) 1
+&lt;/h2&gt;&lt;p&gt;逻辑单元1&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://adeepblue.github.io/p/%E5%9B%BE%E7%81%B5%E5%AE%8C%E5%A4%87alpha%E7%89%88%E6%94%BB%E7%95%A54/arithmetic-logic-unit-1.png&#34;
+	width=&#34;1479&#34;
+	height=&#34;616&#34;
+	srcset=&#34;https://adeepblue.github.io/p/%E5%9B%BE%E7%81%B5%E5%AE%8C%E5%A4%87alpha%E7%89%88%E6%94%BB%E7%95%A54/arithmetic-logic-unit-1_hu_4711b5c9ccca831a.png 480w, https://adeepblue.github.io/p/%E5%9B%BE%E7%81%B5%E5%AE%8C%E5%A4%87alpha%E7%89%88%E6%94%BB%E7%95%A54/arithmetic-logic-unit-1_hu_6f899156f367259d.png 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;解法&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;240&#34;
+		data-flex-basis=&#34;576px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;h2 id=&#34;registers&#34;&gt;REGISTERS
+&lt;/h2&gt;&lt;p&gt;&lt;img src=&#34;https://adeepblue.github.io/p/%E5%9B%BE%E7%81%B5%E5%AE%8C%E5%A4%87alpha%E7%89%88%E6%94%BB%E7%95%A54/registers-solve.png&#34;
+	width=&#34;1272&#34;
+	height=&#34;1046&#34;
+	srcset=&#34;https://adeepblue.github.io/p/%E5%9B%BE%E7%81%B5%E5%AE%8C%E5%A4%87alpha%E7%89%88%E6%94%BB%E7%95%A54/registers-solve_hu_ce3eed0ccd784dfc.png 480w, https://adeepblue.github.io/p/%E5%9B%BE%E7%81%B5%E5%AE%8C%E5%A4%87alpha%E7%89%88%E6%94%BB%E7%95%A54/registers-solve_hu_e41f635a88201493.png 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;解法&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;121&#34;
+		data-flex-basis=&#34;291px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;h2 id=&#34;arithmetic-logic-unit-alu-2&#34;&gt;ARITHMETIC LOGIC UNIT (ALU) 2
+&lt;/h2&gt;&lt;p&gt;逻辑单元2&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://adeepblue.github.io/p/%E5%9B%BE%E7%81%B5%E5%AE%8C%E5%A4%87alpha%E7%89%88%E6%94%BB%E7%95%A54/arithmetic-logic-unit-2.png&#34;
+	width=&#34;1131&#34;
+	height=&#34;1027&#34;
+	srcset=&#34;https://adeepblue.github.io/p/%E5%9B%BE%E7%81%B5%E5%AE%8C%E5%A4%87alpha%E7%89%88%E6%94%BB%E7%95%A54/arithmetic-logic-unit-2_hu_6ed5b2388b5b831.png 480w, https://adeepblue.github.io/p/%E5%9B%BE%E7%81%B5%E5%AE%8C%E5%A4%87alpha%E7%89%88%E6%94%BB%E7%95%A54/arithmetic-logic-unit-2_hu_52ad4e8b7309c366.png 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;解法&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;110&#34;
+		data-flex-basis=&#34;264px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;h2 id=&#34;instruction-decoder&#34;&gt;INSTRUCTION DECODER
+&lt;/h2&gt;&lt;p&gt;指令解码器&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://adeepblue.github.io/p/%E5%9B%BE%E7%81%B5%E5%AE%8C%E5%A4%87alpha%E7%89%88%E6%94%BB%E7%95%A54/instruction-decoder-solve.png&#34;
+	width=&#34;1186&#34;
+	height=&#34;1078&#34;
+	srcset=&#34;https://adeepblue.github.io/p/%E5%9B%BE%E7%81%B5%E5%AE%8C%E5%A4%87alpha%E7%89%88%E6%94%BB%E7%95%A54/instruction-decoder-solve_hu_2776036198319878.png 480w, https://adeepblue.github.io/p/%E5%9B%BE%E7%81%B5%E5%AE%8C%E5%A4%87alpha%E7%89%88%E6%94%BB%E7%95%A54/instruction-decoder-solve_hu_867d7987081dafd.png 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;解法&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;110&#34;
+		data-flex-basis=&#34;264px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;h1 id=&#34;终止&#34;&gt;终止
+&lt;/h1&gt;&lt;p&gt;&lt;img src=&#34;https://adeepblue.github.io/p/%E5%9B%BE%E7%81%B5%E5%AE%8C%E5%A4%87alpha%E7%89%88%E6%94%BB%E7%95%A54/alpha_end.png&#34;
+	width=&#34;1497&#34;
+	height=&#34;857&#34;
+	srcset=&#34;https://adeepblue.github.io/p/%E5%9B%BE%E7%81%B5%E5%AE%8C%E5%A4%87alpha%E7%89%88%E6%94%BB%E7%95%A54/alpha_end_hu_6a4a05d930b10bd0.png 480w, https://adeepblue.github.io/p/%E5%9B%BE%E7%81%B5%E5%AE%8C%E5%A4%87alpha%E7%89%88%E6%94%BB%E7%95%A54/alpha_end_hu_9f63f78ba19ddea1.png 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;原因&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;174&#34;
+		data-flex-basis=&#34;419px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;p&gt;因为输入输出不支持点击，导致无法区分元件，我决定切回beta版本了，日志更新到这，归档我打算放在同steam游戏了&lt;/p&gt;
+</description>
+        </item>
+        <item>
         <title>图灵完备alpha版攻略3</title>
         <link>https://adeepblue.github.io/p/%E5%9B%BE%E7%81%B5%E5%AE%8C%E5%A4%87alpha%E7%89%88%E6%94%BB%E7%95%A53/</link>
         <pubDate>Mon, 03 Mar 2025 15:32:57 +0800</pubDate>
@@ -50,7 +472,7 @@
 	srcset=&#34;https://adeepblue.github.io/p/%E5%9B%BE%E7%81%B5%E5%AE%8C%E5%A4%87alpha%E7%89%88%E6%94%BB%E7%95%A53/byte-nand-solve_hu_81a3f9adf4bd31b5.png 480w, https://adeepblue.github.io/p/%E5%9B%BE%E7%81%B5%E5%AE%8C%E5%A4%87alpha%E7%89%88%E6%94%BB%E7%95%A53/byte-nand-solve_hu_f259dd35db33f97b.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
-		alt=&#34;img.png&#34;
+		alt=&#34;解法&#34;
 	
 	
 		class=&#34;gallery-image&#34; 
@@ -65,7 +487,7 @@
 	srcset=&#34;https://adeepblue.github.io/p/%E5%9B%BE%E7%81%B5%E5%AE%8C%E5%A4%87alpha%E7%89%88%E6%94%BB%E7%95%A53/byte-not-solve_hu_312cf8d09e86d8e7.png 480w, https://adeepblue.github.io/p/%E5%9B%BE%E7%81%B5%E5%AE%8C%E5%A4%87alpha%E7%89%88%E6%94%BB%E7%95%A53/byte-not-solve_hu_1130b69c2dff65ba.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
-		alt=&#34;img.png&#34;
+		alt=&#34;解法&#34;
 	
 	
 		class=&#34;gallery-image&#34; 
@@ -157,7 +579,7 @@ $$&lt;p&gt;所以，相反数就是nota+1,解法如下&lt;/p&gt;
 	srcset=&#34;https://adeepblue.github.io/p/%E5%9B%BE%E7%81%B5%E5%AE%8C%E5%A4%87alpha%E7%89%88%E6%94%BB%E7%95%A53/the-bus-solve_hu_7a6fc789ca3f8a65.png 480w, https://adeepblue.github.io/p/%E5%9B%BE%E7%81%B5%E5%AE%8C%E5%A4%87alpha%E7%89%88%E6%94%BB%E7%95%A53/the-bus-solve_hu_fcfcfb319af12098.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
-		alt=&#34;img.png&#34;
+		alt=&#34;解法&#34;
 	
 	
 		class=&#34;gallery-image&#34; 
@@ -204,7 +626,7 @@ $$&lt;p&gt;所以，相反数就是nota+1,解法如下&lt;/p&gt;
 	srcset=&#34;https://adeepblue.github.io/p/%E5%9B%BE%E7%81%B5%E5%AE%8C%E5%A4%87alpha%E7%89%88%E6%94%BB%E7%95%A53/saving-bytes-solve_hu_880fbed439ac0df8.png 480w, https://adeepblue.github.io/p/%E5%9B%BE%E7%81%B5%E5%AE%8C%E5%A4%87alpha%E7%89%88%E6%94%BB%E7%95%A53/saving-bytes-solve_hu_3c4425cf47bbe6c3.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
-		alt=&#34;img.png&#34;
+		alt=&#34;解法&#34;
 	
 	
 		class=&#34;gallery-image&#34; 
@@ -220,7 +642,7 @@ $$&lt;p&gt;所以，相反数就是nota+1,解法如下&lt;/p&gt;
 	srcset=&#34;https://adeepblue.github.io/p/%E5%9B%BE%E7%81%B5%E5%AE%8C%E5%A4%87alpha%E7%89%88%E6%94%BB%E7%95%A53/1-bit-decoder-solve_hu_4d3c4d8fddcf7b0d.png 480w, https://adeepblue.github.io/p/%E5%9B%BE%E7%81%B5%E5%AE%8C%E5%A4%87alpha%E7%89%88%E6%94%BB%E7%95%A53/1-bit-decoder-solve_hu_5207665ef9c6ec46.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
-		alt=&#34;img.png&#34;
+		alt=&#34;解法&#34;
 	
 	
 		class=&#34;gallery-image&#34; 
@@ -235,7 +657,7 @@ $$&lt;p&gt;所以，相反数就是nota+1,解法如下&lt;/p&gt;
 	srcset=&#34;https://adeepblue.github.io/p/%E5%9B%BE%E7%81%B5%E5%AE%8C%E5%A4%87alpha%E7%89%88%E6%94%BB%E7%95%A53/2-bit-decoder-solve_hu_f334eb134f16e34.png 480w, https://adeepblue.github.io/p/%E5%9B%BE%E7%81%B5%E5%AE%8C%E5%A4%87alpha%E7%89%88%E6%94%BB%E7%95%A53/2-bit-decoder-solve_hu_22d60d6ba68ba856.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
-		alt=&#34;img.png&#34;
+		alt=&#34;解法&#34;
 	
 	
 		class=&#34;gallery-image&#34; 
@@ -251,15 +673,15 @@ $$&lt;p&gt;所以，相反数就是nota+1,解法如下&lt;/p&gt;
 	srcset=&#34;https://adeepblue.github.io/p/%E5%9B%BE%E7%81%B5%E5%AE%8C%E5%A4%87alpha%E7%89%88%E6%94%BB%E7%95%A53/3-bit-decoder-solve_hu_b919a61f999d1625.png 480w, https://adeepblue.github.io/p/%E5%9B%BE%E7%81%B5%E5%AE%8C%E5%A4%87alpha%E7%89%88%E6%94%BB%E7%95%A53/3-bit-decoder-solve_hu_d110e71da70ab599.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
-		alt=&#34;img.png&#34;
+		alt=&#34;解法&#34;
 	
 	
 		class=&#34;gallery-image&#34; 
 		data-flex-grow=&#34;123&#34;
 		data-flex-basis=&#34;296px&#34;
 	
-&gt;
-同上&lt;/p&gt;
+&gt;&lt;/p&gt;
+&lt;p&gt;同上&lt;/p&gt;
 &lt;h2 id=&#34;letter-box&#34;&gt;LETTER BOX
 &lt;/h2&gt;&lt;p&gt;&lt;img src=&#34;https://adeepblue.github.io/p/%E5%9B%BE%E7%81%B5%E5%AE%8C%E5%A4%87alpha%E7%89%88%E6%94%BB%E7%95%A53/litter-box-solve.png&#34;
 	width=&#34;1727&#34;
@@ -267,7 +689,7 @@ $$&lt;p&gt;所以，相反数就是nota+1,解法如下&lt;/p&gt;
 	srcset=&#34;https://adeepblue.github.io/p/%E5%9B%BE%E7%81%B5%E5%AE%8C%E5%A4%87alpha%E7%89%88%E6%94%BB%E7%95%A53/litter-box-solve_hu_3024bb67e459a321.png 480w, https://adeepblue.github.io/p/%E5%9B%BE%E7%81%B5%E5%AE%8C%E5%A4%87alpha%E7%89%88%E6%94%BB%E7%95%A53/litter-box-solve_hu_f35938dfad03fe7b.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
-		alt=&#34;img.png&#34;
+		alt=&#34;解法&#34;
 	
 	
 		class=&#34;gallery-image&#34; 
@@ -1338,7 +1760,8 @@ $$假定输入数是a,a=(a_7\cdot2^7+...+a_0\cdot2^0),则2a=(a_7\cdot2^8+...+a_0
 &lt;p&gt;最后修了几个小bug&lt;/p&gt;
 &lt;p&gt;因为noteq忘了现在在上面作为第38位补上&lt;/p&gt;
 &lt;hr&gt;
-&lt;p&gt;20250226更新&lt;/p&gt;
+&lt;h1 id=&#34;新架构&#34;&gt;新架构
+&lt;/h1&gt;&lt;p&gt;20250226更新&lt;/p&gt;
 &lt;p&gt;更新一下我的计算机架构&lt;/p&gt;
 &lt;p&gt;&lt;img src=&#34;https://adeepblue.github.io/p/%E5%9B%BE%E7%81%B5%E5%AE%8C%E5%A4%87%E6%B8%B8%E6%88%8F%E6%94%BB%E7%95%A56/mind-map.png&#34;
 	width=&#34;1540&#34;
@@ -1356,68 +1779,60 @@ $$假定输入数是a,a=(a_7\cdot2^7+...+a_0\cdot2^0),则2a=(a_7\cdot2^8+...+a_0
 &gt;&lt;/p&gt;
 &lt;p&gt;因为get_ram的读写问题，我准备把指令划区了，目前打算1-64划给add等计算指令，填不满的空着，以及64到128的给逻辑指令，129后面则是其他，例如内存的读写指令
 即get_ram以及其他指令等，以下介绍各种模块&lt;/p&gt;
-&lt;h3 id=&#34;calc-计算模块&#34;&gt;calc 计算模块
-&lt;/h3&gt;&lt;p&gt;&lt;strong&gt;语法&lt;/strong&gt;&lt;/p&gt;
+&lt;h2 id=&#34;calc-计算模块&#34;&gt;calc 计算模块
+&lt;/h2&gt;&lt;p&gt;&lt;strong&gt;语法&lt;/strong&gt;&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;except not
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;[command]|[command+im] [reg] [reg] [reg](result)
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;not 
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;not|not+im [reg] [reg]
-&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;&lt;strong&gt;机器码指令对照表&lt;/strong&gt;&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;1 add 2 sub 3 times 4 div 5 or 6 nor 7 nand 8 and 9 xor 10 xnor  11 ashr 12 ror 13 rol 14 shr 15 shl 63 not
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id=&#34;机器码指令对照表&#34;&gt;&lt;strong&gt;机器码指令对照表&lt;/strong&gt;
+&lt;/h2&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;1 add 2 sub 3 times 4 div 5 or 6 nor 7 nand 8 and 9 xor 10 xnor  11 ashr 12 ror 13 rol 14 shr 15 shl 63 not
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;语法&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;非not
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;[command]|[command+im] [reg] [reg] [reg](result)
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;not
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;not|im [reg] [reg](result)
 &lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;特意把not放到末尾是因为它只要占用3个程序位即可,其他在process-center可以一起包起来，因为语法都是一样的&lt;/p&gt;
-&lt;h3 id=&#34;logic-逻辑模块&#34;&gt;logic 逻辑模块
-&lt;/h3&gt;&lt;p&gt;&lt;strong&gt;语法&lt;/strong&gt;&lt;/p&gt;
+&lt;h2 id=&#34;logic-逻辑模块&#34;&gt;logic 逻辑模块
+&lt;/h2&gt;&lt;p&gt;&lt;strong&gt;语法&lt;/strong&gt;&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;[command]|[command+im] [reg] [reg] [num](count)
 &lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;&lt;strong&gt;机器码指令对照表&lt;/strong&gt;&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;64 eq 65 noteq 66 lessns 67 lesseqns 68 greater_ns 69 greatereq_ns 70 less_s 71 lesseq_s 72 greater_s 73 greatereq_s
-&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h3 id=&#34;其他指令及其语法&#34;&gt;其他指令及其语法
-&lt;/h3&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;128-mov [reg|io] [reg|io](result)
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;129-jmp [label]
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;64 eq 65 noteq 66 lessns 67 lesseqns 68 greater_ns 69 greatereq_ns 70 less_s 71 lesseq_s 72 greater_s 73 greatereq_s 74 always 75 notime
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id=&#34;其他指令及其语法&#34;&gt;其他指令及其语法
+&lt;/h2&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;128-mov [reg|io] [reg|io](result)
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;129-jmp [label](count)
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;default-add+[im|io] [reg|io] [reg|io] [result-reg](result)
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;130-pop [reg|io](result)
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;131-push+[im] [reg|num|io]
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;132-call [label]
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;133-ret
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;134-set [reg](result) [num]
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;135-write_ram+[index_or_not|1] [reg|io] [reg] #可以是0是默认写入1是加入索引,见36
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;135-write_ram+[index_or_not|1] [reg|io] [reg](reg的值作为索引) #可以是0是默认写入1是加入索引,见36
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;136-write_ram+[index_or_not|0] [reg|io] 
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;137-write_ram+[index_or_not|1] [reg|io] [index]
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;138-get_ram [reg](index) [reg](result)
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;139-get_ram+1 [num] [reg](result)
-&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h3 id=&#34;地址表&#34;&gt;地址表
-&lt;/h3&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;1-16 reg
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;140-function 
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;141-end 
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id=&#34;地址表&#34;&gt;地址表
+&lt;/h2&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;1-16 reg
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;17 count
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;18 io
-&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;停更这个系列，等bug修复，如下&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://adeepblue.github.io/p/%E5%9B%BE%E7%81%B5%E5%AE%8C%E5%A4%87%E6%B8%B8%E6%88%8F%E6%94%BB%E7%95%A56/screenshot1.png&#34;
-	width=&#34;1920&#34;
-	height=&#34;1080&#34;
-	srcset=&#34;https://adeepblue.github.io/p/%E5%9B%BE%E7%81%B5%E5%AE%8C%E5%A4%87%E6%B8%B8%E6%88%8F%E6%94%BB%E7%95%A56/screenshot1_hu_29740b7a1cba0773.png 480w, https://adeepblue.github.io/p/%E5%9B%BE%E7%81%B5%E5%AE%8C%E5%A4%87%E6%B8%B8%E6%88%8F%E6%94%BB%E7%95%A56/screenshot1_hu_33c00b13d042c2a7.png 1024w&#34;
-	loading=&#34;lazy&#34;
-	
-		alt=&#34;电路中的S&amp;#43;&#34;
-	
-	
-		class=&#34;gallery-image&#34; 
-		data-flex-grow=&#34;177&#34;
-		data-flex-basis=&#34;426px&#34;
-	
-&gt;
-&lt;img src=&#34;https://adeepblue.github.io/p/%E5%9B%BE%E7%81%B5%E5%AE%8C%E5%A4%87%E6%B8%B8%E6%88%8F%E6%94%BB%E7%95%A56/screenshot2.png&#34;
-	width=&#34;1920&#34;
-	height=&#34;1080&#34;
-	srcset=&#34;https://adeepblue.github.io/p/%E5%9B%BE%E7%81%B5%E5%AE%8C%E5%A4%87%E6%B8%B8%E6%88%8F%E6%94%BB%E7%95%A56/screenshot2_hu_f46a9fedd2f3e06f.png 480w, https://adeepblue.github.io/p/%E5%9B%BE%E7%81%B5%E5%AE%8C%E5%A4%87%E6%B8%B8%E6%88%8F%E6%94%BB%E7%95%A56/screenshot2_hu_493d00ca954825c9.png 1024w&#34;
-	loading=&#34;lazy&#34;
-	
-		alt=&#34;S&amp;#43;元件&#34;
-	
-	
-		class=&#34;gallery-image&#34; 
-		data-flex-grow=&#34;177&#34;
-		data-flex-basis=&#34;426px&#34;
-	
-&gt;&lt;/p&gt;
-</description>
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;新增关键词
+如果执行遇到function，直接跳到funend(未实现)&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;function
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;label [function_name]
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;pass
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;return
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;funend
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;以及，调试时可以先把调试值改了，然后观察自己需要什么输出，避免迷茫&lt;/p&gt;
+&lt;h2 id=&#34;内存控制模式&#34;&gt;内存控制模式
+&lt;/h2&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;1 read
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;2 write by reg write_reg [reg|io]
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;3 write by index  write_reg [reg|io] [reg|io]
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</description>
         </item>
         <item>
         <title>图灵完备游戏攻略5</title>
@@ -3030,7 +3445,7 @@ OP_read_RAM   空   内存地址读取位 输出位
         <pubDate>Tue, 11 Feb 2025 16:35:53 +0800</pubDate>
         
         <guid>https://adeepblue.github.io/p/python-%E5%BC%80%E4%BA%86%E4%BB%A3%E7%90%86%E4%BD%BF%E7%94%A8requests%E5%BA%93%E6%8A%A5%E9%94%99ssl-error%E8%A7%A3%E5%86%B3%E5%8A%9E%E6%B3%95/</guid>
-        <description>&lt;img src="https://adeepblue.github.io/p/python-%E5%BC%80%E4%BA%86%E4%BB%A3%E7%90%86%E4%BD%BF%E7%94%A8requests%E5%BA%93%E6%8A%A5%E9%94%99ssl-error%E8%A7%A3%E5%86%B3%E5%8A%9E%E6%B3%95/Logo.png" alt="Featured image of post Python 开了代理使用requests库报错SSL Error解决办法" /&gt;&lt;h1 id=&#34;sslerror&#34;&gt;SSLError
+        <description>&lt;img src="https://adeepblue.github.io/p/python-%E5%BC%80%E4%BA%86%E4%BB%A3%E7%90%86%E4%BD%BF%E7%94%A8requests%E5%BA%93%E6%8A%A5%E9%94%99ssl-error%E8%A7%A3%E5%86%B3%E5%8A%9E%E6%B3%95/python-Logo.png" alt="Featured image of post Python 开了代理使用requests库报错SSL Error解决办法" /&gt;&lt;h1 id=&#34;sslerror&#34;&gt;SSLError
 &lt;/h1&gt;&lt;p&gt;这是我曾经新开的一个仓库下的提交的ISSUE，虽然没多少人看过了，&lt;/p&gt;
 &lt;h2 id=&#34;解决办法&#34;&gt;解决办法
 &lt;/h2&gt;&lt;p&gt;&lt;a class=&#34;link&#34; href=&#34;https://github.com/ADeepblue/SSLError_involve/issues/2&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
@@ -3497,6 +3912,11 @@ pip同理,复制下列代码至txt文本后,根据你设置内的代理状态进
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;n&#34;&gt;plt&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;imshow&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;img1&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;# 展示图片&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;n&#34;&gt;plt&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;show&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;()&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id=&#34;其他技巧&#34;&gt;其他技巧
+&lt;/h2&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;#显示中文
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;plt.rcParams[&amp;#34;font.sans-serif&amp;#34;] = [&amp;#39;SimHei&amp;#39;]
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;#显示负号
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;plt.rcParams[&amp;#34;axes.unicode_minus&amp;#34;] = False
 &lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</description>
         </item>
         <item>
