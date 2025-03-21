@@ -6,7 +6,7 @@ image = "/image/Turing-Complete-Logo.png"
 math = true
 description = "更新了图灵完备alpha版的从头到XNOR以及double trouble的关卡解法以及思路"
 categories = [
-    "turing complete alpha"
+    "steamgame"
 ]
 +++
 

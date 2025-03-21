@@ -3,7 +3,7 @@ date = '2025-02-11T16:35:53+08:00'
 draft = false
 title = 'Python 开了代理使用requests库报错SSL Error解决办法'
 description = "曾经python遭遇SSLError的解决办法"
-image = "Logo.png"
+image = "python-Logo.png"
 categories = [
     "python"
 ]

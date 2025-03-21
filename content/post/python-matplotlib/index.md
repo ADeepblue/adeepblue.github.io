@@ -189,3 +189,11 @@ plt.imshow(img1)
 # 展示图片
 plt.show()
 ```
+
+## 其他技巧
+```
+#显示中文
+plt.rcParams["font.sans-serif"] = ['SimHei']
+#显示负号
+plt.rcParams["axes.unicode_minus"] = False
+```

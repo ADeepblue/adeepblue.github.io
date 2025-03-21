@@ -5,7 +5,7 @@ title = '图灵完备alpha版攻略3'
 image = "/image/Turing-Complete-Logo.png"
 math = true
 categories = [
-    "turing complete alpha"
+    "steamgame"
 ]
 +++
 
@@ -18,11 +18,11 @@ categories = [
 
 虽然但是，它好像写错了，标题写着nand门，也就是与非门，要求里也是写着与非门，但中文翻译处写着或门，按与非门来吧，也就是逐位处理，如下
 
-![img.png](byte-nand-solve.png)
+![解法](byte-nand-solve.png)
 
 ## BYTE NOT
 
-![img.png](byte-not-solve.png)
+![解法](byte-not-solve.png)
 
 简单的不解释了
 
@@ -73,7 +73,7 @@ $$
 
 ## THE BUS
 
-![img.png](the-bus-solve.png)
+![解法](the-bus-solve.png)
 
 ## SAVING GRACEFULLY
 
@@ -88,28 +88,29 @@ $$
 
 ## SAVING BYTES
 
-![img.png](saving-bytes-solve.png)
+![解法](saving-bytes-solve.png)
 
 等于是把8个寄存器封装起来，然后最后一位控制是否输出，即，如上
 
 ## 1 BIT DECODER
 
-![img.png](1-bit-decoder-solve.png)
+![解法](1-bit-decoder-solve.png)
 
 ## 2 BIT DECODER
 
-![img.png](2-bit-decoder-solve.png)
+![解法](2-bit-decoder-solve.png)
 
 这里只能是使用and的条件严格限制了
 
 ## 3BIT DECODER
 
-![img.png](3-bit-decoder-solve.png)
+![解法](3-bit-decoder-solve.png)
+
 同上
 
 ## LETTER BOX
 
-![img.png](litter-box-solve.png)
+![解法](litter-box-solve.png)
 
 这个解法比较麻烦，我也摸索了好一会，有之前的版本的，布线布的很乱，也很麻烦，后面想到了4路一位开关，这个可以代替两路开关，不过，四路的地方，得控制输入也得控制输出，
 于是就有了控制电路直接连带输出一起控制了，开关输入的时候控制的写入信号，是否就哪怕开关在也没关系了，打开就是不写入，以及只需要额外增加一个输出的控制开关即可，貌似现在版本的图灵完备默认的输出区分开了0输出和不输出，虽然现实中没区别

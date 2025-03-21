@@ -3,6 +3,7 @@ date = '2025-02-21T09:15:00+08:00'
 draft = false
 title = '图灵完备游戏攻略6'
 image = "/image/Turing-Complete-Logo.png"
+description = "介绍了一些我的后续构建的64bit计算机的一些思路以及是指令集"
 math = true
 categories = [
     "steamgame"
@@ -107,7 +108,7 @@ default-not [reg] [reg]
 因为noteq忘了现在在上面作为第38位补上
 
 ------------
-
+# 新架构
 20250226更新
 
 更新一下我的计算机架构
@@ -117,7 +118,7 @@ default-not [reg] [reg]
 因为get_ram的读写问题，我准备把指令划区了，目前打算1-64划给add等计算指令，填不满的空着，以及64到128的给逻辑指令，129后面则是其他，例如内存的读写指令
 即get_ram以及其他指令等，以下介绍各种模块
 
-### calc 计算模块
+## calc 计算模块
 **语法** 
 ```
 except not
@@ -125,47 +126,74 @@ except not
 not 
 not|not+im [reg] [reg]
 ```
-**机器码指令对照表**
+## **机器码指令对照表**
 ```
 1 add 2 sub 3 times 4 div 5 or 6 nor 7 nand 8 and 9 xor 10 xnor  11 ashr 12 ror 13 rol 14 shr 15 shl 63 not
 ```
+语法
+```
+非not
+[command]|[command+im] [reg] [reg] [reg](result)
+not
+not|im [reg] [reg](result)
+```
+
 特意把not放到末尾是因为它只要占用3个程序位即可,其他在process-center可以一起包起来，因为语法都是一样的
 
-### logic 逻辑模块
+## logic 逻辑模块
 **语法** 
 ```
 [command]|[command+im] [reg] [reg] [num](count)
 ```
 **机器码指令对照表**
 ```
-64 eq 65 noteq 66 lessns 67 lesseqns 68 greater_ns 69 greatereq_ns 70 less_s 71 lesseq_s 72 greater_s 73 greatereq_s
+64 eq 65 noteq 66 lessns 67 lesseqns 68 greater_ns 69 greatereq_ns 70 less_s 71 lesseq_s 72 greater_s 73 greatereq_s 74 always 75 notime
 ```
 
-### 其他指令及其语法
+## 其他指令及其语法
 ```
 128-mov [reg|io] [reg|io](result)
-129-jmp [label]
+129-jmp [label](count)
 default-add+[im|io] [reg|io] [reg|io] [result-reg](result)
 130-pop [reg|io](result)
 131-push+[im] [reg|num|io]
 132-call [label]
 133-ret
 134-set [reg](result) [num]
-135-write_ram+[index_or_not|1] [reg|io] [reg] #可以是0是默认写入1是加入索引,见36
+135-write_ram+[index_or_not|1] [reg|io] [reg](reg的值作为索引) #可以是0是默认写入1是加入索引,见36
 136-write_ram+[index_or_not|0] [reg|io] 
 137-write_ram+[index_or_not|1] [reg|io] [index]
 138-get_ram [reg](index) [reg](result)
 139-get_ram+1 [num] [reg](result)
+140-function 
+141-end 
 ```
-### 地址表
+## 地址表
 ```
 1-16 reg
 17 count
 18 io
 ```
 
-停更这个系列，等bug修复，如下
+新增关键词
+如果执行遇到function，直接跳到funend(未实现)
+```
+function
+label [function_name]
 
-![电路中的S+](screenshot1.png)
-![S+元件](screenshot2.png)
+pass
 
+return
+funend
+```
+
+以及，调试时可以先把调试值改了，然后观察自己需要什么输出，避免迷茫
+
+## 内存控制模式
+```
+1 read
+2 write by reg write_reg [reg|io]
+3 write by index  write_reg [reg|io] [reg|io]
+```
+
+[//]: # (修改索引输出端口后验证到131处)

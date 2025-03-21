@@ -6,7 +6,7 @@ image = "/image/Turing-Complete-Logo.png"
 description = "解决了包含单双数到开关的破关思路"
 math = true
 categories = [
-    "turing complete alpha"
+    "steamgame"
 ]
 +++
 
