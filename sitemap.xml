@@ -3,18 +3,27 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
     <loc>https://adeepblue.github.io/</loc>
-    <lastmod>2025-03-19T23:34:59+08:00</lastmod>
+    <lastmod>2025-03-21T21:09:54+08:00</lastmod>
   </url><url>
     <loc>https://adeepblue.github.io/categories/</loc>
-    <lastmod>2025-03-19T23:34:59+08:00</lastmod>
+    <lastmod>2025-03-21T21:09:54+08:00</lastmod>
+  </url><url>
+    <loc>https://adeepblue.github.io/categories/hilbert/</loc>
+    <lastmod>2025-03-21T21:09:54+08:00</lastmod>
+  </url><url>
+    <loc>https://adeepblue.github.io/post/</loc>
+    <lastmod>2025-03-21T21:09:54+08:00</lastmod>
+  </url><url>
+    <loc>https://adeepblue.github.io/categories/python/</loc>
+    <lastmod>2025-03-21T21:09:54+08:00</lastmod>
+  </url><url>
+    <loc>https://adeepblue.github.io/p/%E5%B8%8C%E5%B0%94%E4%BC%AF%E7%89%B9%E6%9B%B2%E7%BA%BF/</loc>
+    <lastmod>2025-03-21T21:09:54+08:00</lastmod>
   </url><url>
     <loc>https://adeepblue.github.io/categories/matlab/</loc>
     <lastmod>2025-03-19T23:34:59+08:00</lastmod>
   </url><url>
     <loc>https://adeepblue.github.io/p/matlab%E5%9B%BE%E5%83%8F%E5%8A%A0%E5%B7%A5%E5%A4%84%E7%90%86/</loc>
-    <lastmod>2025-03-19T23:34:59+08:00</lastmod>
-  </url><url>
-    <loc>https://adeepblue.github.io/post/</loc>
     <lastmod>2025-03-19T23:34:59+08:00</lastmod>
   </url><url>
     <loc>https://adeepblue.github.io/categories/steamgame/</loc>
@@ -52,9 +61,6 @@
   </url><url>
     <loc>https://adeepblue.github.io/p/%E5%9B%BE%E7%81%B5%E5%AE%8C%E5%A4%87%E6%B8%B8%E6%88%8F%E6%94%BB%E7%95%A52/</loc>
     <lastmod>2025-02-12T15:23:34+08:00</lastmod>
-  </url><url>
-    <loc>https://adeepblue.github.io/categories/python/</loc>
-    <lastmod>2025-02-11T16:35:53+08:00</lastmod>
   </url><url>
     <loc>https://adeepblue.github.io/p/python-%E5%BC%80%E4%BA%86%E4%BB%A3%E7%90%86%E4%BD%BF%E7%94%A8requests%E5%BA%93%E6%8A%A5%E9%94%99ssl-error%E8%A7%A3%E5%86%B3%E5%8A%9E%E6%B3%95/</loc>
     <lastmod>2025-02-11T16:35:53+08:00</lastmod>
