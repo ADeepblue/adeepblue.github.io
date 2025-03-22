@@ -1,0 +1,666 @@
+<!DOCTYPE html>
+<html lang="zh-cn" dir="ltr">
+    <head><meta charset='utf-8'>
+<meta name='viewport' content='width=device-width, initial-scale=1'><meta name='description' content="希尔伯特曲线 python实现 # Hilbert import matplotlib.pyplot as plt import time start_time = time.time() position = [0, 0] #[x,y] up = [0,1] down = [0,-1] left = [-1,0] right = [1,0] plt_data_x = [] plt_data_y = [] def move(list_1,list_2): return_list = [0,0] for index in range(len(list_1)): return_list[index] = list_1[index]+list_2[index] return return_list def draw(position1,position2): xs = [position1[0],position2[0]] ys = [position1[1],position2[1]] # plt.plot(xs,ys) plt_data_x.append(xs) plt_data_y.append(ys) def Hilbert(n,up,right,down,left): global position if n ==1: temp = move(position,up) draw(position,temp) # print(temp) position = temp temp = move(position, right) draw(position,temp) # print(temp) position = temp temp = move(position, down) draw(position,temp) # print(temp) position = temp else: Hilbert(n-1,right,up,left,down) temp = move(position,up) draw(position,temp) # print(temp) position = temp Hilbert(n-1,up,right,down,left) temp = move(position, right) draw(position,temp) # print(temp) position = temp Hilbert(n - 1, up, right, down, left) temp = move(position, down) draw(position,temp) # print(temp) position = temp Hilbert(n - 1, left, down, right, up) Hilbert(10,up,right,down,left) print(&#34;function has been executed,now load the data to the matplotlib&#34;) plt.plot(plt_data_x,plt_data_y) plt.axis(&#34;equal&#34;) end_time = time.time() print(f&#34;run {end_time-start_time}s&#34;) plt.show() 上传上来玩玩,希尔伯特曲线，改动此行Hilbert(10,up,right,down,left)的10即可改变阶数\n">
+<title>希尔伯特曲线</title>
+
+<link rel='canonical' href='https://adeepblue.github.io/p/%E5%B8%8C%E5%B0%94%E4%BC%AF%E7%89%B9%E6%9B%B2%E7%BA%BF/'>
+
+<link rel="stylesheet" href="/scss/style.min.663803bebe609202d5b39d848f2d7c2dc8b598a2d879efa079fa88893d29c49c.css"><meta property='og:title' content="希尔伯特曲线">
+<meta property='og:description' content="希尔伯特曲线 python实现 # Hilbert import matplotlib.pyplot as plt import time start_time = time.time() position = [0, 0] #[x,y] up = [0,1] down = [0,-1] left = [-1,0] right = [1,0] plt_data_x = [] plt_data_y = [] def move(list_1,list_2): return_list = [0,0] for index in range(len(list_1)): return_list[index] = list_1[index]+list_2[index] return return_list def draw(position1,position2): xs = [position1[0],position2[0]] ys = [position1[1],position2[1]] # plt.plot(xs,ys) plt_data_x.append(xs) plt_data_y.append(ys) def Hilbert(n,up,right,down,left): global position if n ==1: temp = move(position,up) draw(position,temp) # print(temp) position = temp temp = move(position, right) draw(position,temp) # print(temp) position = temp temp = move(position, down) draw(position,temp) # print(temp) position = temp else: Hilbert(n-1,right,up,left,down) temp = move(position,up) draw(position,temp) # print(temp) position = temp Hilbert(n-1,up,right,down,left) temp = move(position, right) draw(position,temp) # print(temp) position = temp Hilbert(n - 1, up, right, down, left) temp = move(position, down) draw(position,temp) # print(temp) position = temp Hilbert(n - 1, left, down, right, up) Hilbert(10,up,right,down,left) print(&#34;function has been executed,now load the data to the matplotlib&#34;) plt.plot(plt_data_x,plt_data_y) plt.axis(&#34;equal&#34;) end_time = time.time() print(f&#34;run {end_time-start_time}s&#34;) plt.show() 上传上来玩玩,希尔伯特曲线，改动此行Hilbert(10,up,right,down,left)的10即可改变阶数\n">
+<meta property='og:url' content='https://adeepblue.github.io/p/%E5%B8%8C%E5%B0%94%E4%BC%AF%E7%89%B9%E6%9B%B2%E7%BA%BF/'>
+<meta property='og:site_name' content='深蓝之亘的博客'>
+<meta property='og:type' content='article'><meta property='article:section' content='Post' /><meta property='article:published_time' content='2025-03-21T21:09:54&#43;08:00'/><meta property='article:modified_time' content='2025-03-21T21:09:54&#43;08:00'/><meta property='og:image' content='https://adeepblue.github.io/p/%E5%B8%8C%E5%B0%94%E4%BC%AF%E7%89%B9%E6%9B%B2%E7%BA%BF/Hilbert-3.jpg' />
+<meta name="twitter:title" content="希尔伯特曲线">
+<meta name="twitter:description" content="希尔伯特曲线 python实现 # Hilbert import matplotlib.pyplot as plt import time start_time = time.time() position = [0, 0] #[x,y] up = [0,1] down = [0,-1] left = [-1,0] right = [1,0] plt_data_x = [] plt_data_y = [] def move(list_1,list_2): return_list = [0,0] for index in range(len(list_1)): return_list[index] = list_1[index]+list_2[index] return return_list def draw(position1,position2): xs = [position1[0],position2[0]] ys = [position1[1],position2[1]] # plt.plot(xs,ys) plt_data_x.append(xs) plt_data_y.append(ys) def Hilbert(n,up,right,down,left): global position if n ==1: temp = move(position,up) draw(position,temp) # print(temp) position = temp temp = move(position, right) draw(position,temp) # print(temp) position = temp temp = move(position, down) draw(position,temp) # print(temp) position = temp else: Hilbert(n-1,right,up,left,down) temp = move(position,up) draw(position,temp) # print(temp) position = temp Hilbert(n-1,up,right,down,left) temp = move(position, right) draw(position,temp) # print(temp) position = temp Hilbert(n - 1, up, right, down, left) temp = move(position, down) draw(position,temp) # print(temp) position = temp Hilbert(n - 1, left, down, right, up) Hilbert(10,up,right,down,left) print(&#34;function has been executed,now load the data to the matplotlib&#34;) plt.plot(plt_data_x,plt_data_y) plt.axis(&#34;equal&#34;) end_time = time.time() print(f&#34;run {end_time-start_time}s&#34;) plt.show() 上传上来玩玩,希尔伯特曲线，改动此行Hilbert(10,up,right,down,left)的10即可改变阶数\n"><meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:image" content='https://adeepblue.github.io/p/%E5%B8%8C%E5%B0%94%E4%BC%AF%E7%89%B9%E6%9B%B2%E7%BA%BF/Hilbert-3.jpg' />
+    <link rel="shortcut icon" href="/favicon.ico" />
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0-rc.1/katex.min.css">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0-rc.1/katex.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0-rc.1/contrib/auto-render.min.js"></script>
+
+<script>
+    document.addEventListener("DOMContentLoaded", function() {
+      renderMathInElement(document.body);
+    });
+</script>
+         <link rel="stylesheet" href="/css/custom.css">
+    </head>
+    <body class="
+    article-page
+    ">
+    <script>
+        (function() {
+            const colorSchemeKey = 'StackColorScheme';
+            if(!localStorage.getItem(colorSchemeKey)){
+                localStorage.setItem(colorSchemeKey, "auto");
+            }
+        })();
+    </script><script>
+    (function() {
+        const colorSchemeKey = 'StackColorScheme';
+        const colorSchemeItem = localStorage.getItem(colorSchemeKey);
+        const supportDarkMode = window.matchMedia('(prefers-color-scheme: dark)').matches === true;
+
+        if (colorSchemeItem == 'dark' || colorSchemeItem === 'auto' && supportDarkMode) {
+            
+
+            document.documentElement.dataset.scheme = 'dark';
+        } else {
+            document.documentElement.dataset.scheme = 'light';
+        }
+    })();
+</script>
+<div class="container main-container flex on-phone--column extended"><aside class="sidebar left-sidebar sticky ">
+    <button class="hamburger hamburger--spin" type="button" id="toggle-menu" aria-label="切换菜单">
+        <span class="hamburger-box">
+            <span class="hamburger-inner"></span>
+        </span>
+    </button>
+
+    <header>
+        
+            
+            <figure class="site-avatar">
+                <a href="/">
+                
+                    
+                    
+                    
+                        
+                        <img src="/img/avatar_hu_996f7fae539f5332.png" width="300"
+                            height="300" class="site-logo" loading="lazy" alt="Avatar">
+                    
+                
+                </a>
+                
+            </figure>
+            
+        
+        
+        <div class="site-meta">
+            <h1 class="site-name"><a href="/">深蓝之亘的博客</a></h1>
+            <h2 class="site-description">欢迎来到我的博客网站</h2>
+        </div>
+    </header><ol class="menu-social">
+            
+                <li>
+                    <a 
+                        href='https://github.com/Adeepblue'
+                        target="_blank"
+                        title="GitHub"
+                        rel="me"
+                    >
+                        
+                        
+                            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-brand-github" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+  <path d="M9 19c-4.3 1.4 -4.3 -2.5 -6 -3m12 5v-3.5c0 -1 .1 -1.4 -.5 -2c2.8 -.3 5.5 -1.4 5.5 -6a4.6 4.6 0 0 0 -1.3 -3.2a4.2 4.2 0 0 0 -.1 -3.2s-1.1 -.3 -3.5 1.3a12.3 12.3 0 0 0 -6.2 0c-2.4 -1.6 -3.5 -1.3 -3.5 -1.3a4.2 4.2 0 0 0 -.1 3.2a4.6 4.6 0 0 0 -1.3 3.2c0 4.6 2.7 5.7 5.5 6c-.6 .6 -.6 1.2 -.5 2v3.5" />
+</svg>
+
+
+
+                        
+                    </a>
+                </li>
+            
+                <li>
+                    <a 
+                        href='https://space.bilibili.com/435022639'
+                        target="_blank"
+                        title="Twitter"
+                        rel="me"
+                    >
+                        
+                        
+                            <svg  xmlns="http://www.w3.org/2000/svg"  width="24"  height="24"  viewBox="0 0 24 24"  fill="none"  stroke="currentColor"  stroke-width="2"  stroke-linecap="round"  stroke-linejoin="round"  class="icon icon-tabler icons-tabler-outline icon-tabler-brand-bilibili"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M3 10a4 4 0 0 1 4 -4h10a4 4 0 0 1 4 4v6a4 4 0 0 1 -4 4h-10a4 4 0 0 1 -4 -4v-6z" /><path d="M8 3l2 3" /><path d="M16 3l-2 3" /><path d="M9 13v-2" /><path d="M15 11v2" /></svg>
+                        
+                    </a>
+                </li>
+            
+        </ol><ol class="menu" id="main-menu">
+        
+        
+        
+        <li >
+            <a href='/' >
+                
+                
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-home" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <polyline points="5 12 3 12 12 3 21 12 19 12" />
+  <path d="M5 12v7a2 2 0 0 0 2 2h10a2 2 0 0 0 2 -2v-7" />
+  <path d="M9 21v-6a2 2 0 0 1 2 -2h2a2 2 0 0 1 2 2v6" />
+</svg>
+
+
+
+                
+                <span>主页</span>
+            </a>
+        </li>
+        
+        
+        <li >
+            <a href='/%E6%9B%B4%E6%96%B0%E6%97%A5%E5%BF%97/' >
+                
+                
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-user" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="12" cy="7" r="4" />
+  <path d="M6 21v-2a4 4 0 0 1 4 -4h4a4 4 0 0 1 4 4v2" />
+</svg>
+
+
+
+                
+                <span>更新日志</span>
+            </a>
+        </li>
+        
+        
+        <li >
+            <a href='/archives/' >
+                
+                
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-archive" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <rect x="3" y="4" width="18" height="4" rx="2" />
+  <path d="M5 8v10a2 2 0 0 0 2 2h10a2 2 0 0 0 2 -2v-10" />
+  <line x1="10" y1="12" x2="14" y2="12" />
+</svg>
+
+
+
+                
+                <span>archives</span>
+            </a>
+        </li>
+        
+        
+        <li >
+            <a href='/search/' >
+                
+                
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-search" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="10" cy="10" r="7" />
+  <line x1="21" y1="21" x2="15" y2="15" />
+</svg>
+
+
+
+                
+                <span>搜索</span>
+            </a>
+        </li>
+        
+        
+        <li >
+            <a href='/links/' >
+                
+                
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-link" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <path d="M10 14a3.5 3.5 0 0 0 5 0l4 -4a3.5 3.5 0 0 0 -5 -5l-.5 .5" />
+  <path d="M14 10a3.5 3.5 0 0 0 -5 0l-4 4a3.5 3.5 0 0 0 5 5l.5 -.5" />
+</svg>
+
+
+
+                
+                <span>Links</span>
+            </a>
+        </li>
+        
+        <li class="menu-bottom-section">
+            <ol class="menu">
+
+                
+                    <li id="dark-mode-toggle">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-toggle-left" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="8" cy="12" r="2" />
+  <rect x="2" y="6" width="20" height="12" rx="6" />
+</svg>
+
+
+
+                        <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-toggle-right" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="16" cy="12" r="2" />
+  <rect x="2" y="6" width="20" height="12" rx="6" />
+</svg>
+
+
+
+                        <span>暗色模式</span>
+                    </li>
+                
+            </ol>
+        </li>
+    </ol>
+</aside>
+
+    <aside class="sidebar right-sidebar sticky">
+        
+            
+                
+    <section class="widget archives">
+        <div class="widget-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-hash" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <line x1="5" y1="9" x2="19" y2="9" />
+  <line x1="5" y1="15" x2="19" y2="15" />
+  <line x1="11" y1="4" x2="7" y2="20" />
+  <line x1="17" y1="4" x2="13" y2="20" />
+</svg>
+
+
+
+        </div>
+        <h2 class="widget-title section-title">目录</h2>
+        
+        <div class="widget--toc">
+            <nav id="TableOfContents">
+  <ol>
+    <li><a href="#python实现">python实现</a></li>
+  </ol>
+</nav>
+        </div>
+    </section>
+
+            
+        
+    </aside>
+
+
+            <main class="main full-width">
+    <article class="has-image main-article">
+    <header class="article-header">
+        <div class="article-image">
+            <a href="/p/%E5%B8%8C%E5%B0%94%E4%BC%AF%E7%89%B9%E6%9B%B2%E7%BA%BF/">
+                <img src="/p/%E5%B8%8C%E5%B0%94%E4%BC%AF%E7%89%B9%E6%9B%B2%E7%BA%BF/Hilbert-3_hu_65c2e5a6c93f5635.jpg"
+                        srcset="/p/%E5%B8%8C%E5%B0%94%E4%BC%AF%E7%89%B9%E6%9B%B2%E7%BA%BF/Hilbert-3_hu_65c2e5a6c93f5635.jpg 800w, /p/%E5%B8%8C%E5%B0%94%E4%BC%AF%E7%89%B9%E6%9B%B2%E7%BA%BF/Hilbert-3_hu_35331ade0e19f50e.jpg 1600w"
+                        width="800" 
+                        height="680" 
+                        loading="lazy"
+                        alt="Featured image of post 希尔伯特曲线" />
+                
+            </a>
+        </div>
+    
+
+    <div class="article-details">
+    
+    <header class="article-category">
+        
+            <a href="/categories/hilbert/" >
+                Hilbert
+            </a>
+        
+            <a href="/categories/python/" style="background-color: #2a9d8f; color: #fff;">
+                Python
+            </a>
+        
+    </header>
+    
+
+    <div class="article-title-wrapper">
+        <h2 class="article-title">
+            <a href="/p/%E5%B8%8C%E5%B0%94%E4%BC%AF%E7%89%B9%E6%9B%B2%E7%BA%BF/">希尔伯特曲线</a>
+        </h2>
+    
+        
+    </div>
+
+    
+    
+    
+    
+    <footer class="article-time">
+        
+            <div>
+                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-calendar-time" width="56" height="56" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <path d="M11.795 21h-6.795a2 2 0 0 1 -2 -2v-12a2 2 0 0 1 2 -2h12a2 2 0 0 1 2 2v4" />
+  <circle cx="18" cy="18" r="4" />
+  <path d="M15 3v4" />
+  <path d="M7 3v4" />
+  <path d="M3 11h16" />
+  <path d="M18 16.496v1.504l1 1" />
+</svg>
+                <time class="article-time--published">2025-03-21</time>
+            </div>
+        
+
+        
+    </footer>
+    
+
+    
+</div>
+
+</header>
+
+    <section class="article-content">
+    
+    
+    <h1 id="希尔伯特曲线">希尔伯特曲线
+</h1><h2 id="python实现">python实现
+</h2><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="c1"># Hilbert</span>
+</span></span><span class="line"><span class="cl"><span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
+</span></span><span class="line"><span class="cl"><span class="kn">import</span> <span class="nn">time</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="n">start_time</span> <span class="o">=</span> <span class="n">time</span><span class="o">.</span><span class="n">time</span><span class="p">()</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="n">position</span> <span class="o">=</span> <span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">]</span>
+</span></span><span class="line"><span class="cl"><span class="c1">#[x,y]</span>
+</span></span><span class="line"><span class="cl"><span class="n">up</span> <span class="o">=</span> <span class="p">[</span><span class="mi">0</span><span class="p">,</span><span class="mi">1</span><span class="p">]</span>
+</span></span><span class="line"><span class="cl"><span class="n">down</span> <span class="o">=</span> <span class="p">[</span><span class="mi">0</span><span class="p">,</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span>
+</span></span><span class="line"><span class="cl"><span class="n">left</span> <span class="o">=</span> <span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">,</span><span class="mi">0</span><span class="p">]</span>
+</span></span><span class="line"><span class="cl"><span class="n">right</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span><span class="mi">0</span><span class="p">]</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="n">plt_data_x</span> <span class="o">=</span> <span class="p">[]</span>
+</span></span><span class="line"><span class="cl"><span class="n">plt_data_y</span> <span class="o">=</span> <span class="p">[]</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="k">def</span> <span class="nf">move</span><span class="p">(</span><span class="n">list_1</span><span class="p">,</span><span class="n">list_2</span><span class="p">):</span>
+</span></span><span class="line"><span class="cl">    <span class="n">return_list</span> <span class="o">=</span> <span class="p">[</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">]</span>
+</span></span><span class="line"><span class="cl">    <span class="k">for</span> <span class="n">index</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">list_1</span><span class="p">)):</span>
+</span></span><span class="line"><span class="cl">        <span class="n">return_list</span><span class="p">[</span><span class="n">index</span><span class="p">]</span> <span class="o">=</span> <span class="n">list_1</span><span class="p">[</span><span class="n">index</span><span class="p">]</span><span class="o">+</span><span class="n">list_2</span><span class="p">[</span><span class="n">index</span><span class="p">]</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    <span class="k">return</span> <span class="n">return_list</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="k">def</span> <span class="nf">draw</span><span class="p">(</span><span class="n">position1</span><span class="p">,</span><span class="n">position2</span><span class="p">):</span>
+</span></span><span class="line"><span class="cl">    <span class="n">xs</span> <span class="o">=</span> <span class="p">[</span><span class="n">position1</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span><span class="n">position2</span><span class="p">[</span><span class="mi">0</span><span class="p">]]</span>
+</span></span><span class="line"><span class="cl">    <span class="n">ys</span> <span class="o">=</span> <span class="p">[</span><span class="n">position1</span><span class="p">[</span><span class="mi">1</span><span class="p">],</span><span class="n">position2</span><span class="p">[</span><span class="mi">1</span><span class="p">]]</span>
+</span></span><span class="line"><span class="cl">    <span class="c1"># plt.plot(xs,ys)</span>
+</span></span><span class="line"><span class="cl">    <span class="n">plt_data_x</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">xs</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">    <span class="n">plt_data_y</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">ys</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="k">def</span> <span class="nf">Hilbert</span><span class="p">(</span><span class="n">n</span><span class="p">,</span><span class="n">up</span><span class="p">,</span><span class="n">right</span><span class="p">,</span><span class="n">down</span><span class="p">,</span><span class="n">left</span><span class="p">):</span>
+</span></span><span class="line"><span class="cl">    <span class="k">global</span> <span class="n">position</span>
+</span></span><span class="line"><span class="cl">    <span class="k">if</span> <span class="n">n</span> <span class="o">==</span><span class="mi">1</span><span class="p">:</span>
+</span></span><span class="line"><span class="cl">        <span class="n">temp</span> <span class="o">=</span> <span class="n">move</span><span class="p">(</span><span class="n">position</span><span class="p">,</span><span class="n">up</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">        <span class="n">draw</span><span class="p">(</span><span class="n">position</span><span class="p">,</span><span class="n">temp</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">        <span class="c1"># print(temp)</span>
+</span></span><span class="line"><span class="cl">        <span class="n">position</span> <span class="o">=</span> <span class="n">temp</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">        <span class="n">temp</span> <span class="o">=</span> <span class="n">move</span><span class="p">(</span><span class="n">position</span><span class="p">,</span> <span class="n">right</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">        <span class="n">draw</span><span class="p">(</span><span class="n">position</span><span class="p">,</span><span class="n">temp</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">        <span class="c1"># print(temp)</span>
+</span></span><span class="line"><span class="cl">        <span class="n">position</span> <span class="o">=</span> <span class="n">temp</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">        <span class="n">temp</span> <span class="o">=</span> <span class="n">move</span><span class="p">(</span><span class="n">position</span><span class="p">,</span> <span class="n">down</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">        <span class="n">draw</span><span class="p">(</span><span class="n">position</span><span class="p">,</span><span class="n">temp</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">        <span class="c1"># print(temp)</span>
+</span></span><span class="line"><span class="cl">        <span class="n">position</span> <span class="o">=</span> <span class="n">temp</span>
+</span></span><span class="line"><span class="cl">        
+</span></span><span class="line"><span class="cl">    <span class="k">else</span><span class="p">:</span>
+</span></span><span class="line"><span class="cl">        <span class="n">Hilbert</span><span class="p">(</span><span class="n">n</span><span class="o">-</span><span class="mi">1</span><span class="p">,</span><span class="n">right</span><span class="p">,</span><span class="n">up</span><span class="p">,</span><span class="n">left</span><span class="p">,</span><span class="n">down</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">        <span class="n">temp</span> <span class="o">=</span> <span class="n">move</span><span class="p">(</span><span class="n">position</span><span class="p">,</span><span class="n">up</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">        <span class="n">draw</span><span class="p">(</span><span class="n">position</span><span class="p">,</span><span class="n">temp</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">        <span class="c1"># print(temp)</span>
+</span></span><span class="line"><span class="cl">        <span class="n">position</span> <span class="o">=</span> <span class="n">temp</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">        <span class="n">Hilbert</span><span class="p">(</span><span class="n">n</span><span class="o">-</span><span class="mi">1</span><span class="p">,</span><span class="n">up</span><span class="p">,</span><span class="n">right</span><span class="p">,</span><span class="n">down</span><span class="p">,</span><span class="n">left</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">        <span class="n">temp</span> <span class="o">=</span> <span class="n">move</span><span class="p">(</span><span class="n">position</span><span class="p">,</span> <span class="n">right</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">        <span class="n">draw</span><span class="p">(</span><span class="n">position</span><span class="p">,</span><span class="n">temp</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">        <span class="c1"># print(temp)</span>
+</span></span><span class="line"><span class="cl">        <span class="n">position</span> <span class="o">=</span> <span class="n">temp</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">        <span class="n">Hilbert</span><span class="p">(</span><span class="n">n</span> <span class="o">-</span> <span class="mi">1</span><span class="p">,</span> <span class="n">up</span><span class="p">,</span> <span class="n">right</span><span class="p">,</span> <span class="n">down</span><span class="p">,</span> <span class="n">left</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">        <span class="n">temp</span> <span class="o">=</span> <span class="n">move</span><span class="p">(</span><span class="n">position</span><span class="p">,</span> <span class="n">down</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">        <span class="n">draw</span><span class="p">(</span><span class="n">position</span><span class="p">,</span><span class="n">temp</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">        <span class="c1"># print(temp)</span>
+</span></span><span class="line"><span class="cl">        <span class="n">position</span> <span class="o">=</span> <span class="n">temp</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">        <span class="n">Hilbert</span><span class="p">(</span><span class="n">n</span> <span class="o">-</span> <span class="mi">1</span><span class="p">,</span> <span class="n">left</span><span class="p">,</span> <span class="n">down</span><span class="p">,</span> <span class="n">right</span><span class="p">,</span> <span class="n">up</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="n">Hilbert</span><span class="p">(</span><span class="mi">10</span><span class="p">,</span><span class="n">up</span><span class="p">,</span><span class="n">right</span><span class="p">,</span><span class="n">down</span><span class="p">,</span><span class="n">left</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="nb">print</span><span class="p">(</span><span class="s2">&#34;function has been executed,now load the data to the matplotlib&#34;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">plt_data_x</span><span class="p">,</span><span class="n">plt_data_y</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="n">plt</span><span class="o">.</span><span class="n">axis</span><span class="p">(</span><span class="s2">&#34;equal&#34;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="n">end_time</span> <span class="o">=</span> <span class="n">time</span><span class="o">.</span><span class="n">time</span><span class="p">()</span>
+</span></span><span class="line"><span class="cl"><span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&#34;run </span><span class="si">{</span><span class="n">end_time</span><span class="o">-</span><span class="n">start_time</span><span class="si">}</span><span class="s2">s&#34;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</span></span></code></pre></div><p>上传上来玩玩,希尔伯特曲线，改动此行<code>Hilbert(10,up,right,down,left)</code>的10即可改变阶数</p>
+
+</section>
+
+
+    <footer class="article-footer">
+    
+
+    </footer>
+
+
+    
+        <link 
+                rel="stylesheet" 
+                href="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css"integrity="sha384-n8MVd4RsNIU0tAv4ct0nTaAbDJwPJzDEaqSD1odI&#43;WdtXRGWt2kTvGFasHpSy3SV"crossorigin="anonymous"
+            ><script 
+                src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.js"integrity="sha384-XjKyOOlGwcjNTAIQHIpgOno0Hl1YQqzUOEleOLALmuqehneUG&#43;vnGctmUb0ZY0l8"crossorigin="anonymous"
+                defer
+                >
+            </script><script 
+                src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/contrib/auto-render.min.js"integrity="sha384-&#43;VBxd3r6XgURycqtZ117nYw44OOcIax56Z4dCRWbxyPt0Koah1uHoK0o4&#43;/RRE05"crossorigin="anonymous"
+                defer
+                >
+            </script><script>
+    window.addEventListener("DOMContentLoaded", () => {
+	const mainArticleElement = document.querySelector(".main-article");
+        renderMathInElement(mainArticleElement, {
+            delimiters: [
+                { left: "$$", right: "$$", display: true },
+                { left: "$", right: "$", display: false },
+                { left: "\\(", right: "\\)", display: false },
+                { left: "\\[", right: "\\]", display: true }
+            ],
+            ignoredClasses: ["gist"]
+        });})
+</script>
+
+    
+</article>
+
+    
+
+    
+
+<aside class="related-content--wrapper">
+    <h2 class="section-title">相关文章</h2>
+    <div class="related-content">
+        <div class="flex article-list--tile">
+            
+                
+<article class="has-image">
+    <a href="/p/python-%E5%BC%80%E4%BA%86%E4%BB%A3%E7%90%86%E4%BD%BF%E7%94%A8requests%E5%BA%93%E6%8A%A5%E9%94%99ssl-error%E8%A7%A3%E5%86%B3%E5%8A%9E%E6%B3%95/">
+        
+        
+            <div class="article-image">
+                <img src="/p/python-%E5%BC%80%E4%BA%86%E4%BB%A3%E7%90%86%E4%BD%BF%E7%94%A8requests%E5%BA%93%E6%8A%A5%E9%94%99ssl-error%E8%A7%A3%E5%86%B3%E5%8A%9E%E6%B3%95/python-Logo.3329eb5754e403ba0a6a3c819c9252fe_hu_12f88b7f14b6913a.png" 
+                        width="250" 
+                        height="150" 
+                        loading="lazy"
+                        alt="Featured image of post Python 开了代理使用requests库报错SSL Error解决办法"
+                        
+                        data-hash="md5-MynrV1TkA7oKajyBnJJS/g==">
+                
+            </div>
+        
+
+        <div class="article-details">
+            <h2 class="article-title">Python 开了代理使用requests库报错SSL Error解决办法</h2>
+        </div>
+    </a>
+</article>
+
+            
+                
+<article class="has-image">
+    <a href="/p/python-matplotlib%E7%BB%98%E5%9B%BE%E5%BA%93/">
+        
+        
+            <div class="article-image">
+                <img src="/p/python-matplotlib%E7%BB%98%E5%9B%BE%E5%BA%93/matplotlib.ec18ea9f106970da41f5d895a5124cb8_hu_8d45ec0fe1f0babf.png" 
+                        width="250" 
+                        height="150" 
+                        loading="lazy"
+                        alt="Featured image of post Python Matplotlib绘图库"
+                        
+                        data-hash="md5-7BjqnxBpcNpB9diVpRJMuA==">
+                
+            </div>
+        
+
+        <div class="article-details">
+            <h2 class="article-title">Python Matplotlib绘图库</h2>
+        </div>
+    </a>
+</article>
+
+            
+        </div>
+    </div>
+</aside>
+
+     
+    
+        
+    
+
+    <footer class="site-footer">
+    <section class="copyright">
+        &copy; 
+        
+        2025 深蓝之亘
+    </section>
+    
+    <section class="powerby">
+        
+            深蓝之亘的博客网站 https://adeepblue.github.io <br/>
+        使用 <a href="https://gohugo.io/" target="_blank" rel="noopener">Hugo</a> 构建 <br />
+        主题 <b><a href="https://github.com/CaiJimmy/hugo-theme-stack" target="_blank" rel="noopener" data-version="3.30.0">Stack</a></b> 由 <a href="https://jimmycai.com" target="_blank" rel="noopener">Jimmy</a> 设计
+    </section>
+</footer>
+
+
+    
+<div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
+
+    
+    <div class="pswp__bg"></div>
+
+    
+    <div class="pswp__scroll-wrap">
+
+        
+        <div class="pswp__container">
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+        </div>
+
+        
+        <div class="pswp__ui pswp__ui--hidden">
+
+            <div class="pswp__top-bar">
+
+                
+
+                <div class="pswp__counter"></div>
+
+                <button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+
+                <button class="pswp__button pswp__button--share" title="Share"></button>
+
+                <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
+
+                <button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
+
+                
+                
+                <div class="pswp__preloader">
+                    <div class="pswp__preloader__icn">
+                        <div class="pswp__preloader__cut">
+                            <div class="pswp__preloader__donut"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+                <div class="pswp__share-tooltip"></div>
+            </div>
+
+            <button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)">
+            </button>
+
+            <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)">
+            </button>
+
+            <div class="pswp__caption">
+                <div class="pswp__caption__center"></div>
+            </div>
+
+        </div>
+
+    </div>
+
+</div><script 
+                src="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe.min.js"integrity="sha256-ePwmChbbvXbsO02lbM3HoHbSHTHFAeChekF1xKJdleo="crossorigin="anonymous"
+                defer
+                >
+            </script><script 
+                src="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe-ui-default.min.js"integrity="sha256-UKkzOn/w1mBxRmLLGrSeyB4e1xbrp4xylgAWb3M42pU="crossorigin="anonymous"
+                defer
+                >
+            </script><link 
+                rel="stylesheet" 
+                href="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/default-skin/default-skin.min.css"crossorigin="anonymous"
+            ><link 
+                rel="stylesheet" 
+                href="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe.min.css"crossorigin="anonymous"
+            >
+
+            </main>
+        </div>
+        <script 
+                src="https://cdn.jsdelivr.net/npm/node-vibrant@3.1.6/dist/vibrant.min.js"integrity="sha256-awcR2jno4kI5X0zL8ex0vi2z&#43;KMkF24hUW8WePSA9HM="crossorigin="anonymous"
+                
+                >
+            </script><script type="text/javascript" src="/ts/main.1e9a3bafd846ced4c345d084b355fb8c7bae75701c338f8a1f8a82c780137826.js" defer></script>
+<script>
+    (function () {
+        const customFont = document.createElement('link');
+        customFont.href = "https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap";
+
+        customFont.type = "text/css";
+        customFont.rel = "stylesheet";
+
+        document.head.appendChild(customFont);
+    }());
+</script>
+
+<style>
+  body {
+    background: url(https://adeepblue.github.io/background/background.png) no-repeat center top;
+    background-size: cover;
+    background-attachment: fixed;
+  }
+</style>
+    </body>
+</html>
