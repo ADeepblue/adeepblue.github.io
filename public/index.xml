@@ -7,7 +7,43 @@
         <generator>Hugo -- gohugo.io</generator>
         <language>zh-cn</language>
         <copyright>深蓝之亘</copyright>
-        <lastBuildDate>Fri, 21 Mar 2025 21:09:54 +0800</lastBuildDate><atom:link href="https://adeepblue.github.io/index.xml" rel="self" type="application/rss+xml" /><item>
+        <lastBuildDate>Wed, 26 Mar 2025 10:36:49 +0800</lastBuildDate><atom:link href="https://adeepblue.github.io/index.xml" rel="self" type="application/rss+xml" /><item>
+        <title>Minimind调试记录</title>
+        <link>https://adeepblue.github.io/p/minimind%E8%B0%83%E8%AF%95%E8%AE%B0%E5%BD%95/</link>
+        <pubDate>Wed, 26 Mar 2025 10:36:49 +0800</pubDate>
+        
+        <guid>https://adeepblue.github.io/p/minimind%E8%B0%83%E8%AF%95%E8%AE%B0%E5%BD%95/</guid>
+        <description>&lt;img src="https://adeepblue.github.io/p/minimind%E8%B0%83%E8%AF%95%E8%AE%B0%E5%BD%95/logo.png" alt="Featured image of post Minimind调试记录" /&gt;&lt;h1 id=&#34;调试记录&#34;&gt;调试记录
+&lt;/h1&gt;&lt;p&gt;我pip install -r requirements.txt不是很顺利&lt;/p&gt;
+&lt;p&gt;创建了新的虚拟环境，报错：缺少Microsoft C++ Build Tools构建工具，报错包为ujson==5.1.0，先将其从requirements.txt将其移除，其他都是通用可以安装的，
+&lt;strong&gt;实际好像是选择优先级的问题，可以优先下载tar.gz压缩包版本的，然后在本地构建，而不是直接用whl轮子构建，&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;然后我选择从清华源去安装ujson的whl文件，不过在那看到了让我疑惑的东西，后面才反应过来，是cpython和PyPy的区别,因为没有适配311的ujson，我干脆下了个
+ujson-5.10.0-cp311-cp311-win_amd64.whl，5.10.0的版本的，成功安装完毕&lt;/p&gt;
+&lt;p&gt;由于现在安装的torch是没有任何标注的，也就是基于CPU运行的，去&lt;a class=&#34;link&#34; href=&#34;https://download.pytorch.org/whl/torch_stable.html&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;下载链接&lt;/a&gt;找一下GPU版本的
+我下的是torchvision-0.17.2+cu118-cp311-cp311-win_amd64.whl，然后版本我选择跟requirements.txt中的保持一致，使用pip list 找到torchvision对应的版本号对上即可&lt;/p&gt;
+&lt;p&gt;解释一下，cu118是指，cuda必须要大于11.8版本的，这个在N卡控制面板-&amp;gt;帮助-&amp;gt;系统信息处  可以找到&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://adeepblue.github.io/p/minimind%E8%B0%83%E8%AF%95%E8%AE%B0%E5%BD%95/system-nv-directX-version.png&#34;
+	width=&#34;740&#34;
+	height=&#34;652&#34;
+	srcset=&#34;https://adeepblue.github.io/p/minimind%E8%B0%83%E8%AF%95%E8%AE%B0%E5%BD%95/system-nv-directX-version_hu_edafbebddb735dd4.png 480w, https://adeepblue.github.io/p/minimind%E8%B0%83%E8%AF%95%E8%AE%B0%E5%BD%95/system-nv-directX-version_hu_1a09eb211cef233a.png 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;我的是12.0版本，所以118可用&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;113&#34;
+		data-flex-basis=&#34;272px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;p&gt;torch同理，也需要cuda版本的，
+&lt;span style=&#34;color:red; font-size:25px&#34;&gt;注意!!!清华源并没有提供GPU版本的，如果你的全局设置是使用清华源来pip的，注意一下所下的GPU版本，&lt;/span&gt;国内镜像源似乎上交大的可用，此处附上&lt;a class=&#34;link&#34; href=&#34;https://mirror.sjtu.edu.cn/pytorch-wheels/cu118/?mirror_intel_list&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;链接&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;看了一眼作者的配置，128G的内存+3090*8，实在没绷住，有机会的话看看云端训练吧，上述为本地Windows系统的验证过程&lt;/p&gt;
+</description>
+        </item>
+        <item>
         <title>希尔伯特曲线</title>
         <link>https://adeepblue.github.io/p/%E5%B8%8C%E5%B0%94%E4%BC%AF%E7%89%B9%E6%9B%B2%E7%BA%BF/</link>
         <pubDate>Fri, 21 Mar 2025 21:09:54 +0800</pubDate>
@@ -5298,7 +5334,7 @@ $$\frac {1} {2}$$&lt;p&gt;还有，切记，在代码段前如果放文字会被
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;REM 删除配置
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;git config --global --unset http.https://github.com.proxy
 &lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;以上，调试完毕&lt;/p&gt;
-&lt;p&gt;如果走SSH协议的话，上面add origin或者是set-url origin后面的命令得修改成 &lt;a class=&#34;link&#34; href=&#34;mailto:git@github.com&#34; &gt;git@github.com&lt;/a&gt;:Adeepblue/adeepblue.github.io，其中要确保SSH已经验证过了，&lt;/p&gt;
+&lt;p&gt;如果走SSH协议的话，上面add origin或者是set-url origin后面的命令得修改成 &lt;code&gt;git@github.com:Adeepblue/adeepblue.github.io&lt;/code&gt;，其中要确保SSH已经验证过了，&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;git add -f public
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;git commit -m &lt;span class=&#34;s2&#34;&gt;&amp;#34;Publish site&amp;#34;&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;git subtree push --prefix public origin gh-pages
@@ -5320,9 +5356,9 @@ $$\frac {1} {2}$$&lt;p&gt;还有，切记，在代码段前如果放文字会被
 &lt;h2 id=&#34;仓库迁移&#34;&gt;仓库迁移
 &lt;/h2&gt;&lt;p&gt;最近自动化上传的时候遇到了这么个提示，也就是上面配置这边原始的命令那，git得补上了，我也不知道为什么，至少它现在提示了&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;remote: This repository moved. Please use the new location:        
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;remote:   git@github.com:ADeepblue/adeepblue.github.io.git   
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;remote:   git@github.com:ADeepblue/adeepblue.github.git   
 &lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;然后我现在就用一行命令移动过去了&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;git remote set-url origin git@github.com:ADeepblue/adeepblue.github.io.git
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;git remote set-url origin git@github.com:ADeepblue/adeepblue.github.git
 &lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id=&#34;gitignore文件&#34;&gt;.gitignore文件
 &lt;/h2&gt;&lt;p&gt;直接写入需要忽视的文件即可，可以让git add . 时跳过这些文件以回车分隔即可&lt;/p&gt;
 &lt;h2 id=&#34;自动化部署&#34;&gt;自动化部署
@@ -5393,6 +5429,9 @@ $$\frac {1} {2}$$&lt;p&gt;还有，切记，在代码段前如果放文字会被
         <guid>https://adeepblue.github.io/%E6%9B%B4%E6%96%B0%E6%97%A5%E5%BF%97/</guid>
         <description>&lt;h1 id=&#34;更新记录&#34;&gt;更新记录
 &lt;/h1&gt;&lt;h2 id=&#34;---------------2025-03-21更新---------------------&#34;&gt;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;2025-03-21更新&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;
+&lt;/h2&gt;&lt;p&gt;更新了git的一些理解&lt;a class=&#34;link&#34; href=&#34;https://adeepblue.github.io/p/git%E5%88%9D%E5%A7%8B%E5%8C%96%E8%AE%B0%E5%BD%95/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;网页链接&lt;/a&gt;，以及希尔伯特曲线&lt;/p&gt;
+&lt;h2 id=&#34;---------------2025-03-21更新----------------------1&#34;&gt;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;2025-03-21更新&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;
 &lt;/h2&gt;&lt;p&gt;更新了matlab图像加工处理，图灵完备游戏攻略7，完成了手搓的64bit计算机的展示&lt;/p&gt;
 &lt;h2 id=&#34;---------------2025-03-3更新---------------------&#34;&gt;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;2025-03-3更新&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;
 &lt;/h2&gt;&lt;p&gt;更新了图灵完备alpha第二篇攻略&lt;/p&gt;

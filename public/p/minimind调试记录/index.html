@@ -1,18 +1,19 @@
 <!DOCTYPE html>
 <html lang="zh-cn" dir="ltr">
     <head><meta charset='utf-8'>
-<meta name='viewport' content='width=device-width, initial-scale=1'><meta name='description' content="更新记录 &mdash;&mdash;&mdash;&mdash;&mdash;2025-03-21更新&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash; 更新了git的一些理解网页链接，以及希尔伯特曲线\n&mdash;&mdash;&mdash;&mdash;&mdash;2025-03-21更新&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash; 更新了matlab图像加工处理，图灵完备游戏攻略7，完成了手搓的64bit计算机的展示\n&mdash;&mdash;&mdash;&mdash;&mdash;2025-03-3更新&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash; 更新了图灵完备alpha第二篇攻略\n">
-<title>更新日志</title>
+<meta name='viewport' content='width=device-width, initial-scale=1'><meta name='description' content="调试记录 我pip install -r requirements.txt不是很顺利\n创建了新的虚拟环境，报错：缺少Microsoft C++ Build Tools构建工具，报错包为ujson==5.1.0，先将其从requirements.txt将其移除，其他都是通用可以安装的， 实际好像是选择优先级的问题，可以优先下载tar.gz压缩包版本的，然后在本地构建，而不是直接用whl轮子构建，\n">
+<title>Minimind调试记录</title>
 
-<link rel='canonical' href='https://adeepblue.github.io/%E6%9B%B4%E6%96%B0%E6%97%A5%E5%BF%97/'>
+<link rel='canonical' href='https://adeepblue.github.io/p/minimind%E8%B0%83%E8%AF%95%E8%AE%B0%E5%BD%95/'>
 
-<link rel="stylesheet" href="/scss/style.min.663803bebe609202d5b39d848f2d7c2dc8b598a2d879efa079fa88893d29c49c.css"><meta property='og:title' content="更新日志">
-<meta property='og:description' content="更新记录 &mdash;&mdash;&mdash;&mdash;&mdash;2025-03-21更新&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash; 更新了git的一些理解网页链接，以及希尔伯特曲线\n&mdash;&mdash;&mdash;&mdash;&mdash;2025-03-21更新&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash; 更新了matlab图像加工处理，图灵完备游戏攻略7，完成了手搓的64bit计算机的展示\n&mdash;&mdash;&mdash;&mdash;&mdash;2025-03-3更新&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash; 更新了图灵完备alpha第二篇攻略\n">
-<meta property='og:url' content='https://adeepblue.github.io/%E6%9B%B4%E6%96%B0%E6%97%A5%E5%BF%97/'>
+<link rel="stylesheet" href="/scss/style.min.663803bebe609202d5b39d848f2d7c2dc8b598a2d879efa079fa88893d29c49c.css"><meta property='og:title' content="Minimind调试记录">
+<meta property='og:description' content="调试记录 我pip install -r requirements.txt不是很顺利\n创建了新的虚拟环境，报错：缺少Microsoft C++ Build Tools构建工具，报错包为ujson==5.1.0，先将其从requirements.txt将其移除，其他都是通用可以安装的， 实际好像是选择优先级的问题，可以优先下载tar.gz压缩包版本的，然后在本地构建，而不是直接用whl轮子构建，\n">
+<meta property='og:url' content='https://adeepblue.github.io/p/minimind%E8%B0%83%E8%AF%95%E8%AE%B0%E5%BD%95/'>
 <meta property='og:site_name' content='深蓝之亘的博客'>
-<meta property='og:type' content='article'><meta property='article:section' content='Page' />
-<meta name="twitter:title" content="更新日志">
-<meta name="twitter:description" content="更新记录 &mdash;&mdash;&mdash;&mdash;&mdash;2025-03-21更新&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash; 更新了git的一些理解网页链接，以及希尔伯特曲线\n&mdash;&mdash;&mdash;&mdash;&mdash;2025-03-21更新&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash; 更新了matlab图像加工处理，图灵完备游戏攻略7，完成了手搓的64bit计算机的展示\n&mdash;&mdash;&mdash;&mdash;&mdash;2025-03-3更新&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash; 更新了图灵完备alpha第二篇攻略\n">
+<meta property='og:type' content='article'><meta property='article:section' content='Post' /><meta property='article:published_time' content='2025-03-26T10:36:49&#43;08:00'/><meta property='article:modified_time' content='2025-03-26T10:36:49&#43;08:00'/><meta property='og:image' content='https://adeepblue.github.io/p/minimind%E8%B0%83%E8%AF%95%E8%AE%B0%E5%BD%95/logo.png' />
+<meta name="twitter:title" content="Minimind调试记录">
+<meta name="twitter:description" content="调试记录 我pip install -r requirements.txt不是很顺利\n创建了新的虚拟环境，报错：缺少Microsoft C++ Build Tools构建工具，报错包为ujson==5.1.0，先将其从requirements.txt将其移除，其他都是通用可以安装的， 实际好像是选择优先级的问题，可以优先下载tar.gz压缩包版本的，然后在本地构建，而不是直接用whl轮子构建，\n"><meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:image" content='https://adeepblue.github.io/p/minimind%E8%B0%83%E8%AF%95%E8%AE%B0%E5%BD%95/logo.png' />
     <link rel="shortcut icon" href="/favicon.ico" />
 
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0-rc.1/katex.min.css">
@@ -142,7 +143,7 @@
         </li>
         
         
-        <li  class='current' >
+        <li >
             <a href='/%E6%9B%B4%E6%96%B0%E6%97%A5%E5%BF%97/' >
                 
                 
@@ -247,63 +248,38 @@
     </ol>
 </aside>
 
-    <aside class="sidebar right-sidebar sticky">
-        
-            
-                
-    <section class="widget archives">
-        <div class="widget-icon">
-            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-hash" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
-  <path stroke="none" d="M0 0h24v24H0z"/>
-  <line x1="5" y1="9" x2="19" y2="9" />
-  <line x1="5" y1="15" x2="19" y2="15" />
-  <line x1="11" y1="4" x2="7" y2="20" />
-  <line x1="17" y1="4" x2="13" y2="20" />
-</svg>
-
-
-
-        </div>
-        <h2 class="widget-title section-title">目录</h2>
-        
-        <div class="widget--toc">
-            <nav id="TableOfContents">
-  <ol>
-    <li><a href="#---------------2025-03-21更新---------------------">&mdash;&mdash;&mdash;&mdash;&mdash;2025-03-21更新&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;</a></li>
-    <li><a href="#---------------2025-03-21更新----------------------1">&mdash;&mdash;&mdash;&mdash;&mdash;2025-03-21更新&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;</a></li>
-    <li><a href="#---------------2025-03-3更新---------------------">&mdash;&mdash;&mdash;&mdash;&mdash;2025-03-3更新&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;</a></li>
-    <li><a href="#---------------2025-03-2更新---------------------">&mdash;&mdash;&mdash;&mdash;&mdash;2025-03-2更新&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;</a></li>
-    <li><a href="#---------------2025-03-1更新---------------------">&mdash;&mdash;&mdash;&mdash;&mdash;2025-03-1更新&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;</a></li>
-    <li><a href="#---------------2025-02-24更新---------------------">&mdash;&mdash;&mdash;&mdash;&mdash;2025-02-24更新&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;</a></li>
-    <li><a href="#---------------2025-02-20更新---------------------">&mdash;&mdash;&mdash;&mdash;&mdash;2025-02-20更新&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;</a></li>
-    <li><a href="#---------------2025-02-18更新---------------------">&mdash;&mdash;&mdash;&mdash;&mdash;2025-02-18更新&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;</a></li>
-    <li><a href="#---------------2025-02-14更新---------------------">&mdash;&mdash;&mdash;&mdash;&mdash;2025-02-14更新&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;</a></li>
-    <li><a href="#---------------2025-02-14更新----------------------1">&mdash;&mdash;&mdash;&mdash;&mdash;2025-02-14更新&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;</a></li>
-    <li><a href="#---------------2025-02-12更新---------------------">&mdash;&mdash;&mdash;&mdash;&mdash;2025-02-12更新&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;</a></li>
-    <li><a href="#---------------2025-02-11更新---------------------">&mdash;&mdash;&mdash;&mdash;&mdash;2025-02-11更新&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;</a></li>
-    <li><a href="#---------------2025-02-10更新---------------------">&mdash;&mdash;&mdash;&mdash;&mdash;2025-02-10更新&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;</a></li>
-    <li><a href="#---------------2025-02-09更新---------------">&mdash;&mdash;&mdash;&mdash;&mdash;2025-02-09更新&mdash;&mdash;&mdash;&mdash;&mdash;</a></li>
-    <li><a href="#---------------2025-02-08更新---------------">&mdash;&mdash;&mdash;&mdash;&mdash;2025-02-08更新&mdash;&mdash;&mdash;&mdash;&mdash;</a></li>
-  </ol>
-</nav>
-        </div>
-    </section>
-
-            
-        
-    </aside>
-
+    
 
             <main class="main full-width">
-    <article class="main-article">
+    <article class="has-image main-article">
     <header class="article-header">
+        <div class="article-image">
+            <a href="/p/minimind%E8%B0%83%E8%AF%95%E8%AE%B0%E5%BD%95/">
+                <img src="/p/minimind%E8%B0%83%E8%AF%95%E8%AE%B0%E5%BD%95/logo_hu_c887b639e7f5d803.png"
+                        srcset="/p/minimind%E8%B0%83%E8%AF%95%E8%AE%B0%E5%BD%95/logo_hu_c887b639e7f5d803.png 800w, /p/minimind%E8%B0%83%E8%AF%95%E8%AE%B0%E5%BD%95/logo_hu_27427c0ad16fd5ab.png 1600w"
+                        width="800" 
+                        height="195" 
+                        loading="lazy"
+                        alt="Featured image of post Minimind调试记录" />
+                
+            </a>
+        </div>
+    
 
     <div class="article-details">
+    
+    <header class="article-category">
+        
+            <a href="/categories/%E8%AF%AD%E8%A8%80%E6%A8%A1%E5%9E%8B/" >
+                语言模型
+            </a>
+        
+    </header>
     
 
     <div class="article-title-wrapper">
         <h2 class="article-title">
-            <a href="/%E6%9B%B4%E6%96%B0%E6%97%A5%E5%BF%97/">更新日志</a>
+            <a href="/p/minimind%E8%B0%83%E8%AF%95%E8%AE%B0%E5%BD%95/">Minimind调试记录</a>
         </h2>
     
         
@@ -312,6 +288,25 @@
     
     
     
+    
+    <footer class="article-time">
+        
+            <div>
+                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-calendar-time" width="56" height="56" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <path d="M11.795 21h-6.795a2 2 0 0 1 -2 -2v-12a2 2 0 0 1 2 -2h12a2 2 0 0 1 2 2v4" />
+  <circle cx="18" cy="18" r="4" />
+  <path d="M15 3v4" />
+  <path d="M7 3v4" />
+  <path d="M3 11h16" />
+  <path d="M18 16.496v1.504l1 1" />
+</svg>
+                <time class="article-time--published">2025-03-26</time>
+            </div>
+        
+
+        
+    </footer>
     
 
     
@@ -322,43 +317,34 @@
     <section class="article-content">
     
     
-    <h1 id="更新记录">更新记录
-</h1><h2 id="---------------2025-03-21更新---------------------">&mdash;&mdash;&mdash;&mdash;&mdash;2025-03-21更新&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;
-</h2><p>更新了git的一些理解<a class="link" href="https://adeepblue.github.io/p/git%E5%88%9D%E5%A7%8B%E5%8C%96%E8%AE%B0%E5%BD%95/"  target="_blank" rel="noopener"
-    >网页链接</a>，以及希尔伯特曲线</p>
-<h2 id="---------------2025-03-21更新----------------------1">&mdash;&mdash;&mdash;&mdash;&mdash;2025-03-21更新&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;
-</h2><p>更新了matlab图像加工处理，图灵完备游戏攻略7，完成了手搓的64bit计算机的展示</p>
-<h2 id="---------------2025-03-3更新---------------------">&mdash;&mdash;&mdash;&mdash;&mdash;2025-03-3更新&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;
-</h2><p>更新了图灵完备alpha第二篇攻略</p>
-<h2 id="---------------2025-03-2更新---------------------">&mdash;&mdash;&mdash;&mdash;&mdash;2025-03-2更新&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;
-</h2><p>更新了图灵完备alpha第一篇攻略</p>
-<h2 id="---------------2025-03-1更新---------------------">&mdash;&mdash;&mdash;&mdash;&mdash;2025-03-1更新&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;
-</h2><p>新增了phi-plugin篇</p>
-<h2 id="---------------2025-02-24更新---------------------">&mdash;&mdash;&mdash;&mdash;&mdash;2025-02-24更新&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;
-</h2><p>更新64位架构ing</p>
-<h2 id="---------------2025-02-20更新---------------------">&mdash;&mdash;&mdash;&mdash;&mdash;2025-02-20更新&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;
-</h2><p>完结了图灵完备第五篇攻略，解决了除法的破关思路</p>
-<h2 id="---------------2025-02-18更新---------------------">&mdash;&mdash;&mdash;&mdash;&mdash;2025-02-18更新&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;
-</h2><p>更新了图灵完备第五篇攻略，包含AI打牌、半字节乘法、栈、压栈和弹栈的破关思路
-以及更新了HUGO使用latex语法的办法</p>
-<h2 id="---------------2025-02-14更新---------------------">&mdash;&mdash;&mdash;&mdash;&mdash;2025-02-14更新&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;
-</h2><p>更新完了图灵完备第四篇攻略，包含条件判断2、移位、延迟量、随机存储器的破关思路</p>
-<h2 id="---------------2025-02-14更新----------------------1">&mdash;&mdash;&mdash;&mdash;&mdash;2025-02-14更新&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;
-</h2><p>更新完了图灵完备第三篇攻略，包含宽指令、一把线，像挂面、操作码、立即数、条件判断的破关思路</p>
-<h2 id="---------------2025-02-12更新---------------------">&mdash;&mdash;&mdash;&mdash;&mdash;2025-02-12更新&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;
-</h2><p>更新了一整篇图灵完备游戏攻略2，解决了异或、八位常数，相等，8位异或、无符号小于、有符号小于这些八位运算符</p>
-<h2 id="---------------2025-02-11更新---------------------">&mdash;&mdash;&mdash;&mdash;&mdash;2025-02-11更新&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;
-</h2><p>更新了整篇python requests SSLError的报错解决办法相关内容</p>
-<h2 id="---------------2025-02-10更新---------------------">&mdash;&mdash;&mdash;&mdash;&mdash;2025-02-10更新&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;
-</h2><p>更新了LM studio 关闭开机启动 部分的内容
-更新了左侧边栏部分文字</p>
-<p>但更新后发现主页少了元素，于是决定回滚版本</p>
-<h2 id="---------------2025-02-09更新---------------">&mdash;&mdash;&mdash;&mdash;&mdash;2025-02-09更新&mdash;&mdash;&mdash;&mdash;&mdash;
-</h2><p>左侧标签栏更新了白色蒙版，以及是cmd的一些命令，以及对git处后面的补充，hugo处也有更改，删除了test，新建了关闭LM studio自动更新说明部分的文件夹
-更新了图灵完备的游戏攻略内容</p>
-<h2 id="---------------2025-02-08更新---------------">&mdash;&mdash;&mdash;&mdash;&mdash;2025-02-08更新&mdash;&mdash;&mdash;&mdash;&mdash;
-</h2><p>增加了python matplotlib的常用函数介绍，待补充的有3D绘图模块，其他模块requests.get的SSLError部分
-以及LM studio自动更新说明部分</p>
+    <h1 id="调试记录">调试记录
+</h1><p>我pip install -r requirements.txt不是很顺利</p>
+<p>创建了新的虚拟环境，报错：缺少Microsoft C++ Build Tools构建工具，报错包为ujson==5.1.0，先将其从requirements.txt将其移除，其他都是通用可以安装的，
+<strong>实际好像是选择优先级的问题，可以优先下载tar.gz压缩包版本的，然后在本地构建，而不是直接用whl轮子构建，</strong></p>
+<p>然后我选择从清华源去安装ujson的whl文件，不过在那看到了让我疑惑的东西，后面才反应过来，是cpython和PyPy的区别,因为没有适配311的ujson，我干脆下了个
+ujson-5.10.0-cp311-cp311-win_amd64.whl，5.10.0的版本的，成功安装完毕</p>
+<p>由于现在安装的torch是没有任何标注的，也就是基于CPU运行的，去<a class="link" href="https://download.pytorch.org/whl/torch_stable.html"  target="_blank" rel="noopener"
+    >下载链接</a>找一下GPU版本的
+我下的是torchvision-0.17.2+cu118-cp311-cp311-win_amd64.whl，然后版本我选择跟requirements.txt中的保持一致，使用pip list 找到torchvision对应的版本号对上即可</p>
+<p>解释一下，cu118是指，cuda必须要大于11.8版本的，这个在N卡控制面板-&gt;帮助-&gt;系统信息处  可以找到</p>
+<p><img src="/p/minimind%E8%B0%83%E8%AF%95%E8%AE%B0%E5%BD%95/system-nv-directX-version.png"
+	width="740"
+	height="652"
+	srcset="/p/minimind%E8%B0%83%E8%AF%95%E8%AE%B0%E5%BD%95/system-nv-directX-version_hu_edafbebddb735dd4.png 480w, /p/minimind%E8%B0%83%E8%AF%95%E8%AE%B0%E5%BD%95/system-nv-directX-version_hu_1a09eb211cef233a.png 1024w"
+	loading="lazy"
+	
+		alt="我的是12.0版本，所以118可用"
+	
+	
+		class="gallery-image" 
+		data-flex-grow="113"
+		data-flex-basis="272px"
+	
+></p>
+<p>torch同理，也需要cuda版本的，
+<span style="color:red; font-size:25px">注意!!!清华源并没有提供GPU版本的，如果你的全局设置是使用清华源来pip的，注意一下所下的GPU版本，</span>国内镜像源似乎上交大的可用，此处附上<a class="link" href="https://mirror.sjtu.edu.cn/pytorch-wheels/cu118/?mirror_intel_list"  target="_blank" rel="noopener"
+    >链接</a></p>
+<p>看了一眼作者的配置，128G的内存+3090*8，实在没绷住，有机会的话看看云端训练吧，上述为本地Windows系统的验证过程</p>
 
 </section>
 

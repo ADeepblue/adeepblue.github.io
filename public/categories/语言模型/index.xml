@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+    <channel>
+        <title>语言模型 on 深蓝之亘的博客</title>
+        <link>https://adeepblue.github.io/categories/%E8%AF%AD%E8%A8%80%E6%A8%A1%E5%9E%8B/</link>
+        <description>Recent content in 语言模型 on 深蓝之亘的博客</description>
+        <generator>Hugo -- gohugo.io</generator>
+        <language>zh-cn</language>
+        <copyright>深蓝之亘</copyright>
+        <lastBuildDate>Wed, 26 Mar 2025 10:36:49 +0800</lastBuildDate><atom:link href="https://adeepblue.github.io/categories/%E8%AF%AD%E8%A8%80%E6%A8%A1%E5%9E%8B/index.xml" rel="self" type="application/rss+xml" /><item>
+        <title>Minimind调试记录</title>
+        <link>https://adeepblue.github.io/p/minimind%E8%B0%83%E8%AF%95%E8%AE%B0%E5%BD%95/</link>
+        <pubDate>Wed, 26 Mar 2025 10:36:49 +0800</pubDate>
+        
+        <guid>https://adeepblue.github.io/p/minimind%E8%B0%83%E8%AF%95%E8%AE%B0%E5%BD%95/</guid>
+        <description>&lt;img src="https://adeepblue.github.io/p/minimind%E8%B0%83%E8%AF%95%E8%AE%B0%E5%BD%95/logo.png" alt="Featured image of post Minimind调试记录" /&gt;&lt;h1 id=&#34;调试记录&#34;&gt;调试记录
+&lt;/h1&gt;&lt;p&gt;我pip install -r requirements.txt不是很顺利&lt;/p&gt;
+&lt;p&gt;创建了新的虚拟环境，报错：缺少Microsoft C++ Build Tools构建工具，报错包为ujson==5.1.0，先将其从requirements.txt将其移除，其他都是通用可以安装的，
+&lt;strong&gt;实际好像是选择优先级的问题，可以优先下载tar.gz压缩包版本的，然后在本地构建，而不是直接用whl轮子构建，&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;然后我选择从清华源去安装ujson的whl文件，不过在那看到了让我疑惑的东西，后面才反应过来，是cpython和PyPy的区别,因为没有适配311的ujson，我干脆下了个
+ujson-5.10.0-cp311-cp311-win_amd64.whl，5.10.0的版本的，成功安装完毕&lt;/p&gt;
+&lt;p&gt;由于现在安装的torch是没有任何标注的，也就是基于CPU运行的，去&lt;a class=&#34;link&#34; href=&#34;https://download.pytorch.org/whl/torch_stable.html&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;下载链接&lt;/a&gt;找一下GPU版本的
+我下的是torchvision-0.17.2+cu118-cp311-cp311-win_amd64.whl，然后版本我选择跟requirements.txt中的保持一致，使用pip list 找到torchvision对应的版本号对上即可&lt;/p&gt;
+&lt;p&gt;解释一下，cu118是指，cuda必须要大于11.8版本的，这个在N卡控制面板-&amp;gt;帮助-&amp;gt;系统信息处  可以找到&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://adeepblue.github.io/p/minimind%E8%B0%83%E8%AF%95%E8%AE%B0%E5%BD%95/system-nv-directX-version.png&#34;
+	width=&#34;740&#34;
+	height=&#34;652&#34;
+	srcset=&#34;https://adeepblue.github.io/p/minimind%E8%B0%83%E8%AF%95%E8%AE%B0%E5%BD%95/system-nv-directX-version_hu_edafbebddb735dd4.png 480w, https://adeepblue.github.io/p/minimind%E8%B0%83%E8%AF%95%E8%AE%B0%E5%BD%95/system-nv-directX-version_hu_1a09eb211cef233a.png 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;我的是12.0版本，所以118可用&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;113&#34;
+		data-flex-basis=&#34;272px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;p&gt;torch同理，也需要cuda版本的，
+&lt;span style=&#34;color:red; font-size:25px&#34;&gt;注意!!!清华源并没有提供GPU版本的，如果你的全局设置是使用清华源来pip的，注意一下所下的GPU版本，&lt;/span&gt;国内镜像源似乎上交大的可用，此处附上&lt;a class=&#34;link&#34; href=&#34;https://mirror.sjtu.edu.cn/pytorch-wheels/cu118/?mirror_intel_list&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;链接&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;看了一眼作者的配置，128G的内存+3090*8，实在没绷住，有机会的话看看云端训练吧，上述为本地Windows系统的验证过程&lt;/p&gt;
+</description>
+        </item>
+        
+    </channel>
+</rss>

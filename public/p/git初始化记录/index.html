@@ -434,7 +434,7 @@
 </span></span><span class="line"><span class="cl">REM 删除配置
 </span></span><span class="line"><span class="cl">git config --global --unset http.https://github.com.proxy
 </span></span></code></pre></div><p>以上，调试完毕</p>
-<p>如果走SSH协议的话，上面add origin或者是set-url origin后面的命令得修改成 <a class="link" href="mailto:git@github.com" >git@github.com</a>:Adeepblue/adeepblue.github.io，其中要确保SSH已经验证过了，</p>
+<p>如果走SSH协议的话，上面add origin或者是set-url origin后面的命令得修改成 <code>git@github.com:Adeepblue/adeepblue.github.io</code>，其中要确保SSH已经验证过了，</p>
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">git add -f public
 </span></span><span class="line"><span class="cl">git commit -m <span class="s2">&#34;Publish site&#34;</span>
 </span></span><span class="line"><span class="cl">git subtree push --prefix public origin gh-pages
@@ -456,9 +456,9 @@
 <h2 id="仓库迁移">仓库迁移
 </h2><p>最近自动化上传的时候遇到了这么个提示，也就是上面配置这边原始的命令那，git得补上了，我也不知道为什么，至少它现在提示了</p>
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">remote: This repository moved. Please use the new location:        
-</span></span><span class="line"><span class="cl">remote:   git@github.com:ADeepblue/adeepblue.github.io.git   
+</span></span><span class="line"><span class="cl">remote:   git@github.com:ADeepblue/adeepblue.github.git   
 </span></span></code></pre></div><p>然后我现在就用一行命令移动过去了</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">git remote set-url origin git@github.com:ADeepblue/adeepblue.github.io.git
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">git remote set-url origin git@github.com:ADeepblue/adeepblue.github.git
 </span></span></code></pre></div><h2 id="gitignore文件">.gitignore文件
 </h2><p>直接写入需要忽视的文件即可，可以让git add . 时跳过这些文件以回车分隔即可</p>
 <h2 id="自动化部署">自动化部署

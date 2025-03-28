@@ -115,7 +115,7 @@ git config --global --unset http.https://github.com.proxy
 ```
 以上，调试完毕
 
-如果走SSH协议的话，上面add origin或者是set-url origin后面的命令得修改成 git@github.com:Adeepblue/adeepblue.github.io，其中要确保SSH已经验证过了，
+如果走SSH协议的话，上面add origin或者是set-url origin后面的命令得修改成 `git@github.com:Adeepblue/adeepblue.github.io`，其中要确保SSH已经验证过了，
 
 ```bash
 git add -f public
@@ -130,12 +130,12 @@ git subtree push --prefix public origin gh-pages
 最近自动化上传的时候遇到了这么个提示，也就是上面配置这边原始的命令那，git得补上了，我也不知道为什么，至少它现在提示了
 ```bath
 remote: This repository moved. Please use the new location:        
-remote:   git@github.com:ADeepblue/adeepblue.github.io.git   
+remote:   git@github.com:ADeepblue/adeepblue.github.git   
 ```
 然后我现在就用一行命令移动过去了
 
 ```
-git remote set-url origin git@github.com:ADeepblue/adeepblue.github.io.git
+git remote set-url origin git@github.com:ADeepblue/adeepblue.github.git
 ```
 
 
