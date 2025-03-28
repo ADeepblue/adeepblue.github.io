@@ -86,7 +86,7 @@
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;REM 删除配置
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;git config --global --unset http.https://github.com.proxy
 &lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;以上，调试完毕&lt;/p&gt;
-&lt;p&gt;如果走SSH协议的话，上面add origin或者是set-url origin后面的命令得修改成 &lt;a class=&#34;link&#34; href=&#34;mailto:git@github.com&#34; &gt;git@github.com&lt;/a&gt;:Adeepblue/adeepblue.github.io，其中要确保SSH已经验证过了，&lt;/p&gt;
+&lt;p&gt;如果走SSH协议的话，上面add origin或者是set-url origin后面的命令得修改成 &lt;code&gt;git@github.com:Adeepblue/adeepblue.github.io&lt;/code&gt;，其中要确保SSH已经验证过了，&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;git add -f public
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;git commit -m &lt;span class=&#34;s2&#34;&gt;&amp;#34;Publish site&amp;#34;&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;git subtree push --prefix public origin gh-pages
@@ -108,9 +108,9 @@
 &lt;h2 id=&#34;仓库迁移&#34;&gt;仓库迁移
 &lt;/h2&gt;&lt;p&gt;最近自动化上传的时候遇到了这么个提示，也就是上面配置这边原始的命令那，git得补上了，我也不知道为什么，至少它现在提示了&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;remote: This repository moved. Please use the new location:        
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;remote:   git@github.com:ADeepblue/adeepblue.github.io.git   
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;remote:   git@github.com:ADeepblue/adeepblue.github.git   
 &lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;然后我现在就用一行命令移动过去了&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;git remote set-url origin git@github.com:ADeepblue/adeepblue.github.io.git
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;git remote set-url origin git@github.com:ADeepblue/adeepblue.github.git
 &lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id=&#34;gitignore文件&#34;&gt;.gitignore文件
 &lt;/h2&gt;&lt;p&gt;直接写入需要忽视的文件即可，可以让git add . 时跳过这些文件以回车分隔即可&lt;/p&gt;
 &lt;h2 id=&#34;自动化部署&#34;&gt;自动化部署
