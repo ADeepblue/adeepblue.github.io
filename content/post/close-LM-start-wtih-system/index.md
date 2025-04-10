@@ -4,6 +4,9 @@ draft = false
 title = '关闭 LM studio的开机启动'
 description = "分享关闭LM studio开机启动的方法"
 image = "LM-studio.jpg"
+categories = [
+    "其他"
+]
 +++
 
 # 分享关闭LM studio开机启动的方法

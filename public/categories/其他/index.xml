@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+    <channel>
+        <title>其他 on 深蓝之亘的博客</title>
+        <link>https://adeepblue.github.io/categories/%E5%85%B6%E4%BB%96/</link>
+        <description>Recent content in 其他 on 深蓝之亘的博客</description>
+        <generator>Hugo -- gohugo.io</generator>
+        <language>zh-cn</language>
+        <copyright>深蓝之亘</copyright>
+        <lastBuildDate>Sat, 08 Feb 2025 13:52:52 +0800</lastBuildDate><atom:link href="https://adeepblue.github.io/categories/%E5%85%B6%E4%BB%96/index.xml" rel="self" type="application/rss+xml" /><item>
+        <title>关闭 LM studio的开机启动</title>
+        <link>https://adeepblue.github.io/p/%E5%85%B3%E9%97%AD-lm-studio%E7%9A%84%E5%BC%80%E6%9C%BA%E5%90%AF%E5%8A%A8/</link>
+        <pubDate>Sat, 08 Feb 2025 13:52:52 +0800</pubDate>
+        
+        <guid>https://adeepblue.github.io/p/%E5%85%B3%E9%97%AD-lm-studio%E7%9A%84%E5%BC%80%E6%9C%BA%E5%90%AF%E5%8A%A8/</guid>
+        <description>&lt;img src="https://adeepblue.github.io/p/%E5%85%B3%E9%97%AD-lm-studio%E7%9A%84%E5%BC%80%E6%9C%BA%E5%90%AF%E5%8A%A8/LM-studio.jpg" alt="Featured image of post 关闭 LM studio的开机启动" /&gt;&lt;h1 id=&#34;分享关闭lm-studio开机启动的方法&#34;&gt;分享关闭LM studio开机启动的方法
+&lt;/h1&gt;&lt;h2 id=&#34;关闭方法&#34;&gt;关闭方法
+&lt;/h2&gt;&lt;p&gt;关闭无头开关(headless)就可以不让LMstudio开机启动
+&lt;img src=&#34;https://adeepblue.github.io/p/%E5%85%B3%E9%97%AD-lm-studio%E7%9A%84%E5%BC%80%E6%9C%BA%E5%90%AF%E5%8A%A8/setting-for-headless.png&#34;
+	width=&#34;1920&#34;
+	height=&#34;1024&#34;
+	srcset=&#34;https://adeepblue.github.io/p/%E5%85%B3%E9%97%AD-lm-studio%E7%9A%84%E5%BC%80%E6%9C%BA%E5%90%AF%E5%8A%A8/setting-for-headless_hu_15ec6c234864fb35.png 480w, https://adeepblue.github.io/p/%E5%85%B3%E9%97%AD-lm-studio%E7%9A%84%E5%BC%80%E6%9C%BA%E5%90%AF%E5%8A%A8/setting-for-headless_hu_123ddbe42509ff77.png 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;关闭方法&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;187&#34;
+		data-flex-basis=&#34;450px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;h2 id=&#34;我是如何找到的&#34;&gt;我是如何找到的
+&lt;/h2&gt;&lt;p&gt;之前搜了一圈发现没找到来着，虽然B站发了，但是这里还是再发一篇吧，这是B站这边的链接&lt;a class=&#34;link&#34; href=&#34;https://www.bilibili.com/read/cv40562346&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;网页链接&lt;/a&gt;,区别在于我会在这里讲一下我是怎么找到这个的&lt;/p&gt;
+&lt;p&gt;没找到显式开关的情况下，当时搜谷歌时候的内容如上，其他内容几乎没有，当时觉得挺绝望的，一个半开源软件把开机自启开关都藏得这么深的么？甚至还没多少人关注这个，只是说了它支持开机启动，其中的更新日志里，
+那，换个说法，之前的状态就是不支持开机启动咯，那你总有开关做着让人选的吧？&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://adeepblue.github.io/p/%E5%85%B3%E9%97%AD-lm-studio%E7%9A%84%E5%BC%80%E6%9C%BA%E5%90%AF%E5%8A%A8/google-search-LM-studio-update-log.png&#34;
+	width=&#34;1099&#34;
+	height=&#34;329&#34;
+	srcset=&#34;https://adeepblue.github.io/p/%E5%85%B3%E9%97%AD-lm-studio%E7%9A%84%E5%BC%80%E6%9C%BA%E5%90%AF%E5%8A%A8/google-search-LM-studio-update-log_hu_cfbe8b472f9db527.png 480w, https://adeepblue.github.io/p/%E5%85%B3%E9%97%AD-lm-studio%E7%9A%84%E5%BC%80%E6%9C%BA%E5%90%AF%E5%8A%A8/google-search-LM-studio-update-log_hu_e14138d72a17499b.png 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;谷歌搜到的内容&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;334&#34;
+		data-flex-basis=&#34;801px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://adeepblue.github.io/p/%E5%85%B3%E9%97%AD-lm-studio%E7%9A%84%E5%BC%80%E6%9C%BA%E5%90%AF%E5%8A%A8/LM-studio-update-log.png&#34;
+	width=&#34;1916&#34;
+	height=&#34;1028&#34;
+	srcset=&#34;https://adeepblue.github.io/p/%E5%85%B3%E9%97%AD-lm-studio%E7%9A%84%E5%BC%80%E6%9C%BA%E5%90%AF%E5%8A%A8/LM-studio-update-log_hu_f76476af7e81313f.png 480w, https://adeepblue.github.io/p/%E5%85%B3%E9%97%AD-lm-studio%E7%9A%84%E5%BC%80%E6%9C%BA%E5%90%AF%E5%8A%A8/LM-studio-update-log_hu_de80dd25e9c30c00.png 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;LM studio更新日志&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;186&#34;
+		data-flex-basis=&#34;447px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;p&gt;开机启动，我第一个想到的就是任务管理器里的启动，去看了一眼&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://adeepblue.github.io/p/%E5%85%B3%E9%97%AD-lm-studio%E7%9A%84%E5%BC%80%E6%9C%BA%E5%90%AF%E5%8A%A8/task-with-LM-studio.png&#34;
+	width=&#34;1007&#34;
+	height=&#34;741&#34;
+	srcset=&#34;https://adeepblue.github.io/p/%E5%85%B3%E9%97%AD-lm-studio%E7%9A%84%E5%BC%80%E6%9C%BA%E5%90%AF%E5%8A%A8/task-with-LM-studio_hu_faf694d78da67d7f.png 480w, https://adeepblue.github.io/p/%E5%85%B3%E9%97%AD-lm-studio%E7%9A%84%E5%BC%80%E6%9C%BA%E5%90%AF%E5%8A%A8/task-with-LM-studio_hu_f3769c4f3e36e7d4.png 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;任务管理器内的开机启动显示&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;135&#34;
+		data-flex-basis=&#34;326px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;p&gt;这个选项明晃晃的躺在里面，那基本就是了，假定，如果这个软件只是安装的的时候通过某种手段去修改了一次设置，也有可能是每次启动修改设置吧？按照这个逻辑，我去设置那边关闭了一次这个选项企图看看什么情况，至于说要怎么观察，
+关闭软件然后重新启动就可以，毕竟如果是后者的话，一旦修改成功就会观察到吧？&lt;/p&gt;
+&lt;p&gt;然后，就真的，观察到启动一次软件就把这个开关给打开了，说明，&lt;span style=&#34;color:red&#34;&gt;这是每次启动一旦检测到软件内一个设置选项是啥样的就会去改任务管理器里的那个开关&lt;/span&gt;,&lt;/p&gt;
+&lt;p&gt;再之后，我考虑到有可能是注册表注册了某个键值，导致的反复修改设置里的选项，不过没找到开关就是了，按照LM studio的名字搜了之后加上AI帮助倒是搜到了开机启动项的位置，以及我其他设定的几个开机启动项&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://adeepblue.github.io/p/%E5%85%B3%E9%97%AD-lm-studio%E7%9A%84%E5%BC%80%E6%9C%BA%E5%90%AF%E5%8A%A8/regedit-with-LM-studio.png&#34;
+	width=&#34;1913&#34;
+	height=&#34;634&#34;
+	srcset=&#34;https://adeepblue.github.io/p/%E5%85%B3%E9%97%AD-lm-studio%E7%9A%84%E5%BC%80%E6%9C%BA%E5%90%AF%E5%8A%A8/regedit-with-LM-studio_hu_8af9d099fc9a90c0.png 480w, https://adeepblue.github.io/p/%E5%85%B3%E9%97%AD-lm-studio%E7%9A%84%E5%BC%80%E6%9C%BA%E5%90%AF%E5%8A%A8/regedit-with-LM-studio_hu_52f548d54553f1b6.png 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;相关注册表&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;301&#34;
+		data-flex-basis=&#34;724px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;p&gt;以及又按照上述方法测试了一下，只是这次直接就是删除相关键值，依旧也是上面的结果，也就是坐实了就是有个设置项，再结合上述日志提到的无头开关，它只提到了最小化托盘选项开关的事，开机启动只是带过了一嘴，
+那我有理由怀疑，这个开关同时也控制着开机启动？&lt;/p&gt;
+&lt;p&gt;结果，一测试，还真是，任务管理器内的启动那边，和注册表这边的，同时变了&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://adeepblue.github.io/p/%E5%85%B3%E9%97%AD-lm-studio%E7%9A%84%E5%BC%80%E6%9C%BA%E5%90%AF%E5%8A%A8/reg-without-LM-studio.png&#34;
+	width=&#34;1920&#34;
+	height=&#34;726&#34;
+	srcset=&#34;https://adeepblue.github.io/p/%E5%85%B3%E9%97%AD-lm-studio%E7%9A%84%E5%BC%80%E6%9C%BA%E5%90%AF%E5%8A%A8/reg-without-LM-studio_hu_5e1f7306cc6c704e.png 480w, https://adeepblue.github.io/p/%E5%85%B3%E9%97%AD-lm-studio%E7%9A%84%E5%BC%80%E6%9C%BA%E5%90%AF%E5%8A%A8/reg-without-LM-studio_hu_3b27fea65cb8dc9d.png 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;变动后的注册表&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;264&#34;
+		data-flex-basis=&#34;634px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://adeepblue.github.io/p/%E5%85%B3%E9%97%AD-lm-studio%E7%9A%84%E5%BC%80%E6%9C%BA%E5%90%AF%E5%8A%A8/task-control-without-LM-studio.png&#34;
+	width=&#34;1007&#34;
+	height=&#34;741&#34;
+	srcset=&#34;https://adeepblue.github.io/p/%E5%85%B3%E9%97%AD-lm-studio%E7%9A%84%E5%BC%80%E6%9C%BA%E5%90%AF%E5%8A%A8/task-control-without-LM-studio_hu_b9eb6fb7fb3d3585.png 480w, https://adeepblue.github.io/p/%E5%85%B3%E9%97%AD-lm-studio%E7%9A%84%E5%BC%80%E6%9C%BA%E5%90%AF%E5%8A%A8/task-control-without-LM-studio_hu_7a22c71461a036cf.png 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;变动后的任务管理器&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;135&#34;
+		data-flex-basis=&#34;326px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;p&gt;那也就彻彻底底确定了，就是那个开关的问题，但这个开关同时写了允许最小化托盘的选项，以及是开机启动选项，我估计多少会引起一些不希望开机启动但是可以有最小化托盘的用户的不满了，但既然软件现在也就做了一个开关，
+这些用户可能也只能无可奈何接受了。&lt;/p&gt;
+</description>
+        </item>
+        
+    </channel>
+</rss>
