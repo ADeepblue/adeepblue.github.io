@@ -7,7 +7,45 @@
         <generator>Hugo -- gohugo.io</generator>
         <language>zh-cn</language>
         <copyright>深蓝之亘</copyright>
-        <lastBuildDate>Tue, 08 Apr 2025 11:04:34 +0800</lastBuildDate><atom:link href="https://adeepblue.github.io/categories/ubuntu/index.xml" rel="self" type="application/rss+xml" /><item>
+        <lastBuildDate>Fri, 11 Apr 2025 23:00:45 +0800</lastBuildDate><atom:link href="https://adeepblue.github.io/categories/ubuntu/index.xml" rel="self" type="application/rss+xml" /><item>
+        <title>Ubuntu使用指南</title>
+        <link>https://adeepblue.github.io/p/ubuntu%E4%BD%BF%E7%94%A8%E6%8C%87%E5%8D%97/</link>
+        <pubDate>Fri, 11 Apr 2025 23:00:45 +0800</pubDate>
+        
+        <guid>https://adeepblue.github.io/p/ubuntu%E4%BD%BF%E7%94%A8%E6%8C%87%E5%8D%97/</guid>
+        <description>&lt;img src="https://adeepblue.github.io/p/ubuntu%E4%BD%BF%E7%94%A8%E6%8C%87%E5%8D%97/Ubuntu-logo.png" alt="Featured image of post Ubuntu使用指南" /&gt;&lt;h1 id=&#34;一些实用功能&#34;&gt;一些实用功能
+&lt;/h1&gt;&lt;blockquote&gt;
+&lt;p&gt;终端环境下的文件传输工具lrzsz&lt;/p&gt;&lt;/blockquote&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;sudo apt install -y lrzsz
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;使用即是在Ubuntu终端环境输入rz即可使用&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;移动文件:mv&lt;/p&gt;&lt;/blockquote&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;mv  --option (source_file|source_folder) (target_file|target_folder)
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;blockquote&gt;
+&lt;p&gt;apt
+sudo apt search
+机制是在source.list中找是否有对应的包，镜像中
+sudo apt clean清理缓存&lt;/p&gt;&lt;/blockquote&gt;
+&lt;blockquote&gt;
+&lt;p&gt;压缩解压工具 7zip
+sudo apt install p7zip-full&lt;/p&gt;&lt;/blockquote&gt;
+&lt;h2 id=&#34;vim&#34;&gt;vim
+&lt;/h2&gt;&lt;p&gt;ctrl f向下翻页
+ctrl b向上翻页&lt;/p&gt;
+&lt;p&gt;/UUID
+回车
+n N&lt;/p&gt;
+&lt;h2 id=&#34;更改时区&#34;&gt;更改时区
+&lt;/h2&gt;&lt;p&gt;sudo timedatectl set-timezone Asia/Shanghai&lt;/p&gt;
+&lt;h2 id=&#34;关机&#34;&gt;关机
+&lt;/h2&gt;&lt;p&gt;shutdown
+-P 关机
+-r 重启
+now立即
+shutdown -r now&lt;/p&gt;
+</description>
+        </item>
+        <item>
         <title>部署局域网云盘全记录</title>
         <link>https://adeepblue.github.io/p/%E9%83%A8%E7%BD%B2%E5%B1%80%E5%9F%9F%E7%BD%91%E4%BA%91%E7%9B%98%E5%85%A8%E8%AE%B0%E5%BD%95/</link>
         <pubDate>Tue, 08 Apr 2025 11:04:34 +0800</pubDate>
@@ -248,7 +286,46 @@ sudo mkdir /mnt/e_drive&lt;/p&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;writable = yes
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;available = yes
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;valid users = @users
-&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</description>
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h3 id=&#34;其他一些问题&#34;&gt;其他一些问题
+&lt;/h3&gt;&lt;p&gt;权限管理，如果只是上述的配置而并没有改动权限的话，有可能会遭遇无法访问的问题，我查看完我的e_drive文件夹，发现所有者和允许读写的用户都是root用户，此时就需要改动一些东西了，
+其中用户组部分上述已经提过了，chmod的参数g+rwx表示管理采用用户组，特定的用户组可以访问，以及是，使用chown来指定可以访问的用户组，如第二条命令就是指指定users可访问&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;root@deepblueubuntu:/home/deepblue# chmod -R g+rwx /mnt/e_drive/
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;root@deepblueubuntu:/home/deepblue# chown -R: users /mnt/e_drive/
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;执行完上述两条指令后，你会发现可以访问了&lt;/p&gt;
+&lt;p&gt;虽然文件夹所有者还是root，但是users内的用户可以进行读写和执行权限了&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;deepblue@deepblueubuntu:~$ ls -ld /mnt/e_drive/
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;drwxrwxr-x &lt;span class=&#34;m&#34;&gt;3&lt;/span&gt; root users &lt;span class=&#34;m&#34;&gt;4096&lt;/span&gt; Apr &lt;span class=&#34;m&#34;&gt;10&lt;/span&gt; 16:19 /mnt/e_drive/
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id=&#34;其他&#34;&gt;其他
+&lt;/h2&gt;&lt;p&gt;手机端的访问我目前在用cx文件管理器，可以支持远程管理SMB协议的远程存储，mt管理器虽然有，但是要会员，不是太行&lt;/p&gt;
+&lt;h2 id=&#34;开机自动挂载&#34;&gt;开机自动挂载
+&lt;/h2&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;sudo blkid /dev/sda2
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;先用这个命令查看一下已经挂载的盘，&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;deepblue@deepblueubuntu:~$ sudo blkid /dev/sda2
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;/dev/sda2: LABEL=&amp;#34;KESU&amp;#34; UUID=&amp;#34;6406AD3F06AD12DA&amp;#34; TYPE=&amp;#34;ntfs&amp;#34; PARTLABEL=&amp;#34;Basic data partition&amp;#34; PARTUUID=&amp;#34;794b2add-e382-4ee2-a30a-b39955cf2df8&amp;#34;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h3 id=&#34;usb硬盘开机挂载&#34;&gt;USB硬盘开机挂载
+&lt;/h3&gt;&lt;p&gt;在 Ubuntu 系统中，要实现开机自动挂载硬盘，可以通过编辑 /etc/fstab 文件来实现。&lt;/p&gt;
+&lt;p&gt;sudo vim /etc/fstab，末尾追加&lt;/p&gt;
+&lt;p&gt;UUID=6406AD3F06AD12DA /mnt/kesu ntfs defaults 0 2&lt;/p&gt;
+&lt;p&gt;其中UUID请自行替换上面获得的UUID字段&lt;/p&gt;
+&lt;p&gt;AI 告诉我PARTUUID和UUID可以同时用，至少我现在注释的那条没法用上&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;使用 UUID
+UUID 是文件系统的唯一标识符，适用于大多数情况。
+如果你的硬盘是内部硬盘（如系统盘或固定硬盘），建议使用 UUID。
+在 /etc/fstab 中填写的 UUID 是：6406AD3F06AD12DA。&lt;/li&gt;
+&lt;li&gt;使用 PARTUUID
+PARTUUID 是分区的唯一标识符，与文件系统无关。
+如果你的硬盘是动态的（例如 USB 硬盘或可能被重新格式化的硬盘），建议使用 PARTUUID。
+在 /etc/fstab 中填写的 PARTUUID 是：794b2add-e382-4ee2-a30a-b39955cf2df8。&lt;/li&gt;
+&lt;/ol&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;# / was on /dev/sda5 during curtin installation
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;/dev/disk/by-uuid/864029eb-f4d1-4bed-a532-0b142c4e309a / ext4 defaults 0 1
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;/swap.img       none    swap    sw      0       0
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;# PARTUUID=200~794b2add-e382-4ee2-a30a-b39955cf2df8 /mnt/kesu/ ntfs defaults 0 2
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;UUID=6406AD3F06AD12DA /mnt/kesu ntfs defaults 0 2
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;目前方案1可用不想去折腾方案2了，没折腾到可行目前&lt;/p&gt;
+</description>
         </item>
         
     </channel>

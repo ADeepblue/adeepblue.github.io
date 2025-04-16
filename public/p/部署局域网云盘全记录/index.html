@@ -292,6 +292,13 @@
       <ol>
         <li><a href="#单用户配置">单用户配置</a></li>
         <li><a href="#多用户配置">多用户配置</a></li>
+        <li><a href="#其他一些问题">其他一些问题</a></li>
+      </ol>
+    </li>
+    <li><a href="#其他">其他</a></li>
+    <li><a href="#开机自动挂载">开机自动挂载</a>
+      <ol>
+        <li><a href="#usb硬盘开机挂载">USB硬盘开机挂载</a></li>
       </ol>
     </li>
   </ol>
@@ -330,6 +337,14 @@
         
             <a href="/categories/linux/" >
                 Linux
+            </a>
+        
+            <a href="/categories/%E4%BA%91%E7%9B%98/" >
+                云盘
+            </a>
+        
+            <a href="/categories/%E6%9C%8D%E5%8A%A1%E5%99%A8/" >
+                服务器
             </a>
         
     </header>
@@ -610,7 +625,46 @@ sudo mkdir /mnt/e_drive</p>
 </span></span><span class="line"><span class="cl">writable = yes
 </span></span><span class="line"><span class="cl">available = yes
 </span></span><span class="line"><span class="cl">valid users = @users
-</span></span></code></pre></div>
+</span></span></code></pre></div><h3 id="其他一些问题">其他一些问题
+</h3><p>权限管理，如果只是上述的配置而并没有改动权限的话，有可能会遭遇无法访问的问题，我查看完我的e_drive文件夹，发现所有者和允许读写的用户都是root用户，此时就需要改动一些东西了，
+其中用户组部分上述已经提过了，chmod的参数g+rwx表示管理采用用户组，特定的用户组可以访问，以及是，使用chown来指定可以访问的用户组，如第二条命令就是指指定users可访问</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">root@deepblueubuntu:/home/deepblue# chmod -R g+rwx /mnt/e_drive/
+</span></span><span class="line"><span class="cl">root@deepblueubuntu:/home/deepblue# chown -R: users /mnt/e_drive/
+</span></span></code></pre></div><p>执行完上述两条指令后，你会发现可以访问了</p>
+<p>虽然文件夹所有者还是root，但是users内的用户可以进行读写和执行权限了</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">deepblue@deepblueubuntu:~$ ls -ld /mnt/e_drive/
+</span></span><span class="line"><span class="cl">drwxrwxr-x <span class="m">3</span> root users <span class="m">4096</span> Apr <span class="m">10</span> 16:19 /mnt/e_drive/
+</span></span></code></pre></div><h2 id="其他">其他
+</h2><p>手机端的访问我目前在用cx文件管理器，可以支持远程管理SMB协议的远程存储，mt管理器虽然有，但是要会员，不是太行</p>
+<h2 id="开机自动挂载">开机自动挂载
+</h2><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">sudo blkid /dev/sda2
+</span></span></code></pre></div><p>先用这个命令查看一下已经挂载的盘，</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">deepblue@deepblueubuntu:~$ sudo blkid /dev/sda2
+</span></span><span class="line"><span class="cl">/dev/sda2: LABEL=&#34;KESU&#34; UUID=&#34;6406AD3F06AD12DA&#34; TYPE=&#34;ntfs&#34; PARTLABEL=&#34;Basic data partition&#34; PARTUUID=&#34;794b2add-e382-4ee2-a30a-b39955cf2df8&#34;
+</span></span></code></pre></div><h3 id="usb硬盘开机挂载">USB硬盘开机挂载
+</h3><p>在 Ubuntu 系统中，要实现开机自动挂载硬盘，可以通过编辑 /etc/fstab 文件来实现。</p>
+<p>sudo vim /etc/fstab，末尾追加</p>
+<p>UUID=6406AD3F06AD12DA /mnt/kesu ntfs defaults 0 2</p>
+<p>其中UUID请自行替换上面获得的UUID字段</p>
+<p>AI 告诉我PARTUUID和UUID可以同时用，至少我现在注释的那条没法用上</p>
+<ol>
+<li>使用 UUID
+UUID 是文件系统的唯一标识符，适用于大多数情况。
+如果你的硬盘是内部硬盘（如系统盘或固定硬盘），建议使用 UUID。
+在 /etc/fstab 中填写的 UUID 是：6406AD3F06AD12DA。</li>
+<li>使用 PARTUUID
+PARTUUID 是分区的唯一标识符，与文件系统无关。
+如果你的硬盘是动态的（例如 USB 硬盘或可能被重新格式化的硬盘），建议使用 PARTUUID。
+在 /etc/fstab 中填写的 PARTUUID 是：794b2add-e382-4ee2-a30a-b39955cf2df8。</li>
+</ol>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl"># / was on /dev/sda5 during curtin installation
+</span></span><span class="line"><span class="cl">/dev/disk/by-uuid/864029eb-f4d1-4bed-a532-0b142c4e309a / ext4 defaults 0 1
+</span></span><span class="line"><span class="cl">/swap.img       none    swap    sw      0       0
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"># PARTUUID=200~794b2add-e382-4ee2-a30a-b39955cf2df8 /mnt/kesu/ ntfs defaults 0 2
+</span></span><span class="line"><span class="cl">UUID=6406AD3F06AD12DA /mnt/kesu ntfs defaults 0 2
+</span></span></code></pre></div><p>目前方案1可用不想去折腾方案2了，没折腾到可行目前</p>
+
 </section>
 
 
@@ -652,6 +706,39 @@ sudo mkdir /mnt/e_drive</p>
     
 
     
+
+<aside class="related-content--wrapper">
+    <h2 class="section-title">相关文章</h2>
+    <div class="related-content">
+        <div class="flex article-list--tile">
+            
+                
+<article class="has-image">
+    <a href="/p/ubuntu%E4%BD%BF%E7%94%A8%E6%8C%87%E5%8D%97/">
+        
+        
+            <div class="article-image">
+                <img src="/p/ubuntu%E4%BD%BF%E7%94%A8%E6%8C%87%E5%8D%97/Ubuntu-logo.76197133e285c2189844c2500ff2c25c_hu_28af739ca253f0f9.png" 
+                        width="250" 
+                        height="150" 
+                        loading="lazy"
+                        alt="Featured image of post Ubuntu使用指南"
+                        
+                        data-hash="md5-dhlxM&#43;KFwhiYRMJQD/LCXA==">
+                
+            </div>
+        
+
+        <div class="article-details">
+            <h2 class="article-title">Ubuntu使用指南</h2>
+        </div>
+    </a>
+</article>
+
+            
+        </div>
+    </div>
+</aside>
 
      
     

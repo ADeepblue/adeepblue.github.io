@@ -5,7 +5,7 @@ title = '部署局域网云盘全记录'
 math = true
 image = "smb_logo.png"
 categories = [
-    "ubuntu","linux"
+    "ubuntu","linux","云盘","服务器"
 ]
 +++
 
@@ -224,3 +224,70 @@ writable = yes
 available = yes
 valid users = @users
 ```
+
+### 其他一些问题
+
+权限管理，如果只是上述的配置而并没有改动权限的话，有可能会遭遇无法访问的问题，我查看完我的e_drive文件夹，发现所有者和允许读写的用户都是root用户，此时就需要改动一些东西了，
+其中用户组部分上述已经提过了，chmod的参数g+rwx表示管理采用用户组，特定的用户组可以访问，以及是，使用chown来指定可以访问的用户组，如第二条命令就是指指定users可访问
+
+```bash
+root@deepblueubuntu:/home/deepblue# chmod -R g+rwx /mnt/e_drive/
+root@deepblueubuntu:/home/deepblue# chown -R: users /mnt/e_drive/
+```
+
+执行完上述两条指令后，你会发现可以访问了
+
+虽然文件夹所有者还是root，但是users内的用户可以进行读写和执行权限了
+
+```bash
+deepblue@deepblueubuntu:~$ ls -ld /mnt/e_drive/
+drwxrwxr-x 3 root users 4096 Apr 10 16:19 /mnt/e_drive/
+```
+
+## 其他
+手机端的访问我目前在用cx文件管理器，可以支持远程管理SMB协议的远程存储，mt管理器虽然有，但是要会员，不是太行
+
+
+## 开机自动挂载
+
+```
+sudo blkid /dev/sda2
+```
+
+先用这个命令查看一下已经挂载的盘，
+
+```
+deepblue@deepblueubuntu:~$ sudo blkid /dev/sda2
+/dev/sda2: LABEL="KESU" UUID="6406AD3F06AD12DA" TYPE="ntfs" PARTLABEL="Basic data partition" PARTUUID="794b2add-e382-4ee2-a30a-b39955cf2df8"
+```
+
+### USB硬盘开机挂载
+在 Ubuntu 系统中，要实现开机自动挂载硬盘，可以通过编辑 /etc/fstab 文件来实现。
+
+sudo vim /etc/fstab，末尾追加
+
+UUID=6406AD3F06AD12DA /mnt/kesu ntfs defaults 0 2
+
+其中UUID请自行替换上面获得的UUID字段
+
+AI 告诉我PARTUUID和UUID可以同时用，至少我现在注释的那条没法用上
+
+1. 使用 UUID
+UUID 是文件系统的唯一标识符，适用于大多数情况。
+如果你的硬盘是内部硬盘（如系统盘或固定硬盘），建议使用 UUID。
+在 /etc/fstab 中填写的 UUID 是：6406AD3F06AD12DA。
+2. 使用 PARTUUID
+PARTUUID 是分区的唯一标识符，与文件系统无关。
+如果你的硬盘是动态的（例如 USB 硬盘或可能被重新格式化的硬盘），建议使用 PARTUUID。
+在 /etc/fstab 中填写的 PARTUUID 是：794b2add-e382-4ee2-a30a-b39955cf2df8。
+
+```
+# / was on /dev/sda5 during curtin installation
+/dev/disk/by-uuid/864029eb-f4d1-4bed-a532-0b142c4e309a / ext4 defaults 0 1
+/swap.img       none    swap    sw      0       0
+
+# PARTUUID=200~794b2add-e382-4ee2-a30a-b39955cf2df8 /mnt/kesu/ ntfs defaults 0 2
+UUID=6406AD3F06AD12DA /mnt/kesu ntfs defaults 0 2
+```
+
+目前方案1可用不想去折腾方案2了，没折腾到可行目前
