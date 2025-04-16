@@ -1,51 +1,13 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
     <channel>
-        <title>Ubuntu on 深蓝之亘的博客</title>
-        <link>https://adeepblue.github.io/categories/ubuntu/</link>
-        <description>Recent content in Ubuntu on 深蓝之亘的博客</description>
+        <title>云盘 on 深蓝之亘的博客</title>
+        <link>https://adeepblue.github.io/categories/%E4%BA%91%E7%9B%98/</link>
+        <description>Recent content in 云盘 on 深蓝之亘的博客</description>
         <generator>Hugo -- gohugo.io</generator>
         <language>zh-cn</language>
         <copyright>深蓝之亘</copyright>
-        <lastBuildDate>Fri, 11 Apr 2025 23:00:45 +0800</lastBuildDate><atom:link href="https://adeepblue.github.io/categories/ubuntu/index.xml" rel="self" type="application/rss+xml" /><item>
-        <title>Ubuntu使用指南</title>
-        <link>https://adeepblue.github.io/p/ubuntu%E4%BD%BF%E7%94%A8%E6%8C%87%E5%8D%97/</link>
-        <pubDate>Fri, 11 Apr 2025 23:00:45 +0800</pubDate>
-        
-        <guid>https://adeepblue.github.io/p/ubuntu%E4%BD%BF%E7%94%A8%E6%8C%87%E5%8D%97/</guid>
-        <description>&lt;img src="https://adeepblue.github.io/p/ubuntu%E4%BD%BF%E7%94%A8%E6%8C%87%E5%8D%97/Ubuntu-logo.png" alt="Featured image of post Ubuntu使用指南" /&gt;&lt;h1 id=&#34;一些实用功能&#34;&gt;一些实用功能
-&lt;/h1&gt;&lt;blockquote&gt;
-&lt;p&gt;终端环境下的文件传输工具lrzsz&lt;/p&gt;&lt;/blockquote&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;sudo apt install -y lrzsz
-&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;使用即是在Ubuntu终端环境输入rz即可使用&lt;/p&gt;
-&lt;blockquote&gt;
-&lt;p&gt;移动文件:mv&lt;/p&gt;&lt;/blockquote&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;mv  --option (source_file|source_folder) (target_file|target_folder)
-&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;blockquote&gt;
-&lt;p&gt;apt
-sudo apt search
-机制是在source.list中找是否有对应的包，镜像中
-sudo apt clean清理缓存&lt;/p&gt;&lt;/blockquote&gt;
-&lt;blockquote&gt;
-&lt;p&gt;压缩解压工具 7zip
-sudo apt install p7zip-full&lt;/p&gt;&lt;/blockquote&gt;
-&lt;h2 id=&#34;vim&#34;&gt;vim
-&lt;/h2&gt;&lt;p&gt;ctrl f向下翻页
-ctrl b向上翻页&lt;/p&gt;
-&lt;p&gt;/UUID
-回车
-n N&lt;/p&gt;
-&lt;h2 id=&#34;更改时区&#34;&gt;更改时区
-&lt;/h2&gt;&lt;p&gt;sudo timedatectl set-timezone Asia/Shanghai&lt;/p&gt;
-&lt;h2 id=&#34;关机&#34;&gt;关机
-&lt;/h2&gt;&lt;p&gt;shutdown
--P 关机
--r 重启
-now立即
-shutdown -r now&lt;/p&gt;
-</description>
-        </item>
-        <item>
+        <lastBuildDate>Tue, 08 Apr 2025 11:04:34 +0800</lastBuildDate><atom:link href="https://adeepblue.github.io/categories/%E4%BA%91%E7%9B%98/index.xml" rel="self" type="application/rss+xml" /><item>
         <title>部署局域网云盘全记录</title>
         <link>https://adeepblue.github.io/p/%E9%83%A8%E7%BD%B2%E5%B1%80%E5%9F%9F%E7%BD%91%E4%BA%91%E7%9B%98%E5%85%A8%E8%AE%B0%E5%BD%95/</link>
         <pubDate>Tue, 08 Apr 2025 11:04:34 +0800</pubDate>

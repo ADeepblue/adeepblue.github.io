@@ -7,10 +7,10 @@
         <generator>Hugo -- gohugo.io</generator>
         <language>zh-cn</language>
         <copyright>深蓝之亘</copyright>
-        <lastBuildDate>Tue, 08 Apr 2025 11:04:34 +0800</lastBuildDate><atom:link href="https://adeepblue.github.io/categories/index.xml" rel="self" type="application/rss+xml" /><item>
+        <lastBuildDate>Fri, 11 Apr 2025 23:00:45 +0800</lastBuildDate><atom:link href="https://adeepblue.github.io/categories/index.xml" rel="self" type="application/rss+xml" /><item>
         <title>Linux</title>
         <link>https://adeepblue.github.io/categories/linux/</link>
-        <pubDate>Tue, 08 Apr 2025 11:04:34 +0800</pubDate>
+        <pubDate>Fri, 11 Apr 2025 23:00:45 +0800</pubDate>
         
         <guid>https://adeepblue.github.io/categories/linux/</guid>
         <description></description>
@@ -18,9 +18,25 @@
         <item>
         <title>Ubuntu</title>
         <link>https://adeepblue.github.io/categories/ubuntu/</link>
-        <pubDate>Tue, 08 Apr 2025 11:04:34 +0800</pubDate>
+        <pubDate>Fri, 11 Apr 2025 23:00:45 +0800</pubDate>
         
         <guid>https://adeepblue.github.io/categories/ubuntu/</guid>
+        <description></description>
+        </item>
+        <item>
+        <title>服务器</title>
+        <link>https://adeepblue.github.io/categories/%E6%9C%8D%E5%8A%A1%E5%99%A8/</link>
+        <pubDate>Tue, 08 Apr 2025 11:04:34 +0800</pubDate>
+        
+        <guid>https://adeepblue.github.io/categories/%E6%9C%8D%E5%8A%A1%E5%99%A8/</guid>
+        <description></description>
+        </item>
+        <item>
+        <title>云盘</title>
+        <link>https://adeepblue.github.io/categories/%E4%BA%91%E7%9B%98/</link>
+        <pubDate>Tue, 08 Apr 2025 11:04:34 +0800</pubDate>
+        
+        <guid>https://adeepblue.github.io/categories/%E4%BA%91%E7%9B%98/</guid>
         <description></description>
         </item>
         <item>
