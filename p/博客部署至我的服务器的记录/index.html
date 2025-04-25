@@ -1,19 +1,19 @@
 <!DOCTYPE html>
 <html lang="zh-cn" dir="ltr">
     <head><meta charset='utf-8'>
-<meta name='viewport' content='width=device-width, initial-scale=1'><meta name='description' content="一些实用功能 终端环境下的文件传输工具lrzsz\nsudo apt install -y lrzsz 使用即是在Ubuntu终端环境输入rz即可使用\n移动文件:mv\nmv --option (source_file|source_folder) (target_file|target_folder) apt sudo apt search 机制是在source.list中找是否有对应的包，镜像中 sudo apt clean清理缓存\n">
-<title>Ubuntu使用指南</title>
+<meta name='viewport' content='width=device-width, initial-scale=1'><meta name='description' content="部署hugo项目到我的服务器的全流程记录 安装nginx 首先给我的服务器安装上nginx\nsudo apt install nginx 安装成功后测试一下nginx的运行状态，如果看到像我这样即为成功\ndeepblue@deepblueubuntu:~$ sudo systemctl is-active nginx active 如果发现没启动使用sudo systemctl start nginx启用服务即可\n">
+<title>博客部署至我的服务器的记录</title>
 
-<link rel='canonical' href='https://adeepblue.github.io/p/ubuntu%E4%BD%BF%E7%94%A8%E6%8C%87%E5%8D%97/'>
+<link rel='canonical' href='https://adeepblue.github.io/p/%E5%8D%9A%E5%AE%A2%E9%83%A8%E7%BD%B2%E8%87%B3%E6%88%91%E7%9A%84%E6%9C%8D%E5%8A%A1%E5%99%A8%E7%9A%84%E8%AE%B0%E5%BD%95/'>
 
-<link rel="stylesheet" href="/scss/style.min.663803bebe609202d5b39d848f2d7c2dc8b598a2d879efa079fa88893d29c49c.css"><meta property='og:title' content="Ubuntu使用指南">
-<meta property='og:description' content="一些实用功能 终端环境下的文件传输工具lrzsz\nsudo apt install -y lrzsz 使用即是在Ubuntu终端环境输入rz即可使用\n移动文件:mv\nmv --option (source_file|source_folder) (target_file|target_folder) apt sudo apt search 机制是在source.list中找是否有对应的包，镜像中 sudo apt clean清理缓存\n">
-<meta property='og:url' content='https://adeepblue.github.io/p/ubuntu%E4%BD%BF%E7%94%A8%E6%8C%87%E5%8D%97/'>
+<link rel="stylesheet" href="/scss/style.min.663803bebe609202d5b39d848f2d7c2dc8b598a2d879efa079fa88893d29c49c.css"><meta property='og:title' content="博客部署至我的服务器的记录">
+<meta property='og:description' content="部署hugo项目到我的服务器的全流程记录 安装nginx 首先给我的服务器安装上nginx\nsudo apt install nginx 安装成功后测试一下nginx的运行状态，如果看到像我这样即为成功\ndeepblue@deepblueubuntu:~$ sudo systemctl is-active nginx active 如果发现没启动使用sudo systemctl start nginx启用服务即可\n">
+<meta property='og:url' content='https://adeepblue.github.io/p/%E5%8D%9A%E5%AE%A2%E9%83%A8%E7%BD%B2%E8%87%B3%E6%88%91%E7%9A%84%E6%9C%8D%E5%8A%A1%E5%99%A8%E7%9A%84%E8%AE%B0%E5%BD%95/'>
 <meta property='og:site_name' content='深蓝之亘的博客'>
-<meta property='og:type' content='article'><meta property='article:section' content='Post' /><meta property='article:published_time' content='2025-04-11T23:00:45&#43;08:00'/><meta property='article:modified_time' content='2025-04-11T23:00:45&#43;08:00'/><meta property='og:image' content='https://adeepblue.github.io/p/ubuntu%E4%BD%BF%E7%94%A8%E6%8C%87%E5%8D%97/Ubuntu-logo.png' />
-<meta name="twitter:title" content="Ubuntu使用指南">
-<meta name="twitter:description" content="一些实用功能 终端环境下的文件传输工具lrzsz\nsudo apt install -y lrzsz 使用即是在Ubuntu终端环境输入rz即可使用\n移动文件:mv\nmv --option (source_file|source_folder) (target_file|target_folder) apt sudo apt search 机制是在source.list中找是否有对应的包，镜像中 sudo apt clean清理缓存\n"><meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:image" content='https://adeepblue.github.io/p/ubuntu%E4%BD%BF%E7%94%A8%E6%8C%87%E5%8D%97/Ubuntu-logo.png' />
+<meta property='og:type' content='article'><meta property='article:section' content='Post' /><meta property='article:published_time' content='2025-04-17T10:23:37&#43;08:00'/><meta property='article:modified_time' content='2025-04-17T10:23:37&#43;08:00'/><meta property='og:image' content='https://adeepblue.github.io/p/%E5%8D%9A%E5%AE%A2%E9%83%A8%E7%BD%B2%E8%87%B3%E6%88%91%E7%9A%84%E6%9C%8D%E5%8A%A1%E5%99%A8%E7%9A%84%E8%AE%B0%E5%BD%95/Logo_of_Hugo_the_static_website_generator.svg.png' />
+<meta name="twitter:title" content="博客部署至我的服务器的记录">
+<meta name="twitter:description" content="部署hugo项目到我的服务器的全流程记录 安装nginx 首先给我的服务器安装上nginx\nsudo apt install nginx 安装成功后测试一下nginx的运行状态，如果看到像我这样即为成功\ndeepblue@deepblueubuntu:~$ sudo systemctl is-active nginx active 如果发现没启动使用sudo systemctl start nginx启用服务即可\n"><meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:image" content='https://adeepblue.github.io/p/%E5%8D%9A%E5%AE%A2%E9%83%A8%E7%BD%B2%E8%87%B3%E6%88%91%E7%9A%84%E6%9C%8D%E5%8A%A1%E5%99%A8%E7%9A%84%E8%AE%B0%E5%BD%95/Logo_of_Hugo_the_static_website_generator.svg.png' />
     <link rel="shortcut icon" href="/favicon.ico" />
 
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0-rc.1/katex.min.css">
@@ -270,12 +270,9 @@
         <div class="widget--toc">
             <nav id="TableOfContents">
   <ol>
-    <li><a href="#vim">vim</a></li>
-    <li><a href="#更改时区">更改时区</a></li>
-    <li><a href="#关机">关机</a></li>
-    <li><a href="#查看开放端口状态">查看开放端口状态</a></li>
-    <li><a href="#ssh密钥">ssh密钥</a></li>
-    <li><a href="#shell文件传输">shell文件传输</a></li>
+    <li><a href="#安装nginx">安装nginx</a></li>
+    <li><a href="#配置nginx">配置nginx</a></li>
+    <li><a href="#上传自动化">上传自动化</a></li>
   </ol>
 </nav>
         </div>
@@ -290,13 +287,13 @@
     <article class="has-image main-article">
     <header class="article-header">
         <div class="article-image">
-            <a href="/p/ubuntu%E4%BD%BF%E7%94%A8%E6%8C%87%E5%8D%97/">
-                <img src="/p/ubuntu%E4%BD%BF%E7%94%A8%E6%8C%87%E5%8D%97/Ubuntu-logo_hu_afe543e57928bdfe.png"
-                        srcset="/p/ubuntu%E4%BD%BF%E7%94%A8%E6%8C%87%E5%8D%97/Ubuntu-logo_hu_afe543e57928bdfe.png 800w, /p/ubuntu%E4%BD%BF%E7%94%A8%E6%8C%87%E5%8D%97/Ubuntu-logo_hu_d047f0281ccd7895.png 1600w"
+            <a href="/p/%E5%8D%9A%E5%AE%A2%E9%83%A8%E7%BD%B2%E8%87%B3%E6%88%91%E7%9A%84%E6%9C%8D%E5%8A%A1%E5%99%A8%E7%9A%84%E8%AE%B0%E5%BD%95/">
+                <img src="/p/%E5%8D%9A%E5%AE%A2%E9%83%A8%E7%BD%B2%E8%87%B3%E6%88%91%E7%9A%84%E6%9C%8D%E5%8A%A1%E5%99%A8%E7%9A%84%E8%AE%B0%E5%BD%95/Logo_of_Hugo_the_static_website_generator.svg_hu_8dc9089637a27f72.png"
+                        srcset="/p/%E5%8D%9A%E5%AE%A2%E9%83%A8%E7%BD%B2%E8%87%B3%E6%88%91%E7%9A%84%E6%9C%8D%E5%8A%A1%E5%99%A8%E7%9A%84%E8%AE%B0%E5%BD%95/Logo_of_Hugo_the_static_website_generator.svg_hu_8dc9089637a27f72.png 800w, /p/%E5%8D%9A%E5%AE%A2%E9%83%A8%E7%BD%B2%E8%87%B3%E6%88%91%E7%9A%84%E6%9C%8D%E5%8A%A1%E5%99%A8%E7%9A%84%E8%AE%B0%E5%BD%95/Logo_of_Hugo_the_static_website_generator.svg_hu_ad5d0cbb022a76af.png 1600w"
                         width="800" 
-                        height="450" 
+                        height="219" 
                         loading="lazy"
-                        alt="Featured image of post Ubuntu使用指南" />
+                        alt="Featured image of post 博客部署至我的服务器的记录" />
                 
             </a>
         </div>
@@ -314,12 +311,20 @@
                 Linux
             </a>
         
+            <a href="/categories/hugo/" style="background-color: #2a9d8f; color: #fff;">
+                Hugo
+            </a>
+        
+            <a href="/categories/nginx/" >
+                Nginx
+            </a>
+        
     </header>
     
 
     <div class="article-title-wrapper">
         <h2 class="article-title">
-            <a href="/p/ubuntu%E4%BD%BF%E7%94%A8%E6%8C%87%E5%8D%97/">Ubuntu使用指南</a>
+            <a href="/p/%E5%8D%9A%E5%AE%A2%E9%83%A8%E7%BD%B2%E8%87%B3%E6%88%91%E7%9A%84%E6%9C%8D%E5%8A%A1%E5%99%A8%E7%9A%84%E8%AE%B0%E5%BD%95/">博客部署至我的服务器的记录</a>
         </h2>
     
         
@@ -341,7 +346,7 @@
   <path d="M3 11h16" />
   <path d="M18 16.496v1.504l1 1" />
 </svg>
-                <time class="article-time--published">2025-04-11</time>
+                <time class="article-time--published">2025-04-17</time>
             </div>
         
 
@@ -357,40 +362,49 @@
     <section class="article-content">
     
     
-    <h1 id="一些实用功能">一些实用功能
-</h1><blockquote>
-<p>终端环境下的文件传输工具lrzsz</p></blockquote>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">sudo apt install -y lrzsz
-</span></span></code></pre></div><p>使用即是在Ubuntu终端环境输入rz即可使用</p>
-<blockquote>
-<p>移动文件:mv</p></blockquote>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">mv  --option (source_file|source_folder) (target_file|target_folder)
-</span></span></code></pre></div><blockquote>
-<p>apt
-sudo apt search
-机制是在source.list中找是否有对应的包，镜像中
-sudo apt clean清理缓存</p></blockquote>
-<blockquote>
-<p>压缩解压工具 7zip
-sudo apt install p7zip-full</p></blockquote>
-<h2 id="vim">vim
-</h2><p>ctrl f向下翻页
-ctrl b向上翻页</p>
-<p>/UUID
-回车
-n N</p>
-<h2 id="更改时区">更改时区
-</h2><p>sudo timedatectl set-timezone Asia/Shanghai</p>
-<h2 id="关机">关机
-</h2><p>shutdown
--P 关机
--r 重启
-now立即
-shutdown -r now</p>
-<h2 id="查看开放端口状态">查看开放端口状态
-</h2><p>netstat -tuln</p>
-<h2 id="ssh密钥">ssh密钥
-</h2><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">
+    <h1 id="部署hugo项目到我的服务器的全流程记录">部署hugo项目到我的服务器的全流程记录
+</h1><h2 id="安装nginx">安装nginx
+</h2><p>首先给我的服务器安装上nginx</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">sudo apt install nginx
+</span></span></code></pre></div><p>安装成功后测试一下nginx的运行状态，如果看到像我这样即为成功</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">deepblue@deepblueubuntu:~$  sudo systemctl is-active nginx
+</span></span><span class="line"><span class="cl">active
+</span></span></code></pre></div><p>如果发现没启动使用<code>sudo systemctl start nginx</code>启用服务即可</p>
+<p>默认nginx启用的是80端口，也就是直接访问IP地址就是等效于访问80端口，安装后访问IP地址出现欢迎界面即为成功</p>
+<h2 id="配置nginx">配置nginx
+</h2><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">vim /etc/nginx/sites-available/default
+</span></span></code></pre></div><p>你将见到下列内容，不过我的建议是最好修改前做好备份，一个要修改的内容就是其中listen的第一个值，修改成你想要的端口，如果很多IP默认端口都是80会引起重复，像我就目前改成的4448端口，
+另一个是root，也就是基于什么目录的，我先把我的发布页的所有内容移到上面去，root后面跟上我的移动的地址，其中必须包含index.html入口HTML文件</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-vim" data-lang="vim"><span class="line"><span class="cl"> <span class="nx">server</span> {
+</span></span><span class="line"><span class="cl">       # <span class="nx">listen</span> <span class="m">80</span> <span class="nx">default_server</span>; # <span class="nx">原始内容</span>
+</span></span><span class="line"><span class="cl">       <span class="nx">listen</span> <span class="m">4448</span> <span class="nx">default_server</span>; # <span class="nx">修改后的内容</span>
+</span></span><span class="line"><span class="cl">       <span class="nx">listen</span> [::]:<span class="m">80</span> <span class="nx">default_server</span>;
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">        # <span class="nx">SSL</span> <span class="nx">configuration</span>
+</span></span><span class="line"><span class="cl">        #
+</span></span><span class="line"><span class="cl">        # <span class="nx">listen</span> <span class="m">443</span> <span class="nx">ssl</span> <span class="nx">default_server</span>;
+</span></span><span class="line"><span class="cl">        # <span class="nx">listen</span> [::]:<span class="m">443</span> <span class="nx">ssl</span> <span class="nx">default_server</span>;
+</span></span><span class="line"><span class="cl">        #
+</span></span><span class="line"><span class="cl">        # <span class="nx">Note</span>: <span class="nx">You</span> <span class="nx">should</span> <span class="nx">disable</span> <span class="nx">gzip</span> <span class="nx">for</span> <span class="nx">SSL</span> <span class="nx">traffic</span>.
+</span></span><span class="line"><span class="cl">        # <span class="nx">See</span>: <span class="nx">https</span>:<span class="sr">//</span><span class="nx">bugs</span>.<span class="nx">debian</span>.<span class="nx">org</span>/<span class="m">773332</span>
+</span></span><span class="line"><span class="cl">        #
+</span></span><span class="line"><span class="cl">        # <span class="nx">Read</span> <span class="nx">up</span> <span class="nx">on</span> <span class="nx">ssl_ciphers</span> <span class="nx">to</span> <span class="nx">ensure</span> <span class="nx">a</span> <span class="nx">secure</span> <span class="nx">configuration</span>.
+</span></span><span class="line"><span class="cl">        # <span class="nx">See</span>: <span class="nx">https</span>:<span class="sr">//</span><span class="nx">bugs</span>.<span class="nx">debian</span>.<span class="nx">org</span>/<span class="m">765782</span>
+</span></span><span class="line"><span class="cl">        #
+</span></span><span class="line"><span class="cl">        # <span class="nx">Self</span> <span class="nx">signed</span> <span class="nx">certs</span> <span class="nx">generated</span> <span class="nx">by</span> <span class="nx">the</span> <span class="nx">ssl</span><span class="p">-</span><span class="nx">cert</span> <span class="nx">package</span>
+</span></span><span class="line"><span class="cl">        # <span class="nx">Don</span>&#39;<span class="nx">t</span> <span class="nx">use</span> <span class="nx">them</span> <span class="nx">in</span> <span class="nx">a</span> <span class="nx">production</span> <span class="nx">server</span><span class="p">!</span>
+</span></span><span class="line"><span class="cl">        #
+</span></span><span class="line"><span class="cl">        # <span class="nx">include</span> <span class="nx">snippets</span>/<span class="nx">snakeoil</span>.<span class="nx">conf</span>;
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">       # <span class="nx">root</span> <span class="sr">/var/</span><span class="nx">www</span>/<span class="nx">html</span>; # <span class="nx">原始内容</span>
+</span></span><span class="line"><span class="cl">       <span class="nx">root</span> <span class="sr">/home/</span><span class="nx">deepblue</span><span class="sr">/my_projects/</span><span class="nx">my</span><span class="p">-</span><span class="nx">blog</span>/<span class="nx">public</span>; # <span class="nx">修改后的内容</span>
+</span></span><span class="line"><span class="cl">       ......
+</span></span><span class="line"><span class="cl">       
+</span></span><span class="line"><span class="cl">}       
+</span></span></code></pre></div><p><span style="color:red">IP端口修改得重启后才生效</span>，默认80端口是IP端口,也就是192.168.0.200即是192.168.0.200:80端口，两者等效</p>
+<h2 id="上传自动化">上传自动化
+</h2><p>如果需要进一步的方便的话，得需要配置自动化了，首先sudo su的身份进入root账户，然后开始以下方法生成密钥，其中文件路径名（/root/.ssh/deepblue_rsa这是我的）最好提前先复制好，貌似修改文件名就会影响密钥判断？</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">
 </span></span><span class="line"><span class="cl">root@deepblueubuntu:/home/deepblue# ssh-keygen 
 </span></span><span class="line"><span class="cl">Generating public/private rsa key pair.
 </span></span><span class="line"><span class="cl">Enter file in which to save the key <span class="o">(</span>/root/.ssh/id_rsa<span class="o">)</span>: /roo	^H^H^H^H^H^C
@@ -415,18 +429,11 @@ shutdown -r now</p>
 </span></span><span class="line"><span class="cl">
 </span></span><span class="line"><span class="cl"><span class="nx">AuthorizedKeysFile</span>      .<span class="nx">ssh</span><span class="sr">/authorized_keys  .ssh/</span><span class="nx">authorized_keys2</span> # <span class="nx">指定公钥存放的位置</span>
 </span></span></code></pre></div><p>然后使用<code>esc :wq!</code>强制保存即可</p>
+<p>然后在linux终端使用(Ubuntu环境)sz命令传回文件即可，详解参考《Ubuntu使用指南》中的 shell文件传输 板块即可</p>
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">sz /root/.ssh/deepblue_rsa
-</span></span></code></pre></div><p>配合文件传输可以拿到密钥文件</p>
-<h2 id="shell文件传输">shell文件传输
-</h2><p>安装以下包
-sudo apt install -y lrzsz
-命令工具为 sz 和 rz</p>
-<p>以下内容来自AI
-sz 和 rz 是基于 Zmodem 协议的文件传输命令，二者在使用场景和功能上存在明显区别，具体如下：
-功能用途
-sz ：用于将在 Linux 服务器上的文件发送到本地计算机。比如，当你在远程 Linux 服务器上通过终端操作，想要把服务器上的某个日志文件、配置文件等下载到本地时，就可以使用 sz 命令。
-rz ：用于将本地计算机的文件上传到 Linux 服务器上。例如，需要把本地编写好的代码文件、配置文件等上传到服务器进行部署或使用时，rz 命令就能派上用场。</p>
-
+</span></span></code></pre></div><p>拿到密钥后在你的上传bat内加入以下内容即可，-i参数后是密钥文件地址，后面是要登录的账户，最后跟上你想执行的命令，目前是重启nginx服务，以上，完成了所有自动化</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">ssh -i %userprofile%/.ssh<span class="se">\d</span>eepblue_rsa root@192.168.0.200 systemctl restart nginx
+</span></span></code></pre></div>
 </section>
 
 
@@ -476,30 +483,6 @@ rz ：用于将本地计算机的文件上传到 Linux 服务器上。例如，�
             
                 
 <article class="has-image">
-    <a href="/p/%E5%8D%9A%E5%AE%A2%E9%83%A8%E7%BD%B2%E8%87%B3%E6%88%91%E7%9A%84%E6%9C%8D%E5%8A%A1%E5%99%A8%E7%9A%84%E8%AE%B0%E5%BD%95/">
-        
-        
-            <div class="article-image">
-                <img src="/p/%E5%8D%9A%E5%AE%A2%E9%83%A8%E7%BD%B2%E8%87%B3%E6%88%91%E7%9A%84%E6%9C%8D%E5%8A%A1%E5%99%A8%E7%9A%84%E8%AE%B0%E5%BD%95/Logo_of_Hugo_the_static_website_generator.svg.f377d11cae4362ef5020fe0407a3a9b5_hu_f59ce97e7f69df13.png" 
-                        width="250" 
-                        height="150" 
-                        loading="lazy"
-                        alt="Featured image of post 博客部署至我的服务器的记录"
-                        
-                        data-hash="md5-83fRHK5DYu9QIP4EB6OptQ==">
-                
-            </div>
-        
-
-        <div class="article-details">
-            <h2 class="article-title">博客部署至我的服务器的记录</h2>
-        </div>
-    </a>
-</article>
-
-            
-                
-<article class="has-image">
     <a href="/p/docker%E8%AE%B0%E5%BD%95/">
         
         
@@ -512,6 +495,30 @@ rz ：用于将本地计算机的文件上传到 Linux 服务器上。例如，�
 
         <div class="article-details">
             <h2 class="article-title">Docker记录</h2>
+        </div>
+    </a>
+</article>
+
+            
+                
+<article class="has-image">
+    <a href="/p/ubuntu%E4%BD%BF%E7%94%A8%E6%8C%87%E5%8D%97/">
+        
+        
+            <div class="article-image">
+                <img src="/p/ubuntu%E4%BD%BF%E7%94%A8%E6%8C%87%E5%8D%97/Ubuntu-logo.76197133e285c2189844c2500ff2c25c_hu_28af739ca253f0f9.png" 
+                        width="250" 
+                        height="150" 
+                        loading="lazy"
+                        alt="Featured image of post Ubuntu使用指南"
+                        
+                        data-hash="md5-dhlxM&#43;KFwhiYRMJQD/LCXA==">
+                
+            </div>
+        
+
+        <div class="article-details">
+            <h2 class="article-title">Ubuntu使用指南</h2>
         </div>
     </a>
 </article>
@@ -536,6 +543,30 @@ rz ：用于将本地计算机的文件上传到 Linux 服务器上。例如，�
 
         <div class="article-details">
             <h2 class="article-title">部署局域网云盘全记录</h2>
+        </div>
+    </a>
+</article>
+
+            
+                
+<article class="has-image">
+    <a href="/p/hugo%E5%88%9D%E5%A7%8B%E5%8C%96%E7%BD%91%E7%AB%99%E7%AC%94%E8%AE%B0/">
+        
+        
+            <div class="article-image">
+                <img src="/p/hugo%E5%88%9D%E5%A7%8B%E5%8C%96%E7%BD%91%E7%AB%99%E7%AC%94%E8%AE%B0/Logo_of_Hugo_the_static_website_generator.svg.f377d11cae4362ef5020fe0407a3a9b5_hu_f59ce97e7f69df13.png" 
+                        width="250" 
+                        height="150" 
+                        loading="lazy"
+                        alt="Featured image of post Hugo初始化网站笔记"
+                        
+                        data-hash="md5-83fRHK5DYu9QIP4EB6OptQ==">
+                
+            </div>
+        
+
+        <div class="article-details">
+            <h2 class="article-title">Hugo初始化网站笔记</h2>
         </div>
     </a>
 </article>

@@ -3,27 +3,42 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
     <loc>https://adeepblue.github.io/</loc>
-    <lastmod>2025-04-14T23:21:09+08:00</lastmod>
+    <lastmod>2025-04-25T23:09:24+08:00</lastmod>
   </url><url>
     <loc>https://adeepblue.github.io/post/</loc>
-    <lastmod>2025-04-14T23:21:09+08:00</lastmod>
+    <lastmod>2025-04-25T23:09:24+08:00</lastmod>
   </url><url>
     <loc>https://adeepblue.github.io/categories/</loc>
-    <lastmod>2025-04-11T23:00:45+08:00</lastmod>
+    <lastmod>2025-04-17T10:23:37+08:00</lastmod>
+  </url><url>
+    <loc>https://adeepblue.github.io/categories/hugo/</loc>
+    <lastmod>2025-04-17T10:23:37+08:00</lastmod>
   </url><url>
     <loc>https://adeepblue.github.io/categories/linux/</loc>
-    <lastmod>2025-04-11T23:00:45+08:00</lastmod>
+    <lastmod>2025-04-17T10:23:37+08:00</lastmod>
+  </url><url>
+    <loc>https://adeepblue.github.io/categories/nginx/</loc>
+    <lastmod>2025-04-17T10:23:37+08:00</lastmod>
   </url><url>
     <loc>https://adeepblue.github.io/categories/ubuntu/</loc>
-    <lastmod>2025-04-11T23:00:45+08:00</lastmod>
+    <lastmod>2025-04-17T10:23:37+08:00</lastmod>
+  </url><url>
+    <loc>https://adeepblue.github.io/p/%E5%8D%9A%E5%AE%A2%E9%83%A8%E7%BD%B2%E8%87%B3%E6%88%91%E7%9A%84%E6%9C%8D%E5%8A%A1%E5%99%A8%E7%9A%84%E8%AE%B0%E5%BD%95/</loc>
+    <lastmod>2025-04-17T10:23:37+08:00</lastmod>
+  </url><url>
+    <loc>https://adeepblue.github.io/categories/docker/</loc>
+    <lastmod>2025-04-14T23:21:09+08:00</lastmod>
+  </url><url>
+    <loc>https://adeepblue.github.io/p/docker%E8%AE%B0%E5%BD%95/</loc>
+    <lastmod>2025-04-14T23:21:09+08:00</lastmod>
+  </url><url>
+    <loc>https://adeepblue.github.io/categories/%E6%9C%8D%E5%8A%A1%E5%99%A8/</loc>
+    <lastmod>2025-04-14T23:21:09+08:00</lastmod>
   </url><url>
     <loc>https://adeepblue.github.io/p/ubuntu%E4%BD%BF%E7%94%A8%E6%8C%87%E5%8D%97/</loc>
     <lastmod>2025-04-11T23:00:45+08:00</lastmod>
   </url><url>
     <loc>https://adeepblue.github.io/p/%E9%83%A8%E7%BD%B2%E5%B1%80%E5%9F%9F%E7%BD%91%E4%BA%91%E7%9B%98%E5%85%A8%E8%AE%B0%E5%BD%95/</loc>
-    <lastmod>2025-04-08T11:04:34+08:00</lastmod>
-  </url><url>
-    <loc>https://adeepblue.github.io/categories/%E6%9C%8D%E5%8A%A1%E5%99%A8/</loc>
     <lastmod>2025-04-08T11:04:34+08:00</lastmod>
   </url><url>
     <loc>https://adeepblue.github.io/categories/%E4%BA%91%E7%9B%98/</loc>
@@ -105,9 +120,6 @@
     <lastmod>2025-02-04T22:34:00+08:00</lastmod>
   </url><url>
     <loc>https://adeepblue.github.io/p/cmd%E5%91%BD%E4%BB%A4%E4%BB%8B%E7%BB%8D/</loc>
-    <lastmod>2025-02-04T22:34:00+08:00</lastmod>
-  </url><url>
-    <loc>https://adeepblue.github.io/categories/hugo/</loc>
     <lastmod>2025-02-04T22:34:00+08:00</lastmod>
   </url><url>
     <loc>https://adeepblue.github.io/p/hugo%E5%88%9D%E5%A7%8B%E5%8C%96%E7%BD%91%E7%AB%99%E7%AC%94%E8%AE%B0/</loc>

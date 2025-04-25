@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+    <channel>
+        <title>Nginx on 深蓝之亘的博客</title>
+        <link>https://adeepblue.github.io/categories/nginx/</link>
+        <description>Recent content in Nginx on 深蓝之亘的博客</description>
+        <generator>Hugo -- gohugo.io</generator>
+        <language>zh-cn</language>
+        <copyright>深蓝之亘</copyright>
+        <lastBuildDate>Thu, 17 Apr 2025 10:23:37 +0800</lastBuildDate><atom:link href="https://adeepblue.github.io/categories/nginx/index.xml" rel="self" type="application/rss+xml" /><item>
+        <title>博客部署至我的服务器的记录</title>
+        <link>https://adeepblue.github.io/p/%E5%8D%9A%E5%AE%A2%E9%83%A8%E7%BD%B2%E8%87%B3%E6%88%91%E7%9A%84%E6%9C%8D%E5%8A%A1%E5%99%A8%E7%9A%84%E8%AE%B0%E5%BD%95/</link>
+        <pubDate>Thu, 17 Apr 2025 10:23:37 +0800</pubDate>
+        
+        <guid>https://adeepblue.github.io/p/%E5%8D%9A%E5%AE%A2%E9%83%A8%E7%BD%B2%E8%87%B3%E6%88%91%E7%9A%84%E6%9C%8D%E5%8A%A1%E5%99%A8%E7%9A%84%E8%AE%B0%E5%BD%95/</guid>
+        <description>&lt;img src="https://adeepblue.github.io/p/%E5%8D%9A%E5%AE%A2%E9%83%A8%E7%BD%B2%E8%87%B3%E6%88%91%E7%9A%84%E6%9C%8D%E5%8A%A1%E5%99%A8%E7%9A%84%E8%AE%B0%E5%BD%95/Logo_of_Hugo_the_static_website_generator.svg.png" alt="Featured image of post 博客部署至我的服务器的记录" /&gt;&lt;h1 id=&#34;部署hugo项目到我的服务器的全流程记录&#34;&gt;部署hugo项目到我的服务器的全流程记录
+&lt;/h1&gt;&lt;h2 id=&#34;安装nginx&#34;&gt;安装nginx
+&lt;/h2&gt;&lt;p&gt;首先给我的服务器安装上nginx&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;sudo apt install nginx
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;安装成功后测试一下nginx的运行状态，如果看到像我这样即为成功&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;deepblue@deepblueubuntu:~$  sudo systemctl is-active nginx
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;active
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;如果发现没启动使用&lt;code&gt;sudo systemctl start nginx&lt;/code&gt;启用服务即可&lt;/p&gt;
+&lt;p&gt;默认nginx启用的是80端口，也就是直接访问IP地址就是等效于访问80端口，安装后访问IP地址出现欢迎界面即为成功&lt;/p&gt;
+&lt;h2 id=&#34;配置nginx&#34;&gt;配置nginx
+&lt;/h2&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;vim /etc/nginx/sites-available/default
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;你将见到下列内容，不过我的建议是最好修改前做好备份，一个要修改的内容就是其中listen的第一个值，修改成你想要的端口，如果很多IP默认端口都是80会引起重复，像我就目前改成的4448端口，
+另一个是root，也就是基于什么目录的，我先把我的发布页的所有内容移到上面去，root后面跟上我的移动的地址，其中必须包含index.html入口HTML文件&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-vim&#34; data-lang=&#34;vim&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt; &lt;span class=&#34;nx&#34;&gt;server&lt;/span&gt; {
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;       # &lt;span class=&#34;nx&#34;&gt;listen&lt;/span&gt; &lt;span class=&#34;m&#34;&gt;80&lt;/span&gt; &lt;span class=&#34;nx&#34;&gt;default_server&lt;/span&gt;; # &lt;span class=&#34;nx&#34;&gt;原始内容&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;       &lt;span class=&#34;nx&#34;&gt;listen&lt;/span&gt; &lt;span class=&#34;m&#34;&gt;4448&lt;/span&gt; &lt;span class=&#34;nx&#34;&gt;default_server&lt;/span&gt;; # &lt;span class=&#34;nx&#34;&gt;修改后的内容&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;       &lt;span class=&#34;nx&#34;&gt;listen&lt;/span&gt; [::]:&lt;span class=&#34;m&#34;&gt;80&lt;/span&gt; &lt;span class=&#34;nx&#34;&gt;default_server&lt;/span&gt;;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;        # &lt;span class=&#34;nx&#34;&gt;SSL&lt;/span&gt; &lt;span class=&#34;nx&#34;&gt;configuration&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;        #
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;        # &lt;span class=&#34;nx&#34;&gt;listen&lt;/span&gt; &lt;span class=&#34;m&#34;&gt;443&lt;/span&gt; &lt;span class=&#34;nx&#34;&gt;ssl&lt;/span&gt; &lt;span class=&#34;nx&#34;&gt;default_server&lt;/span&gt;;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;        # &lt;span class=&#34;nx&#34;&gt;listen&lt;/span&gt; [::]:&lt;span class=&#34;m&#34;&gt;443&lt;/span&gt; &lt;span class=&#34;nx&#34;&gt;ssl&lt;/span&gt; &lt;span class=&#34;nx&#34;&gt;default_server&lt;/span&gt;;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;        #
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;        # &lt;span class=&#34;nx&#34;&gt;Note&lt;/span&gt;: &lt;span class=&#34;nx&#34;&gt;You&lt;/span&gt; &lt;span class=&#34;nx&#34;&gt;should&lt;/span&gt; &lt;span class=&#34;nx&#34;&gt;disable&lt;/span&gt; &lt;span class=&#34;nx&#34;&gt;gzip&lt;/span&gt; &lt;span class=&#34;nx&#34;&gt;for&lt;/span&gt; &lt;span class=&#34;nx&#34;&gt;SSL&lt;/span&gt; &lt;span class=&#34;nx&#34;&gt;traffic&lt;/span&gt;.
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;        # &lt;span class=&#34;nx&#34;&gt;See&lt;/span&gt;: &lt;span class=&#34;nx&#34;&gt;https&lt;/span&gt;:&lt;span class=&#34;sr&#34;&gt;//&lt;/span&gt;&lt;span class=&#34;nx&#34;&gt;bugs&lt;/span&gt;.&lt;span class=&#34;nx&#34;&gt;debian&lt;/span&gt;.&lt;span class=&#34;nx&#34;&gt;org&lt;/span&gt;/&lt;span class=&#34;m&#34;&gt;773332&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;        #
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;        # &lt;span class=&#34;nx&#34;&gt;Read&lt;/span&gt; &lt;span class=&#34;nx&#34;&gt;up&lt;/span&gt; &lt;span class=&#34;nx&#34;&gt;on&lt;/span&gt; &lt;span class=&#34;nx&#34;&gt;ssl_ciphers&lt;/span&gt; &lt;span class=&#34;nx&#34;&gt;to&lt;/span&gt; &lt;span class=&#34;nx&#34;&gt;ensure&lt;/span&gt; &lt;span class=&#34;nx&#34;&gt;a&lt;/span&gt; &lt;span class=&#34;nx&#34;&gt;secure&lt;/span&gt; &lt;span class=&#34;nx&#34;&gt;configuration&lt;/span&gt;.
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;        # &lt;span class=&#34;nx&#34;&gt;See&lt;/span&gt;: &lt;span class=&#34;nx&#34;&gt;https&lt;/span&gt;:&lt;span class=&#34;sr&#34;&gt;//&lt;/span&gt;&lt;span class=&#34;nx&#34;&gt;bugs&lt;/span&gt;.&lt;span class=&#34;nx&#34;&gt;debian&lt;/span&gt;.&lt;span class=&#34;nx&#34;&gt;org&lt;/span&gt;/&lt;span class=&#34;m&#34;&gt;765782&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;        #
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;        # &lt;span class=&#34;nx&#34;&gt;Self&lt;/span&gt; &lt;span class=&#34;nx&#34;&gt;signed&lt;/span&gt; &lt;span class=&#34;nx&#34;&gt;certs&lt;/span&gt; &lt;span class=&#34;nx&#34;&gt;generated&lt;/span&gt; &lt;span class=&#34;nx&#34;&gt;by&lt;/span&gt; &lt;span class=&#34;nx&#34;&gt;the&lt;/span&gt; &lt;span class=&#34;nx&#34;&gt;ssl&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;-&lt;/span&gt;&lt;span class=&#34;nx&#34;&gt;cert&lt;/span&gt; &lt;span class=&#34;nx&#34;&gt;package&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;        # &lt;span class=&#34;nx&#34;&gt;Don&lt;/span&gt;&amp;#39;&lt;span class=&#34;nx&#34;&gt;t&lt;/span&gt; &lt;span class=&#34;nx&#34;&gt;use&lt;/span&gt; &lt;span class=&#34;nx&#34;&gt;them&lt;/span&gt; &lt;span class=&#34;nx&#34;&gt;in&lt;/span&gt; &lt;span class=&#34;nx&#34;&gt;a&lt;/span&gt; &lt;span class=&#34;nx&#34;&gt;production&lt;/span&gt; &lt;span class=&#34;nx&#34;&gt;server&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;!&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;        #
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;        # &lt;span class=&#34;nx&#34;&gt;include&lt;/span&gt; &lt;span class=&#34;nx&#34;&gt;snippets&lt;/span&gt;/&lt;span class=&#34;nx&#34;&gt;snakeoil&lt;/span&gt;.&lt;span class=&#34;nx&#34;&gt;conf&lt;/span&gt;;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;       # &lt;span class=&#34;nx&#34;&gt;root&lt;/span&gt; &lt;span class=&#34;sr&#34;&gt;/var/&lt;/span&gt;&lt;span class=&#34;nx&#34;&gt;www&lt;/span&gt;/&lt;span class=&#34;nx&#34;&gt;html&lt;/span&gt;; # &lt;span class=&#34;nx&#34;&gt;原始内容&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;       &lt;span class=&#34;nx&#34;&gt;root&lt;/span&gt; &lt;span class=&#34;sr&#34;&gt;/home/&lt;/span&gt;&lt;span class=&#34;nx&#34;&gt;deepblue&lt;/span&gt;&lt;span class=&#34;sr&#34;&gt;/my_projects/&lt;/span&gt;&lt;span class=&#34;nx&#34;&gt;my&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;-&lt;/span&gt;&lt;span class=&#34;nx&#34;&gt;blog&lt;/span&gt;/&lt;span class=&#34;nx&#34;&gt;public&lt;/span&gt;; # &lt;span class=&#34;nx&#34;&gt;修改后的内容&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;       ......
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;       
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;}       
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;&lt;span style=&#34;color:red&#34;&gt;IP端口修改得重启后才生效&lt;/span&gt;，默认80端口是IP端口,也就是192.168.0.200即是192.168.0.200:80端口，两者等效&lt;/p&gt;
+&lt;h2 id=&#34;上传自动化&#34;&gt;上传自动化
+&lt;/h2&gt;&lt;p&gt;如果需要进一步的方便的话，得需要配置自动化了，首先sudo su的身份进入root账户，然后开始以下方法生成密钥，其中文件路径名（/root/.ssh/deepblue_rsa这是我的）最好提前先复制好，貌似修改文件名就会影响密钥判断？&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;root@deepblueubuntu:/home/deepblue# ssh-keygen 
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;Generating public/private rsa key pair.
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;Enter file in which to save the key &lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;/root/.ssh/id_rsa&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt;: /roo	^H^H^H^H^H^C
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;root@deepblueubuntu:/home/deepblue# ssh-keygen 
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;Generating public/private rsa key pair.
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;Enter file in which to save the key &lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;/root/.ssh/id_rsa&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt;: /root/.ssh/deepblue_rsa
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;Enter passphrase &lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;empty &lt;span class=&#34;k&#34;&gt;for&lt;/span&gt; no passphrase&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt;: 
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;Enter same passphrase again: 
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;Your identification has been saved in /root/.ssh/deepblue_rsa
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;Your public key has been saved in /root/.ssh/deepblue_rsa.pub
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;The key fingerprint is:
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;SHA256:xxxxxxxxxxxxxxxxxxxxxxxxxxxx root@deepblueubuntu
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;生成完密钥之后使用下列命令：&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;cat /root/.ssh/deepblue_rsa.pub &amp;gt;&amp;gt; /root/.ssh/authorized_keys 
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;其中要把/root/.ssh/deepblue_rsa.pub替换成你使用的密钥名，这一步也就是把你生成的公钥加入认证密钥内
+然后用vim编辑&lt;code&gt;/etc/ssh/sshd_config&lt;/code&gt;文件&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;root@deepblueubuntu:/home/deepblue# vim /etc/ssh/sshd_config
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;取消以下内容的注释&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-vim&#34; data-lang=&#34;vim&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;nx&#34;&gt;PubkeyAuthentication&lt;/span&gt; &lt;span class=&#34;nx&#34;&gt;yes&lt;/span&gt; # &lt;span class=&#34;nx&#34;&gt;允许公钥认证登录&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;nx&#34;&gt;PermitRootLogin&lt;/span&gt; &lt;span class=&#34;nx&#34;&gt;prohibit&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;-&lt;/span&gt;&lt;span class=&#34;nx&#34;&gt;password&lt;/span&gt; # &lt;span class=&#34;nx&#34;&gt;禁止root用户通过密码登录&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;nx&#34;&gt;AuthorizedKeysFile&lt;/span&gt;      .&lt;span class=&#34;nx&#34;&gt;ssh&lt;/span&gt;&lt;span class=&#34;sr&#34;&gt;/authorized_keys  .ssh/&lt;/span&gt;&lt;span class=&#34;nx&#34;&gt;authorized_keys2&lt;/span&gt; # &lt;span class=&#34;nx&#34;&gt;指定公钥存放的位置&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;然后使用&lt;code&gt;esc :wq!&lt;/code&gt;强制保存即可&lt;/p&gt;
+&lt;p&gt;然后在linux终端使用(Ubuntu环境)sz命令传回文件即可，详解参考《Ubuntu使用指南》中的 shell文件传输 板块即可&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;sz /root/.ssh/deepblue_rsa
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;拿到密钥后在你的上传bat内加入以下内容即可，-i参数后是密钥文件地址，后面是要登录的账户，最后跟上你想执行的命令，目前是重启nginx服务，以上，完成了所有自动化&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;ssh -i %userprofile%/.ssh&lt;span class=&#34;se&#34;&gt;\d&lt;/span&gt;eepblue_rsa root@192.168.0.200 systemctl restart nginx
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</description>
+        </item>
+        
+    </channel>
+</rss>
