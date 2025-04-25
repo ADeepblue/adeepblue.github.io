@@ -1,7 +1,11 @@
 +++
 date = '2025-04-14T23:21:09+08:00'
-draft = true
+draft = false
 title = 'Docker记录'
+image = "logo-guide-logos-1.svg"
+categories = [
+    "ubuntu","linux","docker","服务器"
+]
 +++
 
 # 记录一下折腾的过程

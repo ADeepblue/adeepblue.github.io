@@ -1,0 +1,705 @@
+<!DOCTYPE html>
+<html lang="zh-cn" dir="ltr">
+    <head><meta charset='utf-8'>
+<meta name='viewport' content='width=device-width, initial-scale=1'><meta name='description' content="部署hugo项目到我的服务器的全流程记录 安装nginx 首先给我的服务器安装上nginx\nsudo apt install nginx 安装成功后测试一下nginx的运行状态，如果看到像我这样即为成功\ndeepblue@deepblueubuntu:~$ sudo systemctl is-active nginx active 如果发现没启动使用sudo systemctl start nginx启用服务即可\n">
+<title>博客部署至我的服务器的记录</title>
+
+<link rel='canonical' href='https://adeepblue.github.io/p/%E5%8D%9A%E5%AE%A2%E9%83%A8%E7%BD%B2%E8%87%B3%E6%88%91%E7%9A%84%E6%9C%8D%E5%8A%A1%E5%99%A8%E7%9A%84%E8%AE%B0%E5%BD%95/'>
+
+<link rel="stylesheet" href="/scss/style.min.663803bebe609202d5b39d848f2d7c2dc8b598a2d879efa079fa88893d29c49c.css"><meta property='og:title' content="博客部署至我的服务器的记录">
+<meta property='og:description' content="部署hugo项目到我的服务器的全流程记录 安装nginx 首先给我的服务器安装上nginx\nsudo apt install nginx 安装成功后测试一下nginx的运行状态，如果看到像我这样即为成功\ndeepblue@deepblueubuntu:~$ sudo systemctl is-active nginx active 如果发现没启动使用sudo systemctl start nginx启用服务即可\n">
+<meta property='og:url' content='https://adeepblue.github.io/p/%E5%8D%9A%E5%AE%A2%E9%83%A8%E7%BD%B2%E8%87%B3%E6%88%91%E7%9A%84%E6%9C%8D%E5%8A%A1%E5%99%A8%E7%9A%84%E8%AE%B0%E5%BD%95/'>
+<meta property='og:site_name' content='深蓝之亘的博客'>
+<meta property='og:type' content='article'><meta property='article:section' content='Post' /><meta property='article:published_time' content='2025-04-17T10:23:37&#43;08:00'/><meta property='article:modified_time' content='2025-04-17T10:23:37&#43;08:00'/><meta property='og:image' content='https://adeepblue.github.io/p/%E5%8D%9A%E5%AE%A2%E9%83%A8%E7%BD%B2%E8%87%B3%E6%88%91%E7%9A%84%E6%9C%8D%E5%8A%A1%E5%99%A8%E7%9A%84%E8%AE%B0%E5%BD%95/Logo_of_Hugo_the_static_website_generator.svg.png' />
+<meta name="twitter:title" content="博客部署至我的服务器的记录">
+<meta name="twitter:description" content="部署hugo项目到我的服务器的全流程记录 安装nginx 首先给我的服务器安装上nginx\nsudo apt install nginx 安装成功后测试一下nginx的运行状态，如果看到像我这样即为成功\ndeepblue@deepblueubuntu:~$ sudo systemctl is-active nginx active 如果发现没启动使用sudo systemctl start nginx启用服务即可\n"><meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:image" content='https://adeepblue.github.io/p/%E5%8D%9A%E5%AE%A2%E9%83%A8%E7%BD%B2%E8%87%B3%E6%88%91%E7%9A%84%E6%9C%8D%E5%8A%A1%E5%99%A8%E7%9A%84%E8%AE%B0%E5%BD%95/Logo_of_Hugo_the_static_website_generator.svg.png' />
+    <link rel="shortcut icon" href="/favicon.ico" />
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0-rc.1/katex.min.css">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0-rc.1/katex.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0-rc.1/contrib/auto-render.min.js"></script>
+
+<script>
+    document.addEventListener("DOMContentLoaded", function() {
+      renderMathInElement(document.body);
+    });
+</script>
+         <link rel="stylesheet" href="/css/custom.css">
+    </head>
+    <body class="
+    article-page
+    ">
+    <script>
+        (function() {
+            const colorSchemeKey = 'StackColorScheme';
+            if(!localStorage.getItem(colorSchemeKey)){
+                localStorage.setItem(colorSchemeKey, "auto");
+            }
+        })();
+    </script><script>
+    (function() {
+        const colorSchemeKey = 'StackColorScheme';
+        const colorSchemeItem = localStorage.getItem(colorSchemeKey);
+        const supportDarkMode = window.matchMedia('(prefers-color-scheme: dark)').matches === true;
+
+        if (colorSchemeItem == 'dark' || colorSchemeItem === 'auto' && supportDarkMode) {
+            
+
+            document.documentElement.dataset.scheme = 'dark';
+        } else {
+            document.documentElement.dataset.scheme = 'light';
+        }
+    })();
+</script>
+<div class="container main-container flex on-phone--column extended"><aside class="sidebar left-sidebar sticky ">
+    <button class="hamburger hamburger--spin" type="button" id="toggle-menu" aria-label="切换菜单">
+        <span class="hamburger-box">
+            <span class="hamburger-inner"></span>
+        </span>
+    </button>
+
+    <header>
+        
+            
+            <figure class="site-avatar">
+                <a href="/">
+                
+                    
+                    
+                    
+                        
+                        <img src="/img/avatar_hu_996f7fae539f5332.png" width="300"
+                            height="300" class="site-logo" loading="lazy" alt="Avatar">
+                    
+                
+                </a>
+                
+            </figure>
+            
+        
+        
+        <div class="site-meta">
+            <h1 class="site-name"><a href="/">深蓝之亘的博客</a></h1>
+            <h2 class="site-description">欢迎来到我的博客网站</h2>
+        </div>
+    </header><ol class="menu-social">
+            
+                <li>
+                    <a 
+                        href='https://github.com/Adeepblue'
+                        target="_blank"
+                        title="GitHub"
+                        rel="me"
+                    >
+                        
+                        
+                            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-brand-github" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+  <path d="M9 19c-4.3 1.4 -4.3 -2.5 -6 -3m12 5v-3.5c0 -1 .1 -1.4 -.5 -2c2.8 -.3 5.5 -1.4 5.5 -6a4.6 4.6 0 0 0 -1.3 -3.2a4.2 4.2 0 0 0 -.1 -3.2s-1.1 -.3 -3.5 1.3a12.3 12.3 0 0 0 -6.2 0c-2.4 -1.6 -3.5 -1.3 -3.5 -1.3a4.2 4.2 0 0 0 -.1 3.2a4.6 4.6 0 0 0 -1.3 3.2c0 4.6 2.7 5.7 5.5 6c-.6 .6 -.6 1.2 -.5 2v3.5" />
+</svg>
+
+
+
+                        
+                    </a>
+                </li>
+            
+                <li>
+                    <a 
+                        href='https://space.bilibili.com/435022639'
+                        target="_blank"
+                        title="Twitter"
+                        rel="me"
+                    >
+                        
+                        
+                            <svg  xmlns="http://www.w3.org/2000/svg"  width="24"  height="24"  viewBox="0 0 24 24"  fill="none"  stroke="currentColor"  stroke-width="2"  stroke-linecap="round"  stroke-linejoin="round"  class="icon icon-tabler icons-tabler-outline icon-tabler-brand-bilibili"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M3 10a4 4 0 0 1 4 -4h10a4 4 0 0 1 4 4v6a4 4 0 0 1 -4 4h-10a4 4 0 0 1 -4 -4v-6z" /><path d="M8 3l2 3" /><path d="M16 3l-2 3" /><path d="M9 13v-2" /><path d="M15 11v2" /></svg>
+                        
+                    </a>
+                </li>
+            
+        </ol><ol class="menu" id="main-menu">
+        
+        
+        
+        <li >
+            <a href='/' >
+                
+                
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-home" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <polyline points="5 12 3 12 12 3 21 12 19 12" />
+  <path d="M5 12v7a2 2 0 0 0 2 2h10a2 2 0 0 0 2 -2v-7" />
+  <path d="M9 21v-6a2 2 0 0 1 2 -2h2a2 2 0 0 1 2 2v6" />
+</svg>
+
+
+
+                
+                <span>主页</span>
+            </a>
+        </li>
+        
+        
+        <li >
+            <a href='/%E6%9B%B4%E6%96%B0%E6%97%A5%E5%BF%97/' >
+                
+                
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-user" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="12" cy="7" r="4" />
+  <path d="M6 21v-2a4 4 0 0 1 4 -4h4a4 4 0 0 1 4 4v2" />
+</svg>
+
+
+
+                
+                <span>更新日志</span>
+            </a>
+        </li>
+        
+        
+        <li >
+            <a href='/archives/' >
+                
+                
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-archive" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <rect x="3" y="4" width="18" height="4" rx="2" />
+  <path d="M5 8v10a2 2 0 0 0 2 2h10a2 2 0 0 0 2 -2v-10" />
+  <line x1="10" y1="12" x2="14" y2="12" />
+</svg>
+
+
+
+                
+                <span>archives</span>
+            </a>
+        </li>
+        
+        
+        <li >
+            <a href='/search/' >
+                
+                
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-search" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="10" cy="10" r="7" />
+  <line x1="21" y1="21" x2="15" y2="15" />
+</svg>
+
+
+
+                
+                <span>搜索</span>
+            </a>
+        </li>
+        
+        
+        <li >
+            <a href='/links/' >
+                
+                
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-link" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <path d="M10 14a3.5 3.5 0 0 0 5 0l4 -4a3.5 3.5 0 0 0 -5 -5l-.5 .5" />
+  <path d="M14 10a3.5 3.5 0 0 0 -5 0l-4 4a3.5 3.5 0 0 0 5 5l.5 -.5" />
+</svg>
+
+
+
+                
+                <span>Links</span>
+            </a>
+        </li>
+        
+        <li class="menu-bottom-section">
+            <ol class="menu">
+
+                
+                    <li id="dark-mode-toggle">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-toggle-left" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="8" cy="12" r="2" />
+  <rect x="2" y="6" width="20" height="12" rx="6" />
+</svg>
+
+
+
+                        <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-toggle-right" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="16" cy="12" r="2" />
+  <rect x="2" y="6" width="20" height="12" rx="6" />
+</svg>
+
+
+
+                        <span>暗色模式</span>
+                    </li>
+                
+            </ol>
+        </li>
+    </ol>
+</aside>
+
+    <aside class="sidebar right-sidebar sticky">
+        
+            
+                
+    <section class="widget archives">
+        <div class="widget-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-hash" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <line x1="5" y1="9" x2="19" y2="9" />
+  <line x1="5" y1="15" x2="19" y2="15" />
+  <line x1="11" y1="4" x2="7" y2="20" />
+  <line x1="17" y1="4" x2="13" y2="20" />
+</svg>
+
+
+
+        </div>
+        <h2 class="widget-title section-title">目录</h2>
+        
+        <div class="widget--toc">
+            <nav id="TableOfContents">
+  <ol>
+    <li><a href="#安装nginx">安装nginx</a></li>
+    <li><a href="#配置nginx">配置nginx</a></li>
+    <li><a href="#上传自动化">上传自动化</a></li>
+  </ol>
+</nav>
+        </div>
+    </section>
+
+            
+        
+    </aside>
+
+
+            <main class="main full-width">
+    <article class="has-image main-article">
+    <header class="article-header">
+        <div class="article-image">
+            <a href="/p/%E5%8D%9A%E5%AE%A2%E9%83%A8%E7%BD%B2%E8%87%B3%E6%88%91%E7%9A%84%E6%9C%8D%E5%8A%A1%E5%99%A8%E7%9A%84%E8%AE%B0%E5%BD%95/">
+                <img src="/p/%E5%8D%9A%E5%AE%A2%E9%83%A8%E7%BD%B2%E8%87%B3%E6%88%91%E7%9A%84%E6%9C%8D%E5%8A%A1%E5%99%A8%E7%9A%84%E8%AE%B0%E5%BD%95/Logo_of_Hugo_the_static_website_generator.svg_hu_8dc9089637a27f72.png"
+                        srcset="/p/%E5%8D%9A%E5%AE%A2%E9%83%A8%E7%BD%B2%E8%87%B3%E6%88%91%E7%9A%84%E6%9C%8D%E5%8A%A1%E5%99%A8%E7%9A%84%E8%AE%B0%E5%BD%95/Logo_of_Hugo_the_static_website_generator.svg_hu_8dc9089637a27f72.png 800w, /p/%E5%8D%9A%E5%AE%A2%E9%83%A8%E7%BD%B2%E8%87%B3%E6%88%91%E7%9A%84%E6%9C%8D%E5%8A%A1%E5%99%A8%E7%9A%84%E8%AE%B0%E5%BD%95/Logo_of_Hugo_the_static_website_generator.svg_hu_ad5d0cbb022a76af.png 1600w"
+                        width="800" 
+                        height="219" 
+                        loading="lazy"
+                        alt="Featured image of post 博客部署至我的服务器的记录" />
+                
+            </a>
+        </div>
+    
+
+    <div class="article-details">
+    
+    <header class="article-category">
+        
+            <a href="/categories/ubuntu/" >
+                Ubuntu
+            </a>
+        
+            <a href="/categories/linux/" >
+                Linux
+            </a>
+        
+            <a href="/categories/hugo/" style="background-color: #2a9d8f; color: #fff;">
+                Hugo
+            </a>
+        
+            <a href="/categories/nginx/" >
+                Nginx
+            </a>
+        
+    </header>
+    
+
+    <div class="article-title-wrapper">
+        <h2 class="article-title">
+            <a href="/p/%E5%8D%9A%E5%AE%A2%E9%83%A8%E7%BD%B2%E8%87%B3%E6%88%91%E7%9A%84%E6%9C%8D%E5%8A%A1%E5%99%A8%E7%9A%84%E8%AE%B0%E5%BD%95/">博客部署至我的服务器的记录</a>
+        </h2>
+    
+        
+    </div>
+
+    
+    
+    
+    
+    <footer class="article-time">
+        
+            <div>
+                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-calendar-time" width="56" height="56" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <path d="M11.795 21h-6.795a2 2 0 0 1 -2 -2v-12a2 2 0 0 1 2 -2h12a2 2 0 0 1 2 2v4" />
+  <circle cx="18" cy="18" r="4" />
+  <path d="M15 3v4" />
+  <path d="M7 3v4" />
+  <path d="M3 11h16" />
+  <path d="M18 16.496v1.504l1 1" />
+</svg>
+                <time class="article-time--published">2025-04-17</time>
+            </div>
+        
+
+        
+    </footer>
+    
+
+    
+</div>
+
+</header>
+
+    <section class="article-content">
+    
+    
+    <h1 id="部署hugo项目到我的服务器的全流程记录">部署hugo项目到我的服务器的全流程记录
+</h1><h2 id="安装nginx">安装nginx
+</h2><p>首先给我的服务器安装上nginx</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">sudo apt install nginx
+</span></span></code></pre></div><p>安装成功后测试一下nginx的运行状态，如果看到像我这样即为成功</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">deepblue@deepblueubuntu:~$  sudo systemctl is-active nginx
+</span></span><span class="line"><span class="cl">active
+</span></span></code></pre></div><p>如果发现没启动使用<code>sudo systemctl start nginx</code>启用服务即可</p>
+<p>默认nginx启用的是80端口，也就是直接访问IP地址就是等效于访问80端口，安装后访问IP地址出现欢迎界面即为成功</p>
+<h2 id="配置nginx">配置nginx
+</h2><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">vim /etc/nginx/sites-available/default
+</span></span></code></pre></div><p>你将见到下列内容，不过我的建议是最好修改前做好备份，一个要修改的内容就是其中listen的第一个值，修改成你想要的端口，如果很多IP默认端口都是80会引起重复，像我就目前改成的4448端口，
+另一个是root，也就是基于什么目录的，我先把我的发布页的所有内容移到上面去，root后面跟上我的移动的地址，其中必须包含index.html入口HTML文件</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-vim" data-lang="vim"><span class="line"><span class="cl"> <span class="nx">server</span> {
+</span></span><span class="line"><span class="cl">       # <span class="nx">listen</span> <span class="m">80</span> <span class="nx">default_server</span>; # <span class="nx">原始内容</span>
+</span></span><span class="line"><span class="cl">       <span class="nx">listen</span> <span class="m">4448</span> <span class="nx">default_server</span>; # <span class="nx">修改后的内容</span>
+</span></span><span class="line"><span class="cl">       <span class="nx">listen</span> [::]:<span class="m">80</span> <span class="nx">default_server</span>;
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">        # <span class="nx">SSL</span> <span class="nx">configuration</span>
+</span></span><span class="line"><span class="cl">        #
+</span></span><span class="line"><span class="cl">        # <span class="nx">listen</span> <span class="m">443</span> <span class="nx">ssl</span> <span class="nx">default_server</span>;
+</span></span><span class="line"><span class="cl">        # <span class="nx">listen</span> [::]:<span class="m">443</span> <span class="nx">ssl</span> <span class="nx">default_server</span>;
+</span></span><span class="line"><span class="cl">        #
+</span></span><span class="line"><span class="cl">        # <span class="nx">Note</span>: <span class="nx">You</span> <span class="nx">should</span> <span class="nx">disable</span> <span class="nx">gzip</span> <span class="nx">for</span> <span class="nx">SSL</span> <span class="nx">traffic</span>.
+</span></span><span class="line"><span class="cl">        # <span class="nx">See</span>: <span class="nx">https</span>:<span class="sr">//</span><span class="nx">bugs</span>.<span class="nx">debian</span>.<span class="nx">org</span>/<span class="m">773332</span>
+</span></span><span class="line"><span class="cl">        #
+</span></span><span class="line"><span class="cl">        # <span class="nx">Read</span> <span class="nx">up</span> <span class="nx">on</span> <span class="nx">ssl_ciphers</span> <span class="nx">to</span> <span class="nx">ensure</span> <span class="nx">a</span> <span class="nx">secure</span> <span class="nx">configuration</span>.
+</span></span><span class="line"><span class="cl">        # <span class="nx">See</span>: <span class="nx">https</span>:<span class="sr">//</span><span class="nx">bugs</span>.<span class="nx">debian</span>.<span class="nx">org</span>/<span class="m">765782</span>
+</span></span><span class="line"><span class="cl">        #
+</span></span><span class="line"><span class="cl">        # <span class="nx">Self</span> <span class="nx">signed</span> <span class="nx">certs</span> <span class="nx">generated</span> <span class="nx">by</span> <span class="nx">the</span> <span class="nx">ssl</span><span class="p">-</span><span class="nx">cert</span> <span class="nx">package</span>
+</span></span><span class="line"><span class="cl">        # <span class="nx">Don</span>&#39;<span class="nx">t</span> <span class="nx">use</span> <span class="nx">them</span> <span class="nx">in</span> <span class="nx">a</span> <span class="nx">production</span> <span class="nx">server</span><span class="p">!</span>
+</span></span><span class="line"><span class="cl">        #
+</span></span><span class="line"><span class="cl">        # <span class="nx">include</span> <span class="nx">snippets</span>/<span class="nx">snakeoil</span>.<span class="nx">conf</span>;
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">       # <span class="nx">root</span> <span class="sr">/var/</span><span class="nx">www</span>/<span class="nx">html</span>; # <span class="nx">原始内容</span>
+</span></span><span class="line"><span class="cl">       <span class="nx">root</span> <span class="sr">/home/</span><span class="nx">deepblue</span><span class="sr">/my_projects/</span><span class="nx">my</span><span class="p">-</span><span class="nx">blog</span>/<span class="nx">public</span>; # <span class="nx">修改后的内容</span>
+</span></span><span class="line"><span class="cl">       ......
+</span></span><span class="line"><span class="cl">       
+</span></span><span class="line"><span class="cl">}       
+</span></span></code></pre></div><p><span style="color:red">IP端口修改得重启后才生效</span>，默认80端口是IP端口,也就是192.168.0.200即是192.168.0.200:80端口，两者等效</p>
+<h2 id="上传自动化">上传自动化
+</h2><p>如果需要进一步的方便的话，得需要配置自动化了，首先sudo su的身份进入root账户，然后开始以下方法生成密钥，其中文件路径名（/root/.ssh/deepblue_rsa这是我的）最好提前先复制好，貌似修改文件名就会影响密钥判断？</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">root@deepblueubuntu:/home/deepblue# ssh-keygen 
+</span></span><span class="line"><span class="cl">Generating public/private rsa key pair.
+</span></span><span class="line"><span class="cl">Enter file in which to save the key <span class="o">(</span>/root/.ssh/id_rsa<span class="o">)</span>: /roo	^H^H^H^H^H^C
+</span></span><span class="line"><span class="cl">root@deepblueubuntu:/home/deepblue# ssh-keygen 
+</span></span><span class="line"><span class="cl">Generating public/private rsa key pair.
+</span></span><span class="line"><span class="cl">Enter file in which to save the key <span class="o">(</span>/root/.ssh/id_rsa<span class="o">)</span>: /root/.ssh/deepblue_rsa
+</span></span><span class="line"><span class="cl">Enter passphrase <span class="o">(</span>empty <span class="k">for</span> no passphrase<span class="o">)</span>: 
+</span></span><span class="line"><span class="cl">Enter same passphrase again: 
+</span></span><span class="line"><span class="cl">Your identification has been saved in /root/.ssh/deepblue_rsa
+</span></span><span class="line"><span class="cl">Your public key has been saved in /root/.ssh/deepblue_rsa.pub
+</span></span><span class="line"><span class="cl">The key fingerprint is:
+</span></span><span class="line"><span class="cl">SHA256:xxxxxxxxxxxxxxxxxxxxxxxxxxxx root@deepblueubuntu
+</span></span></code></pre></div><p>生成完密钥之后使用下列命令：</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">cat /root/.ssh/deepblue_rsa.pub &gt;&gt; /root/.ssh/authorized_keys 
+</span></span></code></pre></div><p>其中要把/root/.ssh/deepblue_rsa.pub替换成你使用的密钥名，这一步也就是把你生成的公钥加入认证密钥内
+然后用vim编辑<code>/etc/ssh/sshd_config</code>文件</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">root@deepblueubuntu:/home/deepblue# vim /etc/ssh/sshd_config
+</span></span></code></pre></div><p>取消以下内容的注释</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-vim" data-lang="vim"><span class="line"><span class="cl"><span class="nx">PubkeyAuthentication</span> <span class="nx">yes</span> # <span class="nx">允许公钥认证登录</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="nx">PermitRootLogin</span> <span class="nx">prohibit</span><span class="p">-</span><span class="nx">password</span> # <span class="nx">禁止root用户通过密码登录</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="nx">AuthorizedKeysFile</span>      .<span class="nx">ssh</span><span class="sr">/authorized_keys  .ssh/</span><span class="nx">authorized_keys2</span> # <span class="nx">指定公钥存放的位置</span>
+</span></span></code></pre></div><p>然后使用<code>esc :wq!</code>强制保存即可</p>
+<p>然后在linux终端使用(Ubuntu环境)sz命令传回文件即可，详解参考《Ubuntu使用指南》中的 shell文件传输 板块即可</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">sz /root/.ssh/deepblue_rsa
+</span></span></code></pre></div><p>拿到密钥后在你的上传bat内加入以下内容即可，-i参数后是密钥文件地址，后面是要登录的账户，最后跟上你想执行的命令，目前是重启nginx服务，以上，完成了所有自动化</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">ssh -i %userprofile%/.ssh<span class="se">\d</span>eepblue_rsa root@192.168.0.200 systemctl restart nginx
+</span></span></code></pre></div>
+</section>
+
+
+    <footer class="article-footer">
+    
+
+    </footer>
+
+
+    
+        <link 
+                rel="stylesheet" 
+                href="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css"integrity="sha384-n8MVd4RsNIU0tAv4ct0nTaAbDJwPJzDEaqSD1odI&#43;WdtXRGWt2kTvGFasHpSy3SV"crossorigin="anonymous"
+            ><script 
+                src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.js"integrity="sha384-XjKyOOlGwcjNTAIQHIpgOno0Hl1YQqzUOEleOLALmuqehneUG&#43;vnGctmUb0ZY0l8"crossorigin="anonymous"
+                defer
+                >
+            </script><script 
+                src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/contrib/auto-render.min.js"integrity="sha384-&#43;VBxd3r6XgURycqtZ117nYw44OOcIax56Z4dCRWbxyPt0Koah1uHoK0o4&#43;/RRE05"crossorigin="anonymous"
+                defer
+                >
+            </script><script>
+    window.addEventListener("DOMContentLoaded", () => {
+	const mainArticleElement = document.querySelector(".main-article");
+        renderMathInElement(mainArticleElement, {
+            delimiters: [
+                { left: "$$", right: "$$", display: true },
+                { left: "$", right: "$", display: false },
+                { left: "\\(", right: "\\)", display: false },
+                { left: "\\[", right: "\\]", display: true }
+            ],
+            ignoredClasses: ["gist"]
+        });})
+</script>
+
+    
+</article>
+
+    
+
+    
+
+<aside class="related-content--wrapper">
+    <h2 class="section-title">相关文章</h2>
+    <div class="related-content">
+        <div class="flex article-list--tile">
+            
+                
+<article class="has-image">
+    <a href="/p/docker%E8%AE%B0%E5%BD%95/">
+        
+        
+            <div class="article-image">
+                
+                    <img src="/p/docker%E8%AE%B0%E5%BD%95/logo-guide-logos-1.svg" loading="lazy" data-key="" data-hash="/p/docker%E8%AE%B0%E5%BD%95/logo-guide-logos-1.svg"/>
+                
+            </div>
+        
+
+        <div class="article-details">
+            <h2 class="article-title">Docker记录</h2>
+        </div>
+    </a>
+</article>
+
+            
+                
+<article class="has-image">
+    <a href="/p/ubuntu%E4%BD%BF%E7%94%A8%E6%8C%87%E5%8D%97/">
+        
+        
+            <div class="article-image">
+                <img src="/p/ubuntu%E4%BD%BF%E7%94%A8%E6%8C%87%E5%8D%97/Ubuntu-logo.76197133e285c2189844c2500ff2c25c_hu_28af739ca253f0f9.png" 
+                        width="250" 
+                        height="150" 
+                        loading="lazy"
+                        alt="Featured image of post Ubuntu使用指南"
+                        
+                        data-hash="md5-dhlxM&#43;KFwhiYRMJQD/LCXA==">
+                
+            </div>
+        
+
+        <div class="article-details">
+            <h2 class="article-title">Ubuntu使用指南</h2>
+        </div>
+    </a>
+</article>
+
+            
+                
+<article class="has-image">
+    <a href="/p/%E9%83%A8%E7%BD%B2%E5%B1%80%E5%9F%9F%E7%BD%91%E4%BA%91%E7%9B%98%E5%85%A8%E8%AE%B0%E5%BD%95/">
+        
+        
+            <div class="article-image">
+                <img src="/p/%E9%83%A8%E7%BD%B2%E5%B1%80%E5%9F%9F%E7%BD%91%E4%BA%91%E7%9B%98%E5%85%A8%E8%AE%B0%E5%BD%95/smb_logo.9230704273b6a8669406433ce9a87380_hu_9d18322c1820b16.png" 
+                        width="250" 
+                        height="150" 
+                        loading="lazy"
+                        alt="Featured image of post 部署局域网云盘全记录"
+                        
+                        data-hash="md5-kjBwQnO2qGaUBkM86ahzgA==">
+                
+            </div>
+        
+
+        <div class="article-details">
+            <h2 class="article-title">部署局域网云盘全记录</h2>
+        </div>
+    </a>
+</article>
+
+            
+                
+<article class="has-image">
+    <a href="/p/hugo%E5%88%9D%E5%A7%8B%E5%8C%96%E7%BD%91%E7%AB%99%E7%AC%94%E8%AE%B0/">
+        
+        
+            <div class="article-image">
+                <img src="/p/hugo%E5%88%9D%E5%A7%8B%E5%8C%96%E7%BD%91%E7%AB%99%E7%AC%94%E8%AE%B0/Logo_of_Hugo_the_static_website_generator.svg.f377d11cae4362ef5020fe0407a3a9b5_hu_f59ce97e7f69df13.png" 
+                        width="250" 
+                        height="150" 
+                        loading="lazy"
+                        alt="Featured image of post Hugo初始化网站笔记"
+                        
+                        data-hash="md5-83fRHK5DYu9QIP4EB6OptQ==">
+                
+            </div>
+        
+
+        <div class="article-details">
+            <h2 class="article-title">Hugo初始化网站笔记</h2>
+        </div>
+    </a>
+</article>
+
+            
+        </div>
+    </div>
+</aside>
+
+     
+    
+        
+    
+
+    <footer class="site-footer">
+    <section class="copyright">
+        &copy; 
+        
+        2025 深蓝之亘
+    </section>
+    
+    <section class="powerby">
+        
+            深蓝之亘的博客网站 https://adeepblue.github.io <br/>
+        使用 <a href="https://gohugo.io/" target="_blank" rel="noopener">Hugo</a> 构建 <br />
+        主题 <b><a href="https://github.com/CaiJimmy/hugo-theme-stack" target="_blank" rel="noopener" data-version="3.30.0">Stack</a></b> 由 <a href="https://jimmycai.com" target="_blank" rel="noopener">Jimmy</a> 设计
+    </section>
+</footer>
+
+
+    
+<div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
+
+    
+    <div class="pswp__bg"></div>
+
+    
+    <div class="pswp__scroll-wrap">
+
+        
+        <div class="pswp__container">
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+        </div>
+
+        
+        <div class="pswp__ui pswp__ui--hidden">
+
+            <div class="pswp__top-bar">
+
+                
+
+                <div class="pswp__counter"></div>
+
+                <button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+
+                <button class="pswp__button pswp__button--share" title="Share"></button>
+
+                <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
+
+                <button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
+
+                
+                
+                <div class="pswp__preloader">
+                    <div class="pswp__preloader__icn">
+                        <div class="pswp__preloader__cut">
+                            <div class="pswp__preloader__donut"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+                <div class="pswp__share-tooltip"></div>
+            </div>
+
+            <button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)">
+            </button>
+
+            <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)">
+            </button>
+
+            <div class="pswp__caption">
+                <div class="pswp__caption__center"></div>
+            </div>
+
+        </div>
+
+    </div>
+
+</div><script 
+                src="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe.min.js"integrity="sha256-ePwmChbbvXbsO02lbM3HoHbSHTHFAeChekF1xKJdleo="crossorigin="anonymous"
+                defer
+                >
+            </script><script 
+                src="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe-ui-default.min.js"integrity="sha256-UKkzOn/w1mBxRmLLGrSeyB4e1xbrp4xylgAWb3M42pU="crossorigin="anonymous"
+                defer
+                >
+            </script><link 
+                rel="stylesheet" 
+                href="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/default-skin/default-skin.min.css"crossorigin="anonymous"
+            ><link 
+                rel="stylesheet" 
+                href="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe.min.css"crossorigin="anonymous"
+            >
+
+            </main>
+        </div>
+        <script 
+                src="https://cdn.jsdelivr.net/npm/node-vibrant@3.1.6/dist/vibrant.min.js"integrity="sha256-awcR2jno4kI5X0zL8ex0vi2z&#43;KMkF24hUW8WePSA9HM="crossorigin="anonymous"
+                
+                >
+            </script><script type="text/javascript" src="/ts/main.1e9a3bafd846ced4c345d084b355fb8c7bae75701c338f8a1f8a82c780137826.js" defer></script>
+<script>
+    (function () {
+        const customFont = document.createElement('link');
+        customFont.href = "https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap";
+
+        customFont.type = "text/css";
+        customFont.rel = "stylesheet";
+
+        document.head.appendChild(customFont);
+    }());
+</script>
+
+<style>
+  body {
+    background: url(https://adeepblue.github.io/background/background.png) no-repeat center top;
+    background-size: cover;
+    background-attachment: fixed;
+  }
+</style>
+    </body>
+</html>

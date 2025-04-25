@@ -273,6 +273,9 @@
     <li><a href="#vim">vim</a></li>
     <li><a href="#更改时区">更改时区</a></li>
     <li><a href="#关机">关机</a></li>
+    <li><a href="#查看开放端口状态">查看开放端口状态</a></li>
+    <li><a href="#ssh密钥">ssh密钥</a></li>
+    <li><a href="#shell文件传输">shell文件传输</a></li>
   </ol>
 </nav>
         </div>
@@ -384,6 +387,45 @@ n N</p>
 -r 重启
 now立即
 shutdown -r now</p>
+<h2 id="查看开放端口状态">查看开放端口状态
+</h2><p>netstat -tuln</p>
+<h2 id="ssh密钥">ssh密钥
+</h2><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">root@deepblueubuntu:/home/deepblue# ssh-keygen 
+</span></span><span class="line"><span class="cl">Generating public/private rsa key pair.
+</span></span><span class="line"><span class="cl">Enter file in which to save the key <span class="o">(</span>/root/.ssh/id_rsa<span class="o">)</span>: /roo	^H^H^H^H^H^C
+</span></span><span class="line"><span class="cl">root@deepblueubuntu:/home/deepblue# ssh-keygen 
+</span></span><span class="line"><span class="cl">Generating public/private rsa key pair.
+</span></span><span class="line"><span class="cl">Enter file in which to save the key <span class="o">(</span>/root/.ssh/id_rsa<span class="o">)</span>: /root/.ssh/deepblue_rsa
+</span></span><span class="line"><span class="cl">Enter passphrase <span class="o">(</span>empty <span class="k">for</span> no passphrase<span class="o">)</span>: 
+</span></span><span class="line"><span class="cl">Enter same passphrase again: 
+</span></span><span class="line"><span class="cl">Your identification has been saved in /root/.ssh/deepblue_rsa
+</span></span><span class="line"><span class="cl">Your public key has been saved in /root/.ssh/deepblue_rsa.pub
+</span></span><span class="line"><span class="cl">The key fingerprint is:
+</span></span><span class="line"><span class="cl">SHA256:xxxxxxxxxxxxxxxxxxxxxxxxxxxx root@deepblueubuntu
+</span></span></code></pre></div><p>生成完密钥之后使用下列命令：</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">cat /root/.ssh/deepblue_rsa.pub &gt;&gt; /root/.ssh/authorized_keys 
+</span></span></code></pre></div><p>其中要把/root/.ssh/deepblue_rsa.pub替换成你使用的密钥名，这一步也就是把你生成的公钥加入认证密钥内
+然后用vim编辑<code>/etc/ssh/sshd_config</code>文件</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">root@deepblueubuntu:/home/deepblue# vim /etc/ssh/sshd_config
+</span></span></code></pre></div><p>取消以下内容的注释</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-vim" data-lang="vim"><span class="line"><span class="cl"><span class="nx">PubkeyAuthentication</span> <span class="nx">yes</span> # <span class="nx">允许公钥认证登录</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="nx">PermitRootLogin</span> <span class="nx">prohibit</span><span class="p">-</span><span class="nx">password</span> # <span class="nx">禁止root用户通过密码登录</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="nx">AuthorizedKeysFile</span>      .<span class="nx">ssh</span><span class="sr">/authorized_keys  .ssh/</span><span class="nx">authorized_keys2</span> # <span class="nx">指定公钥存放的位置</span>
+</span></span></code></pre></div><p>然后使用<code>esc :wq!</code>强制保存即可</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">sz /root/.ssh/deepblue_rsa
+</span></span></code></pre></div><p>配合文件传输可以拿到密钥文件</p>
+<h2 id="shell文件传输">shell文件传输
+</h2><p>安装以下包
+sudo apt install -y lrzsz
+命令工具为 sz 和 rz</p>
+<p>以下内容来自AI
+sz 和 rz 是基于 Zmodem 协议的文件传输命令，二者在使用场景和功能上存在明显区别，具体如下：
+功能用途
+sz ：用于将在 Linux 服务器上的文件发送到本地计算机。比如，当你在远程 Linux 服务器上通过终端操作，想要把服务器上的某个日志文件、配置文件等下载到本地时，就可以使用 sz 命令。
+rz ：用于将本地计算机的文件上传到 Linux 服务器上。例如，需要把本地编写好的代码文件、配置文件等上传到服务器进行部署或使用时，rz 命令就能派上用场。</p>
 
 </section>
 
@@ -431,6 +473,49 @@ shutdown -r now</p>
     <h2 class="section-title">相关文章</h2>
     <div class="related-content">
         <div class="flex article-list--tile">
+            
+                
+<article class="has-image">
+    <a href="/p/%E5%8D%9A%E5%AE%A2%E9%83%A8%E7%BD%B2%E8%87%B3%E6%88%91%E7%9A%84%E6%9C%8D%E5%8A%A1%E5%99%A8%E7%9A%84%E8%AE%B0%E5%BD%95/">
+        
+        
+            <div class="article-image">
+                <img src="/p/%E5%8D%9A%E5%AE%A2%E9%83%A8%E7%BD%B2%E8%87%B3%E6%88%91%E7%9A%84%E6%9C%8D%E5%8A%A1%E5%99%A8%E7%9A%84%E8%AE%B0%E5%BD%95/Logo_of_Hugo_the_static_website_generator.svg.f377d11cae4362ef5020fe0407a3a9b5_hu_f59ce97e7f69df13.png" 
+                        width="250" 
+                        height="150" 
+                        loading="lazy"
+                        alt="Featured image of post 博客部署至我的服务器的记录"
+                        
+                        data-hash="md5-83fRHK5DYu9QIP4EB6OptQ==">
+                
+            </div>
+        
+
+        <div class="article-details">
+            <h2 class="article-title">博客部署至我的服务器的记录</h2>
+        </div>
+    </a>
+</article>
+
+            
+                
+<article class="has-image">
+    <a href="/p/docker%E8%AE%B0%E5%BD%95/">
+        
+        
+            <div class="article-image">
+                
+                    <img src="/p/docker%E8%AE%B0%E5%BD%95/logo-guide-logos-1.svg" loading="lazy" data-key="" data-hash="/p/docker%E8%AE%B0%E5%BD%95/logo-guide-logos-1.svg"/>
+                
+            </div>
+        
+
+        <div class="article-details">
+            <h2 class="article-title">Docker记录</h2>
+        </div>
+    </a>
+</article>
+
             
                 
 <article class="has-image">

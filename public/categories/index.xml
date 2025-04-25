@@ -7,26 +7,50 @@
         <generator>Hugo -- gohugo.io</generator>
         <language>zh-cn</language>
         <copyright>深蓝之亘</copyright>
-        <lastBuildDate>Fri, 11 Apr 2025 23:00:45 +0800</lastBuildDate><atom:link href="https://adeepblue.github.io/categories/index.xml" rel="self" type="application/rss+xml" /><item>
+        <lastBuildDate>Thu, 17 Apr 2025 10:23:37 +0800</lastBuildDate><atom:link href="https://adeepblue.github.io/categories/index.xml" rel="self" type="application/rss+xml" /><item>
+        <title>Hugo</title>
+        <link>https://adeepblue.github.io/categories/hugo/</link>
+        <pubDate>Thu, 17 Apr 2025 10:23:37 +0800</pubDate>
+        
+        <guid>https://adeepblue.github.io/categories/hugo/</guid>
+        <description>&lt;img src="https://adeepblue.github.io/categories/hugo/Logo_of_Hugo_the_static_website_generator.png" alt="Featured image of post Hugo" /&gt;</description>
+        </item>
+        <item>
         <title>Linux</title>
         <link>https://adeepblue.github.io/categories/linux/</link>
-        <pubDate>Fri, 11 Apr 2025 23:00:45 +0800</pubDate>
+        <pubDate>Thu, 17 Apr 2025 10:23:37 +0800</pubDate>
         
         <guid>https://adeepblue.github.io/categories/linux/</guid>
         <description></description>
         </item>
         <item>
+        <title>Nginx</title>
+        <link>https://adeepblue.github.io/categories/nginx/</link>
+        <pubDate>Thu, 17 Apr 2025 10:23:37 +0800</pubDate>
+        
+        <guid>https://adeepblue.github.io/categories/nginx/</guid>
+        <description></description>
+        </item>
+        <item>
         <title>Ubuntu</title>
         <link>https://adeepblue.github.io/categories/ubuntu/</link>
-        <pubDate>Fri, 11 Apr 2025 23:00:45 +0800</pubDate>
+        <pubDate>Thu, 17 Apr 2025 10:23:37 +0800</pubDate>
         
         <guid>https://adeepblue.github.io/categories/ubuntu/</guid>
         <description></description>
         </item>
         <item>
+        <title>Docker</title>
+        <link>https://adeepblue.github.io/categories/docker/</link>
+        <pubDate>Mon, 14 Apr 2025 23:21:09 +0800</pubDate>
+        
+        <guid>https://adeepblue.github.io/categories/docker/</guid>
+        <description></description>
+        </item>
+        <item>
         <title>服务器</title>
         <link>https://adeepblue.github.io/categories/%E6%9C%8D%E5%8A%A1%E5%99%A8/</link>
-        <pubDate>Tue, 08 Apr 2025 11:04:34 +0800</pubDate>
+        <pubDate>Mon, 14 Apr 2025 23:21:09 +0800</pubDate>
         
         <guid>https://adeepblue.github.io/categories/%E6%9C%8D%E5%8A%A1%E5%99%A8/</guid>
         <description></description>
@@ -94,14 +118,6 @@
         
         <guid>https://adeepblue.github.io/categories/cmd/</guid>
         <description>&lt;img src="https://adeepblue.github.io/categories/cmd/CommandLineIcon.png" alt="Featured image of post Cmd" /&gt;</description>
-        </item>
-        <item>
-        <title>Hugo</title>
-        <link>https://adeepblue.github.io/categories/hugo/</link>
-        <pubDate>Tue, 04 Feb 2025 22:34:00 +0800</pubDate>
-        
-        <guid>https://adeepblue.github.io/categories/hugo/</guid>
-        <description>&lt;img src="https://adeepblue.github.io/categories/hugo/Logo_of_Hugo_the_static_website_generator.png" alt="Featured image of post Hugo" /&gt;</description>
         </item>
         <item>
         <title>Git</title>
