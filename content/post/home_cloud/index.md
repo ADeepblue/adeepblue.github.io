@@ -2,10 +2,11 @@
 date = '2025-04-08T11:04:34+08:00'
 draft = false
 title = '部署局域网云盘全记录'
+description = "NAS"
 math = true
 image = "smb_logo.png"
 categories = [
-    "ubuntu","linux","云盘","服务器"
+    "ubuntu","linux","云盘","服务器","NAS"
 ]
 +++
 

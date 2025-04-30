@@ -7,7 +7,80 @@
         <generator>Hugo -- gohugo.io</generator>
         <language>zh-cn</language>
         <copyright>深蓝之亘</copyright>
-        <lastBuildDate>Tue, 04 Feb 2025 22:34:00 +0800</lastBuildDate><atom:link href="https://adeepblue.github.io/categories/cmd/index.xml" rel="self" type="application/rss+xml" /><item>
+        <lastBuildDate>Tue, 29 Apr 2025 22:44:49 +0800</lastBuildDate><atom:link href="https://adeepblue.github.io/categories/cmd/index.xml" rel="self" type="application/rss+xml" /><item>
+        <title>关于cmd传参的一些内容</title>
+        <link>https://adeepblue.github.io/p/%E5%85%B3%E4%BA%8Ecmd%E4%BC%A0%E5%8F%82%E7%9A%84%E4%B8%80%E4%BA%9B%E5%86%85%E5%AE%B9/</link>
+        <pubDate>Tue, 29 Apr 2025 22:44:49 +0800</pubDate>
+        
+        <guid>https://adeepblue.github.io/p/%E5%85%B3%E4%BA%8Ecmd%E4%BC%A0%E5%8F%82%E7%9A%84%E4%B8%80%E4%BA%9B%E5%86%85%E5%AE%B9/</guid>
+        <description>&lt;img src="https://adeepblue.github.io/p/%E5%85%B3%E4%BA%8Ecmd%E4%BC%A0%E5%8F%82%E7%9A%84%E4%B8%80%E4%BA%9B%E5%86%85%E5%AE%B9/CommandLineIcon.png" alt="Featured image of post 关于cmd传参的一些内容" /&gt;&lt;h1 id=&#34;写一个启动jupyter-notebook脚本的笔记&#34;&gt;写一个启动jupyter notebook脚本的笔记
+&lt;/h1&gt;&lt;h2 id=&#34;统计计数&#34;&gt;统计计数
+&lt;/h2&gt;&lt;p&gt;看了一下AI给的内容，实在不太行&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-batch&#34; data-lang=&#34;batch&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;k&#34;&gt;if&lt;/span&gt; &lt;span class=&#34;s2&#34;&gt;&amp;#34;%#&amp;#34;&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;==&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;&amp;#34;0&amp;#34;&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &lt;span class=&#34;k&#34;&gt;echo&lt;/span&gt; 未提供参数,在默认目录打开jupyter notebook
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &lt;span class=&#34;k&#34;&gt;goto&lt;/span&gt; &lt;span class=&#34;nl&#34;&gt;V0&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;以上内容为kimiAI提供，恐怕也是因为训练数据中，存在着一些错误数据的原因吧，实际如果去调试后就会发现，&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;echo &amp;quot;%#&amp;quot;&lt;/code&gt;只会输出&amp;quot;#&amp;quot;，在AI不可靠的情况下，我去找了一下以前写cmd脚本的记录，其中统计参数是这样的&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-batch&#34; data-lang=&#34;batch&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;k&#34;&gt;set&lt;/span&gt; &lt;span class=&#34;s2&#34;&gt;&amp;#34;Count=0&amp;#34;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;k&#34;&gt;for&lt;/span&gt; &lt;span class=&#34;se&#34;&gt;%%&lt;/span&gt;i &lt;span class=&#34;k&#34;&gt;in&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;nv&#34;&gt;%*&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt; &lt;span class=&#34;k&#34;&gt;do&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &lt;span class=&#34;k&#34;&gt;set&lt;/span&gt; &lt;span class=&#34;k&#34;&gt;/a&lt;/span&gt; &lt;span class=&#34;nv&#34;&gt;Count&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;+=&lt;/span&gt;&lt;span class=&#34;mi&#34;&gt;1&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id=&#34;条件比较&#34;&gt;条件比较
+&lt;/h2&gt;&lt;p&gt;然后在这样的环境下去对比count和if中的数值，虽然着实有些可笑就是了，到头来统计参数如何还需要自己来for循环累加遍历，其后的调用变量来比较得是这样了，&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-batch&#34; data-lang=&#34;batch&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;k&#34;&gt;if&lt;/span&gt; &lt;span class=&#34;nv&#34;&gt;%Count%&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;==&lt;/span&gt;0 &lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &lt;span class=&#34;k&#34;&gt;echo&lt;/span&gt; 未提供参数,在默认目录打开jupyter notebook
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &lt;span class=&#34;k&#34;&gt;goto&lt;/span&gt; &lt;span class=&#34;nl&#34;&gt;V0&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id=&#34;最终版代码&#34;&gt;最终版代码
+&lt;/h2&gt;&lt;p&gt;其中我当时还犯了一个小错误，因为AI给的是双引号，我也双引号变量进去了，发现不对，会报错，然后后面才想起来是用两个百分号来引用的,以及是一旦是数字累加，&lt;code&gt;%Count%==0&lt;/code&gt;,如果右边是&amp;quot;0&amp;quot;依旧会报错，所以最终版是这样的&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-batch&#34; data-lang=&#34;batch&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;p&#34;&gt;@&lt;/span&gt;&lt;span class=&#34;k&#34;&gt;echo&lt;/span&gt; off
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;k&#34;&gt;SETLOCAL&lt;/span&gt; ENABLEEXTENSIONS
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;k&#34;&gt;set&lt;/span&gt; &lt;span class=&#34;s2&#34;&gt;&amp;#34;Count=0&amp;#34;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;k&#34;&gt;for&lt;/span&gt; &lt;span class=&#34;se&#34;&gt;%%&lt;/span&gt;i &lt;span class=&#34;k&#34;&gt;in&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;nv&#34;&gt;%*&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt; &lt;span class=&#34;k&#34;&gt;do&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &lt;span class=&#34;k&#34;&gt;set&lt;/span&gt; &lt;span class=&#34;k&#34;&gt;/a&lt;/span&gt; &lt;span class=&#34;nv&#34;&gt;Count&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;+=&lt;/span&gt;&lt;span class=&#34;mi&#34;&gt;1&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;k&#34;&gt;echo&lt;/span&gt; &lt;span class=&#34;nv&#34;&gt;%Count%&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;k&#34;&gt;if&lt;/span&gt; &lt;span class=&#34;nv&#34;&gt;%Count%&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;==&lt;/span&gt;0 &lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &lt;span class=&#34;k&#34;&gt;echo&lt;/span&gt; 未提供参数,在默认用户目录打开jupyter notebook
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &lt;span class=&#34;k&#34;&gt;goto&lt;/span&gt; &lt;span class=&#34;nl&#34;&gt;V0&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;k&#34;&gt;if&lt;/span&gt; &lt;span class=&#34;nv&#34;&gt;%Count%&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;==&lt;/span&gt;1 &lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &lt;span class=&#34;k&#34;&gt;echo&lt;/span&gt;  jupyter notebook 打开于 &lt;span class=&#34;nv&#34;&gt;%1&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &lt;span class=&#34;k&#34;&gt;goto&lt;/span&gt; &lt;span class=&#34;nl&#34;&gt;V1&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;k&#34;&gt;echo&lt;/span&gt; 提供了多个参数,仅支持提供一个文件夹路径
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;k&#34;&gt;goto&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;nl&#34;&gt;error&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;nl&#34;&gt;V0&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;k&#34;&gt;cd&lt;/span&gt; &lt;span class=&#34;nv&#34;&gt;%userprofile%&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;jupyter notebook
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;k&#34;&gt;goto&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;nl&#34;&gt;end&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;nl&#34;&gt;V1&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;k&#34;&gt;cd&lt;/span&gt; &lt;span class=&#34;nv&#34;&gt;%1&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;jupyter notebook
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;k&#34;&gt;goto&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;nl&#34;&gt;end&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;nl&#34;&gt;error&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;k&#34;&gt;echo&lt;/span&gt; error 
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;k&#34;&gt;pause&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;nl&#34;&gt;end&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;k&#34;&gt;echo&lt;/span&gt; 按任意键退出...
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id=&#34;使用方法&#34;&gt;使用方法
+&lt;/h2&gt;&lt;p&gt;直接拖动你想打开的文件夹到这个脚本即可，会在这个文件夹下打开jupyter notebook,切记拖动的是文件夹（主要是我也有点懒得写判断文件夹和文件了，可以在脚本这边新增，但我没这个需求就不写了）拖动会将内容识别为参数传入，然后也就是传参的形式实现切换到对应文件夹打开jupyter notebook&lt;/p&gt;
+&lt;h2 id=&#34;一些吐槽大概&#34;&gt;一些吐槽？大概
+&lt;/h2&gt;&lt;p&gt;cmd的脚本属实一眼难尽，在我的角度看来，可读性极差，（其中包括各种参数的含义）当时写过一个用来遍历所有文件和文件夹搜索一个文件的脚本，但是，怎么说呢，当时排查错误写的我累死了，当时就想不太想写第二次了，不过考虑到这还是比较简单的一个脚本，倒是随意了，以及这个脚本写了也是为了方便我打开jupyter notebook，有些时候有些科学计算的内容确实还是jupyter notebook写起来会舒服些，用pycharm开python console有点太麻烦了&lt;/p&gt;
+</description>
+        </item>
+        <item>
         <title>Cmd命令介绍</title>
         <link>https://adeepblue.github.io/p/cmd%E5%91%BD%E4%BB%A4%E4%BB%8B%E7%BB%8D/</link>
         <pubDate>Tue, 04 Feb 2025 22:34:00 +0800</pubDate>
@@ -97,7 +170,12 @@
 同样的文件分割方式，创建文件可以用touch函数
 &lt;code&gt;touch .\a\b\c\d\e.txt&lt;/code&gt;
 但注意，创建的是空文件，一般结合mkdir使用&lt;/p&gt;
-&lt;h3 id=&#34;打印输出定义变量和环境变量&#34;&gt;打印输出，定义变量和环境变量
+&lt;h2 id=&#34;删除文件或者文件夹&#34;&gt;删除文件或者文件夹
+&lt;/h2&gt;&lt;p&gt;&lt;code&gt;del&lt;/code&gt; 或者是&lt;code&gt;rd&lt;/code&gt;其中两者的区别是，是否删除输入的目录内容，del不会删除输入的内容，而rd会，原因如下：&lt;/p&gt;
+&lt;p&gt;因为rd本身就是指的删除文件夹，只是多了一层允许遍历删除（/s），del本身是用来删除文件的，其中如果不需要确认的话需要加上参数/q，所以一般使用方法如下:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-batch&#34; data-lang=&#34;batch&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;k&#34;&gt;del&lt;/span&gt; folder /s/q
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;k&#34;&gt;rd&lt;/span&gt; folder /s/q
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h3 id=&#34;打印输出定义变量和环境变量&#34;&gt;打印输出，定义变量和环境变量
 &lt;/h3&gt;&lt;p&gt;&lt;strong&gt;echo&lt;/strong&gt;&lt;/p&gt;
 &lt;p&gt;顾名思义，类似于python中print的功能 语法则是&lt;code&gt;echo [输出内容]&lt;/code&gt;，如果输出内容包含空格，需要英文双引号包裹输出内容两侧
 &lt;strong&gt;set&lt;/strong&gt;&lt;/p&gt;
@@ -195,9 +273,7 @@
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;n&#34;&gt;pause&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;其中&lt;code&gt;@echo off&lt;/code&gt;为关闭回显状态，也就是不显示&lt;code&gt;E:\personal-blog\personal-blog&amp;gt;&lt;/code&gt;这个以及命令本身，但不会关闭这个命令本身的输出，pause会使得命令不会跑完就命令窗口消失&lt;/p&gt;
 &lt;h2 id=&#34;一些杂谈&#34;&gt;一些杂谈
-&lt;/h2&gt;&lt;p&gt;一般bat脚本被用来直接用for循环的还是少，一般会被用来作一些简单的启动，比如启动python执行某个脚本什么的，这种比较方便，虽然有for循环
-但对比其他语言来说，实在有点眼花缭乱，一般用AI去问问就差不多了，我不喜欢在cmd命令里用for循环，在里面定义读取个变量很多时候也够呛，
-但也不否认，如果用它写一些简单的东西，可以省去很多的重复劳动，做到一定的自动化，这一点我还是比较喜欢的&lt;/p&gt;
+&lt;/h2&gt;&lt;p&gt;一般bat脚本被用来直接用for循环的还是少，一般会被用来作一些简单的启动，比如启动python执行某个脚本什么的，这种比较方便，虽然有for循环 但对比其他语言来说，实在有点眼花缭乱，一般用AI去问问就差不多了，我不喜欢在cmd命令里用for循环，在里面定义读取个变量很多时候也够呛， 但也不否认，如果用它写一些简单的东西，可以省去很多的重复劳动，做到一定的自动化，这一点我还是比较喜欢的&lt;/p&gt;
 &lt;h2 id=&#34;curl&#34;&gt;curl
 &lt;/h2&gt;&lt;p&gt;curl &amp;ndash;proxy 127.0.0.1:4780 &lt;a class=&#34;link&#34; href=&#34;https://www.google.com&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
     &gt;www.google.com&lt;/a&gt;&lt;/p&gt;
