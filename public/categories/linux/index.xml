@@ -7,7 +7,63 @@
         <generator>Hugo -- gohugo.io</generator>
         <language>zh-cn</language>
         <copyright>深蓝之亘</copyright>
-        <lastBuildDate>Thu, 17 Apr 2025 10:23:37 +0800</lastBuildDate><atom:link href="https://adeepblue.github.io/categories/linux/index.xml" rel="self" type="application/rss+xml" /><item>
+        <lastBuildDate>Sun, 18 May 2025 21:39:12 +0800</lastBuildDate><atom:link href="https://adeepblue.github.io/categories/linux/index.xml" rel="self" type="application/rss+xml" /><item>
+        <title>调试安卓TV（TCL）安装第三方应用的记录</title>
+        <link>https://adeepblue.github.io/p/%E8%B0%83%E8%AF%95%E5%AE%89%E5%8D%93tvtcl%E5%AE%89%E8%A3%85%E7%AC%AC%E4%B8%89%E6%96%B9%E5%BA%94%E7%94%A8%E7%9A%84%E8%AE%B0%E5%BD%95/</link>
+        <pubDate>Sun, 18 May 2025 21:39:12 +0800</pubDate>
+        
+        <guid>https://adeepblue.github.io/p/%E8%B0%83%E8%AF%95%E5%AE%89%E5%8D%93tvtcl%E5%AE%89%E8%A3%85%E7%AC%AC%E4%B8%89%E6%96%B9%E5%BA%94%E7%94%A8%E7%9A%84%E8%AE%B0%E5%BD%95/</guid>
+        <description>&lt;img src="https://adeepblue.github.io/p/%E8%B0%83%E8%AF%95%E5%AE%89%E5%8D%93tvtcl%E5%AE%89%E8%A3%85%E7%AC%AC%E4%B8%89%E6%96%B9%E5%BA%94%E7%94%A8%E7%9A%84%E8%AE%B0%E5%BD%95/Logo_of_the_TCL_Corporation.svg" alt="Featured image of post 调试安卓TV（TCL）安装第三方应用的记录" /&gt;&lt;h1 id=&#34;记录一下我调试家中tcl电视的过程&#34;&gt;记录一下我调试家中TCL电视的过程
+&lt;/h1&gt;&lt;h2 id=&#34;前提&#34;&gt;前提
+&lt;/h2&gt;&lt;p&gt;TCL电视开启adb调试模式，开启方式请自行搜索，以及通过tclsu进行提权进入root用户，如果以上条件均具备，进行下一步，推荐先看完&lt;a class=&#34;link&#34; href=&#34;https://www.znds.com/tv-1204574-1-1.html&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;参考连接&lt;/a&gt; 再看本文&lt;/p&gt;
+&lt;h2 id=&#34;删除黑名单相关文件&#34;&gt;删除黑名单相关文件
+&lt;/h2&gt;&lt;p&gt;首先，你要先连接上电视，使用&lt;code&gt;adb connect [IP]&lt;/code&gt;的命令连接上，IP地址可以从入网路由器管理处或者是电视WiFi网络处找到，例如&lt;code&gt;adb connect 192.168.0.106&lt;/code&gt;，然后确认一下是否有连接成功相关的返回，后面的操作可以通过&lt;code&gt;adb shell&lt;/code&gt;进入adb shell窗口进行操作，&lt;a class=&#34;link&#34; href=&#34;https://www.znds.com/tv-1204574-1-1.html&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;参考连接&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;adb shell 进入命令行可以验证su 或者是tclsu命令是否生效，但由于adb shell命令内部不支持复制（目前我没找到复制办法，如有，请大神指出，可以回复在我的GitHub仓库连接内），我推荐的办法依旧还是基于cmd的，不需要进入adb shell内部进行操作&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-cmd&#34; data-lang=&#34;cmd&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;adb shell tclsu do busybox find / -name &lt;span class=&#34;s2&#34;&gt;&amp;#34;*black*&amp;#34;&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;&amp;gt;&lt;/span&gt; black.txt
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;解释一下，&lt;code&gt;adb shell [command]&lt;/code&gt;会跳入adb shell内部执行命令后将返回值输出到cmd窗口，所以&lt;code&gt;adb shell ls&lt;/code&gt;会直接显示下面的文件， 而&lt;code&gt;tclsu do&lt;/code&gt;则是表示提权之后进一步在内部进行的操作命令，因为有些文件夹没有root权限不可访问，避免很多的拒绝访问出现刷屏，再有就是因为这是基于cmd的，可以方便复制，也可以输出到文件，&lt;code&gt;&amp;gt; black.txt&lt;/code&gt;即是这个意思，将找到的带black的字样的文件挨个删除，&lt;code&gt;mount -o remount -o rw /system&lt;/code&gt;其中上文提到的链接可能需要在上述命令之前执行，最好带上&lt;code&gt;adb shell tclsu do&lt;/code&gt;前缀执行，根据文章内描述逐个执行&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;nb&#34;&gt;cd&lt;/span&gt; /system/etc/
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;rm -r ./FF-CN-T962A2-J55_black_list.json
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;rm -r ./TCL-CN-T962-A360_black_list.json
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;rm -r ./TCL-CN-T962-A460_black_list.json
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;rm -r ./TCL-CN-T962-A730U-UD_black_list.json
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;rm -r ./TCL-CN-T962-D6_black_list.json
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;rm -r ./TCL-CN-T962-P2-UD_black_list.json
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;rm -r ./TCL-CN-T962-V2_black_list.json
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;rm -r ./TCL-CN-T962A-E5800A-UD_black_list.json
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;rm -r ./black_list.json
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;rm -r ./appinfo/blacklist_FF-CN-T962A2-J55.xml
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;rm -r ./appinfo/blacklist_TCL-CN-T962-A360.xml
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;rm -r ./appinfo/blacklist_TCL-CN-T962-A460.xml
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;rm -r ./appinfo/blacklist_TCL-CN-T962-A730U-UD.xml
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;rm -r ./appinfo/blacklist_TCL-CN-T962-D6.xml
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;rm -r ./appinfo/blacklist_TCL-CN-T962-P2-UD.xml
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;rm -r ./appinfo/blacklist_TCL-CN-T962-V2.xml
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;rm -r ./appinfo/blacklist_TCL-CN-T962A-E5800A-UD.xml
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id=&#34;清理系统预装的垃圾软件&#34;&gt;清理系统预装的垃圾软件
+&lt;/h2&gt;&lt;p&gt;接下来可以进行一些清理&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-cmd&#34; data-lang=&#34;cmd&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;C&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;nl&#34;&gt;\Users\Deepblue\Desktop&lt;/span&gt;&lt;span class=&#34;c1&#34;&gt;&amp;gt;adb shell tclsu do pm list packages &amp;gt;package.txt&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;这一行命令的意思是，会将所有包名导出到package.txt文本文件中，在其中找到你一些冗余的包进行卸载，其中我的日志会随后附在我的博客中，可供参考，&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-cmd&#34; data-lang=&#34;cmd&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;adb shell tclsu do pm uninstall --user 0 com.tcl.bootadservice
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;adb shell tclsu do pm uninstall --user 0 com.golive.cinema
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;adb shell tclsu do pm uninstall --user 0 com.audiocn.kalaok.tv
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;adb shell tclsu do pm uninstall --user 0 com.tcl.tshop
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;adb shell tclsu do pm uninstall --user 0 com.tcl.gamecenter
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;adb shell tclsu do pm uninstall --user 0 com.tcl.common.weather
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;（谁会用电视搞这些有的没的啊，还捆绑成系统应用）&lt;/p&gt;
+&lt;h2 id=&#34;安装第三方软件&#34;&gt;安装第三方软件
+&lt;/h2&gt;&lt;p&gt;系统默认你禁止安装软件，但是可以通过命令行解除，好像规则是每次adb发起的连接只要不断开就一直能安装，解除命令如下：&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-cmd&#34; data-lang=&#34;cmd&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;adb shell tclsu do setprop persist.tcl.debug.installapk 1
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;adb shell tclsu do setprop persist.tcl.installapk.enable 1
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;(ps:哪怕你关闭了cmd窗口也依然生效，因为你在cmd输入adb命令已经启动了adb工具了，可以在任务管理器中看到，所以哪怕你换窗口也依旧没关系，因为adb没关闭，adb connect IP地址依旧维持着,除非你kill了adb.exe的进程)&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-cmd&#34; data-lang=&#34;cmd&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;adb shell getprop ro.build.version.release
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;5.0.1
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;以及记得查看支持的安卓版本，这是我的输出，5.0.1，几乎可以装所有应用，但是记得检查最低适配版本，以及，这个本身对我而言是为了装一个支持NAS的软件到TCL上方便我远程看存在硬盘里的番才这么折腾的，网上说有个网络存储，然后我家的TCL电视只支持自己扫描，不允许自己输入IP地址，网上查了一下AI，装了ES文件浏览器，发现也不行，没找到允许输入密码的远程软件，最后一想，我手机上用的cx文件管理器应该也差不多，一装上，能用，那就暂时固定下来了&lt;/p&gt;
+</description>
+        </item>
+        <item>
         <title>博客部署至我的服务器的记录</title>
         <link>https://adeepblue.github.io/p/%E5%8D%9A%E5%AE%A2%E9%83%A8%E7%BD%B2%E8%87%B3%E6%88%91%E7%9A%84%E6%9C%8D%E5%8A%A1%E5%99%A8%E7%9A%84%E8%AE%B0%E5%BD%95/</link>
         <pubDate>Thu, 17 Apr 2025 10:23:37 +0800</pubDate>
