@@ -1,0 +1,653 @@
+<!DOCTYPE html>
+<html lang="zh-cn" dir="ltr">
+    <head><meta charset='utf-8'>
+<meta name='viewport' content='width=device-width, initial-scale=1'><meta name='description' content="re使用的一些技巧">
+<title>正则使用指南</title>
+
+<link rel='canonical' href='https://adeepblue.github.io/p/%E6%AD%A3%E5%88%99%E4%BD%BF%E7%94%A8%E6%8C%87%E5%8D%97/'>
+
+<link rel="stylesheet" href="/scss/style.min.663803bebe609202d5b39d848f2d7c2dc8b598a2d879efa079fa88893d29c49c.css"><meta property='og:title' content="正则使用指南">
+<meta property='og:description' content="re使用的一些技巧">
+<meta property='og:url' content='https://adeepblue.github.io/p/%E6%AD%A3%E5%88%99%E4%BD%BF%E7%94%A8%E6%8C%87%E5%8D%97/'>
+<meta property='og:site_name' content='深蓝之亘的博客'>
+<meta property='og:type' content='article'><meta property='article:section' content='Post' /><meta property='article:published_time' content='2025-06-13T11:07:38&#43;08:00'/><meta property='article:modified_time' content='2025-06-13T11:07:38&#43;08:00'/><meta property='og:image' content='https://adeepblue.github.io/p/%E6%AD%A3%E5%88%99%E4%BD%BF%E7%94%A8%E6%8C%87%E5%8D%97/regex_logo.png' />
+<meta name="twitter:title" content="正则使用指南">
+<meta name="twitter:description" content="re使用的一些技巧"><meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:image" content='https://adeepblue.github.io/p/%E6%AD%A3%E5%88%99%E4%BD%BF%E7%94%A8%E6%8C%87%E5%8D%97/regex_logo.png' />
+    <link rel="shortcut icon" href="/favicon.ico" />
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0-rc.1/katex.min.css">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0-rc.1/katex.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0-rc.1/contrib/auto-render.min.js"></script>
+
+<script>
+    document.addEventListener("DOMContentLoaded", function() {
+      renderMathInElement(document.body);
+    });
+</script>
+         <link rel="stylesheet" href="/css/custom.css">
+    </head>
+    <body class="
+    article-page
+    ">
+    <script>
+        (function() {
+            const colorSchemeKey = 'StackColorScheme';
+            if(!localStorage.getItem(colorSchemeKey)){
+                localStorage.setItem(colorSchemeKey, "auto");
+            }
+        })();
+    </script><script>
+    (function() {
+        const colorSchemeKey = 'StackColorScheme';
+        const colorSchemeItem = localStorage.getItem(colorSchemeKey);
+        const supportDarkMode = window.matchMedia('(prefers-color-scheme: dark)').matches === true;
+
+        if (colorSchemeItem == 'dark' || colorSchemeItem === 'auto' && supportDarkMode) {
+            
+
+            document.documentElement.dataset.scheme = 'dark';
+        } else {
+            document.documentElement.dataset.scheme = 'light';
+        }
+    })();
+</script>
+<div class="container main-container flex on-phone--column extended"><aside class="sidebar left-sidebar sticky ">
+    <button class="hamburger hamburger--spin" type="button" id="toggle-menu" aria-label="切换菜单">
+        <span class="hamburger-box">
+            <span class="hamburger-inner"></span>
+        </span>
+    </button>
+
+    <header>
+        
+            
+            <figure class="site-avatar">
+                <a href="/">
+                
+                    
+                    
+                    
+                        
+                        <img src="/img/avatar_hu_996f7fae539f5332.png" width="300"
+                            height="300" class="site-logo" loading="lazy" alt="Avatar">
+                    
+                
+                </a>
+                
+            </figure>
+            
+        
+        
+        <div class="site-meta">
+            <h1 class="site-name"><a href="/">深蓝之亘的博客</a></h1>
+            <h2 class="site-description">欢迎来到我的博客网站</h2>
+        </div>
+    </header><ol class="menu-social">
+            
+                <li>
+                    <a 
+                        href='https://github.com/Adeepblue'
+                        target="_blank"
+                        title="GitHub"
+                        rel="me"
+                    >
+                        
+                        
+                            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-brand-github" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+  <path d="M9 19c-4.3 1.4 -4.3 -2.5 -6 -3m12 5v-3.5c0 -1 .1 -1.4 -.5 -2c2.8 -.3 5.5 -1.4 5.5 -6a4.6 4.6 0 0 0 -1.3 -3.2a4.2 4.2 0 0 0 -.1 -3.2s-1.1 -.3 -3.5 1.3a12.3 12.3 0 0 0 -6.2 0c-2.4 -1.6 -3.5 -1.3 -3.5 -1.3a4.2 4.2 0 0 0 -.1 3.2a4.6 4.6 0 0 0 -1.3 3.2c0 4.6 2.7 5.7 5.5 6c-.6 .6 -.6 1.2 -.5 2v3.5" />
+</svg>
+
+
+
+                        
+                    </a>
+                </li>
+            
+                <li>
+                    <a 
+                        href='https://space.bilibili.com/435022639'
+                        target="_blank"
+                        title="Twitter"
+                        rel="me"
+                    >
+                        
+                        
+                            <svg  xmlns="http://www.w3.org/2000/svg"  width="24"  height="24"  viewBox="0 0 24 24"  fill="none"  stroke="currentColor"  stroke-width="2"  stroke-linecap="round"  stroke-linejoin="round"  class="icon icon-tabler icons-tabler-outline icon-tabler-brand-bilibili"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M3 10a4 4 0 0 1 4 -4h10a4 4 0 0 1 4 4v6a4 4 0 0 1 -4 4h-10a4 4 0 0 1 -4 -4v-6z" /><path d="M8 3l2 3" /><path d="M16 3l-2 3" /><path d="M9 13v-2" /><path d="M15 11v2" /></svg>
+                        
+                    </a>
+                </li>
+            
+        </ol><ol class="menu" id="main-menu">
+        
+        
+        
+        <li >
+            <a href='/' >
+                
+                
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-home" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <polyline points="5 12 3 12 12 3 21 12 19 12" />
+  <path d="M5 12v7a2 2 0 0 0 2 2h10a2 2 0 0 0 2 -2v-7" />
+  <path d="M9 21v-6a2 2 0 0 1 2 -2h2a2 2 0 0 1 2 2v6" />
+</svg>
+
+
+
+                
+                <span>主页</span>
+            </a>
+        </li>
+        
+        
+        <li >
+            <a href='/%E6%9B%B4%E6%96%B0%E6%97%A5%E5%BF%97/' >
+                
+                
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-user" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="12" cy="7" r="4" />
+  <path d="M6 21v-2a4 4 0 0 1 4 -4h4a4 4 0 0 1 4 4v2" />
+</svg>
+
+
+
+                
+                <span>更新日志</span>
+            </a>
+        </li>
+        
+        
+        <li >
+            <a href='/archives/' >
+                
+                
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-archive" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <rect x="3" y="4" width="18" height="4" rx="2" />
+  <path d="M5 8v10a2 2 0 0 0 2 2h10a2 2 0 0 0 2 -2v-10" />
+  <line x1="10" y1="12" x2="14" y2="12" />
+</svg>
+
+
+
+                
+                <span>archives</span>
+            </a>
+        </li>
+        
+        
+        <li >
+            <a href='/search/' >
+                
+                
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-search" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="10" cy="10" r="7" />
+  <line x1="21" y1="21" x2="15" y2="15" />
+</svg>
+
+
+
+                
+                <span>搜索</span>
+            </a>
+        </li>
+        
+        
+        <li >
+            <a href='/links/' >
+                
+                
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-link" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <path d="M10 14a3.5 3.5 0 0 0 5 0l4 -4a3.5 3.5 0 0 0 -5 -5l-.5 .5" />
+  <path d="M14 10a3.5 3.5 0 0 0 -5 0l-4 4a3.5 3.5 0 0 0 5 5l.5 -.5" />
+</svg>
+
+
+
+                
+                <span>Links</span>
+            </a>
+        </li>
+        
+        <li class="menu-bottom-section">
+            <ol class="menu">
+
+                
+                    <li id="dark-mode-toggle">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-toggle-left" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="8" cy="12" r="2" />
+  <rect x="2" y="6" width="20" height="12" rx="6" />
+</svg>
+
+
+
+                        <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-toggle-right" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="16" cy="12" r="2" />
+  <rect x="2" y="6" width="20" height="12" rx="6" />
+</svg>
+
+
+
+                        <span>暗色模式</span>
+                    </li>
+                
+            </ol>
+        </li>
+    </ol>
+</aside>
+
+    <aside class="sidebar right-sidebar sticky">
+        
+            
+                
+    <section class="widget archives">
+        <div class="widget-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-hash" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <line x1="5" y1="9" x2="19" y2="9" />
+  <line x1="5" y1="15" x2="19" y2="15" />
+  <line x1="11" y1="4" x2="7" y2="20" />
+  <line x1="17" y1="4" x2="13" y2="20" />
+</svg>
+
+
+
+        </div>
+        <h2 class="widget-title section-title">目录</h2>
+        
+        <div class="widget--toc">
+            <nav id="TableOfContents">
+  <ol>
+    <li><a href="#单符号">单符号</a></li>
+    <li><a href="#进阶匹配">进阶匹配</a>
+      <ol>
+        <li><a href="#非贪婪的一些复杂用法">非贪婪的一些复杂用法</a></li>
+        <li><a href="#非贪婪匹配的更高阶用法">非贪婪匹配的更高阶用法</a></li>
+      </ol>
+    </li>
+    <li><a href="#其他内容">其他内容</a></li>
+  </ol>
+</nav>
+        </div>
+    </section>
+
+            
+        
+    </aside>
+
+
+            <main class="main full-width">
+    <article class="has-image main-article">
+    <header class="article-header">
+        <div class="article-image">
+            <a href="/p/%E6%AD%A3%E5%88%99%E4%BD%BF%E7%94%A8%E6%8C%87%E5%8D%97/">
+                <img src="/p/%E6%AD%A3%E5%88%99%E4%BD%BF%E7%94%A8%E6%8C%87%E5%8D%97/regex_logo_hu_7e1ca34ce6f64b62.png"
+                        srcset="/p/%E6%AD%A3%E5%88%99%E4%BD%BF%E7%94%A8%E6%8C%87%E5%8D%97/regex_logo_hu_7e1ca34ce6f64b62.png 800w, /p/%E6%AD%A3%E5%88%99%E4%BD%BF%E7%94%A8%E6%8C%87%E5%8D%97/regex_logo_hu_dfc46e170e7861d5.png 1600w"
+                        width="800" 
+                        height="753" 
+                        loading="lazy"
+                        alt="Featured image of post 正则使用指南" />
+                
+            </a>
+        </div>
+    
+
+    <div class="article-details">
+    
+    <header class="article-category">
+        
+            <a href="/categories/python/" style="background-color: #2a9d8f; color: #fff;">
+                Python
+            </a>
+        
+            <a href="/categories/re/" >
+                Re
+            </a>
+        
+            <a href="/categories/%E6%AD%A3%E5%88%99/" >
+                正则
+            </a>
+        
+    </header>
+    
+
+    <div class="article-title-wrapper">
+        <h2 class="article-title">
+            <a href="/p/%E6%AD%A3%E5%88%99%E4%BD%BF%E7%94%A8%E6%8C%87%E5%8D%97/">正则使用指南</a>
+        </h2>
+    
+        
+        <h3 class="article-subtitle">
+            re使用的一些技巧
+        </h3>
+        
+    </div>
+
+    
+    
+    
+    
+    <footer class="article-time">
+        
+            <div>
+                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-calendar-time" width="56" height="56" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <path d="M11.795 21h-6.795a2 2 0 0 1 -2 -2v-12a2 2 0 0 1 2 -2h12a2 2 0 0 1 2 2v4" />
+  <circle cx="18" cy="18" r="4" />
+  <path d="M15 3v4" />
+  <path d="M7 3v4" />
+  <path d="M3 11h16" />
+  <path d="M18 16.496v1.504l1 1" />
+</svg>
+                <time class="article-time--published">2025-06-13</time>
+            </div>
+        
+
+        
+    </footer>
+    
+
+    
+</div>
+
+</header>
+
+    <section class="article-content">
+    
+    
+    <p>hugo问题
+（，不过生成文章时记得注意编码问题，有可能会报错，默认还是以utf-8编码生成会好一些，GBK会报错）</p>
+<h1 id="一些基础">一些基础
+</h1><h2 id="单符号">单符号
+</h2><p>因为pycharm中的搜索自带正则功能，一般情况下可以先在pycharm的搜索中对文件进行一个测试，观察是否匹配，输入字符内容本身固然可以匹配，但是一旦字符有差别就无法匹配了，所以需要正则来通配需要的字符内容，下面介绍一些基础的内容</p>
+<p>特殊字符</p>
+<ol>
+<li>
+<p><strong>.</strong> 通配符，指的是通配任意字符  (英文的点)</p>
+</li>
+<li>
+<p><strong>*</strong>   任意多个指定的内容其中指定的内容跟在<em>号后面表示匹配任意多的这个内容，贪婪匹配(有多少匹配多少)
+比如说o</em>就表示可以匹配o,也可以匹配oo,ooooooo,前提这个字是o，也可以指定其他的内容。</p>
+</li>
+</ol>
+<p>所以 .* 就是正则规则下的匹配任意字符串了</p>
+<h2 id="进阶匹配">进阶匹配
+</h2><p>那么，接下来，我想匹配数字怎么办？我不希望出现字符，比如说我希望从abc123中提取123，接下来就轮到指定字符登场了,</p>
+<p>其中一种是\d，它表示匹配数字（单个字）了，所以使用\d*即可匹配到数字，因为需要的是任意长度的数字，其中反斜杠代表转义，如果需要输入特殊字符本身作为匹配的，就需要把反斜杠加入在前面，亦或者是像\d这样指代其他特殊字符类型的，其他还有\w指代字母，\s指代空格</p>
+<p>以及另一个我比较常用的一个匹配字符[0-9]即是指定匹配0到9的，但是依旧只是单字符，如果想要匹配多个依旧需要*，其中-在[]中表示字符范围，另外也可以有a-z比如说，表示即是[a-z]</p>
+<p>接下来重点讲一下方括号[] ,其中上述的[a-z]和[0-9]只是一小部分，如果a-z和0-9都适配直接连起来即可[0-9a-z]，单字符也是如此，[aeiou]即是表示只要包含这五个字符中的一个字符即可被匹配到，如果需要匹配多个依旧是加上<em>号即可，但如果[]内加上一个^后，中括号内表示的的便不再是包含，而是排除，比如说我需要定位到&lt;br&gt;元素，便可以这么写，&quot;\&lt;[^\&gt;]</em>\&gt;&quot;,其中多数的特殊符号被我用反斜杠表示的意思是指，虽然我不知道这个符号在正则中是否有什么特殊含义，但是为了保险起见我先转义一下，避免歧义</p>
+<p>接下来我解释一下运作的方式，匹配开头必须是&lt;,然后[^\&gt;]*则是取一段不包含&gt;的内容，跟最后一个&gt;形成对应，也就是说，我要一段只有一个&gt;号的字符，这也就是，要求接下来匹配到的内容只能有一个&gt;，也就是非贪婪匹配</p>
+<p>另一种非贪婪匹配方法是使用?,菜鸟教程中说明的是匹配前面的子表达式零次或一次，也就是，上述正则表达式其实可以写成&lt;.*?&gt;，可能比较复杂</p>
+<h3 id="非贪婪的一些复杂用法">非贪婪的一些复杂用法
+</h3><p>如果&lt;.*&gt;对&lt;br&gt;&lt;/br&gt;有两种匹配可能性，一种是<span style="color:red">&lt;</span>br<span style="color:red">&gt;</span>&lt;/br&gt;，另一种是<span style="color:red">&lt;</span>br&gt;&lt;/br<span style="color:red">&gt;</span>，这样一对比应该能看出来问号?非贪婪匹配的目的是什么了，是限定匹配上&gt;符号的数量为1，这就是这种复杂一些的用法</p>
+<h3 id="非贪婪匹配的更高阶用法">非贪婪匹配的更高阶用法
+</h3><p>如果你想对一串内容进行非贪婪匹配应该怎么做呢？比如匹配上&lt;span&gt; xxxxx&lt;/span&gt;  ,abcd&lt;span&gt;other&lt;span&gt;,比如说我想匹配上&lt;span&gt;内部的东西</p>
+<p>在介绍这种匹配方法前，我先介绍一下括号，括号一种是表示你要的东西，其中pycharm中你括号扩出来的地方，如果后续有替换操作,比如说，你想将所有的abc[0-9]?后面加两个空格，此处如果是原来的替换方式，可能无法保留之前的内容，应该怎么做呢？正则表达式提供了括号选项，假设比如说(abc[0-9]?)将它括起来了，后续下面的引用就可以用$1来引用上面括号内的内容了，然后在这之后加个括号就能达成想要的效果了</p>
+<p>接上上段匹配&lt;span&gt;内部的东西，讲完括号，接下来可以讲通用办法了，先上内容\&lt;span\&gt;.*(&lt;\/span&gt;).*?  后面的部分的.*?中的括号是必要部分，表示这一部分的内容被限定为匹配一次，缘由同上，但是包含的内容是一块内容，并不只是像上面那样只包含一个字符，通用性高不少</p>
+<p>上述内容是pycharm中的替换效果，如果是python中的re库，效果也差不多可能？find函数匹配到内容后，如果正则表达式中包含括号，则会舍去非括号的内容，表示，这是你不需要的，但是上述\&lt;span\&gt;.*(&lt;\/span&gt;).*?此处表达式中必定包含括号，但是，可以通过调试查看你需要的别的字段，也用括号提出来，然后提取必要的字段即可</p>
+<p>(括号pycharm和re库适用场景^$)</p>
+<h2 id="其他内容">其他内容
+</h2><p>()括号还有一个其他的用法，(?:src|href)表示的是，这里我要求的限定字段，可以是连起来的src，或者是连起来的href，跟[]不同的是，() 限定了字段，而[]中是包含字段中任意单字的单个字符，其他还有一个pycharm和re库中均可使用的^和$,前者如果不在中括号中则意味着这里必须是\n结尾，也就是句首，$相反，必须是句尾，也就是以\n结尾或者是末尾，具体内容可以pycharm自行调试尝试</p>
+
+</section>
+
+
+    <footer class="article-footer">
+    
+
+    </footer>
+
+
+    
+        <link 
+                rel="stylesheet" 
+                href="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css"integrity="sha384-n8MVd4RsNIU0tAv4ct0nTaAbDJwPJzDEaqSD1odI&#43;WdtXRGWt2kTvGFasHpSy3SV"crossorigin="anonymous"
+            ><script 
+                src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.js"integrity="sha384-XjKyOOlGwcjNTAIQHIpgOno0Hl1YQqzUOEleOLALmuqehneUG&#43;vnGctmUb0ZY0l8"crossorigin="anonymous"
+                defer
+                >
+            </script><script 
+                src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/contrib/auto-render.min.js"integrity="sha384-&#43;VBxd3r6XgURycqtZ117nYw44OOcIax56Z4dCRWbxyPt0Koah1uHoK0o4&#43;/RRE05"crossorigin="anonymous"
+                defer
+                >
+            </script><script>
+    window.addEventListener("DOMContentLoaded", () => {
+	const mainArticleElement = document.querySelector(".main-article");
+        renderMathInElement(mainArticleElement, {
+            delimiters: [
+                { left: "$$", right: "$$", display: true },
+                { left: "$", right: "$", display: false },
+                { left: "\\(", right: "\\)", display: false },
+                { left: "\\[", right: "\\]", display: true }
+            ],
+            ignoredClasses: ["gist"]
+        });})
+</script>
+
+    
+</article>
+
+    
+
+    
+
+<aside class="related-content--wrapper">
+    <h2 class="section-title">相关文章</h2>
+    <div class="related-content">
+        <div class="flex article-list--tile">
+            
+                
+<article class="has-image">
+    <a href="/p/%E5%B8%8C%E5%B0%94%E4%BC%AF%E7%89%B9%E6%9B%B2%E7%BA%BF/">
+        
+        
+            <div class="article-image">
+                <img src="/p/%E5%B8%8C%E5%B0%94%E4%BC%AF%E7%89%B9%E6%9B%B2%E7%BA%BF/Hilbert-3.7f51d6bf886836236a350e3f9ac1b13d_hu_aad1ee7da9a3bad0.jpg" 
+                        width="250" 
+                        height="150" 
+                        loading="lazy"
+                        alt="Featured image of post 希尔伯特曲线"
+                        
+                        data-hash="md5-f1HWv4hoNiNqNQ4/msGxPQ==">
+                
+            </div>
+        
+
+        <div class="article-details">
+            <h2 class="article-title">希尔伯特曲线</h2>
+        </div>
+    </a>
+</article>
+
+            
+                
+<article class="has-image">
+    <a href="/p/python-%E5%BC%80%E4%BA%86%E4%BB%A3%E7%90%86%E4%BD%BF%E7%94%A8requests%E5%BA%93%E6%8A%A5%E9%94%99ssl-error%E8%A7%A3%E5%86%B3%E5%8A%9E%E6%B3%95/">
+        
+        
+            <div class="article-image">
+                <img src="/p/python-%E5%BC%80%E4%BA%86%E4%BB%A3%E7%90%86%E4%BD%BF%E7%94%A8requests%E5%BA%93%E6%8A%A5%E9%94%99ssl-error%E8%A7%A3%E5%86%B3%E5%8A%9E%E6%B3%95/python-Logo.3329eb5754e403ba0a6a3c819c9252fe_hu_12f88b7f14b6913a.png" 
+                        width="250" 
+                        height="150" 
+                        loading="lazy"
+                        alt="Featured image of post Python 开了代理使用requests库报错SSL Error解决办法"
+                        
+                        data-hash="md5-MynrV1TkA7oKajyBnJJS/g==">
+                
+            </div>
+        
+
+        <div class="article-details">
+            <h2 class="article-title">Python 开了代理使用requests库报错SSL Error解决办法</h2>
+        </div>
+    </a>
+</article>
+
+            
+                
+<article class="has-image">
+    <a href="/p/python-matplotlib%E7%BB%98%E5%9B%BE%E5%BA%93/">
+        
+        
+            <div class="article-image">
+                <img src="/p/python-matplotlib%E7%BB%98%E5%9B%BE%E5%BA%93/matplotlib.ec18ea9f106970da41f5d895a5124cb8_hu_8d45ec0fe1f0babf.png" 
+                        width="250" 
+                        height="150" 
+                        loading="lazy"
+                        alt="Featured image of post Python Matplotlib绘图库"
+                        
+                        data-hash="md5-7BjqnxBpcNpB9diVpRJMuA==">
+                
+            </div>
+        
+
+        <div class="article-details">
+            <h2 class="article-title">Python Matplotlib绘图库</h2>
+        </div>
+    </a>
+</article>
+
+            
+        </div>
+    </div>
+</aside>
+
+     
+    
+        
+    
+
+    <footer class="site-footer">
+    <section class="copyright">
+        &copy; 
+        
+        2025 深蓝之亘
+    </section>
+    
+    <section class="powerby">
+        
+            深蓝之亘的博客网站 https://adeepblue.github.io <br/>
+        使用 <a href="https://gohugo.io/" target="_blank" rel="noopener">Hugo</a> 构建 <br />
+        主题 <b><a href="https://github.com/CaiJimmy/hugo-theme-stack" target="_blank" rel="noopener" data-version="3.30.0">Stack</a></b> 由 <a href="https://jimmycai.com" target="_blank" rel="noopener">Jimmy</a> 设计
+    </section>
+</footer>
+
+
+    
+<div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
+
+    
+    <div class="pswp__bg"></div>
+
+    
+    <div class="pswp__scroll-wrap">
+
+        
+        <div class="pswp__container">
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+        </div>
+
+        
+        <div class="pswp__ui pswp__ui--hidden">
+
+            <div class="pswp__top-bar">
+
+                
+
+                <div class="pswp__counter"></div>
+
+                <button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+
+                <button class="pswp__button pswp__button--share" title="Share"></button>
+
+                <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
+
+                <button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
+
+                
+                
+                <div class="pswp__preloader">
+                    <div class="pswp__preloader__icn">
+                        <div class="pswp__preloader__cut">
+                            <div class="pswp__preloader__donut"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+                <div class="pswp__share-tooltip"></div>
+            </div>
+
+            <button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)">
+            </button>
+
+            <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)">
+            </button>
+
+            <div class="pswp__caption">
+                <div class="pswp__caption__center"></div>
+            </div>
+
+        </div>
+
+    </div>
+
+</div><script 
+                src="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe.min.js"integrity="sha256-ePwmChbbvXbsO02lbM3HoHbSHTHFAeChekF1xKJdleo="crossorigin="anonymous"
+                defer
+                >
+            </script><script 
+                src="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe-ui-default.min.js"integrity="sha256-UKkzOn/w1mBxRmLLGrSeyB4e1xbrp4xylgAWb3M42pU="crossorigin="anonymous"
+                defer
+                >
+            </script><link 
+                rel="stylesheet" 
+                href="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/default-skin/default-skin.min.css"crossorigin="anonymous"
+            ><link 
+                rel="stylesheet" 
+                href="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe.min.css"crossorigin="anonymous"
+            >
+
+            </main>
+        </div>
+        <script 
+                src="https://cdn.jsdelivr.net/npm/node-vibrant@3.1.6/dist/vibrant.min.js"integrity="sha256-awcR2jno4kI5X0zL8ex0vi2z&#43;KMkF24hUW8WePSA9HM="crossorigin="anonymous"
+                
+                >
+            </script><script type="text/javascript" src="/ts/main.1e9a3bafd846ced4c345d084b355fb8c7bae75701c338f8a1f8a82c780137826.js" defer></script>
+<script>
+    (function () {
+        const customFont = document.createElement('link');
+        customFont.href = "https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap";
+
+        customFont.type = "text/css";
+        customFont.rel = "stylesheet";
+
+        document.head.appendChild(customFont);
+    }());
+</script>
+
+<style>
+  body {
+    background: url(https://adeepblue.github.io/background/background.png) no-repeat center top;
+    background-size: cover;
+    background-attachment: fixed;
+  }
+</style>
+    </body>
+</html>

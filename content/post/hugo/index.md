@@ -57,7 +57,7 @@ Content "E:\\personal-blog\\personal-blog\\content\\git\\git-init.md" created
     └─turing-complete
 ```
 
-其他page和categories文件夹我没去管，等到文章写多了才会利用那些整一整
+其他page和categories文件夹我没去管，等到文章写多了才会利用那些整一整，不过生成文章时记得注意编码问题，有可能会报错，默认还是以utf-8编码生成会好一些，GBK会报错
 
 ## md文件头和文件内容
 再有就是自带的文件头，

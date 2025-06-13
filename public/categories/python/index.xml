@@ -7,7 +7,48 @@
         <generator>Hugo -- gohugo.io</generator>
         <language>zh-cn</language>
         <copyright>深蓝之亘</copyright>
-        <lastBuildDate>Fri, 21 Mar 2025 21:09:54 +0800</lastBuildDate><atom:link href="https://adeepblue.github.io/categories/python/index.xml" rel="self" type="application/rss+xml" /><item>
+        <lastBuildDate>Fri, 13 Jun 2025 11:07:38 +0800</lastBuildDate><atom:link href="https://adeepblue.github.io/categories/python/index.xml" rel="self" type="application/rss+xml" /><item>
+        <title>正则使用指南</title>
+        <link>https://adeepblue.github.io/p/%E6%AD%A3%E5%88%99%E4%BD%BF%E7%94%A8%E6%8C%87%E5%8D%97/</link>
+        <pubDate>Fri, 13 Jun 2025 11:07:38 +0800</pubDate>
+        
+        <guid>https://adeepblue.github.io/p/%E6%AD%A3%E5%88%99%E4%BD%BF%E7%94%A8%E6%8C%87%E5%8D%97/</guid>
+        <description>&lt;img src="https://adeepblue.github.io/p/%E6%AD%A3%E5%88%99%E4%BD%BF%E7%94%A8%E6%8C%87%E5%8D%97/regex_logo.png" alt="Featured image of post 正则使用指南" /&gt;&lt;p&gt;hugo问题
+（，不过生成文章时记得注意编码问题，有可能会报错，默认还是以utf-8编码生成会好一些，GBK会报错）&lt;/p&gt;
+&lt;h1 id=&#34;一些基础&#34;&gt;一些基础
+&lt;/h1&gt;&lt;h2 id=&#34;单符号&#34;&gt;单符号
+&lt;/h2&gt;&lt;p&gt;因为pycharm中的搜索自带正则功能，一般情况下可以先在pycharm的搜索中对文件进行一个测试，观察是否匹配，输入字符内容本身固然可以匹配，但是一旦字符有差别就无法匹配了，所以需要正则来通配需要的字符内容，下面介绍一些基础的内容&lt;/p&gt;
+&lt;p&gt;特殊字符&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;.&lt;/strong&gt; 通配符，指的是通配任意字符  (英文的点)&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;*&lt;/strong&gt;   任意多个指定的内容其中指定的内容跟在&lt;em&gt;号后面表示匹配任意多的这个内容，贪婪匹配(有多少匹配多少)
+比如说o&lt;/em&gt;就表示可以匹配o,也可以匹配oo,ooooooo,前提这个字是o，也可以指定其他的内容。&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;所以 .* 就是正则规则下的匹配任意字符串了&lt;/p&gt;
+&lt;h2 id=&#34;进阶匹配&#34;&gt;进阶匹配
+&lt;/h2&gt;&lt;p&gt;那么，接下来，我想匹配数字怎么办？我不希望出现字符，比如说我希望从abc123中提取123，接下来就轮到指定字符登场了,&lt;/p&gt;
+&lt;p&gt;其中一种是\d，它表示匹配数字（单个字）了，所以使用\d*即可匹配到数字，因为需要的是任意长度的数字，其中反斜杠代表转义，如果需要输入特殊字符本身作为匹配的，就需要把反斜杠加入在前面，亦或者是像\d这样指代其他特殊字符类型的，其他还有\w指代字母，\s指代空格&lt;/p&gt;
+&lt;p&gt;以及另一个我比较常用的一个匹配字符[0-9]即是指定匹配0到9的，但是依旧只是单字符，如果想要匹配多个依旧需要*，其中-在[]中表示字符范围，另外也可以有a-z比如说，表示即是[a-z]&lt;/p&gt;
+&lt;p&gt;接下来重点讲一下方括号[] ,其中上述的[a-z]和[0-9]只是一小部分，如果a-z和0-9都适配直接连起来即可[0-9a-z]，单字符也是如此，[aeiou]即是表示只要包含这五个字符中的一个字符即可被匹配到，如果需要匹配多个依旧是加上&lt;em&gt;号即可，但如果[]内加上一个^后，中括号内表示的的便不再是包含，而是排除，比如说我需要定位到&amp;lt;br&amp;gt;元素，便可以这么写，&amp;quot;\&amp;lt;[^\&amp;gt;]&lt;/em&gt;\&amp;gt;&amp;quot;,其中多数的特殊符号被我用反斜杠表示的意思是指，虽然我不知道这个符号在正则中是否有什么特殊含义，但是为了保险起见我先转义一下，避免歧义&lt;/p&gt;
+&lt;p&gt;接下来我解释一下运作的方式，匹配开头必须是&amp;lt;,然后[^\&amp;gt;]*则是取一段不包含&amp;gt;的内容，跟最后一个&amp;gt;形成对应，也就是说，我要一段只有一个&amp;gt;号的字符，这也就是，要求接下来匹配到的内容只能有一个&amp;gt;，也就是非贪婪匹配&lt;/p&gt;
+&lt;p&gt;另一种非贪婪匹配方法是使用?,菜鸟教程中说明的是匹配前面的子表达式零次或一次，也就是，上述正则表达式其实可以写成&amp;lt;.*?&amp;gt;，可能比较复杂&lt;/p&gt;
+&lt;h3 id=&#34;非贪婪的一些复杂用法&#34;&gt;非贪婪的一些复杂用法
+&lt;/h3&gt;&lt;p&gt;如果&amp;lt;.*&amp;gt;对&amp;lt;br&amp;gt;&amp;lt;/br&amp;gt;有两种匹配可能性，一种是&lt;span style=&#34;color:red&#34;&gt;&amp;lt;&lt;/span&gt;br&lt;span style=&#34;color:red&#34;&gt;&amp;gt;&lt;/span&gt;&amp;lt;/br&amp;gt;，另一种是&lt;span style=&#34;color:red&#34;&gt;&amp;lt;&lt;/span&gt;br&amp;gt;&amp;lt;/br&lt;span style=&#34;color:red&#34;&gt;&amp;gt;&lt;/span&gt;，这样一对比应该能看出来问号?非贪婪匹配的目的是什么了，是限定匹配上&amp;gt;符号的数量为1，这就是这种复杂一些的用法&lt;/p&gt;
+&lt;h3 id=&#34;非贪婪匹配的更高阶用法&#34;&gt;非贪婪匹配的更高阶用法
+&lt;/h3&gt;&lt;p&gt;如果你想对一串内容进行非贪婪匹配应该怎么做呢？比如匹配上&amp;lt;span&amp;gt; xxxxx&amp;lt;/span&amp;gt;  ,abcd&amp;lt;span&amp;gt;other&amp;lt;span&amp;gt;,比如说我想匹配上&amp;lt;span&amp;gt;内部的东西&lt;/p&gt;
+&lt;p&gt;在介绍这种匹配方法前，我先介绍一下括号，括号一种是表示你要的东西，其中pycharm中你括号扩出来的地方，如果后续有替换操作,比如说，你想将所有的abc[0-9]?后面加两个空格，此处如果是原来的替换方式，可能无法保留之前的内容，应该怎么做呢？正则表达式提供了括号选项，假设比如说(abc[0-9]?)将它括起来了，后续下面的引用就可以用$1来引用上面括号内的内容了，然后在这之后加个括号就能达成想要的效果了&lt;/p&gt;
+&lt;p&gt;接上上段匹配&amp;lt;span&amp;gt;内部的东西，讲完括号，接下来可以讲通用办法了，先上内容\&amp;lt;span\&amp;gt;.*(&amp;lt;\/span&amp;gt;).*?  后面的部分的.*?中的括号是必要部分，表示这一部分的内容被限定为匹配一次，缘由同上，但是包含的内容是一块内容，并不只是像上面那样只包含一个字符，通用性高不少&lt;/p&gt;
+&lt;p&gt;上述内容是pycharm中的替换效果，如果是python中的re库，效果也差不多可能？find函数匹配到内容后，如果正则表达式中包含括号，则会舍去非括号的内容，表示，这是你不需要的，但是上述\&amp;lt;span\&amp;gt;.*(&amp;lt;\/span&amp;gt;).*?此处表达式中必定包含括号，但是，可以通过调试查看你需要的别的字段，也用括号提出来，然后提取必要的字段即可&lt;/p&gt;
+&lt;p&gt;(括号pycharm和re库适用场景^$)&lt;/p&gt;
+&lt;h2 id=&#34;其他内容&#34;&gt;其他内容
+&lt;/h2&gt;&lt;p&gt;()括号还有一个其他的用法，(?:src|href)表示的是，这里我要求的限定字段，可以是连起来的src，或者是连起来的href，跟[]不同的是，() 限定了字段，而[]中是包含字段中任意单字的单个字符，其他还有一个pycharm和re库中均可使用的^和$,前者如果不在中括号中则意味着这里必须是\n结尾，也就是句首，$相反，必须是句尾，也就是以\n结尾或者是末尾，具体内容可以pycharm自行调试尝试&lt;/p&gt;
+</description>
+        </item>
+        <item>
         <title>希尔伯特曲线</title>
         <link>https://adeepblue.github.io/p/%E5%B8%8C%E5%B0%94%E4%BC%AF%E7%89%B9%E6%9B%B2%E7%BA%BF/</link>
         <pubDate>Fri, 21 Mar 2025 21:09:54 +0800</pubDate>

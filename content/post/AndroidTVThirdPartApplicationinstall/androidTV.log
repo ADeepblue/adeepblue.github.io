@@ -1,0 +1,1074 @@
+Microsoft Windows [版本 10.0.19041.1]
+(c) 2019 Microsoft Corporation。保留所有权利。
+
+C:\Users\Deepblue>adb shell getprop ro.build.version.release
+5.0.1
+
+C:\Users\Deepblue>cd Desktop
+
+C:\Users\Deepblue\Desktop>adb install "com.estrongs.android.pop_4.0.5.1-514_minAPI14(armeabi,armeabi-v7a,x86)(nodpi).apk"
+Performing Push Install
+com.estrongs.android.pop_4.0.5.1-514_minAPI14(armeabi,arme...file pushed, 0 skipped. 3.5 MB/s (8078803 bytes in 2.188s)
+        pkg: /data/local/tmp/com.estrongs.android.pop_4.0.5.1-514_minAPI14(armeabi,armeabi-v7a,x86)(nodpi).apk
+install apk has be disabled from pm by system default!
+
+C:\Users\Deepblue\Desktop>adb shell tclsu do rm /system/app/ES.apk
+
+C:\Users\Deepblue\Desktop>adb shell tclsu do rm /sdcard/Download/ES.apk
+
+C:\Users\Deepblue\Desktop>adb push "com.estrongs.android.pop_4.0.5.1-514_minAPI14(armeabi,armeabi-v7a,x86)(nodpi).apk" /sdcard/Download
+com.estrongs.android.pop_4.0.5.1-514_minAPI14(armeabi,arme...file pushed, 0 skipped. 3.7 MB/s (8078803 bytes in 2.065s)
+
+C:\Users\Deepblue\Desktop>adb shell tclsu do pm install /sdcard/Download/com.estrongs.android.pop_4.0.5.1-514_minAPI14(armeabi,armeabi-v7a,x86)(nodpi).apk
+/system/bin/sh: syntax error: '(' unexpected
+
+C:\Users\Deepblue\Desktop>adb shell tclsu do ls /sdcard/Download
+com.estrongs.android.pop_4.0.5.1-514_minAPI14(armeabi,armeabi-v7a,x86)(nodpi).apk
+
+C:\Users\Deepblue\Desktop>adb shell tclsu do pm install "com.estrongs.android.pop_4.0.5.1-514_minAPI14(armeabi,armeabi-v7a,x86)(nodpi).apk"
+/system/bin/sh: syntax error: '(' unexpected
+
+C:\Users\Deepblue\Desktop>adb shell tclsu
+root@coconut_p1:/ # cd /sdcard/Download
+cd /sdcard/Download
+root@coconut_p1:/sdcard/Download # exit
+exit
+
+C:\Users\Deepblue\Desktop>adb shell
+shell@coconut_p1:/ $ tclsu
+shell@coconut_p1:/ # cd /sdcard/D
+DCIM/     Download/
+shell@coconut_p1:/ # cd /sdcard/Download/
+-514_minAPI14\(armeabi,armeabi-v7a,x86\)\(nodpi\).apk                         <
+        pkg: com.estrongs.android.pop_4.0.5.1-514_minAPI14(armeabi,armeabi-v7a,x86)(nodpi).apk
+install apk has be disabled from pm by system default!
+shell@coconut_p1:/sdcard/Download # pm list packages -d
+-514_minAPI14\(armeabi,armeabi-v7a,x86\)\(nodpi\).apk                         <
+shell@coconut_p1:/sdcard/Download # ls
+shell@coconut_p1:/sdcard/Download # exit
+shell@coconut_p1:/ $ exit
+
+C:\Users\Deepblue\Desktop>adb push "ES" /sdcard/Download
+adb: error: cannot stat 'ES': No such file or directory
+
+C:\Users\Deepblue\Desktop>adb push "ES.apk" /sdcard/Download
+ES.apk: 1 file pushed, 0 skipped. 1.4 MB/s (21384560 bytes in 14.572s)
+
+C:\Users\Deepblue\Desktop>adb push "ES.apk" /sdcard/Download
+ES.apk: 1 file pushed, 0 skipped. 1.5 MB/s (21384560 bytes in 13.646s)
+
+C:\Users\Deepblue\Desktop>
+C:\Users\Deepblue\Desktop>
+C:\Users\Deepblue\Desktop>
+C:\Users\Deepblue\Desktop>
+C:\Users\Deepblue\Desktop>
+C:\Users\Deepblue\Desktop>
+C:\Users\Deepblue\Desktop>
+C:\Users\Deepblue\Desktop>
+C:\Users\Deepblue\Desktop>
+C:\Users\Deepblue\Desktop>
+C:\Users\Deepblue\Desktop>
+C:\Users\Deepblue\Desktop>
+C:\Users\Deepblue\Desktop>
+C:\Users\Deepblue\Desktop>
+C:\Users\Deepblue\Desktop>
+C:\Users\Deepblue\Desktop>
+C:\Users\Deepblue\Desktop>
+C:\Users\Deepblue\Desktop>
+C:\Users\Deepblue\Desktop>
+C:\Users\Deepblue\Desktop>
+C:\Users\Deepblue\Desktop>
+C:\Users\Deepblue\Desktop>
+C:\Users\Deepblue\Desktop>
+C:\Users\Deepblue\Desktop>
+C:\Users\Deepblue\Desktop>
+C:\Users\Deepblue\Desktop>
+C:\Users\Deepblue\Desktop>
+C:\Users\Deepblue\Desktop>
+C:\Users\Deepblue\Desktop>
+C:\Users\Deepblue\Desktop>
+C:\Users\Deepblue\Desktop>
+C:\Users\Deepblue\Desktop>
+C:\Users\Deepblue\Desktop>
+C:\Users\Deepblue\Desktop>adb shell tclsu do pm install /sdcard/Download/ES.apk
+        pkg: /sdcard/Download/ES.apk
+install apk has be disabled from pm by system default!
+
+C:\Users\Deepblue\Desktop>adb shell tclsu do setprop persist.tcl.debug.installapk 1
+
+C:\Users\Deepblue\Desktop>adb shell tclsu do setprop persist.tcl.installapk.enable 1
+
+C:\Users\Deepblue\Desktop>adb shell tclsu do pm install /sdcard/Download/ES.apk
+        pkg: /sdcard/Download/ES.apk
+install apk has be enabled from pm by user!
+
+
+
+
+
+
+exit
+exit
+exit
+exit
+
+
+
+
+
+
+
+
+
+
+Success
+
+
+
+
+
+C:\Users\Deepblue\Desktop>adb status
+adb: unknown command status
+
+C:\Users\Deepblue\Desktop>adb list
+adb: unknown command list
+
+C:\Users\Deepblue\Desktop>adb
+Android Debug Bridge version 1.0.41
+Version 33.0.3-8952118
+Installed as E:\���\adb����\platform-tools_r33.0.3-windows\platform-tools\adb.exe
+
+global options:
+ -a                       listen on all network interfaces, not just localhost
+ -d                       use USB device (error if multiple devices connected)
+ -e                       use TCP/IP device (error if multiple TCP/IP devices available)
+ -s SERIAL                use device with given serial (overrides $ANDROID_SERIAL)
+ -t ID                    use device with given transport id
+ -H                       name of adb server host [default=localhost]
+ -P                       port of adb server [default=5037]
+ -L SOCKET                listen on given socket for adb server [default=tcp:localhost:5037]
+ --one-device SERIAL|USB  only allowed with 'start-server' or 'server nodaemon', server will only connect to one USB device, specified by a serial number or USB device address.
+ --exit-on-write-error    exit if stdout is closed
+
+general commands:
+ devices [-l]             list connected devices (-l for long output)
+ help                     show this help message
+ version                  show version num
+
+networking:
+ connect HOST[:PORT]      connect to a device via TCP/IP [default port=5555]
+ disconnect [HOST[:PORT]]
+     disconnect from given TCP/IP device [default port=5555], or all
+ pair HOST[:PORT] [PAIRING CODE]
+     pair with a device for secure TCP/IP communication
+ forward --list           list all forward socket connections
+ forward [--no-rebind] LOCAL REMOTE
+     forward socket connection using:
+       tcp:<port> (<local> may be "tcp:0" to pick any open port)
+       localabstract:<unix domain socket name>
+       localreserved:<unix domain socket name>
+       localfilesystem:<unix domain socket name>
+       dev:<character device name>
+       jdwp:<process pid> (remote only)
+       vsock:<CID>:<port> (remote only)
+       acceptfd:<fd> (listen only)
+ forward --remove LOCAL   remove specific forward socket connection
+ forward --remove-all     remove all forward socket connections
+ reverse --list           list all reverse socket connections from device
+ reverse [--no-rebind] REMOTE LOCAL
+     reverse socket connection using:
+       tcp:<port> (<remote> may be "tcp:0" to pick any open port)
+       localabstract:<unix domain socket name>
+       localreserved:<unix domain socket name>
+       localfilesystem:<unix domain socket name>
+ reverse --remove REMOTE  remove specific reverse socket connection
+ reverse --remove-all     remove all reverse socket connections from device
+ mdns check               check if mdns discovery is available
+ mdns services            list all discovered services
+
+file transfer:
+ push [--sync] [-z ALGORITHM] [-Z] LOCAL... REMOTE
+     copy local files/directories to device
+     --sync: only push files that are newer on the host than the device
+     -n: dry run: push files to device without storing to the filesystem
+     -z: enable compression with a specified algorithm (any/none/brotli/lz4/zstd)
+     -Z: disable compression
+ pull [-a] [-z ALGORITHM] [-Z] REMOTE... LOCAL
+     copy files/dirs from device
+     -a: preserve file timestamp and mode
+     -z: enable compression with a specified algorithm (any/none/brotli/lz4/zstd)
+     -Z: disable compression
+ sync [-l] [-z ALGORITHM] [-Z] [all|data|odm|oem|product|system|system_ext|vendor]
+     sync a local build from $ANDROID_PRODUCT_OUT to the device (default all)
+     -n: dry run: push files to device without storing to the filesystem
+     -l: list files that would be copied, but don't copy them
+     -z: enable compression with a specified algorithm (any/none/brotli/lz4/zstd)
+     -Z: disable compression
+
+shell:
+ shell [-e ESCAPE] [-n] [-Tt] [-x] [COMMAND...]
+     run remote shell command (interactive shell if no command given)
+     -e: choose escape character, or "none"; default '~'
+     -n: don't read from stdin
+     -T: disable pty allocation
+     -t: allocate a pty if on a tty (-tt: force pty allocation)
+     -x: disable remote exit codes and stdout/stderr separation
+ emu COMMAND              run emulator console command
+
+app installation (see also `adb shell cmd package help`):
+ install [-lrtsdg] [--instant] PACKAGE
+     push a single package to the device and install it
+ install-multiple [-lrtsdpg] [--instant] PACKAGE...
+     push multiple APKs to the device for a single package and install them
+ install-multi-package [-lrtsdpg] [--instant] PACKAGE...
+     push one or more packages to the device and install them atomically
+     -r: replace existing application
+     -t: allow test packages
+     -d: allow version code downgrade (debuggable packages only)
+     -p: partial application install (install-multiple only)
+     -g: grant all runtime permissions
+     --abi ABI: override platform's default ABI
+     --instant: cause the app to be installed as an ephemeral install app
+     --no-streaming: always push APK to device and invoke Package Manager as separate steps
+     --streaming: force streaming APK directly into Package Manager
+     --fastdeploy: use fast deploy
+     --no-fastdeploy: prevent use of fast deploy
+     --force-agent: force update of deployment agent when using fast deploy
+     --date-check-agent: update deployment agent when local version is newer and using fast deploy
+     --version-check-agent: update deployment agent when local version has different version code and using fast deploy
+     (See also `adb shell pm help` for more options.)
+ uninstall [-k] PACKAGE
+     remove this app package from the device
+     '-k': keep the data and cache directories
+
+debugging:
+ bugreport [PATH]
+     write bugreport to given PATH [default=bugreport.zip];
+     if PATH is a directory, the bug report is saved in that directory.
+     devices that don't support zipped bug reports output to stdout.
+ jdwp                     list pids of processes hosting a JDWP transport
+ logcat                   show device log (logcat --help for more)
+
+security:
+ disable-verity           disable dm-verity checking on userdebug builds
+ enable-verity            re-enable dm-verity checking on userdebug builds
+ keygen FILE
+     generate adb public/private key; private key stored in FILE,
+
+scripting:
+ wait-for[-TRANSPORT]-STATE...
+     wait for device to be in a given state
+     STATE: device, recovery, rescue, sideload, bootloader, or disconnect
+     TRANSPORT: usb, local, or any [default=any]
+ get-state                print offline | bootloader | device
+ get-serialno             print <serial-number>
+ get-devpath              print <device-path>
+ remount [-R]
+      remount partitions read-write. if a reboot is required, -R will
+      will automatically reboot the device.
+ reboot [bootloader|recovery|sideload|sideload-auto-reboot]
+     reboot the device; defaults to booting system image but
+     supports bootloader and recovery too. sideload reboots
+     into recovery and automatically starts sideload mode,
+     sideload-auto-reboot is the same but reboots after sideloading.
+ sideload OTAPACKAGE      sideload the given full OTA package
+ root                     restart adbd with root permissions
+ unroot                   restart adbd without root permissions
+ usb                      restart adbd listening on USB
+ tcpip PORT               restart adbd listening on TCP on PORT
+
+internal debugging:
+ start-server             ensure that there is a server running
+ kill-server              kill the server if it is running
+ reconnect                kick connection from host side to force reconnect
+ reconnect device         kick connection from device side to force reconnect
+ reconnect offline        reset offline/unauthorized devices to force reconnect
+
+usb:
+ attach                   attach a detached USB device
+ detach                   detach from a USB device to allow use by other processes
+environment variables:
+ $ADB_TRACE
+     comma-separated list of debug info to log:
+     all,adb,sockets,packets,rwx,usb,sync,sysdeps,transport,jdwp
+ $ADB_VENDOR_KEYS         colon-separated list of keys (files or directories)
+ $ANDROID_SERIAL          serial number to connect to (see -s)
+ $ANDROID_LOG_TAGS        tags to be used by logcat (see logcat --help)
+ $ADB_LOCAL_TRANSPORT_MAX_PORT max emulator scan port (default 5585, 16 emus)
+ $ADB_MDNS_AUTO_CONNECT   comma-separated list of mdns services to allow auto-connect (default adb-tls-connect)
+
+C:\Users\Deepblue\Desktop>adb shell tclsu do setprop persist.tcl.debug.installapk 1
+adb: no devices/emulators found
+
+C:\Users\Deepblue\Desktop>adb connect 192.168.0.106
+connected to 192.168.0.106:5555
+
+C:\Users\Deepblue\Desktop>adb shell tclsu do setprop persist.tcl.debug.installapk 1
+
+C:\Users\Deepblue\Desktop>adb shell tclsu do setprop persist.tcl.installapk.enable 1
+
+C:\Users\Deepblue\Desktop>adb push dbmarket.apk /sdcard/Download/
+dbmarket.apk: 1 file pushed, 0 skipped. 1.7 MB/s (9965450 bytes in 5.551s)
+
+C:\Users\Deepblue\Desktop>adb shell tclsu do pm install /sdcard/Download/dbmarket.apk
+        pkg: /sdcard/Download/dbmarket.apk
+install apk has be enabled from pm by user!
+
+
+Success
+
+C:\Users\Deepblue\Desktop>adb shell tclsu do busybox find / -name "*.apk"
+find: /storage/sdcard0/kdmConfig: Permission denied
+/storage/sdcard0/Download/ES.apk
+/storage/sdcard0/Download/dbmarket.apk
+/storage/sdcard0/Download/44e05ff5lmbit41mubvqc5cd9wjglq_2.0.0_dangbei.apk
+/storage/sdcard0/apk_temp/dbzs_3.9.3_dangbei.apk
+/storage/sdcard0/44e05ff5lmbit41mubvqc5cd9wjglq_2.0.0_dangbei.apk
+/system/app/Airplay/Airplay.apk
+/system/app/BasicDreams/BasicDreams.apk
+/system/app/Bluetooth/Bluetooth.apk
+/system/app/BluetoothListenAlone/BluetoothListenAlone.apk
+/system/app/CaptivePortalLogin/CaptivePortalLogin.apk
+/system/app/CertInstaller/CertInstaller.apk
+/system/app/ComMediaPlayer/ComMediaPlayer.apk
+/system/app/DocumentsUI/DocumentsUI.apk
+/system/app/DongleDetectServer/DongleDetectServer.apk
+/system/app/E_Help/E_Help.apk
+/system/app/Esticker/Esticker.apk
+/system/app/Factory/Factory.apk
+/system/app/HTMLViewer/HTMLViewer.apk
+/system/app/Hotkey/Hotkey.apk
+/system/app/ImageVieweFor9184k/ImageVieweFor9184k.apk
+/system/app/KeyChain/KeyChain.apk
+/system/app/LiveWallpapers/LiveWallpapers.apk
+/system/app/LiveWallpapersPicker/LiveWallpapersPicker.apk
+/system/app/MMCastDemo/MMCastDemo.apk
+/system/app/MediaBrowser/MediaBrowser.apk
+/system/app/MediaCenter/MediaCenter.apk
+/system/app/Messenger/Messenger.apk
+/system/app/MessengerService/MessengerService.apk
+/system/app/PacProcessor/PacProcessor.apk
+/system/app/PackageInstallerRenew/PackageInstallerRenew.apk
+/system/app/Personaltv/Personaltv.apk
+/system/app/PhotoTable/PhotoTable.apk
+/system/app/PicoTts/PicoTts.apk
+/system/app/PinyinIME/PinyinIME.apk
+/system/app/PrintSpooler/PrintSpooler.apk
+/system/app/Provision/Provision.apk
+/system/app/ShowMode/ShowMode.apk
+/system/app/SnapshotScreen/SnapshotScreen.apk
+/system/app/SourceManager/SourceManager.apk
+/system/app/TCL_3Ddemo/TCL_3Ddemo.apk
+/system/app/TCL_ALL_Lexue3.0/TCL_ALL_Lexue3.0.apk
+/system/app/TCL_ALL_Rainbow/TCL_ALL_Rainbow.apk
+/system/app/TCL_ALL_T2GameCenter/TCL_ALL_T2GameCenter.apk
+/system/app/TCL_ALL_TShop/TCL_ALL_TShop.apk
+/system/app/TCL_All_GoLiveCinema/TCL_All_GoLiveCinema.apk
+/system/app/TCL_JJ_ALL_KTCP/TCL_JJ_ALL_KTCP.apk
+/system/app/TCL_LIVE_TV/TCL_LIVE_TV.apk
+/system/app/TCL_MS828_Angelkaraoke/TCL_MS828_Angelkaraoke.apk
+/system/app/TCL_MS828_iCast/TCL_MS828_iCast.apk
+/system/app/TCL_RT51Q_TCLAppStore_dual_brand/TCL_RT51Q_TCLAppStore_dual_brand.apk
+/system/app/TCL_Settings/TCL_Settings.apk
+/system/app/TclBluetooth3D/TclBluetooth3D.apk
+/system/app/TclBrowser4.0/TclBrowser4.0.apk
+/system/app/TerminalManager_Remote/TerminalManager_Remote.apk
+/system/app/Triava/Triava.apk
+/system/app/TvWeather/TvWeather.apk
+/system/app/UserCenter/UserCenter.apk
+/system/app/UserDictionaryProvider/UserDictionaryProvider.apk
+/system/app/WAPPushManager/WAPPushManager.apk
+/system/app/WeChat_TV/WeChat_TV.apk
+/system/app/WifiDisplaySink/WifiDisplaySink.apk
+/system/app/XiriIME/XiriIME.apk
+/system/app/nScreen_srv/nScreen_srv.apk
+/system/framework/framework-res.apk
+/system/framework/tvos-framework-res/tvos-framework-res.apk
+/system/priv-app/AdService/AdService.apk
+/system/priv-app/BackupRestoreConfirmation/BackupRestoreConfirmation.apk
+/system/priv-app/Bootsetwizard_s/Bootsetwizard_s.apk
+/system/priv-app/CalendarProvider/CalendarProvider.apk
+/system/priv-app/CyberUI/CyberUI.apk
+/system/priv-app/DefaultContainerService/DefaultContainerService.apk
+/system/priv-app/DownloadProvider/DownloadProvider.apk
+/system/priv-app/ExternalStorageProvider/ExternalStorageProvider.apk
+/system/priv-app/IflytekTVService/IflytekTVService.apk
+/system/priv-app/InputDevices/InputDevices.apk
+/system/priv-app/ManagedProvisioning/ManagedProvisioning.apk
+/system/priv-app/MediaProvider/MediaProvider.apk
+/system/priv-app/MenuHelp7keyAnd5key/MenuHelp7keyAnd5key.apk
+/system/priv-app/MmsService/MmsService.apk
+/system/priv-app/MusicFX/MusicFX.apk
+/system/priv-app/OneTimeInitializer/OneTimeInitializer.apk
+/system/priv-app/PackageInstaller/PackageInstaller.apk
+/system/priv-app/ProxyHandler/ProxyHandler.apk
+/system/priv-app/QiyiVoiceManager4.1/QiyiVoiceManager4.1.apk
+/system/priv-app/ScreenSaver/ScreenSaver.apk
+/system/priv-app/SettingsProvider/SettingsProvider.apk
+/system/priv-app/SharedStorageBackup/SharedStorageBackup.apk
+/system/priv-app/Shell/Shell.apk
+/system/priv-app/Showcome/Showcome.apk
+/system/priv-app/ShowcomeSettings/ShowcomeSettings.apk
+/system/priv-app/SpeechService/SpeechService.apk
+/system/priv-app/SystemUI/SystemUI.apk
+/system/priv-app/SystemXiri/SystemXiri.apk
+/system/priv-app/TCL_APPSTORE_PackageInstaller_MASTER/TCL_APPSTORE_PackageInstaller_MASTER.apk
+/system/priv-app/TCL_APPSTORE_SELFUPDATE_MASTER/TCL_APPSTORE_SELFUPDATE_MASTER.apk
+/system/priv-app/TCL_common_DeviceAuthention/TCL_common_DeviceAuthention.apk
+/system/priv-app/TVHealthCheck/TVHealthCheck.apk
+/system/priv-app/TVWeiShi/TVWeiShi.apk
+/system/priv-app/TclSystemUI/TclSystemUI.apk
+/system/priv-app/TeleService/TeleService.apk
+/system/priv-app/Telecom/Telecom.apk
+/system/priv-app/TelephonyProvider/TelephonyProvider.apk
+/system/priv-app/TvProvider/TvProvider.apk
+/system/priv-app/TvSymbolRecognize/TvSymbolRecognize.apk
+/system/priv-app/UsageStats/UsageStats.apk
+/system/priv-app/VpnDialogs/VpnDialogs.apk
+/system/priv-app/WallpaperCropper/WallpaperCropper.apk
+/system/priv-app/Xiri/Xiri.apk
+/system/priv-app/XiriHAL/XiriHAL.apk
+/system/priv-app/XiriRecorder/XiriRecorder.apk
+/system/priv-app/versionUpdate/versionUpdate.apk
+/system/priv-app/webview/webview.apk
+find: /proc/1390/task/11209: No such file or directory
+/data/data/com.tcl.appmarket2/appdownloads/5305aa994a424d07bf44f1c4c7e5e019.apk
+/data/app/com.dangbeimarket-1/base.apk
+/data/app/com.tcl.cyberui-2/base.apk
+/data/app/com.limelight-1/base.apk
+/data/app/com.estrongs.android.pop-1/base.apk
+/data/media/Download/ES.apk
+/data/media/Download/dbmarket.apk
+/data/media/Download/44e05ff5lmbit41mubvqc5cd9wjglq_2.0.0_dangbei.apk
+/data/media/apk_temp/dbzs_3.9.3_dangbei.apk
+/data/media/44e05ff5lmbit41mubvqc5cd9wjglq_2.0.0_dangbei.apk
+
+C:\Users\Deepblue\Desktop>adb shell tclsu do busybox find / -name "*.apk" >apk.txt
+
+C:\Users\Deepblue\Desktop>adb shell tclsu do stat /system/app/CertInstaller/CertInstaller.apk
+su: exec failed for stat Error:No such file or directory
+
+C:\Users\Deepblue\Desktop>adb shell tclsu do stat /system/app/CertInstaller/CertInstaller.apk
+su: exec failed for stat Error:No such file or directory
+
+C:\Users\Deepblue\Desktop>adb pm list packages
+adb: unknown command pm
+
+C:\Users\Deepblue\Desktop>adb shell pm list packages
+package:com.android.providers.tv
+package:com.android.wfdsink
+package:com.tcl.appmarket2
+package:com.tcl.common.bootsetwizard
+package:com.android.backupconfirm
+package:com.android.packageinstaller
+package:com.android.providers.userdictionary
+package:com.android.externalstorage
+package:com.huan.edu.lexue.frontend
+package:com.tcl.usagestats
+package:com.android.dreams.phototable
+package:com.limelight
+package:com.android.shell
+package:com.tcl.android.SystemDemo
+package:com.android.proxyhandler
+package:com.android.managedprovisioning
+package:com.iflytek.xiri2.system
+package:com.iflytek.xiri
+package:com.tcl.tv
+package:com.tcl.MultiScreenInteraction_TV
+package:com.tcl.bluetoothlistenalone
+package:com.android.wallpaper.livepicker
+package:com.android.mcast
+package:com.android.inputdevices
+package:com.android.keychain
+package:com.android.bluetooth
+package:com.tcl.versionUpdateApp
+package:com.android.printspooler
+package:com.dongle.server
+package:com.android.smspush
+package:com.android.onetimeinitializer
+package:com.android.dreams.basic
+package:com.tcl.sourcemananger
+package:com.rainbowex
+package:com.android.vpndialogs
+package:com.tcl.voicemanager
+package:com.tcl.recognize.service
+package:com.tcl.usercenter
+package:com.tcl.c2dm.client
+package:com.tcl.screensaver
+package:com.android.server.telecom
+package:com.android.provision
+package:com.tcl.android.SystemDemo.SystemProperty.test
+package:com.dangbeimarket
+package:com.tcl.SmartTVHelp
+package:com.android.defcontainer
+package:com.estrongs.android.pop
+package:com.tcl.tvweishi
+package:com.tcl.settings
+package:com.tcl.triava
+package:com.tcl.common.tvfaultdiagnosis
+package:com.android.systemui
+package:com.android.phone
+package:com.android.providers.calendar
+package:com.android.certinstaller
+package:com.android.webview
+package:com.android.systemui2
+package:android
+package:com.iflytek.xiri.ime
+package:com.android.providers.telephony
+package:com.android.providers.downloads
+package:com.tcl.factory.view
+package:com.iflytek.itvs
+package:com.tcl.browser
+package:com.tcl.m
+package:com.ktcp.video
+package:com.tcl.personaltv
+package:com.tcl.packageinstaller.service
+package:com.iflytek.xiri.recorder.svc
+package:com.android.htmlviewer
+package:com.tcl.common.viewer
+package:com.hpplay.allcast
+package:com.smit.livevideo
+package:com.iflytek.speech
+package:com.tcl.mediabrowser
+package:com.tcl.sticker
+package:com.android.documentsui
+package:com.broadcom.bt.app.bt3d
+package:com.android.sharedstoragebackup
+package:com.android.wallpapercropper
+package:com.tcl.cyberui
+package:com.tcl.weixin
+package:com.svox.pico
+package:com.android.wallpaper
+package:com.iflytek.xiri2.hal
+package:com.tcl.xian.StartandroidService
+package:com.iflytek.showcomesettings
+package:com.tcl.common.shortcutmenu
+package:com.android.providers.settings
+package:com.android.captiveportallogin
+package:com.tcl.packageinstaller.service.renew
+package:com.tcl.tvhealthcheck
+package:com.iflytek.showcome
+package:com.android.pacprocessor
+package:com.android.tcl.messagebox
+package:com.example.tvcapture
+package:com.android.mms.service
+package:com.tcl.update
+package:com.android.providers.media
+package:com.tcl.common.mediaplayer
+package:com.tcl.mediacenter
+package:com.android.musicfx
+package:com.android.inputmethod.pinyin
+
+C:\Users\Deepblue\Desktop>adb install "org.xbmc.kodi_21.2-2102000_minAPI21(armeabi-v7a)(nodpi)_apkmirror.com.apk"
+Performing Push Install
+org.xbmc.kodi_21.2-2102000_minAPI21(armeabi-v7a)(nodpi)_ap...le pushed, 0 skipped. 1.0 MB/s (67841079 bytes in 62.504s)
+        pkg: /data/local/tmp/org.xbmc.kodi_21.2-2102000_minAPI21(armeabi-v7a)(nodpi)_apkmirror.com.apk
+install apk has be disabled from pm by system default!
+
+C:\Users\Deepblue\Desktop>
+C:\Users\Deepblue\Desktop>
+C:\Users\Deepblue\Desktop>
+C:\Users\Deepblue\Desktop>
+C:\Users\Deepblue\Desktop>
+C:\Users\Deepblue\Desktop>
+C:\Users\Deepblue\Desktop>
+C:\Users\Deepblue\Desktop>adb push "org.xbmc.kodi_21.2-2102000_minAPI21(armeabi-v7a)(nodpi)_apkmirror.com.apk" /sdcard/Download/kodi.apk
+org.xbmc.kodi_21.2-2102000_minAPI21(armeabi-v7a)(nodpi)_ap...le pushed, 0 skipped. 1.0 MB/s (67841079 bytes in 63.545s)
+
+C:\Users\Deepblue\Desktop>
+C:\Users\Deepblue\Desktop>
+C:\Users\Deepblue\Desktop>
+C:\Users\Deepblue\Desktop>
+C:\Users\Deepblue\Desktop>
+C:\Users\Deepblue\Desktop>
+C:\Users\Deepblue\Desktop>
+C:\Users\Deepblue\Desktop>
+C:\Users\Deepblue\Desktop>adb shell tclsu do ls /sdcard/Download
+30hk9sq9pxk5bry7rhhztkuekyk10013600_13.0.1.3_dangbei.dangbei
+44e05ff5lmbit41mubvqc5cd9wjglq_2.0.0_dangbei.apk
+5u39rsxm89usvkmbjlzax08dadmtbfq_v1.0.3_dangbei.apk
+ES.apk
+dbmarket.apk
+kodi.apk
+
+C:\Users\Deepblue\Desktop>adb shell tclsu pm install /sdcard/Download/kodi.apk
+su: exec failed for install Error:No such file or directory
+
+C:\Users\Deepblue\Desktop>adb shell tclsu do pm install /sdcard/Download/kodi.apk
+        pkg: /sdcard/Download/kodi.apk
+install apk has be disabled from pm by system default!
+
+C:\Users\Deepblue\Desktop>adb shell tclsu do setprop persist.tcl.debug.installapk 1
+
+C:\Users\Deepblue\Desktop>adb shell tclsu do setprop persist.tcl.installapk.enable 1
+
+C:\Users\Deepblue\Desktop>adb shell tclsu do pm install /sdcard/Download/kodi.apk
+        pkg: /sdcard/Download/kodi.apk
+install apk has be enabled from pm by user!
+Success
+
+C:\Users\Deepblue\Desktop>adb shell tclsu do busybox find / -name "*.apk"
+find: /storage/sdcard0/kdmConfig: Permission denied
+/storage/sdcard0/Download/ES.apk
+/storage/sdcard0/Download/dbmarket.apk
+/storage/sdcard0/Download/44e05ff5lmbit41mubvqc5cd9wjglq_2.0.0_dangbei.apk
+/storage/sdcard0/Download/5u39rsxm89usvkmbjlzax08dadmtbfq_v1.0.3_dangbei.apk
+/storage/sdcard0/Download/kodi.apk
+/storage/sdcard0/apk_temp/dbzs_3.9.3_dangbei.apk
+/storage/sdcard0/44e05ff5lmbit41mubvqc5cd9wjglq_2.0.0_dangbei.apk
+/storage/sdcard0/5u39rsxm89usvkmbjlzax08dadmtbfq_v1.0.3_dangbei.apk
+/storage/sdcard0/com.cxinventor.file.explorer_2.4.7-247_minAPI21(nodpi)_apkmirror.com.apk
+/storage/sdcard0/org.xbmc.kodi_21.2-2102000_minAPI21(armeabi-v7a)(nodpi)_apkmirror.com.apk
+/system/app/Airplay/Airplay.apk
+/system/app/BasicDreams/BasicDreams.apk
+/system/app/Bluetooth/Bluetooth.apk
+/system/app/BluetoothListenAlone/BluetoothListenAlone.apk
+/system/app/CaptivePortalLogin/CaptivePortalLogin.apk
+/system/app/CertInstaller/CertInstaller.apk
+/system/app/ComMediaPlayer/ComMediaPlayer.apk
+/system/app/DocumentsUI/DocumentsUI.apk
+/system/app/DongleDetectServer/DongleDetectServer.apk
+/system/app/E_Help/E_Help.apk
+/system/app/Esticker/Esticker.apk
+/system/app/Factory/Factory.apk
+/system/app/HTMLViewer/HTMLViewer.apk
+/system/app/Hotkey/Hotkey.apk
+/system/app/ImageVieweFor9184k/ImageVieweFor9184k.apk
+/system/app/KeyChain/KeyChain.apk
+/system/app/LiveWallpapers/LiveWallpapers.apk
+/system/app/LiveWallpapersPicker/LiveWallpapersPicker.apk
+/system/app/MMCastDemo/MMCastDemo.apk
+/system/app/MediaBrowser/MediaBrowser.apk
+/system/app/MediaCenter/MediaCenter.apk
+/system/app/Messenger/Messenger.apk
+/system/app/MessengerService/MessengerService.apk
+/system/app/PacProcessor/PacProcessor.apk
+/system/app/PackageInstallerRenew/PackageInstallerRenew.apk
+/system/app/Personaltv/Personaltv.apk
+/system/app/PhotoTable/PhotoTable.apk
+/system/app/PicoTts/PicoTts.apk
+/system/app/PinyinIME/PinyinIME.apk
+/system/app/PrintSpooler/PrintSpooler.apk
+/system/app/Provision/Provision.apk
+/system/app/ShowMode/ShowMode.apk
+/system/app/SnapshotScreen/SnapshotScreen.apk
+/system/app/SourceManager/SourceManager.apk
+/system/app/TCL_3Ddemo/TCL_3Ddemo.apk
+/system/app/TCL_ALL_Lexue3.0/TCL_ALL_Lexue3.0.apk
+/system/app/TCL_ALL_Rainbow/TCL_ALL_Rainbow.apk
+/system/app/TCL_ALL_T2GameCenter/TCL_ALL_T2GameCenter.apk
+/system/app/TCL_ALL_TShop/TCL_ALL_TShop.apk
+/system/app/TCL_All_GoLiveCinema/TCL_All_GoLiveCinema.apk
+/system/app/TCL_JJ_ALL_KTCP/TCL_JJ_ALL_KTCP.apk
+/system/app/TCL_LIVE_TV/TCL_LIVE_TV.apk
+/system/app/TCL_MS828_Angelkaraoke/TCL_MS828_Angelkaraoke.apk
+/system/app/TCL_MS828_iCast/TCL_MS828_iCast.apk
+/system/app/TCL_RT51Q_TCLAppStore_dual_brand/TCL_RT51Q_TCLAppStore_dual_brand.apk
+/system/app/TCL_Settings/TCL_Settings.apk
+/system/app/TclBluetooth3D/TclBluetooth3D.apk
+/system/app/TclBrowser4.0/TclBrowser4.0.apk
+/system/app/TerminalManager_Remote/TerminalManager_Remote.apk
+/system/app/Triava/Triava.apk
+/system/app/TvWeather/TvWeather.apk
+/system/app/UserCenter/UserCenter.apk
+/system/app/UserDictionaryProvider/UserDictionaryProvider.apk
+/system/app/WAPPushManager/WAPPushManager.apk
+/system/app/WeChat_TV/WeChat_TV.apk
+/system/app/WifiDisplaySink/WifiDisplaySink.apk
+/system/app/XiriIME/XiriIME.apk
+/system/app/nScreen_srv/nScreen_srv.apk
+/system/framework/framework-res.apk
+/system/framework/tvos-framework-res/tvos-framework-res.apk
+/system/priv-app/AdService/AdService.apk
+/system/priv-app/BackupRestoreConfirmation/BackupRestoreConfirmation.apk
+/system/priv-app/Bootsetwizard_s/Bootsetwizard_s.apk
+/system/priv-app/CalendarProvider/CalendarProvider.apk
+/system/priv-app/CyberUI/CyberUI.apk
+/system/priv-app/DefaultContainerService/DefaultContainerService.apk
+/system/priv-app/DownloadProvider/DownloadProvider.apk
+/system/priv-app/ExternalStorageProvider/ExternalStorageProvider.apk
+/system/priv-app/IflytekTVService/IflytekTVService.apk
+/system/priv-app/InputDevices/InputDevices.apk
+/system/priv-app/ManagedProvisioning/ManagedProvisioning.apk
+/system/priv-app/MediaProvider/MediaProvider.apk
+/system/priv-app/MenuHelp7keyAnd5key/MenuHelp7keyAnd5key.apk
+/system/priv-app/MmsService/MmsService.apk
+/system/priv-app/MusicFX/MusicFX.apk
+/system/priv-app/OneTimeInitializer/OneTimeInitializer.apk
+/system/priv-app/PackageInstaller/PackageInstaller.apk
+/system/priv-app/ProxyHandler/ProxyHandler.apk
+/system/priv-app/QiyiVoiceManager4.1/QiyiVoiceManager4.1.apk
+/system/priv-app/ScreenSaver/ScreenSaver.apk
+/system/priv-app/SettingsProvider/SettingsProvider.apk
+/system/priv-app/SharedStorageBackup/SharedStorageBackup.apk
+/system/priv-app/Shell/Shell.apk
+/system/priv-app/Showcome/Showcome.apk
+/system/priv-app/ShowcomeSettings/ShowcomeSettings.apk
+/system/priv-app/SpeechService/SpeechService.apk
+/system/priv-app/SystemUI/SystemUI.apk
+/system/priv-app/SystemXiri/SystemXiri.apk
+/system/priv-app/TCL_APPSTORE_PackageInstaller_MASTER/TCL_APPSTORE_PackageInstaller_MASTER.apk
+/system/priv-app/TCL_APPSTORE_SELFUPDATE_MASTER/TCL_APPSTORE_SELFUPDATE_MASTER.apk
+/system/priv-app/TCL_common_DeviceAuthention/TCL_common_DeviceAuthention.apk
+/system/priv-app/TVHealthCheck/TVHealthCheck.apk
+/system/priv-app/TVWeiShi/TVWeiShi.apk
+/system/priv-app/TclSystemUI/TclSystemUI.apk
+/system/priv-app/TeleService/TeleService.apk
+/system/priv-app/Telecom/Telecom.apk
+/system/priv-app/TelephonyProvider/TelephonyProvider.apk
+/system/priv-app/TvProvider/TvProvider.apk
+/system/priv-app/TvSymbolRecognize/TvSymbolRecognize.apk
+/system/priv-app/UsageStats/UsageStats.apk
+/system/priv-app/VpnDialogs/VpnDialogs.apk
+/system/priv-app/WallpaperCropper/WallpaperCropper.apk
+/system/priv-app/Xiri/Xiri.apk
+/system/priv-app/XiriHAL/XiriHAL.apk
+/system/priv-app/XiriRecorder/XiriRecorder.apk
+/system/priv-app/versionUpdate/versionUpdate.apk
+/system/priv-app/webview/webview.apk
+find: /proc/1390/task/31524: No such file or directory
+find: /proc/2052/task/4394/fd/225: No such file or directory
+/data/data/com.tcl.appmarket2/appdownloads/5305aa994a424d07bf44f1c4c7e5e019.apk
+/data/data/com.dangbeimarket/cache/remoteUpload/com.cxinventor.file.explorer_2.4.7-247_minAPI21(nodpi)_apkmirror.com.apk
+/data/data/com.dangbeimarket/cache/remoteUpload/org.xbmc.kodi_21.2-2102000_minAPI21(armeabi-v7a)(nodpi)_apkmirror.com.apk
+/data/app/com.dangbeimarket-1/base.apk
+/data/app/com.tcl.cyberui-2/base.apk
+/data/app/com.limelight-1/base.apk
+/data/app/com.estrongs.android.pop-1/base.apk
+/data/app/org.xbmc.kodi-1/base.apk
+/data/media/Download/ES.apk
+/data/media/Download/dbmarket.apk
+/data/media/Download/44e05ff5lmbit41mubvqc5cd9wjglq_2.0.0_dangbei.apk
+/data/media/Download/5u39rsxm89usvkmbjlzax08dadmtbfq_v1.0.3_dangbei.apk
+/data/media/Download/kodi.apk
+/data/media/apk_temp/dbzs_3.9.3_dangbei.apk
+/data/media/44e05ff5lmbit41mubvqc5cd9wjglq_2.0.0_dangbei.apk
+/data/media/5u39rsxm89usvkmbjlzax08dadmtbfq_v1.0.3_dangbei.apk
+/data/media/com.cxinventor.file.explorer_2.4.7-247_minAPI21(nodpi)_apkmirror.com.apk
+/data/media/org.xbmc.kodi_21.2-2102000_minAPI21(armeabi-v7a)(nodpi)_apkmirror.com.apk
+
+C:\Users\Deepblue\Desktop>adb push dbmarket.apk /sdcard/Download/
+adb: error: cannot stat 'dbmarket.apk': No such file or directory
+
+C:\Users\Deepblue\Desktop>adb shell tclsu do ls /sdcard/Download
+30hk9sq9pxk5bry7rhhztkuekyk10013600_13.0.1.3_dangbei.dangbei
+44e05ff5lmbit41mubvqc5cd9wjglq_2.0.0_dangbei.apk
+5u39rsxm89usvkmbjlzax08dadmtbfq_v1.0.3_dangbei.apk
+ES.apk
+dbmarket.apk
+kodi.apk
+
+C:\Users\Deepblue\Desktop>adb shell tclsu do ls /sdcard0/
+/sdcard0/: No such file or directory
+
+C:\Users\Deepblue\Desktop>adb shell tclsu do ls /sdcard/
+0
+30hk9sq9pxk5bry7rhhztkuekyk10013600_13.0.1.3_dangbei.dangbei
+44e05ff5lmbit41mubvqc5cd9wjglq_2.0.0_dangbei.apk
+5u39rsxm89usvkmbjlzax08dadmtbfq_v1.0.3_dangbei.apk
+Alarms
+Android
+DBMarket
+DCIM
+Download
+KTCPVideo
+KTCP_GUID_DIR
+Movies
+Music
+Notifications
+Pictures
+Podcasts
+Ringtones
+TerminalManager
+apk_temp
+backups
+baidu
+com.cxinventor.file.explorer_2.4.7-247_minAPI21(nodpi)_apkmirror.com.apk
+com.iflytek.xiri
+com.ktcp.video
+kdmConfig
+msc
+obb
+org.xbmc.kodi_21.2-2102000_minAPI21(armeabi-v7a)(nodpi)_apkmirror.com.apk
+tbs
+tencent
+userdata
+vrom
+文件索引、�
+
+C:\Users\Deepblue\Desktop>adb shell tclsu do pm install /sdcard/com.cxinventor.file.explorer_2.4.7-247_minAPI21(nodpi)_apkmirror.com.apk
+/system/bin/sh: syntax error: '(' unexpected
+
+C:\Users\Deepblue\Desktop>adb shell tclsu do pm install "com.cxinventor.file.explorer_2.4.7-247_minAPI21(nodpi)_apkmirror.com.apk"
+/system/bin/sh: syntax error: '(' unexpected
+
+C:\Users\Deepblue\Desktop>adb shell
+shell@coconut_p1:/ $ tclsu
+xplorer_2.4.7-247_minAPI21\(nodpi\)_apkmirror.com.apk                         <
+        pkg: /sdcard/com.cxinventor.file.explorer_2.4.7-247_minAPI21(nodpi)_apkmirror.com.apk
+install apk has be enabled from pm by user!
+Success
+card/44e05ff5lmbit41mubvqc5cd9wjglq_2.0.0_dangbei.apk                         <
+rd/5u39rsxm89usvkmbjlzax08dadmtbfq_v1.0.3_dangbei.apk                         <
+00_minAPI21\(armeabi-v7a\)\(nodpi\)_apkmirror.com.apk                         <
+m /sdcard/com                                                                 <
+com.cxinventor.file.explorer_2.4.7-247_minAPI21(nodpi)_apkmirror.com.apk
+com.iflytek.xiri/
+com.ktcp.video/
+shell@coconut_p1:/ # rm /sdcard/com.
+com.cxinventor.file.explorer_2.4.7-247_minAPI21(nodpi)_apkmirror.com.apk
+com.iflytek.xiri/
+com.ktcp.video/
+xplorer_2.4.7-247_minAPI21\(nodpi\)_apkmirror.com.apk                         <
+shell@coconut_p1:/ #
+C:\Users\Deepblue\Desktop>adb pm list packages
+adb: unknown command pm
+
+C:\Users\Deepblue\Desktop>adb shell pm tclsu do list packages >apklist.txt
+adb: no devices/emulators found
+
+C:\Users\Deepblue\Desktop>adb connect 192.168.0.107
+connected to 192.168.0.107:5555
+
+C:\Users\Deepblue\Desktop>adb shell pm tclsu do list packages >apklist.txt
+
+C:\Users\Deepblue\Desktop>adb shell pm tclsu do pm list packages >apklist.txt
+
+C:\Users\Deepblue\Desktop>adb shell pm tclsu do pm list packages
+Error: unknown command 'tclsu'
+usage: pm list packages [-f] [-d] [-e] [-s] [-3] [-i] [-u] [--user USER_ID] [FILTER]
+       pm list permission-groups
+       pm list permissions [-g] [-f] [-d] [-u] [GROUP]
+       pm list instrumentation [-f] [TARGET-PACKAGE]
+       pm list features
+       pm list libraries
+       pm list users
+       pm path PACKAGE
+       pm dump PACKAGE
+       pm install [-lrtsfd] [-i PACKAGE] [PATH]
+       pm install-create [-lrtsfdp] [-i PACKAGE] [-S BYTES]
+       pm install-write [-S BYTES] SESSION_ID SPLIT_NAME [PATH]
+       pm install-commit SESSION_ID
+       pm install-abandon SESSION_ID
+       pm uninstall [-k] [--user USER_ID] PACKAGE
+       pm set-installer PACKAGE INSTALLER
+       pm clear [--user USER_ID] PACKAGE
+       pm enable [--user USER_ID] PACKAGE_OR_COMPONENT
+       pm disable [--user USER_ID] PACKAGE_OR_COMPONENT
+       pm disable-user [--user USER_ID] PACKAGE_OR_COMPONENT
+       pm disable-until-used [--user USER_ID] PACKAGE_OR_COMPONENT
+       pm hide [--user USER_ID] PACKAGE_OR_COMPONENT
+       pm unhide [--user USER_ID] PACKAGE_OR_COMPONENT
+       pm grant PACKAGE PERMISSION
+       pm revoke PACKAGE PERMISSION
+       pm set-install-location [0/auto] [1/internal] [2/external]
+       pm get-install-location
+       pm set-permission-enforced PERMISSION [true|false]
+       pm trim-caches DESIRED_FREE_SPACE
+       pm create-user [--profileOf USER_ID] [--managed] USER_NAME
+       pm remove-user USER_ID
+       pm get-max-users
+
+pm list packages: prints all packages, optionally only
+  those whose package name contains the text in FILTER.  Options:
+    -f: see their associated file.
+    -d: filter to only show disbled packages.
+    -e: filter to only show enabled packages.
+    -s: filter to only show system packages.
+    -3: filter to only show third party packages.
+    -i: see the installer for the packages.
+    -u: also include uninstalled packages.
+
+pm list permission-groups: prints all known permission groups.
+
+pm list permissions: prints all known permissions, optionally only
+  those in GROUP.  Options:
+    -g: organize by group.
+    -f: print all information.
+    -s: short summary.
+    -d: only list dangerous permissions.
+    -u: list only the permissions users will see.
+
+pm list instrumentation: use to list all test packages; optionally
+  supply <TARGET-PACKAGE> to list the test packages for a particular
+  application.  Options:
+    -f: list the .apk file for the test package.
+
+pm list features: prints all features of the system.
+
+pm list users: prints all users on the system.
+
+pm path: print the path to the .apk of the given PACKAGE.
+
+pm dump: print system state associated with the given PACKAGE.
+
+pm install: install a single legacy package
+pm install-create: create an install session
+    -l: forward lock application
+    -r: replace existing application
+    -t: allow test packages
+    -i: specify the installer package name
+    -s: install application on sdcard
+    -f: install application on internal flash
+    -d: allow version code downgrade
+    -p: partial application install
+    -S: size in bytes of entire session
+
+pm install-write: write a package into existing session; path may
+  be '-' to read from stdin
+    -S: size in bytes of package, required for stdin
+
+pm install-commit: perform install of fully staged session
+pm install-abandon: abandon session
+
+pm set-installer: set installer package name
+
+pm uninstall: removes a package from the system. Options:
+    -k: keep the data and cache directories around after package removal.
+
+pm clear: deletes all data associated with a package.
+
+pm enable, disable, disable-user, disable-until-used: these commands
+  change the enabled state of a given package or component (written
+  as "package/class").
+
+pm grant, revoke: these commands either grant or revoke permissions
+  to applications.  Only optional permissions the application has
+  declared can be granted or revoked.
+
+pm get-install-location: returns the current install location.
+    0 [auto]: Let system decide the best location
+    1 [internal]: Install on internal device storage
+    2 [external]: Install on external media
+
+pm set-install-location: changes the default install location.
+  NOTE: this is only intended for debugging; using this can cause
+  applications to break and other undersireable behavior.
+    0 [auto]: Let system decide the best location
+    1 [internal]: Install on internal device storage
+    2 [external]: Install on external media
+
+pm trim-caches: trim cache files to reach the given free space.
+
+pm create-user: create a new user with the given USER_NAME,
+  printing the new user identifier of the user.
+
+pm remove-user: remove the user with the given USER_IDENTIFIER,
+  deleting all data associated with that user
+
+
+C:\Users\Deepblue\Desktop>adb shell pm list packages
+package:com.android.providers.tv
+package:com.android.wfdsink
+package:com.tcl.appmarket2
+package:com.tcl.common.bootsetwizard
+package:com.android.backupconfirm
+package:com.android.packageinstaller
+package:com.android.providers.userdictionary
+package:com.android.externalstorage
+package:com.huan.edu.lexue.frontend
+package:com.tcl.usagestats
+package:com.android.dreams.phototable
+package:com.cxinventor.file.explorer
+package:com.limelight
+package:com.android.shell
+package:com.tcl.android.SystemDemo
+package:com.android.proxyhandler
+package:com.android.managedprovisioning
+package:com.iflytek.xiri2.system
+package:com.iflytek.xiri
+package:com.tcl.tv
+package:com.tcl.MultiScreenInteraction_TV
+package:com.tcl.bluetoothlistenalone
+package:com.android.wallpaper.livepicker
+package:com.android.mcast
+package:com.android.inputdevices
+package:com.android.keychain
+package:com.android.bluetooth
+package:com.tcl.versionUpdateApp
+package:com.android.printspooler
+package:com.dongle.server
+package:com.android.smspush
+package:com.android.onetimeinitializer
+package:com.android.dreams.basic
+package:com.tcl.sourcemananger
+package:com.rainbowex
+package:com.android.vpndialogs
+package:com.tcl.voicemanager
+package:com.tcl.recognize.service
+package:com.tcl.usercenter
+package:com.tcl.c2dm.client
+package:com.tcl.screensaver
+package:com.android.server.telecom
+package:com.android.provision
+package:com.tcl.android.SystemDemo.SystemProperty.test
+package:com.tcl.SmartTVHelp
+package:com.android.defcontainer
+package:com.estrongs.android.pop
+package:com.tcl.tvweishi
+package:com.tcl.settings
+package:com.tcl.triava
+package:com.tcl.common.tvfaultdiagnosis
+package:com.android.systemui
+package:com.android.phone
+package:com.android.providers.calendar
+package:com.android.certinstaller
+package:com.android.webview
+package:com.android.systemui2
+package:android
+package:com.iflytek.xiri.ime
+package:com.android.providers.telephony
+package:com.android.providers.downloads
+package:com.tcl.factory.view
+package:com.iflytek.itvs
+package:com.tcl.browser
+package:com.tcl.m
+package:com.ktcp.video
+package:com.tcl.personaltv
+package:com.tcl.packageinstaller.service
+package:com.iflytek.xiri.recorder.svc
+package:com.android.htmlviewer
+package:com.tcl.common.viewer
+package:com.hpplay.allcast
+package:com.smit.livevideo
+package:com.iflytek.speech
+package:com.tcl.mediabrowser
+package:com.tcl.sticker
+package:com.android.documentsui
+package:com.broadcom.bt.app.bt3d
+package:com.android.sharedstoragebackup
+package:com.android.wallpapercropper
+package:com.tcl.cyberui
+package:com.tcl.weixin
+package:com.svox.pico
+package:com.android.wallpaper
+package:com.iflytek.xiri2.hal
+package:com.tcl.xian.StartandroidService
+package:com.iflytek.showcomesettings
+package:com.tcl.common.shortcutmenu
+package:com.android.providers.settings
+package:com.android.captiveportallogin
+package:com.tcl.packageinstaller.service.renew
+package:com.tcl.tvhealthcheck
+package:com.iflytek.showcome
+package:com.android.pacprocessor
+package:com.android.tcl.messagebox
+package:com.example.tvcapture
+package:com.android.mms.service
+package:com.tcl.update
+package:com.android.providers.media
+package:com.tcl.common.mediaplayer
+package:com.tcl.mediacenter
+package:com.android.musicfx
+package:com.android.inputmethod.pinyin
+
+C:\Users\Deepblue\Desktop>adb shell pm list packages > apklist.txt
+
+C:\Users\Deepblue\Desktop>adb shell tclsu do pm uninstall --user 0 com.huan.edu.lexue.frontend
+Success
+
+
+
+
+
+
