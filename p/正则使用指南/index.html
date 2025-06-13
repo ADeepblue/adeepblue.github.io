@@ -1,19 +1,19 @@
 <!DOCTYPE html>
 <html lang="zh-cn" dir="ltr">
     <head><meta charset='utf-8'>
-<meta name='viewport' content='width=device-width, initial-scale=1'><meta name='description' content="曾经python遭遇SSLError的解决办法">
-<title>Python 开了代理使用requests库报错SSL Error解决办法</title>
+<meta name='viewport' content='width=device-width, initial-scale=1'><meta name='description' content="re使用的一些技巧">
+<title>正则使用指南</title>
 
-<link rel='canonical' href='https://adeepblue.github.io/p/python-%E5%BC%80%E4%BA%86%E4%BB%A3%E7%90%86%E4%BD%BF%E7%94%A8requests%E5%BA%93%E6%8A%A5%E9%94%99ssl-error%E8%A7%A3%E5%86%B3%E5%8A%9E%E6%B3%95/'>
+<link rel='canonical' href='https://adeepblue.github.io/p/%E6%AD%A3%E5%88%99%E4%BD%BF%E7%94%A8%E6%8C%87%E5%8D%97/'>
 
-<link rel="stylesheet" href="/scss/style.min.663803bebe609202d5b39d848f2d7c2dc8b598a2d879efa079fa88893d29c49c.css"><meta property='og:title' content="Python 开了代理使用requests库报错SSL Error解决办法">
-<meta property='og:description' content="曾经python遭遇SSLError的解决办法">
-<meta property='og:url' content='https://adeepblue.github.io/p/python-%E5%BC%80%E4%BA%86%E4%BB%A3%E7%90%86%E4%BD%BF%E7%94%A8requests%E5%BA%93%E6%8A%A5%E9%94%99ssl-error%E8%A7%A3%E5%86%B3%E5%8A%9E%E6%B3%95/'>
+<link rel="stylesheet" href="/scss/style.min.663803bebe609202d5b39d848f2d7c2dc8b598a2d879efa079fa88893d29c49c.css"><meta property='og:title' content="正则使用指南">
+<meta property='og:description' content="re使用的一些技巧">
+<meta property='og:url' content='https://adeepblue.github.io/p/%E6%AD%A3%E5%88%99%E4%BD%BF%E7%94%A8%E6%8C%87%E5%8D%97/'>
 <meta property='og:site_name' content='深蓝之亘的博客'>
-<meta property='og:type' content='article'><meta property='article:section' content='Post' /><meta property='article:published_time' content='2025-02-11T16:35:53&#43;08:00'/><meta property='article:modified_time' content='2025-02-11T16:35:53&#43;08:00'/><meta property='og:image' content='https://adeepblue.github.io/p/python-%E5%BC%80%E4%BA%86%E4%BB%A3%E7%90%86%E4%BD%BF%E7%94%A8requests%E5%BA%93%E6%8A%A5%E9%94%99ssl-error%E8%A7%A3%E5%86%B3%E5%8A%9E%E6%B3%95/python-Logo.png' />
-<meta name="twitter:title" content="Python 开了代理使用requests库报错SSL Error解决办法">
-<meta name="twitter:description" content="曾经python遭遇SSLError的解决办法"><meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:image" content='https://adeepblue.github.io/p/python-%E5%BC%80%E4%BA%86%E4%BB%A3%E7%90%86%E4%BD%BF%E7%94%A8requests%E5%BA%93%E6%8A%A5%E9%94%99ssl-error%E8%A7%A3%E5%86%B3%E5%8A%9E%E6%B3%95/python-Logo.png' />
+<meta property='og:type' content='article'><meta property='article:section' content='Post' /><meta property='article:published_time' content='2025-06-13T11:07:38&#43;08:00'/><meta property='article:modified_time' content='2025-06-13T11:07:38&#43;08:00'/><meta property='og:image' content='https://adeepblue.github.io/p/%E6%AD%A3%E5%88%99%E4%BD%BF%E7%94%A8%E6%8C%87%E5%8D%97/regex_logo.png' />
+<meta name="twitter:title" content="正则使用指南">
+<meta name="twitter:description" content="re使用的一些技巧"><meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:image" content='https://adeepblue.github.io/p/%E6%AD%A3%E5%88%99%E4%BD%BF%E7%94%A8%E6%8C%87%E5%8D%97/regex_logo.png' />
     <link rel="shortcut icon" href="/favicon.ico" />
 
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0-rc.1/katex.min.css">
@@ -270,9 +270,14 @@
         <div class="widget--toc">
             <nav id="TableOfContents">
   <ol>
-    <li><a href="#解决办法">解决办法</a></li>
-    <li><a href="#报错">报错</a></li>
-    <li><a href="#如何修正">如何修正</a></li>
+    <li><a href="#单符号">单符号</a></li>
+    <li><a href="#进阶匹配">进阶匹配</a>
+      <ol>
+        <li><a href="#非贪婪的一些复杂用法">非贪婪的一些复杂用法</a></li>
+        <li><a href="#非贪婪匹配的更高阶用法">非贪婪匹配的更高阶用法</a></li>
+      </ol>
+    </li>
+    <li><a href="#其他内容">其他内容</a></li>
   </ol>
 </nav>
         </div>
@@ -287,13 +292,13 @@
     <article class="has-image main-article">
     <header class="article-header">
         <div class="article-image">
-            <a href="/p/python-%E5%BC%80%E4%BA%86%E4%BB%A3%E7%90%86%E4%BD%BF%E7%94%A8requests%E5%BA%93%E6%8A%A5%E9%94%99ssl-error%E8%A7%A3%E5%86%B3%E5%8A%9E%E6%B3%95/">
-                <img src="/p/python-%E5%BC%80%E4%BA%86%E4%BB%A3%E7%90%86%E4%BD%BF%E7%94%A8requests%E5%BA%93%E6%8A%A5%E9%94%99ssl-error%E8%A7%A3%E5%86%B3%E5%8A%9E%E6%B3%95/python-Logo_hu_7960e94551b1bf2.png"
-                        srcset="/p/python-%E5%BC%80%E4%BA%86%E4%BB%A3%E7%90%86%E4%BD%BF%E7%94%A8requests%E5%BA%93%E6%8A%A5%E9%94%99ssl-error%E8%A7%A3%E5%86%B3%E5%8A%9E%E6%B3%95/python-Logo_hu_7960e94551b1bf2.png 800w, /p/python-%E5%BC%80%E4%BA%86%E4%BB%A3%E7%90%86%E4%BD%BF%E7%94%A8requests%E5%BA%93%E6%8A%A5%E9%94%99ssl-error%E8%A7%A3%E5%86%B3%E5%8A%9E%E6%B3%95/python-Logo_hu_cbc017308e565c17.png 1600w"
+            <a href="/p/%E6%AD%A3%E5%88%99%E4%BD%BF%E7%94%A8%E6%8C%87%E5%8D%97/">
+                <img src="/p/%E6%AD%A3%E5%88%99%E4%BD%BF%E7%94%A8%E6%8C%87%E5%8D%97/regex_logo_hu_7e1ca34ce6f64b62.png"
+                        srcset="/p/%E6%AD%A3%E5%88%99%E4%BD%BF%E7%94%A8%E6%8C%87%E5%8D%97/regex_logo_hu_7e1ca34ce6f64b62.png 800w, /p/%E6%AD%A3%E5%88%99%E4%BD%BF%E7%94%A8%E6%8C%87%E5%8D%97/regex_logo_hu_dfc46e170e7861d5.png 1600w"
                         width="800" 
-                        height="533" 
+                        height="753" 
                         loading="lazy"
-                        alt="Featured image of post Python 开了代理使用requests库报错SSL Error解决办法" />
+                        alt="Featured image of post 正则使用指南" />
                 
             </a>
         </div>
@@ -307,17 +312,25 @@
                 Python
             </a>
         
+            <a href="/categories/re/" >
+                Re
+            </a>
+        
+            <a href="/categories/%E6%AD%A3%E5%88%99/" >
+                正则
+            </a>
+        
     </header>
     
 
     <div class="article-title-wrapper">
         <h2 class="article-title">
-            <a href="/p/python-%E5%BC%80%E4%BA%86%E4%BB%A3%E7%90%86%E4%BD%BF%E7%94%A8requests%E5%BA%93%E6%8A%A5%E9%94%99ssl-error%E8%A7%A3%E5%86%B3%E5%8A%9E%E6%B3%95/">Python 开了代理使用requests库报错SSL Error解决办法</a>
+            <a href="/p/%E6%AD%A3%E5%88%99%E4%BD%BF%E7%94%A8%E6%8C%87%E5%8D%97/">正则使用指南</a>
         </h2>
     
         
         <h3 class="article-subtitle">
-            曾经python遭遇SSLError的解决办法
+            re使用的一些技巧
         </h3>
         
     </div>
@@ -338,7 +351,7 @@
   <path d="M3 11h16" />
   <path d="M18 16.496v1.504l1 1" />
 </svg>
-                <time class="article-time--published">2025-02-11</time>
+                <time class="article-time--published">2025-06-13</time>
             </div>
         
 
@@ -354,93 +367,40 @@
     <section class="article-content">
     
     
-    <h1 id="sslerror">SSLError
-</h1><p>这是我曾经新开的一个仓库下的提交的ISSUE，虽然没多少人看过了，</p>
-<h2 id="解决办法">解决办法
-</h2><p><a class="link" href="https://github.com/ADeepblue/SSLError_involve/issues/2"  target="_blank" rel="noopener"
-    >GitHub仓库链接</a></p>
-<p>windows环境下当你遇到了这个问题,可以尝试打开 设置-&gt;网络与Internet-&gt;代理 ,
-手动设置代理处找到地址和端口,并将它们拼接起来,例如</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">https&#34;:&#34;127.0.0.1:4780&#34;
-</span></span></code></pre></div><p>, 在用request.get的时候当作参数传入, 例如</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">proxies = {&#34;https&#34;:&#34;127.0.0.1:4780&#34;}
-</span></span></code></pre></div><p>然后传入时,需要把proxies字段作为参数传入</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">requests.get(url=url,headers=headers,proxies=proxies)
-</span></span></code></pre></div><p>以及注意代理的使用情况,如果没有设置代理状态有可能会返回报错,注释掉proxies并删除参数即可.
-pip同理,复制下列代码至txt文本后,根据你设置内的代理状态进行修改,然后在cmd运行
-例如我的是<code>pip config set global.proxy 127.0.0.1:4780</code>(地址和端口记得改成自己的)但如若你需要关闭VPN使用pip命令记得用下面一行代码,
-<code>pip config unset global.proxy</code>即可.</p>
-<p>最近逛了一圈倒是找到了对应的文章，当时碰到的时候没有任何的提示</p>
-<p>当时还在大学，时间紧，试通之后并没有去查到底是什么原因导致的，好像是urllib库的问题，当时问GPT也没有任何结果，最近去问了问deepseek也依旧不明白报错原因</p>
-<p>其他人说了原理的话我也不多说了<a class="link" href="https://www.cnblogs.com/davyyy/p/14388623.html"  target="_blank" rel="noopener"
-    >网页链接</a>，我也没有仔细去钻研过这个玩意，当时只是发现了解决办法，
-但实际具体看了一下他们的东西也不一定能照搬过来，具体见</p>
-<h2 id="报错">报错
-</h2><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">HTTPSConnectionPool(host=&#39;api.live.bilibili.com&#39;, port=443): 
-</span></span><span class="line"><span class="cl">Max retries exceeded with url: /xlive/web-room/v1/dM/gethistory?roomid=10112&amp;csrf_token=
-</span></span><span class="line"><span class="cl"> (Caused by SSLError(SSLEOFError(8, &#39;EOF occurred in violation of protocol (_ssl.c:1123)&#39;)))
-</span></span></code></pre></div><p>出错形式会有很多种，proxyError,以及是最常见的是SSLError</p>
-<p>高版本python目前已经修复了这个问题，python3.11已经不用担心这个问题了，python3.9还存在这个问题。
-我现在也只是给一下低版本的一些解决方案，虽然可能比较麻烦，如果说在开发的过程中你已经全配置好了其他的比较难改了，那推荐你强制你的用户用高版本的python，我目前并没有测试过python3.10附近的，也没查出啥时候修复的
-3.11以其版本以后的都不用如此手动配置代理了</p>
-<h2 id="如何修正">如何修正
-</h2><p>以下是两段的参考代码,我目前的版本是Python 3.9.2rc1</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="k">def</span> <span class="nf">get_proxy_settings</span><span class="p">():</span>
-</span></span><span class="line"><span class="cl">    <span class="s2">&#34;&#34;&#34;代理配置函数，如果有代理直接返回代理环路地址:端口号，代理地址一般是127.0.0.1，端口号:4780，则拿到的返回可能是127.0.0.1:4780&#34;&#34;&#34;</span>
-</span></span><span class="line"><span class="cl">    <span class="k">try</span><span class="p">:</span>
-</span></span><span class="line"><span class="cl">        <span class="k">with</span> <span class="n">winreg</span><span class="o">.</span><span class="n">OpenKey</span><span class="p">(</span><span class="n">winreg</span><span class="o">.</span><span class="n">HKEY_CURRENT_USER</span><span class="p">,</span> <span class="sa">r</span><span class="s1">&#39;Software\Microsoft\Windows\CurrentVersion\Internet Settings&#39;</span><span class="p">)</span> <span class="k">as</span> <span class="n">key</span><span class="p">:</span>
-</span></span><span class="line"><span class="cl">            <span class="n">proxy_server</span><span class="p">,</span> <span class="n">_</span> <span class="o">=</span> <span class="n">winreg</span><span class="o">.</span><span class="n">QueryValueEx</span><span class="p">(</span><span class="n">key</span><span class="p">,</span> <span class="s1">&#39;ProxyServer&#39;</span><span class="p">)</span>
-</span></span><span class="line"><span class="cl">            <span class="k">return</span> <span class="n">proxy_server</span>
-</span></span><span class="line"><span class="cl">    <span class="k">except</span> <span class="ne">FileNotFoundError</span><span class="p">:</span>
-</span></span><span class="line"><span class="cl">        <span class="k">return</span> <span class="kc">None</span>
-</span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl"><span class="c1"># 其他内容</span>
-</span></span><span class="line"><span class="cl"><span class="k">if</span> <span class="n">get_proxy_settings</span><span class="p">()</span> <span class="o">!=</span> <span class="kc">None</span><span class="p">:</span>
-</span></span><span class="line"><span class="cl">     <span class="n">proxies</span> <span class="o">=</span> <span class="p">{</span><span class="s2">&#34;https&#34;</span><span class="p">:</span> <span class="n">get_proxy_settings</span><span class="p">()}</span> <span class="c1">#设置proxies,此处http不一定是必要的，以及127.0.0.1:4780前面的https也不一定是必要的，如果有错误可以试试</span>
-</span></span><span class="line"><span class="cl">     <span class="n">res</span> <span class="o">=</span> <span class="n">requests</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">url</span><span class="p">,</span><span class="n">headers</span><span class="o">=</span> <span class="n">headers</span><span class="p">,</span><span class="n">proxies</span><span class="o">=</span><span class="n">proxies</span><span class="p">)</span>
-</span></span><span class="line"><span class="cl"><span class="k">else</span><span class="p">:</span>
-</span></span><span class="line"><span class="cl">    <span class="n">res</span> <span class="o">=</span> <span class="n">requests</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">url</span><span class="p">,</span><span class="n">headers</span><span class="o">=</span> <span class="n">headers</span><span class="p">)</span>
-</span></span><span class="line"><span class="cl"><span class="c1"># 其余操作</span>
-</span></span><span class="line"><span class="cl"><span class="k">pass</span>
-</span></span></code></pre></div><p>这一段逻辑代码我用在过我的另一个翻译脚本上,端口一般不会变化，其实设定好了就一般不必多更改了，可以当作固定接口用的，除非你反复用不同的VPN，具体如何我也没测试过，这一段代码被我当作了
-扩低版本python兼容性的解决方案，因为很有可能会出现</p>
-<p><img src="/p/python-%E5%BC%80%E4%BA%86%E4%BB%A3%E7%90%86%E4%BD%BF%E7%94%A8requests%E5%BA%93%E6%8A%A5%E9%94%99ssl-error%E8%A7%A3%E5%86%B3%E5%8A%9E%E6%B3%95/proxy-error1.png"
-	width="971"
-	height="726"
-	srcset="/p/python-%E5%BC%80%E4%BA%86%E4%BB%A3%E7%90%86%E4%BD%BF%E7%94%A8requests%E5%BA%93%E6%8A%A5%E9%94%99ssl-error%E8%A7%A3%E5%86%B3%E5%8A%9E%E6%B3%95/proxy-error1_hu_eb241909cb31cfba.png 480w, /p/python-%E5%BC%80%E4%BA%86%E4%BB%A3%E7%90%86%E4%BD%BF%E7%94%A8requests%E5%BA%93%E6%8A%A5%E9%94%99ssl-error%E8%A7%A3%E5%86%B3%E5%8A%9E%E6%B3%95/proxy-error1_hu_d1966feed3914b5f.png 1024w"
-	loading="lazy"
-	
-		alt="https键值处加https报错"
-	
-	
-		class="gallery-image" 
-		data-flex-grow="133"
-		data-flex-basis="320px"
-	
->
-<img src="/p/python-%E5%BC%80%E4%BA%86%E4%BB%A3%E7%90%86%E4%BD%BF%E7%94%A8requests%E5%BA%93%E6%8A%A5%E9%94%99ssl-error%E8%A7%A3%E5%86%B3%E5%8A%9E%E6%B3%95/proxy-error2.png"
-	width="1034"
-	height="688"
-	srcset="/p/python-%E5%BC%80%E4%BA%86%E4%BB%A3%E7%90%86%E4%BD%BF%E7%94%A8requests%E5%BA%93%E6%8A%A5%E9%94%99ssl-error%E8%A7%A3%E5%86%B3%E5%8A%9E%E6%B3%95/proxy-error2_hu_19f139455b8d8d94.png 480w, /p/python-%E5%BC%80%E4%BA%86%E4%BB%A3%E7%90%86%E4%BD%BF%E7%94%A8requests%E5%BA%93%E6%8A%A5%E9%94%99ssl-error%E8%A7%A3%E5%86%B3%E5%8A%9E%E6%B3%95/proxy-error2_hu_8b59f17276883098.png 1024w"
-	loading="lazy"
-	
-		alt="https键值处不加东西其他改了也没事"
-	
-	
-		class="gallery-image" 
-		data-flex-grow="150"
-		data-flex-basis="360px"
-	
-></p>
-<p>由上两图可见，在python版本号是 <code>Python 3.9.2rc1</code> 时https处并不能加任何东西，如果加了东西，可能就会导致内容报SSLError错误</p>
-<p>另一种获取代理配置的方法比上述可能简单一点，但我没怎么用过，也就是urllib.request.getproxies函数,要筛除一下无关元素太麻烦了，以下是输出示例，如果你觉得
-会比上述内容方便的话可以试着改一改，但我已经不想动了，要做的也就是去掉https键对应的值的https字符串，至于其他是否保留也取决于自己，仅供参考</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">urllib.request.getproxies()
-</span></span><span class="line"><span class="cl">Out[10]: 
-</span></span><span class="line"><span class="cl">{&#39;http&#39;: &#39;http://127.0.0.1:4780&#39;,
-</span></span><span class="line"><span class="cl"> &#39;https&#39;: &#39;https://127.0.0.1:4780&#39;,
-</span></span><span class="line"><span class="cl"> &#39;ftp&#39;: &#39;ftp://127.0.0.1:4780&#39;}
-</span></span></code></pre></div>
+    <p>hugo问题
+（，不过生成文章时记得注意编码问题，有可能会报错，默认还是以utf-8编码生成会好一些，GBK会报错）</p>
+<h1 id="一些基础">一些基础
+</h1><h2 id="单符号">单符号
+</h2><p>因为pycharm中的搜索自带正则功能，一般情况下可以先在pycharm的搜索中对文件进行一个测试，观察是否匹配，输入字符内容本身固然可以匹配，但是一旦字符有差别就无法匹配了，所以需要正则来通配需要的字符内容，下面介绍一些基础的内容</p>
+<p>特殊字符</p>
+<ol>
+<li>
+<p><strong>.</strong> 通配符，指的是通配任意字符  (英文的点)</p>
+</li>
+<li>
+<p><strong>*</strong>   任意多个指定的内容其中指定的内容跟在<em>号后面表示匹配任意多的这个内容，贪婪匹配(有多少匹配多少)
+比如说o</em>就表示可以匹配o,也可以匹配oo,ooooooo,前提这个字是o，也可以指定其他的内容。</p>
+</li>
+</ol>
+<p>所以 .* 就是正则规则下的匹配任意字符串了</p>
+<h2 id="进阶匹配">进阶匹配
+</h2><p>那么，接下来，我想匹配数字怎么办？我不希望出现字符，比如说我希望从abc123中提取123，接下来就轮到指定字符登场了,</p>
+<p>其中一种是\d，它表示匹配数字（单个字）了，所以使用\d*即可匹配到数字，因为需要的是任意长度的数字，其中反斜杠代表转义，如果需要输入特殊字符本身作为匹配的，就需要把反斜杠加入在前面，亦或者是像\d这样指代其他特殊字符类型的，其他还有\w指代字母，\s指代空格</p>
+<p>以及另一个我比较常用的一个匹配字符[0-9]即是指定匹配0到9的，但是依旧只是单字符，如果想要匹配多个依旧需要*，其中-在[]中表示字符范围，另外也可以有a-z比如说，表示即是[a-z]</p>
+<p>接下来重点讲一下方括号[] ,其中上述的[a-z]和[0-9]只是一小部分，如果a-z和0-9都适配直接连起来即可[0-9a-z]，单字符也是如此，[aeiou]即是表示只要包含这五个字符中的一个字符即可被匹配到，如果需要匹配多个依旧是加上<em>号即可，但如果[]内加上一个^后，中括号内表示的的便不再是包含，而是排除，比如说我需要定位到&lt;br&gt;元素，便可以这么写，&quot;\&lt;[^\&gt;]</em>\&gt;&quot;,其中多数的特殊符号被我用反斜杠表示的意思是指，虽然我不知道这个符号在正则中是否有什么特殊含义，但是为了保险起见我先转义一下，避免歧义</p>
+<p>接下来我解释一下运作的方式，匹配开头必须是&lt;,然后[^\&gt;]*则是取一段不包含&gt;的内容，跟最后一个&gt;形成对应，也就是说，我要一段只有一个&gt;号的字符，这也就是，要求接下来匹配到的内容只能有一个&gt;，也就是非贪婪匹配</p>
+<p>另一种非贪婪匹配方法是使用?,菜鸟教程中说明的是匹配前面的子表达式零次或一次，也就是，上述正则表达式其实可以写成&lt;.*?&gt;，可能比较复杂</p>
+<h3 id="非贪婪的一些复杂用法">非贪婪的一些复杂用法
+</h3><p>如果&lt;.*&gt;对&lt;br&gt;&lt;/br&gt;有两种匹配可能性，一种是<span style="color:red">&lt;</span>br<span style="color:red">&gt;</span>&lt;/br&gt;，另一种是<span style="color:red">&lt;</span>br&gt;&lt;/br<span style="color:red">&gt;</span>，这样一对比应该能看出来问号?非贪婪匹配的目的是什么了，是限定匹配上&gt;符号的数量为1，这就是这种复杂一些的用法</p>
+<h3 id="非贪婪匹配的更高阶用法">非贪婪匹配的更高阶用法
+</h3><p>如果你想对一串内容进行非贪婪匹配应该怎么做呢？比如匹配上&lt;span&gt; xxxxx&lt;/span&gt;  ,abcd&lt;span&gt;other&lt;span&gt;,比如说我想匹配上&lt;span&gt;内部的东西</p>
+<p>在介绍这种匹配方法前，我先介绍一下括号，括号一种是表示你要的东西，其中pycharm中你括号扩出来的地方，如果后续有替换操作,比如说，你想将所有的abc[0-9]?后面加两个空格，此处如果是原来的替换方式，可能无法保留之前的内容，应该怎么做呢？正则表达式提供了括号选项，假设比如说(abc[0-9]?)将它括起来了，后续下面的引用就可以用$1来引用上面括号内的内容了，然后在这之后加个括号就能达成想要的效果了</p>
+<p>接上上段匹配&lt;span&gt;内部的东西，讲完括号，接下来可以讲通用办法了，先上内容\&lt;span\&gt;.*(&lt;\/span&gt;).*?  后面的部分的.*?中的括号是必要部分，表示这一部分的内容被限定为匹配一次，缘由同上，但是包含的内容是一块内容，并不只是像上面那样只包含一个字符，通用性高不少</p>
+<p>上述内容是pycharm中的替换效果，如果是python中的re库，效果也差不多可能？find函数匹配到内容后，如果正则表达式中包含括号，则会舍去非括号的内容，表示，这是你不需要的，但是上述\&lt;span\&gt;.*(&lt;\/span&gt;).*?此处表达式中必定包含括号，但是，可以通过调试查看你需要的别的字段，也用括号提出来，然后提取必要的字段即可</p>
+<p>(括号pycharm和re库适用场景^$)</p>
+<h2 id="其他内容">其他内容
+</h2><p>()括号还有一个其他的用法，(?:src|href)表示的是，这里我要求的限定字段，可以是连起来的src，或者是连起来的href，跟[]不同的是，() 限定了字段，而[]中是包含字段中任意单字的单个字符，其他还有一个pycharm和re库中均可使用的^和$,前者如果不在中括号中则意味着这里必须是\n结尾，也就是句首，$相反，必须是句尾，也就是以\n结尾或者是末尾，具体内容可以pycharm自行调试尝试</p>
+
 </section>
 
 
@@ -490,30 +450,6 @@ pip同理,复制下列代码至txt文本后,根据你设置内的代理状态进
             
                 
 <article class="has-image">
-    <a href="/p/%E6%AD%A3%E5%88%99%E4%BD%BF%E7%94%A8%E6%8C%87%E5%8D%97/">
-        
-        
-            <div class="article-image">
-                <img src="/p/%E6%AD%A3%E5%88%99%E4%BD%BF%E7%94%A8%E6%8C%87%E5%8D%97/regex_logo.8219b099535fab35cde577cd224d3079_hu_4ab81ac68a8d37e7.png" 
-                        width="250" 
-                        height="150" 
-                        loading="lazy"
-                        alt="Featured image of post 正则使用指南"
-                        
-                        data-hash="md5-ghmwmVNfqzXN5XfNIk0weQ==">
-                
-            </div>
-        
-
-        <div class="article-details">
-            <h2 class="article-title">正则使用指南</h2>
-        </div>
-    </a>
-</article>
-
-            
-                
-<article class="has-image">
     <a href="/p/%E5%B8%8C%E5%B0%94%E4%BC%AF%E7%89%B9%E6%9B%B2%E7%BA%BF/">
         
         
@@ -531,6 +467,30 @@ pip同理,复制下列代码至txt文本后,根据你设置内的代理状态进
 
         <div class="article-details">
             <h2 class="article-title">希尔伯特曲线</h2>
+        </div>
+    </a>
+</article>
+
+            
+                
+<article class="has-image">
+    <a href="/p/python-%E5%BC%80%E4%BA%86%E4%BB%A3%E7%90%86%E4%BD%BF%E7%94%A8requests%E5%BA%93%E6%8A%A5%E9%94%99ssl-error%E8%A7%A3%E5%86%B3%E5%8A%9E%E6%B3%95/">
+        
+        
+            <div class="article-image">
+                <img src="/p/python-%E5%BC%80%E4%BA%86%E4%BB%A3%E7%90%86%E4%BD%BF%E7%94%A8requests%E5%BA%93%E6%8A%A5%E9%94%99ssl-error%E8%A7%A3%E5%86%B3%E5%8A%9E%E6%B3%95/python-Logo.3329eb5754e403ba0a6a3c819c9252fe_hu_12f88b7f14b6913a.png" 
+                        width="250" 
+                        height="150" 
+                        loading="lazy"
+                        alt="Featured image of post Python 开了代理使用requests库报错SSL Error解决办法"
+                        
+                        data-hash="md5-MynrV1TkA7oKajyBnJJS/g==">
+                
+            </div>
+        
+
+        <div class="article-details">
+            <h2 class="article-title">Python 开了代理使用requests库报错SSL Error解决办法</h2>
         </div>
     </a>
 </article>
