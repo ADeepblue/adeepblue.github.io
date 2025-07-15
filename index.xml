@@ -6061,6 +6061,12 @@ $$\frac {1} {2}$$&lt;p&gt;还有，切记，在代码段前如果放文字会被
 &lt;li&gt;&lt;strong&gt;遵守公司规定&lt;/strong&gt;：如果您在公司环境中使用该脚本，请务必遵守公司的相关规定和要求。例如，提交信息的格式、仓库的命名规范等。因未遵守公司规定而导致的任何问题或纠纷，作者概不负责。&lt;/li&gt;
 &lt;li&gt;&lt;strong&gt;自行测试和验证&lt;/strong&gt;：在将该脚本应用于实际工作环境之前，请务必在测试环境中进行充分的测试和验证，以确保其符合您的需求和环境要求。&lt;/li&gt;
 &lt;/ul&gt;
+&lt;h2 id=&#34;全新部署&#34;&gt;全新部署
+&lt;/h2&gt;&lt;p&gt;最近全新部署的时候还是出现了点问题，最近换了机子，先把以前的ssh密钥拷贝过来，甚至当时都拷贝错了，文件是id_ed25519，而并非另一个，也是调试旧电脑用了ssh -vT &lt;a class=&#34;link&#34; href=&#34;mailto:git@github.com&#34; &gt;git@github.com&lt;/a&gt;的时候才发现，这样的话就补充一句git初始化的时候的一些其他的内容吧，&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-cmd&#34; data-lang=&#34;cmd&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;git config --global user.name &lt;span class=&#34;s2&#34;&gt;&amp;#34;username&amp;#34;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;git config --global user.password &lt;span class=&#34;s2&#34;&gt;&amp;#34;password&amp;#34;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;git config --global user.email &lt;span class=&#34;s2&#34;&gt;&amp;#34;your@email.com&amp;#34;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;代理上面就有了，就不多提了&lt;/p&gt;
 </description>
         </item>
         <item>
