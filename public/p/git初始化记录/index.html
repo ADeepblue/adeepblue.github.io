@@ -285,6 +285,10 @@
     <li><a href="#gitignore文件">.gitignore文件</a></li>
     <li><a href="#自动化部署">自动化部署</a></li>
   </ol>
+
+  <ol>
+    <li><a href="#全新部署">全新部署</a></li>
+  </ol>
 </nav>
         </div>
     </section>
@@ -503,6 +507,12 @@
 <li><strong>遵守公司规定</strong>：如果您在公司环境中使用该脚本，请务必遵守公司的相关规定和要求。例如，提交信息的格式、仓库的命名规范等。因未遵守公司规定而导致的任何问题或纠纷，作者概不负责。</li>
 <li><strong>自行测试和验证</strong>：在将该脚本应用于实际工作环境之前，请务必在测试环境中进行充分的测试和验证，以确保其符合您的需求和环境要求。</li>
 </ul>
+<h2 id="全新部署">全新部署
+</h2><p>最近全新部署的时候还是出现了点问题，最近换了机子，先把以前的ssh密钥拷贝过来，甚至当时都拷贝错了，文件是id_ed25519，而并非另一个，也是调试旧电脑用了ssh -vT <a class="link" href="mailto:git@github.com" >git@github.com</a>的时候才发现，这样的话就补充一句git初始化的时候的一些其他的内容吧，</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-cmd" data-lang="cmd"><span class="line"><span class="cl">git config --global user.name <span class="s2">&#34;username&#34;</span>
+</span></span><span class="line"><span class="cl">git config --global user.password <span class="s2">&#34;password&#34;</span>
+</span></span><span class="line"><span class="cl">git config --global user.email <span class="s2">&#34;your@email.com&#34;</span>
+</span></span></code></pre></div><p>代理上面就有了，就不多提了</p>
 
 </section>
 
