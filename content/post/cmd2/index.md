@@ -102,3 +102,13 @@ echo 按任意键退出...
 
 cmd的脚本属实一眼难尽，在我的角度看来，可读性极差，（其中包括各种参数的含义）当时写过一个用来遍历所有文件和文件夹搜索一个文件的脚本，但是，怎么说呢，当时排查错误写的我累死了，当时就想不太想写第二次了，不过考虑到这还是比较简单的一个脚本，倒是随意了，以及这个脚本写了也是为了方便我打开jupyter notebook，有些时候有些科学计算的内容确实还是jupyter notebook写起来会舒服些，用pycharm开python console有点太麻烦了
 
+## cmd管理员权限检验
+
+@echo off
+net session >nul 2>&1
+if %errorlevel% neq 0 (
+    echo 请以管理员身份运行此脚本。
+    pause
+    exit /b
+)
+echo 已获得管理员权限，继续执行...
