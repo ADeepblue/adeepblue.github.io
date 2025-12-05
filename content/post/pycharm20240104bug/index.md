@@ -51,6 +51,10 @@ AssertionError
 
 https://youtrack.jetbrains.com/issue/PY-79657/Python-Console-AssertionError-Bug.-Fix-included.
 
+
+
+  File "D:\Pycharm\PyCharm 2024.1.7\plugins\python\helpers\pydev\_pydev_bundle\pydev_ipython_console_011.py", line 122, in __init__
+
 original code:
 
     colors = Unicode("NoColor")
