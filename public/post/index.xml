@@ -7,7 +7,63 @@
         <generator>Hugo -- gohugo.io</generator>
         <language>zh-cn</language>
         <copyright>深蓝之亘</copyright>
-        <lastBuildDate>Mon, 11 Aug 2025 10:26:51 +0800</lastBuildDate><atom:link href="https://adeepblue.github.io/post/index.xml" rel="self" type="application/rss+xml" /><item>
+        <lastBuildDate>Fri, 05 Dec 2025 10:21:59 +0800</lastBuildDate><atom:link href="https://adeepblue.github.io/post/index.xml" rel="self" type="application/rss+xml" /><item>
+        <title>扩展副屏 spacedesk 使用指南</title>
+        <link>https://adeepblue.github.io/p/%E6%89%A9%E5%B1%95%E5%89%AF%E5%B1%8F-spacedesk-%E4%BD%BF%E7%94%A8%E6%8C%87%E5%8D%97/</link>
+        <pubDate>Fri, 05 Dec 2025 10:21:59 +0800</pubDate>
+        
+        <guid>https://adeepblue.github.io/p/%E6%89%A9%E5%B1%95%E5%89%AF%E5%B1%8F-spacedesk-%E4%BD%BF%E7%94%A8%E6%8C%87%E5%8D%97/</guid>
+        <description>&lt;img src="https://adeepblue.github.io/p/%E6%89%A9%E5%B1%95%E5%89%AF%E5%B1%8F-spacedesk-%E4%BD%BF%E7%94%A8%E6%8C%87%E5%8D%97/spacedesk.png" alt="Featured image of post 扩展副屏 spacedesk 使用指南" /&gt;&lt;h2 id=&#34;概述&#34;&gt;概述
+&lt;/h2&gt;&lt;p&gt;spacedesk 是一款可以将安卓设备变成电脑扩展副屏的软件，支持无线连接和有线连接两种方式，适用于 Windows 系统。通过 spacedesk，你可以轻松地将手机或平板电脑作为第二个显示器使用，提升工作效率和多任务处理能力。如果接入设备支持触摸功能，还可以实现触摸操作。&lt;/p&gt;
+&lt;h2 id=&#34;工作模式&#34;&gt;工作模式
+&lt;/h2&gt;&lt;p&gt;spacedesk有两个工作模式,一个是基于局域网的,另一个是基于USB数据线的,前者需要占用路由器的信号带宽,后者连接USB开启开发者模式的USB调试模式可以开启&lt;/p&gt;
+&lt;h2 id=&#34;安装步骤&#34;&gt;安装步骤
+&lt;/h2&gt;&lt;p&gt;&lt;a class=&#34;link&#34; href=&#34;https://www.spacedesk.net/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;官网地址&lt;/a&gt;从官网下载windows版本的控制终端,作为控制端,安卓或者其他带显示屏的设备安装被控端,图标即标题样式,注意别下错了&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://adeepblue.github.io/p/%E6%89%A9%E5%B1%95%E5%89%AF%E5%B1%8F-spacedesk-%E4%BD%BF%E7%94%A8%E6%8C%87%E5%8D%97/windowsUI.png&#34;
+	width=&#34;920&#34;
+	height=&#34;700&#34;
+	srcset=&#34;https://adeepblue.github.io/p/%E6%89%A9%E5%B1%95%E5%89%AF%E5%B1%8F-spacedesk-%E4%BD%BF%E7%94%A8%E6%8C%87%E5%8D%97/windowsUI_hu_ed41cd4d7e45bead.png 480w, https://adeepblue.github.io/p/%E6%89%A9%E5%B1%95%E5%89%AF%E5%B1%8F-spacedesk-%E4%BD%BF%E7%94%A8%E6%8C%87%E5%8D%97/windowsUI_hu_70471cc9f9917f63.png 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;windowsUI&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;131&#34;
+		data-flex-basis=&#34;315px&#34;
+	
+&gt;
+点击右侧的ON的开关,即可开启基于局域网的无线模式
+另一边安卓端直接安装网上下载下来的spacedesk客户端,点击进入之后会自动扫描本地局域网的电脑端,点击直接连接即可
+&lt;img src=&#34;https://adeepblue.github.io/p/%E6%89%A9%E5%B1%95%E5%89%AF%E5%B1%8F-spacedesk-%E4%BD%BF%E7%94%A8%E6%8C%87%E5%8D%97/Screenshot.jpg&#34;
+	width=&#34;1220&#34;
+	height=&#34;2712&#34;
+	srcset=&#34;https://adeepblue.github.io/p/%E6%89%A9%E5%B1%95%E5%89%AF%E5%B1%8F-spacedesk-%E4%BD%BF%E7%94%A8%E6%8C%87%E5%8D%97/Screenshot_hu_4b5ce2e956c852a9.jpg 480w, https://adeepblue.github.io/p/%E6%89%A9%E5%B1%95%E5%89%AF%E5%B1%8F-spacedesk-%E4%BD%BF%E7%94%A8%E6%8C%87%E5%8D%97/Screenshot_hu_b1349abcde15d2a0.jpg 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;客户端&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;44&#34;
+		data-flex-basis=&#34;107px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;h2 id=&#34;usb连接模式&#34;&gt;USB连接模式
+&lt;/h2&gt;&lt;h3 id=&#34;前提条件&#34;&gt;前提条件
+&lt;/h3&gt;&lt;p&gt;首先需要开启安卓设备的开发者选项和USB调试模式。具体步骤请自行网上搜索，因不同安卓版本和设备略有差异。&lt;/p&gt;
+&lt;h3 id=&#34;连接步骤&#34;&gt;连接步骤
+&lt;/h3&gt;&lt;ol&gt;
+&lt;li&gt;使用USB数据线将安卓设备连接到电脑。&lt;/li&gt;
+&lt;li&gt;在电脑上打开spacedesk控制端，确保USB连接模式已启用。&lt;/li&gt;
+&lt;li&gt;安卓设备上会弹出授权提示，选择允许USB调试连接。&lt;/li&gt;
+&lt;li&gt;连接成功后，安卓设备将作为电脑的扩展显示屏使用。
+![[USB_Mode.png]]&lt;/li&gt;
+&lt;/ol&gt;
+</description>
+        </item>
+        <item>
         <title>在windows上使用SMB</title>
         <link>https://adeepblue.github.io/p/%E5%9C%A8windows%E4%B8%8A%E4%BD%BF%E7%94%A8smb/</link>
         <pubDate>Mon, 11 Aug 2025 10:26:51 +0800</pubDate>
@@ -314,6 +370,15 @@ SMB是一种网络通信协议，主要用于在网络上共享文件、打印�
 &lt;/h2&gt;&lt;p&gt;直接拖动你想打开的文件夹到这个脚本即可，会在这个文件夹下打开jupyter notebook,切记拖动的是文件夹（主要是我也有点懒得写判断文件夹和文件了，可以在脚本这边新增，但我没这个需求就不写了）拖动会将内容识别为参数传入，然后也就是传参的形式实现切换到对应文件夹打开jupyter notebook&lt;/p&gt;
 &lt;h2 id=&#34;一些吐槽大概&#34;&gt;一些吐槽？大概
 &lt;/h2&gt;&lt;p&gt;cmd的脚本属实一眼难尽，在我的角度看来，可读性极差，（其中包括各种参数的含义）当时写过一个用来遍历所有文件和文件夹搜索一个文件的脚本，但是，怎么说呢，当时排查错误写的我累死了，当时就想不太想写第二次了，不过考虑到这还是比较简单的一个脚本，倒是随意了，以及这个脚本写了也是为了方便我打开jupyter notebook，有些时候有些科学计算的内容确实还是jupyter notebook写起来会舒服些，用pycharm开python console有点太麻烦了&lt;/p&gt;
+&lt;h2 id=&#34;cmd管理员权限检验&#34;&gt;cmd管理员权限检验
+&lt;/h2&gt;&lt;p&gt;@echo off
+net session &amp;gt;nul 2&amp;gt;&amp;amp;1
+if %errorlevel% neq 0 (
+echo 请以管理员身份运行此脚本。
+pause
+exit /b
+)
+echo 已获得管理员权限，继续执行&amp;hellip;&lt;/p&gt;
 </description>
         </item>
         <item>
