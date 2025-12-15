@@ -59,7 +59,20 @@
 &lt;li&gt;在电脑上打开spacedesk控制端，确保USB连接模式已启用。&lt;/li&gt;
 &lt;li&gt;安卓设备上会弹出授权提示，选择允许USB调试连接。&lt;/li&gt;
 &lt;li&gt;连接成功后，安卓设备将作为电脑的扩展显示屏使用。
-![[USB_Mode.png]]&lt;/li&gt;
+&lt;img src=&#34;https://adeepblue.github.io/p/%E6%89%A9%E5%B1%95%E5%89%AF%E5%B1%8F-spacedesk-%E4%BD%BF%E7%94%A8%E6%8C%87%E5%8D%97/USB_Mode.png&#34;
+	width=&#34;920&#34;
+	height=&#34;700&#34;
+	srcset=&#34;https://adeepblue.github.io/p/%E6%89%A9%E5%B1%95%E5%89%AF%E5%B1%8F-spacedesk-%E4%BD%BF%E7%94%A8%E6%8C%87%E5%8D%97/USB_Mode_hu_949ffbb6c91a185f.png 480w, https://adeepblue.github.io/p/%E6%89%A9%E5%B1%95%E5%89%AF%E5%B1%8F-spacedesk-%E4%BD%BF%E7%94%A8%E6%8C%87%E5%8D%97/USB_Mode_hu_85c12c1aa06b42c1.png 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;控制台开关&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;131&#34;
+		data-flex-basis=&#34;315px&#34;
+	
+&gt;&lt;/li&gt;
 &lt;/ol&gt;
 </description>
         </item>
@@ -779,6 +792,8 @@ sudo mkdir /mnt/e_drive&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;vim /etc/samba/smb.conf
 &lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;进入文件后按i切换插入模式，在文件末尾追加以下内容,其中会需要改变的是path和合法用户，修改完按esc退出插入模式，输入&lt;code&gt;:wq!&lt;/code&gt;保存强制退出即可，然后以root身份运行&lt;code&gt;smbd start&lt;/code&gt;即可，
 与start对应的参数常用的有stop restart&lt;/p&gt;
+&lt;p&gt;编辑对应的权限
+sudo nano /etc/samba/smb.conf&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;[serverE]
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;path = /mnt/e_drive
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;browseable = yes

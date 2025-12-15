@@ -588,6 +588,8 @@ sudo mkdir /mnt/e_drive</p>
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">vim /etc/samba/smb.conf
 </span></span></code></pre></div><p>进入文件后按i切换插入模式，在文件末尾追加以下内容,其中会需要改变的是path和合法用户，修改完按esc退出插入模式，输入<code>:wq!</code>保存强制退出即可，然后以root身份运行<code>smbd start</code>即可，
 与start对应的参数常用的有stop restart</p>
+<p>编辑对应的权限
+sudo nano /etc/samba/smb.conf</p>
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">[serverE]
 </span></span><span class="line"><span class="cl">path = /mnt/e_drive
 </span></span><span class="line"><span class="cl">browseable = yes
