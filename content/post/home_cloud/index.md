@@ -185,7 +185,8 @@ vim /etc/samba/smb.conf
 进入文件后按i切换插入模式，在文件末尾追加以下内容,其中会需要改变的是path和合法用户，修改完按esc退出插入模式，输入`:wq!`保存强制退出即可，然后以root身份运行`smbd start`即可，
 与start对应的参数常用的有stop restart
 
-
+编辑对应的权限
+sudo nano /etc/samba/smb.conf
 
 ```
 [serverE]
